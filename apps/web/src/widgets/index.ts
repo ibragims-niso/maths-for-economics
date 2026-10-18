@@ -3,6 +3,7 @@ import { AnnuityExplorer } from './AnnuityExplorer';
 import { BreakEvenLines } from './BreakEvenLines';
 import { CompoundingFrequency } from './CompoundingFrequency';
 import { DiscountingExplorer } from './DiscountingExplorer';
+import { DoublingTime } from './DoublingTime';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
@@ -18,6 +19,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'break-even-lines': BreakEvenLines,
   'compounding-frequency': CompoundingFrequency,
   'discounting-explorer': DiscountingExplorer,
+  'doubling-time': DoublingTime,
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
   'fixed-cost-break-even': FixedCostBreakEven,

@@ -13,7 +13,7 @@ economicUses:
   - Log-scale charts and log-linear models of economic data
   - Depreciation of machines, vehicles and other equipment
 generators: [growth-time-to-multiply, average-annual-growth-rate, depreciation-time-to-value]
-widgets: []
+widgets: [doubling-time]
 mistakeCodes:
   RULE_OF_70:
     label: Used the rule-of-70 estimate
@@ -91,7 +91,9 @@ For example, $\ln 1.05 = 0.0488$, close to a 5 % rise, but $\ln 1.30 = 0.262$, w
 **Log-linear model.** Taking logs of $y = a(1 + g)^t$ gives $\ln y = \ln a + t\ln(1 + g)$: a straight line in $t$ with slope $\ln(1 + g) \approx g$. On a chart with a log scale, steady growth is a straight line, and a steeper line means faster growth.
 
 ## Interactive
-An interactive growth chart with a log-scale switch is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="doubling-time"}
+
+The lilac curve is a price index that starts at 100 and grows at the rate $g$ each year; the dashed gold line instead adds the first year's rise every year, which is linear change. Drag the **growth rate** $g$. The solid dot marks the exact doubling time $\ln 2 / \ln(1 + g)$, where the curve crosses 200, and the hollow dot the rule-of-70 estimate. Notice that the curve pulls away from the straight line, and that the gap between the rule and the exact answer grows as $g$ rises. Check: at 6 % the panel shows 11.9 years exact and 11.67 years by the rule, as in Example 1; at 25 % the rule is off by almost 10 %.
 
 ## Worked examples
 
