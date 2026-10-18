@@ -10,3 +10,7 @@ exponent: The number n in xⁿ that says how many times the base x is multiplied
 fractional exponent: A power p/q, meaning take the q-th root and then raise to the power p, so x^(1/2) = √x.
 factorising: Rewriting a sum as a product by taking out a common factor, for example PQ − vQ = (P − v)Q.
 Cobb–Douglas production function: A production function Q = A·K^α·L^β in which output depends on capital K and labour L raised to fixed powers, with A measuring productivity.
+break-even point: The output at which revenue equals total cost, so profit is zero.
+budget constraint: The condition that spending on all goods cannot exceed the budget, for example p_x·x + p_y·y ≤ M.
+discriminant: For ax² + bx + c = 0, the number b² − 4ac; positive means two solutions, zero means one, negative means none.
+quadratic formula: The solutions of ax² + bx + c = 0, x = (−b ± √(b² − 4ac))/(2a).

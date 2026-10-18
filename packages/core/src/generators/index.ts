@@ -6,6 +6,9 @@ import { profitMaxLinearDemand } from './C109/profit-max-linear-demand';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
+import { breakEvenMaxFixedCost } from './F02/break-even-max-fixed-cost';
+import { budgetMaxWholeUnits } from './F02/budget-max-whole-units';
+import { quadraticBreakEven } from './F02/quadratic-break-even';
 import { linearBreakEven } from './F04/linear-break-even';
 import { linearDemandTwoPoints } from './F04/linear-demand-two-points';
 import { equilibriumPrice } from './F05/equilibrium-price';
@@ -19,6 +22,9 @@ export const GENERATORS = [
   exponentLawsSimplify,
   cobbDouglasOutput,
   cobbDouglasLabourNeeded,
+  budgetMaxWholeUnits,
+  quadraticBreakEven,
+  breakEvenMaxFixedCost,
   linearBreakEven,
   linearDemandTwoPoints,
   equilibriumPrice,
