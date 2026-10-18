@@ -53,3 +53,7 @@ money multiplier: The change in the money supply caused by a one-unit change in 
 nominal annual rate: The quoted yearly interest rate, equal to the rate per period times the number of periods in a year, before the effect of compounding.
 effective annual rate: The interest actually earned or paid over one year once compounding is counted, (1 + r/m)^m − 1.
 continuous compounding: Adding interest at every instant, so that a sum grows by the factor e^(rt) over t years.
+discounting: Converting a future amount into its value today by dividing by (1 + r) for each period until it is paid.
+discount factor: The value today of one unit of money paid in n periods, 1/(1 + r)^n; it lies between 0 and 1 when the rate is positive.
+discount rate: The interest rate used to convert future amounts into present values.
+real interest rate: The interest rate after allowing for inflation; approximately the nominal rate minus the inflation rate (the Fisher approximation).

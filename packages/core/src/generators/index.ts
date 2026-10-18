@@ -39,6 +39,9 @@ import { simpleInterestAmount } from './FM01/simple-interest-amount';
 import { continuousCompoundingAmount } from './FM02/continuous-compounding-amount';
 import { effectiveAnnualRate } from './FM02/effective-annual-rate';
 import { nominalRateFromEffective } from './FM02/nominal-rate-from-effective';
+import { impliedAnnualRate } from './FM03/implied-annual-rate';
+import { presentValueSingle } from './FM03/present-value-single';
+import { presentValueUnevenFlows } from './FM03/present-value-uneven-flows';
 import { annuityPresentValue } from './FM04/annuity-present-value';
 import { growingPerpetuityValue } from './FM04/growing-perpetuity-value';
 import { savingPlanPayment } from './FM04/saving-plan-payment';
@@ -82,6 +85,9 @@ export const GENERATORS = [
   effectiveAnnualRate,
   continuousCompoundingAmount,
   nominalRateFromEffective,
+  presentValueSingle,
+  presentValueUnevenFlows,
+  impliedAnnualRate,
   annuityPresentValue,
   growingPerpetuityValue,
   savingPlanPayment,
