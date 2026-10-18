@@ -90,3 +90,7 @@ log difference: The change in the natural log of a variable, ln y₁ − ln y₀
 total factor productivity: The part of output not explained by measured inputs, the A in Y = A·K^α·L^(1−α).
 growth accounting: Splitting output growth into the contributions of capital, labour and the growth of total factor productivity.
 logarithmic differentiation: Differentiating a function by first taking its logarithm, which turns products and powers into sums.
+determinant: A single number computed from a square matrix; its absolute value is the factor by which the matrix scales areas, and it is zero exactly when the matrix has no inverse.
+cofactor: The minor of a matrix entry (the determinant left after deleting its row and column), multiplied by +1 or −1 according to the chessboard sign pattern.
+Cramer's rule: A formula giving each unknown of a square linear system with non-zero determinant as det A_j / det A, where A_j is A with column j replaced by the right-hand side.
+comparative statics: Comparing a model's equilibrium before and after a change in an outside parameter, to see which way and how far each equilibrium value moves.

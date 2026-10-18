@@ -4,6 +4,7 @@ import { BreakEvenLines } from './BreakEvenLines';
 import { BudgetVectors } from './BudgetVectors';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
 import { CompoundingFrequency } from './CompoundingFrequency';
+import { DeterminantArea } from './DeterminantArea';
 import { DiscountingExplorer } from './DiscountingExplorer';
 import { DoublingTime } from './DoublingTime';
 import { ElasticitySlider } from './ElasticitySlider';
@@ -31,6 +32,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'budget-vectors': BudgetVectors,
   'chain-rule-cost-time': ChainRuleCostTime,
   'compounding-frequency': CompoundingFrequency,
+  'determinant-area': DeterminantArea,
   'discounting-explorer': DiscountingExplorer,
   'doubling-time': DoublingTime,
   'elasticity-slider': ElasticitySlider,

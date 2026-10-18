@@ -66,6 +66,9 @@ import { bundleDistanceNorm } from './LA101/bundle-distance-norm';
 import { matrixChainPlantCost } from './LA102/matrix-chain-plant-cost';
 import { matrixProductRevenueEntry } from './LA102/matrix-product-revenue-entry';
 import { transitionMatrixTwoStep } from './LA102/transition-matrix-two-step';
+import { cramerIncomeModel } from './LA104/cramer-income-model';
+import { cramerTwoMarketPrice } from './LA104/cramer-two-market-price';
+import { determinant3x3Cofactor } from './LA104/determinant-3x3-cofactor';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -137,6 +140,9 @@ export const GENERATORS = [
   matrixProductRevenueEntry,
   transitionMatrixTwoStep,
   matrixChainPlantCost,
+  cramerIncomeModel,
+  determinant3x3Cofactor,
+  cramerTwoMarketPrice,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));
