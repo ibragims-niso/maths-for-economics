@@ -12,7 +12,7 @@ economicUses:
   - Break-even analysis for a new product or business
   - Budget lines and simple forecasts
 generators: [linear-break-even, linear-demand-two-points]
-widgets: []
+widgets: [break-even-lines]
 mistakeCodes:
   IGNORED_UNIT_COST:
     label: Ignored the cost of each unit
@@ -54,7 +54,9 @@ Slope through two points: $b = \dfrac{y_2 - y_1}{x_2 - x_1}$.
 - Break-even quantity, where $R(Q) = C(Q)$: $Q^* = \dfrac{F}{p - v}$.
 
 ## Interactive
-An interactive line for this topic is planned. Until then, use Practice: every problem uses new numbers.
+::widget{id="break-even-lines"}
+
+Move the **price**, **unit cost** and **fixed cost** sliders. The line marked R is revenue $R = pQ$, the line marked C is cost $C = F + vQ$, and the dot shows where they cross: the break-even quantity $Q^* = F/(p - v)$. Left of the dot the firm makes a loss (gold area), right of it a profit (green area). Notice that only the margin $p - v$ matters: raise the price and the unit cost by the same amount and $Q^*$ stays where it is. Check Example 2: with price 40, unit cost 25 and fixed cost 9000 the panel shows a margin of 15 and $Q^* = 600$. Set the unit cost equal to the price and the lines never cross.
 
 ## Worked examples
 
