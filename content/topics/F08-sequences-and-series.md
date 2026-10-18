@@ -12,7 +12,7 @@ economicUses:
   - Totals of repeated payments such as rent, pensions or benefits
   - Long-run totals of effects that fade by the same fraction each period
 generators: [arithmetic-salary-total, spending-rounds-total, salary-offers-difference]
-widgets: []
+widgets: [spending-rounds]
 mistakeCodes:
   NTH_TERM_ONLY:
     label: Gave one term, not the total
@@ -69,7 +69,9 @@ $$S_\infty = a + ar + ar^2 + \dots = \frac{a}{1 - r}$$
 If $|r| \ge 1$ the terms do not shrink and the infinite sum has no finite value.
 
 ## Interactive
-An interactive chart of the terms and running totals is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="spending-rounds"}
+
+Round 1 is a first injection of 100, and each later round is the fraction $c$ of the one before, as in Example 2. Each bar is the running total $S_n$, and its gold top is the round that bar adds. Drag the **rounds** $n$ to add rounds one at a time and watch the gold pieces shrink while the total creeps up towards the dashed line $a/(1 - c)$; drag the **fraction re-spent** $c$ to see how re-spending more raises that ceiling and slows the approach. Check: at $c = 0.75$ and $n = 5$ the panel shows round 5 spending of 31.64, a total of 305.08 and a long-run total of 400.
 
 ## Worked examples
 

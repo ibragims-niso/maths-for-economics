@@ -10,6 +10,7 @@ import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { KeynesianCross } from './KeynesianCross';
 import { PowerExplorer } from './PowerExplorer';
 import { RevenueProfit } from './RevenueProfit';
+import { SpendingRounds } from './SpendingRounds';
 import { SurveyVenn } from './SurveyVenn';
 import { TaxBandExplorer } from './TaxBandExplorer';
 
@@ -26,6 +27,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'keynesian-cross': KeynesianCross,
   'power-explorer': PowerExplorer,
   'revenue-profit': RevenueProfit,
+  'spending-rounds': SpendingRounds,
   'survey-venn': SurveyVenn,
   'tax-band-explorer': TaxBandExplorer,
 };
