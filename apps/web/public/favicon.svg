@@ -2,8 +2,9 @@
   <title>Maths for Economics</title>
   <rect width="512" height="512" rx="96" fill="#FBFCFD"/>
   <path d="M176 64V448M256 64V448M336 64V448M416 64V448M64 136H448M64 216H448M64 296H448M64 376H448" stroke="#E3E8EF" stroke-width="6"/>
+  <path d="M256 400V279H112" fill="none" stroke="#9A7300" stroke-width="8" stroke-dasharray="16 14"/>
   <path d="M112 96V400H424" fill="none" stroke="#1B2638" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M152 136L392 360" stroke="#B4235A" stroke-width="24" stroke-linecap="round"/>
-  <path d="M152 360L392 136" stroke="#0F766E" stroke-width="24" stroke-linecap="round"/>
-  <circle cx="272" cy="248" r="28" fill="#D9A400" stroke="#FBFCFD" stroke-width="10"/>
+  <path d="M150 118Q200 300 410 346" fill="none" stroke="#B4235A" stroke-width="24" stroke-linecap="round"/>
+  <path d="M150 372L404 148" stroke="#0F766E" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="256" cy="279" r="27" fill="#D9A400" stroke="#1B2638" stroke-width="8"/>
 </svg>

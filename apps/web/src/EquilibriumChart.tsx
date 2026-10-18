@@ -41,8 +41,15 @@ export function EquilibriumChart() {
       </svg>
       <figcaption>
         From Market equilibrium: demand (<var>Q</var> = 100 − 2<var>P</var>) meets supply (
-        <var>Q</var> = 2<var>P</var>) at price <var>P</var> = {EQ.p} and quantity <var>Q</var> ={' '}
-        {EQ.q}.
+        <var>Q</var> = 2<var>P</var>) at price{' '}
+        <span className="nowrap">
+          <var>P</var> = {EQ.p}
+        </span>{' '}
+        and quantity{' '}
+        <span className="nowrap">
+          <var>Q</var> = {EQ.q}
+        </span>
+        .
       </figcaption>
     </figure>
   );

@@ -63,11 +63,22 @@ body {
   font-size: var(--text-ui);
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
+  accent-color: var(--supply);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--supply) 25%, var(--paper));
+  color: var(--ink);
 }
 
 a {
   color: var(--supply);
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
 :focus-visible {
@@ -78,7 +89,8 @@ a {
 .page {
   max-width: 40rem;
   margin: 0 auto;
-  padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+  padding: calc(24px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right))
+    calc(24px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
 }
 
 h1,
@@ -452,6 +464,11 @@ footer a {
   cursor: pointer;
 }
 
+.topic-index summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .topic-index h3 {
   font-size: var(--text-ui);
   margin: 16px 0 4px;
@@ -484,4 +501,8 @@ footer a {
 
 .topic-index[open] .chevron {
   transform: rotate(90deg);
+}
+
+.nowrap {
+  white-space: nowrap;
 }

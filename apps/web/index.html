@@ -13,9 +13,20 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+    <meta name="apple-mobile-web-app-title" content="Maths Econ" />
+    <!-- Paper colour before the stylesheet loads, so a dark-mode start does not flash white. -->
+    <style>
+      html { background: #fbfcfd; color: #1b2638; }
+      @media (prefers-color-scheme: dark) { html { background: #0f1722; color: #e6ecf3; } }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <p style="font-family: system-ui, sans-serif; padding: 24px 16px">
+        Maths for Economics needs JavaScript. Turn it on in your browser settings and reload.
+      </p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
