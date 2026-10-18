@@ -1,0 +1,37 @@
+{
+  "name": "maths-for-economics",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "npm run dev -w @mfe/web",
+    "dev:proxy": "npm run dev -w @mfe/proxy",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "typecheck": "tsc -p scripts && npm run typecheck --workspaces --if-present",
+    "validate:content": "tsx scripts/validate-content.ts",
+    "validate:track": "tsx scripts/validate-track.ts",
+    "build": "npm run validate:content && npm run build -w @mfe/web",
+    "build:web": "npm run build -w @mfe/web"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "24.19.2",
+    "fast-check": "4.10.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261012.1": true
+  }
+}

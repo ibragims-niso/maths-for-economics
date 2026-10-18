@@ -1,0 +1,28 @@
+{
+  "name": "@mfe/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "generate-pwa-assets": "pwa-assets-generator"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vite-pwa/assets-generator": "2.0.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "vite": "8.3.4",
+    "vite-plugin-pwa": "2.0.0",
+    "workbox-window": "7.4.1"
+  },
+  "dependencies": {
+    "@fontsource/literata": "5.3.0",
+    "@fontsource/public-sans": "5.3.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}

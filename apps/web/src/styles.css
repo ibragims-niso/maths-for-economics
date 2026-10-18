@@ -1,0 +1,200 @@
+/* Design tokens from docs/07-ux-design.md ("graph paper and curves"). */
+:root {
+  --paper: #fbfcfd;
+  --grid: #e3e8ef;
+  --ink: #1b2638;
+  --supply: #0f766e;
+  --demand: #b4235a;
+  --equilibrium: #d9a400;
+  --ink-muted: color-mix(in srgb, var(--ink) 75%, var(--paper));
+
+  --font-reading: "Literata", Georgia, serif;
+  --font-ui: "Public Sans", system-ui, sans-serif;
+  --radius-control: 6px;
+  --radius-sheet: 10px;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0f1722;
+    --grid: #233044;
+    --ink: #e6ecf3;
+    --supply: #2db3a6;
+    --demand: #e0668f;
+    --equilibrium: #f0c239;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #0f1722;
+  --grid: #233044;
+  --ink: #e6ecf3;
+  --supply: #2db3a6;
+  --demand: #e0668f;
+  --equilibrium: #f0c239;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: var(--supply);
+  text-underline-offset: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--supply);
+  outline-offset: 2px;
+}
+
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 8px 0 12px;
+}
+
+h2 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.lead {
+  font-family: var(--font-reading);
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 70ch;
+  margin: 0;
+}
+
+.chart {
+  margin: 24px 0;
+}
+
+.chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chart figcaption {
+  color: var(--ink-muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.chart-grid {
+  fill: none;
+  stroke: var(--grid);
+  stroke-width: 1;
+}
+
+.chart-axis {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.chart-guide {
+  fill: none;
+  stroke: var(--equilibrium);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.chart-demand,
+.chart-supply {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.chart-demand {
+  stroke: var(--demand);
+}
+
+.chart-supply {
+  stroke: var(--supply);
+}
+
+.chart-point {
+  fill: var(--equilibrium);
+  stroke: var(--paper);
+  stroke-width: 2;
+}
+
+.chart-label {
+  fill: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.chart-label-demand {
+  fill: var(--demand);
+}
+
+.chart-label-supply {
+  fill: var(--supply);
+}
+
+.card {
+  border: 1px solid var(--grid);
+  border-radius: var(--radius-sheet);
+  padding: 16px;
+}
+
+.card p {
+  margin: 0 0 8px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+
+.card .status {
+  margin: 12px 0 0;
+}
+
+.dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--grid);
+}
+
+.dot-ready {
+  background: var(--supply);
+}
+
+footer {
+  color: var(--ink-muted);
+  font-size: 13px;
+  margin-top: 32px;
+}
