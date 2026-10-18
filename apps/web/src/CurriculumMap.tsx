@@ -56,7 +56,11 @@ export function CurriculumMap({ writing }: { writing: readonly string[] }) {
         </svg>
         <div className="map-years" aria-hidden="true">
           {layout.years.map((y) => (
-            <span key={y.year} className="map-year" style={{ left: percent(y.x) }}>
+            <span
+              key={y.year}
+              className="map-year"
+              style={{ left: percent(y.x), width: percent(y.width) }}
+            >
               <span className="map-year-name">Year {y.year}</span>
               <span className="map-year-count">{y.count} topics</span>
             </span>

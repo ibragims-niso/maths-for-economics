@@ -7,8 +7,8 @@ const EQ = { p: 25, q: 50 };
 export function EquilibriumChart() {
   return (
     <figure className="chart">
-      <svg viewBox="0 0 320 200" role="img" aria-labelledby="chart-title chart-caption">
-        <title id="chart-title">Supply and demand diagram</title>
+      {/* The caption states everything the drawing shows, so screen readers read it once. */}
+      <svg viewBox="0 0 320 200" aria-hidden="true">
         <defs>
           <pattern id="grid" width="13" height="15" patternUnits="userSpaceOnUse" x="40" y="20">
             <path d="M13 0V15M0 15H13" className="chart-grid" />
@@ -39,7 +39,7 @@ export function EquilibriumChart() {
         </text>
         <circle cx={x(EQ.q)} cy={y(EQ.p)} r="6" className="chart-point" />
       </svg>
-      <figcaption id="chart-caption">
+      <figcaption>
         From Market equilibrium: demand (<var>Q</var> = 100 − 2<var>P</var>) meets supply (
         <var>Q</var> = 2<var>P</var>) at price <var>P</var> = {EQ.p} and quantity <var>Q</var> ={' '}
         {EQ.q}.

@@ -154,7 +154,7 @@ main > section {
 
 .chart-guide {
   fill: none;
-  stroke: var(--equilibrium);
+  stroke: var(--equilibrium-ink);
   stroke-width: 1;
   stroke-dasharray: 3 3;
 }
@@ -175,8 +175,8 @@ main > section {
 
 .chart-point {
   fill: var(--equilibrium);
-  stroke: var(--paper);
-  stroke-width: 2;
+  stroke: var(--ink);
+  stroke-width: 1.5;
 }
 
 .chart-label {
@@ -257,6 +257,12 @@ footer {
   margin-top: 32px;
 }
 
+/* A 44 px tall tap target for the footer link. */
+footer a {
+  display: inline-block;
+  padding-block: 12px;
+}
+
 .install-action {
   margin-top: 16px;
 }
@@ -327,7 +333,9 @@ footer {
 .map-sheet {
   position: relative;
   margin-inline: -16px;
-  padding-bottom: 48px;
+  /* Room for two lines of year labels; em so it grows with the reader's text size. */
+  font-size: var(--text-meta);
+  padding-bottom: 3.6em;
 }
 
 @media (min-width: 42rem) {
@@ -379,7 +387,7 @@ footer {
 .map-years {
   position: absolute;
   inset: auto 0 0;
-  height: 48px;
+  height: 3.6em;
 }
 
 .map-year {
@@ -388,19 +396,17 @@ footer {
   line-height: 1.3;
   transform: translateX(-50%);
   text-align: center;
-  white-space: nowrap;
 }
 
 .map-year-name {
   display: block;
   font-weight: 600;
-  font-size: var(--text-meta);
+  white-space: nowrap;
 }
 
 .map-year-count {
   display: block;
   color: var(--ink-muted);
-  font-size: var(--text-meta);
   font-variant-numeric: tabular-nums;
 }
 

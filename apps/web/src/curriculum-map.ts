@@ -31,6 +31,8 @@ export interface MapYear {
   count: number;
   /** Centre of the year's columns, for its label. */
   x: number;
+  /** Room for the label: the year's columns plus half the gap on each side. */
+  width: number;
 }
 
 export interface CurriculumLayout {
@@ -60,7 +62,7 @@ export function layoutCurriculum(topics: readonly MapTopic[]): CurriculumLayout 
     let year = years[years.length - 1];
     if (year?.year !== first.coreYear) {
       if (year) column++; // gap between years
-      year = { year: first.coreYear, count: 0, x: 0 };
+      year = { year: first.coreYear, count: 0, x: 0, width: 0 };
       years.push(year);
     }
     column++;
@@ -76,6 +78,7 @@ export function layoutCurriculum(topics: readonly MapTopic[]): CurriculumLayout 
   for (const y of years) {
     const xs = points.filter((p) => p.year === y.year).map((p) => p.x);
     y.x = (Math.min(...xs) + Math.max(...xs)) / 2;
+    y.width = Math.max(...xs) - Math.min(...xs) + 2 * GRID;
   }
 
   const dividers = years.slice(1).map((y) => {

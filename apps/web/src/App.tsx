@@ -16,7 +16,7 @@ export function App() {
   const installOption = useInstallOption();
 
   return (
-    <main className="page">
+    <div className="page">
       <header>
         <h1>Maths for Economics</h1>
         <p className="lead">
@@ -25,34 +25,36 @@ export function App() {
         </p>
       </header>
 
-      <section aria-labelledby="map-heading">
-        <h2 id="map-heading">Your degree, topic by topic</h2>
-        <CurriculumMap writing={FIRST_TOPIC_IDS} />
-        <TopicIndex writing={FIRST_TOPIC_IDS} />
-      </section>
+      <main>
+        <section aria-labelledby="map-heading">
+          <h2 id="map-heading">Your degree, topic by topic</h2>
+          <CurriculumMap writing={FIRST_TOPIC_IDS} />
+          <TopicIndex writing={FIRST_TOPIC_IDS} />
+        </section>
 
-      <section className="card" aria-labelledby="install-heading">
-        <h2 id="install-heading">Keep it on your phone</h2>
-        <p className="status" role="status">
-          <span className={`status-dot status-dot--${status.tone}`} aria-hidden="true" />
-          {status.message}
-        </p>
-        <InstallHint option={installOption} />
-      </section>
+        <section className="card" aria-labelledby="install-heading">
+          <h2 id="install-heading">Keep it on your phone</h2>
+          <p className="status" role="status">
+            <span className={`status-dot status-dot--${status.tone}`} aria-hidden="true" />
+            {status.message}
+          </p>
+          <InstallHint option={installOption} />
+        </section>
 
-      <section aria-labelledby="first-topics-heading">
-        <h2 id="first-topics-heading">First topics</h2>
-        <p>These five are being written now. Each starts with what economists use it for.</p>
-        <ol className="topic-list">
-          {firstTopics.map((t) => (
-            <li key={t.id}>
-              <span className="topic-title">{t.title}</span>
-              <span className="topic-use">{t.economicUse}</span>
-            </li>
-          ))}
-        </ol>
-        <EquilibriumChart />
-      </section>
+        <section aria-labelledby="first-topics-heading">
+          <h2 id="first-topics-heading">First topics</h2>
+          <p>These five are being written now. Each starts with what economists use it for.</p>
+          <ol className="topic-list">
+            {firstTopics.map((t) => (
+              <li key={t.id}>
+                <span className="topic-title">{t.title}</span>
+                <span className="topic-use">{t.economicUse}</span>
+              </li>
+            ))}
+          </ol>
+          <EquilibriumChart />
+        </section>
+      </main>
 
       <footer>
         <p>
@@ -60,6 +62,6 @@ export function App() {
           <a href={REPO_URL}>Source on GitHub</a>
         </p>
       </footer>
-    </main>
+    </div>
   );
 }
