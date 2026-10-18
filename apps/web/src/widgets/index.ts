@@ -12,6 +12,7 @@ import { EquilibriumTax } from './EquilibriumTax';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
 import { IndifferenceCurveMrs } from './IndifferenceCurveMrs';
+import { IndifferenceMap } from './IndifferenceMap';
 import { InverseDemandMirror } from './InverseDemandMirror';
 import { KeynesianCross } from './KeynesianCross';
 import { MarginalCostTangent } from './MarginalCostTangent';
@@ -44,6 +45,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'fixed-cost-break-even': FixedCostBreakEven,
   'growth-rate-explorer': GrowthRateExplorer,
   'indifference-curve-mrs': IndifferenceCurveMrs,
+  'indifference-map': IndifferenceMap,
   'inverse-demand-mirror': InverseDemandMirror,
   'keynesian-cross': KeynesianCross,
   'marginal-cost-tangent': MarginalCostTangent,

@@ -81,6 +81,8 @@ import { determinant3x3Cofactor } from './LA104/determinant-3x3-cofactor';
 import { dependenceParameterK } from './LA201/dependence-parameter-k';
 import { matrixRankElimination } from './LA201/matrix-rank-elimination';
 import { replicatePayoffCoordinates } from './LA201/replicate-payoff-coordinates';
+import { levelCurveThroughPoint } from './MV01/level-curve-through-point';
+import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-quantity';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -164,6 +166,8 @@ export const GENERATORS = [
   cramerIncomeModel,
   determinant3x3Cofactor,
   cramerTwoMarketPrice,
+  levelCurveThroughPoint,
+  sameIndifferenceCurveQuantity,
   replicatePayoffCoordinates,
   matrixRankElimination,
   dependenceParameterK,
