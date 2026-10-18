@@ -3,6 +3,8 @@ import { Hono } from 'hono';
 export interface Env {
   /** Shared Groq key: a secret on the Worker (dashboard or `wrangler secret put`). Never logged or returned. */
   GROQ_API_KEY?: string;
+  /** Shared Gemini key, the fallback when Groq is unavailable. Same rules as the Groq key. */
+  GEMINI_API_KEY?: string;
 }
 
 /**
@@ -12,13 +14,14 @@ export interface Env {
  */
 const app = new Hono<{ Bindings: Env }>().basePath('/api');
 
-// Phase 0 "hello world": lets us check the deployment and that the secret is set,
+// Lets us check the deployment and that the secrets are set,
 // without ever revealing the key itself.
 app.get('/health', (c) =>
   c.json({
     ok: true,
     service: 'maths-for-economics-api',
     groqKeyConfigured: Boolean(c.env.GROQ_API_KEY),
+    geminiKeyConfigured: Boolean(c.env.GEMINI_API_KEY),
   }),
 );
 
