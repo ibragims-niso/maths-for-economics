@@ -25,6 +25,9 @@ import { growthTimeToMultiply } from './F07/growth-time-to-multiply';
 import { arithmeticSalaryTotal } from './F08/arithmetic-salary-total';
 import { salaryOffersDifference } from './F08/salary-offers-difference';
 import { spendingRoundsTotal } from './F08/spending-rounds-total';
+import { sigmaLinearSum } from './F09/sigma-linear-sum';
+import { surveyInclusionExclusion } from './F09/survey-inclusion-exclusion';
+import { threeSetInclusionExclusion } from './F09/three-set-inclusion-exclusion';
 import { compositeCostOfLabour } from './F10/composite-cost-of-labour';
 import { inverseDemandPrice } from './F10/inverse-demand-price';
 import { labourForCostBudget } from './F10/labour-for-cost-budget';
@@ -59,6 +62,9 @@ export const GENERATORS = [
   arithmeticSalaryTotal,
   spendingRoundsTotal,
   salaryOffersDifference,
+  surveyInclusionExclusion,
+  sigmaLinearSum,
+  threeSetInclusionExclusion,
   inverseDemandPrice,
   compositeCostOfLabour,
   labourForCostBudget,
