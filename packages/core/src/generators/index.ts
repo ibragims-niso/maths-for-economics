@@ -8,6 +8,9 @@ import { tangentLineIntercept } from './C102/tangent-line-intercept';
 import { averageCostSlopeQuotientRule } from './C103/average-cost-slope-quotient-rule';
 import { marginalCostCubic } from './C103/marginal-cost-cubic';
 import { marginalRevenueProductRule } from './C103/marginal-revenue-product-rule';
+import { chainRulePowerAtPoint } from './C104/chain-rule-power-at-point';
+import { costRateOverTime } from './C104/cost-rate-over-time';
+import { marginalRevenueProductLabour } from './C104/marginal-revenue-product-labour';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
@@ -115,6 +118,9 @@ export const GENERATORS = [
   marginalCostCubic,
   marginalRevenueProductRule,
   averageCostSlopeQuotientRule,
+  chainRulePowerAtPoint,
+  costRateOverTime,
+  marginalRevenueProductLabour,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,

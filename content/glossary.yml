@@ -81,3 +81,7 @@ power rule: The derivative of xⁿ is n·xⁿ⁻¹, for any real power n, includ
 product rule: The derivative of a product u·v is u′v + uv′, not u′v′.
 quotient rule: The derivative of u/v is (u′v − uv′)/v², where v is not zero.
 average cost: Total cost divided by output, C(Q)/Q; it falls while marginal cost is below it and rises once marginal cost is above it.
+chain rule: The rule for differentiating a composite function, where the derivative of f(g(x)) is f′(g(x)) times g′(x).
+inner function: In a composite f(g(x)), the function g that acts first; its output is the input of the outer function f.
+marginal product of labour: The extra output from employing one more worker; the derivative of output with respect to labour.
+marginal revenue product of labour: The extra revenue from employing one more worker, equal to marginal revenue times the marginal product of labour.
