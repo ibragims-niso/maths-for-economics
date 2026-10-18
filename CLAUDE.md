@@ -75,7 +75,7 @@ Golden example of a finished topic: `content/topics/C107-elasticity.md`. Match i
 ## Parallel sessions
 Two Claude Code sessions may work in this folder at the same time. Each one stages only its own paths (`git add <paths>`, never `git add -A` or `git add .`) and runs `git pull --rebase` before pushing.
 
-- **Content session** writes topics in topic-bank order (docs/05-topic-bank.md: F01, F02, … F10, then FM01…, then C101…; skip topics that already exist). It owns `content/topics/`, `content/glossary.yml`, `packages/core/src/generators/` (including `index.ts` and tests) and `apps/web/src/widgets/` (register new widgets in `widgets/index.ts`). One topic per commit, `npm test` and `npm run validate:content` green before each push.
+- **Content session** writes topics in topic-bank order (docs/05-topic-bank.md: F01, F02, … F10, then FM01…, then C101…; skip topics that already exist). It owns `content/topics/`, `content/working.json` (the topics it is writing now; the app shows them as "Writing"), `content/glossary.yml`, `packages/core/src/generators/` (including `index.ts` and tests) and `apps/web/src/widgets/` (register new widgets in `widgets/index.ts`). One topic per commit, `npm test` and `npm run validate:content` green before each push.
 - **App session** builds Phase 1 features (practice, progress, tracks, AI). It owns everything else and does not edit the content session's paths; if it needs a change there, it says so instead.
 - A topic appears in the app as soon as its file compiles; no app code needs to change.
 

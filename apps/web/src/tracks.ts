@@ -16,14 +16,20 @@ export const TRACKS: Track[] = Object.values(files).sort((a, b) => rank(a.id) - 
 
 export const DEFAULT_TRACK_ID = 'core';
 
-export function trackById(id: string | undefined): Track {
-  const track = TRACKS.find((t) => t.id === id) ?? TRACKS.find((t) => t.id === DEFAULT_TRACK_ID);
+/** A public or imported programme by ID; Core when the ID is unknown (e.g. a removed import). */
+export function trackById(id: string | undefined, custom: readonly Track[] = []): Track {
+  const track =
+    [...custom, ...TRACKS].find((t) => t.id === id) ??
+    TRACKS.find((t) => t.id === DEFAULT_TRACK_ID);
   if (!track) throw new Error('The Core track is missing from content/tracks');
   return track;
 }
 
 /** The student's chosen programme; Core until they choose (or while settings load). */
-export const useTrack = () => trackById(useSettings()?.trackId);
+export const useTrack = () => {
+  const settings = useSettings();
+  return trackById(settings?.trackId, settings?.customTracks);
+};
 
 /**
  * A block of rows on Learn, with an icon: a curriculum block (Core), a course, or one of a

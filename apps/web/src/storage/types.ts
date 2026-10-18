@@ -1,4 +1,4 @@
-import type { Difficulty, TopicProgress } from '@mfe/core';
+import type { Difficulty, TopicProgress, Track } from '@mfe/core';
 
 /** One answered question. `templateId` + `seed` regenerate the exact problem (docs/02). */
 export interface AttemptItem {
@@ -28,6 +28,8 @@ export interface Settings {
   deviceId?: string;
   /** The student's own Groq key (docs/10). Stays on this device; never synced or sent to us. */
   ownKey?: string;
+  /** Programmes the student imported from a .track.json file (docs/06 "Custom tracks"). */
+  customTracks?: Track[];
 }
 
 export const DEFAULT_SETTINGS: Settings = { trackId: 'core' };

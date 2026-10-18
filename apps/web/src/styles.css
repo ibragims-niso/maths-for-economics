@@ -1140,7 +1140,8 @@ li + li > .row {
   cursor: pointer;
 }
 
-.pick-row + .pick-row {
+.pick-row + .pick-row,
+.programme-item + .programme-item .pick-row {
   border-top: 1px solid var(--night-line);
 }
 
@@ -1499,6 +1500,30 @@ a.button-secondary {
 }
 
 /* ---------- Settings ---------- */
+
+.programme-item + .programme-item {
+  border-top: 1px solid var(--night-line);
+}
+
+.programme-item .link-button {
+  margin: -6px 0 8px 36px;
+  padding: 0;
+  min-height: 32px;
+}
+
+.file-button {
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.file-button:focus-within {
+  outline: 2px solid var(--lilac);
+  outline-offset: 2px;
+}
+
+.key-status p + p {
+  margin-top: 4px;
+}
 
 .sheet--page .settings-block {
   margin-top: 32px;
