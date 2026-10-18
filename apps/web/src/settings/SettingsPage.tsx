@@ -2,10 +2,10 @@ import { trackTopicOrder } from '@mfe/core';
 import { storage, useSettings } from '../storage';
 import { icon3d } from '../topics';
 import { DEFAULT_TRACK_ID, TRACKS } from '../tracks';
+import { OwnKeySettings } from './OwnKey';
 
 /** What arrives next in Settings (docs/07), said plainly. */
 const COMING = [
-  'Your own free AI key',
   'Share progress with a parent or tutor',
   'Import your own programme',
   'Export or reset your data',
@@ -58,6 +58,8 @@ export function SettingsPage() {
             </label>
           ))}
         </fieldset>
+
+        <OwnKeySettings ownKey={settings?.ownKey} />
 
         <h2>Coming next</h2>
         <ul className="rows">

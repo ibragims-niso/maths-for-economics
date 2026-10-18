@@ -2,6 +2,7 @@ import type { AiRequest, AiResponse } from '@mfe/core';
 import { useState } from 'react';
 import { content } from '../content';
 import { deviceId, storage } from '../storage';
+import { askWithOwnKey } from './ownKey';
 
 /** A request as a screen writes it; the device ID and content version are added here. */
 export type AiAsk = AiRequest extends infer R
@@ -16,6 +17,12 @@ const OFFLINE = 'No internet. AI help needs a connection; everything else works 
 
 export async function askAi(request: AiAsk): Promise<AiResult> {
   if (!navigator.onLine) return { ok: false, message: OFFLINE };
+  if (document.documentElement.dataset.test === 'running') {
+    return { ok: false, message: 'AI help is off while a test is running.' };
+  }
+  // With the student's own key, everything happens on the device (docs/03 "Own-key mode").
+  const { ownKey } = await storage.getSettings();
+  if (ownKey) return askWithOwnKey(request, ownKey);
   try {
     const res = await fetch('/api/ai', {
       method: 'POST',

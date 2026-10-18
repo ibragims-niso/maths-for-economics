@@ -5,9 +5,6 @@ export async function sha256(text: string): Promise<string> {
   return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-/** Lowercase, trimmed, single spaces: the same question typed twice shares one cache entry. */
-export const normalise = (text: string) => text.toLowerCase().trim().replace(/\s+/g, ' ');
-
 /**
  * Counts one AI call for today and returns whether the device and its network are still within
  * the daily limits (docs/03 layer 5). The network is stored as a hash with the day, never as

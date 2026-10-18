@@ -177,6 +177,7 @@ function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } 
       practice: html(section('Practice')),
       realWorld: html(section('Real world')),
     },
+    tutor: { summary: ai.summary, definitions: ai.definitions },
   };
   return { topic, ai };
 }

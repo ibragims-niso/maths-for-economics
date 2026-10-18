@@ -26,6 +26,8 @@ export interface Settings {
   trackId: string;
   /** Anonymous random ID for the AI daily limit (docs/01 privacy: no names, no emails). */
   deviceId?: string;
+  /** The student's own Groq key (docs/10). Stays on this device; never synced or sent to us. */
+  ownKey?: string;
 }
 
 export const DEFAULT_SETTINGS: Settings = { trackId: 'core' };

@@ -30,6 +30,8 @@ export interface CompiledTopic extends Omit<TopicFrontmatter, 'resources'> {
     practice: string;
     realWorld: string;
   };
+  /** The AI tutor's reading material, as Markdown (used on the device with an own key). */
+  tutor: { summary: string; definitions: string };
 }
 
 export interface CompiledContent {

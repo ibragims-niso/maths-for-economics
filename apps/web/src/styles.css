@@ -1461,6 +1461,89 @@ a.button-secondary {
 
 /* ---------- Settings ---------- */
 
+.sheet--page .settings-block {
+  margin-top: 32px;
+}
+
+.settings-block .button-secondary {
+  margin-top: 12px;
+}
+
+.key-guide {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  background: var(--night-2);
+  font-size: var(--text-ui);
+  line-height: 1.55;
+}
+
+.key-guide summary {
+  color: var(--lilac);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.key-guide ol,
+.key-guide ul {
+  margin: 10px 0 0;
+  padding-left: 1.25em;
+}
+
+.key-guide li + li {
+  margin-top: 6px;
+}
+
+.key-guide p {
+  margin-top: 10px;
+}
+
+.key-guide code {
+  font-size: 0.9em;
+}
+
+.key-form {
+  margin-top: 16px;
+}
+
+.key-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.key-row {
+  display: flex;
+  gap: 8px;
+}
+
+.key-row input {
+  flex: 1;
+  min-width: 0;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  border-radius: var(--radius-control);
+  background: var(--night-2);
+  color: var(--night-text);
+  font: var(--text-ui) / 1 var(--font);
+}
+
+.key-row input:focus-visible {
+  outline: 2px solid var(--lilac);
+  outline-offset: 1px;
+}
+
+.key-status {
+  margin-top: 12px;
+  color: var(--success);
+  font-size: var(--text-ui);
+}
+
+.key-status--error {
+  color: var(--gold);
+}
+
 .programme {
   align-items: flex-start;
 }
