@@ -144,4 +144,9 @@ const content: CompiledContent = { version: new Date().toISOString().slice(0, 10
 const outDir = join(repoRoot, 'apps/web/src/generated');
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'content.json'), JSON.stringify(content));
+// A small index so the home screen knows which topics can open, without loading all content.
+writeFileSync(
+  join(outDir, 'content-index.json'),
+  JSON.stringify(topics.map((t) => ({ id: t.id, status: t.status, estMinutes: t.estMinutes }))),
+);
 console.log(`Compiled ${topics.length} topics into apps/web/src/generated/content.json`);

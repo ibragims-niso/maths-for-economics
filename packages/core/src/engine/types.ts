@@ -35,6 +35,8 @@ export interface Distractor {
 /** A problem template (docs/04-content-model.md). Every method is a pure function. */
 export interface Generator<P = unknown> {
   id: string;
+  /** Short name shown to students, e.g. "Break-even quantity". */
+  title: string;
   topicId: string;
   difficulty: 1 | 2 | 3;
   /** Suggested time in seconds at this difficulty. */

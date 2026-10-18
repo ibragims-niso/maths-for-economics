@@ -15,6 +15,7 @@ const q = (p: Params, price: number) => p.a - p.b * price;
 /** F04, difficulty 2: build a linear demand curve from two observations, then predict. */
 export const linearDemandTwoPoints: Generator<Params> = {
   id: 'linear-demand-two-points',
+  title: 'Demand line from two observations',
   topicId: 'F04',
   difficulty: 2,
   timeSec: 120,

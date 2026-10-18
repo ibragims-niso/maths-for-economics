@@ -11,6 +11,7 @@ interface Params {
 /** C107, difficulty 2: the price where linear demand Q = a − bP is unit elastic. */
 export const elasticityUnitElasticPrice: Generator<Params> = {
   id: 'elasticity-unit-elastic-price',
+  title: 'Price where demand is unit elastic',
   topicId: 'C107',
   difficulty: 2,
   timeSec: 90,

@@ -13,6 +13,7 @@ const elasticity = ({ a, b, price }: Params) => (-b * price) / (a - b * price);
 /** C107, difficulty 1: point elasticity of a linear demand curve Q = a − bP. */
 export const elasticityLinearPoint: Generator<Params> = {
   id: 'elasticity-linear-point',
+  title: 'Elasticity at a point',
   topicId: 'C107',
   difficulty: 1,
   timeSec: 60,

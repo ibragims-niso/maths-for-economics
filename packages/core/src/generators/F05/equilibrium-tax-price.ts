@@ -16,6 +16,7 @@ interface Params {
 /** F05, difficulty 2: the price buyers pay after a per-unit tax on sellers (tax incidence). */
 export const equilibriumTaxPrice: Generator<Params> = {
   id: 'equilibrium-tax-price',
+  title: 'Price buyers pay after a tax',
   topicId: 'F05',
   difficulty: 2,
   timeSec: 150,

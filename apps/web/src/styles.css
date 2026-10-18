@@ -476,10 +476,6 @@ a:hover {
   padding: 9px 0;
 }
 
-.row + .row {
-  border-top: 1px solid var(--night-line);
-}
-
 .row-text {
   flex: 1;
   min-width: 0;
@@ -507,9 +503,27 @@ a:hover {
   font-weight: 500;
 }
 
-.row-status--writing {
+.row-status--open {
   color: var(--gold);
   font-weight: 600;
+}
+
+/* A written topic: the whole row opens it. */
+.sheet a.row--link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.row--link .row-title {
+  transition: color 160ms var(--ease-out);
+}
+
+.row--link:hover .row-title {
+  color: var(--lilac);
+}
+
+li + li > .row {
+  border-top: 1px solid var(--night-line);
 }
 
 /* Offline status and install: one compact strip at the top of the sheet. */
@@ -637,6 +651,340 @@ a:hover {
 
 .button-primary:active {
   translate: 0 1px;
+}
+
+/* ---------- Topic page: title on white, sections on the dark sheet ---------- */
+
+.topic-hero {
+  padding: 4px 20px 0;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 44px;
+  margin-left: -8px;
+  padding-right: 10px;
+  color: var(--muted);
+  font-size: var(--text-ui);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--violet);
+}
+
+.topic-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.topic-icon {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 12px 16px rgb(91 63 230 / 0.25));
+}
+
+.topic-title h1 {
+  font-size: var(--text-title);
+  line-height: 1.15;
+}
+
+.topic-meta {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: var(--text-meta);
+}
+
+.sheet--page > h2 {
+  margin: 26px 0 8px;
+}
+
+.sheet--page > .sheet-handle + h2 {
+  margin-top: 6px;
+}
+
+/* Compiled topic text (HTML from content/topics, with KaTeX). */
+.prose {
+  font-size: var(--text-reading);
+  line-height: 1.65;
+}
+
+.prose p + p,
+.prose p + ul,
+.prose ul + p {
+  margin-top: 10px;
+}
+
+.prose ul,
+.prose ol {
+  margin: 8px 0 0;
+  padding-left: 1.25em;
+}
+
+.prose li + li {
+  margin-top: 6px;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+/* Long formulas scroll inside their own line rather than widening the page. */
+.prose .katex-display {
+  margin: 12px 0;
+  padding: 4px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.prose .katex {
+  font-size: 1.05em;
+}
+
+.example {
+  margin-top: 8px;
+  padding: 16px;
+  border-radius: var(--radius-card);
+  background: var(--night-2);
+}
+
+.example + .example {
+  margin-top: 14px;
+}
+
+.example h3 {
+  margin-bottom: 6px;
+  font-size: var(--text-ui);
+}
+
+.steps {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  padding: 10px 0 10px 34px;
+  counter-increment: step;
+}
+
+.step + .step {
+  border-top: 1px solid var(--night-line);
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  top: 12px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.why-button {
+  min-height: 32px;
+  margin-top: 4px;
+  padding: 0 12px;
+  border: 1px solid rgb(184 140 255 / 0.4);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--lilac);
+  font: 500 var(--text-meta) / 1 var(--font);
+  cursor: pointer;
+}
+
+.why-button[aria-expanded="true"] {
+  background: rgb(184 140 255 / 0.14);
+}
+
+.why {
+  margin-top: 8px;
+  color: var(--night-muted);
+  font-size: var(--text-ui);
+  line-height: 1.55;
+}
+
+/* Interactive graphs inside the topic text. */
+.widget {
+  margin: 12px 0 0;
+  padding: 14px;
+  border-radius: var(--radius-card);
+  background: var(--night-2);
+}
+
+.widget svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.widget-axis {
+  fill: none;
+  stroke: var(--night-muted);
+  stroke-width: 1.5;
+}
+
+.widget-area {
+  fill: rgb(245 192 74 / 0.2);
+}
+
+.widget-demand {
+  stroke: var(--lilac);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.widget-supply {
+  stroke: var(--success);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.widget-supply--taxed {
+  stroke-dasharray: 6 6;
+}
+
+.widget-wedge {
+  stroke: var(--gold);
+  stroke-width: 3;
+}
+
+.widget-point {
+  fill: var(--gold);
+  stroke: var(--night);
+  stroke-width: 2;
+}
+
+.widget-point--hollow {
+  fill: var(--night);
+  stroke: var(--gold);
+}
+
+.widget-label {
+  fill: var(--night-muted);
+  font: 500 13px var(--font);
+}
+
+.widget-control {
+  display: grid;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: var(--text-ui);
+}
+
+.widget-control output {
+  color: var(--gold);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.widget-control input {
+  width: 100%;
+  min-height: 32px;
+  accent-color: var(--lilac);
+}
+
+.widget-readout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 10px 0 0;
+}
+
+.widget-readout div {
+  padding: 8px 10px;
+  border-radius: var(--radius-control);
+  background: rgb(255 255 255 / 0.05);
+}
+
+.widget-readout dt {
+  color: var(--night-muted);
+  font-size: 0.75rem;
+}
+
+.widget-readout dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.widget figcaption {
+  margin-top: 10px;
+  color: var(--night-muted);
+  font-size: var(--text-meta);
+}
+
+.practice-list {
+  margin: 14px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.practice-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.practice-list li + li {
+  border-top: 1px solid var(--night-line);
+}
+
+.practice-level {
+  flex: none;
+  min-width: 64px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--night-2);
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sheet .button-primary {
+  color: #fff;
+}
+
+.resources {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resources li {
+  padding: 10px 0;
+}
+
+.resources li + li {
+  border-top: 1px solid var(--night-line);
+}
+
+.resource-kind {
+  display: block;
+  color: var(--night-muted);
+  font-size: var(--text-meta);
+}
+
+.report {
+  margin-top: 32px;
+  font-size: var(--text-meta);
 }
 
 /* ---------- Empty states (Practice, Progress, Settings) ---------- */

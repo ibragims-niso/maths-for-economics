@@ -1,6 +1,6 @@
 import topicBank from '../../../content/topic-bank.json';
 import { GRID, layoutCurriculum } from './curriculum-map';
-import { WRITING_NOW } from './topics';
+import { READY } from './topics';
 
 const layout = layoutCurriculum(topicBank);
 const percent = (x: number) => `${(x / layout.width) * 100}%`;
@@ -21,7 +21,7 @@ function LegendPoint({ writing }: { writing?: boolean }) {
  * point, linked to the topics it builds on, years 1 to 4 from left to right.
  */
 export function CurriculumMap() {
-  const isWriting = (id: string) => WRITING_NOW.has(id);
+  const isWriting = (id: string) => READY.has(id);
   // Draw the links into topics being written last, so they sit on top.
   const links = [...layout.links].sort((a, b) => Number(isWriting(a.to)) - Number(isWriting(b.to)));
 
@@ -71,7 +71,7 @@ export function CurriculumMap() {
       <figcaption>
         <span className="map-legend">
           <span>
-            <LegendPoint writing /> Being written
+            <LegendPoint writing /> Ready to learn
           </span>
           <span>
             <LegendPoint /> Planned

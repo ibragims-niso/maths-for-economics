@@ -1,10 +1,13 @@
-import { type KeyboardEvent, useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router';
 import { useAppOfflineStatus } from './AppShell';
 import { InstallHint } from './InstallHint';
-import { groupByBlock, topicsForYear, WRITING_NOW, YEARS } from './topics';
+import { Segmented } from './Segmented';
+import { groupByBlock, READY, topicsForYear, YEARS } from './topics';
 import { useInstallOption } from './useInstallOption';
 
 const YEAR_KEY = 'mfe.learn.year';
+const YEAR_OPTIONS = YEARS.map((y) => ({ value: y as number, label: `Year ${y}` }));
 
 function initialYear(): number {
   try {
@@ -57,43 +60,6 @@ function MasteryCurve() {
   );
 }
 
-function YearSwitch({ year, onChange }: { year: number; onChange: (year: number) => void }) {
-  const index = YEARS.indexOf(year as (typeof YEARS)[number]);
-  const move = (e: KeyboardEvent, step: number) => {
-    e.preventDefault();
-    const next = YEARS[(index + step + YEARS.length) % YEARS.length] ?? 1;
-    onChange(next);
-    document.getElementById(`year-tab-${next}`)?.focus();
-  };
-  return (
-    <div className="segmented" role="tablist" aria-label="Year of study">
-      <span
-        className="segmented-pill"
-        style={{ translate: `${index * 100}% 0` }}
-        aria-hidden="true"
-      />
-      {YEARS.map((y) => (
-        <button
-          key={y}
-          id={`year-tab-${y}`}
-          type="button"
-          role="tab"
-          aria-selected={y === year}
-          aria-controls="year-topics"
-          tabIndex={y === year ? 0 : -1}
-          onClick={() => onChange(y)}
-          onKeyDown={(e) => {
-            if (e.key === 'ArrowRight') move(e, 1);
-            if (e.key === 'ArrowLeft') move(e, -1);
-          }}
-        >
-          Year {y}
-        </button>
-      ))}
-    </div>
-  );
-}
-
 /** Offline status and install, in one compact strip at the top of the sheet. */
 function PhoneStrip() {
   const status = useAppOfflineStatus();
@@ -138,7 +104,14 @@ export function HomePage() {
       <h1 className="sr-only">Learn</h1>
       <div className="hero">
         <Balance year={year} total={topics.length} />
-        <YearSwitch year={year} onChange={changeYear} />
+        <Segmented
+          options={YEAR_OPTIONS}
+          value={year}
+          onChange={changeYear}
+          label="Year of study"
+          controls="year-topics"
+          idPrefix="year-tab"
+        />
         <MasteryCurve key={year} />
       </div>
 
@@ -159,16 +132,25 @@ export function HomePage() {
               </div>
               <ul className="rows">
                 {g.topics.map((t) => {
-                  const writing = WRITING_NOW.has(t.id);
                   return (
-                    <li key={t.id} className="row">
-                      <span className="row-text">
-                        <span className="row-title">{t.title}</span>
-                        <span className="row-use">{t.economicUse}</span>
-                      </span>
-                      <span className={writing ? 'row-status row-status--writing' : 'row-status'}>
-                        {writing ? 'Writing' : 'Soon'}
-                      </span>
+                    <li key={t.id}>
+                      {READY.has(t.id) ? (
+                        <Link to={`/topic/${t.id}`} className="row row--link" viewTransition>
+                          <span className="row-text">
+                            <span className="row-title">{t.title}</span>
+                            <span className="row-use">{t.economicUse}</span>
+                          </span>
+                          <span className="row-status row-status--open">Open</span>
+                        </Link>
+                      ) : (
+                        <div className="row">
+                          <span className="row-text">
+                            <span className="row-title">{t.title}</span>
+                            <span className="row-use">{t.economicUse}</span>
+                          </span>
+                          <span className="row-status">Soon</span>
+                        </div>
+                      )}
                     </li>
                   );
                 })}

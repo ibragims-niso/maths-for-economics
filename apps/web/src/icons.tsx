@@ -12,6 +12,7 @@ function Icon({ d }: { d: string }) {
 export const MenuIcon = () => <Icon d="M4 7h16M4 12h16M4 17h16" />;
 export const CloseIcon = () => <Icon d="M6 6l12 12M18 6 6 18" />;
 export const ChevronIcon = () => <Icon d="m9 6 6 6-6 6" />;
+export const BackIcon = () => <Icon d="m15 6-6 6 6 6" />;
 export const LearnIcon = () => (
   <Icon d="M4 19.5V6a2 2 0 0 1 2-2h12v14H6a2 2 0 0 0-2 2Zm0 0A2 2 0 0 0 6 22h12" />
 );

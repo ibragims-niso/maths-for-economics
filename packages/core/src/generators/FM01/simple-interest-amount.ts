@@ -14,6 +14,7 @@ const MONEY = { tolerance: 0.01, relTolerance: 0 } as const;
 /** FM01, difficulty 1: amount after simple interest, A = P(1 + rt). */
 export const simpleInterestAmount: Generator<Params> = {
   id: 'simple-interest-amount',
+  title: 'Amount with simple interest',
   topicId: 'FM01',
   difficulty: 1,
   timeSec: 60,

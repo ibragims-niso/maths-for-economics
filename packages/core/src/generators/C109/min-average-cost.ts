@@ -13,6 +13,7 @@ interface Params {
 /** C109, difficulty 2: output that minimises average cost for C(Q) = F + cQ + kQ². */
 export const minAverageCost: Generator<Params> = {
   id: 'min-average-cost',
+  title: 'Output with the lowest average cost',
   topicId: 'C109',
   difficulty: 2,
   timeSec: 150,

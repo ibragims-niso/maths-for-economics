@@ -14,6 +14,7 @@ interface Params {
 /** C109, difficulty 1: profit-maximising quantity with linear inverse demand and linear cost. */
 export const profitMaxLinearDemand: Generator<Params> = {
   id: 'profit-max-linear-demand',
+  title: 'Profit-maximising quantity',
   topicId: 'C109',
   difficulty: 1,
   timeSec: 90,

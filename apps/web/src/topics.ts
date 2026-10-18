@@ -1,10 +1,11 @@
 import { type Block, blockOf } from '@mfe/core';
 import topicBank from '../../../content/topic-bank.json';
+import contentIndex from './generated/content-index.json';
 
 export const YEARS = [1, 2, 3, 4] as const;
 
-/** The five Phase 1 topics (docs/08-roadmap.md), being written now. */
-export const WRITING_NOW = new Set(['F04', 'F05', 'FM01', 'C107', 'C109']);
+/** Topics whose content is written and compiled (content/topics). Everything else is "Soon". */
+export const READY = new Set(contentIndex.map((t) => t.id));
 
 /** One CC0 3D icon per block (public/icons3d, credited in About). */
 const BLOCK_ICON: Record<Block, string> = {

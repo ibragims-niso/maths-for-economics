@@ -18,6 +18,7 @@ export const linearSupply = (c: number, d: number) =>
 /** F05, difficulty 1: equilibrium price where linear demand meets linear supply. */
 export const equilibriumPrice: Generator<Params> = {
   id: 'equilibrium-price',
+  title: 'Equilibrium price',
   topicId: 'F05',
   difficulty: 1,
   timeSec: 75,

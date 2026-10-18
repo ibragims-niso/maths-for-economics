@@ -13,6 +13,7 @@ interface Params {
 /** F04, difficulty 1: break-even quantity with linear revenue and cost. */
 export const linearBreakEven: Generator<Params> = {
   id: 'linear-break-even',
+  title: 'Break-even quantity',
   topicId: 'F04',
   difficulty: 1,
   timeSec: 60,

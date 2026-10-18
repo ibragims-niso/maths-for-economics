@@ -19,6 +19,7 @@ const amount = (p: Params) => p.principal * (1 + p.rate / 100 / p.m) ** (p.m * p
 /** FM01, difficulty 2: amount with compound interest, A = P(1 + r/m)^(mt). */
 export const compoundInterestAmount: Generator<Params> = {
   id: 'compound-interest-amount',
+  title: 'Amount with compound interest',
   topicId: 'FM01',
   difficulty: 2,
   timeSec: 120,
