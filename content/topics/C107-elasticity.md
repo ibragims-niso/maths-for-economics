@@ -7,8 +7,8 @@ prerequisites: [C106]
 estMinutes: 40
 status: draft
 economicUses:
-  - Setting prices: will a price rise increase or reduce revenue?
-  - Tax incidence: who bears a tax, buyers or sellers
+  - "Setting prices: will a price rise increase or reduce revenue?"
+  - "Tax incidence: who bears a tax, buyers or sellers"
   - Forecasting demand after price or income changes
   - Central banks and governments estimating responses to energy or food price shocks
 generators: [elasticity-linear-point, elasticity-unit-elastic-price]
