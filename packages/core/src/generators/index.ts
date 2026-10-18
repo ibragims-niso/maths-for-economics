@@ -14,6 +14,9 @@ import { marginalRevenueProductLabour } from './C104/marginal-revenue-product-la
 import { expLogDerivativeAtPoint } from './C105/exp-log-derivative-at-point';
 import { growthAccountingTfp } from './C105/growth-accounting-tfp';
 import { growthRateRatioProduct } from './C105/growth-rate-ratio-product';
+import { costOfOneMoreUnit } from './C106/cost-of-one-more-unit';
+import { marginalProfitAtOutput } from './C106/marginal-profit-at-output';
+import { marginalRevenueLinearDemand } from './C106/marginal-revenue-linear-demand';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
@@ -130,6 +133,9 @@ export const GENERATORS = [
   growthRateRatioProduct,
   expLogDerivativeAtPoint,
   growthAccountingTfp,
+  marginalRevenueLinearDemand,
+  costOfOneMoreUnit,
+  marginalProfitAtOutput,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,

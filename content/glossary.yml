@@ -94,3 +94,6 @@ determinant: A single number computed from a square matrix; its absolute value i
 cofactor: The minor of a matrix entry (the determinant left after deleting its row and column), multiplied by +1 or −1 according to the chessboard sign pattern.
 Cramer's rule: A formula giving each unknown of a square linear system with non-zero determinant as det A_j / det A, where A_j is A with column j replaced by the right-hand side.
 comparative statics: Comparing a model's equilibrium before and after a change in an outside parameter, to see which way and how far each equilibrium value moves.
+marginal profit: The change in profit from producing one more unit; marginal revenue minus marginal cost.
+diminishing marginal product: The pattern where each extra unit of an input adds less output than the one before, although total output still rises.
+average product of labour: Output per worker, total output divided by the number of workers.
