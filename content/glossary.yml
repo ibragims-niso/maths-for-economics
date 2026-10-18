@@ -19,3 +19,7 @@ range: The set of output values a function takes over its domain.
 piecewise function: A function that uses different formulas on different intervals of its input, such as an income tax with bands.
 fixed cost: The part of total cost that does not change with output, equal to the cost of producing nothing, C(0).
 marginal tax rate: The tax rate paid on the next unit of income; in a banded tax it is the rate of the band the income falls in.
+parabola: The hill- or valley-shaped graph of a quadratic function y = ax² + bx + c.
+vertex: The highest or lowest point of a parabola, at x = −b/(2a).
+axis of symmetry: The vertical line through the vertex of a parabola; points the same distance either side of it have the same height.
+inverse demand curve: Demand written with price as a function of quantity, P = α − βQ, giving the price at which a quantity can be sold.

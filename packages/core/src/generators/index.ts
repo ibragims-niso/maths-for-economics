@@ -16,6 +16,9 @@ import { linearBreakEven } from './F04/linear-break-even';
 import { linearDemandTwoPoints } from './F04/linear-demand-two-points';
 import { equilibriumPrice } from './F05/equilibrium-price';
 import { equilibriumTaxPrice } from './F05/equilibrium-tax-price';
+import { maxProfitQuadratic } from './F06/max-profit-quadratic';
+import { maxRevenueLinearDemand } from './F06/max-revenue-linear-demand';
+import { profitMaximisingPrice } from './F06/profit-maximising-price';
 import { compoundInterestAmount } from './FM01/compound-interest-amount';
 import { simpleInterestAmount } from './FM01/simple-interest-amount';
 
@@ -35,6 +38,9 @@ export const GENERATORS = [
   linearDemandTwoPoints,
   equilibriumPrice,
   equilibriumTaxPrice,
+  maxRevenueLinearDemand,
+  maxProfitQuadratic,
+  profitMaximisingPrice,
   simpleInterestAmount,
   compoundInterestAmount,
   elasticityLinearPoint,
