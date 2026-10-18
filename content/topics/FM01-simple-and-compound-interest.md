@@ -12,7 +12,7 @@ economicUses:
   - Comparing investments over different periods
   - Inflation and growth, which compound in the same way
 generators: [simple-interest-amount, compound-interest-amount]
-widgets: []
+widgets: [simple-vs-compound]
 mistakeCodes:
   COMPOUNDED:
     label: Compounded when the interest was simple
@@ -52,7 +52,9 @@ Deposit $P$, annual rate $r$ (as a decimal), time $t$ in years.
 - Time to grow by a factor $k$ with annual compounding: $t = \dfrac{\ln k}{\ln(1 + r)}$.
 
 ## Interactive
-An interactive growth chart is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="simple-vs-compound"}
+
+Move the **Interest rate**, **Compounded** and **Years** sliders for a deposit of 5000. The green line is simple interest, which adds the same amount every year; the lilac curve is compound interest, which bends upwards; the shaded gap between them is interest earned on interest. Notice that the gap is small for a few years but very large after 30, and that adding interest more often helps less and less: going from monthly to daily changes little. Check Example 2: at 4 %, compounded quarterly, for 3 years the panel shows 5,634.13 with compounding against 5,600 with simple interest, a gap of 34.13.
 
 ## Worked examples
 
