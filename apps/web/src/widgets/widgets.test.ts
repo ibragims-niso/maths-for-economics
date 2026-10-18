@@ -15,7 +15,9 @@ describe('widgets', () => {
   it('every topic has a widget in its Try it section', () => {
     for (const topic of content.topics) {
       expect(topic.sections.interactive, topic.id).toContain('data-widget=');
-      expect(topic.sections.interactive, topic.id).not.toMatch(/is planned|planned for this topic|coming soon/i);
+      expect(topic.sections.interactive, topic.id).not.toMatch(
+        /is planned|planned for this topic|coming soon/i,
+      );
     }
   });
 
