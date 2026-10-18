@@ -15,7 +15,7 @@ import {
   parseTopicFile,
   topicFrontmatterSchema,
 } from '@mfe/core';
-import type { Paragraph, PhrasingContent, Root, RootContent } from 'mdast';
+import type { Nodes, Paragraph, PhrasingContent, Root, RootContent } from 'mdast';
 import { toString as mdToString } from 'mdast-util-to-string';
 import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
@@ -86,6 +86,23 @@ function trimBreaks(children: PhrasingContent[]): PhrasingContent[] {
   return copy;
 }
 
+/**
+ * Authors tag each common mistake with its code, e.g. "Dropping the minus sign (SIGN).", so the
+ * prose stays linked to the generators. Students never see the codes, so they are removed here.
+ */
+function hideMistakeCodes(nodes: RootContent[], codes: ReadonlySet<string>): RootContent[] {
+  const walk = (node: Nodes) => {
+    if (node.type === 'text') {
+      node.value = node.value.replace(/\s*\(([A-Z][A-Z0-9_]*)\)/g, (match, code: string) =>
+        codes.has(code) ? '' : match,
+      );
+    }
+    if ('children' in node) for (const child of node.children) walk(child);
+  };
+  for (const node of nodes) walk(node);
+  return nodes;
+}
+
 function compileTopic(path: string): CompiledTopic {
   const source = readText(path);
   const { outline } = parseTopicFile(source, path);
@@ -128,7 +145,9 @@ function compileTopic(path: string): CompiledTopic {
       definitions: html(section('Definition and formulas')),
       interactive: html(section('Interactive')),
       examples,
-      mistakes: html(section('Common mistakes')),
+      mistakes: html(
+        hideMistakeCodes(section('Common mistakes'), new Set(Object.keys(fm.mistakeCodes))),
+      ),
       practice: html(section('Practice')),
       realWorld: html(section('Real world')),
     },

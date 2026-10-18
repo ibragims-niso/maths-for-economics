@@ -28,7 +28,7 @@ resources:
 3. `## Definition and formulas`
 4. `## Interactive` — widget directives, e.g. `::widget{id="elasticity-slider"}`.
 5. `## Worked examples` — exactly 3 (easy, medium, hard). Each step has a `why` line. Each example ends with a `verify` block.
-6. `## Common mistakes`
+6. `## Common mistakes` — tag each mistake with its code in brackets, e.g. "Dropping the minus sign (SIGN)." The build removes the codes, so students see only the sentence.
 7. `## Practice` — lists generator IDs and difficulty; rendered as "Practise" button.
 8. `## Real world` — longer applications; resources are rendered from frontmatter.
 
