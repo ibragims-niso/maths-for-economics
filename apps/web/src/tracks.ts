@@ -1,4 +1,4 @@
-import { courseTopics, type Track } from '@mfe/core';
+import { type Course, courseTopics, type Track } from '@mfe/core';
 import { useSettings } from './storage';
 import { bankTopic, groupByBlock, topicIcon } from './topics';
 
@@ -25,15 +25,47 @@ export function trackById(id: string | undefined): Track {
 /** The student's chosen programme; Core until they choose (or while settings load). */
 export const useTrack = () => trackById(useSettings()?.trackId);
 
-/** A block of rows on Learn: a curriculum block (Core) or a course (other tracks). */
+/**
+ * A block of rows on Learn, with an icon: a curriculum block (Core), a course, or one of a
+ * course's sections (the owner's request: sections are the topics' groups, like Core's blocks).
+ */
 export interface LearnGroup {
   key: string;
   name: string;
   icon: string;
-  /** Topics that count towards completion. */
-  count: number;
-  /** Rows, optionally under headings: a course's sections, then its background topics. */
-  parts: { heading?: string; topicIds: string[] }[];
+  topicIds: string[];
+  /** Background topics: shown, not counted towards completion. */
+  background?: boolean;
+  /** Set on a course's first group when its groups are sections: the course name above them. */
+  course?: string;
+}
+
+const courseLabel = (course: Course) => {
+  const name = course.code ? `${course.code} ${course.name}` : course.name;
+  return course.credits ? `${name} · ${course.credits} credits` : name;
+};
+
+function courseGroups(course: Course, key: string): LearnGroup[] {
+  const sections = course.sections ?? [];
+  const group = (name: string, topicIds: string[], background = false): LearnGroup => ({
+    key: `${key}-${name}`,
+    name,
+    icon: topicIcon(topicIds[0] ?? ''),
+    topicIds,
+    background,
+  });
+  const groups = [
+    ...(course.topics
+      ? [group(sections.length ? course.name : courseLabel(course), course.topics)]
+      : []),
+    ...sections.map((s) => group(s.title, s.topics)),
+  ];
+  if (course.supporting) {
+    groups.push(group(groups.length ? 'Background' : courseLabel(course), course.supporting, true));
+  }
+  const first = groups[0];
+  if (sections.length && first) first.course = courseLabel(course);
+  return groups;
 }
 
 export function learnGroups(track: Track, year: number): LearnGroup[] {
@@ -44,23 +76,10 @@ export function learnGroups(track: Track, year: number): LearnGroup[] {
       key: g.block,
       name: g.name,
       icon: g.icon,
-      count: g.topics.length,
-      parts: [{ topicIds: g.topics.map((t) => t.id) }],
+      topicIds: g.topics.map((t) => t.id),
     }));
   }
-  return courses.map((course, i) => ({
-    key: `${year}-${i}`,
-    name: course.code ? `${course.code} ${course.name}` : course.name,
-    icon: topicIcon(courseTopics(course)[0] ?? course.supporting?.[0] ?? ''),
-    count: courseTopics(course).length,
-    parts: [
-      ...(course.topics ? [{ topicIds: course.topics }] : []),
-      ...(course.sections ?? []).map((s) => ({ heading: s.title, topicIds: s.topics })),
-      ...(course.supporting
-        ? [{ heading: 'Background (not counted)', topicIds: course.supporting }]
-        : []),
-    ],
-  }));
+  return courses.flatMap((course, i) => courseGroups(course, `${year}-${i}`));
 }
 
 /** Topics a track year counts for completion, each once, in course order. */

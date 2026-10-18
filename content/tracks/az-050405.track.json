@@ -22,8 +22,8 @@
       "label": "Year 1",
       "courses": [
         {
-          "code": "İF-04",
-          "name": "Xətti cəbr və riyazi analiz (Linear Algebra and Mathematical Analysis)",
+          "code": null,
+          "name": "Linear Algebra and Mathematical Analysis",
           "credits": 8,
           "semester": "autumn",
           "sections": [
@@ -76,8 +76,8 @@
       "label": "Year 1–2 (varies)",
       "courses": [
         {
-          "code": "İF-05",
-          "name": "Ehtimal nəzəriyyəsi və riyazi statistika (Probability Theory and Mathematical Statistics)",
+          "code": null,
+          "name": "Probability Theory and Mathematical Statistics",
           "credits": 8,
           "semester": "varies",
           "sections": [
@@ -112,8 +112,8 @@
           ]
         },
         {
-          "code": "İF-07",
-          "name": "Statistika (Statistics)",
+          "code": null,
+          "name": "Statistics",
           "credits": 10,
           "semester": "varies",
           "sections": [
@@ -146,8 +146,8 @@
       "label": "Year 2–3 (varies)",
       "courses": [
         {
-          "code": "İF-08",
-          "name": "Ekonometrika (Econometrics) — part 1: optimisation methods",
+          "code": null,
+          "name": "Econometrics, part 1: optimisation methods",
           "credits": 5,
           "semester": "varies",
           "sections": [
@@ -174,8 +174,8 @@
           ]
         },
         {
-          "code": "İF-08",
-          "name": "Ekonometrika (Econometrics) — part 2: econometric and economic models",
+          "code": null,
+          "name": "Econometrics, part 2: econometric and economic models",
           "credits": 5,
           "semester": "varies",
           "sections": [

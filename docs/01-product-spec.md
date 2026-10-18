@@ -69,7 +69,7 @@ A free, offline-first companion that covers the maths of an economics degree fro
 | R12 | Own API key | Settings screen with guide (10-groq-key-guide), Verify button, Remove button; key stored only on device |
 | R13 | Custom track import | Import a `.track.json` file; validated against schema; unknown topic IDs reported clearly |
 | R14 | Real-world resources | Each topic lists verified resources; weekly CI link check |
-| R15 | Azerbaijan 050405, LSE, Cambridge, MIT tracks | Mappings verified against current public syllabi; disclaimer shown; AZ track shows course names in Azerbaijani with English translation |
+| R15 | Azerbaijan 050405, LSE, Cambridge, MIT tracks | Mappings verified against current public syllabi; disclaimer shown; all names in English |
 | R16 | Formula sheet | Searchable list of all formulas, offline |
 
 ### P2 — later

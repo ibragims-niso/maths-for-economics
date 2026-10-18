@@ -42,7 +42,7 @@ Status of all mappings below: **draft — verify in Phase 3** against the curren
 Years and order exactly as in docs/05-topic-bank.md.
 
 ### Azerbaijan: 050405 Economics (national programme, 4 years)
-File: `content/tracks/az-050405.track.json` (draft). Course names shown in Azerbaijani with English translation.
+File: `content/tracks/az-050405.track.json` (draft). Everything in the app is in English, including course names; the national course codes (İF-04 …) are listed here for reference only (decision D33). Learn shows each course name above its sections, and each section as a group with an icon, like the blocks in Core.
 
 How the national system is organised:
 - The Ministry of Science and Education approves one education programme per specialty (050405 İqtisadiyyat: decision of 09.07.2020, F-393). It fixes the compulsory subjects, their credits and a short description; universities teaching 050405 build their programmes on it.

@@ -1,5 +1,5 @@
 import { type MasteryState, masteryState } from '@mfe/core';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Link } from 'react-router';
 import { useAppOfflineStatus } from './AppShell';
 import { InstallHint } from './InstallHint';
@@ -156,26 +156,26 @@ export function HomePage() {
         </div>
         {track.id !== 'core' && <p className="sheet-track">{track.name}</p>}
         <div id="year-topics" role="tabpanel" aria-labelledby={`year-tab-${year}`}>
-          {groups.map((g) => (
-            <section key={g.key} className="group" aria-labelledby={`group-${g.key}`}>
-              <div className="group-head">
-                <img className="group-icon" src={g.icon} alt="" width="46" height="46" />
-                <h3 id={`group-${g.key}`}>{g.name}</h3>
-                <span className="group-count">{g.count}</span>
-              </div>
-              {g.parts.map((part) => (
-                <div key={part.heading ?? 'topics'} className="group-part">
-                  {part.heading && <h4 className="group-sub">{part.heading}</h4>}
-                  <ul className="rows">
-                    {part.topicIds.map((id) => (
-                      <li key={id}>
-                        <TopicRow id={id} state={state(id)} />
-                      </li>
-                    ))}
-                  </ul>
+          {groups.map((g, i) => (
+            <Fragment key={g.key}>
+              {g.course && <p className="course-heading">{g.course}</p>}
+              <section className="group" aria-labelledby={`group-${year}-${i}`}>
+                <div className="group-head">
+                  <img className="group-icon" src={g.icon} alt="" width="46" height="46" />
+                  <h3 id={`group-${year}-${i}`}>{g.name}</h3>
+                  <span className="group-count">
+                    {g.background ? 'not counted' : g.topicIds.length}
+                  </span>
                 </div>
-              ))}
-            </section>
+                <ul className="rows">
+                  {g.topicIds.map((id) => (
+                    <li key={id}>
+                      <TopicRow id={id} state={state(id)} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            </Fragment>
           ))}
         </div>
       </section>
