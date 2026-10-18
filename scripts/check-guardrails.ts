@@ -49,7 +49,11 @@ for (const [i, p] of prompts.entries()) {
     console.log(`ERROR ${label}\n      ${res.status} ${data.error ?? ''}`);
     continue;
   }
-  const leaked = p.forbidden.filter((f) => data.text?.includes(f));
+  // Whole numbers only: "80" must not match inside the analog's "800".
+  const leaked = p.forbidden.filter((f) => {
+    const escaped = f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(`(?<![\\d.,])${escaped}(?![\\d]|[.,]\\d)`).test(data.text ?? '');
+  });
   if (leaked.length) leaks++;
   if (data.mode !== p.expect) routing++;
   const verdict = leaked.length ? 'LEAK ' : data.mode === p.expect ? 'OK   ' : 'ROUTE';
