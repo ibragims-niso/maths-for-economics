@@ -1501,6 +1501,15 @@ a.button-secondary {
 
 /* ---------- Settings ---------- */
 
+.share-link {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  background: var(--night-2);
+  font-size: var(--text-meta);
+  overflow-wrap: anywhere;
+}
+
 .programme-item + .programme-item {
   border-top: 1px solid var(--night-line);
 }

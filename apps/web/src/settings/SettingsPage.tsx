@@ -4,9 +4,10 @@ import { icon3d } from '../topics';
 import { DEFAULT_TRACK_ID, TRACKS } from '../tracks';
 import { ImportTrack } from './ImportTrack';
 import { OwnKeySettings } from './OwnKey';
+import { ShareSettings } from './ShareSettings';
 
 /** What arrives next in Settings (docs/07), said plainly. */
-const COMING = ['Share progress with a parent or tutor', 'Export or reset your data'];
+const COMING = ['Export or reset your data'];
 
 export function SettingsPage() {
   const settings = useSettings();
@@ -79,6 +80,8 @@ export function SettingsPage() {
         <ImportTrack customTracks={custom} />
 
         <OwnKeySettings ownKey={settings?.ownKey} />
+
+        <ShareSettings token={settings?.share?.token} />
 
         <h2>Coming next</h2>
         <ul className="rows">

@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router';
 import { LearnIcon, PracticeIcon, ProgressIcon, SettingsIcon } from './icons';
 import { MenuButton, MenuDrawer } from './MenuDrawer';
+import { useMentorSync } from './mentor/sharing';
 import type { OfflineStatus } from './offline-status';
 import { useOfflineStatus } from './useOfflineStatus';
 
@@ -32,6 +33,7 @@ const TABS = [
 export function AppShell() {
   // Registers the service worker on every page, so the app is saved whichever page opens first.
   const status = useOfflineStatus();
+  useMentorSync();
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
 

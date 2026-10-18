@@ -30,6 +30,8 @@ export interface Settings {
   ownKey?: string;
   /** Programmes the student imported from a .track.json file (docs/06 "Custom tracks"). */
   customTracks?: Track[];
+  /** Mentor sharing, when on (R11): the link token and this device's update key. */
+  share?: { token: string; key: string };
 }
 
 export const DEFAULT_SETTINGS: Settings = { trackId: 'core' };

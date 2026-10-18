@@ -14,3 +14,4 @@ export * from './engine/problem';
 export * from './engine/rng';
 export * from './engine/types';
 export * from './generators';
+export * from './sync/snapshot';

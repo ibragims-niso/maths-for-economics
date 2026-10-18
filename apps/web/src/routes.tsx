@@ -29,6 +29,11 @@ export const routes: RouteObject[] = [
         path: 'topic/:id',
         lazy: () => import('./TopicPage').then((m) => ({ Component: m.TopicPage })),
       },
+      {
+        // The mentor's read-only page (R11); needs a connection.
+        path: 'm/:token',
+        lazy: () => import('./mentor/MentorPage').then((m) => ({ Component: m.MentorPage })),
+      },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
