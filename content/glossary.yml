@@ -120,3 +120,7 @@ row echelon form: A matrix shape where each row's first non-zero entry (its pivo
 pivot: The first non-zero entry of a row in echelon form; elimination divides by it and uses it to clear the entries below.
 Gaussian elimination: Solving a linear system by row operations that bring it to row echelon form, followed by back substitution.
 free variable: An unknown with no pivot in the echelon form; it can take any value, so the system has infinitely many solutions.
+inverse matrix: For a square matrix A, the matrix A⁻¹ with AA⁻¹ = A⁻¹A = I; it exists exactly when det A ≠ 0 and undoes what A does.
+singular matrix: A square matrix whose determinant is 0, so it has no inverse and Ax = b has no solution or infinitely many.
+adjugate: The transpose of the matrix of cofactors; dividing it by det A gives the inverse, A⁻¹ = adj A / det A.
+Gauss–Jordan elimination: Row-reducing [A | I] until the left half is I, at which point the right half is A⁻¹.
