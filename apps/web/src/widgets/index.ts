@@ -14,6 +14,7 @@ import { PowerExplorer } from './PowerExplorer';
 import { ProfitHillTangent } from './ProfitHillTangent';
 import { RevenueProfit } from './RevenueProfit';
 import { SecantToTangent } from './SecantToTangent';
+import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
 import { SpendingRounds } from './SpendingRounds';
 import { SurveyVenn } from './SurveyVenn';
@@ -37,6 +38,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'profit-hill-tangent': ProfitHillTangent,
   'revenue-profit': RevenueProfit,
   'secant-to-tangent': SecantToTangent,
+  'shop-revenue-matrix': ShopRevenueMatrix,
   'simple-vs-compound': SimpleVsCompound,
   'spending-rounds': SpendingRounds,
   'survey-venn': SurveyVenn,

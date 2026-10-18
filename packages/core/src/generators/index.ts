@@ -54,6 +54,9 @@ import { savingPlanPayment } from './FM04/saving-plan-payment';
 import { bundleAngleCosine } from './LA101/bundle-angle-cosine';
 import { bundleCostDotProduct } from './LA101/bundle-cost-dot-product';
 import { bundleDistanceNorm } from './LA101/bundle-distance-norm';
+import { matrixChainPlantCost } from './LA102/matrix-chain-plant-cost';
+import { matrixProductRevenueEntry } from './LA102/matrix-product-revenue-entry';
+import { transitionMatrixTwoStep } from './LA102/transition-matrix-two-step';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -113,6 +116,9 @@ export const GENERATORS = [
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,
+  matrixProductRevenueEntry,
+  transitionMatrixTwoStep,
+  matrixChainPlantCost,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));

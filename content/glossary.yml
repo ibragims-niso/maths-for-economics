@@ -72,3 +72,8 @@ difference quotient: The fraction (f(x + h) − f(x))/h, the average rate of cha
 derivative: The limit of the difference quotient as h shrinks to 0, written f′(x) or dy/dx; the instantaneous rate of change and the slope of the tangent.
 tangent line: The straight line that touches a curve at a point and has the same slope as the curve there, y = f(a) + f′(a)(x − a).
 differentiable: Having a derivative at a point, which needs the slopes from the left and from the right to agree; a corner or kink is not differentiable.
+matrix: A rectangular table of numbers arranged in rows and columns, such as the sales of each shop (rows) of each good (columns).
+matrix product: The matrix AB whose entry in row i and column j is row i of A times column j of B; it exists only when A has as many columns as B has rows.
+transpose: The matrix Aᵀ obtained by turning the rows of A into columns, so (Aᵀ)ᵢⱼ = aⱼᵢ.
+identity matrix: A square matrix with 1s on the main diagonal and 0s elsewhere; multiplying by it leaves any matrix unchanged.
+transition matrix: A square matrix of probabilities of moving from one state (row) to another (column) in one period; each row adds up to 1.
