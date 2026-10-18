@@ -6,6 +6,7 @@
  * maths parsing and everything works offline). Worked examples are split into steps and "Why" lines.
  * verify blocks are dropped; they are for CI only.
  */
+import { createHash } from 'node:crypto';
 import { mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
@@ -13,6 +14,7 @@ import {
   type CompiledExample,
   type CompiledTopic,
   parseTopicFile,
+  type TopicContext,
   topicFrontmatterSchema,
 } from '@mfe/core';
 import type { Nodes, Paragraph, PhrasingContent, Root, RootContent } from 'mdast';
@@ -103,7 +105,18 @@ function hideMistakeCodes(nodes: RootContent[], codes: ReadonlySet<string>): Roo
   return nodes;
 }
 
-function compileTopic(path: string): CompiledTopic {
+/** A section's Markdown as the author wrote it, without widgets: what the AI tutor reads. */
+function markdownOf(body: string, nodes: RootContent[]): string {
+  const first = nodes[0]?.position?.start.offset;
+  const last = nodes.at(-1)?.position?.end.offset;
+  if (first === undefined || last === undefined) return '';
+  return body
+    .slice(first, last)
+    .replace(/^::widget\{[^}]*\}\s*$/gm, '')
+    .trim();
+}
+
+function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } {
   const source = readText(path);
   const { outline } = parseTopicFile(source, path);
   if (!outline) throw new Error(`${path}: cannot parse (run validate:content)`);
@@ -137,7 +150,20 @@ function compileTopic(path: string): CompiledTopic {
   }
   if (exampleTitle) examples.push(parseExample(exampleTitle, exampleNodes));
 
-  return {
+  // Read the Markdown before html() runs: hideMistakeCodes edits the tree in place.
+  const ai: TopicContext = {
+    id: fm.id,
+    title: fm.title,
+    summary: [section('Why economists need this'), section('Intuition')]
+      .map((nodes) => markdownOf(body, nodes))
+      .join('\n\n'),
+    definitions: markdownOf(body, section('Definition and formulas')),
+    economicUses: fm.economicUses,
+    resources: fm.resources.map((r) => ({ title: r.title, url: r.url, kind: r.kind })),
+    mistakeCodes: fm.mistakeCodes,
+  };
+
+  const topic: CompiledTopic = {
     ...fm,
     sections: {
       why: html(section('Why economists need this')),
@@ -152,14 +178,18 @@ function compileTopic(path: string): CompiledTopic {
       realWorld: html(section('Real world')),
     },
   };
+  return { topic, ai };
 }
 
 const topicsDir = join(repoRoot, 'content/topics');
-const topics = readdirSync(topicsDir)
+const compiled = readdirSync(topicsDir)
   .filter((f) => f.endsWith('.md'))
   .map((f) => compileTopic(join(topicsDir, f)));
+const topics = compiled.map((c) => c.topic);
 
-const content: CompiledContent = { version: new Date().toISOString().slice(0, 10), topics };
+// The version is a fingerprint of the content, so the AI cache and error reports follow edits.
+const version = createHash('sha256').update(JSON.stringify(topics)).digest('hex').slice(0, 12);
+const content: CompiledContent = { version, topics };
 const outDir = join(repoRoot, 'apps/web/src/generated');
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'content.json'), JSON.stringify(content));
@@ -167,5 +197,12 @@ writeFileSync(join(outDir, 'content.json'), JSON.stringify(content));
 writeFileSync(
   join(outDir, 'content-index.json'),
   JSON.stringify(topics.map((t) => ({ id: t.id, status: t.status, estMinutes: t.estMinutes }))),
+);
+// The tutor's reading material for the API (apps/proxy), from the same files and version.
+const proxyDir = join(repoRoot, 'apps/proxy/src/generated');
+mkdirSync(proxyDir, { recursive: true });
+writeFileSync(
+  join(proxyDir, 'ai-topics.json'),
+  JSON.stringify({ version, topics: compiled.map((c) => c.ai) }),
 );
 console.log(`Compiled ${topics.length} topics into apps/web/src/generated/content.json`);

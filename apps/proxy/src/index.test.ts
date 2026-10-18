@@ -12,6 +12,8 @@ describe('GET /api/health', () => {
       service: 'maths-for-economics-api',
       groqKeyConfigured: false,
       geminiKeyConfigured: false,
+      limitsConfigured: false,
+      cacheConfigured: false,
     });
   });
 

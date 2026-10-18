@@ -26,6 +26,15 @@ export async function recordRead(store: Storage, topicId: string, now: number): 
   if (next !== existing) await store.saveProgress([next]);
 }
 
+/** The device's anonymous ID, made on first use. */
+export async function deviceId(store: Storage): Promise<string> {
+  const settings = await store.getSettings();
+  if (settings.deviceId) return settings.deviceId;
+  const id = crypto.randomUUID();
+  await store.saveSettings({ deviceId: id });
+  return id;
+}
+
 /** Reads from storage and reads again after every change. `undefined` while loading. */
 function useStored<T>(read: (store: Storage) => Promise<T>): T | undefined {
   const [value, setValue] = useState<T>();

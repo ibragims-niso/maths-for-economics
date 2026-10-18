@@ -13,3 +13,4 @@ worker-configuration.d.ts
 00-BASLA.md
 # Compiled by npm run build:content
 apps/web/src/generated/
+apps/proxy/src/generated/

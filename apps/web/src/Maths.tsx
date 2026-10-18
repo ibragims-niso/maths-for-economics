@@ -1,8 +1,10 @@
 import 'katex/dist/katex.min.css';
 import katex from 'katex';
 
-const render = (latex: string, displayMode: boolean) =>
+/** KaTeX keeps its default `trust: false`, so maths can never carry links or images. */
+export const renderLatex = (latex: string, displayMode: boolean) =>
   katex.renderToString(latex, { displayMode, throwOnError: false, output: 'htmlAndMathml' });
+const render = renderLatex;
 
 /**
  * Text with inline maths between $...$, as generators write their questions.
@@ -33,6 +35,6 @@ export function MathBlock({ latex }: { latex: string }) {
   );
 }
 
-function escapeHtml(text: string): string {
+export function escapeHtml(text: string): string {
   return text.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 }

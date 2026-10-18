@@ -2,6 +2,7 @@ import { type CompiledExample, generatorById, masteryState } from '@mfe/core';
 import 'katex/dist/katex.min.css';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router';
+import { AiButton, AskBox } from './ai/AiParts';
 import { content, topicById } from './content';
 import { HtmlBlock } from './HtmlBlock';
 import { BackIcon } from './icons';
@@ -84,6 +85,7 @@ export function TopicPage() {
   const [tab, setTab] = useState<Tab>('learn');
   const state = masteryState(useProgress()?.get(id ?? ''));
   if (!topic) return <NotFoundPage />;
+  const resourceUrls = topic.resources.map((r) => r.url);
 
   const report = `${REPO_URL}/issues/new?title=${encodeURIComponent(`Error in ${topic.id}: ${topic.title}`)}&body=${encodeURIComponent(`Topic: ${topic.id}\nContent version: ${content.version}\n\nWhat is wrong:\n`)}`;
 
@@ -137,6 +139,7 @@ export function TopicPage() {
             <h2>Common mistakes</h2>
             <HtmlBlock className="prose" html={topic.sections.mistakes} />
             <ReadMarker topicId={topic.id} />
+            <AskBox topicId={topic.id} allowedUrls={resourceUrls} />
           </>
         )}
 
@@ -178,6 +181,11 @@ export function TopicPage() {
               ))}
             </ul>
             <HtmlBlock className="prose" html={topic.sections.realWorld} />
+            <AiButton
+              label="More real-world uses"
+              request={{ mode: 'REAL_WORLD', topicId: topic.id, payload: {} }}
+              allowedUrls={resourceUrls}
+            />
             {topic.resources.length > 0 && (
               <>
                 <h2>Read more</h2>

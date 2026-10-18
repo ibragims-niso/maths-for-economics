@@ -22,6 +22,7 @@
     "build": "npm run validate:content && npm run build:content && npm run build -w @mfe/web",
     "build:web": "npm run build:content && npm run build -w @mfe/web",
     "build:content": "tsx scripts/build-content.ts",
+    "check:guardrails": "tsx scripts/check-guardrails.ts",
     "build:bank": "tsx scripts/build-topic-bank.ts && biome format --write content/topic-bank.json content/tracks/core.track.json"
   },
   "devDependencies": {

@@ -12,6 +12,7 @@
     "wrangler": "4.151.1"
   },
   "dependencies": {
-    "hono": "4.13.13"
+    "hono": "4.13.13",
+    "@mfe/core": "0.0.0"
   }
 }

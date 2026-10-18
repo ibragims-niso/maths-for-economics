@@ -24,6 +24,8 @@ export interface TestAttempt {
 /** Choices kept on the device (docs/02 Settings). More arrive with AI and mentor sharing. */
 export interface Settings {
   trackId: string;
+  /** Anonymous random ID for the AI daily limit (docs/01 privacy: no names, no emails). */
+  deviceId?: string;
 }
 
 export const DEFAULT_SETTINGS: Settings = { trackId: 'core' };

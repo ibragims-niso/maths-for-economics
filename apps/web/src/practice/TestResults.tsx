@@ -1,5 +1,6 @@
 import type { GradeResult } from '@mfe/core';
 import { useState } from 'react';
+import { AiButton } from '../ai/AiParts';
 import { topicById } from '../content';
 import { REPO_URL } from '../links';
 import { MathBlock, MathText } from '../Maths';
@@ -64,6 +65,21 @@ function Review(props: { n: number; q: TestQuestion; answer: string; grade: Grad
             This doesn't match a common mistake. Compare your working with the solution below.
           </p>
         ))}
+      {state !== 'correct' && (
+        <AiButton
+          label="Explain more"
+          request={{
+            mode: 'TEST_FEEDBACK',
+            topicId: q.topicId,
+            payload: {
+              templateId: q.problem.templateId,
+              seed: q.problem.seed,
+              userAnswer: answer.trim().slice(0, 40),
+              ...(grade.mistakeCode ? { mistakeCode: grade.mistakeCode } : {}),
+            },
+          }}
+        />
+      )}
 
       <button
         type="button"
@@ -75,11 +91,19 @@ function Review(props: { n: number; q: TestQuestion; answer: string; grade: Grad
       </button>
       {open && (
         <ol className="steps">
-          {q.problem.steps.map((step) => (
+          {q.problem.steps.map((step, i) => (
             <li key={step.latex} className="step">
               <p className="step-text">{step.text}</p>
               <MathBlock latex={step.latex} />
               <p className="why">{step.why}</p>
+              <AiButton
+                label="Explain this step"
+                request={{
+                  mode: 'EXPLAIN_STEP',
+                  topicId: q.topicId,
+                  payload: { templateId: q.problem.templateId, seed: q.problem.seed, step: i },
+                }}
+              />
             </li>
           ))}
         </ol>

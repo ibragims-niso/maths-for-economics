@@ -470,12 +470,15 @@ a:hover {
   padding-left: 60px;
 }
 
-/* A course's section heading (tracks with sections, decision D32). */
-.group-sub {
-  margin: 10px 0 0 60px;
+/* A course's name above its sections (tracks with sections, decision D32). */
+.course-heading {
+  margin: 22px 0 -2px;
+  padding-top: 14px;
+  border-top: 1px solid var(--night-line);
   color: var(--lilac);
   font-size: var(--text-meta);
   font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .sheet-track {
@@ -1307,6 +1310,126 @@ li + li > .row {
 
 a.button-secondary {
   text-decoration: none;
+}
+
+/* ---------- AI tutor ---------- */
+
+.ai {
+  margin-top: 10px;
+}
+
+.ai-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgb(184 140 255 / 0.45);
+  border-radius: 999px;
+  background: rgb(184 140 255 / 0.1);
+  color: var(--lilac);
+  font: 600 var(--text-meta) / 1 var(--font);
+  cursor: pointer;
+}
+
+.ai-button:hover {
+  background: rgb(184 140 255 / 0.18);
+}
+
+.ai-status {
+  margin-top: 10px;
+  color: var(--night-muted);
+  font-size: var(--text-ui);
+}
+
+.ai-status--error {
+  color: var(--gold);
+}
+
+.ai-box {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid rgb(184 140 255 / 0.25);
+  border-radius: var(--radius-card);
+  background: rgb(184 140 255 / 0.07);
+}
+
+.ai-note {
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: var(--text-meta);
+  font-weight: 600;
+}
+
+.ai-answer {
+  font-size: var(--text-ui);
+}
+
+.ai-answer p + p,
+.ai-answer p + ul,
+.ai-answer p + ol,
+.ai-answer ul + p,
+.ai-answer ol + p {
+  margin-top: 8px;
+}
+
+.ai-credit {
+  margin-top: 10px;
+  color: var(--night-muted);
+  font-size: 0.75rem;
+}
+
+.ask {
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: var(--radius-card);
+  background: var(--night-2);
+}
+
+.sheet--page .ask h2 {
+  margin: 0 0 6px;
+}
+
+.ask-hint {
+  color: var(--night-muted);
+  font-size: var(--text-meta);
+  line-height: 1.5;
+}
+
+.ask textarea {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  border-radius: var(--radius-control);
+  background: var(--night);
+  color: var(--night-text);
+  font: var(--text-ui) / 1.5 var(--font);
+  resize: vertical;
+}
+
+.ask textarea::placeholder {
+  color: var(--night-muted);
+}
+
+.ask textarea:focus-visible {
+  outline: 2px solid var(--lilac);
+  outline-offset: 1px;
+}
+
+.ask-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.ask-count {
+  color: var(--night-muted);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ---------- Settings ---------- */

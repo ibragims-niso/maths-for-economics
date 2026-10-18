@@ -1,0 +1,5 @@
+{
+  "aiCallsPerDevicePerDay": 25,
+  "aiCallsPerIpPerDay": 100,
+  "cacheTtlDays": 30
+}
