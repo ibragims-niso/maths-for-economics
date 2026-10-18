@@ -139,3 +139,8 @@ gradient: The vector of a function's partial derivatives, ∇f = (f_x, f_y); it 
 directional derivative: The rate of change of a function per unit of distance moved in a given direction, D_u f = ∇f·u for a unit vector u.
 Young's theorem: For a function with continuous second partial derivatives, the mixed partials are equal, f_xy = f_yx.
 marginal utility: The extra utility from one more unit of a good with the amounts of all other goods held fixed.
+critical point: A point where every partial derivative of a function is zero; a maximum, a minimum or a saddle point.
+Hessian: The square matrix of a function's second partial derivatives; its determinant and leading principal minors decide whether a critical point is a maximum or a minimum.
+saddle point: A critical point where the function rises in some directions and falls in others, so it is neither a maximum nor a minimum.
+price discrimination: Charging different prices for the same product in separate markets, with higher prices where demand is less elastic.
+leading principal minors: The determinants of the top-left 1×1, 2×2, …, n×n blocks of a square matrix.

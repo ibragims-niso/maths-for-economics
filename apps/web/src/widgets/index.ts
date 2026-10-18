@@ -34,6 +34,7 @@ import { TariffContinuity } from './TariffContinuity';
 import { TaxBandExplorer } from './TaxBandExplorer';
 import { TaylorLogApproximation } from './TaylorLogApproximation';
 import { TwoLineSystem } from './TwoLineSystem';
+import { TwoProductProfitMap } from './TwoProductProfitMap';
 
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
@@ -72,4 +73,5 @@ export const WIDGETS: Record<string, ComponentType> = {
   'tax-band-explorer': TaxBandExplorer,
   'taylor-log-approximation': TaylorLogApproximation,
   'two-line-system': TwoLineSystem,
+  'two-product-profit-map': TwoProductProfitMap,
 };
