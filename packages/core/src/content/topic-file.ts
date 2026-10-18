@@ -1,4 +1,6 @@
 import { parse as parseYaml } from 'yaml';
+import { makeProblem } from '../engine/problem';
+import { generatorById } from '../generators';
 import { blockOf } from './ids';
 import { error, type Issue, warning, zodIssues } from './issues';
 import { type TopicBankEntry, topicFrontmatterSchema } from './schemas';
@@ -229,5 +231,50 @@ export function checkTopicFile(
     }
   }
 
+  issues.push(...checkGenerators(path, fm.id, fm.status, fm.generators, fm.mistakeCodes));
+  return issues;
+}
+
+/** Seeds sampled to collect the mistake codes a generator can return. */
+const SAMPLE_SEEDS = 200;
+
+/**
+ * Links the topic file to the code: every listed generator exists and belongs to this topic,
+ * and every mistake code it can return has an offline explanation in the file. A missing
+ * generator is only a warning while the topic is a draft.
+ */
+function checkGenerators(
+  path: string,
+  topicId: string,
+  status: string,
+  ids: string[],
+  mistakeCodes: Record<string, unknown>,
+): Issue[] {
+  const issues: Issue[] = [];
+  for (const id of ids) {
+    const generator = generatorById(id);
+    if (!generator) {
+      const say = status === 'draft' ? warning : error;
+      issues.push(say(path, `Generator "${id}" is not implemented in packages/core yet`));
+      continue;
+    }
+    if (generator.topicId !== topicId) {
+      issues.push(error(path, `Generator "${id}" belongs to ${generator.topicId}, not ${topicId}`));
+    }
+    const codes = new Set<string>();
+    for (let seed = 1; seed <= SAMPLE_SEEDS; seed++) {
+      for (const d of makeProblem(generator, seed).distractors) codes.add(d.mistakeCode);
+    }
+    for (const code of codes) {
+      if (!(code in mistakeCodes)) {
+        issues.push(
+          error(
+            path,
+            `Generator "${id}" returns mistake ${code}, which has no explanation in mistakeCodes`,
+          ),
+        );
+      }
+    }
+  }
   return issues;
 }

@@ -30,7 +30,9 @@ describe('elasticity-linear-point', () => {
         expect(q).toBeGreaterThan(0);
         expect(params.price).toBeGreaterThan(0);
         if (answer.kind !== 'numeric') throw new Error('numeric expected');
-        expect(Math.abs(answer.value - (-params.b * params.price) / q)).toBeLessThanOrEqual(0.005 + 1e-9);
+        expect(Math.abs(answer.value - (-params.b * params.price) / q)).toBeLessThanOrEqual(
+          0.005 + 1e-9,
+        );
         expect(answer.value).toBeLessThan(0);
       }),
       RUNS,

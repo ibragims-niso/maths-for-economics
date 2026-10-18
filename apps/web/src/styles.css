@@ -10,6 +10,8 @@
   --night-2: #262632;
   --night-text: #f4f3fb;
   --night-muted: #a9a6c4;
+  /* Tab labels sit on translucent glass over white pages; 5.0:1 there. */
+  --night-label: #c4c1da;
   --night-line: rgb(255 255 255 / 0.08);
   --lilac: #b88cff;
   --gold: #f5c04a;
@@ -208,7 +210,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
-  background: rgb(29 29 38 / 0.97);
+  background: rgb(29 29 38 / 0.8);
   backdrop-filter: blur(20px) saturate(160%);
   border-top: 1px solid var(--night-line);
   view-transition-name: tabbar;
@@ -222,7 +224,7 @@ a:hover {
   gap: 3px;
   min-height: 52px;
   border-radius: var(--radius-control);
-  color: var(--night-muted);
+  color: var(--night-label);
   font-size: 0.75rem;
   font-weight: 500;
   text-decoration: none;
@@ -432,24 +434,50 @@ a:hover {
   padding: 0;
 }
 
-.row {
+.group {
+  margin-top: 14px;
+}
+
+.group-head {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 10px 0;
 }
 
-.row + .row {
-  border-top: 1px solid var(--night-line);
+.group-head h3 {
+  flex: 1;
+  font-size: var(--text-ui);
 }
 
-.row-icon {
+.group-count {
+  color: var(--night-muted);
+  font-size: var(--text-meta);
+  font-variant-numeric: tabular-nums;
+}
+
+.group-icon {
   flex: none;
   width: 46px;
   height: 46px;
   padding: 4px;
   border-radius: var(--radius-control);
   background: var(--night-2);
+}
+
+/* Rows sit under their block, aligned with the block name. */
+.group .rows {
+  padding-left: 60px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 0;
+}
+
+.row + .row {
+  border-top: 1px solid var(--night-line);
 }
 
 .row-text {
@@ -484,14 +512,45 @@ a:hover {
   font-weight: 600;
 }
 
-/* "Keep it on your phone" at the top of the sheet: a plain block, not a card in a card. */
-.phone-card {
-  padding-bottom: 18px;
+/* Offline status and install: one compact strip at the top of the sheet. */
+.phone-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--night-line);
+  font-size: var(--text-meta);
 }
 
-.phone-card h2 {
-  font-size: var(--text-reading);
+.phone-strip .status {
+  flex: 1 1 12rem;
+  margin: 0;
+}
+
+.button-small {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--gradient);
+  box-shadow: var(--shadow-pill);
+  color: #fff;
+  font: 600 var(--text-meta) / 1 var(--font);
+  cursor: pointer;
+}
+
+.phone-how summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--lilac);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.phone-how .hint {
+  margin-top: 0;
 }
 
 .status {
@@ -666,6 +725,33 @@ a:hover {
   margin-top: 6px;
 }
 
+/* About: the map on white, the text on the dark sheet. */
+.sheet--page {
+  margin-top: 20px;
+  padding: 12px 20px 28px;
+}
+
+.sheet--page h1 {
+  font-size: var(--text-title);
+}
+
+.sheet--page h2 {
+  margin-bottom: 8px;
+  font-size: var(--text-reading);
+}
+
+.sheet--page section {
+  margin-top: 28px;
+}
+
+.sheet--page .lead {
+  color: var(--night-text);
+}
+
+.sheet--page .byline {
+  color: var(--night-muted);
+}
+
 /* The curriculum map at the top of About. */
 .map {
   margin: 0;
@@ -781,7 +867,7 @@ a:hover {
   padding: 0;
   border: 0;
   border-left: 1px solid var(--night-line);
-  background: rgb(29 29 38 / 0.98);
+  background: rgb(29 29 38 / 0.82);
   backdrop-filter: blur(20px) saturate(160%);
   color: var(--night-text);
 }
@@ -865,6 +951,11 @@ html:has(.drawer[open]) {
     animation: 320ms var(--ease-out) both sheet-rise;
   }
 
+  .roll {
+    display: inline-block;
+    animation: 280ms var(--ease-out) both roll-in;
+  }
+
   .curve-done {
     stroke-dasharray: 120;
     animation: 700ms 200ms var(--ease-out) both curve-draw;
@@ -919,6 +1010,13 @@ html:has(.drawer[open]) {
   from {
     opacity: 0;
     translate: 0 40px;
+  }
+}
+
+@keyframes roll-in {
+  from {
+    opacity: 0;
+    translate: 0 10px;
   }
 }
 

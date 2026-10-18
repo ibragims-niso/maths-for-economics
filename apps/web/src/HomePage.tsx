@@ -1,7 +1,7 @@
 import { type KeyboardEvent, useState } from 'react';
 import { useAppOfflineStatus } from './AppShell';
 import { InstallHint } from './InstallHint';
-import { topicIcon, topicsForYear, WRITING_NOW, YEARS } from './topics';
+import { groupByBlock, topicsForYear, WRITING_NOW, YEARS } from './topics';
 import { useInstallOption } from './useInstallOption';
 
 const YEAR_KEY = 'mfe.learn.year';
@@ -15,22 +15,26 @@ function initialYear(): number {
   }
 }
 
-/** The signature: mastery read like an account balance, with the curve it will grow along. */
+/** The signature: mastery read like an account balance. The total rolls in when the year changes. */
 function Balance({ year, total }: { year: number; total: number }) {
   return (
     <div className="balance">
       <p className="balance-label">Topics mastered in year {year}</p>
       <p className="balance-number">
-        0 <span>/ {total}</span>
+        0{' '}
+        <span key={total} className="roll">
+          / {total}
+        </span>
       </p>
     </div>
   );
 }
 
+/** Remounted per year (see `key` below), so the curve draws itself again on every switch. */
 function MasteryCurve() {
   return (
     <figure className="curve">
-      <svg viewBox="0 0 390 140" aria-hidden="true">
+      <svg viewBox="0 0 390 120" aria-hidden="true">
         <defs>
           <linearGradient id="curve-fill" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--violet)" stopOpacity=".28" />
@@ -39,11 +43,11 @@ function MasteryCurve() {
         </defs>
         <path
           className="curve-area"
-          d="M0 124 C40 124 62 102 88 100 S146 58 196 66 S266 30 306 40 S362 14 390 18 L390 140 L0 140Z"
+          d="M0 106 C40 106 62 88 88 86 S146 50 196 56 S266 26 306 34 S362 12 390 16 L390 120 L0 120Z"
         />
-        <path className="curve-ahead" d="M88 100 S146 58 196 66 S266 30 306 40 S362 14 390 18" />
-        <path className="curve-done" d="M0 124 C30 124 62 112 88 100" />
-        <circle className="curve-point" cx="88" cy="100" r="7" />
+        <path className="curve-ahead" d="M88 86 S146 50 196 56 S266 26 306 34 S362 12 390 16" />
+        <path className="curve-done" d="M0 106 C30 106 62 96 88 86" />
+        <circle className="curve-point" cx="88" cy="86" r="7" />
       </svg>
       <span className="curve-tip">You start here</span>
       <figcaption className="sr-only">
@@ -90,17 +94,27 @@ function YearSwitch({ year, onChange }: { year: number; onChange: (year: number)
   );
 }
 
-function KeepOnPhone() {
+/** Offline status and install, in one compact strip at the top of the sheet. */
+function PhoneStrip() {
   const status = useAppOfflineStatus();
   const option = useInstallOption();
   return (
-    <section className="phone-card" aria-labelledby="phone-heading">
-      <h2 id="phone-heading">Keep it on your phone</h2>
+    <section className="phone-strip" aria-label="Offline and install">
       <p className="status" role="status">
         <span className={`status-dot status-dot--${status.tone}`} aria-hidden="true" />
         {status.message}
       </p>
-      <InstallHint option={option} />
+      {option.kind === 'prompt' && (
+        <button type="button" className="button-small" onClick={option.install}>
+          Install
+        </button>
+      )}
+      {(option.kind === 'ios' || option.kind === 'manual') && (
+        <details className="phone-how">
+          <summary>How to install</summary>
+          <InstallHint option={option} />
+        </details>
+      )}
     </section>
   );
 }
@@ -108,6 +122,7 @@ function KeepOnPhone() {
 export function HomePage() {
   const [year, setYear] = useState(initialYear);
   const topics = topicsForYear(year);
+  const groups = groupByBlock(topics);
 
   const changeYear = (next: number) => {
     setYear(next);
@@ -124,33 +139,43 @@ export function HomePage() {
       <div className="hero">
         <Balance year={year} total={topics.length} />
         <YearSwitch year={year} onChange={changeYear} />
-        <MasteryCurve />
+        <MasteryCurve key={year} />
       </div>
 
       <section className="sheet" aria-labelledby="sheet-heading">
         <div className="sheet-handle" aria-hidden="true" />
-        <KeepOnPhone />
+        <PhoneStrip />
         <div className="sheet-head">
           <h2 id="sheet-heading">Year {year} topics</h2>
           <span className="sheet-count">{topics.length} topics</span>
         </div>
-        <ul id="year-topics" role="tabpanel" aria-labelledby={`year-tab-${year}`} className="rows">
-          {topics.map((t) => {
-            const writing = WRITING_NOW.has(t.id);
-            return (
-              <li key={t.id} className="row">
-                <img className="row-icon" src={topicIcon(t.id)} alt="" width="46" height="46" />
-                <span className="row-text">
-                  <span className="row-title">{t.title}</span>
-                  <span className="row-use">{t.economicUse}</span>
-                </span>
-                <span className={writing ? 'row-status row-status--writing' : 'row-status'}>
-                  {writing ? 'Writing' : 'Soon'}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
+        <div id="year-topics" role="tabpanel" aria-labelledby={`year-tab-${year}`}>
+          {groups.map((g) => (
+            <section key={g.block} className="group" aria-labelledby={`group-${g.block}`}>
+              <div className="group-head">
+                <img className="group-icon" src={g.icon} alt="" width="46" height="46" />
+                <h3 id={`group-${g.block}`}>{g.name}</h3>
+                <span className="group-count">{g.topics.length}</span>
+              </div>
+              <ul className="rows">
+                {g.topics.map((t) => {
+                  const writing = WRITING_NOW.has(t.id);
+                  return (
+                    <li key={t.id} className="row">
+                      <span className="row-text">
+                        <span className="row-title">{t.title}</span>
+                        <span className="row-use">{t.economicUse}</span>
+                      </span>
+                      <span className={writing ? 'row-status row-status--writing' : 'row-status'}>
+                        {writing ? 'Writing' : 'Soon'}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          ))}
+        </div>
       </section>
     </>
   );

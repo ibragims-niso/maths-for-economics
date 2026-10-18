@@ -33,6 +33,9 @@ generators: [elasticity-linear-point]
 widgets: [elasticity-slider]
 mistakeCodes:
   SIGN: { label: Lost the minus sign, explanation: Demand slopes downwards. }
+  INVERTED_RATIO: { label: Used Q/P, explanation: Multiply by P/Q. }
+  SLOPE_ONLY: { label: Gave the slope, explanation: Multiply the slope by P/Q. }
+  INVERSE_SLOPE: { label: Used dP/dQ, explanation: Take the reciprocal. }
 resources: []
 ---
 
@@ -128,8 +131,35 @@ describe('checkTopicFile', () => {
   });
 
   it('reports mistake codes that are not defined', () => {
-    expect(errors(topicFile({ extraMistake: '\n- Using Q/P (INVERTED_RATIO).' }))).toEqual([
-      expect.stringContaining('INVERTED_RATIO, which is not in mistakeCodes'),
+    expect(errors(topicFile({ extraMistake: '\n- Guessing (WILD_GUESS).' }))).toEqual([
+      expect.stringContaining('WILD_GUESS, which is not in mistakeCodes'),
+    ]);
+  });
+
+  it('requires an offline explanation for every mistake a generator returns', () => {
+    const source = topicFile().replace(
+      '  SLOPE_ONLY: { label: Gave the slope, explanation: Multiply the slope by P/Q. }\n',
+      '',
+    );
+    expect(errors(source)).toEqual([
+      expect.stringContaining('returns mistake SLOPE_ONLY, which has no explanation'),
+    ]);
+  });
+
+  it('only warns about a missing generator while the topic is a draft', () => {
+    const source = topicFile().replace(
+      'generators: [elasticity-linear-point]',
+      'generators: [elasticity-linear-point, not-built-yet]',
+    );
+    const issues = checkTopicFile('content/topics/C107-elasticity.md', source, bank);
+    expect(issues).toContainEqual(
+      expect.objectContaining({
+        level: 'warning',
+        message: expect.stringContaining('not-built-yet'),
+      }),
+    );
+    expect(errors(source.replace('status: draft', 'status: reviewed'))).toEqual([
+      expect.stringContaining('"not-built-yet" is not implemented'),
     ]);
   });
 

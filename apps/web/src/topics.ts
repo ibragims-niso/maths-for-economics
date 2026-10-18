@@ -37,3 +37,39 @@ export function topicIcon(id: string): string {
 export function topicsForYear(year: number) {
   return topicBank.filter((t) => t.coreYear === year);
 }
+
+/** Block names from docs/05-topic-bank.md, used as group headers in topic lists. */
+export const BLOCK_NAMES: Record<Block, string> = {
+  F: 'Foundations',
+  FM: 'Financial mathematics',
+  C1: 'Single-variable calculus',
+  LA1: 'Linear algebra I',
+  ST1: 'Probability and statistics I',
+  MV: 'Multivariable calculus and optimisation',
+  LA2: 'Linear algebra II',
+  ST2: 'Probability and statistics II',
+  OP: 'Optimisation II',
+  DY: 'Dynamics',
+  EM: 'Mathematics of econometrics',
+  GT: 'Game theory mathematics',
+  AN: 'Analysis for economists',
+  DO: 'Dynamic optimisation',
+  SP: 'Uncertainty and stochastic processes',
+  NM: 'Numerical methods',
+};
+
+/** A year's topics grouped by block, in curriculum order, like transactions under a date. */
+export function groupByBlock<T extends { id: string }>(topics: readonly T[]) {
+  const groups: { block: Block; name: string; icon: string; topics: T[] }[] = [];
+  for (const t of topics) {
+    const block = blockOf(t.id);
+    if (!block) continue;
+    let group = groups.find((g) => g.block === block);
+    if (!group) {
+      group = { block, name: BLOCK_NAMES[block], icon: icon3d(BLOCK_ICON[block]), topics: [] };
+      groups.push(group);
+    }
+    group.topics.push(t);
+  }
+  return groups;
+}
