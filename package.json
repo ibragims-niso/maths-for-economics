@@ -24,7 +24,8 @@
     "build:content": "tsx scripts/build-content.ts",
     "check:links": "tsx scripts/check-links.ts",
     "check:guardrails": "tsx scripts/check-guardrails.ts",
-    "build:bank": "tsx scripts/build-topic-bank.ts && biome format --write content/topic-bank.json content/tracks/core.track.json"
+    "build:bank": "tsx scripts/build-topic-bank.ts && biome format --write content/topic-bank.json content/tracks/core.track.json",
+    "test:e2e": "npm run build:web && npm run test:e2e -w @mfe/web"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
