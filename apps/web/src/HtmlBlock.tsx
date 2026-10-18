@@ -1,13 +1,6 @@
-import { type ComponentType, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { ElasticitySlider } from './widgets/ElasticitySlider';
-import { EquilibriumTax } from './widgets/EquilibriumTax';
-
-/** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
-const WIDGETS: Record<string, ComponentType> = {
-  'elasticity-slider': ElasticitySlider,
-  'equilibrium-tax': EquilibriumTax,
-};
+import { WIDGETS } from './widgets';
 
 /**
  * Shows HTML compiled at build time from our own topic files (scripts/build-content.ts), and
