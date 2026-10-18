@@ -31,6 +31,9 @@ import { threeSetInclusionExclusion } from './F09/three-set-inclusion-exclusion'
 import { compositeCostOfLabour } from './F10/composite-cost-of-labour';
 import { inverseDemandPrice } from './F10/inverse-demand-price';
 import { labourForCostBudget } from './F10/labour-for-cost-budget';
+import { fiscalMultiplierTaxImports } from './F11/fiscal-multiplier-tax-imports';
+import { keynesianEquilibriumIncome } from './F11/keynesian-equilibrium-income';
+import { moneyMultiplierCurrency } from './F11/money-multiplier-currency';
 import { compoundInterestAmount } from './FM01/compound-interest-amount';
 import { simpleInterestAmount } from './FM01/simple-interest-amount';
 import { annuityPresentValue } from './FM04/annuity-present-value';
@@ -68,6 +71,9 @@ export const GENERATORS = [
   inverseDemandPrice,
   compositeCostOfLabour,
   labourForCostBudget,
+  keynesianEquilibriumIncome,
+  fiscalMultiplierTaxImports,
+  moneyMultiplierCurrency,
   simpleInterestAmount,
   compoundInterestAmount,
   annuityPresentValue,
