@@ -11,3 +11,5 @@ local/
 worker-configuration.d.ts
 # Owner's private guide (Azerbaijani); stays on the owner's computer
 00-BASLA.md
+# Compiled by npm run build:content
+apps/web/src/generated/

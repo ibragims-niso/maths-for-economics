@@ -1,3 +1,4 @@
+export * from './content/compiled';
 export * from './content/ids';
 export * from './content/issues';
 export * from './content/schemas';
