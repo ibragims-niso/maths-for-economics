@@ -14,10 +14,10 @@ Acceptance:
 ## Phase 1 — Prototype (≈ 3 weeks)
 Scope: 5 topics fully built — F04 Linear functions in economics, F05 Market equilibrium, FM01 Simple and compound interest, C107 Elasticity, C109 Optimisation in one variable. 2 generators per topic, 2 widgets, topic page, test builder/runner/results, local progress and mastery, AI modes through the proxy with guardrails and limits, offline.
 Acceptance:
-- [ ] All 5 topics pass `validate:content` (verify blocks) and render on a phone
-- [ ] 10 generators with property tests (1,000 seeds each)
-- [ ] Timed test works end to end; AI hidden during the test; results show offline mistake explanations
-- [ ] Pasting a homework problem in "Ask" never returns its numeric answer; returns method + analog (test with 20 sample prompts, store them in `apps/proxy/test/guardrail-prompts.json`)
+- [x] All 5 topics pass `validate:content` (verify blocks) and render on a phone
+- [x] 10 generators with property tests (1,000 seeds each)
+- [x] Timed test works end to end; AI hidden during the test; results show offline mistake explanations
+- [x] Pasting a homework problem in "Ask" never returns its numeric answer; returns method + analog (test with 20 sample prompts, store them in `apps/proxy/test/guardrail-prompts.json`) — `npm run check:guardrails`: 20 of 20 on 2026-10-18
 - [ ] Airplane mode: everything except AI works
 - [ ] The primary user has used it for one week and his feedback is logged as GitHub issues
 
