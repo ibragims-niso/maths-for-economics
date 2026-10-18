@@ -1,11 +1,15 @@
 import { type Block, blockOf, type MasteryState } from '@mfe/core';
 import topicBank from '../../../content/topic-bank.json';
 import contentIndex from './generated/content-index.json';
+import working from './generated/working.json';
 
 export const YEARS = [1, 2, 3, 4] as const;
 
 /** Topics whose content is written and compiled (content/topics). Everything else is "Soon". */
 export const READY = new Set(contentIndex.map((t) => t.id));
+
+/** Topics being written right now (content/working.json): "Writing" instead of "Soon". */
+export const WRITING = new Set<string>(working);
 
 /** What a written topic's status says, by mastery (docs/02). */
 export const STATUS_LABEL: Record<MasteryState, string> = {

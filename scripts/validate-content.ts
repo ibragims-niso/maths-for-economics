@@ -5,7 +5,7 @@
  * cycles, same as docs/05), the glossary, every public track and every topic file,
  * including running all verify blocks. Exits with code 1 if anything is wrong.
  */
-import { readdirSync } from 'node:fs';
+import { existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   checkGlossary,
@@ -85,6 +85,25 @@ for (const name of readdirSync(tracksDir).filter((f) => f.endsWith('.track.json'
     issues.push(report(rel(path), `Track is missing topics: ${missing.join(', ')}`));
   }
   checks.push({ label: `Track ${track.id}: ${trackTopicOrder(track).length} topics`, issues });
+}
+
+// Topics being written (content/working.json, kept by the content session)
+const workingPath = join(contentDir, 'working.json');
+if (existsSync(workingPath)) {
+  const file = readJson(workingPath);
+  const ids = (file.data as { topics?: unknown }).topics;
+  const issues = [...file.issues];
+  if (!Array.isArray(ids)) {
+    issues.push(error(rel(workingPath), 'Expected { "topics": ["F01", ...] }'));
+  } else {
+    const known = new Set(bank.map((t) => t.id));
+    for (const id of ids) {
+      if (!known.has(String(id))) {
+        issues.push(warning(rel(workingPath), `${id} is not in the topic bank`));
+      }
+    }
+  }
+  checks.push({ label: 'Topics being written (working.json)', issues });
 }
 
 // Topic files

@@ -6,7 +6,7 @@ import { InstallHint } from './InstallHint';
 import { ChevronIcon } from './icons';
 import { Segmented } from './Segmented';
 import { useProgress } from './storage';
-import { bankTopic, READY, STATUS_LABEL } from './topics';
+import { bankTopic, READY, STATUS_LABEL, WRITING } from './topics';
 import { learnGroups, useTrack, yearTopics } from './tracks';
 import { useInstallOption } from './useInstallOption';
 
@@ -38,7 +38,11 @@ function TopicRow({ id, state }: { id: string; state: MasteryState }) {
   ) : (
     <div className="row">
       {text}
-      <span className="row-status">Soon</span>
+      {WRITING.has(id) ? (
+        <span className="row-status row-status--writing">Writing</span>
+      ) : (
+        <span className="row-status">Soon</span>
+      )}
     </div>
   );
 }

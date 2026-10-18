@@ -7,7 +7,7 @@
  * verify blocks are dropped; they are for CI only.
  */
 import { createHash } from 'node:crypto';
-import { mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   type CompiledContent,
@@ -199,6 +199,13 @@ writeFileSync(
   join(outDir, 'content-index.json'),
   JSON.stringify(topics.map((t) => ({ id: t.id, status: t.status, estMinutes: t.estMinutes }))),
 );
+// Topics the content session is writing now (content/working.json, owned by that session).
+// The app labels them "Writing" instead of "Soon"; a compiled topic is simply available.
+const workingPath = join(repoRoot, 'content/working.json');
+const working = existsSync(workingPath)
+  ? ((JSON.parse(readText(workingPath)) as { topics?: string[] }).topics ?? [])
+  : [];
+writeFileSync(join(outDir, 'working.json'), JSON.stringify(working));
 // The tutor's reading material for the API (apps/proxy), from the same files and version.
 const proxyDir = join(repoRoot, 'apps/proxy/src/generated');
 mkdirSync(proxyDir, { recursive: true });

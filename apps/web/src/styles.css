@@ -554,6 +554,11 @@ summary.group-head::-webkit-details-marker {
   font-weight: 600;
 }
 
+.row-status--writing {
+  color: var(--lilac);
+  font-weight: 600;
+}
+
 .row-status--none {
   color: var(--gold);
 }
