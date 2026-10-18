@@ -32,3 +32,6 @@ arithmetic sequence: A list of numbers in which each term is the previous one pl
 geometric sequence: A list of numbers in which each term is the previous one multiplied by a fixed number, the common ratio.
 series: The sum of the terms of a sequence, such as total earnings over several years.
 convergent series: A series whose running total settles at a fixed number as more and more terms are added.
+composite function: A function made by applying one function to the output of another, written f(g(x)) or (f ∘ g)(x).
+inverse function: The function that undoes another, taking each output back to the input that produced it; it exists only when the original function is one-to-one.
+one-to-one function: A function in which different inputs always give different outputs, so every horizontal line meets its graph at most once.
