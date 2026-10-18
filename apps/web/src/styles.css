@@ -210,7 +210,6 @@ a:hover {
   padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
   background: rgb(29 29 38 / 0.97);
   backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
   border-top: 1px solid var(--night-line);
   view-transition-name: tabbar;
 }
@@ -784,7 +783,6 @@ a:hover {
   border-left: 1px solid var(--night-line);
   background: rgb(29 29 38 / 0.98);
   backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
   color: var(--night-text);
 }
 
