@@ -2,14 +2,14 @@
 
 Rule: finish and check a phase's acceptance criteria before starting the next. One phase may take several Claude Code sessions.
 
-## Phase 0 — Setup (≈ 1 week)
+## Phase 0 — Setup (≈ 1 week) — done 2026-10-18
 Scope: monorepo, TypeScript, lint/format, Vitest, CI, Cloudflare web hosting + Worker "hello world", `content/topic-bank.json` from docs/05, schema validation, licences, README.
 Acceptance:
-- [ ] `npm run dev`, `npm test`, `npm run validate:content`, `npm run build` work
-- [ ] CI runs on every push and is green
-- [ ] Web app reachable on a Cloudflare URL and installable on a phone (Add to Home Screen)
-- [ ] Worker deployed; `GROQ_API_KEY` set as a secret; no key anywhere in the repo
-- [ ] Topic bank JSON validated: 102 topics, unique IDs, no prerequisite cycles
+- [x] `npm run dev`, `npm test`, `npm run validate:content`, `npm run build` work
+- [x] CI runs on every push and is green
+- [x] Web app reachable on a Cloudflare URL and installable on a phone (Add to Home Screen) — https://maths-for-economics.ibragim-n.workers.dev, installed and opened offline by the owner
+- [x] Worker deployed; `GROQ_API_KEY` set as a secret; no key anywhere in the repo
+- [x] Topic bank JSON validated: 102 topics, unique IDs, no prerequisite cycles
 
 ## Phase 1 — Prototype (≈ 3 weeks)
 Scope: 5 topics fully built — F04 Linear functions in economics, F05 Market equilibrium, FM01 Simple and compound interest, C107 Elasticity, C109 Optimisation in one variable. 2 generators per topic, 2 widgets, topic page, test builder/runner/results, local progress and mastery, AI modes through the proxy with guardrails and limits, offline.
