@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "npm run dev -w @mfe/web",
-    "dev:proxy": "npm run dev -w @mfe/proxy",
+    "dev:proxy": "npm run build:web && wrangler dev",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "biome check .",

@@ -2,12 +2,12 @@
 
 ## Overview
 ```
- Phone (PWA)                                    Cloudflare
+ Phone (PWA)                                    Cloudflare (one Worker)
  ┌──────────────────────────────┐              ┌──────────────────────────┐
- │ React UI                     │   HTTPS      │ Worker (Hono)            │
- │ packages/core (generators,   │ ───────────► │  /ai      → Groq API     │
- │   grading, mastery, prompts) │              │  /sync    → D1           │
- │ Dexie / IndexedDB            │              │  /mentor  → D1 (read)    │
+ │ React UI                     │   HTTPS      │ static files: the app    │
+ │ packages/core (generators,   │ ───────────► │  /api/ai     → Groq API  │
+ │   grading, mastery, prompts) │  same origin │  /api/sync   → D1        │
+ │ Dexie / IndexedDB            │              │  /api/mentor → D1 (read) │
  │ Workbox precache (content)   │              │  KV: shared AI cache     │
  └──────────────────────────────┘              └──────────────────────────┘
         │ own-key mode: direct call to Groq (see 03-ai-design)
@@ -43,11 +43,11 @@ Store `templateId + seed` so any problem can be regenerated exactly (needed for 
 - Completion % of a course/track = mastered topics / topics in that course or track. Show "read" share separately.
 
 ## Proxy (Cloudflare Worker)
-Endpoints:
-- `POST /ai` — body `{ mode, topicId, contentVersion, payload, deviceId }`. Validates with zod, applies limits, checks KV cache, builds prompt from core, calls provider, stores cacheable answers.
-- `POST /sync` — body `{ deviceId, snapshot }` when mentor sharing is on. Upsert.
-- `POST /sync/disable` — deletes the snapshot and mentor token.
-- `GET /mentor/:token` — returns snapshot JSON for the mentor page (read-only).
+The API runs in the same Worker as the web app, under `/api` (decision D27). Endpoints:
+- `POST /api/ai` — body `{ mode, topicId, contentVersion, payload, deviceId }`. Validates with zod, applies limits, checks KV cache, builds prompt from core, calls provider, stores cacheable answers.
+- `POST /api/sync` — body `{ deviceId, snapshot }` when mentor sharing is on. Upsert.
+- `POST /api/sync/disable` — deletes the snapshot and mentor token.
+- `GET /api/mentor/:token` — returns snapshot JSON for the mentor page (read-only).
 
 D1 tables:
 ```sql
@@ -61,7 +61,7 @@ Mentor view: route `/m/:token` in the web app (same deployment), read-only, work
 
 ## Security
 - Groq key: `wrangler secret put GROQ_API_KEY`. Never in code, config files or logs.
-- CORS on the Worker restricted to the app origin.
+- The API is same-origin with the app and sends no CORS headers, so pages on other sites cannot call it from a browser.
 - Mentor tokens: 128-bit random, only the hash stored server-side.
 - Rate limits per device ID and per IP (`config/limits.json`).
 - Own-key mode: key kept in IndexedDB on the device only; never sent to our proxy. If Groq blocks browser calls (CORS), add a pass-through route that forwards the request without logging or storing the key, and document this in the settings screen.
@@ -70,5 +70,5 @@ Mentor view: route `/m/:token` in the web app (same deployment), read-only, work
 Expo app reuses `packages/core` and content bundles; only UI and `Storage` implementation change (`expo-sqlite`). Keep all logic out of React components to make this cheap.
 
 ## Deployment
-- Web app: Cloudflare Workers static assets, configured in the root `wrangler.jsonc`. Workers Builds runs `npm run build` and `npx wrangler deploy` on every push to `main` (see decision D25).
-- Proxy Worker: Workers Builds runs `npx wrangler deploy --config apps/proxy/wrangler.jsonc` on every push to `main` (decision D26). `GROQ_API_KEY` is set as a secret in the Cloudflare dashboard or with `wrangler secret put`.
+- One Worker, configured in the root `wrangler.jsonc`: the web app as static assets plus the API code from `apps/proxy` for `/api/*`. Workers Builds runs `npm run build` and `npx wrangler deploy` on every push to `main` (decisions D25, D27).
+- `GROQ_API_KEY` is a secret on that Worker, set in the Cloudflare dashboard or with `wrangler secret put`.

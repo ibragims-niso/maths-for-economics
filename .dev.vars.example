@@ -1,5 +1,3 @@
 # Local settings for `npm run dev:proxy`. Copy this file to .dev.vars (which git ignores).
-# Values here override wrangler.jsonc while developing on your computer.
-ALLOWED_ORIGINS=http://localhost:5173
 # Optional: your own Groq key for local testing. Never commit it.
 GROQ_API_KEY=

@@ -3,6 +3,10 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  server: {
+    // `npm run dev:proxy` runs the API locally on 8790; the app calls it on its own origin.
+    proxy: { '/api': 'http://localhost:8790' },
+  },
   plugins: [
     react(),
     VitePWA({
@@ -34,6 +38,8 @@ export default defineConfig({
       workbox: {
         // Precache the whole app shell, fonts included, so it opens with no network.
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        // API calls always go to the network; never answer them with the app page.
+        navigateFallbackDenylist: [/^\/api\//],
       },
     }),
   ],

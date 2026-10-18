@@ -30,7 +30,7 @@ The project owner is not a programmer. Explain every change in plain language, k
 - `apps/proxy`: Cloudflare Worker (Hono). KV for the shared AI answer cache, D1 for mentor sync.
 - AI provider: Groq (OpenAI-compatible API) behind a provider interface so Gemini or Claude can be added.
 - Tests: Vitest + fast-check (generators), Playwright (key flows, from Phase 2).
-- Hosting: Cloudflare Workers — the web app as static assets (root `wrangler.jsonc`, built by Workers Builds) and the proxy (`apps/proxy/wrangler.jsonc`). CI: GitHub Actions.
+- Hosting: one Cloudflare Worker (root `wrangler.jsonc`, deployed by Workers Builds): the web app as static assets, the API from `apps/proxy` under `/api`. CI: GitHub Actions.
 
 ## Repo layout
 ```
@@ -47,7 +47,7 @@ local/               gitignored: private custom tracks, syllabus scans, scratch 
 
 ## Commands
 - `npm run dev` — web app locally
-- `npm run dev:proxy` — Worker locally (wrangler)
+- `npm run dev:proxy` — the Worker (built app + API) locally on port 8790; `npm run dev` proxies `/api` to it
 - `npm test` — unit + property tests
 - `npm run validate:content` — schema check, `verify` blocks, prerequisite graph has no cycles
 - `npm run validate:track <file>` — check one track file (e.g. a private one in `local/tracks/`)

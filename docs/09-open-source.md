@@ -16,7 +16,7 @@
 |---|---|---|
 | `ci.yml` | push, pull request | install, lint, typecheck, unit + property tests, `validate:content`, build |
 | `links.yml` | weekly + manual | lychee on all resource URLs; opens/updates an issue listing broken links |
-Cloudflare Workers Builds deploys both Workers from GitHub: the web app (root `wrangler.jsonc`) and the proxy (`apps/proxy/wrangler.jsonc`).
+Cloudflare Workers Builds deploys the app and its API, one Worker, from GitHub (root `wrangler.jsonc`).
 
 ## Contribution flow
 - `README.md`: what the app is, screenshots, install link, how to run locally.

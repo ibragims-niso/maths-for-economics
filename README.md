@@ -27,7 +27,7 @@ Then open http://localhost:5173.
 | Command | What it does |
 |---|---|
 | `npm run dev` | Start the web app locally |
-| `npm run dev:proxy` | Start the AI proxy (Cloudflare Worker) locally; copy `apps/proxy/.dev.vars.example` to `.dev.vars` first |
+| `npm run dev:proxy` | Run the Cloudflare Worker (built app + API) locally on port 8790; copy `.dev.vars.example` to `.dev.vars` first. `npm run dev` forwards `/api` to it |
 | `npm test` | Unit and property-based tests |
 | `npm run validate:content` | Check all content: schemas, `verify` blocks, prerequisite graph |
 | `npm run validate:track <file>` | Check one track file, e.g. a private one in `local/tracks/` |
@@ -39,7 +39,7 @@ Then open http://localhost:5173.
 
 ```
 apps/web/        the app (React + Vite PWA)
-apps/proxy/      Cloudflare Worker: AI proxy, cache, mentor sync
+apps/proxy/      the API (AI proxy, cache, mentor sync), served by the same Worker under /api
 packages/core/   shared logic: content schemas and checks (generators, grading, mastery to come)
 scripts/         content validation commands
 content/         topics, topic bank, tracks, glossary
