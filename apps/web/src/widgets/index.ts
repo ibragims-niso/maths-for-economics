@@ -4,6 +4,7 @@ import { CompoundingFrequency } from './CompoundingFrequency';
 import { DiscountingExplorer } from './DiscountingExplorer';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
+import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { KeynesianCross } from './KeynesianCross';
 import { PowerExplorer } from './PowerExplorer';
 import { SurveyVenn } from './SurveyVenn';
@@ -15,6 +16,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'discounting-explorer': DiscountingExplorer,
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
+  'fixed-cost-break-even': FixedCostBreakEven,
   'keynesian-cross': KeynesianCross,
   'power-explorer': PowerExplorer,
   'survey-venn': SurveyVenn,

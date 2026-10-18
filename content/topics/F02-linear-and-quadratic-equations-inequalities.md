@@ -12,7 +12,7 @@ economicUses:
   - Price limits that keep sales at or above a target
   - Checking whether a project can ever cover its fixed costs
 generators: [budget-max-whole-units, quadratic-break-even, break-even-max-fixed-cost]
-widgets: []
+widgets: [fixed-cost-break-even]
 mistakeCodes:
   ROUNDED_UP:
     label: Rounded up past the limit
@@ -89,7 +89,9 @@ $$p_x x + p_y y \le M.$$
 When goods come in whole units, the answer is the largest whole number that satisfies the inequality, so round down.
 
 ## Interactive
-An interactive break-even explorer is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="fixed-cost-break-even"}
+
+Move the **fixed cost** slider and watch the profit curve $\pi(Q) = -2Q^2 + 140Q - F$ slide down. The dots mark the break-even outputs, the shaded part is where the firm makes a profit, and the panel shows the discriminant $D = 140^2 - 8F$ and the break-even outputs. Notice that the two break-even points move towards each other as $F$ rises, meet when $D = 0$ and then disappear. Move the **output** slider to test the sign of profit at any output, as in Example 2. Check Examples 2 and 3: at $F = 2000$ the panel shows $D = 3600$, outputs 20 and 50, and a profit of 400 at $Q = 30$; at $F = 2450$ it shows $D = 0$ and the single output 35.
 
 ## Worked examples
 
