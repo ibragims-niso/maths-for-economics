@@ -45,12 +45,15 @@ docs/                specification (read before working)
 local/               gitignored: private custom tracks, syllabus scans, scratch files
 ```
 
-## Commands (create in Phase 0)
+## Commands
 - `npm run dev` — web app locally
 - `npm run dev:proxy` — Worker locally (wrangler)
 - `npm test` — unit + property tests
 - `npm run validate:content` — schema check, `verify` blocks, prerequisite graph has no cycles
-- `npm run build` — production build
+- `npm run validate:track <file>` — check one track file (e.g. a private one in `local/tracks/`)
+- `npm run lint` / `npm run format` — Biome check / fix
+- `npm run typecheck` — TypeScript, all workspaces
+- `npm run build` — production build (runs `validate:content` first)
 
 ## Documentation (read in this order)
 1. `docs/01-product-spec.md` — what we build and why, requirements with acceptance criteria

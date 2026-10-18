@@ -18,3 +18,10 @@
 | D14 | Mentor link is opt-in, anonymous, read-only | Parent wants to follow progress; privacy by default |
 | D15 | AI may cite only verified resource URLs | LLMs invent links |
 | D16 | Build in Claude Code; plan and map syllabi in Claude chat | Code and content verification need a real repo and test runs |
+| D17 | Biome for linting and formatting (instead of ESLint + Prettier) | One tool and one config file; fewer dependencies to keep up to date |
+| D18 | Fonts (Literata, Public Sans) are bundled with the app via Fontsource, Latin subset only | Google Fonts would not load offline; the app is English-only |
+| D19 | Core track is `verified`, dated 2026-10-18 | Core is defined as the docs/05 order; `validate:content` checks it lists every topic and respects prerequisites |
+| D20 | `validate:content` checks that `content/topic-bank.json` matches the table in docs/05 | The two copies cannot drift apart; a topic change must update both |
+| D21 | Dependencies are pinned to exact versions | Builds are reproducible; upgrades are deliberate and tested |
+| D22 | Secret scanning in CI runs the pinned gitleaks binary, not a third-party action | No licence key needed and no extra code with access to the repo |
+| D23 | Repository: github.com/ibragims-niso/maths-for-economics (personal account) | Chosen by the owner |
