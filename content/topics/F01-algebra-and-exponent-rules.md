@@ -12,7 +12,7 @@ economicUses:
   - Compound growth of GDP, prices and savings over several years
   - Simplifying an economic model before solving it
 generators: [exponent-laws-simplify, cobb-douglas-output, cobb-douglas-labour-needed]
-widgets: []
+widgets: [power-explorer]
 mistakeCodes:
   POWER_ADDED:
     label: Added the exponents for a power of a power
@@ -85,7 +85,9 @@ Rearranging works like a balance: whatever you do to one side, do to the other, 
 **Growth over several years:** growing by the factor $1 + g$ each year for $t$ years multiplies a quantity by $(1 + g)^t$. Going the other way, a total growth factor $G$ over $t$ years is an average yearly factor of $G^{1/t}$: prices that rise by 21 % over two years have an average yearly factor of $1.21^{1/2} = 1.1$, that is a rise of 10 % a year.
 
 ## Interactive
-An interactive exponent-law explorer is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="power-explorer"}
+
+Move the **exponent** slider through 0, negative values and fractions such as 1/2, and watch the curve $y = x^p$ change shape. Then move the **input** slider: the panel shows the value of $x^p$. Check the rules for yourself: $p = 0$ always gives 1, $p = -1$ gives $1/x$, and $p = 1/2$ gives $\sqrt{x}$ (at $x = 4$ the panel shows 2). The dashed line is $y = x$, for comparison.
 
 ## Worked examples
 
