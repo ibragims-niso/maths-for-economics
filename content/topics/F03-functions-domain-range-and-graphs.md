@@ -12,7 +12,7 @@ economicUses:
   - Reading intercepts and the direction of change off economic graphs
   - "Piecewise rules: income tax bands and block tariffs for electricity or water"
 generators: [cost-function-change, demand-domain-max-price, income-tax-bands]
-widgets: []
+widgets: [tax-band-explorer]
 mistakeCodes:
   LEVEL_NOT_CHANGE:
     label: Gave the new total, not the change
@@ -77,7 +77,9 @@ $$T(Y) = \begin{cases} 0, & 0 \le Y \le A \\ t_1(Y - A), & A < Y \le B \\ t_1(B 
 Neighbouring rules give the same value at each boundary, so the graph has no jumps.
 
 ## Interactive
-An interactive graph for this topic is planned. Until then, use Practice: every problem uses new numbers.
+::widget{id="tax-band-explorer"}
+
+Move the **income** slider. The dot runs along the tax function $T(Y)$ from Example 3; the dashed green lines mark the band edges at 10,000 and 40,000, where the graph bends but never jumps. The panel shows the tax, the average rate (tax divided by income, which is the slope of the dashed gold line from the origin) and the rate on the next unit of income. Notice that the average rate stays well below 40 % even in the top band. Check Example 3: at an income of 52,000 the panel shows a tax of 10,800 and an average rate of 20.77 %.
 
 ## Worked examples
 

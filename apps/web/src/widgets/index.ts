@@ -8,6 +8,7 @@ import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { KeynesianCross } from './KeynesianCross';
 import { PowerExplorer } from './PowerExplorer';
 import { SurveyVenn } from './SurveyVenn';
+import { TaxBandExplorer } from './TaxBandExplorer';
 
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
@@ -20,4 +21,5 @@ export const WIDGETS: Record<string, ComponentType> = {
   'keynesian-cross': KeynesianCross,
   'power-explorer': PowerExplorer,
   'survey-venn': SurveyVenn,
+  'tax-band-explorer': TaxBandExplorer,
 };
