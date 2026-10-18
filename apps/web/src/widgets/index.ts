@@ -8,6 +8,7 @@ import { EquilibriumTax } from './EquilibriumTax';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { KeynesianCross } from './KeynesianCross';
 import { PowerExplorer } from './PowerExplorer';
+import { RevenueProfit } from './RevenueProfit';
 import { SurveyVenn } from './SurveyVenn';
 import { TaxBandExplorer } from './TaxBandExplorer';
 
@@ -22,6 +23,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'fixed-cost-break-even': FixedCostBreakEven,
   'keynesian-cross': KeynesianCross,
   'power-explorer': PowerExplorer,
+  'revenue-profit': RevenueProfit,
   'survey-venn': SurveyVenn,
   'tax-band-explorer': TaxBandExplorer,
 };

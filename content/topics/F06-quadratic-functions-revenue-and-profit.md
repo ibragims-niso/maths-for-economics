@@ -12,7 +12,7 @@ economicUses:
   - Break-even outputs where a quadratic profit crosses zero
   - Comparing a sales target with a profit target
 generators: [max-revenue-linear-demand, max-profit-quadratic, profit-maximising-price]
-widgets: []
+widgets: [revenue-profit]
 mistakeCodes:
   QUANTITY_NOT_MAXIMUM:
     label: Gave the best quantity, not the maximum value
@@ -71,7 +71,9 @@ In economics, take inverse demand $P = \alpha - \beta Q$ with $\alpha, \beta > 0
 Later, in C109, you will find the same tops with derivatives; the answers agree.
 
 ## Interactive
-An interactive parabola for revenue and profit is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="revenue-profit"}
+
+The graph uses the firm of Example 3: demand $P = 120 - 3Q$ and cost $C = F + vQ$. The lilac hill is revenue and the green hill is profit; the solid dot marks the top of revenue and the hollow dot the top of profit. Drag the **cost per unit** $v$ and watch the profit top slide left, to fewer units at a higher price, while the revenue top stays at $Q = 20$, $P = 60$. Then drag the **fixed cost** $F$: the profit curve moves straight down and its top stays at the same quantity. Check: at $v = 30$ and $F = 400$ the panel shows the revenue top at Q 20, P 60, the profit top at Q 15, P 75 and a largest profit of 275; at $v = 0$ and $F = 0$ the two curves are the same.
 
 ## Worked examples
 
