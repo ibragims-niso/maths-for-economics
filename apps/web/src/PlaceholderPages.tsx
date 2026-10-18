@@ -21,21 +21,6 @@ function EmptyState(props: { icon: string; title: string; text: string; items: s
   );
 }
 
-export function ProgressPage() {
-  return (
-    <EmptyState
-      icon="trophy"
-      title="Progress"
-      text="Your mastery shows here once you start practising."
-      items={[
-        'Topics mastered by year and course',
-        'Weak areas to review first',
-        'Every test you took, with its mistakes',
-      ]}
-    />
-  );
-}
-
 export function SettingsPage() {
   return (
     <EmptyState

@@ -127,7 +127,10 @@ export function TestResults(props: {
       <section className="sheet sheet--page" aria-labelledby="review-heading">
         <div className="sheet-handle" aria-hidden="true" />
         <h2 id="review-heading">Review</h2>
-        <p className="prose">"Practise again" gives the same kind of questions with new numbers.</p>
+        <p className="prose">
+          Your score is saved in Progress. "Practise again" gives the same kind of questions with
+          new numbers.
+        </p>
         <ol className="reviews">
           {test.questions.map((q, i) => (
             <Review

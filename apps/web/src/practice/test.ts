@@ -11,6 +11,7 @@ import {
   randomSeed,
   type TestPlan,
 } from '@mfe/core';
+import type { TestAttempt } from '../storage';
 
 export interface TestSettings {
   topicIds: string[];
@@ -37,6 +38,31 @@ export interface TestOutcome {
   grades: GradeResult[];
   secondsUsed: number;
   timedOut: boolean;
+}
+
+/** The record kept on the device for a finished test (docs/02 TestAttempt). */
+export function toAttempt(outcome: TestOutcome, id: string, finishedAt: number): TestAttempt {
+  const { test, answers, grades } = outcome;
+  return {
+    id,
+    startedAt: finishedAt - Math.round(outcome.secondsUsed * 1000),
+    finishedAt,
+    timeLimitSec: test.timeLimitSec,
+    timedOut: outcome.timedOut,
+    topicIds: test.settings.topicIds,
+    difficulty: test.settings.difficulty,
+    items: test.questions.map((q, i) => {
+      const grade = grades[i];
+      return {
+        topicId: q.topicId,
+        templateId: q.problem.templateId,
+        seed: q.problem.seed,
+        userAnswer: answers[i] ?? '',
+        correct: grade?.correct ?? false,
+        ...(grade?.mistakeCode ? { mistakeCode: grade.mistakeCode } : {}),
+      };
+    }),
+  };
 }
 
 export const planTest = (settings: TestSettings, seed: number): TestPlan =>

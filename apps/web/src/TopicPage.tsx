@@ -1,6 +1,6 @@
-import { type CompiledExample, generatorById } from '@mfe/core';
+import { type CompiledExample, generatorById, masteryState } from '@mfe/core';
 import 'katex/dist/katex.min.css';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { content, topicById } from './content';
 import { HtmlBlock } from './HtmlBlock';
@@ -8,7 +8,8 @@ import { BackIcon } from './icons';
 import { REPO_URL } from './links';
 import { NotFoundPage } from './PlaceholderPages';
 import { Segmented } from './Segmented';
-import { BLOCK_NAMES, topicIcon } from './topics';
+import { recordRead, storage, useProgress } from './storage';
+import { BLOCK_NAMES, STATUS_LABEL, topicIcon } from './topics';
 
 type Tab = 'learn' | 'examples' | 'practise' | 'real';
 const TABS: { value: Tab; label: string }[] = [
@@ -19,6 +20,23 @@ const TABS: { value: Tab; label: string }[] = [
 ];
 
 const DIFFICULTY = { 1: 'Easy', 2: 'Medium', 3: 'Hard' } as const;
+
+/** Marks the topic as read once the end of the Learn tab scrolls into view. */
+function ReadMarker({ topicId }: { topicId: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      observer.disconnect();
+      recordRead(storage, topicId, Date.now()).catch(() => undefined);
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [topicId]);
+  return <div ref={ref} aria-hidden="true" />;
+}
 
 function Example({ example }: { example: CompiledExample }) {
   const [shown, setShown] = useState<ReadonlySet<number>>(new Set());
@@ -64,6 +82,7 @@ export function TopicPage() {
   const { id } = useParams();
   const topic = topicById(id);
   const [tab, setTab] = useState<Tab>('learn');
+  const state = masteryState(useProgress()?.get(id ?? ''));
   if (!topic) return <NotFoundPage />;
 
   const report = `${REPO_URL}/issues/new?title=${encodeURIComponent(`Error in ${topic.id}: ${topic.title}`)}&body=${encodeURIComponent(`Topic: ${topic.id}\nContent version: ${content.version}\n\nWhat is wrong:\n`)}`;
@@ -81,6 +100,9 @@ export function TopicPage() {
             <h1>{topic.title}</h1>
             <p className="topic-meta">
               {BLOCK_NAMES[topic.block]} · Year {topic.coreYear} · about {topic.estMinutes} min
+              {state !== 'none' && (
+                <span className={`topic-state row-status--${state}`}> · {STATUS_LABEL[state]}</span>
+              )}
             </p>
           </div>
         </div>
@@ -114,6 +136,7 @@ export function TopicPage() {
             <HtmlBlock className="prose" html={topic.sections.interactive} />
             <h2>Common mistakes</h2>
             <HtmlBlock className="prose" html={topic.sections.mistakes} />
+            <ReadMarker topicId={topic.id} />
           </>
         )}
 

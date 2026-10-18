@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSearchParams } from 'react-router';
+import { recordTest, storage } from '../storage';
 import { TestBuilder } from './TestBuilder';
 import { TestResults } from './TestResults';
 import { type RunnerResult, TestRunner } from './TestRunner';
@@ -9,6 +10,7 @@ import {
   retakeTest,
   type TestOutcome,
   type TestSettings,
+  toAttempt,
 } from './test';
 
 type Phase =
@@ -34,8 +36,12 @@ export function PracticePage() {
   };
   const finish = (test: RunningTest, result: RunnerResult) => {
     const grades = gradeTest(test, result.answers);
-    setPhase({ kind: 'done', outcome: { test, ...result, grades } });
+    const outcome = { test, ...result, grades };
+    setPhase({ kind: 'done', outcome });
     window.scrollTo(0, 0);
+    recordTest(storage, toAttempt(outcome, crypto.randomUUID(), Date.now())).catch(() => {
+      // Storage refused (e.g. disk full); the results on screen are still complete.
+    });
   };
 
   if (phase.kind === 'run') {

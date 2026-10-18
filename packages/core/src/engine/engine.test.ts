@@ -3,7 +3,15 @@ import { describe, expect, it } from 'vitest';
 import { GENERATORS } from '../generators';
 import { composeTest } from './composer';
 import { gradeNumeric, parseNumber, toleranceFor } from './grading';
-import { dueForReview, masteryState, recordScore, type TopicProgress, topicScore } from './mastery';
+import {
+  dueForReview,
+  markRead,
+  masteryState,
+  progressAfterTest,
+  recordScore,
+  type TopicProgress,
+  topicScore,
+} from './mastery';
 import { createRng } from './rng';
 
 describe('createRng', () => {
@@ -120,6 +128,27 @@ describe('mastery', () => {
     const b = { ...fresh, topicId: 'B', nextReviewAt: 2 };
     const c = { ...fresh, topicId: 'C', nextReviewAt: 50 };
     expect(dueForReview([a, b, c], 10).map((p) => p.topicId)).toEqual(['B', 'A']);
+  });
+
+  it('updates each tested topic with its own score and leaves the rest alone', () => {
+    const existing = [{ ...fresh, lastScores: [100], testsTaken: 1, leitnerBox: 1 }];
+    const items = [
+      { topicId: 'C107', correct: true },
+      { topicId: 'C107', correct: true },
+      { topicId: 'F04', correct: false },
+    ];
+    const [c107, f04, ...rest] = progressAfterTest(existing, items, 0);
+    expect(rest).toEqual([]);
+    expect(c107).toMatchObject({ topicId: 'C107', lastScores: [100, 100], testsTaken: 2 });
+    expect(c107?.leitnerBox).toBe(2);
+    expect(f04).toMatchObject({ topicId: 'F04', lastScores: [0], testsTaken: 1, leitnerBox: 1 });
+  });
+
+  it('keeps the first reading date', () => {
+    const read = markRead(undefined, 'C107', 5);
+    expect(read.readAt).toBe(5);
+    expect(masteryState(read)).toBe('learning');
+    expect(markRead(read, 'C107', 9).readAt).toBe(5);
   });
 });
 

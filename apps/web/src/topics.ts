@@ -1,4 +1,4 @@
-import { type Block, blockOf } from '@mfe/core';
+import { type Block, blockOf, type MasteryState } from '@mfe/core';
 import topicBank from '../../../content/topic-bank.json';
 import contentIndex from './generated/content-index.json';
 
@@ -6,6 +6,15 @@ export const YEARS = [1, 2, 3, 4] as const;
 
 /** Topics whose content is written and compiled (content/topics). Everything else is "Soon". */
 export const READY = new Set(contentIndex.map((t) => t.id));
+
+/** What a written topic's status says, by mastery (docs/02). */
+export const STATUS_LABEL: Record<MasteryState, string> = {
+  none: 'Open',
+  learning: 'Learning',
+  mastered: 'Mastered',
+};
+
+export const topicTitle = (id: string) => topicBank.find((t) => t.id === id)?.title ?? id;
 
 /** One CC0 3D icon per block (public/icons3d, credited in About). */
 const BLOCK_ICON: Record<Block, string> = {

@@ -63,6 +63,38 @@ export function topicScore(
   return Math.round((100 * mine.filter((i) => i.correct).length) / mine.length);
 }
 
+export const emptyProgress = (topicId: string): TopicProgress => ({
+  topicId,
+  lastScores: [],
+  testsTaken: 0,
+  leitnerBox: 0,
+});
+
+/**
+ * The progress of every topic in a finished test: each topic gets its own score from its own
+ * questions (docs/02 "Mastery and review rules"). Topics not in the test are not returned.
+ */
+export function progressAfterTest(
+  existing: readonly TopicProgress[],
+  items: { topicId: string; correct: boolean }[],
+  now: number,
+): TopicProgress[] {
+  const topicIds = [...new Set(items.map((i) => i.topicId))];
+  return topicIds.map((id) =>
+    recordScore(
+      existing.find((p) => p.topicId === id) ?? emptyProgress(id),
+      topicScore(items, id),
+      now,
+    ),
+  );
+}
+
+/** Marks a topic as read the first time; later reads keep the first date. */
+export function markRead(progress: TopicProgress | undefined, topicId: string, now: number) {
+  const p = progress ?? emptyProgress(topicId);
+  return p.readAt === undefined ? { ...p, readAt: now } : p;
+}
+
 /** Topics due for review now, most overdue first. */
 export function dueForReview(all: TopicProgress[], now: number): TopicProgress[] {
   return all

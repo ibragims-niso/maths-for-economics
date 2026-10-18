@@ -504,9 +504,22 @@ a:hover {
   font-weight: 500;
 }
 
-.row-status--open {
-  color: var(--gold);
+.row-status--none,
+.row-status--learning,
+.row-status--mastered {
   font-weight: 600;
+}
+
+.row-status--none {
+  color: var(--gold);
+}
+
+.row-status--learning {
+  color: var(--lilac);
+}
+
+.row-status--mastered {
+  color: var(--success);
 }
 
 /* A written topic: the whole row opens it. */
@@ -1270,6 +1283,73 @@ li + li > .row {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: 18px;
+}
+
+.empty .results-actions {
+  width: 100%;
+  max-width: 22rem;
+  margin-top: 24px;
+}
+
+a.button-secondary {
+  text-decoration: none;
+}
+
+/* ---------- Progress ---------- */
+
+.year-bars {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.year-bars li {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr 4rem;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-meta);
+}
+
+.year-bar-label {
+  color: var(--muted);
+}
+
+.year-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--ground);
+  overflow: hidden;
+}
+
+.year-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: var(--gradient);
+}
+
+.year-bar-count {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.topic-state {
+  font-weight: 600;
+}
+
+.topic-state.row-status--learning {
+  color: var(--violet);
+}
+
+.sheet--page .rows + h2 {
+  margin-top: 28px;
+}
+
+li.row + li.row {
+  border-top: 1px solid var(--night-line);
 }
 
 .reviews {

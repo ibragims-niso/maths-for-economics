@@ -1,14 +1,15 @@
+import { masteryState } from '@mfe/core';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { useAppOfflineStatus } from './AppShell';
 import { InstallHint } from './InstallHint';
 import { Segmented } from './Segmented';
-import { groupByBlock, READY, topicsForYear, YEARS } from './topics';
+import { useProgress } from './storage';
+import { groupByBlock, READY, STATUS_LABEL, topicsForYear, YEARS } from './topics';
 import { useInstallOption } from './useInstallOption';
 
 const YEAR_KEY = 'mfe.learn.year';
 const YEAR_OPTIONS = YEARS.map((y) => ({ value: y as number, label: `Year ${y}` }));
-
 function initialYear(): number {
   try {
     const saved = Number(localStorage.getItem(YEAR_KEY));
@@ -19,12 +20,12 @@ function initialYear(): number {
 }
 
 /** The signature: mastery read like an account balance. The total rolls in when the year changes. */
-function Balance({ year, total }: { year: number; total: number }) {
+function Balance({ year, mastered, total }: { year: number; mastered: number; total: number }) {
   return (
     <div className="balance">
       <p className="balance-label">Topics mastered in year {year}</p>
       <p className="balance-number">
-        0{' '}
+        {mastered}{' '}
         <span key={total} className="roll">
           / {total}
         </span>
@@ -89,6 +90,9 @@ export function HomePage() {
   const [year, setYear] = useState(initialYear);
   const topics = topicsForYear(year);
   const groups = groupByBlock(topics);
+  const progress = useProgress();
+  const state = (id: string) => masteryState(progress?.get(id));
+  const mastered = topics.filter((t) => state(t.id) === 'mastered').length;
 
   const changeYear = (next: number) => {
     setYear(next);
@@ -103,7 +107,7 @@ export function HomePage() {
     <>
       <h1 className="sr-only">Learn</h1>
       <div className="hero">
-        <Balance year={year} total={topics.length} />
+        <Balance year={year} mastered={mastered} total={topics.length} />
         <Segmented
           options={YEAR_OPTIONS}
           value={year}
@@ -140,7 +144,9 @@ export function HomePage() {
                             <span className="row-title">{t.title}</span>
                             <span className="row-use">{t.economicUse}</span>
                           </span>
-                          <span className="row-status row-status--open">Open</span>
+                          <span className={`row-status row-status--${state(t.id)}`}>
+                            {STATUS_LABEL[state(t.id)]}
+                          </span>
                         </Link>
                       ) : (
                         <div className="row">

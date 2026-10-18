@@ -2,7 +2,7 @@ import type { RouteObject } from 'react-router';
 import { AboutPage } from './AboutPage';
 import { AppShell } from './AppShell';
 import { HomePage } from './HomePage';
-import { NotFoundPage, ProgressPage, SettingsPage } from './PlaceholderPages';
+import { NotFoundPage, SettingsPage } from './PlaceholderPages';
 
 export const routes: RouteObject[] = [
   {
@@ -13,7 +13,10 @@ export const routes: RouteObject[] = [
         path: 'practice',
         lazy: () => import('./practice/PracticePage').then((m) => ({ Component: m.PracticePage })),
       },
-      { path: 'progress', element: <ProgressPage /> },
+      {
+        path: 'progress',
+        lazy: () => import('./progress/ProgressPage').then((m) => ({ Component: m.ProgressPage })),
+      },
       { path: 'settings', element: <SettingsPage /> },
       { path: 'about', element: <AboutPage /> },
       {
