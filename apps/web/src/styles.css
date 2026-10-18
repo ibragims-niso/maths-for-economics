@@ -15,6 +15,13 @@
   --radius-control: 6px;
   --radius-sheet: 10px;
 
+  /* Type roles (docs/07 scale 13 / 15 / 17 / 21 / 28), in rem so they follow the reader's text size. */
+  --text-meta: 0.8125rem;
+  --text-ui: 0.9375rem;
+  --text-reading: 1.0625rem;
+  --text-heading: 1.3125rem;
+  --text-title: 1.75rem;
+
   color-scheme: light;
 }
 
@@ -53,7 +60,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-ui);
-  font-size: 15px;
+  font-size: var(--text-ui);
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
@@ -74,15 +81,34 @@ a {
   padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  text-wrap: balance;
+}
+
 h1 {
-  font-size: 28px;
-  line-height: 1.2;
+  font-size: var(--text-title);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 8px 0 12px;
 }
 
 h2 {
-  font-size: 17px;
+  font-size: var(--text-heading);
+  line-height: 1.25;
   margin: 0 0 8px;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Maths variables are set like the textbook: Literata italic. */
+var {
+  font-family: var(--font-reading);
+  font-style: italic;
 }
 
 main > section {
@@ -91,7 +117,7 @@ main > section {
 
 .lead {
   font-family: var(--font-reading);
-  font-size: 17px;
+  font-size: var(--text-reading);
   line-height: 1.6;
   max-width: 70ch;
   margin: 0;
@@ -110,7 +136,7 @@ main > section {
 
 .chart figcaption {
   color: var(--ink-muted);
-  font-size: 13px;
+  font-size: var(--text-meta);
   margin-top: 4px;
 }
 
@@ -155,9 +181,23 @@ main > section {
 
 .chart-label {
   fill: var(--ink);
+  font-family: var(--font-reading);
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Curve names (S, D) are labels, not variables: upright, in the curve's colour. */
+.chart-curve-name {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.chart-tick {
+  fill: var(--ink-muted);
   font-family: var(--font-ui);
   font-size: 12px;
-  font-style: italic;
+  font-variant-numeric: tabular-nums;
 }
 
 .chart-label-demand {
@@ -183,7 +223,7 @@ main > section {
   align-items: baseline;
   gap: 8px;
   color: var(--ink);
-  font-size: 15px;
+  font-size: var(--text-ui);
 }
 
 .card .status {
@@ -213,7 +253,7 @@ main > section {
 
 footer {
   color: var(--ink-muted);
-  font-size: 13px;
+  font-size: var(--text-meta);
   margin-top: 32px;
 }
 
@@ -228,7 +268,7 @@ footer {
   border-radius: var(--radius-control);
   background: var(--supply);
   color: var(--paper);
-  font: 600 15px / 1 var(--font-ui);
+  font: 600 var(--text-ui) / 1 var(--font-ui);
   cursor: pointer;
 }
 
@@ -242,7 +282,7 @@ footer {
 
 .hint {
   color: var(--ink-muted);
-  font-size: 13px;
+  font-size: var(--text-meta);
   margin: 8px 0 0;
 }
 
@@ -275,7 +315,7 @@ footer {
 .topic-use {
   display: block;
   color: var(--ink-muted);
-  font-size: 13px;
+  font-size: var(--text-meta);
 }
 
 /* Curriculum map: the one bold element (docs/07). */
@@ -354,19 +394,20 @@ footer {
 .map-year-name {
   display: block;
   font-weight: 600;
-  font-size: 13px;
+  font-size: var(--text-meta);
 }
 
 .map-year-count {
   display: block;
   color: var(--ink-muted);
-  font-size: 13px;
+  font-size: var(--text-meta);
+  font-variant-numeric: tabular-nums;
 }
 
 .map figcaption {
   margin-top: 12px;
   color: var(--ink-muted);
-  font-size: 13px;
+  font-size: var(--text-meta);
 }
 
 .map-legend {
@@ -406,7 +447,7 @@ footer {
 }
 
 .topic-index h3 {
-  font-size: 15px;
+  font-size: var(--text-ui);
   margin: 16px 0 4px;
 }
 

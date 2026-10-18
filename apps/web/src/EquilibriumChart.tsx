@@ -16,25 +16,33 @@ export function EquilibriumChart() {
         </defs>
         <rect x={x(0)} y={y(50)} width={x(100) - x(0)} height={y(0) - y(50)} fill="url(#grid)" />
         <path d={`M${x(0)} ${y(52)}V${y(0)}H${x(104)}`} className="chart-axis" />
-        <text x={x(0) - 8} y={y(50) + 4} className="chart-label" textAnchor="end">
+        <text x={x(0) - 10} y={y(50) + 5} className="chart-label" textAnchor="end">
           P
         </text>
-        <text x={x(104)} y={y(0) + 18} className="chart-label" textAnchor="end">
+        <text x={x(104)} y={y(0) + 20} className="chart-label" textAnchor="end">
           Q
         </text>
         <path d={`M${x(EQ.q)} ${y(0)}V${y(EQ.p)}H${x(0)}`} className="chart-guide" />
+        <text x={x(0) - 6} y={y(EQ.p) + 4} className="chart-tick" textAnchor="end">
+          {EQ.p}
+        </text>
+        <text x={x(EQ.q)} y={y(0) + 16} className="chart-tick" textAnchor="middle">
+          {EQ.q}
+        </text>
         <line x1={x(0)} y1={y(50)} x2={x(100)} y2={y(0)} className="chart-demand" />
         <line x1={x(0)} y1={y(0)} x2={x(100)} y2={y(50)} className="chart-supply" />
-        <text x={x(100) + 4} y={y(0) - 6} className="chart-label chart-label-demand">
+        <text x={x(100) + 5} y={y(0) - 6} className="chart-curve-name chart-label-demand">
           D
         </text>
-        <text x={x(100) + 4} y={y(50) + 4} className="chart-label chart-label-supply">
+        <text x={x(100) + 5} y={y(50) + 5} className="chart-curve-name chart-label-supply">
           S
         </text>
         <circle cx={x(EQ.q)} cy={y(EQ.p)} r="6" className="chart-point" />
       </svg>
       <figcaption id="chart-caption">
-        Demand Q = 100 − 2P meets supply Q = 2P at the equilibrium P = {EQ.p}, Q = {EQ.q}.
+        From Market equilibrium: demand (<var>Q</var> = 100 − 2<var>P</var>) meets supply (
+        <var>Q</var> = 2<var>P</var>) at price <var>P</var> = {EQ.p} and quantity <var>Q</var> ={' '}
+        {EQ.q}.
       </figcaption>
     </figure>
   );
