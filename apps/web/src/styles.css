@@ -85,6 +85,10 @@ h2 {
   margin: 0 0 8px;
 }
 
+main > section {
+  margin-top: 40px;
+}
+
 .lead {
   font-family: var(--font-reading);
   font-size: 17px;
@@ -94,7 +98,8 @@ h2 {
 }
 
 .chart {
-  margin: 24px 0;
+  max-width: 20rem;
+  margin: 16px 0 0;
 }
 
 .chart svg {
@@ -271,4 +276,165 @@ footer {
   display: block;
   color: var(--ink-muted);
   font-size: 13px;
+}
+
+/* Curriculum map: the one bold element (docs/07). */
+.map {
+  margin: 16px 0 0;
+}
+
+/* On phones the graph paper runs edge to edge. */
+.map-sheet {
+  position: relative;
+  margin-inline: -16px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 42rem) {
+  .map-sheet {
+    margin-inline: 0;
+  }
+}
+
+.map-sheet > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.map-grid {
+  fill: none;
+  stroke: var(--grid);
+  stroke-width: 1;
+}
+
+.map-divider {
+  stroke: var(--ink-muted);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+}
+
+.map-link {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ink) 30%, var(--paper));
+  stroke-width: 1;
+}
+
+.map-link--writing {
+  stroke: var(--equilibrium-ink);
+  stroke-width: 1.5;
+}
+
+.map-point {
+  fill: var(--paper);
+  stroke: var(--ink-muted);
+  stroke-width: 1.5;
+}
+
+.map-point--writing {
+  fill: var(--equilibrium);
+  stroke: var(--ink);
+}
+
+.map-years {
+  position: absolute;
+  inset: auto 0 0;
+  height: 48px;
+}
+
+.map-year {
+  position: absolute;
+  top: 6px;
+  line-height: 1.3;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.map-year-name {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.map-year-count {
+  display: block;
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+
+.map figcaption {
+  margin-top: 12px;
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+.map-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-point {
+  width: 12px;
+  height: 12px;
+  flex: none;
+}
+
+.topic-index {
+  margin-top: 12px;
+}
+
+.topic-index summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  list-style: none;
+  min-height: 44px;
+  color: var(--supply);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.topic-index h3 {
+  font-size: 15px;
+  margin: 16px 0 4px;
+}
+
+.topic-index-count,
+.topic-index-note {
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+.topic-index ol {
+  margin: 0;
+  padding-left: 1.75em;
+}
+
+.topic-index summary::-webkit-details-marker {
+  display: none;
+}
+
+.chevron {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.topic-index[open] .chevron {
+  transform: rotate(90deg);
 }

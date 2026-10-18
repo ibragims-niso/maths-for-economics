@@ -1,4 +1,5 @@
 import topicBank from '../../../content/topic-bank.json';
+import { CurriculumMap, TopicIndex } from './CurriculumMap';
 import { EquilibriumChart } from './EquilibriumChart';
 import { InstallHint } from './InstallHint';
 import { useInstallOption } from './useInstallOption';
@@ -24,7 +25,11 @@ export function App() {
         </p>
       </header>
 
-      <EquilibriumChart />
+      <section aria-labelledby="map-heading">
+        <h2 id="map-heading">Your degree, topic by topic</h2>
+        <CurriculumMap writing={FIRST_TOPIC_IDS} />
+        <TopicIndex writing={FIRST_TOPIC_IDS} />
+      </section>
 
       <section className="card" aria-labelledby="install-heading">
         <h2 id="install-heading">Keep it on your phone</h2>
@@ -46,6 +51,7 @@ export function App() {
             </li>
           ))}
         </ol>
+        <EquilibriumChart />
       </section>
 
       <footer>
