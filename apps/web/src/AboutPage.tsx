@@ -75,7 +75,9 @@ export function AboutPage({ menu }: { menu: ReactNode }) {
 
         <section aria-labelledby="about-version">
           <h2 id="about-version">Version</h2>
-          <p>Built on {builtOn}.</p>
+          <p>
+            Draft (development) {__APP_VERSION__}. Built on {builtOn}.
+          </p>
           <p>
             <a href={REPO_URL}>Source code on GitHub</a>
             <span aria-hidden="true"> · </span>

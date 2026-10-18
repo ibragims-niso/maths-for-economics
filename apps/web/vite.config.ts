@@ -1,11 +1,13 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import pkg from './package.json' with { type: 'json' };
 
 export default defineConfig({
   define: {
     // Shown in About, so the owner can tell which version a phone is running.
     __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+    __APP_VERSION__: JSON.stringify(pkg.version),
   },
   server: {
     // `npm run dev:proxy` runs the API locally on 8790; the app calls it on its own origin.
