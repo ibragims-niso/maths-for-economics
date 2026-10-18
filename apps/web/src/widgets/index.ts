@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { AnnuityExplorer } from './AnnuityExplorer';
+import { CompoundingFrequency } from './CompoundingFrequency';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
 import { KeynesianCross } from './KeynesianCross';
@@ -9,6 +10,7 @@ import { SurveyVenn } from './SurveyVenn';
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
   'annuity-explorer': AnnuityExplorer,
+  'compounding-frequency': CompoundingFrequency,
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
   'keynesian-cross': KeynesianCross,

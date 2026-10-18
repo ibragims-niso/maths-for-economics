@@ -50,3 +50,6 @@ spending multiplier: The change in equilibrium national income caused by a one-u
 marginal propensity to import: The share of an extra unit of income that is spent on imported goods.
 monetary base: The cash held by the public plus the reserves banks hold; the money the central bank creates directly.
 money multiplier: The change in the money supply caused by a one-unit change in the monetary base.
+nominal annual rate: The quoted yearly interest rate, equal to the rate per period times the number of periods in a year, before the effect of compounding.
+effective annual rate: The interest actually earned or paid over one year once compounding is counted, (1 + r/m)^m − 1.
+continuous compounding: Adding interest at every instant, so that a sum grows by the factor e^(rt) over t years.
