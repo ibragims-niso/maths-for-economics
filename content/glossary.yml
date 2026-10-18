@@ -6,3 +6,7 @@ equilibrium: A situation where quantity supplied equals quantity demanded, so pr
 present value: The value today of an amount received in the future, discounted at a given interest rate.
 shadow price: The change in the optimal value of an objective when a constraint is relaxed by one unit; the Lagrange multiplier.
 returns to scale: How output changes when all inputs are scaled by the same factor.
+exponent: The number n in xⁿ that says how many times the base x is multiplied by itself; zero, negative and fractional exponents extend this to 1, reciprocals and roots.
+fractional exponent: A power p/q, meaning take the q-th root and then raise to the power p, so x^(1/2) = √x.
+factorising: Rewriting a sum as a product by taking out a common factor, for example PQ − vQ = (P − v)Q.
+Cobb–Douglas production function: A production function Q = A·K^α·L^β in which output depends on capital K and labour L raised to fixed powers, with A measuring productivity.

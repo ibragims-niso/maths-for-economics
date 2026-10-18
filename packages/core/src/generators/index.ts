@@ -3,6 +3,9 @@ import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
 import { profitMaxLinearDemand } from './C109/profit-max-linear-demand';
+import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
+import { cobbDouglasOutput } from './F01/cobb-douglas-output';
+import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
 import { linearBreakEven } from './F04/linear-break-even';
 import { linearDemandTwoPoints } from './F04/linear-demand-two-points';
 import { equilibriumPrice } from './F05/equilibrium-price';
@@ -13,6 +16,9 @@ import { simpleInterestAmount } from './FM01/simple-interest-amount';
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
 export const GENERATORS = [
+  exponentLawsSimplify,
+  cobbDouglasOutput,
+  cobbDouglasLabourNeeded,
   linearBreakEven,
   linearDemandTwoPoints,
   equilibriumPrice,
