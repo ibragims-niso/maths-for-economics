@@ -102,3 +102,8 @@ indifference curve: All the bundles of two goods that give a consumer the same l
 marginal rate of substitution: How many units of one good a consumer would give up for one more unit of another and stay equally well off; minus the slope of the indifference curve.
 isoquant: All the combinations of inputs, such as workers and machines, that produce the same output.
 marginal rate of technical substitution: How many units of one input one more unit of another input can replace with output unchanged; minus the slope of the isoquant.
+span: The set of all linear combinations of some vectors, everything that can be built from them by scaling and adding.
+linear independence: A set of vectors is linearly independent when none of them can be written as a combination of the others, so each adds a new direction.
+basis: A set of linearly independent vectors that spans a space, so every vector in it can be built from them in exactly one way.
+rank: The number of independent rows (equivalently, columns) of a matrix, found by counting the pivots after Gaussian elimination.
+numéraire: The good whose price is set to 1 so that all other prices are measured in units of it.

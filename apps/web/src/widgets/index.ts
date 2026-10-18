@@ -22,6 +22,7 @@ import { RevenueProfit } from './RevenueProfit';
 import { SecantToTangent } from './SecantToTangent';
 import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
+import { SpanAndBasis } from './SpanAndBasis';
 import { SpendingRounds } from './SpendingRounds';
 import { SurveyVenn } from './SurveyVenn';
 import { TariffContinuity } from './TariffContinuity';
@@ -52,6 +53,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'secant-to-tangent': SecantToTangent,
   'shop-revenue-matrix': ShopRevenueMatrix,
   'simple-vs-compound': SimpleVsCompound,
+  'span-and-basis': SpanAndBasis,
   'spending-rounds': SpendingRounds,
   'survey-venn': SurveyVenn,
   'tariff-continuity': TariffContinuity,
