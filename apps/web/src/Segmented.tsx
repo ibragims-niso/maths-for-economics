@@ -6,18 +6,21 @@ interface Option<T extends string | number> {
 }
 
 /**
- * A segmented control (tabs) with a sliding gradient pill. Arrow keys move between options.
- * `idPrefix` names each tab `${idPrefix}-${value}` so panels can point back with aria-labelledby.
+ * A segmented control with a sliding gradient pill. Arrow keys move between options.
+ * With `controls` it is a set of tabs for that panel, and `idPrefix` names each tab
+ * `${idPrefix}-${value}` so the panel can point back with aria-labelledby.
+ * Without `controls` it is a radio group: one choice among a few, such as a difficulty.
  */
 export function Segmented<T extends string | number>(props: {
   options: Option<T>[];
   value: T;
   onChange: (value: T) => void;
   label: string;
-  controls: string;
+  controls?: string;
   idPrefix: string;
 }) {
   const { options, value, onChange } = props;
+  const tabs = props.controls !== undefined;
   const index = Math.max(
     0,
     options.findIndex((o) => o.value === value),
@@ -29,11 +32,16 @@ export function Segmented<T extends string | number>(props: {
     onChange(next.value);
     document.getElementById(`${props.idPrefix}-${next.value}`)?.focus();
   };
+  // Role-specific ARIA, chosen once here: tabs say "selected", radios say "checked".
+  const group = { role: tabs ? 'tablist' : 'radiogroup', 'aria-label': props.label };
+  const item = (on: boolean) =>
+    tabs
+      ? { role: 'tab', 'aria-selected': on, 'aria-controls': props.controls }
+      : { role: 'radio', 'aria-checked': on };
   return (
     <div
       className="segmented"
-      role="tablist"
-      aria-label={props.label}
+      {...group}
       style={{ gridTemplateColumns: `repeat(${options.length}, 1fr)` }}
     >
       <span
@@ -46,9 +54,7 @@ export function Segmented<T extends string | number>(props: {
           key={o.value}
           id={`${props.idPrefix}-${o.value}`}
           type="button"
-          role="tab"
-          aria-selected={o.value === value}
-          aria-controls={props.controls}
+          {...item(o.value === value)}
           tabIndex={o.value === value ? 0 : -1}
           onClick={() => onChange(o.value)}
           onKeyDown={(e) => {

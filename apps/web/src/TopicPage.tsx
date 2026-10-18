@@ -1,17 +1,14 @@
-import { type CompiledContent, type CompiledExample, generatorById } from '@mfe/core';
+import { type CompiledExample, generatorById } from '@mfe/core';
 import 'katex/dist/katex.min.css';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router';
-import contentJson from './generated/content.json';
+import { content, topicById } from './content';
 import { HtmlBlock } from './HtmlBlock';
 import { BackIcon } from './icons';
 import { REPO_URL } from './links';
 import { NotFoundPage } from './PlaceholderPages';
 import { Segmented } from './Segmented';
 import { BLOCK_NAMES, topicIcon } from './topics';
-
-// The JSON is produced by scripts/build-content.ts in the CompiledContent shape.
-const content = contentJson as unknown as CompiledContent;
 
 type Tab = 'learn' | 'examples' | 'practise' | 'real';
 const TABS: { value: Tab; label: string }[] = [
@@ -65,7 +62,7 @@ function Example({ example }: { example: CompiledExample }) {
 
 export function TopicPage() {
   const { id } = useParams();
-  const topic = content.topics.find((t) => t.id === id);
+  const topic = topicById(id);
   const [tab, setTab] = useState<Tab>('learn');
   if (!topic) return <NotFoundPage />;
 

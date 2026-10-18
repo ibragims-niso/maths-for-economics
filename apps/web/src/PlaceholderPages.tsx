@@ -21,21 +21,6 @@ function EmptyState(props: { icon: string; title: string; text: string; items: s
   );
 }
 
-export function PracticePage() {
-  return (
-    <EmptyState
-      icon="calculator"
-      title="Practice"
-      text="Unlimited exercises and timed tests open with the first topics."
-      items={[
-        'Build a test from the topics you choose',
-        'Answers computed and checked by code',
-        'Every mistake explained, even offline',
-      ]}
-    />
-  );
-}
-
 export function ProgressPage() {
   return (
     <EmptyState
