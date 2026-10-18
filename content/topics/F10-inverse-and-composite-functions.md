@@ -12,7 +12,7 @@ economicUses:
   - Currency conversions and taxes applied one after another
   - Working back from a budget or a target to the input needed
 generators: [inverse-demand-price, composite-cost-of-labour, labour-for-cost-budget]
-widgets: []
+widgets: [inverse-demand-mirror]
 mistakeCodes:
   QUANTITY_AS_PRICE:
     label: Put the quantity in as if it were a price
@@ -91,7 +91,9 @@ $$P(Q) = \frac{a - Q}{b} = \frac{a}{b} - \frac{Q}{b}$$
 Demand is defined for $0 \le P \le a/b$ with $0 \le Q \le a$; inverse demand swaps them. Economists draw demand with the price on the vertical axis, so the familiar demand diagram is the graph of the inverse demand function.
 
 ## Interactive
-An interactive graph that reflects a function in the line $y = x$ is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="inverse-demand-mirror"}
+
+Move the **Price P** slider: the filled point $(P, Q)$ moves along the demand line $Q = 120 - 4P$, and the hollow point $(Q, P)$ moves along the inverse demand line $P = 30 - Q/4$, always its mirror image in the dashed line $y = x$. Notice that reflecting in $y = x$ just swaps the two coordinates, so inverse demand at that quantity gives back the price you started from. Then move **Slope b** and watch both lines turn together. Check Example 2: with $b = 4$ and $P = 10$ the panel shows the point $(10, 80)$, its mirror $(80, 10)$ and $P(80) = 10$.
 
 ## Worked examples
 
