@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react';
 import { AnnuityExplorer } from './AnnuityExplorer';
 import { BreakEvenLines } from './BreakEvenLines';
+import { BudgetVectors } from './BudgetVectors';
 import { CompoundingFrequency } from './CompoundingFrequency';
 import { DiscountingExplorer } from './DiscountingExplorer';
 import { DoublingTime } from './DoublingTime';
@@ -21,6 +22,7 @@ import { TaxBandExplorer } from './TaxBandExplorer';
 export const WIDGETS: Record<string, ComponentType> = {
   'annuity-explorer': AnnuityExplorer,
   'break-even-lines': BreakEvenLines,
+  'budget-vectors': BudgetVectors,
   'compounding-frequency': CompoundingFrequency,
   'discounting-explorer': DiscountingExplorer,
   'doubling-time': DoublingTime,

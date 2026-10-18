@@ -45,6 +45,9 @@ import { presentValueUnevenFlows } from './FM03/present-value-uneven-flows';
 import { annuityPresentValue } from './FM04/annuity-present-value';
 import { growingPerpetuityValue } from './FM04/growing-perpetuity-value';
 import { savingPlanPayment } from './FM04/saving-plan-payment';
+import { bundleAngleCosine } from './LA101/bundle-angle-cosine';
+import { bundleCostDotProduct } from './LA101/bundle-cost-dot-product';
+import { bundleDistanceNorm } from './LA101/bundle-distance-norm';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -95,6 +98,9 @@ export const GENERATORS = [
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,
   minAverageCost,
+  bundleCostDotProduct,
+  bundleDistanceNorm,
+  bundleAngleCosine,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));

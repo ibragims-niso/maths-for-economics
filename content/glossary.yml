@@ -57,3 +57,8 @@ discounting: Converting a future amount into its value today by dividing by (1 +
 discount factor: The value today of one unit of money paid in n periods, 1/(1 + r)^n; it lies between 0 and 1 when the rate is positive.
 discount rate: The interest rate used to convert future amounts into present values.
 real interest rate: The interest rate after allowing for inflation; approximately the nominal rate minus the inflation rate (the Fisher approximation).
+vector: An ordered list of numbers, such as the quantities of each good in a bundle, where the position of each entry says what it measures.
+dot product: The number p·x = p₁x₁ + … + pₙxₙ obtained by multiplying matching entries of two vectors and adding; with prices and quantities it is the cost of a bundle.
+norm: The length of a vector, ‖x‖ = √(x₁² + … + xₙ²); the norm of x − y is the distance between x and y.
+orthogonal: Two vectors are orthogonal (at a right angle) when their dot product is zero.
+consumption bundle: A vector listing how many units of each good a consumer buys.
