@@ -11,6 +11,7 @@ describe('GET /api/health', () => {
       ok: true,
       service: 'maths-for-economics-api',
       groqKeyConfigured: false,
+      keyBindings: [],
     });
   });
 
@@ -18,6 +19,15 @@ describe('GET /api/health', () => {
     const res = await app.request('/api/health', {}, { GROQ_API_KEY: 'gsk_secret' });
     const text = await res.text();
     expect(text).toContain('"groqKeyConfigured":true');
+    expect(text).not.toContain('gsk_secret');
+  });
+
+  it('describes a misnamed key without its value', async () => {
+    const res = await app.request('/api/health', {}, { 'GROQ_API_KEY ': 'gsk_secret' } as Env);
+    const text = await res.text();
+    expect(JSON.parse(text).keyBindings).toEqual([
+      { name: '"GROQ_API_KEY "', type: 'string', empty: false, looksLikeGroqKey: true },
+    ]);
     expect(text).not.toContain('gsk_secret');
   });
 });
