@@ -77,3 +77,7 @@ matrix product: The matrix AB whose entry in row i and column j is row i of A ti
 transpose: The matrix Aᵀ obtained by turning the rows of A into columns, so (Aᵀ)ᵢⱼ = aⱼᵢ.
 identity matrix: A square matrix with 1s on the main diagonal and 0s elsewhere; multiplying by it leaves any matrix unchanged.
 transition matrix: A square matrix of probabilities of moving from one state (row) to another (column) in one period; each row adds up to 1.
+power rule: The derivative of xⁿ is n·xⁿ⁻¹, for any real power n, including negative and fractional ones.
+product rule: The derivative of a product u·v is u′v + uv′, not u′v′.
+quotient rule: The derivative of u/v is (u′v − uv′)/v², where v is not zero.
+average cost: Total cost divided by output, C(Q)/Q; it falls while marginal cost is below it and rises once marginal cost is above it.

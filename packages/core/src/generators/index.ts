@@ -5,6 +5,9 @@ import { longRunCostRatio } from './C101/long-run-cost-ratio';
 import { costAverageRateOfChange } from './C102/cost-average-rate-of-change';
 import { instantaneousRateQuadratic } from './C102/instantaneous-rate-quadratic';
 import { tangentLineIntercept } from './C102/tangent-line-intercept';
+import { averageCostSlopeQuotientRule } from './C103/average-cost-slope-quotient-rule';
+import { marginalCostCubic } from './C103/marginal-cost-cubic';
+import { marginalRevenueProductRule } from './C103/marginal-revenue-product-rule';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
@@ -109,6 +112,9 @@ export const GENERATORS = [
   costAverageRateOfChange,
   instantaneousRateQuadratic,
   tangentLineIntercept,
+  marginalCostCubic,
+  marginalRevenueProductRule,
+  averageCostSlopeQuotientRule,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,
