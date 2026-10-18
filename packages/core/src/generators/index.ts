@@ -30,6 +30,9 @@ import { inverseDemandPrice } from './F10/inverse-demand-price';
 import { labourForCostBudget } from './F10/labour-for-cost-budget';
 import { compoundInterestAmount } from './FM01/compound-interest-amount';
 import { simpleInterestAmount } from './FM01/simple-interest-amount';
+import { annuityPresentValue } from './FM04/annuity-present-value';
+import { growingPerpetuityValue } from './FM04/growing-perpetuity-value';
+import { savingPlanPayment } from './FM04/saving-plan-payment';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -61,6 +64,9 @@ export const GENERATORS = [
   labourForCostBudget,
   simpleInterestAmount,
   compoundInterestAmount,
+  annuityPresentValue,
+  growingPerpetuityValue,
+  savingPlanPayment,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,
