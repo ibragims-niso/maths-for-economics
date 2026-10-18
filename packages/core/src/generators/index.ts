@@ -19,6 +19,9 @@ import { equilibriumTaxPrice } from './F05/equilibrium-tax-price';
 import { maxProfitQuadratic } from './F06/max-profit-quadratic';
 import { maxRevenueLinearDemand } from './F06/max-revenue-linear-demand';
 import { profitMaximisingPrice } from './F06/profit-maximising-price';
+import { averageAnnualGrowthRate } from './F07/average-annual-growth-rate';
+import { depreciationTimeToValue } from './F07/depreciation-time-to-value';
+import { growthTimeToMultiply } from './F07/growth-time-to-multiply';
 import { compoundInterestAmount } from './FM01/compound-interest-amount';
 import { simpleInterestAmount } from './FM01/simple-interest-amount';
 
@@ -41,6 +44,9 @@ export const GENERATORS = [
   maxRevenueLinearDemand,
   maxProfitQuadratic,
   profitMaximisingPrice,
+  growthTimeToMultiply,
+  averageAnnualGrowthRate,
+  depreciationTimeToValue,
   simpleInterestAmount,
   compoundInterestAmount,
   elasticityLinearPoint,

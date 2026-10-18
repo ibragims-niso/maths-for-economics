@@ -23,3 +23,8 @@ parabola: The hill- or valley-shaped graph of a quadratic function y = ax² + bx
 vertex: The highest or lowest point of a parabola, at x = −b/(2a).
 axis of symmetry: The vertical line through the vertex of a parabola; points the same distance either side of it have the same height.
 inverse demand curve: Demand written with price as a function of quantity, P = α − βQ, giving the price at which a quantity can be sold.
+growth factor: The number a value is multiplied by each period; with a growth rate g it is 1 + g.
+natural logarithm: The logarithm to base e (about 2.718), written ln x; the power to which e must be raised to give x.
+rule of 70: A quick estimate of doubling time; 70 divided by the growth rate in per cent.
+average annual growth rate: The constant yearly rate that takes a value from its starting level to its final level over T years, (end ÷ start)^(1/T) − 1.
+log-linear model: A model in which the logarithm of a variable is a linear function of other variables, so its coefficients read as approximate percentage changes.
