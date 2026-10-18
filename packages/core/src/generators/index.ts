@@ -21,6 +21,9 @@ import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
 import { profitMaxLinearDemand } from './C109/profit-max-linear-demand';
+import { frontierSlopeImplicit } from './C110/frontier-slope-implicit';
+import { indifferenceCurveSlope } from './C110/indifference-curve-slope';
+import { isoquantMrts } from './C110/isoquant-mrts';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -140,6 +143,9 @@ export const GENERATORS = [
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,
   minAverageCost,
+  indifferenceCurveSlope,
+  isoquantMrts,
+  frontierSlopeImplicit,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,
