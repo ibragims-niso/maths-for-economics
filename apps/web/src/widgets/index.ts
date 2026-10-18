@@ -17,6 +17,7 @@ import { KeynesianCross } from './KeynesianCross';
 import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { PowerExplorer } from './PowerExplorer';
+import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitHillTangent } from './ProfitHillTangent';
 import { RevenueProfit } from './RevenueProfit';
 import { SecantToTangent } from './SecantToTangent';
@@ -48,6 +49,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,
   'power-explorer': PowerExplorer,
+  'production-concavity': ProductionConcavity,
   'profit-hill-tangent': ProfitHillTangent,
   'revenue-profit': RevenueProfit,
   'secant-to-tangent': SecantToTangent,

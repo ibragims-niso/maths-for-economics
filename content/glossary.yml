@@ -107,3 +107,8 @@ linear independence: A set of vectors is linearly independent when none of them 
 basis: A set of linearly independent vectors that spans a space, so every vector in it can be built from them in exactly one way.
 rank: The number of independent rows (equivalently, columns) of a matrix, found by counting the pivots after Gaussian elimination.
 numéraire: The good whose price is set to 1 so that all other prices are measured in units of it.
+second derivative: The derivative of the derivative, f″(x); it measures how fast a slope such as marginal cost is itself changing.
+concave function: A function whose graph bends downwards, so chords lie below it and its slope keeps falling (f″ ≤ 0).
+convex function: A function whose graph bends upwards, so chords lie above it and its slope keeps rising (f″ ≥ 0).
+inflection point: A point where a graph changes from concave to convex or back, so the second derivative changes sign there.
+diminishing marginal returns: Each extra unit of an input adds less output than the one before, so the marginal product falls.

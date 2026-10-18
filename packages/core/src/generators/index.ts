@@ -19,6 +19,9 @@ import { marginalProfitAtOutput } from './C106/marginal-profit-at-output';
 import { marginalRevenueLinearDemand } from './C106/marginal-revenue-linear-demand';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
+import { cubicCostInflectionOutput } from './C108/cubic-cost-inflection-output';
+import { peakMarginalProduct } from './C108/peak-marginal-product';
+import { secondDerivativeAtPoint } from './C108/second-derivative-at-point';
 import { minAverageCost } from './C109/min-average-cost';
 import { profitMaxLinearDemand } from './C109/profit-max-linear-demand';
 import { frontierSlopeImplicit } from './C110/frontier-slope-implicit';
@@ -144,6 +147,9 @@ export const GENERATORS = [
   marginalProfitAtOutput,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
+  secondDerivativeAtPoint,
+  cubicCostInflectionOutput,
+  peakMarginalProduct,
   profitMaxLinearDemand,
   minAverageCost,
   indifferenceCurveSlope,
