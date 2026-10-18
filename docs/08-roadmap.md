@@ -3,11 +3,11 @@
 Rule: finish and check a phase's acceptance criteria before starting the next. One phase may take several Claude Code sessions.
 
 ## Phase 0 — Setup (≈ 1 week)
-Scope: monorepo, TypeScript, lint/format, Vitest, CI, Cloudflare Pages + Worker "hello world", `content/topic-bank.json` from docs/05, schema validation, licences, README.
+Scope: monorepo, TypeScript, lint/format, Vitest, CI, Cloudflare web hosting + Worker "hello world", `content/topic-bank.json` from docs/05, schema validation, licences, README.
 Acceptance:
 - [ ] `npm run dev`, `npm test`, `npm run validate:content`, `npm run build` work
 - [ ] CI runs on every push and is green
-- [ ] Web app reachable on a Cloudflare Pages URL and installable on a phone (Add to Home Screen)
+- [ ] Web app reachable on a Cloudflare URL and installable on a phone (Add to Home Screen)
 - [ ] Worker deployed; `GROQ_API_KEY` set as a secret; no key anywhere in the repo
 - [ ] Topic bank JSON validated: 102 topics, unique IDs, no prerequisite cycles
 

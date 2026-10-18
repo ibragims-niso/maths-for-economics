@@ -30,7 +30,7 @@ The project owner is not a programmer. Explain every change in plain language, k
 - `apps/proxy`: Cloudflare Worker (Hono). KV for the shared AI answer cache, D1 for mentor sync.
 - AI provider: Groq (OpenAI-compatible API) behind a provider interface so Gemini or Claude can be added.
 - Tests: Vitest + fast-check (generators), Playwright (key flows, from Phase 2).
-- Hosting: Cloudflare Pages (web) and Workers (proxy). CI: GitHub Actions.
+- Hosting: Cloudflare Workers — the web app as static assets (root `wrangler.jsonc`, built by Workers Builds) and the proxy (`apps/proxy/wrangler.jsonc`). CI: GitHub Actions.
 
 ## Repo layout
 ```

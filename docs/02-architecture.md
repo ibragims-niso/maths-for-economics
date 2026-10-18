@@ -70,5 +70,5 @@ Mentor view: route `/m/:token` in the web app (same deployment), read-only, work
 Expo app reuses `packages/core` and content bundles; only UI and `Storage` implementation change (`expo-sqlite`). Keep all logic out of React components to make this cheap.
 
 ## Deployment
-- Cloudflare Pages: `apps/web` build on every push to `main`; preview deployments for pull requests.
+- Web app: Cloudflare Workers static assets, configured in the root `wrangler.jsonc`. Workers Builds runs `npm run build` and `npx wrangler deploy` on every push to `main` (see decision D25).
 - Worker: `wrangler deploy` from CI on `main` when `apps/proxy` changes.

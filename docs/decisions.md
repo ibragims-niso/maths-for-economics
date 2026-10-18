@@ -25,3 +25,5 @@
 | D21 | Dependencies are pinned to exact versions | Builds are reproducible; upgrades are deliberate and tested |
 | D22 | Secret scanning in CI runs the pinned gitleaks binary, not a third-party action | No licence key needed and no extra code with access to the repo |
 | D23 | Repository: github.com/ibragims-niso/maths-for-economics (personal account) | Chosen by the owner |
+| D24 | Extra colour token `--equilibrium-ink` (#9A7300 light, #F0C239 dark) for thin gold lines and rings | `equilibrium` #D9A400 is 2.21:1 on light paper, below the 3:1 needed for graphics |
+| D25 | Web app hosted as Cloudflare Workers static assets (root `wrangler.jsonc`), not Cloudflare Pages | Cloudflare's Git import now creates a Worker; an explicit config skips its auto-detection, which fails at a workspace root |

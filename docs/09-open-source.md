@@ -17,7 +17,7 @@
 | `ci.yml` | push, pull request | install, lint, typecheck, unit + property tests, `validate:content`, build |
 | `links.yml` | weekly + manual | lychee on all resource URLs; opens/updates an issue listing broken links |
 | `deploy-proxy.yml` | push to `main` touching `apps/proxy/**` | `wrangler deploy` |
-Cloudflare Pages deploys the web app automatically from GitHub.
+Cloudflare Workers Builds deploys the web app automatically from GitHub (root `wrangler.jsonc`).
 
 ## Contribution flow
 - `README.md`: what the app is, screenshots, install link, how to run locally.
