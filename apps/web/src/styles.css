@@ -211,3 +211,64 @@ footer {
   font-size: 13px;
   margin-top: 32px;
 }
+
+.install-action {
+  margin-top: 16px;
+}
+
+.button-primary {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--supply);
+  color: var(--paper);
+  font: 600 15px / 1 var(--font-ui);
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background: color-mix(in srgb, var(--supply) 85%, var(--ink));
+}
+
+.button-primary:active {
+  background: color-mix(in srgb, var(--supply) 75%, var(--ink));
+}
+
+.hint {
+  color: var(--ink-muted);
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
+.inline-icon {
+  width: 1.15em;
+  height: 1.15em;
+  margin: 0 2px;
+  vertical-align: -0.2em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.topic-list {
+  margin: 12px 0 0;
+  padding-left: 1.5em;
+}
+
+.topic-list li {
+  margin-bottom: 8px;
+}
+
+.topic-title {
+  display: block;
+  font-weight: 600;
+}
+
+.topic-use {
+  display: block;
+  color: var(--ink-muted);
+  font-size: 13px;
+}

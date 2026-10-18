@@ -1,15 +1,18 @@
 import topicBank from '../../../content/topic-bank.json';
 import { EquilibriumChart } from './EquilibriumChart';
+import { InstallHint } from './InstallHint';
+import { useInstallOption } from './useInstallOption';
 import { useOfflineStatus } from './useOfflineStatus';
 
 const REPO_URL = 'https://github.com/ibragims-niso/maths-for-economics';
 
-const topicsPerYear = [1, 2, 3, 4].map(
-  (year) => topicBank.filter((t) => t.coreYear === year).length,
-);
+/** The five Phase 1 topics (docs/08-roadmap.md), in the order a student meets them. */
+const FIRST_TOPIC_IDS = ['F04', 'F05', 'FM01', 'C107', 'C109'];
+const firstTopics = FIRST_TOPIC_IDS.flatMap((id) => topicBank.filter((t) => t.id === id));
 
 export function App() {
   const status = useOfflineStatus();
+  const installOption = useInstallOption();
 
   return (
     <main className="page">
@@ -23,17 +26,26 @@ export function App() {
 
       <EquilibriumChart />
 
-      <section className="card" aria-labelledby="status-heading">
-        <h2 id="status-heading">In development</h2>
-        <p>
-          {topicBank.length} topics are planned across four years:{' '}
-          {topicsPerYear.map((n, i) => `${n} in year ${i + 1}`).join(', ')}. The first topics arrive
-          in the next phase.
-        </p>
+      <section className="card" aria-labelledby="install-heading">
+        <h2 id="install-heading">Keep it on your phone</h2>
         <p className="status" role="status">
           <span className={`status-dot status-dot--${status.tone}`} aria-hidden="true" />
           {status.message}
         </p>
+        <InstallHint option={installOption} />
+      </section>
+
+      <section aria-labelledby="first-topics-heading">
+        <h2 id="first-topics-heading">First topics</h2>
+        <p>These five are being written now. Each starts with what economists use it for.</p>
+        <ol className="topic-list">
+          {firstTopics.map((t) => (
+            <li key={t.id}>
+              <span className="topic-title">{t.title}</span>
+              <span className="topic-use">{t.economicUse}</span>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <footer>
