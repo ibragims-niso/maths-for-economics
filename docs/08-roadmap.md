@@ -26,10 +26,10 @@ Scope: all 49 Year-1 topics and the Azerbaijan national track (verified against 
 Acceptance:
 - [ ] 49 topics at status `reviewed` or better
 - [ ] `az-050405` track `verified`
-- [ ] Mentor link shows the student's progress within 1 minute of a change (when online); disabling sharing deletes server data
-- [ ] Own key verified, used and removable
+- [x] Mentor link shows the student's progress within 1 minute of a change (when online); disabling sharing deletes server data — the phone sends 8 s after a change; checked on the live API 2026-10-18
+- [x] Own key verified, used and removable
 - [ ] BBU track imported on the student's phone; not present in the public repo
-- [ ] Weekly link check runs in CI
+- [x] Weekly link check runs in CI
 
 ## Phase 3 — Public tracks and Year 2 (≈ 3 months)
 Scope: verify and publish LSE, Cambridge, MIT tracks; all 23 Year-2 topics; contribution templates; public launch on GitHub.
