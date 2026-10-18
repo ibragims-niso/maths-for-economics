@@ -14,7 +14,18 @@
     "run_worker_first": ["/api/*"]
   },
   // Local `npm run dev:proxy`. Not 8787: another project on the owner's computer uses it.
-  "dev": { "port": 8790 }
-  // GROQ_API_KEY is a secret on this Worker (Settings, Variables and Secrets).
-  // Never put it in a file.
+  "dev": { "port": 8790 },
+  // Daily AI limits per device and network (docs/02). Tables: apps/proxy/migrations.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "maths-for-economics",
+      "database_id": "5edb9c1c-eb2e-470e-ab95-73604228e21a",
+      "migrations_dir": "./apps/proxy/migrations"
+    }
+  ],
+  // Shared cache of AI answers that are the same for every student (docs/03).
+  "kv_namespaces": [{ "binding": "AI_CACHE", "id": "e1cd6357fd424238a066ebbdacd90a2e" }]
+  // GROQ_API_KEY and GEMINI_API_KEY are secrets on this Worker (Settings, Variables and
+  // Secrets). Never put them in a file.
 }

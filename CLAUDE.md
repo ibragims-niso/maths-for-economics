@@ -54,6 +54,8 @@ local/               gitignored: private custom tracks, syllabus scans, scratch 
 - `npm run lint` / `npm run format` — Biome check / fix
 - `npm run typecheck` — TypeScript, all workspaces
 - `npm run build` — production build (runs `validate:content` first)
+- `npm run build:bank` — regenerate `content/topic-bank.json` and the Core track from docs/05
+- `npm run check:guardrails [url]` — send the 20 sample questions to the live AI and check none gets its own answer (real AI calls)
 
 ## Documentation (read in this order)
 1. `docs/01-product-spec.md` — what we build and why, requirements with acceptance criteria
