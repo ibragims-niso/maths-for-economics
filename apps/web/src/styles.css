@@ -1520,6 +1520,11 @@ a.button-secondary {
   min-height: 32px;
 }
 
+.danger-link {
+  margin-top: 16px;
+  color: var(--danger);
+}
+
 .file-button {
   margin-top: 12px;
   cursor: pointer;

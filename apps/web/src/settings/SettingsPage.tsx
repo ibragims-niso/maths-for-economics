@@ -2,12 +2,10 @@ import { type Track, trackTopicOrder } from '@mfe/core';
 import { storage, useSettings } from '../storage';
 import { icon3d } from '../topics';
 import { DEFAULT_TRACK_ID, TRACKS } from '../tracks';
+import { DataSettings } from './DataSettings';
 import { ImportTrack } from './ImportTrack';
 import { OwnKeySettings } from './OwnKey';
 import { ShareSettings } from './ShareSettings';
-
-/** What arrives next in Settings (docs/07), said plainly. */
-const COMING = ['Export or reset your data'];
 
 export function SettingsPage() {
   const settings = useSettings();
@@ -83,17 +81,7 @@ export function SettingsPage() {
 
         <ShareSettings token={settings?.share?.token} />
 
-        <h2>Coming next</h2>
-        <ul className="rows">
-          {COMING.map((item) => (
-            <li key={item} className="row">
-              <span className="row-text">
-                <span className="row-title">{item}</span>
-              </span>
-              <span className="row-status">Soon</span>
-            </li>
-          ))}
-        </ul>
+        <DataSettings />
       </section>
     </>
   );

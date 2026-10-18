@@ -40,6 +40,21 @@ export function createDexieStorage(): Storage {
     saveSettings: async (patch) => {
       await db.settings.put({ ...(await getSettings()), ...patch, key: 'device' });
     },
+    restore: async (data) => {
+      await db.transaction('rw', db.progress, db.attempts, async () => {
+        await db.progress.clear();
+        await db.attempts.clear();
+        await db.progress.bulkPut(data.progress);
+        await db.attempts.bulkPut(data.attempts);
+      });
+    },
+    clearAll: async () => {
+      await db.transaction('rw', db.progress, db.attempts, db.settings, async () => {
+        await db.progress.clear();
+        await db.attempts.clear();
+        await db.settings.clear();
+      });
+    },
     watch: (onChange) => {
       const subscription = liveQuery(() =>
         Promise.all([db.progress.toArray(), db.attempts.count(), db.settings.toArray()]),

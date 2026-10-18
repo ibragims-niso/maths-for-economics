@@ -48,6 +48,10 @@ export interface Storage {
   recentAttempts(limit: number): Promise<TestAttempt[]>;
   getSettings(): Promise<Settings>;
   saveSettings(patch: Partial<Settings>): Promise<void>;
+  /** Puts back progress and tests from a backup, replacing what is there. */
+  restore(data: { progress: TopicProgress[]; attempts: TestAttempt[] }): Promise<void>;
+  /** Deletes everything on this device: progress, tests and settings. */
+  clearAll(): Promise<void>;
   /** Calls `onChange` now and after every change, until the returned function is called. */
   watch(onChange: () => void): () => void;
 }

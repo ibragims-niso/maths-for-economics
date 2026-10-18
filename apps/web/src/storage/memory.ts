@@ -28,6 +28,18 @@ export function createMemoryStorage(): Storage {
       settings = { ...settings, ...patch };
       changed();
     },
+    restore: async (data) => {
+      progress.clear();
+      for (const p of data.progress) progress.set(p.topicId, p);
+      attempts.splice(0, attempts.length, ...data.attempts);
+      changed();
+    },
+    clearAll: async () => {
+      progress.clear();
+      attempts.splice(0);
+      settings = DEFAULT_SETTINGS;
+      changed();
+    },
     watch: (onChange) => {
       listeners.add(onChange);
       onChange();
