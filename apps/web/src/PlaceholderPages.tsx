@@ -1,0 +1,80 @@
+import { Link } from 'react-router';
+import { icon3d } from './topics';
+
+// Sections whose features arrive in Phase 1. Each says plainly what will be here.
+
+function EmptyState(props: { icon: string; title: string; text: string; items: string[] }) {
+  return (
+    <div className="empty">
+      <img className="empty-icon" src={icon3d(props.icon)} alt="" width="112" height="112" />
+      <h1>{props.title}</h1>
+      <p className="empty-text">{props.text}</p>
+      <ul className="empty-list">
+        {props.items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      <Link to="/" className="button-primary" viewTransition>
+        See the topics
+      </Link>
+    </div>
+  );
+}
+
+export function PracticePage() {
+  return (
+    <EmptyState
+      icon="calculator"
+      title="Practice"
+      text="Unlimited exercises and timed tests open with the first topics."
+      items={[
+        'Build a test from the topics you choose',
+        'Answers computed and checked by code',
+        'Every mistake explained, even offline',
+      ]}
+    />
+  );
+}
+
+export function ProgressPage() {
+  return (
+    <EmptyState
+      icon="trophy"
+      title="Progress"
+      text="Your mastery shows here once you start practising."
+      items={[
+        'Topics mastered by year and course',
+        'Weak areas to review first',
+        'Every test you took, with its mistakes',
+      ]}
+    />
+  );
+}
+
+export function SettingsPage() {
+  return (
+    <EmptyState
+      icon="setting"
+      title="Settings"
+      text="Settings arrive with the first topics."
+      items={[
+        'Your programme: Core, LSE, Cambridge or MIT',
+        'Your own free AI key',
+        'Share progress with a parent or tutor',
+      ]}
+    />
+  );
+}
+
+export function NotFoundPage() {
+  return (
+    <div className="empty">
+      <img className="empty-icon" src={icon3d('zoom')} alt="" width="112" height="112" />
+      <h1>Page not found</h1>
+      <p className="empty-text">This page doesn't exist.</p>
+      <Link to="/" className="button-primary" viewTransition>
+        Go to the home screen
+      </Link>
+    </div>
+  );
+}

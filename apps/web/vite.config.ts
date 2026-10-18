@@ -27,8 +27,8 @@ export default defineConfig({
         start_url: '/',
         scope: '/',
         display: 'standalone',
-        background_color: '#FBFCFD',
-        theme_color: '#FBFCFD',
+        background_color: '#FFFFFF',
+        theme_color: '#FFFFFF',
         icons: [
           { src: 'pwa-64x64.png', sizes: '64x64', type: 'image/png' },
           { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
@@ -43,7 +43,7 @@ export default defineConfig({
       },
       workbox: {
         // Precache the whole app shell, fonts included, so it opens with no network.
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2,webp}'],
         // API calls always go to the network; never answer them with the app page.
         navigateFallbackDenylist: [/^\/api\//],
       },

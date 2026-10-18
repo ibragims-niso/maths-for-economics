@@ -20,9 +20,8 @@ export function MenuButton({ open, onOpen }: { open: boolean; onOpen: () => void
 }
 
 /**
- * Secondary destinations (docs/decisions.md D28). The main sections arrive as a bottom tab
- * bar in Phase 1. A native modal <dialog> traps focus, closes on Escape and returns focus
- * to the Menu button.
+ * Secondary destinations (docs/decisions.md D28); the main sections live in the tab bar.
+ * A native modal <dialog> traps focus, closes on Escape and returns focus to the Menu button.
  */
 export function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
   const ref = useRef<HTMLDialogElement>(null);
@@ -57,12 +56,12 @@ export function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => vo
         <nav aria-label="Menu">
           <ul className="drawer-list">
             <li>
-              <Link to="/" aria-current={current('/')} onClick={onClose}>
+              <Link to="/" aria-current={current('/')} onClick={onClose} viewTransition>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" aria-current={current('/about')} onClick={onClose}>
+              <Link to="/about" aria-current={current('/about')} onClick={onClose} viewTransition>
                 About
               </Link>
             </li>

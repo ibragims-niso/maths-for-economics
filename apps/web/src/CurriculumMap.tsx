@@ -1,5 +1,6 @@
 import topicBank from '../../../content/topic-bank.json';
 import { GRID, layoutCurriculum } from './curriculum-map';
+import { WRITING_NOW } from './topics';
 
 const layout = layoutCurriculum(topicBank);
 const percent = (x: number) => `${(x / layout.width) * 100}%`;
@@ -16,11 +17,11 @@ function LegendPoint({ writing }: { writing?: boolean }) {
 }
 
 /**
- * The signature element (docs/07): every topic of the degree as a point on graph paper,
- * linked to the topics it builds on. Static until topics exist (Phase 1 adds tap and years).
+ * The whole degree at a glance, shown at the top of About (owner's request): every topic as a
+ * point, linked to the topics it builds on, years 1 to 4 from left to right.
  */
-export function CurriculumMap({ writing }: { writing: readonly string[] }) {
-  const isWriting = (id: string) => writing.includes(id);
+export function CurriculumMap() {
+  const isWriting = (id: string) => WRITING_NOW.has(id);
   // Draw the links into topics being written last, so they sit on top.
   const links = [...layout.links].sort((a, b) => Number(isWriting(a.to)) - Number(isWriting(b.to)));
 
@@ -80,38 +81,5 @@ export function CurriculumMap({ writing }: { writing: readonly string[] }) {
         the ones it builds on.
       </figcaption>
     </figure>
-  );
-}
-
-/** The map's content as text: every topic by year, for browsing and for screen readers. */
-export function TopicIndex({ writing }: { writing: readonly string[] }) {
-  return (
-    <details className="topic-index">
-      <summary>
-        <svg className="chevron" viewBox="0 0 14 14" aria-hidden="true">
-          <path d="M5 2.5 9.5 7 5 11.5" />
-        </svg>
-        All {topicBank.length} topics
-      </summary>
-      {layout.years.map((y) => (
-        <section key={y.year} aria-labelledby={`index-year-${y.year}`}>
-          <h3 id={`index-year-${y.year}`}>
-            Year {y.year} <span className="topic-index-count">{y.count} topics</span>
-          </h3>
-          <ol>
-            {topicBank
-              .filter((t) => t.coreYear === y.year)
-              .map((t) => (
-                <li key={t.id}>
-                  {t.title}
-                  {writing.includes(t.id) && (
-                    <span className="topic-index-note"> (being written)</span>
-                  )}
-                </li>
-              ))}
-          </ol>
-        </section>
-      ))}
-    </details>
   );
 }

@@ -43,7 +43,7 @@ Maths in the economist's language: every topic starts with what economists do wi
 ## Brand Commitments
 
 - Name: Maths for Economics.
-- Visual direction is pinned in docs/07-ux-design.md ("graph paper and curves"): its colour tokens, Literata for reading and Public Sans for the interface, sentence case, and the curriculum map as the one bold element.
+- Visual direction is pinned in docs/07-ux-design.md ("Balance sheet", chosen by the owner on 2026-10-18): a finance-app look with a violet gradient, glossy 3D icons, a dark bottom sheet, glass floating controls, Poppins, and light transitions. The curriculum map lives at the top of About.
 - Voice: plain verbs; buttons say what happens; errors say what happened and what to do.
 
 ## Evidence on Hand

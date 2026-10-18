@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<title>B · Balance sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper: #ffffff; --ground: #f5f4fa; --ink: #18171f; --muted: #6f6c86; --violet: #7b61ff; --lilac: #b88cff;
+    --night: #1d1d26; --night-text: #f4f3fb; --night-muted: #a9a6c4; --gold: #f5c04a; --green: #2fd182; }
+  * { box-sizing: border-box; margin: 0; }
+  body { width: 390px; height: 844px; overflow: hidden; background: var(--paper); color: var(--ink); font-family: Poppins, system-ui, sans-serif; position: relative; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 54px 20px 0; }
+  .brand { font-size: 14px; font-weight: 600; }
+  .menu { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; font-weight: 600; padding: 10px 14px; border-radius: 14px; background: var(--ground); }
+  .menu i { width: 16px; height: 2px; background: currentColor; display: block; box-shadow: 0 -5px 0 currentColor, 0 5px 0 currentColor; }
+  /* Signature: mastery read like a balance, with its curve */
+  .balance { text-align: center; margin-top: 22px; }
+  .balance p { font-size: 14px; color: var(--muted); font-weight: 500; }
+  .balance strong { display: block; margin-top: 4px; font-size: 42px; font-weight: 700; letter-spacing: -.03em; }
+  .balance strong small { font-size: 18px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .seg { display: flex; gap: 6px; margin: 18px 34px 0; padding: 5px; border-radius: 18px; background: var(--ground); }
+  .seg span { flex: 1; text-align: center; padding: 9px 0; border-radius: 14px; font-size: 13px; font-weight: 500; color: var(--muted); }
+  .seg .on { color: #fff; background: linear-gradient(90deg, var(--violet), var(--lilac)); box-shadow: 0 10px 20px -10px rgba(123,97,255,.9); }
+  .chart { position: relative; height: 170px; margin-top: 10px; }
+  .chart svg { width: 100%; height: 100%; display: block; }
+  .tip { position: absolute; left: 50px; top: 74px; font-size: 11px; font-weight: 600; color: #fff; background: var(--night); padding: 4px 9px; border-radius: 8px; }
+  .tip::after { content: ""; position: absolute; left: 50%; bottom: -4px; width: 8px; height: 8px; background: var(--night); transform: translateX(-50%) rotate(45deg); }
+  .months { display: flex; justify-content: space-between; padding: 0 24px; font-size: 12px; color: #b3b0c6; }
+  .months b { color: var(--violet); font-weight: 600; }
+  .sheet { position: absolute; left: 0; right: 0; bottom: 0; top: 448px; background: var(--night); color: var(--night-text);
+    border-radius: 30px 30px 0 0; padding: 12px 20px 0; box-shadow: 0 -20px 40px -20px rgba(24,23,31,.45); }
+  .handle { width: 42px; height: 4px; border-radius: 2px; background: rgba(255,255,255,.35); margin: 0 auto 16px; }
+  .sec { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .sec h2 { font-size: 17px; font-weight: 600; }
+  .sec a { font-size: 13px; color: var(--lilac); font-weight: 500; }
+  ul { list-style: none; padding: 0; }
+  li { display: flex; align-items: center; gap: 14px; padding: 9px 0; }
+  li img { width: 46px; height: 46px; border-radius: 14px; padding: 4px; background: rgba(255,255,255,.07); }
+  li div { flex: 1; min-width: 0; }
+  li b { display: block; font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  li small { font-size: 12px; color: var(--night-muted); }
+  li em { font-style: normal; font-size: 12px; font-weight: 600; color: var(--gold); }
+  nav { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-around; padding: 10px 8px 28px;
+    background: linear-gradient(180deg, rgba(29,29,38,0), var(--night) 30%); }
+  nav span { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 11px; font-weight: 500; color: var(--night-muted); }
+  nav svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  nav .on { color: #fff; }
+  nav .on svg { stroke: var(--lilac); }
+</style>
+</head>
+<body>
+  <header><span class="brand">Maths for Economics</span><span class="menu"><i></i>Menu</span></header>
+  <div class="balance"><p>Topics mastered</p><strong>0 <small>/ 102</small></strong></div>
+  <div class="seg"><span class="on">Year 1</span><span>Year 2</span><span>Year 3</span><span>Year 4</span></div>
+  <div class="chart">
+    <svg viewBox="0 0 390 170" preserveAspectRatio="none">
+      <defs><linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7b61ff" stop-opacity=".35"/><stop offset="1" stop-color="#7b61ff" stop-opacity="0"/></linearGradient></defs>
+      <path d="M0 150 C 40 150, 60 120, 84 118 S 140 70, 190 80 S 260 40, 300 52 S 360 20, 390 26 L390 170 L0 170Z" fill="url(#f)" opacity=".55"/>
+      <path d="M0 150 C 40 150, 60 120, 84 118 S 140 70, 190 80 S 260 40, 300 52 S 360 20, 390 26" fill="none" stroke="#7b61ff" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round" opacity=".45"/>
+      <path d="M0 150 C 30 150, 60 136, 84 118" fill="none" stroke="#7b61ff" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="84" cy="118" r="7" fill="#fff" stroke="#7b61ff" stroke-width="3"/>
+    </svg>
+    <span class="tip">You start here</span>
+  </div>
+  <div class="months"><b>Oct</b><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span></div>
+  <section class="sheet">
+    <div class="handle"></div>
+    <div class="sec"><h2>First topics</h2><a>See all</a></div>
+    <ul>
+      <li><img src="assets/chart-gradient.webp" alt=""><div><b>Linear functions in economics</b><small>Demand, supply and cost</small></div><em>Soon</em></li>
+      <li><img src="assets/target-gradient.webp" alt=""><div><b>Market equilibrium</b><small>Price, quantity, tax incidence</small></div><em>Soon</em></li>
+      <li><img src="assets/money-bag-gradient.webp" alt=""><div><b>Simple and compound interest</b><small>Deposits and loans</small></div><em>Soon</em></li>
+    </ul>
+    <nav>
+      <span class="on"><svg viewBox="0 0 24 24"><path d="M4 19.5V6a2 2 0 0 1 2-2h12v14H6a2 2 0 0 0-2 2Zm0 0A2 2 0 0 0 6 22h12"/></svg>Learn</span>
+      <span><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 12h.01M12 12h.01M15 12h.01M9 16h.01M12 16h.01M15 16h.01"/></svg>Practice</span>
+      <span><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Progress</span>
+      <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Settings</span>
+    </nav>
+  </section>
+</body>
+</html>

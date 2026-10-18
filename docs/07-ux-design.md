@@ -1,74 +1,71 @@
 # 07 — UX and visual design
 
-## Design direction: "graph paper and curves"
-The subject is the economist's diagram: axes, a demand curve crossing a supply curve, an equilibrium point. The app should feel like a clean sheet of graph paper on which these curves come alive. Calm, readable, made for long study sessions on a phone.
+## Design direction: "Balance sheet" (chosen by the owner, 2026-10-18)
+The app should feel like a modern finance app, which suits economists. Your progress reads like an account balance: a big number of topics mastered and a curve of how it grows. The topics you study sit in a dark sheet below, like a list of transactions. There is colour, depth and gloss: a violet gradient, glossy 3D icons, and frosted glass on floating controls. This replaces the earlier "graph paper and curves" direction (decision D29). The mockups the owner chose from are in `.impeccable/mocks/decision/`; variant B was chosen.
 
-**Signature element (spend boldness here only):** the *curriculum map* — topics drawn as points on a faint grid, connected by prerequisite lines like curves on a chart, coloured by mastery. Everything else stays quiet.
+**Signature element:** the balance header. It shows "Topics mastered N / total" for the current track and year, with the mastery curve under it. It changes as the student masters topics. Spend boldness here and on the 3D icons; keep the rest clean.
 
 ## Tokens
-Colours (light):
+Colours (light). Every text pairing meets WCAG AA:
 | Token | Hex | Use |
 |---|---|---|
-| `paper` | `#FBFCFD` | background |
-| `grid` | `#E3E8EF` | faint grid lines, dividers |
-| `ink` | `#1B2638` | text, axes |
-| `supply` | `#0F766E` | primary actions, "mastered", supply curves |
-| `demand` | `#B4235A` | wrong answers, demand curves, timer < 1 min |
-| `equilibrium` | `#D9A400` | highlights, "learning" state, intersection points |
+| `paper` | `#FFFFFF` | top area, cards on light |
+| `ground` | `#F5F4FA` | segmented control track, inputs, light chips |
+| `ink` | `#18171F` | text on light |
+| `muted` | `#6F6C86` | secondary text on light (5.0:1) |
+| `violet` | `#6246EA` | links and accent text on light (5.9:1) |
+| `gradient` | `#5B3FE6 → #7B5CF0` | primary buttons, active pill; white text ≥ 4.5:1 at every point |
+| `night` | `#1D1D26` | bottom sheet, tab bar, drawer |
+| `night-text` | `#F4F3FB` | text on night |
+| `night-muted` | `#A9A6C4` | secondary text on night (7.1:1) |
+| `lilac` | `#B88CFF` | links and accent on night (6.6:1) |
+| `gold` | `#F5C04A` | "soon / being written" status, highlights on night |
+| `danger` | `#D12D55` on light, `#FF6B81` on night | wrong answers, errors |
+| `success` | `#2FD182` on night | correct answers, mastered |
 
-Dark: `paper #0F1722`, `grid #233044`, `ink #E6ECF3`, `supply #2DB3A6`, `demand #E0668F`, `equilibrium #F0C239`. Implement as CSS variables on `:root` with `prefers-color-scheme: dark` and a manual override in Settings.
+Dark mode: the top area becomes `#121218` with `night-text`, the sheet stays `night`, accents unchanged. Follow `prefers-color-scheme`, with a manual override in Settings.
 
-Typography:
-- Reading text: **Literata** (designed for long on-screen reading), 17 px / 1.6 line height on phones, max 70 characters per line.
-- Interface: **Public Sans**, 15 px base; scale 13 / 15 / 17 / 21 / 28.
-- Maths: KaTeX fonts.
-- Sentence case everywhere. No all-caps labels.
+Typography: **Poppins** (bundled, Latin subset). Scale 13 / 15 / 17 / 21 / 28, plus 44 for the balance number. Weights 400 / 500 / 600 / 700. Maths in KaTeX. Sentence case everywhere. Never use gradient text; emphasis comes from weight and size.
 
-Shapes: 6 px radius for inputs and buttons, 10 px for sheets; no decorative shadows or gradients; separation by spacing and the grid colour.
+Shapes and depth: radius 14 px (controls), 18 px (rows and cards), 30 px (top of the sheet). Soft shadows with an offset, never zero-offset glows as decoration. Glass (blur 20 px, translucent `night`) only on floating layers: the tab bar, the drawer, overlays.
 
-Motion: only in response to actions (sheet opens, answer checked, slider moves the curve). Respect `prefers-reduced-motion`.
+3D icons: from the open **3dicons** set (CC0, gradient style), one per block or section. Examples: notebook (Learn, foundations), chart (functions, calculus), target (equilibrium, tests), money bag (financial maths), calculator (Practice), trophy (mastery), bulb (AI help). They are bundled as small WebP files and credited in About.
 
-Accessibility: WCAG AA contrast, visible focus, all graph information also given as text (e.g. "Equilibrium at P = 25, Q = 50"), tap targets ≥ 44 px.
+## Motion
+Light and quick. It always responds to the student, never plays on its own.
+- Page and tab changes: cross-fade with a short rise (220 ms, ease-out), using the View Transitions API where available.
+- The segmented control's active pill slides between options (200 ms).
+- The bottom sheet rises into place on first load (320 ms). The mastery curve draws itself once.
+- Topic changes and the Progress screen use the same transition grammar.
+- `prefers-reduced-motion`: every animation is off; the state changes instantly.
 
 ## Navigation
-Bottom bar with four tabs: Learn, Practice, Progress, Settings (from Phase 1, when those sections exist).
-
-A Menu button at the top right opens a drawer from the right for secondary destinations: Home, About, Source code, Report a problem (decision D28). About holds what the app is, its status, licences, font credits and the build date.
+- **Bottom tab bar** (glass, `night`): Learn, Practice, Progress, Settings. Labels are always visible.
+- **Menu drawer** from the top-right button, for secondary destinations: Home, About, Source code, Report a problem (decision D28).
+- About opens with the curriculum map: all topics as points, with prerequisite links, years 1–4 (owner's request).
 
 ## Screens
 **Learn (home)**
-- "Continue" card: last topic and section.
-- "Due for review" list (from spaced repetition), max 3 shown.
-- Curriculum map of the current track, year selector at the top. Tap a point → topic page.
+- Top: brand, Menu.
+- Balance header: topics mastered N / total, the year segmented control (Year 1–4), the mastery curve.
+- Dark sheet: the selected year's topics as rows. Each row has a 3D icon tile, the title, its economic use and its status (soon, new, learning, mastered).
+- "Keep it on your phone" (offline status and install) as a compact card in the sheet until the app is installed.
 
-**Topic page**
-- Header: title, a small live graph of the topic's key function, estimated time, mastery state.
-- Tabs or anchored sections: Learn, Examples, Practise, Real world.
-- Every worked-example step has a "Why?" button (AI `EXPLAIN_STEP`; offline: shows the step's `why` text).
-- Floating "Ask" button opens the AI sheet: suggested prompts (Explain simply, Real-world use, Show another example) and a text field (500 characters).
-- "Report an error" at the bottom and in each problem's menu.
+**Topic page** (Phase 1): header with a 3D icon, title, time and mastery. Sections: Why economists need this, Intuition, Definitions, Interactive, Worked examples (each step has "Why?"), Practise, Real world. A floating "Ask" button opens the AI sheet. "Report an error" sits at the bottom.
 
-**Practice**
-- Test builder: choose topics (by year/course or from weak list), difficulty, number of questions. Shows the time limit before starting.
-- Test runner: question, answer field (numeric keypad with `.` `-` `/`), timer, progress dots, no AI, no hints. Leaving the screen asks for confirmation.
-- Results: score, time, per-question list. Wrong items show the detected mistake and its offline explanation, then "Explain more" (AI) and "Practise this again".
+**Practice**: test builder (topics, difficulty, number of questions, time limit shown) → test runner (question, numeric keypad, timer, progress dots, no AI) → results (score, time, mistakes with offline explanations, "Explain more", "Practise again").
 
-**Progress**
-- Completion % per year and per course of the current track (mastered vs read).
-- Topic list with state, last score, next review date.
-- Weak areas (lowest recent scores).
-- Test history; any test reopens with its exact problems (regenerated from seeds).
+**Progress**: completion per year and course, topic list with state and next review, weak areas, test history.
 
-**Settings**
-- My programme: choose track, import custom track, see disclaimer.
-- AI: usage left today, use your own key (guide, Verify, Remove).
-- Share with a mentor: on/off, copy link, regenerate link.
-- Appearance: system / light / dark.
-- Data: export progress (JSON), reset.
-- About: licences, GitHub link, content version.
+**Settings**: My programme (choose Core, LSE, Cambridge or MIT, each marked as an unofficial draft until verified; import a custom track), AI (usage left, own key), mentor sharing, appearance, data (export, reset), About.
 
-**Mentor view (`/m/:token`)**
-- Read-only, no install needed. Completion by year and course, mastered/learning/not started counts, last 10 tests with scores, weak topics, last activity date.
+**Mentor view (`/m/:token`)**: read-only progress summary.
+
+## Accessibility
+- WCAG AA contrast (see tokens), visible focus rings, tap targets of at least 44 px.
+- All chart information is also given as text.
+- Text sizes in rem so they follow the reader's settings.
+- Reduced motion is respected (see Motion).
 
 ## Copy rules
 - Plain verbs; buttons say what happens: "Start test", "Check answer", "Explain this step".
