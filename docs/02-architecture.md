@@ -71,4 +71,4 @@ Expo app reuses `packages/core` and content bundles; only UI and `Storage` imple
 
 ## Deployment
 - Web app: Cloudflare Workers static assets, configured in the root `wrangler.jsonc`. Workers Builds runs `npm run build` and `npx wrangler deploy` on every push to `main` (see decision D25).
-- Worker: `wrangler deploy` from CI on `main` when `apps/proxy` changes.
+- Proxy Worker: Workers Builds runs `npx wrangler deploy --config apps/proxy/wrangler.jsonc` on every push to `main` (decision D26). `GROQ_API_KEY` is set as a secret in the Cloudflare dashboard or with `wrangler secret put`.

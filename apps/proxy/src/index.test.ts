@@ -3,7 +3,8 @@ import { isAllowedOrigin } from './cors';
 import app, { type Env } from './index';
 
 const env: Env = {
-  ALLOWED_ORIGINS: 'https://maths-for-economics.pages.dev,https://*.maths-for-economics.pages.dev',
+  ALLOWED_ORIGINS:
+    'https://maths-for-economics.ibragim-n.workers.dev,https://*-maths-for-economics.ibragim-n.workers.dev',
 };
 
 describe('GET /health', () => {
@@ -29,11 +30,11 @@ describe('CORS', () => {
   it('allows the app origin', async () => {
     const res = await app.request(
       '/health',
-      { headers: { Origin: 'https://maths-for-economics.pages.dev' } },
+      { headers: { Origin: 'https://maths-for-economics.ibragim-n.workers.dev' } },
       env,
     );
     expect(res.headers.get('Access-Control-Allow-Origin')).toBe(
-      'https://maths-for-economics.pages.dev',
+      'https://maths-for-economics.ibragim-n.workers.dev',
     );
   });
 
@@ -44,14 +45,17 @@ describe('CORS', () => {
 });
 
 describe('isAllowedOrigin', () => {
-  const allowed = 'http://localhost:5173, https://*.app.pages.dev';
+  const allowed = 'http://localhost:5173, https://app.me.workers.dev, https://*-app.me.workers.dev';
 
   it.each([
     ['http://localhost:5173', true],
-    ['https://abc123.app.pages.dev', true],
-    ['https://app.pages.dev', false],
-    ['https://evil-app.pages.dev', false],
-    ['http://abc123.app.pages.dev', false],
+    ['https://app.me.workers.dev', true],
+    ['https://1a2b3c4d-app.me.workers.dev', true],
+    ['https://evil.com/-app.me.workers.dev', false],
+    ['https://x.evil-app.me.workers.dev', false],
+    ['https://evilapp.me.workers.dev', false],
+    ['http://app.me.workers.dev', false],
+    ['https://app.me.workers.dev.evil.com', false],
     ['http://localhost:3000', false],
   ])('%s → %s', (origin, expected) => {
     expect(isAllowedOrigin(origin, allowed)).toBe(expected);

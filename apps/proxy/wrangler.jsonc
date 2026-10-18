@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "compatibility_date": "2026-10-01",
   "vars": {
-    // The web app on Cloudflare Pages and its preview deployments.
-    "ALLOWED_ORIGINS": "https://maths-for-economics.pages.dev,https://*.maths-for-economics.pages.dev"
+    // The web app (root wrangler.jsonc) and its preview URLs.
+    "ALLOWED_ORIGINS": "https://maths-for-economics.ibragim-n.workers.dev,https://*-maths-for-economics.ibragim-n.workers.dev"
   }
   // GROQ_API_KEY is a secret: `npx wrangler secret put GROQ_API_KEY`. Never put it in this file.
 }

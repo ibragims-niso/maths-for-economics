@@ -1,6 +1,7 @@
 /**
- * True if a browser origin may call the proxy. ALLOWED_ORIGINS is a comma-separated list;
- * an entry like "https://*.example.pages.dev" also allows preview subdomains.
+ * True if a browser origin may call the proxy. ALLOWED_ORIGINS is a comma-separated list.
+ * A "*" stands for one run of letters, digits and hyphens, so
+ * "https://*-app.example.workers.dev" also allows that Worker's preview URLs.
  */
 export function isAllowedOrigin(origin: string, allowedOrigins: string): boolean {
   return allowedOrigins
@@ -8,9 +9,10 @@ export function isAllowedOrigin(origin: string, allowedOrigins: string): boolean
     .map((o) => o.trim())
     .filter(Boolean)
     .some((allowed) => {
-      const wildcard = /^(https?:\/\/)\*\.(.+)$/.exec(allowed);
-      if (!wildcard) return origin === allowed;
-      const [, scheme, domain] = wildcard;
-      return origin.startsWith(scheme ?? '') && origin.endsWith(`.${domain}`);
+      const pattern = allowed
+        .split('*')
+        .map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+        .join('[a-z0-9-]+');
+      return new RegExp(`^${pattern}$`).test(origin);
     });
 }
