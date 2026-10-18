@@ -28,3 +28,7 @@ natural logarithm: The logarithm to base e (about 2.718), written ln x; the powe
 rule of 70: A quick estimate of doubling time; 70 divided by the growth rate in per cent.
 average annual growth rate: The constant yearly rate that takes a value from its starting level to its final level over T years, (end ÷ start)^(1/T) − 1.
 log-linear model: A model in which the logarithm of a variable is a linear function of other variables, so its coefficients read as approximate percentage changes.
+arithmetic sequence: A list of numbers in which each term is the previous one plus a fixed amount, the common difference.
+geometric sequence: A list of numbers in which each term is the previous one multiplied by a fixed number, the common ratio.
+series: The sum of the terms of a sequence, such as total earnings over several years.
+convergent series: A series whose running total settles at a fixed number as more and more terms are added.
