@@ -2,6 +2,9 @@ import type { Generator } from '../engine/types';
 import { continuousTariffParameter } from './C101/continuous-tariff-parameter';
 import { limitByCancelling } from './C101/limit-by-cancelling';
 import { longRunCostRatio } from './C101/long-run-cost-ratio';
+import { costAverageRateOfChange } from './C102/cost-average-rate-of-change';
+import { instantaneousRateQuadratic } from './C102/instantaneous-rate-quadratic';
+import { tangentLineIntercept } from './C102/tangent-line-intercept';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
@@ -100,6 +103,9 @@ export const GENERATORS = [
   limitByCancelling,
   longRunCostRatio,
   continuousTariffParameter,
+  costAverageRateOfChange,
+  instantaneousRateQuadratic,
+  tangentLineIntercept,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,

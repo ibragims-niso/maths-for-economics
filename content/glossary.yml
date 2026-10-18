@@ -67,3 +67,8 @@ one-sided limit: The value a function approaches when its input comes towards a 
 continuous function: A function whose graph has no holes, jumps or breaks at a point, so that its value there equals its limit there.
 jump discontinuity: A point where the limits from the left and from the right both exist but are different, so the graph jumps.
 asymptote: A line that a graph gets ever closer to without reaching it, for example average cost approaching marginal cost as output grows.
+average rate of change: The change in a function's value divided by the change in its input, Δy/Δx; the slope of the secant line through two points of its graph.
+difference quotient: The fraction (f(x + h) − f(x))/h, the average rate of change of f over a step of size h.
+derivative: The limit of the difference quotient as h shrinks to 0, written f′(x) or dy/dx; the instantaneous rate of change and the slope of the tangent.
+tangent line: The straight line that touches a curve at a point and has the same slope as the curve there, y = f(a) + f′(a)(x − a).
+differentiable: Having a derivative at a point, which needs the slopes from the left and from the right to agree; a corner or kink is not differentiable.
