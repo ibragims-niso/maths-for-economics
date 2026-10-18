@@ -124,3 +124,8 @@ inverse matrix: For a square matrix A, the matrix A⁻¹ with AA⁻¹ = A⁻¹A 
 singular matrix: A square matrix whose determinant is 0, so it has no inverse and Ax = b has no solution or infinitely many.
 adjugate: The transpose of the matrix of cofactors; dividing it by det A gives the inverse, A⁻¹ = adj A / det A.
 Gauss–Jordan elimination: Row-reducing [A | I] until the left half is I, at which point the right half is A⁻¹.
+linear approximation: Estimating f(a + h) by the tangent line, f(a) + f′(a)h, which works well when the step h is small.
+differential: The estimated change dy = f′(x)·dx in a function when its input changes by a small amount dx, such as marginal cost times the change in output.
+quadratic approximation: The tangent-line estimate plus the curvature term ½f″(a)h², which follows the bending of the curve and is more accurate for small steps.
+Taylor polynomial: The polynomial f(a) + f′(a)h + f″(a)h²/2! + … + f⁽ⁿ⁾(a)hⁿ/n!, which matches a function and its first n derivatives at the point a.
+Maclaurin polynomial: A Taylor polynomial about the point 0, such as 1 + x + x²/2 for eˣ.

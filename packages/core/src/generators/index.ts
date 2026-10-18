@@ -27,6 +27,9 @@ import { profitMaxLinearDemand } from './C109/profit-max-linear-demand';
 import { frontierSlopeImplicit } from './C110/frontier-slope-implicit';
 import { indifferenceCurveSlope } from './C110/indifference-curve-slope';
 import { isoquantMrts } from './C110/isoquant-mrts';
+import { compoundGrowthQuadraticApproximation } from './C111/compound-growth-quadratic-approximation';
+import { linearApproximationEstimate } from './C111/linear-approximation-estimate';
+import { quadraticApproximationEstimate } from './C111/quadratic-approximation-estimate';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -163,6 +166,9 @@ export const GENERATORS = [
   indifferenceCurveSlope,
   isoquantMrts,
   frontierSlopeImplicit,
+  linearApproximationEstimate,
+  compoundGrowthQuadraticApproximation,
+  quadraticApproximationEstimate,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,
