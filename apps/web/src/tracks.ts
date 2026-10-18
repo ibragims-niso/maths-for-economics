@@ -8,8 +8,8 @@ const files = import.meta.glob<Track>('../../../content/tracks/*.track.json', {
   import: 'default',
 });
 
-/** Order in the programme list: Core first, then the national programme, then the rest. */
-const ORDER = ['core', 'az-050405', 'lse', 'cambridge', 'mit'];
+/** Order in the programme list: the Azerbaijan programme first (it covers BBU, D38), then Core. */
+const ORDER = ['az-050405', 'core', 'lse', 'cambridge', 'mit'];
 const rank = (id: string) => (ORDER.includes(id) ? ORDER.indexOf(id) : ORDER.length);
 
 export const TRACKS: Track[] = Object.values(files).sort((a, b) => rank(a.id) - rank(b.id));

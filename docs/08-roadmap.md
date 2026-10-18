@@ -22,13 +22,13 @@ Acceptance:
 - [ ] The primary user has used it for one week and his feedback is logged as GitHub issues
 
 ## Phase 2 — Year 1 Core complete (≈ 2–3 months, in step with the semester)
-Scope: all 49 Year-1 topics and the Azerbaijan national track (verified against 3+ universities' syllabi), review queue, progress screen, mentor link (D1 sync + mentor view), own-key mode, resources with link checking, custom-track import, owner's private BBU track, formula sheet, Playwright tests for key flows.
+Scope: all 49 Year-1 topics and the Azerbaijan national track (verified against 3+ universities' syllabi), review queue, progress screen, mentor link (D1 sync + mentor view), own-key mode, resources with link checking, custom-track import, formula sheet, Playwright tests for key flows.
 Acceptance:
 - [ ] 49 topics at status `reviewed` or better
 - [ ] `az-050405` track `verified`
 - [x] Mentor link shows the student's progress within 1 minute of a change (when online); disabling sharing deletes server data — the phone sends 8 s after a change; checked on the live API 2026-10-18
 - [x] Own key verified, used and removable
-- [ ] BBU track imported on the student's phone; not present in the public repo
+- [x] BBU programme available on the student's phone: covered by the Azerbaijan track `az-050405`, built from BBU's 050405 programme, first in the programme list (D38)
 - [x] Weekly link check runs in CI
 
 ## Phase 3 — Public tracks and Year 2 (≈ 3 months)
