@@ -1459,6 +1459,40 @@ a.button-secondary {
   font-variant-numeric: tabular-nums;
 }
 
+/* ---------- Formula sheet ---------- */
+
+.search {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  border-radius: var(--radius-control);
+  background: var(--night-2);
+  color: var(--night-text);
+  font: var(--text-ui) / 1 var(--font);
+}
+
+.search:focus-visible {
+  outline: 2px solid var(--lilac);
+  outline-offset: 1px;
+}
+
+.formula {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--night-line);
+}
+
+.sheet--page .formula h2 {
+  margin: 0 0 8px;
+}
+
+.formula h2 a {
+  color: var(--night-text);
+  text-decoration: none;
+}
+
 /* ---------- Settings ---------- */
 
 .sheet--page .settings-block {

@@ -61,6 +61,16 @@ export function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => vo
               </Link>
             </li>
             <li>
+              <Link
+                to="/formulas"
+                aria-current={current('/formulas')}
+                onClick={onClose}
+                viewTransition
+              >
+                Formula sheet
+              </Link>
+            </li>
+            <li>
               <Link to="/about" aria-current={current('/about')} onClick={onClose} viewTransition>
                 About
               </Link>

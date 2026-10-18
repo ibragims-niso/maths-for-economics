@@ -19,6 +19,7 @@ const TITLES: Record<string, string> = {
   '/progress': 'Progress',
   '/settings': 'Settings',
   '/about': 'About',
+  '/formulas': 'Formula sheet',
 };
 
 const TABS = [
