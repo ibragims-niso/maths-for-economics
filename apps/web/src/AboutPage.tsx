@@ -25,6 +25,7 @@ export function AboutPage({ menu }: { menu: ReactNode }) {
           Maths for Economics teaches the mathematics of an economics degree, from first year to
           final year, through what economists do with it.
         </p>
+        <p className="byline">Made by Ibrahim Nohbalayev.</p>
       </header>
 
       <main className="prose">

@@ -665,3 +665,8 @@ html:has(.drawer[open]) {
 .prose li + li {
   margin-top: 6px;
 }
+
+.byline {
+  margin: 12px 0 0;
+  color: var(--ink-muted);
+}
