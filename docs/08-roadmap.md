@@ -18,7 +18,7 @@ Acceptance:
 - [x] 10 generators with property tests (1,000 seeds each)
 - [x] Timed test works end to end; AI hidden during the test; results show offline mistake explanations
 - [x] Pasting a homework problem in "Ask" never returns its numeric answer; returns method + analog (test with 20 sample prompts, store them in `apps/proxy/test/guardrail-prompts.json`) — `npm run check:guardrails`: 20 of 20 on 2026-10-18
-- [ ] Airplane mode: everything except AI works
+- [x] Airplane mode: everything except AI works — checked on the live site in a browser with the network off: Learn, a topic with maths, a full test, results, Progress, Settings, About; AI says it needs internet (11 of 11, 2026-10-18)
 - [ ] The primary user has used it for one week and his feedback is logged as GitHub issues
 
 ## Phase 2 — Year 1 Core complete (≈ 2–3 months, in step with the semester)
