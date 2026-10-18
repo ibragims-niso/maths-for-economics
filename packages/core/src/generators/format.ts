@@ -19,12 +19,13 @@ export function cleanDistractors(
   answer: number,
   candidates: Distractor[],
   tolerance?: number,
+  relTolerance?: number,
 ): Distractor[] {
   const kept: Distractor[] = [];
   for (const d of candidates) {
     if (!Number.isFinite(d.value)) continue;
-    if (withinTolerance(d.value, answer, tolerance)) continue;
-    if (kept.some((k) => withinTolerance(k.value, d.value, tolerance))) continue;
+    if (withinTolerance(d.value, answer, tolerance, relTolerance)) continue;
+    if (kept.some((k) => withinTolerance(k.value, d.value, tolerance, relTolerance))) continue;
     kept.push(d);
   }
   return kept;

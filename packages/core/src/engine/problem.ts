@@ -28,20 +28,20 @@ export function checkProblem<P>(generator: Generator<P>, seed: number): string[]
   if (JSON.stringify(p) !== JSON.stringify(again)) problems.push('not deterministic for its seed');
 
   if (p.answer.kind === 'numeric') {
-    const { value, tolerance } = p.answer;
+    const { value, tolerance, relTolerance } = p.answer;
     if (!Number.isFinite(value)) problems.push(`answer is not finite: ${value}`);
     const last = [...p.steps].reverse().find((s) => s.result !== undefined);
     if (!last) problems.push('no step states a result');
-    else if (!withinTolerance(last.result ?? Number.NaN, value, tolerance)) {
+    else if (!withinTolerance(last.result ?? Number.NaN, value, tolerance, relTolerance)) {
       problems.push(`last step result ${last.result} differs from answer ${value}`);
     }
     p.distractors.forEach((d, i) => {
       if (!Number.isFinite(d.value)) problems.push(`distractor ${d.mistakeCode} is not finite`);
-      if (withinTolerance(d.value, value, tolerance)) {
+      if (withinTolerance(d.value, value, tolerance, relTolerance)) {
         problems.push(`distractor ${d.mistakeCode} (${d.value}) equals the answer`);
       }
       p.distractors.slice(i + 1).forEach((e) => {
-        if (withinTolerance(d.value, e.value, tolerance)) {
+        if (withinTolerance(d.value, e.value, tolerance, relTolerance)) {
           problems.push(`distractors ${d.mistakeCode} and ${e.mistakeCode} coincide`);
         }
       });

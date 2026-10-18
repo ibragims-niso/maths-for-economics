@@ -32,10 +32,11 @@ mistakeCodes:
   ALGEBRA:
     label: Algebra slip when solving
     explanation: Set the elasticity expression equal to −1 and solve step by step. Check by substituting your price back into the formula.
-resources: []
-# Phase 1 task: find, check and add 3–5 resources (e.g. the elasticity chapter of OpenStax Principles of Economics,
-# an open courseware lecture on elasticity, a statistics-office or central-bank note using price elasticities).
-# Only add URLs that resolve and match the topic.
+resources:
+  - { title: "Principles of Economics 3e, 5.1 Price Elasticity of Demand and Price Elasticity of Supply (OpenStax)", url: "https://openstax.org/books/principles-economics-3e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply", kind: textbook, verifiedAt: 2026-10-18 }
+  - { title: "Principles of Economics 3e, 5.2 Polar Cases of Elasticity and Constant Elasticity (OpenStax)", url: "https://openstax.org/books/principles-economics-3e/pages/5-2-polar-cases-of-elasticity-and-constant-elasticity", kind: textbook, verifiedAt: 2026-10-18 }
+  - { title: "Principles of Economics 3e, 5.3 Elasticity and Pricing (OpenStax)", url: "https://openstax.org/books/principles-economics-3e/pages/5-3-elasticity-and-pricing", kind: textbook, verifiedAt: 2026-10-18 }
+  - { title: "Principles of Economics 3e, 5.4 Elasticity in Areas Other Than Price (OpenStax)", url: "https://openstax.org/books/principles-economics-3e/pages/5-4-elasticity-in-areas-other-than-price", kind: textbook, verifiedAt: 2026-10-18 }
 ---
 
 ## Why economists need this

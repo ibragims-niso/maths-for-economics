@@ -5,8 +5,10 @@ export type Answer =
   | {
       kind: 'numeric';
       value: number;
-      /** Absolute tolerance; grading also allows 0.5 % relative, whichever is larger. */
+      /** Absolute tolerance; grading also allows a relative one, whichever is larger. */
       tolerance?: number;
+      /** Relative tolerance (default 0.5 %). Money answers use a much smaller one. */
+      relTolerance?: number;
       unit?: string;
       /** Decimal places to show the answer with. */
       decimals?: number;

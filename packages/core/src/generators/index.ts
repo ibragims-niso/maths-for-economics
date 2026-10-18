@@ -1,12 +1,29 @@
 import type { Generator } from '../engine/types';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
+import { minAverageCost } from './C109/min-average-cost';
+import { profitMaxLinearDemand } from './C109/profit-max-linear-demand';
+import { linearBreakEven } from './F04/linear-break-even';
+import { linearDemandTwoPoints } from './F04/linear-demand-two-points';
+import { equilibriumPrice } from './F05/equilibrium-price';
+import { equilibriumTaxPrice } from './F05/equilibrium-tax-price';
+import { compoundInterestAmount } from './FM01/compound-interest-amount';
+import { simpleInterestAmount } from './FM01/simple-interest-amount';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
-export const GENERATORS: readonly Generator[] = [
-  elasticityLinearPoint as Generator,
-  elasticityUnitElasticPrice as Generator,
-];
+// Each generator has its own parameter type; the list holds them under the common interface.
+export const GENERATORS = [
+  linearBreakEven,
+  linearDemandTwoPoints,
+  equilibriumPrice,
+  equilibriumTaxPrice,
+  simpleInterestAmount,
+  compoundInterestAmount,
+  elasticityLinearPoint,
+  elasticityUnitElasticPrice,
+  profitMaxLinearDemand,
+  minAverageCost,
+] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));
 

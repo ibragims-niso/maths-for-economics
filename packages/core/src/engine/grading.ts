@@ -6,12 +6,21 @@ export const DEFAULT_ABS_TOLERANCE = 0.01;
 export const REL_TOLERANCE = 0.005;
 
 /** The allowed distance from `target` (docs/04: 0.01 absolute or 0.5 % relative). */
-export function toleranceFor(target: number, abs = DEFAULT_ABS_TOLERANCE): number {
-  return Math.max(abs, Math.abs(target) * REL_TOLERANCE);
+export function toleranceFor(
+  target: number,
+  abs = DEFAULT_ABS_TOLERANCE,
+  rel = REL_TOLERANCE,
+): number {
+  return Math.max(abs, Math.abs(target) * rel);
 }
 
-export function withinTolerance(value: number, target: number, abs?: number): boolean {
-  return Math.abs(value - target) <= toleranceFor(target, abs) + 1e-12;
+export function withinTolerance(
+  value: number,
+  target: number,
+  abs?: number,
+  rel?: number,
+): boolean {
+  return Math.abs(value - target) <= toleranceFor(target, abs, rel) + 1e-12;
 }
 
 /**
@@ -52,8 +61,10 @@ export function gradeNumeric(
   if (answer.kind !== 'numeric') throw new Error('gradeNumeric needs a numeric answer');
   const value = parseNumber(input);
   if (value === null) return { correct: false, value: null };
-  if (withinTolerance(value, answer.value, answer.tolerance)) return { correct: true, value };
-  const match = distractors.find((d) => withinTolerance(value, d.value, answer.tolerance));
+  const { tolerance, relTolerance } = answer;
+  if (withinTolerance(value, answer.value, tolerance, relTolerance))
+    return { correct: true, value };
+  const match = distractors.find((d) => withinTolerance(value, d.value, tolerance, relTolerance));
   return match
     ? { correct: false, value, mistakeCode: match.mistakeCode }
     : { correct: false, value };
