@@ -136,6 +136,22 @@ ANALOG ${problemBlock(analog)}`,
   ];
 }
 
+/**
+ * Own-key mode (owner's decision D37): the student pays for the model with their own key, so
+ * they may ask anything, including their own exercises, which are solved step by step.
+ */
+export function openMessages(t: TopicContext, question: string): ChatMessage[] {
+  return [
+    system(
+      t,
+      `The student uses their own AI key and may ask anything, about this topic or not.
+If they send an exercise, solve it step by step, showing every step and why it is done, then state the answer clearly.
+Check your arithmetic carefully. The topic material below is context; you may go beyond it.`,
+    ),
+    { role: 'user', content: question },
+  ];
+}
+
 /** Shown without a model call when the classifier says the message is off topic. */
 export const OFF_TOPIC_TEXT =
   'I can only help with the maths and economics of this topic. Try asking about an idea, a formula or how economists use it.';

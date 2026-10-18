@@ -28,12 +28,9 @@ describe('own key (docs/10)', () => {
     expect(await checkKey('gsk_x')).toBe('unreachable');
   });
 
-  it('sends questions to Groq only, never to our API, with the same guardrails', async () => {
+  it('sends questions to Groq only, and answers own exercises (D37)', async () => {
     const urls: string[] = [];
-    const replies = [
-      '{"category": "user_problem"}',
-      'At P = 37, Q = 480 - 7·37 = 221, so ε = -1.17.',
-    ];
+    const replies = ['At P = 37, Q = 480 - 7·37 = 221, so ε = -1.17.'];
     vi.stubGlobal('fetch', async (url: string) => {
       urls.push(String(url));
       return reply(replies.shift() ?? '');
@@ -47,8 +44,9 @@ describe('own key (docs/10)', () => {
       'gsk_mine',
     );
     expect(urls.every((u) => u.startsWith('https://api.groq.com/'))).toBe(true);
-    expect(result.ok && result.answer.mode).toBe('ANALOG');
-    expect(result.ok && result.answer.text).not.toContain('221');
+    expect(urls).toHaveLength(1);
+    expect(result.ok && result.answer.mode).toBe('OPEN');
+    expect(result.ok && result.answer.text).toContain('221');
   });
 
   it('explains a refused key in plain words', async () => {

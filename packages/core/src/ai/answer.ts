@@ -9,6 +9,7 @@ import {
   conceptMessages,
   explainStepMessages,
   OFF_TOPIC_TEXT,
+  openMessages,
   problemBlock,
   realWorldMessages,
   type TopicContext,
@@ -23,6 +24,19 @@ export interface AnswerPlan {
   /** Cache key parts; undefined for answers that must not be shared. */
   cache?: (string | number | undefined)[];
   run: (chat: ChatFn) => Promise<{ mode: AiMode; text: string }>;
+}
+
+/**
+ * Own-key mode, free-text questions (decision D37): no classifier and no analog rule; the
+ * student's own key answers anything. Contextual buttons still use planAnswer.
+ */
+export function planOpenAnswer(question: string, topic: TopicContext): AnswerPlan {
+  return {
+    run: async (chat) => ({
+      mode: 'OPEN',
+      text: await chat('main', openMessages(topic, question)),
+    }),
+  };
 }
 
 /** Lowercase, trimmed, single spaces: the same question typed twice is the same question. */

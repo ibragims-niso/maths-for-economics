@@ -4,6 +4,7 @@ import {
   type ChatFn,
   type CompiledTopic,
   planAnswer,
+  planOpenAnswer,
   type TopicContext,
 } from '@mfe/core';
 import aiConfig from '../../../../config/ai.json';
@@ -36,8 +37,13 @@ export async function askWithOwnKey(request: AiAsk, key: string): Promise<AiResu
     contentVersion: content.version,
   });
   const compiled = topicById(request.topicId);
+  // Own key: free-text questions are open (decision D37); buttons keep their usual answers.
   const plan =
-    parsed.success && compiled && planAnswer(parsed.data, tutorContext(compiled), content.version);
+    parsed.success && compiled
+      ? parsed.data.mode === 'ASK'
+        ? planOpenAnswer(parsed.data.payload.question, tutorContext(compiled))
+        : planAnswer(parsed.data, tutorContext(compiled), content.version)
+      : undefined;
   if (!plan) return { ok: false, message: 'This question could not be sent.' };
 
   const chat: ChatFn = async (role, messages) => {

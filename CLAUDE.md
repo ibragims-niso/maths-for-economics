@@ -11,7 +11,7 @@ The project owner is not a programmer. Explain every change in plain language, k
 
 ## Non-negotiable rules
 1. **AI never computes graded answers.** Answers, solution steps and distractors come from deterministic generators in `packages/core`. The AI only rewrites wording and explains steps it is given.
-2. **AI never solves user-supplied problems.** A user problem gets the method plus an *analog problem* produced by an app generator (different numbers), solved step by step.
+2. **AI never solves user-supplied problems with the shared key.** A user problem gets the method plus an *analog problem* produced by an app generator (different numbers), solved step by step. Exception (owner's decision D37): a student who adds their own AI key may ask anything, own exercises included.
 3. **AI is disabled while a test is running.**
 4. **No secrets in the repo.** The shared Groq key lives only in Cloudflare secrets. A user's own key lives only on their device.
 5. **AI never invents URLs.** It may only cite resources listed in the topic file.

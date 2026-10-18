@@ -58,7 +58,9 @@ export type AiMode =
   | 'REAL_WORLD'
   | 'CONCEPT_QA'
   | 'ANALOG'
-  | 'OFF_TOPIC';
+  | 'OFF_TOPIC'
+  /** Own-key mode only: any question, own exercises included (decision D37). */
+  | 'OPEN';
 
 export interface AiResponse {
   mode: AiMode;

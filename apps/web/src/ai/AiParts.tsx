@@ -1,5 +1,6 @@
 import { MAX_QUESTION_CHARS } from '@mfe/core';
 import { useState } from 'react';
+import { useSettings } from '../storage';
 import { AiAnswer } from './AiAnswer';
 import { type AiAsk, type AiState, useAi } from './client';
 
@@ -54,17 +55,22 @@ export function AiButton(props: {
   );
 }
 
-/** Free-text questions about one topic (docs/03): ideas yes, your homework's answer no. */
+/**
+ * Free-text questions (docs/03): with the shared AI, ideas yes and your homework's answer no;
+ * with the student's own key, anything (decision D37).
+ */
 export function AskBox(props: { topicId: string; allowedUrls?: readonly string[] }) {
   const [question, setQuestion] = useState('');
   const { state, run } = useAi();
+  const ownKey = Boolean(useSettings()?.ownKey);
   const id = `ask-${props.topicId}`;
   return (
     <section className="ask" data-ai aria-labelledby={`${id}-heading`}>
-      <h2 id={`${id}-heading`}>Ask about this topic</h2>
+      <h2 id={`${id}-heading`}>{ownKey ? 'Ask the AI' : 'Ask about this topic'}</h2>
       <p className="ask-hint">
-        The AI tutor explains ideas and methods. For your own exercise it shows the method on a
-        similar problem, so you still solve yours.
+        {ownKey
+          ? 'You are using your own key, so you can ask anything, including your own exercises.'
+          : 'The AI tutor explains ideas and methods. For your own exercise it shows the method on a similar problem, so you still solve yours.'}
       </p>
       <form
         onSubmit={(e) => {

@@ -107,6 +107,7 @@ Each topic file contains an explanation for each mistake code of its generators.
 Groq's model catalogue changes often. At setup, list available models from the API and choose a strong general model for `main` and a small fast one for `classifier`. Changing models must not require an app release (config is fetched with the content manifest).
 
 ## Own-key mode
-- Same prompt builders and routing run on the device, so all guardrails still apply.
+- Runs on the device; the key never reaches our servers.
+- Free-text questions are open (decision D37): no classifier and no analog rule, own exercises are solved step by step. The test lock, contextual buttons and the link rule stay.
 - Key validation: one cheap call (list models). Show "Key works" or the provider's error in plain words.
 - When a key is removed, the app returns to the shared proxy and its daily limit.
