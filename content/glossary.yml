@@ -134,3 +134,8 @@ indefinite integral: The family of all antiderivatives of a function, written �
 constant of integration: The unknown constant added to an antiderivative, fixed by one known value such as the fixed cost C(0).
 initial condition: A known starting value of a total, such as the fixed cost or today's capital stock, used to pin down the constant of integration.
 net investment: The yearly increase in the capital stock, gross investment minus depreciation, so that K′(t) = I(t).
+partial derivative: The rate of change of a function of several variables with respect to one of them while all the others are held fixed, written ∂f/∂x or f_x.
+gradient: The vector of a function's partial derivatives, ∇f = (f_x, f_y); it points in the direction of fastest increase and is perpendicular to the level curve.
+directional derivative: The rate of change of a function per unit of distance moved in a given direction, D_u f = ∇f·u for a unit vector u.
+Young's theorem: For a function with continuous second partial derivatives, the mixed partials are equal, f_xy = f_yx.
+marginal utility: The extra utility from one more unit of a good with the amounts of all other goods held fixed.

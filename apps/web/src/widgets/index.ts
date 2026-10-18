@@ -11,6 +11,7 @@ import { DoublingTime } from './DoublingTime';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
+import { GradientLevelCurves } from './GradientLevelCurves';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
 import { IndifferenceCurveMrs } from './IndifferenceCurveMrs';
 import { IndifferenceMap } from './IndifferenceMap';
@@ -48,6 +49,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
   'fixed-cost-break-even': FixedCostBreakEven,
+  'gradient-level-curves': GradientLevelCurves,
   'growth-rate-explorer': GrowthRateExplorer,
   'indifference-curve-mrs': IndifferenceCurveMrs,
   'indifference-map': IndifferenceMap,

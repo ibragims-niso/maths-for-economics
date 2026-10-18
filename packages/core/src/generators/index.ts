@@ -95,6 +95,9 @@ import { matrixRankElimination } from './LA201/matrix-rank-elimination';
 import { replicatePayoffCoordinates } from './LA201/replicate-payoff-coordinates';
 import { levelCurveThroughPoint } from './MV01/level-curve-through-point';
 import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-quantity';
+import { cobbDouglasMarginalProduct } from './MV02/cobb-douglas-marginal-product';
+import { directionalDerivativeUtility } from './MV02/directional-derivative-utility';
+import { jointCostPartialMarginalCost } from './MV02/joint-cost-partial-marginal-cost';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -192,6 +195,9 @@ export const GENERATORS = [
   inverse3x3CofactorEntry,
   levelCurveThroughPoint,
   sameIndifferenceCurveQuantity,
+  cobbDouglasMarginalProduct,
+  jointCostPartialMarginalCost,
+  directionalDerivativeUtility,
   replicatePayoffCoordinates,
   matrixRankElimination,
   dependenceParameterK,
