@@ -10,6 +10,7 @@ import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { InverseDemandMirror } from './InverseDemandMirror';
 import { KeynesianCross } from './KeynesianCross';
 import { PowerExplorer } from './PowerExplorer';
+import { ProfitHillTangent } from './ProfitHillTangent';
 import { RevenueProfit } from './RevenueProfit';
 import { SimpleVsCompound } from './SimpleVsCompound';
 import { SpendingRounds } from './SpendingRounds';
@@ -29,6 +30,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'inverse-demand-mirror': InverseDemandMirror,
   'keynesian-cross': KeynesianCross,
   'power-explorer': PowerExplorer,
+  'profit-hill-tangent': ProfitHillTangent,
   'revenue-profit': RevenueProfit,
   'simple-vs-compound': SimpleVsCompound,
   'spending-rounds': SpendingRounds,

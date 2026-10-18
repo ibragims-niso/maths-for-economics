@@ -12,7 +12,7 @@ economicUses:
   - Revenue maximisation and pricing
   - Choosing a tax rate that raises the most revenue
 generators: [profit-max-linear-demand, min-average-cost]
-widgets: []
+widgets: [profit-hill-tangent]
 mistakeCodes:
   FORGOT_COST:
     label: Maximised revenue, not profit
@@ -56,7 +56,9 @@ $$\pi'(Q) = 0 \iff MR(Q) = MC(Q).$$
 Average cost $AC(Q) = C(Q)/Q$ is lowest where $AC'(Q) = 0$, which is also where $MC = AC$.
 
 ## Interactive
-An interactive profit curve is planned for this topic. Until then, use Practice: every problem uses new numbers.
+::widget{id="profit-hill-tangent"}
+
+Move the **Output Q** slider along the profit hill $\pi(Q) = -2Q^2 + 120Q - 800$ from Example 1. The gold line is the tangent at the point, and the panel shows its slope, the marginal profit $\pi'(Q) = -4Q + 120$. Notice that the tangent rises to the left of the top, falls to the right of it, and is flat exactly at the top. Check: at $Q = 20$ the slope is 40; at $Q = 30$ it is 0 and the panel shows the maximum profit, 1,000.
 
 ## Worked examples
 
