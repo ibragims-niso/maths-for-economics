@@ -29,6 +29,7 @@ import { SpendingRounds } from './SpendingRounds';
 import { SurveyVenn } from './SurveyVenn';
 import { TariffContinuity } from './TariffContinuity';
 import { TaxBandExplorer } from './TaxBandExplorer';
+import { TwoLineSystem } from './TwoLineSystem';
 
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
@@ -62,4 +63,5 @@ export const WIDGETS: Record<string, ComponentType> = {
   'survey-venn': SurveyVenn,
   'tariff-continuity': TariffContinuity,
   'tax-band-explorer': TaxBandExplorer,
+  'two-line-system': TwoLineSystem,
 };

@@ -75,6 +75,9 @@ import { bundleDistanceNorm } from './LA101/bundle-distance-norm';
 import { matrixChainPlantCost } from './LA102/matrix-chain-plant-cost';
 import { matrixProductRevenueEntry } from './LA102/matrix-product-revenue-entry';
 import { transitionMatrixTwoStep } from './LA102/transition-matrix-two-step';
+import { machineHoursBackSubstitution } from './LA103/machine-hours-back-substitution';
+import { singularSystemParameter } from './LA103/singular-system-parameter';
+import { threeMarketEquilibriumPrice } from './LA103/three-market-equilibrium-price';
 import { cramerIncomeModel } from './LA104/cramer-income-model';
 import { cramerTwoMarketPrice } from './LA104/cramer-two-market-price';
 import { determinant3x3Cofactor } from './LA104/determinant-3x3-cofactor';
@@ -163,6 +166,9 @@ export const GENERATORS = [
   matrixProductRevenueEntry,
   transitionMatrixTwoStep,
   matrixChainPlantCost,
+  machineHoursBackSubstitution,
+  threeMarketEquilibriumPrice,
+  singularSystemParameter,
   cramerIncomeModel,
   determinant3x3Cofactor,
   cramerTwoMarketPrice,

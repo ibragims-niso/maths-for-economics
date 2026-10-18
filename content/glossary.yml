@@ -115,3 +115,8 @@ diminishing marginal returns: Each extra unit of an input adds less output than 
 function of several variables: A rule that gives one number for each list of inputs, such as utility U(x, y) from two goods or output Q(K, L) from capital and labour.
 level curve: The set of all input pairs at which a function of two variables takes the same value c, drawn as a curve in the plane.
 contour map: A drawing of several level curves of one function; curves close together mean the function changes quickly there.
+augmented matrix: The coefficients of a linear system with its right-hand side added as an extra column, one row per equation.
+row echelon form: A matrix shape where each row's first non-zero entry (its pivot) lies to the right of the pivot above, with only zeros below every pivot.
+pivot: The first non-zero entry of a row in echelon form; elimination divides by it and uses it to clear the entries below.
+Gaussian elimination: Solving a linear system by row operations that bring it to row echelon form, followed by back substitution.
+free variable: An unknown with no pivot in the echelon form; it can take any value, so the system has infinitely many solutions.
