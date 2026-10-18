@@ -129,3 +129,8 @@ differential: The estimated change dy = f′(x)·dx in a function when its input
 quadratic approximation: The tangent-line estimate plus the curvature term ½f″(a)h², which follows the bending of the curve and is more accurate for small steps.
 Taylor polynomial: The polynomial f(a) + f′(a)h + f″(a)h²/2! + … + f⁽ⁿ⁾(a)hⁿ/n!, which matches a function and its first n derivatives at the point a.
 Maclaurin polynomial: A Taylor polynomial about the point 0, such as 1 + x + x²/2 for eˣ.
+antiderivative: A function whose derivative is a given function; total cost is an antiderivative of marginal cost.
+indefinite integral: The family of all antiderivatives of a function, written ∫f(x) dx = F(x) + C.
+constant of integration: The unknown constant added to an antiderivative, fixed by one known value such as the fixed cost C(0).
+initial condition: A known starting value of a total, such as the fixed cost or today's capital stock, used to pin down the constant of integration.
+net investment: The yearly increase in the capital stock, gross investment minus depreciation, so that K′(t) = I(t).

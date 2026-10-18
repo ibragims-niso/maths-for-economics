@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { AnnuityExplorer } from './AnnuityExplorer';
+import { AntiderivativeFamily } from './AntiderivativeFamily';
 import { BreakEvenLines } from './BreakEvenLines';
 import { BudgetVectors } from './BudgetVectors';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
@@ -40,6 +41,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'budget-vectors': BudgetVectors,
   'chain-rule-cost-time': ChainRuleCostTime,
   'compounding-frequency': CompoundingFrequency,
+  'cost-antiderivative-family': AntiderivativeFamily,
   'determinant-area': DeterminantArea,
   'discounting-explorer': DiscountingExplorer,
   'doubling-time': DoublingTime,

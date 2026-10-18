@@ -30,6 +30,9 @@ import { isoquantMrts } from './C110/isoquant-mrts';
 import { compoundGrowthQuadraticApproximation } from './C111/compound-growth-quadratic-approximation';
 import { linearApproximationEstimate } from './C111/linear-approximation-estimate';
 import { quadraticApproximationEstimate } from './C111/quadratic-approximation-estimate';
+import { capitalStockFromInvestment } from './C112/capital-stock-from-investment';
+import { priceFromMarginalRevenue } from './C112/price-from-marginal-revenue';
+import { totalCostFromMarginalCost } from './C112/total-cost-from-marginal-cost';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -169,6 +172,9 @@ export const GENERATORS = [
   linearApproximationEstimate,
   compoundGrowthQuadraticApproximation,
   quadraticApproximationEstimate,
+  totalCostFromMarginalCost,
+  priceFromMarginalRevenue,
+  capitalStockFromInvestment,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,
