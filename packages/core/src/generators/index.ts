@@ -11,6 +11,9 @@ import { marginalRevenueProductRule } from './C103/marginal-revenue-product-rule
 import { chainRulePowerAtPoint } from './C104/chain-rule-power-at-point';
 import { costRateOverTime } from './C104/cost-rate-over-time';
 import { marginalRevenueProductLabour } from './C104/marginal-revenue-product-labour';
+import { expLogDerivativeAtPoint } from './C105/exp-log-derivative-at-point';
+import { growthAccountingTfp } from './C105/growth-accounting-tfp';
+import { growthRateRatioProduct } from './C105/growth-rate-ratio-product';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
@@ -121,6 +124,9 @@ export const GENERATORS = [
   chainRulePowerAtPoint,
   costRateOverTime,
   marginalRevenueProductLabour,
+  growthRateRatioProduct,
+  expLogDerivativeAtPoint,
+  growthAccountingTfp,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,

@@ -9,6 +9,7 @@ import { DoublingTime } from './DoublingTime';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
+import { GrowthRateExplorer } from './GrowthRateExplorer';
 import { InverseDemandMirror } from './InverseDemandMirror';
 import { KeynesianCross } from './KeynesianCross';
 import { MarginalCostTangent } from './MarginalCostTangent';
@@ -35,6 +36,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
   'fixed-cost-break-even': FixedCostBreakEven,
+  'growth-rate-explorer': GrowthRateExplorer,
   'inverse-demand-mirror': InverseDemandMirror,
   'keynesian-cross': KeynesianCross,
   'marginal-cost-tangent': MarginalCostTangent,

@@ -85,3 +85,8 @@ chain rule: The rule for differentiating a composite function, where the derivat
 inner function: In a composite f(g(x)), the function g that acts first; its output is the input of the outer function f.
 marginal product of labour: The extra output from employing one more worker; the derivative of output with respect to labour.
 marginal revenue product of labour: The extra revenue from employing one more worker, equal to marginal revenue times the marginal product of labour.
+growth rate: The slope of a variable divided by its level, ẏ/y, which equals the derivative of ln y with respect to time.
+log difference: The change in the natural log of a variable, ln y₁ − ln y₀; close to the percentage change when the change is small.
+total factor productivity: The part of output not explained by measured inputs, the A in Y = A·K^α·L^(1−α).
+growth accounting: Splitting output growth into the contributions of capital, labour and the growth of total factor productivity.
+logarithmic differentiation: Differentiating a function by first taking its logarithm, which turns products and powers into sums.
