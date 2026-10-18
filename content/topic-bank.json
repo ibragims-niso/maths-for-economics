@@ -1,0 +1,956 @@
+[
+ {
+  "id": "F01",
+  "title": "Algebra and exponent rules",
+  "coreYear": 1,
+  "prerequisites": [],
+  "economicUse": "Rearranging cost, revenue and growth formulas"
+ },
+ {
+  "id": "F02",
+  "title": "Linear and quadratic equations, inequalities",
+  "coreYear": 1,
+  "prerequisites": [
+   "F01"
+  ],
+  "economicUse": "Break-even points, budget constraints"
+ },
+ {
+  "id": "F03",
+  "title": "Functions, domain, range and graphs",
+  "coreYear": 1,
+  "prerequisites": [
+   "F01"
+  ],
+  "economicUse": "Demand, supply and cost as functions"
+ },
+ {
+  "id": "F04",
+  "title": "Linear functions in economics",
+  "coreYear": 1,
+  "prerequisites": [
+   "F03"
+  ],
+  "economicUse": "Linear demand, supply and cost"
+ },
+ {
+  "id": "F05",
+  "title": "Market equilibrium and 2×2 linear systems",
+  "coreYear": 1,
+  "prerequisites": [
+   "F02",
+   "F04"
+  ],
+  "economicUse": "Equilibrium price and quantity, tax incidence"
+ },
+ {
+  "id": "F06",
+  "title": "Quadratic functions: revenue and profit",
+  "coreYear": 1,
+  "prerequisites": [
+   "F02",
+   "F03"
+  ],
+  "economicUse": "Revenue and profit maximisation before calculus"
+ },
+ {
+  "id": "F07",
+  "title": "Exponential and logarithmic functions",
+  "coreYear": 1,
+  "prerequisites": [
+   "F01",
+   "F03"
+  ],
+  "economicUse": "Growth, inflation, log-linear models"
+ },
+ {
+  "id": "F08",
+  "title": "Sequences and series",
+  "coreYear": 1,
+  "prerequisites": [
+   "F07"
+  ],
+  "economicUse": "Multiplier effects, repeated payments"
+ },
+ {
+  "id": "F09",
+  "title": "Sets, logic and summation notation",
+  "coreYear": 1,
+  "prerequisites": [
+   "F01"
+  ],
+  "economicUse": "Reading models and statistical formulas"
+ },
+ {
+  "id": "F10",
+  "title": "Inverse and composite functions",
+  "coreYear": 1,
+  "prerequisites": [
+   "F03"
+  ],
+  "economicUse": "Inverse demand, cost of output through inputs"
+ },
+ {
+  "id": "FM01",
+  "title": "Simple and compound interest",
+  "coreYear": 1,
+  "prerequisites": [
+   "F07"
+  ],
+  "economicUse": "Deposits and loans"
+ },
+ {
+  "id": "FM02",
+  "title": "Continuous compounding and effective annual rate",
+  "coreYear": 1,
+  "prerequisites": [
+   "FM01"
+  ],
+  "economicUse": "Comparing offers with different compounding"
+ },
+ {
+  "id": "FM03",
+  "title": "Present value and discounting",
+  "coreYear": 1,
+  "prerequisites": [
+   "FM01"
+  ],
+  "economicUse": "Valuing future cash flows"
+ },
+ {
+  "id": "FM04",
+  "title": "Annuities and perpetuities",
+  "coreYear": 1,
+  "prerequisites": [
+   "FM03",
+   "F08"
+  ],
+  "economicUse": "Pensions, bonds, lease payments"
+ },
+ {
+  "id": "FM05",
+  "title": "Loan and lease amortisation schedules",
+  "coreYear": 1,
+  "prerequisites": [
+   "FM04"
+  ],
+  "economicUse": "Instalments; interest vs principal split"
+ },
+ {
+  "id": "FM06",
+  "title": "Net present value and internal rate of return",
+  "coreYear": 1,
+  "prerequisites": [
+   "FM03"
+  ],
+  "economicUse": "Investment appraisal"
+ },
+ {
+  "id": "FM07",
+  "title": "Bond pricing and yield",
+  "coreYear": 1,
+  "prerequisites": [
+   "FM04"
+  ],
+  "economicUse": "Fixed-income markets"
+ },
+ {
+  "id": "C101",
+  "title": "Limits and continuity",
+  "coreYear": 1,
+  "prerequisites": [
+   "F03"
+  ],
+  "economicUse": "Behaviour of costs and functions at the margin"
+ },
+ {
+  "id": "C102",
+  "title": "The derivative as a rate of change",
+  "coreYear": 1,
+  "prerequisites": [
+   "C101"
+  ],
+  "economicUse": "Foundation of marginal analysis"
+ },
+ {
+  "id": "C103",
+  "title": "Differentiation rules",
+  "coreYear": 1,
+  "prerequisites": [
+   "C102"
+  ],
+  "economicUse": "Computing marginal functions"
+ },
+ {
+  "id": "C104",
+  "title": "The chain rule",
+  "coreYear": 1,
+  "prerequisites": [
+   "C103"
+  ],
+  "economicUse": "Output depending on inputs depending on time"
+ },
+ {
+  "id": "C105",
+  "title": "Derivatives of exponentials and logarithms; growth rates",
+  "coreYear": 1,
+  "prerequisites": [
+   "C104",
+   "F07"
+  ],
+  "economicUse": "Growth rates, log differences"
+ },
+ {
+  "id": "C106",
+  "title": "Marginal analysis",
+  "coreYear": 1,
+  "prerequisites": [
+   "C103"
+  ],
+  "economicUse": "Marginal cost, revenue and product"
+ },
+ {
+  "id": "C107",
+  "title": "Elasticity",
+  "coreYear": 1,
+  "prerequisites": [
+   "C106"
+  ],
+  "economicUse": "Pricing decisions, tax incidence"
+ },
+ {
+  "id": "C108",
+  "title": "Second derivative, concavity and convexity",
+  "coreYear": 1,
+  "prerequisites": [
+   "C103"
+  ],
+  "economicUse": "Diminishing returns, risk attitudes"
+ },
+ {
+  "id": "C109",
+  "title": "Optimisation in one variable",
+  "coreYear": 1,
+  "prerequisites": [
+   "C108"
+  ],
+  "economicUse": "Profit maximisation, cost minimisation"
+ },
+ {
+  "id": "C110",
+  "title": "Implicit differentiation",
+  "coreYear": 1,
+  "prerequisites": [
+   "C104"
+  ],
+  "economicUse": "Slopes of indifference curves and isoquants"
+ },
+ {
+  "id": "C111",
+  "title": "Linear and quadratic approximation (Taylor)",
+  "coreYear": 1,
+  "prerequisites": [
+   "C108"
+  ],
+  "economicUse": "Approximating changes; bond duration and convexity"
+ },
+ {
+  "id": "C112",
+  "title": "Indefinite integrals",
+  "coreYear": 1,
+  "prerequisites": [
+   "C103"
+  ],
+  "economicUse": "Total cost from marginal cost"
+ },
+ {
+  "id": "C113",
+  "title": "Definite integrals and area",
+  "coreYear": 1,
+  "prerequisites": [
+   "C112"
+  ],
+  "economicUse": "Accumulated quantities over time"
+ },
+ {
+  "id": "C114",
+  "title": "Consumer and producer surplus",
+  "coreYear": 1,
+  "prerequisites": [
+   "C113",
+   "F05"
+  ],
+  "economicUse": "Welfare analysis, effects of taxes"
+ },
+ {
+  "id": "C115",
+  "title": "Integration by substitution and by parts",
+  "coreYear": 1,
+  "prerequisites": [
+   "C113"
+  ],
+  "economicUse": "Present value of income streams"
+ },
+ {
+  "id": "C116",
+  "title": "Improper integrals and continuous discounting",
+  "coreYear": 1,
+  "prerequisites": [
+   "C113",
+   "FM02"
+  ],
+  "economicUse": "Value of perpetual streams"
+ },
+ {
+  "id": "LA101",
+  "title": "Vectors and vector operations",
+  "coreYear": 1,
+  "prerequisites": [
+   "F01"
+  ],
+  "economicUse": "Bundles of goods, price vectors, cost of a bundle"
+ },
+ {
+  "id": "LA102",
+  "title": "Matrices and matrix operations",
+  "coreYear": 1,
+  "prerequisites": [
+   "LA101"
+  ],
+  "economicUse": "Data tables, transformations"
+ },
+ {
+  "id": "LA103",
+  "title": "Linear systems and Gaussian elimination",
+  "coreYear": 1,
+  "prerequisites": [
+   "LA102",
+   "F05"
+  ],
+  "economicUse": "Multi-market equilibrium"
+ },
+ {
+  "id": "LA104",
+  "title": "Determinants and Cramer's rule",
+  "coreYear": 1,
+  "prerequisites": [
+   "LA103"
+  ],
+  "economicUse": "Comparative statics of linear models"
+ },
+ {
+  "id": "LA105",
+  "title": "The inverse matrix",
+  "coreYear": 1,
+  "prerequisites": [
+   "LA104"
+  ],
+  "economicUse": "Solving models; basis for OLS"
+ },
+ {
+  "id": "LA106",
+  "title": "Input–output (Leontief) model",
+  "coreYear": 1,
+  "prerequisites": [
+   "LA105"
+  ],
+  "economicUse": "Inter-industry linkages"
+ },
+ {
+  "id": "ST101",
+  "title": "Descriptive statistics",
+  "coreYear": 1,
+  "prerequisites": [
+   "F09"
+  ],
+  "economicUse": "Summarising wages, prices, inflation"
+ },
+ {
+  "id": "ST102",
+  "title": "Probability and counting",
+  "coreYear": 1,
+  "prerequisites": [
+   "F09"
+  ],
+  "economicUse": "Risk and uncertainty"
+ },
+ {
+  "id": "ST103",
+  "title": "Random variables, expectation and variance",
+  "coreYear": 1,
+  "prerequisites": [
+   "ST102"
+  ],
+  "economicUse": "Expected return and risk"
+ },
+ {
+  "id": "ST104",
+  "title": "Binomial and Poisson distributions",
+  "coreYear": 1,
+  "prerequisites": [
+   "ST103"
+  ],
+  "economicUse": "Loan defaults, customer arrivals"
+ },
+ {
+  "id": "ST105",
+  "title": "The normal distribution",
+  "coreYear": 1,
+  "prerequisites": [
+   "ST103"
+  ],
+  "economicUse": "Returns, measurement errors"
+ },
+ {
+  "id": "MV01",
+  "title": "Functions of several variables and level curves",
+  "coreYear": 2,
+  "prerequisites": [
+   "C109"
+  ],
+  "economicUse": "Utility, production, isoquants"
+ },
+ {
+  "id": "MV02",
+  "title": "Partial derivatives",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV01",
+   "C103"
+  ],
+  "economicUse": "Marginal products and marginal utilities"
+ },
+ {
+  "id": "MV03",
+  "title": "Total differential and multivariable chain rule",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV02",
+   "C104"
+  ],
+  "economicUse": "Comparative statics"
+ },
+ {
+  "id": "MV04",
+  "title": "Homogeneous functions and Euler's theorem",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV02"
+  ],
+  "economicUse": "Returns to scale"
+ },
+ {
+  "id": "MV05",
+  "title": "Implicit function theorem",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV03",
+   "C110"
+  ],
+  "economicUse": "Marginal rate of substitution and of technical substitution"
+ },
+ {
+  "id": "MV06",
+  "title": "Convexity, concavity and quasiconcavity",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV02",
+   "C108"
+  ],
+  "economicUse": "Well-behaved preferences and technologies"
+ },
+ {
+  "id": "MV07",
+  "title": "Unconstrained optimisation and the Hessian",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV02",
+   "LA104"
+  ],
+  "economicUse": "Multi-product firm, price discrimination"
+ },
+ {
+  "id": "MV08",
+  "title": "The Lagrange method (equality constraints)",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV07"
+  ],
+  "economicUse": "Utility maximisation subject to a budget"
+ },
+ {
+  "id": "MV09",
+  "title": "The Lagrange multiplier as shadow price",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV08"
+  ],
+  "economicUse": "Value of relaxing a constraint"
+ },
+ {
+  "id": "MV10",
+  "title": "Utility maximisation and demand functions",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV08"
+  ],
+  "economicUse": "Consumer theory"
+ },
+ {
+  "id": "MV11",
+  "title": "Cost minimisation and Cobb–Douglas technology",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV08",
+   "MV04"
+  ],
+  "economicUse": "Producer theory"
+ },
+ {
+  "id": "MV12",
+  "title": "The envelope theorem",
+  "coreYear": 2,
+  "prerequisites": [
+   "MV09"
+  ],
+  "economicUse": "Roy's identity, Shephard's lemma"
+ },
+ {
+  "id": "MV13",
+  "title": "Double integrals (introduction)",
+  "coreYear": 2,
+  "prerequisites": [
+   "C113",
+   "MV01"
+  ],
+  "economicUse": "Joint probabilities, aggregate quantities"
+ },
+ {
+  "id": "LA201",
+  "title": "Linear independence, rank and spanning",
+  "coreYear": 2,
+  "prerequisites": [
+   "LA105"
+  ],
+  "economicUse": "Identification, redundant equations"
+ },
+ {
+  "id": "LA202",
+  "title": "Eigenvalues and eigenvectors",
+  "coreYear": 2,
+  "prerequisites": [
+   "LA201"
+  ],
+  "economicUse": "Dynamics, Markov chains"
+ },
+ {
+  "id": "LA203",
+  "title": "Diagonalisation",
+  "coreYear": 2,
+  "prerequisites": [
+   "LA202"
+  ],
+  "economicUse": "Solving dynamic systems"
+ },
+ {
+  "id": "LA204",
+  "title": "Quadratic forms and definiteness",
+  "coreYear": 2,
+  "prerequisites": [
+   "LA202",
+   "MV07"
+  ],
+  "economicUse": "Second-order conditions"
+ },
+ {
+  "id": "ST201",
+  "title": "Joint distributions, covariance and correlation",
+  "coreYear": 2,
+  "prerequisites": [
+   "ST103"
+  ],
+  "economicUse": "Portfolio risk, co-movement of variables"
+ },
+ {
+  "id": "ST202",
+  "title": "Sampling distributions and the central limit theorem",
+  "coreYear": 2,
+  "prerequisites": [
+   "ST105"
+  ],
+  "economicUse": "Survey data"
+ },
+ {
+  "id": "ST203",
+  "title": "Estimation and confidence intervals",
+  "coreYear": 2,
+  "prerequisites": [
+   "ST202"
+  ],
+  "economicUse": "Estimating unemployment or inflation"
+ },
+ {
+  "id": "ST204",
+  "title": "Hypothesis testing",
+  "coreYear": 2,
+  "prerequisites": [
+   "ST203"
+  ],
+  "economicUse": "Evaluating policies"
+ },
+ {
+  "id": "ST205",
+  "title": "Simple linear regression",
+  "coreYear": 2,
+  "prerequisites": [
+   "ST201",
+   "ST204"
+  ],
+  "economicUse": "Estimating demand"
+ },
+ {
+  "id": "OP01",
+  "title": "Inequality constraints and Kuhn–Tucker conditions",
+  "coreYear": 3,
+  "prerequisites": [
+   "MV08",
+   "MV06"
+  ],
+  "economicUse": "Corner solutions, rationing"
+ },
+ {
+  "id": "OP02",
+  "title": "Linear programming",
+  "coreYear": 3,
+  "prerequisites": [
+   "LA103"
+  ],
+  "economicUse": "Production planning, diet and transport problems"
+ },
+ {
+  "id": "OP03",
+  "title": "Duality in linear programming",
+  "coreYear": 3,
+  "prerequisites": [
+   "OP02",
+   "MV09"
+  ],
+  "economicUse": "Shadow prices of resources"
+ },
+ {
+  "id": "OP04",
+  "title": "Comparative statics in optimisation problems",
+  "coreYear": 3,
+  "prerequisites": [
+   "MV12",
+   "MV05"
+  ],
+  "economicUse": "Effect of prices and income on choices"
+ },
+ {
+  "id": "DY01",
+  "title": "First-order difference equations",
+  "coreYear": 3,
+  "prerequisites": [
+   "F08"
+  ],
+  "economicUse": "Cobweb model, debt dynamics"
+ },
+ {
+  "id": "DY02",
+  "title": "Second-order difference equations",
+  "coreYear": 3,
+  "prerequisites": [
+   "DY01"
+  ],
+  "economicUse": "Multiplier–accelerator model"
+ },
+ {
+  "id": "DY03",
+  "title": "First-order differential equations",
+  "coreYear": 3,
+  "prerequisites": [
+   "C112",
+   "C105"
+  ],
+  "economicUse": "Continuous growth, Solow model"
+ },
+ {
+  "id": "DY04",
+  "title": "Second-order differential equations",
+  "coreYear": 3,
+  "prerequisites": [
+   "DY03"
+  ],
+  "economicUse": "Price adjustment dynamics"
+ },
+ {
+  "id": "DY05",
+  "title": "Systems of equations and phase diagrams",
+  "coreYear": 3,
+  "prerequisites": [
+   "DY03",
+   "LA202"
+  ],
+  "economicUse": "Macroeconomic dynamics"
+ },
+ {
+  "id": "DY06",
+  "title": "Stability of equilibria",
+  "coreYear": 3,
+  "prerequisites": [
+   "DY05",
+   "DY02"
+  ],
+  "economicUse": "Does the economy return to equilibrium?"
+ },
+ {
+  "id": "EM01",
+  "title": "Multiple regression in matrix form (OLS)",
+  "coreYear": 3,
+  "prerequisites": [
+   "ST205",
+   "LA105"
+  ],
+  "economicUse": "Wage equations, demand estimation"
+ },
+ {
+  "id": "EM02",
+  "title": "Properties of OLS and the Gauss–Markov theorem",
+  "coreYear": 3,
+  "prerequisites": [
+   "EM01"
+  ],
+  "economicUse": "When estimates can be trusted"
+ },
+ {
+  "id": "EM03",
+  "title": "Inference in regression: t and F tests",
+  "coreYear": 3,
+  "prerequisites": [
+   "EM02",
+   "ST204"
+  ],
+  "economicUse": "Testing economic hypotheses"
+ },
+ {
+  "id": "EM04",
+  "title": "Heteroskedasticity and autocorrelation",
+  "coreYear": 3,
+  "prerequisites": [
+   "EM03"
+  ],
+  "economicUse": "Correcting standard errors"
+ },
+ {
+  "id": "EM05",
+  "title": "Maximum likelihood estimation",
+  "coreYear": 3,
+  "prerequisites": [
+   "ST203",
+   "C109"
+  ],
+  "economicUse": "Discrete choice models"
+ },
+ {
+  "id": "EM06",
+  "title": "Time-series basics: AR, MA, stationarity",
+  "coreYear": 3,
+  "prerequisites": [
+   "DY01",
+   "EM03"
+  ],
+  "economicUse": "Inflation and GDP forecasting"
+ },
+ {
+  "id": "GT01",
+  "title": "Normal-form games and Nash equilibrium",
+  "coreYear": 3,
+  "prerequisites": [
+   "F09"
+  ],
+  "economicUse": "Oligopoly, price wars"
+ },
+ {
+  "id": "GT02",
+  "title": "Mixed strategies",
+  "coreYear": 3,
+  "prerequisites": [
+   "GT01",
+   "ST103"
+  ],
+  "economicUse": "Auditing, penalty kicks, inspections"
+ },
+ {
+  "id": "GT03",
+  "title": "Extensive-form games and backward induction",
+  "coreYear": 3,
+  "prerequisites": [
+   "GT01"
+  ],
+  "economicUse": "Entry deterrence, bargaining"
+ },
+ {
+  "id": "GT04",
+  "title": "Repeated games and discounting",
+  "coreYear": 3,
+  "prerequisites": [
+   "GT03",
+   "F08"
+  ],
+  "economicUse": "Cartels and cooperation"
+ },
+ {
+  "id": "AN01",
+  "title": "Logic and proof techniques",
+  "coreYear": 4,
+  "prerequisites": [
+   "F09"
+  ],
+  "economicUse": "Reading and writing economic theory"
+ },
+ {
+  "id": "AN02",
+  "title": "Sequences, limits and completeness",
+  "coreYear": 4,
+  "prerequisites": [
+   "AN01",
+   "C101"
+  ],
+  "economicUse": "Convergence of algorithms and dynamics"
+ },
+ {
+  "id": "AN03",
+  "title": "Continuity and the extreme value theorem",
+  "coreYear": 4,
+  "prerequisites": [
+   "AN02"
+  ],
+  "economicUse": "Existence of optimal choices"
+ },
+ {
+  "id": "AN04",
+  "title": "Open, closed and compact sets in ℝⁿ",
+  "coreYear": 4,
+  "prerequisites": [
+   "AN03"
+  ],
+  "economicUse": "Budget sets, feasible sets"
+ },
+ {
+  "id": "AN05",
+  "title": "Fixed-point theorems and existence of equilibrium",
+  "coreYear": 4,
+  "prerequisites": [
+   "AN04"
+  ],
+  "economicUse": "General equilibrium, Nash existence"
+ },
+ {
+  "id": "DO01",
+  "title": "Calculus of variations (introduction)",
+  "coreYear": 4,
+  "prerequisites": [
+   "DY03",
+   "C115"
+  ],
+  "economicUse": "Optimal paths over time"
+ },
+ {
+  "id": "DO02",
+  "title": "Optimal control and the Hamiltonian",
+  "coreYear": 4,
+  "prerequisites": [
+   "DO01",
+   "MV08"
+  ],
+  "economicUse": "Resource extraction, optimal growth"
+ },
+ {
+  "id": "DO03",
+  "title": "Dynamic programming and the Bellman equation",
+  "coreYear": 4,
+  "prerequisites": [
+   "DY01",
+   "C109"
+  ],
+  "economicUse": "Consumption–saving, job search"
+ },
+ {
+  "id": "DO04",
+  "title": "Mathematics of the Ramsey growth model",
+  "coreYear": 4,
+  "prerequisites": [
+   "DO02",
+   "DY05"
+  ],
+  "economicUse": "Optimal saving for an economy"
+ },
+ {
+  "id": "SP01",
+  "title": "Markov chains",
+  "coreYear": 4,
+  "prerequisites": [
+   "LA202",
+   "ST102"
+  ],
+  "economicUse": "Labour-market flows, credit ratings"
+ },
+ {
+  "id": "SP02",
+  "title": "Expected utility and risk aversion",
+  "coreYear": 4,
+  "prerequisites": [
+   "C108",
+   "ST103"
+  ],
+  "economicUse": "Insurance, portfolio choice"
+ },
+ {
+  "id": "SP03",
+  "title": "Random walks and Brownian motion (intuition)",
+  "coreYear": 4,
+  "prerequisites": [
+   "SP01",
+   "ST105"
+  ],
+  "economicUse": "Asset prices"
+ },
+ {
+  "id": "SP04",
+  "title": "Option pricing intuition: the binomial model",
+  "coreYear": 4,
+  "prerequisites": [
+   "SP03",
+   "FM03"
+  ],
+  "economicUse": "Derivatives pricing"
+ },
+ {
+  "id": "NM01",
+  "title": "Root finding: bisection and Newton's method",
+  "coreYear": 4,
+  "prerequisites": [
+   "C111"
+  ],
+  "economicUse": "Computing IRR, equilibria without closed form"
+ },
+ {
+  "id": "NM02",
+  "title": "Numerical optimisation: gradient methods",
+  "coreYear": 4,
+  "prerequisites": [
+   "MV07"
+  ],
+  "economicUse": "Estimating models"
+ },
+ {
+  "id": "NM03",
+  "title": "Monte Carlo simulation",
+  "coreYear": 4,
+  "prerequisites": [
+   "ST202"
+  ],
+  "economicUse": "Risk analysis, stress tests"
+ }
+]

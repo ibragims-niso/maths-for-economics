@@ -1,0 +1,8 @@
+# Canonical terms. Extend as topics are written. Used by content and AI prompts.
+marginal cost: The extra cost of producing one more unit; the derivative of total cost with respect to output.
+marginal revenue: The extra revenue from selling one more unit; the derivative of total revenue with respect to output.
+price elasticity of demand: Percentage change in quantity demanded divided by percentage change in price.
+equilibrium: A situation where quantity supplied equals quantity demanded, so price has no tendency to change.
+present value: The value today of an amount received in the future, discounted at a given interest rate.
+shadow price: The change in the optimal value of an objective when a constraint is relaxed by one unit; the Lagrange multiplier.
+returns to scale: How output changes when all inputs are scaled by the same factor.
