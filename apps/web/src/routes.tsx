@@ -2,7 +2,8 @@ import type { RouteObject } from 'react-router';
 import { AboutPage } from './AboutPage';
 import { AppShell } from './AppShell';
 import { HomePage } from './HomePage';
-import { NotFoundPage, SettingsPage } from './PlaceholderPages';
+import { NotFoundPage } from './NotFoundPage';
+import { SettingsPage } from './settings/SettingsPage';
 
 export const routes: RouteObject[] = [
   {

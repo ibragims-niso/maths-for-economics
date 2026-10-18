@@ -91,7 +91,7 @@ describe('courses with sections and supporting topics', () => {
     ]);
   });
 
-  it('needs topics or sections', () => {
+  it('needs topics, sections or supporting topics', () => {
     const empty = track([], {
       years: [{ year: 1, label: 'Y', courses: [{ code: null, name: 'C', semester: null }] }],
     });

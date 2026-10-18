@@ -30,7 +30,7 @@ Optional course fields (decision D32):
   "supporting": ["background topics shown separately"] }
 ```
 - `semester`: a number, `"autumn"`, `"spring"`, `"varies"` or `null`.
-- A course needs `topics` or `sections` (or both). Completion % counts `topics` and `sections` topics; `supporting` topics are shown but not counted. When `sections` exist, the course page lists topics under these headings.
+- A course needs `topics`, `sections` or `supporting` (a background-only course, such as "Supporting: financial mathematics", counts nothing towards completion). Completion % counts `topics` and `sections` topics; `supporting` topics are shown but not counted. When `sections` exist, the course page lists topics under these headings.
 - Sources may carry a `note`.
 
 Validation: every topic ID exists; a topic may appear in more than one course or section; warn (not fail) if a topic appears before one of its prerequisites or twice in the same list. A public track should mention every bank topic at least once (a warning; an error for Core).

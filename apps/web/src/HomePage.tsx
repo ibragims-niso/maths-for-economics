@@ -1,22 +1,45 @@
-import { masteryState } from '@mfe/core';
+import { type MasteryState, masteryState } from '@mfe/core';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { useAppOfflineStatus } from './AppShell';
 import { InstallHint } from './InstallHint';
 import { Segmented } from './Segmented';
 import { useProgress } from './storage';
-import { groupByBlock, READY, STATUS_LABEL, topicsForYear, YEARS } from './topics';
+import { bankTopic, READY, STATUS_LABEL } from './topics';
+import { learnGroups, useTrack, yearTopics } from './tracks';
 import { useInstallOption } from './useInstallOption';
 
 const YEAR_KEY = 'mfe.learn.year';
-const YEAR_OPTIONS = YEARS.map((y) => ({ value: y as number, label: `Year ${y}` }));
-function initialYear(): number {
+
+function savedYear(): number {
   try {
-    const saved = Number(localStorage.getItem(YEAR_KEY));
-    return YEARS.includes(saved as (typeof YEARS)[number]) ? saved : 1;
+    return Number(localStorage.getItem(YEAR_KEY)) || 1;
   } catch {
     return 1;
   }
+}
+
+/** One topic: a link once it is written, "Soon" until then. */
+function TopicRow({ id, state }: { id: string; state: MasteryState }) {
+  const topic = bankTopic(id);
+  if (!topic) return null;
+  const text = (
+    <span className="row-text">
+      <span className="row-title">{topic.title}</span>
+      <span className="row-use">{topic.economicUse}</span>
+    </span>
+  );
+  return READY.has(id) ? (
+    <Link to={`/topic/${id}`} className="row row--link" viewTransition>
+      {text}
+      <span className={`row-status row-status--${state}`}>{STATUS_LABEL[state]}</span>
+    </Link>
+  ) : (
+    <div className="row">
+      {text}
+      <span className="row-status">Soon</span>
+    </div>
+  );
 }
 
 /** The signature: mastery read like an account balance. The total rolls in when the year changes. */
@@ -87,12 +110,17 @@ function PhoneStrip() {
 }
 
 export function HomePage() {
-  const [year, setYear] = useState(initialYear);
-  const topics = topicsForYear(year);
-  const groups = groupByBlock(topics);
+  const track = useTrack();
+  const [chosenYear, setYear] = useState(savedYear);
+  // A year the chosen programme does not have falls back to its first year.
+  const trackYear = track.years.find((y) => y.year === chosenYear) ?? track.years[0];
+  const year = trackYear?.year ?? 1;
+  const topics = yearTopics(track, year);
+  const groups = learnGroups(track, year);
   const progress = useProgress();
   const state = (id: string) => masteryState(progress?.get(id));
-  const mastered = topics.filter((t) => state(t.id) === 'mastered').length;
+  const mastered = topics.filter((id) => state(id) === 'mastered').length;
+  const yearOptions = track.years.map((y) => ({ value: y.year, label: `Year ${y.year}` }));
 
   const changeYear = (next: number) => {
     setYear(next);
@@ -109,7 +137,7 @@ export function HomePage() {
       <div className="hero">
         <Balance year={year} mastered={mastered} total={topics.length} />
         <Segmented
-          options={YEAR_OPTIONS}
+          options={yearOptions}
           value={year}
           onChange={changeYear}
           label="Year of study"
@@ -123,44 +151,30 @@ export function HomePage() {
         <div className="sheet-handle" aria-hidden="true" />
         <PhoneStrip />
         <div className="sheet-head">
-          <h2 id="sheet-heading">Year {year} topics</h2>
+          <h2 id="sheet-heading">{trackYear?.label ?? `Year ${year}`}</h2>
           <span className="sheet-count">{topics.length} topics</span>
         </div>
+        {track.id !== 'core' && <p className="sheet-track">{track.name}</p>}
         <div id="year-topics" role="tabpanel" aria-labelledby={`year-tab-${year}`}>
           {groups.map((g) => (
-            <section key={g.block} className="group" aria-labelledby={`group-${g.block}`}>
+            <section key={g.key} className="group" aria-labelledby={`group-${g.key}`}>
               <div className="group-head">
                 <img className="group-icon" src={g.icon} alt="" width="46" height="46" />
-                <h3 id={`group-${g.block}`}>{g.name}</h3>
-                <span className="group-count">{g.topics.length}</span>
+                <h3 id={`group-${g.key}`}>{g.name}</h3>
+                <span className="group-count">{g.count}</span>
               </div>
-              <ul className="rows">
-                {g.topics.map((t) => {
-                  return (
-                    <li key={t.id}>
-                      {READY.has(t.id) ? (
-                        <Link to={`/topic/${t.id}`} className="row row--link" viewTransition>
-                          <span className="row-text">
-                            <span className="row-title">{t.title}</span>
-                            <span className="row-use">{t.economicUse}</span>
-                          </span>
-                          <span className={`row-status row-status--${state(t.id)}`}>
-                            {STATUS_LABEL[state(t.id)]}
-                          </span>
-                        </Link>
-                      ) : (
-                        <div className="row">
-                          <span className="row-text">
-                            <span className="row-title">{t.title}</span>
-                            <span className="row-use">{t.economicUse}</span>
-                          </span>
-                          <span className="row-status">Soon</span>
-                        </div>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
+              {g.parts.map((part) => (
+                <div key={part.heading ?? 'topics'} className="group-part">
+                  {part.heading && <h4 className="group-sub">{part.heading}</h4>}
+                  <ul className="rows">
+                    {part.topicIds.map((id) => (
+                      <li key={id}>
+                        <TopicRow id={id} state={state(id)} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </section>
           ))}
         </div>

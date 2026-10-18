@@ -1,10 +1,11 @@
 import type { TopicProgress } from '@mfe/core';
-import type { Storage, TestAttempt } from './types';
+import { DEFAULT_SETTINGS, type Settings, type Storage, type TestAttempt } from './types';
 
 /** Keeps progress in memory: for tests, and when the browser offers no IndexedDB. */
 export function createMemoryStorage(): Storage {
   const progress = new Map<string, TopicProgress>();
   const attempts: TestAttempt[] = [];
+  let settings: Settings = DEFAULT_SETTINGS;
   const listeners = new Set<() => void>();
   const changed = () => {
     for (const listener of listeners) listener();
@@ -22,6 +23,11 @@ export function createMemoryStorage(): Storage {
     },
     recentAttempts: async (limit) =>
       [...attempts].sort((a, b) => b.finishedAt - a.finishedAt).slice(0, limit),
+    getSettings: async () => settings,
+    saveSettings: async (patch) => {
+      settings = { ...settings, ...patch };
+      changed();
+    },
     watch: (onChange) => {
       listeners.add(onChange);
       onChange();

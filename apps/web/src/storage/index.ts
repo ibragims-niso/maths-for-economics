@@ -4,7 +4,7 @@ import { createDexieStorage } from './dexie';
 import { createMemoryStorage } from './memory';
 import type { Storage, TestAttempt } from './types';
 
-export type { AttemptItem, Storage, TestAttempt } from './types';
+export type { AttemptItem, Settings, Storage, TestAttempt } from './types';
 
 /** The device's storage. Without IndexedDB (rare), progress lasts for this visit only. */
 export const storage: Storage =
@@ -44,3 +44,5 @@ export const useProgress = () =>
   );
 
 export const useRecentAttempts = (limit = 20) => useStored((store) => store.recentAttempts(limit));
+
+export const useSettings = () => useStored((store) => store.getSettings());

@@ -45,8 +45,8 @@ export const courseSchema = z
       .optional(),
     supporting: topicListSchema.optional(),
   })
-  .refine((c) => c.topics !== undefined || c.sections !== undefined, {
-    message: 'A course needs topics or sections (or both)',
+  .refine((c) => c.topics !== undefined || c.sections !== undefined || c.supporting !== undefined, {
+    message: 'A course needs topics, sections or supporting topics',
   });
 
 export type Course = z.infer<typeof courseSchema>;

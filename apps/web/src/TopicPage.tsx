@@ -6,7 +6,7 @@ import { content, topicById } from './content';
 import { HtmlBlock } from './HtmlBlock';
 import { BackIcon } from './icons';
 import { REPO_URL } from './links';
-import { NotFoundPage } from './PlaceholderPages';
+import { NotFoundPage } from './NotFoundPage';
 import { Segmented } from './Segmented';
 import { recordRead, storage, useProgress } from './storage';
 import { BLOCK_NAMES, STATUS_LABEL, topicIcon } from './topics';

@@ -1,8 +1,9 @@
-import { dueForReview, masteryState, type TopicProgress } from '@mfe/core';
+import { dueForReview, masteryState, type TopicProgress, trackTopicOrder } from '@mfe/core';
 import { Link } from 'react-router';
 import { topicById } from '../content';
 import { type TestAttempt, useProgress, useRecentAttempts } from '../storage';
 import { icon3d, STATUS_LABEL, topicsForYear, topicTitle, YEARS } from '../topics';
+import { useTrack, yearTopics } from '../tracks';
 
 const day = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short' });
 const dayTime = new Intl.DateTimeFormat('en-GB', {
@@ -56,13 +57,16 @@ function Empty() {
 export function ProgressPage() {
   const progress = useProgress();
   const attempts = useRecentAttempts(20);
+  const track = useTrack();
   if (!progress || !attempts) return null;
 
   const all = [...progress.values()].sort(byCurriculum);
   if (all.length === 0 && attempts.length === 0) return <Empty />;
 
   const stateOf = (id: string) => masteryState(progress.get(id));
-  const mastered = all.filter((p) => masteryState(p) === 'mastered').length;
+  // Completion is counted against the chosen programme (docs/02).
+  const counted = trackTopicOrder(track);
+  const mastered = counted.filter((id) => stateOf(id) === 'mastered').length;
   const learning = all.filter((p) => masteryState(p) === 'learning').length;
   const due = dueForReview(all, Date.now());
 
@@ -72,7 +76,7 @@ export function ProgressPage() {
         <div className="balance">
           <p className="balance-label">Topics mastered</p>
           <p className="balance-number">
-            {mastered} <span>/ {ORDER.size}</span>
+            {mastered} <span>/ {counted.length}</span>
           </p>
           <p className="results-meta">
             {learning} learning · {attempts.length === 20 ? '20+' : attempts.length}{' '}
@@ -80,14 +84,14 @@ export function ProgressPage() {
           </p>
         </div>
         <ul className="year-bars" aria-label="Mastered by year">
-          {YEARS.map((y) => {
-            const topics = topicsForYear(y);
-            const done = topics.filter((t) => stateOf(t.id) === 'mastered').length;
+          {track.years.map(({ year }) => {
+            const topics = yearTopics(track, year);
+            const done = topics.filter((id) => stateOf(id) === 'mastered').length;
             return (
-              <li key={y}>
-                <span className="year-bar-label">Year {y}</span>
+              <li key={year}>
+                <span className="year-bar-label">Year {year}</span>
                 <span className="year-bar">
-                  <span style={{ width: `${(100 * done) / topics.length}%` }} />
+                  <span style={{ width: `${(100 * done) / Math.max(1, topics.length)}%` }} />
                 </span>
                 <span className="year-bar-count">
                   {done} / {topics.length}

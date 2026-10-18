@@ -1,0 +1,173 @@
+{
+  "id": "lse",
+  "name": "Modeled on LSE BSc Economics",
+  "visibility": "public",
+  "status": "draft-unverified",
+  "verifiedAt": null,
+  "disclaimer": "Unofficial. Modeled on publicly available course information. Not affiliated with or endorsed by the university.",
+  "sources": [],
+  "years": [
+    {
+      "year": 1,
+      "label": "Year 1",
+      "courses": [
+        {
+          "code": "MA100",
+          "name": "Mathematical Methods",
+          "semester": null,
+          "topics": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05",
+            "F06",
+            "F07",
+            "F08",
+            "F09",
+            "F10",
+            "C101",
+            "C102",
+            "C103",
+            "C104",
+            "C105",
+            "C106",
+            "C107",
+            "C108",
+            "C109",
+            "C110",
+            "C111",
+            "C112",
+            "C113",
+            "C114",
+            "C115",
+            "C116",
+            "LA101",
+            "LA102",
+            "LA103",
+            "LA104",
+            "LA105",
+            "MV01",
+            "MV02",
+            "MV03",
+            "MV04",
+            "MV05",
+            "MV06",
+            "MV07",
+            "MV08",
+            "MV09"
+          ]
+        },
+        {
+          "code": "ST102",
+          "name": "Elementary Statistical Theory",
+          "semester": null,
+          "topics": [
+            "ST101",
+            "ST102",
+            "ST103",
+            "ST104",
+            "ST105",
+            "ST201",
+            "ST202",
+            "ST203",
+            "ST204"
+          ]
+        },
+        {
+          "code": null,
+          "name": "Financial mathematics (not a separate LSE course)",
+          "semester": null,
+          "supporting": ["FM01", "FM02", "FM03", "FM04", "FM05", "FM06", "FM07"]
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "label": "Year 2",
+      "courses": [
+        {
+          "code": "MA212",
+          "name": "Further Mathematical Methods",
+          "semester": null,
+          "topics": [
+            "LA201",
+            "LA202",
+            "LA203",
+            "LA204",
+            "DY01",
+            "DY02",
+            "DY03",
+            "DY04",
+            "DY05",
+            "MV13"
+          ]
+        },
+        {
+          "code": "EC221",
+          "name": "Principles of Econometrics",
+          "semester": null,
+          "topics": ["ST205", "EM01", "EM02", "EM03", "EM04"]
+        }
+      ]
+    },
+    {
+      "year": 3,
+      "label": "Year 3",
+      "courses": [
+        {
+          "code": null,
+          "name": "Options (for example MA208 Optimisation Theory, MA209 Differential Equations, MA203 Real Analysis)",
+          "semester": null,
+          "topics": ["OP01", "OP02", "OP03", "OP04", "DY06", "AN01", "AN02", "AN03", "AN04", "AN05"]
+        },
+        {
+          "code": null,
+          "name": "Advanced theory support",
+          "semester": null,
+          "supporting": [
+            "GT01",
+            "GT02",
+            "GT03",
+            "GT04",
+            "DO01",
+            "DO02",
+            "DO03",
+            "SP01",
+            "SP02",
+            "EM05",
+            "EM06"
+          ]
+        },
+        {
+          "code": null,
+          "name": "Further topics (not in this programme)",
+          "semester": null,
+          "supporting": [
+            "F11",
+            "C117",
+            "C118",
+            "LA106",
+            "ST106",
+            "ST107",
+            "MV10",
+            "MV11",
+            "MV12",
+            "ST206",
+            "OP05",
+            "OP06",
+            "OP07",
+            "GT05",
+            "DO04",
+            "SP03",
+            "SP04",
+            "SP05",
+            "NM01",
+            "NM02",
+            "NM03"
+          ]
+        }
+      ]
+    }
+  ]
+}

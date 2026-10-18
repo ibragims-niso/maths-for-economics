@@ -21,6 +21,13 @@ export interface TestAttempt {
   items: AttemptItem[];
 }
 
+/** Choices kept on the device (docs/02 Settings). More arrive with AI and mentor sharing. */
+export interface Settings {
+  trackId: string;
+}
+
+export const DEFAULT_SETTINGS: Settings = { trackId: 'core' };
+
 /**
  * Where a student's progress lives on the device. The web app uses IndexedDB (Dexie); the
  * Expo app can swap in SQLite behind the same interface (docs/02).
@@ -31,6 +38,8 @@ export interface Storage {
   addAttempt(attempt: TestAttempt): Promise<void>;
   /** Newest first. */
   recentAttempts(limit: number): Promise<TestAttempt[]>;
+  getSettings(): Promise<Settings>;
+  saveSettings(patch: Partial<Settings>): Promise<void>;
   /** Calls `onChange` now and after every change, until the returned function is called. */
   watch(onChange: () => void): () => void;
 }

@@ -14,7 +14,11 @@ export const STATUS_LABEL: Record<MasteryState, string> = {
   mastered: 'Mastered',
 };
 
-export const topicTitle = (id: string) => topicBank.find((t) => t.id === id)?.title ?? id;
+export const bankTopic = (id: string) => topicBank.find((t) => t.id === id);
+
+export const TOPIC_COUNT = topicBank.length;
+
+export const topicTitle = (id: string) => bankTopic(id)?.title ?? id;
 
 /** One CC0 3D icon per block (public/icons3d, credited in About). */
 const BLOCK_ICON: Record<Block, string> = {

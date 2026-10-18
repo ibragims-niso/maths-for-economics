@@ -42,7 +42,7 @@ Light and quick. It always responds to the student, never plays on its own.
 ## Navigation
 - **Bottom tab bar** (glass, `night`): Learn, Practice, Progress, Settings. Labels are always visible.
 - **Menu drawer** from the top-right button, for secondary destinations: Home, About, Source code, Report a problem (decision D28).
-- About opens with the curriculum map: all topics as points, with prerequisite links, years 1–4 (owner's request).
+- About opens with the curriculum map as a small emblem left of the title, like an icon: all topics as points with prerequisite links, years 1–4 left to right, written topics in gold (owner's requests, 2026-10-18).
 
 ## Screens
 **Learn (home)**

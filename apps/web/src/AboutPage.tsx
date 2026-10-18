@@ -1,5 +1,6 @@
 import { CurriculumMap } from './CurriculumMap';
 import { CODE_LICENCE_URL, CONTENT_LICENCE_URL, REPO_URL, REPORT_PROBLEM_URL } from './links';
+import { READY, TOPIC_COUNT } from './topics';
 
 const builtOn = new Date(__BUILD_DATE__).toLocaleDateString('en-GB', {
   day: 'numeric',
@@ -10,13 +11,21 @@ const builtOn = new Date(__BUILD_DATE__).toLocaleDateString('en-GB', {
 export function AboutPage() {
   return (
     <>
-      <div className="page">
-        <CurriculumMap />
+      <div className="practice-hero">
+        <span className="map-tile">
+          <CurriculumMap />
+        </span>
+        <div>
+          <h1 id="about-heading">About</h1>
+          <p className="topic-meta">
+            {READY.size} of {TOPIC_COUNT} topics written. Each point is a topic; gold ones are
+            ready.
+          </p>
+        </div>
       </div>
 
       <article className="sheet sheet--page about" aria-labelledby="about-heading">
         <div className="sheet-handle" aria-hidden="true" />
-        <h1 id="about-heading">About</h1>
         <p className="lead">
           Maths for Economics teaches the mathematics of an economics degree, from first year to
           final year, through what economists do with it.
@@ -26,8 +35,8 @@ export function AboutPage() {
         <section aria-labelledby="about-status">
           <h2 id="about-status">Where it is now</h2>
           <p>
-            The app is in development. The first five topics are being written; the rest of the 102
-            follow over the coming terms.
+            The app is in development. Topics are written in curriculum order; the rest of the{' '}
+            {TOPIC_COUNT} follow over the coming terms.
           </p>
         </section>
 
