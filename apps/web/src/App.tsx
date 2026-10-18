@@ -43,7 +43,7 @@ export function App() {
 
         <section aria-labelledby="first-topics-heading">
           <h2 id="first-topics-heading">First topics</h2>
-          <p>These five are being written now. Each starts with what economists use it for.</p>
+          <p>Being written now. Each starts with what economists use it for.</p>
           <ol className="topic-list">
             {firstTopics.map((t) => (
               <li key={t.id}>
@@ -58,8 +58,7 @@ export function App() {
 
       <footer>
         <p>
-          Free and open source. Code: MIT. Content: CC BY-NC-SA 4.0.{' '}
-          <a href={REPO_URL}>Source on GitHub</a>
+          Free, open source, no ads. <a href={REPO_URL}>Source and licences on GitHub</a>
         </p>
       </footer>
     </div>
