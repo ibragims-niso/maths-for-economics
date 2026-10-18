@@ -1,0 +1,24 @@
+name: Link check
+
+# Every Monday, open every resource and source link (docs/01 R14). A failure here means a
+# link in content/ needs replacing; it does not block other work.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Resource and source links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run check:links
