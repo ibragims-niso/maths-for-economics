@@ -29,7 +29,7 @@ Maths in the economist's language: every topic starts with what economists do wi
 - Phone first, often offline. Everything except AI help, mentor sync and content updates must work with no network.
 - Installed from the browser to the home screen (PWA); a native app comes later.
 - Timed tests run with AI hidden.
-- The curriculum is a shared topic bank of 102 topics in 16 blocks over four years, with prerequisites between topics.
+- The curriculum is a shared topic bank of 113 topics in 16 blocks over four years, with prerequisites between topics.
 
 ## Capabilities and Constraints
 
@@ -48,7 +48,7 @@ Maths in the economist's language: every topic starts with what economists do wi
 
 ## Evidence on Hand
 
-- Topic bank: content/topic-bank.json (102 topics, prerequisites, economic use for each).
+- Topic bank: content/topic-bank.json (113 topics, prerequisites, economic use for each).
 - Golden example topic: content/topics/C107-elasticity.md.
 - Core track: content/tracks/core.track.json.
 - No users, testimonials, statistics or university endorsements exist. Do not invent them.

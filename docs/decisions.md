@@ -5,7 +5,7 @@
 | D1 | Free, non-commercial, open source on GitHub | Help students; enables CC BY-NC-SA sources; community error reports |
 | D2 | App language English only (structure ready for i18n) | Primary user's need; halves content review effort |
 | D3 | One topic bank + university tracks ("Variant C") | No duplicated content; progress survives track switching; new tracks are cheap |
-| D4 | Public tracks: Core (default), LSE, Cambridge, MIT | Three different teaching models, all with public course information |
+| D4 | Public tracks: Core (default), Azerbaijan national 050405, LSE, Cambridge, MIT | Local national programme plus three international teaching models, all with public course information |
 | D5 | Owner's university (BBU) as a private custom track | Personal need; not appropriate in the universal app |
 | D6 | Generators compute answers; AI never does | LLM arithmetic is unreliable; answers must always be correct |
 | D7 | AI never solves user problems; gives method + analog | Learning over homework solving |
@@ -32,3 +32,5 @@
 | D28 | A Menu drawer (top right) for secondary destinations, including an About page; the four main sections stay a bottom tab bar from Phase 1 | Owner asked for a drawer with About. Frequent actions stay in thumb reach at the bottom; rare ones live in the drawer |
 | D29 | New visual direction "Balance sheet" (finance-app style: violet gradient, glossy 3D icons, dark bottom sheet, glass tab bar, light transitions) replaces "graph paper and curves"; Poppins replaces Literata and Public Sans; 3D icons from the CC0 3dicons set | The owner found the first design empty, pale and confusing, and chose mockup B of three |
 | D30 | International tracks (Core, LSE, Cambridge, MIT) selectable in the app from Phase 1, labelled as unofficial drafts until verified in Phase 3; the owner's private BBU track is postponed | The owner's decision; the only BBU document available has no semester order |
+| D31 | Azerbaijan track built from the Ministry-approved 050405 programme (subjects, credits) plus university learning outcomes and syllabi (topic headings); 11 topics added to the bank (marked † in docs/05) | National programme fixes subjects but not topic lists; universities publish the details |
+| D32 | Track courses may have `sections`, `credits` and `supporting`; `semester` may be a season or "varies" | National syllabi are organised by headings within a course; semester placement varies by university |

@@ -22,13 +22,48 @@ A track is an ordered selection of topic-bank topics, grouped into years and cou
   ]
 }
 ```
-Validation: every topic ID exists; a topic may appear in more than one course; warn (not fail) if a topic appears before one of its prerequisites.
+Optional course fields (decision D32):
+```json
+{ "code": "İF-04", "name": "...", "semester": "autumn", "credits": 8,
+  "topics": ["..."],
+  "sections": [ { "title": "heading shown in the app", "topics": ["..."] } ],
+  "supporting": ["background topics shown separately"] }
+```
+- `semester`: a number, `"autumn"`, `"spring"`, `"varies"` or `null`.
+- A course needs `topics` or `sections` (or both). Completion % counts `topics` and `sections` topics; `supporting` topics are shown but not counted. When `sections` exist, the course page lists topics under these headings.
+- Sources may carry a `note`.
+
+Validation: every topic ID exists; a topic may appear in more than one course or section; warn (not fail) if a topic appears before one of its prerequisites or twice in the same list. A public track should mention every bank topic at least once (a warning; an error for Core).
 
 ## Public tracks
 Status of all mappings below: **draft — verify in Phase 3** against the current official course pages before marking `verified`. Course names and codes come from public course guides and regulations; detailed topic lists must be checked course by course.
 
 ### Core (default)
 Years and order exactly as in docs/05-topic-bank.md.
+
+### Azerbaijan: 050405 Economics (national programme, 4 years)
+File: `content/tracks/az-050405.track.json` (draft). Course names shown in Azerbaijani with English translation.
+
+How the national system is organised:
+- The Ministry of Science and Education approves one education programme per specialty (050405 İqtisadiyyat: decision of 09.07.2020, F-393). It fixes the compulsory subjects, their credits and a short description; universities teaching 050405 build their programmes on it.
+- Detailed learning outcomes and syllabi are set by each university's academic staff, and the programme requires syllabi to be public.
+- Semester placement differs between universities.
+
+Compulsory mathematical subjects and draft headings:
+| Code | Course (credits) | Headings and topics |
+|---|---|---|
+| İF-04 | Xətti cəbr və riyazi analiz (8) | Linear systems, linear spaces, basis: LA101–LA105, LA201. Limits, e, continuity: F03, F07, F08, F10, C101. One-variable differentiation: C102–C111. Several variables, extrema: MV01, MV02, MV07. Indefinite integrals: C112, C115. Definite, improper, double integrals: C113, C114, C116, C118, MV13. Series, power series: C117 |
+| İF-05 | Ehtimal nəzəriyyəsi və riyazi statistika (8) | Combinatorics, events: F09, ST102. Bayes, Bernoulli, Poisson, Laplace: ST102, ST104, ST105. Random variables: ST103–ST105. Two-dimensional variables: ST201. Chebyshev, law of large numbers: ST206, ST202. Random processes: SP01. Estimation, tests: ST203, ST204 |
+| İF-07 | Statistika (10) | Grouping, averages, variation: ST101. Indices: ST106. Time series: ST107. Sampling: ST202, ST203. Correlation, regression: ST201, ST205 |
+| İF-08 | Ekonometrika (10; often split into 1 and 2) | Part 1: LP, duality, transport, integer, nonlinear and dynamic programming, games: OP01–OP03, OP05, OP06, DO03, GT01, GT02, GT05. Part 2: regression, macro models, input–output, graphs and network planning, queueing systems, hypotheses, heteroskedasticity, time series: ST201, ST205, EM01, F11, LA103, LA106, OP07, SP05, ST204, EM03, EM04, EM06 |
+
+"Beyond the national programme" holds the remaining bank topics (financial maths, deeper optimisation, dynamics, analysis) for finance electives and master's preparation.
+
+The national syllabus places some topics before their bank prerequisites (for example integration methods before definite integrals). `validate:content` lists these as warnings, which is expected for this track.
+
+Verification (Phase 2): compare with syllabi of at least three universities (for example UNEC, BBU, Azerbaijan University), confirm headings and typical semesters, then set `status: verified`.
+
+Note: the national track covers the owner's private BBU track almost entirely; the private track then only needs BBU's own semester plan (`local/tracks/bbu.track.json`: a copy of `az-050405` with each course's `semester` set; never committed).
 
 ### LSE (3-year UK model)
 Sources: LSE Calendar course guides (MA100, ST102, MA212, EC221 and optional MA courses).

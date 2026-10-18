@@ -15,7 +15,8 @@ export function parseTopicBankDoc(markdown: string): TopicBankEntry[] {
     const pre = row[3].trim();
     entries.push({
       id: row[1],
-      title: row[2].trim(),
+      // A trailing † marks a topic added for the Azerbaijan national track (docs/05 intro).
+      title: row[2].replace(/\s*†\s*$/, '').trim(),
       coreYear,
       prerequisites: pre === '—' || pre === '-' ? [] : pre.split(',').map((p) => p.trim()),
       economicUse: row[4].trim(),

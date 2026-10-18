@@ -1,6 +1,6 @@
 # 05 — Topic bank (Core)
 
-102 topics in 16 blocks. IDs are permanent. `Core year` is the default placement; university tracks reorder and regroup topics (docs/06-tracks.md). Machine-readable copy: generate `content/topic-bank.json` from this table in Phase 0 and validate that the prerequisite graph has no cycles.
+113 topics in 16 blocks (102 original + 11 added for the Azerbaijan national track, marked †; they are general topics and belong to the public bank). IDs are permanent. `Core year` is the default placement; university tracks reorder and regroup topics (docs/06-tracks.md). Machine-readable copy: generate `content/topic-bank.json` from this table in Phase 0 and validate that the prerequisite graph has no cycles.
 
 ## Year 1
 
@@ -17,6 +17,7 @@
 | F08 | Sequences and series | F07 | Multiplier effects, repeated payments |
 | F09 | Sets, logic and summation notation | F01 | Reading models and statistical formulas |
 | F10 | Inverse and composite functions | F03 | Inverse demand, cost of output through inputs |
+| F11 | Linear macro models and multipliers † | F05, F08 | Keynesian cross, fiscal and money multipliers |
 
 ### FM — Financial mathematics
 | ID | Title | Prerequisites | Economic use |
@@ -48,6 +49,8 @@
 | C114 | Consumer and producer surplus | C113, F05 | Welfare analysis, effects of taxes |
 | C115 | Integration by substitution and by parts | C113 | Present value of income streams |
 | C116 | Improper integrals and continuous discounting | C113, FM02 | Value of perpetual streams |
+| C117 | Infinite series and power series † | F08, C111 | Approximations, present value of infinite streams |
+| C118 | Geometric applications of integrals; line integrals † | C113 | Arc length, volumes; required by national syllabi, limited economic use |
 
 ### LA1 — Linear algebra I
 | ID | Title | Prerequisites | Economic use |
@@ -63,10 +66,12 @@
 | ID | Title | Prerequisites | Economic use |
 |---|---|---|---|
 | ST101 | Descriptive statistics | F09 | Summarising wages, prices, inflation |
-| ST102 | Probability and counting | F09 | Risk and uncertainty |
+| ST102 | Probability and counting (classical, geometric and conditional probability) | F09 | Risk and uncertainty |
 | ST103 | Random variables, expectation and variance | ST102 | Expected return and risk |
 | ST104 | Binomial and Poisson distributions | ST103 | Loan defaults, customer arrivals |
 | ST105 | The normal distribution | ST103 | Returns, measurement errors |
+| ST106 | Index numbers † | ST101 | Consumer price index, Laspeyres and Paasche indices, real wages |
+| ST107 | Time-series indicators: growth rates and averages † | ST106, F07 | GDP growth, chain and base indices, average growth rate |
 
 ## Year 2
 
@@ -74,7 +79,7 @@
 | ID | Title | Prerequisites | Economic use |
 |---|---|---|---|
 | MV01 | Functions of several variables and level curves | C109 | Utility, production, isoquants |
-| MV02 | Partial derivatives | MV01, C103 | Marginal products and marginal utilities |
+| MV02 | Partial and directional derivatives | MV01, C103 | Marginal products and marginal utilities |
 | MV03 | Total differential and multivariable chain rule | MV02, C104 | Comparative statics |
 | MV04 | Homogeneous functions and Euler's theorem | MV02 | Returns to scale |
 | MV05 | Implicit function theorem | MV03, C110 | Marginal rate of substitution and of technical substitution |
@@ -90,7 +95,7 @@
 ### LA2 — Linear algebra II
 | ID | Title | Prerequisites | Economic use |
 |---|---|---|---|
-| LA201 | Linear independence, rank and spanning | LA105 | Identification, redundant equations |
+| LA201 | Linear spaces: independence, basis, rank, change of basis | LA105 | Identification, redundant equations |
 | LA202 | Eigenvalues and eigenvectors | LA201 | Dynamics, Markov chains |
 | LA203 | Diagonalisation | LA202 | Solving dynamic systems |
 | LA204 | Quadratic forms and definiteness | LA202, MV07 | Second-order conditions |
@@ -103,6 +108,7 @@
 | ST203 | Estimation and confidence intervals | ST202 | Estimating unemployment or inflation |
 | ST204 | Hypothesis testing | ST203 | Evaluating policies |
 | ST205 | Simple linear regression | ST201, ST204 | Estimating demand |
+| ST206 | Chebyshev's inequality and the law of large numbers † | ST103 | Insurance pooling, why averages stabilise |
 
 ## Year 3
 
@@ -113,6 +119,9 @@
 | OP02 | Linear programming | LA103 | Production planning, diet and transport problems |
 | OP03 | Duality in linear programming | OP02, MV09 | Shadow prices of resources |
 | OP04 | Comparative statics in optimisation problems | MV12, MV05 | Effect of prices and income on choices |
+| OP05 | The transportation problem † | OP02 | Minimising logistics costs |
+| OP06 | Integer, fractional-linear and parametric programming † | OP02 | Choosing investment projects, scheduling |
+| OP07 | Graphs and network planning: the critical path method † | F09 | Project scheduling and deadlines |
 
 ### DY — Dynamics
 | ID | Title | Prerequisites | Economic use |
@@ -141,6 +150,7 @@
 | GT02 | Mixed strategies | GT01, ST103 | Auditing, penalty kicks, inspections |
 | GT03 | Extensive-form games and backward induction | GT01 | Entry deterrence, bargaining |
 | GT04 | Repeated games and discounting | GT03, F08 | Cartels and cooperation |
+| GT05 | Zero-sum matrix games and linear programming † | GT02, OP03 | Competitive strategy under conflict |
 
 ## Year 4
 
@@ -168,6 +178,7 @@
 | SP02 | Expected utility and risk aversion | C108, ST103 | Insurance, portfolio choice |
 | SP03 | Random walks and Brownian motion (intuition) | SP01, ST105 | Asset prices |
 | SP04 | Option pricing intuition: the binomial model | SP03, FM03 | Derivatives pricing |
+| SP05 | Queueing systems † | ST104 | Bank branches, call centres, service capacity planning |
 
 ### NM — Numerical methods
 | ID | Title | Prerequisites | Economic use |
@@ -177,4 +188,4 @@
 | NM03 | Monte Carlo simulation | ST202 | Risk analysis, stress tests |
 
 ## Counts
-Year 1: 44, Year 2: 22, Year 3: 20, Year 4: 16. Total: 102.
+Year 1: 49, Year 2: 23, Year 3: 24, Year 4: 17. Total: 113.

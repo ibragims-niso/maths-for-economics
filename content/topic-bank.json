@@ -70,6 +70,14 @@
     "economicUse": "Inverse demand, cost of output through inputs"
   },
   {
+    "id": "F11",
+    "title": "Linear macro models and multipliers",
+    "coreYear": 1,
+    "prerequisites": ["F05", "F08"],
+    "economicUse": "Keynesian cross, fiscal and money multipliers",
+    "addedFor": "az-050405"
+  },
+  {
     "id": "FM01",
     "title": "Simple and compound interest",
     "coreYear": 1,
@@ -231,6 +239,22 @@
     "economicUse": "Value of perpetual streams"
   },
   {
+    "id": "C117",
+    "title": "Infinite series and power series",
+    "coreYear": 1,
+    "prerequisites": ["F08", "C111"],
+    "economicUse": "Approximations, present value of infinite streams",
+    "addedFor": "az-050405"
+  },
+  {
+    "id": "C118",
+    "title": "Geometric applications of integrals; line integrals",
+    "coreYear": 1,
+    "prerequisites": ["C113"],
+    "economicUse": "Arc length, volumes; required by national syllabi, limited economic use",
+    "addedFor": "az-050405"
+  },
+  {
     "id": "LA101",
     "title": "Vectors and vector operations",
     "coreYear": 1,
@@ -281,7 +305,7 @@
   },
   {
     "id": "ST102",
-    "title": "Probability and counting",
+    "title": "Probability and counting (classical, geometric and conditional probability)",
     "coreYear": 1,
     "prerequisites": ["F09"],
     "economicUse": "Risk and uncertainty"
@@ -308,6 +332,22 @@
     "economicUse": "Returns, measurement errors"
   },
   {
+    "id": "ST106",
+    "title": "Index numbers",
+    "coreYear": 1,
+    "prerequisites": ["ST101"],
+    "economicUse": "Consumer price index, Laspeyres and Paasche indices, real wages",
+    "addedFor": "az-050405"
+  },
+  {
+    "id": "ST107",
+    "title": "Time-series indicators: growth rates and averages",
+    "coreYear": 1,
+    "prerequisites": ["ST106", "F07"],
+    "economicUse": "GDP growth, chain and base indices, average growth rate",
+    "addedFor": "az-050405"
+  },
+  {
     "id": "MV01",
     "title": "Functions of several variables and level curves",
     "coreYear": 2,
@@ -316,7 +356,7 @@
   },
   {
     "id": "MV02",
-    "title": "Partial derivatives",
+    "title": "Partial and directional derivatives",
     "coreYear": 2,
     "prerequisites": ["MV01", "C103"],
     "economicUse": "Marginal products and marginal utilities"
@@ -400,7 +440,7 @@
   },
   {
     "id": "LA201",
-    "title": "Linear independence, rank and spanning",
+    "title": "Linear spaces: independence, basis, rank, change of basis",
     "coreYear": 2,
     "prerequisites": ["LA105"],
     "economicUse": "Identification, redundant equations"
@@ -462,6 +502,14 @@
     "economicUse": "Estimating demand"
   },
   {
+    "id": "ST206",
+    "title": "Chebyshev's inequality and the law of large numbers",
+    "coreYear": 2,
+    "prerequisites": ["ST103"],
+    "economicUse": "Insurance pooling, why averages stabilise",
+    "addedFor": "az-050405"
+  },
+  {
     "id": "OP01",
     "title": "Inequality constraints and Kuhn–Tucker conditions",
     "coreYear": 3,
@@ -488,6 +536,30 @@
     "coreYear": 3,
     "prerequisites": ["MV12", "MV05"],
     "economicUse": "Effect of prices and income on choices"
+  },
+  {
+    "id": "OP05",
+    "title": "The transportation problem",
+    "coreYear": 3,
+    "prerequisites": ["OP02"],
+    "economicUse": "Minimising logistics costs",
+    "addedFor": "az-050405"
+  },
+  {
+    "id": "OP06",
+    "title": "Integer, fractional-linear and parametric programming",
+    "coreYear": 3,
+    "prerequisites": ["OP02"],
+    "economicUse": "Choosing investment projects, scheduling",
+    "addedFor": "az-050405"
+  },
+  {
+    "id": "OP07",
+    "title": "Graphs and network planning: the critical path method",
+    "coreYear": 3,
+    "prerequisites": ["F09"],
+    "economicUse": "Project scheduling and deadlines",
+    "addedFor": "az-050405"
   },
   {
     "id": "DY01",
@@ -602,6 +674,14 @@
     "economicUse": "Cartels and cooperation"
   },
   {
+    "id": "GT05",
+    "title": "Zero-sum matrix games and linear programming",
+    "coreYear": 3,
+    "prerequisites": ["GT02", "OP03"],
+    "economicUse": "Competitive strategy under conflict",
+    "addedFor": "az-050405"
+  },
+  {
     "id": "AN01",
     "title": "Logic and proof techniques",
     "coreYear": 4,
@@ -691,6 +771,14 @@
     "coreYear": 4,
     "prerequisites": ["SP03", "FM03"],
     "economicUse": "Derivatives pricing"
+  },
+  {
+    "id": "SP05",
+    "title": "Queueing systems",
+    "coreYear": 4,
+    "prerequisites": ["ST104"],
+    "economicUse": "Bank branches, call centres, service capacity planning",
+    "addedFor": "az-050405"
   },
   {
     "id": "NM01",

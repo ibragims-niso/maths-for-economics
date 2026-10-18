@@ -3,7 +3,7 @@
 ## What this is
 A free, open-source, offline-first app (PWA first, Expo native app later) that teaches the mathematics used in university economics degrees, from first year to final year. App language: English only.
 
-Curriculum model: one shared **topic bank** + **university tracks** (Core, LSE, Cambridge, MIT) + **custom tracks** that a user imports privately.
+Curriculum model: one shared **topic bank** + **university tracks** (Core, Azerbaijan national 050405, LSE, Cambridge, MIT) + **custom tracks** that a user imports privately.
 
 Primary user: a first-year economics student. Secondary users: any economics student, plus parents/tutors who follow a student's progress (opt-in mentor link).
 
@@ -60,8 +60,8 @@ local/               gitignored: private custom tracks, syllabus scans, scratch 
 2. `docs/02-architecture.md` — technical design, data model, offline, sync, security
 3. `docs/03-ai-design.md` — AI modes, guardrails, prompts, limits, caching, own-key mode
 4. `docs/04-content-model.md` — topic file format, generators, mistake codes, resources, content workflow
-5. `docs/05-topic-bank.md` — the 102 topics with IDs and prerequisites
-6. `docs/06-tracks.md` — track format, Core/LSE/Cambridge/MIT draft mappings, custom tracks
+5. `docs/05-topic-bank.md` — the 113 topics with IDs and prerequisites
+6. `docs/06-tracks.md` — track format, Core/Azerbaijan/LSE/Cambridge/MIT draft mappings, custom tracks
 7. `docs/07-ux-design.md` — screens, design tokens, interaction rules
 8. `docs/08-roadmap.md` — phases, scope and acceptance criteria
 9. `docs/09-open-source.md` — licences, GitHub setup, CI, contribution flow

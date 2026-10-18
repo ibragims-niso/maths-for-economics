@@ -16,8 +16,10 @@ import {
   type Issue,
   type TopicBankEntry,
   topicBankSchema,
+  trackMentions,
   trackSchema,
   trackTopicOrder,
+  warning,
   zodIssues,
 } from '@mfe/core';
 import { printReport, readJson, readText, rel, repoRoot } from './lib/report';
@@ -75,12 +77,12 @@ for (const name of readdirSync(tracksDir).filter((f) => f.endsWith('.track.json'
       error(rel(path), 'Tracks in content/tracks must be public; keep custom ones in local/'),
     );
   }
-  if (track.id === 'core') {
-    const listed = new Set(trackTopicOrder(track));
-    const missing = bank.filter((t) => !listed.has(t.id)).map((t) => t.id);
-    if (missing.length > 0) {
-      issues.push(error(rel(path), `Core track is missing topics: ${missing.join(', ')}`));
-    }
+  // Public tracks place every bank topic somewhere, so no topic is unreachable from a track.
+  const mentioned = track.id === 'core' ? new Set(trackTopicOrder(track)) : trackMentions(track);
+  const missing = bank.filter((t) => !mentioned.has(t.id)).map((t) => t.id);
+  if (missing.length > 0) {
+    const report = track.id === 'core' ? error : warning;
+    issues.push(report(rel(path), `Track is missing topics: ${missing.join(', ')}`));
   }
   checks.push({ label: `Track ${track.id}: ${trackTopicOrder(track).length} topics`, issues });
 }

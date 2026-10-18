@@ -6,7 +6,7 @@ A free, open-source, offline-first app that teaches the mathematics of an econom
 - Unlimited practice with answers computed and checked by code
 - Timed self-tests with explanations of your mistakes
 - An AI tutor that explains, but does not do your homework
-- Follows your programme: Core, or tracks modeled on LSE, Cambridge and MIT, or your own imported track
+- Follows your programme: Core, the Azerbaijan national programme (050405 Economics), tracks modeled on LSE, Cambridge and MIT, or your own imported track
 - Progress you can share with a parent or tutor, if you choose
 
 Status: in development (Phase 0, setup). See [docs/08-roadmap.md](docs/08-roadmap.md).

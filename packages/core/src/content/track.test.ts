@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { type TopicBankEntry, type Track, trackSchema } from './schemas';
-import { checkTrack, trackTopicOrder } from './track';
+import { checkTrack, trackMentions, trackTopicOrder } from './track';
 
 const bank: TopicBankEntry[] = [
   { id: 'F01', title: 'A', coreYear: 1, prerequisites: [], economicUse: 'x' },
@@ -54,5 +54,48 @@ describe('trackSchema', () => {
       track(['F01'], { status: 'verified', verifiedAt: '2026-10-18' }),
     );
     expect(result.success).toBe(true);
+  });
+});
+
+describe('courses with sections and supporting topics', () => {
+  const sectioned = track([], {
+    years: [
+      {
+        year: 1,
+        label: 'Year 1',
+        courses: [
+          {
+            code: 'İF-04',
+            name: 'Linear algebra and analysis',
+            semester: 'autumn',
+            credits: 8,
+            sections: [
+              { title: 'First', topics: ['F01', 'F02'] },
+              { title: 'Again', topics: ['F02'] },
+            ],
+            supporting: ['F09'],
+          },
+        ],
+      },
+    ],
+  });
+
+  it('counts section topics once and keeps supporting topics apart', () => {
+    expect(trackTopicOrder(sectioned)).toEqual(['F01', 'F02']);
+    expect([...trackMentions(sectioned)]).toEqual(['F01', 'F02', 'F09']);
+  });
+
+  it('allows a topic in several sections but still checks every ID', () => {
+    expect(checkTrack(sectioned, bank, 't')).toEqual([
+      { level: 'error', where: 't', message: 'year 1, İF-04, supporting: unknown topic ID F09' },
+    ]);
+  });
+
+  it('needs topics or sections', () => {
+    const empty = track([], {
+      years: [{ year: 1, label: 'Y', courses: [{ code: null, name: 'C', semester: null }] }],
+    });
+    expect(trackSchema.safeParse(empty).success).toBe(false);
+    expect(trackSchema.safeParse(sectioned).success).toBe(true);
   });
 });
