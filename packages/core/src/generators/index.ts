@@ -1,4 +1,7 @@
 import type { Generator } from '../engine/types';
+import { continuousTariffParameter } from './C101/continuous-tariff-parameter';
+import { limitByCancelling } from './C101/limit-by-cancelling';
+import { longRunCostRatio } from './C101/long-run-cost-ratio';
 import { elasticityLinearPoint } from './C107/elasticity-linear-point';
 import { elasticityUnitElasticPrice } from './C107/elasticity-unit-elastic-price';
 import { minAverageCost } from './C109/min-average-cost';
@@ -94,6 +97,9 @@ export const GENERATORS = [
   annuityPresentValue,
   growingPerpetuityValue,
   savingPlanPayment,
+  limitByCancelling,
+  longRunCostRatio,
+  continuousTariffParameter,
   elasticityLinearPoint,
   elasticityUnitElasticPrice,
   profitMaxLinearDemand,

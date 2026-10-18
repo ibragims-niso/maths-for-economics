@@ -16,6 +16,7 @@ import { RevenueProfit } from './RevenueProfit';
 import { SimpleVsCompound } from './SimpleVsCompound';
 import { SpendingRounds } from './SpendingRounds';
 import { SurveyVenn } from './SurveyVenn';
+import { TariffContinuity } from './TariffContinuity';
 import { TaxBandExplorer } from './TaxBandExplorer';
 
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
@@ -37,5 +38,6 @@ export const WIDGETS: Record<string, ComponentType> = {
   'simple-vs-compound': SimpleVsCompound,
   'spending-rounds': SpendingRounds,
   'survey-venn': SurveyVenn,
+  'tariff-continuity': TariffContinuity,
   'tax-band-explorer': TaxBandExplorer,
 };

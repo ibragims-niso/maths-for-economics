@@ -62,3 +62,8 @@ dot product: The number p·x = p₁x₁ + … + pₙxₙ obtained by multiplying
 norm: The length of a vector, ‖x‖ = √(x₁² + … + xₙ²); the norm of x − y is the distance between x and y.
 orthogonal: Two vectors are orthogonal (at a right angle) when their dot product is zero.
 consumption bundle: A vector listing how many units of each good a consumer buys.
+limit: The value a function's output gets closer and closer to as its input approaches a given number or grows without bound.
+one-sided limit: The value a function approaches when its input comes towards a point from one side only, from below (left) or from above (right).
+continuous function: A function whose graph has no holes, jumps or breaks at a point, so that its value there equals its limit there.
+jump discontinuity: A point where the limits from the left and from the right both exist but are different, so the graph jumps.
+asymptote: A line that a graph gets ever closer to without reaching it, for example average cost approaching marginal cost as output grows.
