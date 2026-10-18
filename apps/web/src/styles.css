@@ -6,6 +6,8 @@
   --supply: #0f766e;
   --demand: #b4235a;
   --equilibrium: #d9a400;
+  /* Darker equilibrium for thin lines and rings on paper (3:1 or more), see decision D24. */
+  --equilibrium-ink: #9a7300;
   --ink-muted: color-mix(in srgb, var(--ink) 75%, var(--paper));
 
   --font-reading: "Literata", Georgia, serif;
@@ -24,6 +26,7 @@
     --supply: #2db3a6;
     --demand: #e0668f;
     --equilibrium: #f0c239;
+    --equilibrium-ink: #f0c239;
     color-scheme: dark;
   }
 }
@@ -35,6 +38,7 @@
   --supply: #2db3a6;
   --demand: #e0668f;
   --equilibrium: #f0c239;
+  --equilibrium-ink: #f0c239;
   color-scheme: dark;
 }
 
@@ -171,26 +175,35 @@ h2 {
 
 .status {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 8px;
-  color: var(--ink-muted);
-  font-size: 13px;
+  color: var(--ink);
+  font-size: 15px;
 }
 
 .card .status {
   margin: 12px 0 0;
 }
 
-.dot {
+/* Shape and colour both carry the state: filled = works offline, ring = still saving. */
+.status-dot {
   flex: none;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--grid);
+  transform: translateY(1px);
 }
 
-.dot-ready {
+.status-dot--ok {
   background: var(--supply);
+}
+
+.status-dot--pending {
+  border: 2px solid var(--equilibrium-ink);
+}
+
+.status-dot--problem {
+  background: var(--demand);
 }
 
 footer {
