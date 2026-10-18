@@ -4,7 +4,7 @@
   "visibility": "public",
   "status": "draft-unverified",
   "verifiedAt": null,
-  "disclaimer": "Unofficial. Based on the public national education programme for 050405 Economics and published university syllabi. Semester placement varies by university.",
+  "disclaimer": "Unofficial. Based on the public national education programme for 050405 Economics and published university syllabi. Years follow one university's published plan; your university may place a course a semester earlier or later.",
   "sources": [
     {
       "title": "Baku Business University, 050405 Economics education programme (based on the Ministry programme approved 09.07.2020, F-393)",
@@ -13,7 +13,8 @@
     },
     {
       "title": "Azerbaijan University, Economics (English) study schedule",
-      "url": "https://www.au.edu.az/userfiles/uploads/c6e489e5ff8792dd5bc7af39d4510348.pdf"
+      "url": "https://www.au.edu.az/userfiles/uploads/c6e489e5ff8792dd5bc7af39d4510348.pdf",
+      "note": "Years and semesters of the maths courses (its preparatory language year left out)"
     }
   ],
   "years": [
@@ -68,18 +69,12 @@
             }
           ],
           "supporting": ["F01", "F02", "F04", "F05", "F06", "F09"]
-        }
-      ]
-    },
-    {
-      "year": 2,
-      "label": "Year 1–2 (varies)",
-      "courses": [
+        },
         {
           "code": null,
           "name": "Probability Theory and Mathematical Statistics",
           "credits": 8,
-          "semester": "varies",
+          "semester": "spring",
           "sections": [
             {
               "title": "Combinatorics, random events, definitions of probability",
@@ -110,12 +105,18 @@
               "topics": ["ST203", "ST204"]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "label": "Year 2",
+      "courses": [
         {
           "code": null,
           "name": "Statistics",
           "credits": 10,
-          "semester": "varies",
+          "semester": null,
           "sections": [
             {
               "title": "Observation, grouping, variation series, averages and dispersion",
@@ -143,13 +144,13 @@
     },
     {
       "year": 3,
-      "label": "Year 2–3 (varies)",
+      "label": "Year 3",
       "courses": [
         {
           "code": null,
           "name": "Econometrics, part 1: optimisation methods",
           "credits": 5,
-          "semester": "varies",
+          "semester": "autumn",
           "sections": [
             {
               "title": "Linear programming: graphical and simplex methods",
@@ -177,7 +178,7 @@
           "code": null,
           "name": "Econometrics, part 2: econometric and economic models",
           "credits": 5,
-          "semester": "varies",
+          "semester": "spring",
           "sections": [
             {
               "title": "Covariance, correlation, paired regression",
@@ -209,11 +210,11 @@
     },
     {
       "year": 4,
-      "label": "Beyond the national programme",
+      "label": "Year 4",
       "courses": [
         {
           "code": null,
-          "name": "For finance electives, master's study and depth",
+          "name": "Electives and further study (no compulsory maths course in year 4)",
           "semester": null,
           "topics": [
             "FM01",

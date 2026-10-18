@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import { Link } from 'react-router';
 import { useAppOfflineStatus } from './AppShell';
 import { InstallHint } from './InstallHint';
+import { ChevronIcon } from './icons';
 import { Segmented } from './Segmented';
 import { useProgress } from './storage';
 import { bankTopic, READY, STATUS_LABEL } from './topics';
@@ -156,17 +157,21 @@ export function HomePage() {
         </div>
         {track.id !== 'core' && <p className="sheet-track">{track.name}</p>}
         <div id="year-topics" role="tabpanel" aria-labelledby={`year-tab-${year}`}>
-          {groups.map((g, i) => (
+          {groups.map((g) => (
             <Fragment key={g.key}>
               {g.course && <p className="course-heading">{g.course}</p>}
-              <section className="group" aria-labelledby={`group-${year}-${i}`}>
-                <div className="group-head">
+              {/* Closed by default; a tap opens the group's topics (owner's request). */}
+              <details className="group">
+                <summary className="group-head">
                   <img className="group-icon" src={g.icon} alt="" width="46" height="46" />
-                  <h3 id={`group-${year}-${i}`}>{g.name}</h3>
+                  <h3>{g.name}</h3>
                   <span className="group-count">
                     {g.background ? 'not counted' : g.topicIds.length}
                   </span>
-                </div>
+                  <span className="group-chevron" aria-hidden="true">
+                    <ChevronIcon />
+                  </span>
+                </summary>
                 <ul className="rows">
                   {g.topicIds.map((id) => (
                     <li key={id}>
@@ -174,7 +179,7 @@ export function HomePage() {
                     </li>
                   ))}
                 </ul>
-              </section>
+              </details>
             </Fragment>
           ))}
         </div>

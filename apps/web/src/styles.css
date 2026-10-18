@@ -445,6 +445,33 @@ a:hover {
   gap: 14px;
 }
 
+/* Groups open and close (owner's request): the whole head is the switch. */
+summary.group-head {
+  min-height: 54px;
+  list-style: none;
+  cursor: pointer;
+  border-radius: var(--radius-control);
+}
+
+summary.group-head::-webkit-details-marker {
+  display: none;
+}
+
+.group-chevron {
+  display: grid;
+  place-items: center;
+  color: var(--night-muted);
+  transition: rotate 200ms var(--ease-out);
+}
+
+.group[open] .group-chevron {
+  rotate: 90deg;
+}
+
+.group[open] > .rows {
+  margin-top: 4px;
+}
+
 .group-head h3 {
   flex: 1;
   font-size: var(--text-ui);

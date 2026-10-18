@@ -49,6 +49,8 @@ How the national system is organised:
 - Detailed learning outcomes and syllabi are set by each university's academic staff, and the programme requires syllabi to be public.
 - Semester placement differs between universities.
 
+Years in the app follow Azerbaijan University's published study plan, with its preparatory language year left out (decision D35): year 1 İF-04 (autumn) and İF-05 (spring); year 2 İF-07; year 3 İF-08 parts 1 (autumn) and 2 (spring). Year 4 has no compulsory maths course, so it holds electives and further study. The disclaimer says a university may shift a course by a semester.
+
 Compulsory mathematical subjects and draft headings:
 | Code | Course (credits) | Headings and topics |
 |---|---|---|
