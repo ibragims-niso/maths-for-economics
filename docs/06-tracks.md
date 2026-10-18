@@ -65,6 +65,15 @@ The national syllabus places some topics before their bank prerequisites (for ex
 
 Verification (Phase 2): compare with syllabi of at least three universities (for example UNEC, BBU, Azerbaijan University), confirm headings and typical semesters, then set `status: verified`.
 
+Verification so far (2026-10-19):
+| University | Source | İF-04 | İF-05 | İF-07 | İF-08 |
+|---|---|---|---|---|---|
+| Azerbaijan University (English programme; its language year left out) | study schedule PDF (track sources) | year 1 autumn | year 1 spring | year 2 | year 3 |
+| Nakhchivan State University | 2020 study plan PDF (track sources) | year 1 autumn | year 2 autumn | year 2 spring | year 3 autumn |
+| Azerbaijan State Agrarian University | 2024/25 self-assessment report: confirms the four courses and names, no semesters for them | — | — | — | — |
+
+Two plans agree on İF-04 (year 1), İF-07 (year 2) and İF-08 (year 3); İF-05 is year 1 or 2. Still needed: one more university's semester plan (UNEC, BBU's own plan, or another), then the track can be marked `verified`.
+
 Note: the national track covers the owner's private BBU track almost entirely; the private track then only needs BBU's own semester plan (`local/tracks/bbu.track.json`: a copy of `az-050405` with each course's `semester` set; never committed).
 
 ### LSE (3-year UK model)
