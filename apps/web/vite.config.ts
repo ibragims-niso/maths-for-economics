@@ -3,6 +3,10 @@ import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  define: {
+    // Shown in About, so the owner can tell which version a phone is running.
+    __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)),
+  },
   server: {
     // `npm run dev:proxy` runs the API locally on 8790; the app calls it on its own origin.
     proxy: { '/api': 'http://localhost:8790' },

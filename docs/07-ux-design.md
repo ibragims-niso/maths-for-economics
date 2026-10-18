@@ -31,7 +31,9 @@ Motion: only in response to actions (sheet opens, answer checked, slider moves t
 Accessibility: WCAG AA contrast, visible focus, all graph information also given as text (e.g. "Equilibrium at P = 25, Q = 50"), tap targets ≥ 44 px.
 
 ## Navigation
-Bottom bar with four tabs: Learn, Practice, Progress, Settings.
+Bottom bar with four tabs: Learn, Practice, Progress, Settings (from Phase 1, when those sections exist).
+
+A Menu button at the top right opens a drawer from the right for secondary destinations: Home, About, Source code, Report a problem (decision D28). About holds what the app is, its status, licences, font credits and the build date.
 
 ## Screens
 **Learn (home)**
