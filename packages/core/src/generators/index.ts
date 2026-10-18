@@ -9,6 +9,9 @@ import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
 import { breakEvenMaxFixedCost } from './F02/break-even-max-fixed-cost';
 import { budgetMaxWholeUnits } from './F02/budget-max-whole-units';
 import { quadraticBreakEven } from './F02/quadratic-break-even';
+import { costFunctionChange } from './F03/cost-function-change';
+import { demandDomainMaxPrice } from './F03/demand-domain-max-price';
+import { incomeTaxBands } from './F03/income-tax-bands';
 import { linearBreakEven } from './F04/linear-break-even';
 import { linearDemandTwoPoints } from './F04/linear-demand-two-points';
 import { equilibriumPrice } from './F05/equilibrium-price';
@@ -25,6 +28,9 @@ export const GENERATORS = [
   budgetMaxWholeUnits,
   quadraticBreakEven,
   breakEvenMaxFixedCost,
+  costFunctionChange,
+  demandDomainMaxPrice,
+  incomeTaxBands,
   linearBreakEven,
   linearDemandTwoPoints,
   equilibriumPrice,

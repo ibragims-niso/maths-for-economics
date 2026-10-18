@@ -14,3 +14,8 @@ break-even point: The output at which revenue equals total cost, so profit is ze
 budget constraint: The condition that spending on all goods cannot exceed the budget, for example p_x·x + p_y·y ≤ M.
 discriminant: For ax² + bx + c = 0, the number b² − 4ac; positive means two solutions, zero means one, negative means none.
 quadratic formula: The solutions of ax² + bx + c = 0, x = (−b ± √(b² − 4ac))/(2a).
+domain: The set of inputs for which a function is defined; in economics it is often limited further to non-negative prices and quantities.
+range: The set of output values a function takes over its domain.
+piecewise function: A function that uses different formulas on different intervals of its input, such as an income tax with bands.
+fixed cost: The part of total cost that does not change with output, equal to the cost of producing nothing, C(0).
+marginal tax rate: The tax rate paid on the next unit of income; in a banded tax it is the rate of the band the income falls in.
