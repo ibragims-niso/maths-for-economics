@@ -66,6 +66,9 @@ import { solowSteadyStateCapital } from './DY03/solow-steady-state-capital';
 import { dampedCyclePeriod } from './DY04/damped-cycle-period';
 import { secondOrderOdeValueAtTime } from './DY04/second-order-ode-value-at-time';
 import { secondOrderSteadyOrRoot } from './DY04/second-order-steady-or-root';
+import { saddlePathInitialJump } from './DY05/saddle-path-initial-jump';
+import { stabilityThresholdTraceDeterminant } from './DY05/stability-threshold-trace-determinant';
+import { twoMarketSteadyStatePrice } from './DY05/two-market-steady-state-price';
 import { adjustedRSquared } from './EM01/adjusted-r-squared';
 import { olsCoefficientTwoRegressors } from './EM01/ols-coefficient-two-regressors';
 import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
@@ -517,6 +520,9 @@ export const GENERATORS = [
   secondOrderSteadyOrRoot,
   secondOrderOdeValueAtTime,
   dampedCyclePeriod,
+  twoMarketSteadyStatePrice,
+  stabilityThresholdTraceDeterminant,
+  saddlePathInitialJump,
   xtxEntryFromData,
   olsCoefficientTwoRegressors,
   adjustedRSquared,

@@ -412,3 +412,8 @@ damped oscillation: A path that swings above and below its steady state with swi
 overdamped: Describes a path with so much damping that it returns to its steady state without cycling, because the characteristic equation has two distinct negative real roots.
 critical damping: The boundary case a₁² = 4a₂ with one repeated root, where a path returns to its steady state as fast as it can without overshooting.
 period of a cycle: The time one full cycle takes, from one peak to the next; for complex roots h ± ki it is 2π/k.
+phase diagram: A picture of a dynamic system in which each point is a state of the economy and arrows show which way it moves, so paths, steady states and their stability can be read off.
+nullcline: A curve on which one variable of a system is momentarily at rest (ẋ = 0 or ẏ = 0); steady states are where two nullclines of different variables cross.
+saddle path: The single path that leads to a saddle-point steady state; in economic models a forward-looking variable such as consumption or a share price jumps onto it so that the economy converges.
+focus: A steady state round which paths spiral because the eigenvalues are complex; it is stable when the real part is negative and unstable when it is positive.
+node: A steady state whose eigenvalues are real and of the same sign, so paths move straight into it (stable) or straight out of it (unstable) without circling.
