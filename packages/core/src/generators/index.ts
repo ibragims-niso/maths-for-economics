@@ -155,6 +155,10 @@ import { cpmTotalFloat } from './OP07/cpm-total-float';
 import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
 import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
 import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
+import { littlesLawQueue } from './SP05/littles-law-queue';
+import { mm1AtLeastNProbability } from './SP05/mm1-at-least-n-probability';
+import { mm1QueueMeasures } from './SP05/mm1-queue-measures';
+import { mm2StaffingCost } from './SP05/mm2-staffing-cost';
 import { groupedFrequencyMean } from './ST101/grouped-frequency-mean';
 import { meanOrMedianSmallData } from './ST101/mean-or-median-small-data';
 import { sampleStandardDeviation } from './ST101/sample-standard-deviation';
@@ -393,6 +397,10 @@ export const GENERATORS = [
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,
+  littlesLawQueue,
+  mm1QueueMeasures,
+  mm1AtLeastNProbability,
+  mm2StaffingCost,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));

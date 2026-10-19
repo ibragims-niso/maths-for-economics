@@ -293,3 +293,8 @@ normal equations: The equations XᵀX·b = Xᵀy that the least-squares coeffici
 perfect multicollinearity: A situation in which one regressor is an exact linear combination of the others, so XᵀX has no inverse and OLS cannot separate their effects.
 dummy variable trap: Including a dummy for every group together with an intercept; the dummies add up to the column of ones, causing perfect multicollinearity.
 adjusted R²: R² corrected for the number of coefficients, 1 − (1 − R²)(n − 1)/(n − k), which can fall when a useless regressor is added.
+Poisson process: Arrivals that occur one at a time, independently, at a steady average rate λ, so the number in any interval of length t is Poisson with mean λt.
+exponential distribution: The distribution of the waiting time between events of a Poisson process, with P(T > t) = e^(−λt) and mean 1/λ; it has no memory.
+utilisation: The share of time a server is busy, ρ = λ/(cμ); a queue settles down only if ρ < 1.
+Little's law: In any queue in a steady state, the average number inside equals the arrival rate times the average time each customer stays, L = λW.
+Erlang C formula: The probability that a customer arriving at an M/M/c queue has to wait because all c servers are busy.

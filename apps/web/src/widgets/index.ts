@@ -46,6 +46,7 @@ import { PartialEffectWages } from './PartialEffectWages';
 import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitHillTangent } from './ProfitHillTangent';
+import { QueueWaitingCurve } from './QueueWaitingCurve';
 import { RevenueProfit } from './RevenueProfit';
 import { RiemannSumMarginalCost } from './RiemannSumMarginalCost';
 import { SampleMeanClt } from './SampleMeanClt';
@@ -112,6 +113,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,
   'markov-labour-market': MarkovLabourMarket,
+  'mm1-waiting-curve': QueueWaitingCurve,
   'normal-area-explorer': NormalAreaExplorer,
   'partial-effect-wages': PartialEffectWages,
   'power-explorer': PowerExplorer,
