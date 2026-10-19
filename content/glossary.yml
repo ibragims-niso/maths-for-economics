@@ -352,3 +352,8 @@ internal rate of return: The discount rate at which a project's net present valu
 payback period: The number of years until a project's undiscounted cash flows add up to its initial cost.
 crossover rate: The discount rate at which two projects have the same net present value; on one side of it the NPV and IRR rankings conflict.
 opportunity cost of capital: The return the money could earn elsewhere at similar risk, used as the discount rate when appraising an investment.
+bond: A tradable loan in which the issuer promises fixed payments (coupons) and the repayment of the face value on a set maturity date.
+coupon: The fixed yearly payment on a bond, equal to the coupon rate times the face value.
+face value: The amount a bond repays at maturity, also called par value; bond prices are usually quoted per 100 of it.
+yield to maturity: The single discount rate at which the present value of a bond's remaining payments equals its price.
+current yield: A bond's yearly coupon divided by its current price; it ignores the gain or loss when the face value is repaid.

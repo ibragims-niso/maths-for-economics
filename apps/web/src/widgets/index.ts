@@ -6,6 +6,7 @@ import { Ar1ShockPath } from './Ar1ShockPath';
 import { AuditBestResponses } from './AuditBestResponses';
 import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
 import { BinomialPoissonBars } from './BinomialPoissonBars';
+import { BondPriceYield } from './BondPriceYield';
 import { BreakEvenLines } from './BreakEvenLines';
 import { BudgetVectors } from './BudgetVectors';
 import { CementShippingPlan } from './CementShippingPlan';
@@ -88,6 +89,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'audit-best-responses': AuditBestResponses,
   'bayes-natural-frequencies': BayesNaturalFrequencies,
   'binomial-poisson-bars': BinomialPoissonBars,
+  'bond-price-yield': BondPriceYield,
   'break-even-lines': BreakEvenLines,
   'budget-vectors': BudgetVectors,
   'cement-shipping-plan': CementShippingPlan,

@@ -120,6 +120,9 @@ import { loanScheduleRow } from './FM05/loan-schedule-row';
 import { mutuallyExclusiveBestNpv } from './FM06/mutually-exclusive-best-npv';
 import { projectNpvYearlyFlows } from './FM06/project-npv-yearly-flows';
 import { twoPeriodIrr } from './FM06/two-period-irr';
+import { bondPriceAnnualCoupon } from './FM07/bond-price-annual-coupon';
+import { bondPriceFallRateRise } from './FM07/bond-price-fall-rate-rise';
+import { zeroCouponBondYield } from './FM07/zero-coupon-bond-yield';
 import { bimatrixNashPayoff } from './GT01/bimatrix-nash-payoff';
 import { cournotDuopolyEquilibrium } from './GT01/cournot-duopoly-equilibrium';
 import { pureNashCount } from './GT01/pure-nash-count';
@@ -286,6 +289,9 @@ export const GENERATORS = [
   projectNpvYearlyFlows,
   twoPeriodIrr,
   mutuallyExclusiveBestNpv,
+  zeroCouponBondYield,
+  bondPriceAnnualCoupon,
+  bondPriceFallRateRise,
   limitByCancelling,
   longRunCostRatio,
   continuousTariffParameter,
