@@ -404,3 +404,7 @@ half-life: The time it takes for a gap that shrinks exponentially to fall to hal
 separable equation: A differential equation dy/dt = g(y)·h(t) that is solved by moving all y terms to one side and all t terms to the other and integrating both sides.
 logistic growth: Growth that is close to exponential at first and slows as the variable nears a ceiling M, following dN/dt = rN(1 − N/M) and giving an S-shaped curve.
 phase line: A line of possible values of a variable with arrows showing whether it rises or falls there; arrows pointing towards a rest point show that it is stable.
+second-order difference equation: A rule that gives each period's value from the two values before it, such as y(t+2) + a₁y(t+1) + a₂y(t) = b; it can produce cycles.
+accelerator: The idea that firms' investment depends on how fast demand or output is growing, so investment rises when sales are growing and falls when growth slows.
+multiplier–accelerator model: Samuelson's model in which consumption depends on last period's income and investment on the rise in consumption; depending on the two parameters, income settles smoothly, cycles or explodes after a shock.
+modulus: The size of a complex number h + ki, equal to √(h² + k²); for the complex roots of r² + a₁r + a₂ = 0 it is √a₂ and decides whether cycles shrink or grow.

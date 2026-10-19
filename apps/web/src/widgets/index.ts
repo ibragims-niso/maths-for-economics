@@ -55,6 +55,7 @@ import { LoanScheduleBars } from './LoanScheduleBars';
 import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
+import { MultiplierAccelerator } from './MultiplierAccelerator';
 import { NormalAreaExplorer } from './NormalAreaExplorer';
 import { NpvProfileTwoProjects } from './NpvProfileTwoProjects';
 import { OlsSlopeSampling } from './OlsSlopeSampling';
@@ -151,6 +152,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'marginal-revenue-lines': MarginalRevenueLines,
   'markov-labour-market': MarkovLabourMarket,
   'mm1-waiting-curve': QueueWaitingCurve,
+  'multiplier-accelerator': MultiplierAccelerator,
   'normal-area-explorer': NormalAreaExplorer,
   'npv-profile-two-projects': NpvProfileTwoProjects,
   'ols-slope-sampling': OlsSlopeSampling,
