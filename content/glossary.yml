@@ -259,3 +259,8 @@ weak duality: Any feasible value of the dual (minimisation) problem is at least 
 strong duality: When a linear programme has an optimal solution, its dual has one too and the two optimal values are equal.
 complementary slackness: At the optimum a resource with spare units has shadow price zero, and a product that is made earns exactly the value of the resources it uses.
 opportunity loss: In a linear programme, the value of the resources a product uses at the shadow prices minus its profit; a product with a positive opportunity loss is not made.
+Nash equilibrium: A choice of strategy for each player such that no player can gain by changing their own strategy while the others keep theirs.
+best response: The strategy that gives a player the highest payoff against a given strategy of the other player.
+dominant strategy: A strategy that gives a player a higher payoff than any other strategy, whatever the other players do.
+Pareto efficient: An outcome where no one can be made better off without making someone else worse off.
+Cournot duopoly: A market with two firms that choose their output quantities at the same time, each taking the rival's output as given.
