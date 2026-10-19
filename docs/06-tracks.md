@@ -77,39 +77,37 @@ Two plans agree on İF-04 (year 1), İF-07 (year 2) and İF-08 (year 3); İF-05 
 Note: the national track covers the owner's private BBU track almost entirely; the private track then only needs BBU's own semester plan (`local/tracks/bbu.track.json`: a copy of `az-050405` with each course's `semester` set; never committed).
 
 ### LSE (3-year UK model)
-Sources: LSE Calendar course guides (MA100, ST102, MA212, EC221 and optional MA courses).
-| Year | Course | Topics (draft) | Note |
+File: `content/tracks/lse.track.json` (draft). Checked against the 2026/27 programme regulations and course guides on 2026-10-19; links are in the track's `sources`.
+| Year | Course | Topics | Note |
 |---|---|---|---|
-| 1 | MA100 Mathematical Methods | F01–F10, C101–C116, LA101–LA105, MV01–MV09 | Course guide states: calculus of one and several variables, linear algebra. Check exact coverage of Lagrange (MV08–MV09). Alternative first-year course MA107 exists for some programmes; add as variant if needed |
-| 1 | ST102 Elementary Statistical Theory | ST101–ST105, ST201–ST204 | Verify depth |
-| 1 | Financial maths (not a separate LSE course) | FM01–FM07 | Mark as "supporting" |
-| 2 | MA212 Further Mathematical Methods | LA201–LA204, DY01–DY05, MV13 | Taken in more maths-heavy programmes; verify for BSc Economics |
-| 2 | EC221 Principles of Econometrics | ST205, EM01–EM04 | Verify |
-| 3 | Options (e.g. MA208 Optimisation Theory, MA209 Differential Equations, MA203 Real Analysis) | OP01–OP04, DY06, AN01–AN05 | Older regulations list these; verify current availability |
-| 3 | Advanced theory support | GT01–GT04, DO01–DO03, SP01–SP02, EM05–EM06 | Supporting maths for third-year economics courses |
+| 1 | MA100 Mathematical Methods (or MA108 Methods in Calculus and Linear Algebra) | C101–C116, LA101–LA105, LA201–LA203, MV01–MV09, DY01, DY03 | Course guide: matrices, rank, vector spaces, eigenvalues and diagonalisation, multivariable calculus, Lagrange, integration, differential and difference equations |
+| 1 | ST109 Elementary Statistical Theory I | ST101–ST105 | Compulsory; ST102 is no longer core for Economics |
+| 1 | EC1C1 Econometrics I | ST205 | OLS, standard errors, tests |
+| 1 | ST110 Elementary Statistical Theory II (option) | ST201–ST204 | Background (not counted) |
+| 2 | EC2C1 Econometrics II | EM01–EM05 | Replaces EC221: OLS, IV, maximum likelihood, asymptotics |
+| 3 | MA221 / MA222 Further Mathematical Methods (option) | LA204, MV13, DY02, DY04–DY06 | MA212 no longer runs |
+| 3 | MA208 / MA209 / MA203 (options) | OP01–OP04, AN01–AN05 | Background; need MA102 or MA103 first |
 
 ### Cambridge (3-year UK model, "Tripos")
-Sources: Statutes and Ordinances — Economics Tripos; Faculty of Economics paper descriptions.
+File: `content/tracks/cambridge.track.json` (draft). Paper numbers checked on 2026-10-19 from the course page and the Statutes and Ordinances; the Faculty's paper outlines refuse automated access, so topic lists stay unverified.
 | Year | Paper | Topics (draft) | Note |
 |---|---|---|---|
-| 1 (Part I) | Paper 3 Quantitative methods in economics | F01–F10, FM01–FM06, C101–C114, LA101–LA103, ST101–ST105, ST201–ST204 | Paper has mathematics and statistics sections |
-| 2 (Part IIA) | Paper 6 Mathematics for economists and statisticians | MV01–MV12, LA104–LA106, LA201–LA204, OP01, DY01–DY03 | Optional paper; verify current syllabus |
-| 2 (Part IIA) | Econometrics paper | ST205, EM01–EM04 | Verify paper number and name |
-| 3 (Part IIB) | Paper 5 Mathematical economics | AN01–AN05, OP02–OP04, GT01–GT04, DO01–DO04, DY04–DY06 | Verify current syllabus |
-| 3 (Part IIB) | Supporting | SP01–SP04, EM05–EM06, NM01–NM03 | Supporting |
+| 1 (Part I) | Paper 3 Quantitative Methods in Economics | F01–F10, FM01–FM06, C101–C114, LA101–LA103, ST101–ST105, ST201–ST204 | Compulsory |
+| 2 (Part IIA) | Paper 3 Theory and Practice of Econometrics I | ST205, EM01–EM04 | Compulsory |
+| 2 (Part IIA) | Paper 6 Mathematics and Statistics for Economists | MV01–MV12, LA104–LA106, LA201–LA204, OP01, DY01–DY03 | Optional paper; topic list to check |
+| 3 (Part IIB) | Paper 4 Economic Theory and Analysis | AN01–AN05, OP02–OP04, GT01–GT04, DO01–DO04, DY04–DY06 | Optional; Paper 5 "Mathematical Economics" was suspended in 2005 and its content moved here |
+| 3 (Part IIB) | Paper 10 Theory and Practice of Econometrics II | EM05–EM06 | Optional |
 
-### MIT (4-year US model)
-Sources: MIT OpenCourseWare course pages (all materials public).
-| Year | Course | Topics (draft) | Note |
+### MIT (4-year US model, Course 14-1)
+File: `content/tracks/mit.track.json` (draft). Checked against the Course 14 degree chart and OpenCourseWare pages on 2026-10-19.
+| Year | Course | Topics | Note |
 |---|---|---|---|
-| 1 | 18.01 Single Variable Calculus | F01–F10, C101–C116 | Add economic applications from our content |
-| 1 | Supporting: financial maths | FM01–FM07 | Supporting |
-| 2 | 18.02 Multivariable Calculus | MV01–MV09, MV13 | |
-| 2 | 18.06 Linear Algebra | LA101–LA106, LA201–LA204 | |
-| 2 | Probability and statistics (e.g. 18.05) | ST101–ST105, ST201–ST205 | Verify course code |
-| 3 | Econometrics course | EM01–EM06 | Verify course code |
-| 3 | Microeconomic theory support | MV10–MV12, OP01–OP04, GT01–GT04 | Supporting |
-| 4 | Advanced | DY01–DY06, AN01–AN05, DO01–DO04, SP01–SP04, NM01–NM03 | Supporting |
+| 1 | 18.01 Single Variable Calculus | F01–F10, C101–C116 | General Institute Requirement |
+| 1 | 18.02 Multivariable Calculus | MV01–MV09, MV13 | General Institute Requirement (year 1, not 2) |
+| 2 | 14.30 Introduction to Statistical Methods in Economics | ST101–ST105, ST201–ST204 | Required; 18.05 is not an accepted option for 14-1 |
+| 2 | 18.06 Linear Algebra | LA101–LA106, LA201–LA204 | Background: required only in 14-2 Mathematical Economics |
+| 3 | 14.32 Econometric Data Science | ST205, EM01–EM06 | Required, by the third year |
+| 3–4 | Theory support and advanced topics | MV10–MV12, OP01–OP04, GT01–GT04, DY, AN, DO, SP, NM | Background |
 
 ## Custom tracks (private)
 Any user can import a `.track.json` (Settings → My programme → Import). Custom tracks are stored only on the device and never uploaded.

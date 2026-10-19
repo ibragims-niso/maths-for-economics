@@ -5,7 +5,40 @@
   "status": "draft-unverified",
   "verifiedAt": null,
   "disclaimer": "Unofficial. Modeled on publicly available course information. Not affiliated with or endorsed by the university.",
-  "sources": [],
+  "sources": [
+    {
+      "title": "LSE BSc Economics programme regulations 2026/27",
+      "url": "https://www.lse.ac.uk/resources/calendar/programmeRegulations/undergraduate/2026/BScEconomics.htm"
+    },
+    {
+      "title": "MA100 Mathematical Methods, course guide 2026/27",
+      "url": "https://www.lse.ac.uk/resources/calendar/courseGuides/MA/2026_MA100.htm"
+    },
+    {
+      "title": "ST109 Elementary Statistical Theory I, course guide",
+      "url": "https://www.lse.ac.uk/resources/calendar/courseGuides/ST/2025_ST109.htm"
+    },
+    {
+      "title": "ST110 Elementary Statistical Theory II, course guide",
+      "url": "https://www.lse.ac.uk/resources/calendar/courseGuides/ST/2025_ST110.htm"
+    },
+    {
+      "title": "EC1C1 Econometrics I, course guide",
+      "url": "https://www.lse.ac.uk/resources/calendar/courseGuides/EC/2025_EC1C1.htm"
+    },
+    {
+      "title": "EC2C1 Econometrics II, course guide",
+      "url": "https://www.lse.ac.uk/resources/calendar/courseGuides/EC/2025_EC2C1.htm"
+    },
+    {
+      "title": "MA221 Further Mathematical Methods (Calculus), course guide",
+      "url": "https://www.lse.ac.uk/resources/calendar/courseGuides/MA/2025_MA221.htm"
+    },
+    {
+      "title": "MA222 Further Mathematical Methods (Linear Algebra), course guide",
+      "url": "https://www.lse.ac.uk/resources/calendar/courseGuides/MA/2025_MA222.htm"
+    }
+  ],
   "years": [
     {
       "year": 1,
@@ -13,19 +46,9 @@
       "courses": [
         {
           "code": "MA100",
-          "name": "Mathematical Methods",
+          "name": "Mathematical Methods (or MA108 Methods in Calculus and Linear Algebra)",
           "semester": null,
           "topics": [
-            "F01",
-            "F02",
-            "F03",
-            "F04",
-            "F05",
-            "F06",
-            "F07",
-            "F08",
-            "F09",
-            "F10",
             "C101",
             "C102",
             "C103",
@@ -47,6 +70,9 @@
             "LA103",
             "LA104",
             "LA105",
+            "LA201",
+            "LA202",
+            "LA203",
             "MV01",
             "MV02",
             "MV03",
@@ -55,30 +81,52 @@
             "MV06",
             "MV07",
             "MV08",
-            "MV09"
+            "MV09",
+            "DY01",
+            "DY03"
           ]
         },
         {
-          "code": "ST102",
-          "name": "Elementary Statistical Theory",
+          "code": "ST109",
+          "name": "Elementary Statistical Theory I",
           "semester": null,
-          "topics": [
-            "ST101",
-            "ST102",
-            "ST103",
-            "ST104",
-            "ST105",
-            "ST201",
-            "ST202",
-            "ST203",
-            "ST204"
-          ]
+          "topics": ["ST101", "ST102", "ST103", "ST104", "ST105"]
+        },
+        {
+          "code": "EC1C1",
+          "name": "Econometrics I",
+          "semester": null,
+          "topics": ["ST205"]
+        },
+        {
+          "code": "ST110",
+          "name": "Elementary Statistical Theory II (option)",
+          "semester": null,
+          "supporting": ["ST201", "ST202", "ST203", "ST204"]
         },
         {
           "code": null,
-          "name": "Financial mathematics (not a separate LSE course)",
+          "name": "Background: school algebra and financial mathematics",
           "semester": null,
-          "supporting": ["FM01", "FM02", "FM03", "FM04", "FM05", "FM06", "FM07"]
+          "supporting": [
+            "F01",
+            "F02",
+            "F03",
+            "F04",
+            "F05",
+            "F06",
+            "F07",
+            "F08",
+            "F09",
+            "F10",
+            "FM01",
+            "FM02",
+            "FM03",
+            "FM04",
+            "FM05",
+            "FM06",
+            "FM07"
+          ]
         }
       ]
     },
@@ -87,27 +135,10 @@
       "label": "Year 2",
       "courses": [
         {
-          "code": "MA212",
-          "name": "Further Mathematical Methods",
+          "code": "EC2C1",
+          "name": "Econometrics II",
           "semester": null,
-          "topics": [
-            "LA201",
-            "LA202",
-            "LA203",
-            "LA204",
-            "DY01",
-            "DY02",
-            "DY03",
-            "DY04",
-            "DY05",
-            "MV13"
-          ]
-        },
-        {
-          "code": "EC221",
-          "name": "Principles of Econometrics",
-          "semester": null,
-          "topics": ["ST205", "EM01", "EM02", "EM03", "EM04"]
+          "topics": ["EM01", "EM02", "EM03", "EM04", "EM05"]
         }
       ]
     },
@@ -116,28 +147,22 @@
       "label": "Year 3",
       "courses": [
         {
-          "code": null,
-          "name": "Options (for example MA208 Optimisation Theory, MA209 Differential Equations, MA203 Real Analysis)",
+          "code": "MA221 / MA222",
+          "name": "Further Mathematical Methods (option)",
           "semester": null,
-          "topics": ["OP01", "OP02", "OP03", "OP04", "DY06", "AN01", "AN02", "AN03", "AN04", "AN05"]
+          "topics": ["LA204", "MV13", "DY02", "DY04", "DY05", "DY06"]
+        },
+        {
+          "code": "MA208 / MA209 / MA203",
+          "name": "Optimisation Theory, Differential Equations, Real Analysis (options)",
+          "semester": null,
+          "supporting": ["OP01", "OP02", "OP03", "OP04", "AN01", "AN02", "AN03", "AN04", "AN05"]
         },
         {
           "code": null,
-          "name": "Advanced theory support",
+          "name": "Theory support for third-year economics",
           "semester": null,
-          "supporting": [
-            "GT01",
-            "GT02",
-            "GT03",
-            "GT04",
-            "DO01",
-            "DO02",
-            "DO03",
-            "SP01",
-            "SP02",
-            "EM05",
-            "EM06"
-          ]
+          "supporting": ["MV10", "MV11", "MV12", "GT01", "GT02", "GT03", "GT04", "EM06"]
         },
         {
           "code": null,
@@ -150,15 +175,17 @@
             "LA106",
             "ST106",
             "ST107",
-            "MV10",
-            "MV11",
-            "MV12",
             "ST206",
             "OP05",
             "OP06",
             "OP07",
             "GT05",
+            "DO01",
+            "DO02",
+            "DO03",
             "DO04",
+            "SP01",
+            "SP02",
             "SP03",
             "SP04",
             "SP05",

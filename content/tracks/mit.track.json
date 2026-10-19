@@ -1,11 +1,40 @@
 {
   "id": "mit",
-  "name": "Modeled on MIT Economics (Course 14)",
+  "name": "Modeled on MIT Economics (Course 14-1)",
   "visibility": "public",
   "status": "draft-unverified",
   "verifiedAt": null,
   "disclaimer": "Unofficial. Modeled on publicly available course information. Not affiliated with or endorsed by the university.",
-  "sources": [],
+  "sources": [
+    {
+      "title": "MIT Course 14 degree chart",
+      "url": "https://catalog.mit.edu/degree-charts/economics-course-14/"
+    },
+    {
+      "title": "MIT Economics, 14-1 major requirements",
+      "url": "https://economics.mit.edu/under/majors/14-1"
+    },
+    {
+      "title": "MIT OpenCourseWare 18.01SC Single Variable Calculus",
+      "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/"
+    },
+    {
+      "title": "MIT OpenCourseWare 18.02SC Multivariable Calculus",
+      "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/"
+    },
+    {
+      "title": "MIT OpenCourseWare 14.30 Introduction to Statistical Methods in Economics",
+      "url": "https://ocw.mit.edu/courses/14-30-introduction-to-statistical-methods-in-economics-spring-2009/"
+    },
+    {
+      "title": "MIT OpenCourseWare 14.32 Econometrics (2007)",
+      "url": "https://ocw.mit.edu/courses/14-32-econometrics-spring-2007/"
+    },
+    {
+      "title": "MIT OpenCourseWare 18.06SC Linear Algebra",
+      "url": "https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/"
+    }
+  ],
   "years": [
     {
       "year": 1,
@@ -45,6 +74,12 @@
           ]
         },
         {
+          "code": "18.02",
+          "name": "Multivariable Calculus",
+          "semester": null,
+          "topics": ["MV01", "MV02", "MV03", "MV04", "MV05", "MV06", "MV07", "MV08", "MV09", "MV13"]
+        },
+        {
           "code": null,
           "name": "Supporting: financial mathematics",
           "semester": null,
@@ -57,16 +92,26 @@
       "label": "Year 2",
       "courses": [
         {
-          "code": "18.02",
-          "name": "Multivariable Calculus",
+          "code": "14.30",
+          "name": "Introduction to Statistical Methods in Economics",
           "semester": null,
-          "topics": ["MV01", "MV02", "MV03", "MV04", "MV05", "MV06", "MV07", "MV08", "MV09", "MV13"]
+          "topics": [
+            "ST101",
+            "ST102",
+            "ST103",
+            "ST104",
+            "ST105",
+            "ST201",
+            "ST202",
+            "ST203",
+            "ST204"
+          ]
         },
         {
           "code": "18.06",
-          "name": "Linear Algebra",
+          "name": "Linear Algebra (optional for 14-1)",
           "semester": null,
-          "topics": [
+          "supporting": [
             "LA101",
             "LA102",
             "LA103",
@@ -78,23 +123,6 @@
             "LA203",
             "LA204"
           ]
-        },
-        {
-          "code": null,
-          "name": "Probability and statistics (for example 18.05)",
-          "semester": null,
-          "topics": [
-            "ST101",
-            "ST102",
-            "ST103",
-            "ST104",
-            "ST105",
-            "ST201",
-            "ST202",
-            "ST203",
-            "ST204",
-            "ST205"
-          ]
         }
       ]
     },
@@ -103,10 +131,10 @@
       "label": "Year 3",
       "courses": [
         {
-          "code": null,
-          "name": "Econometrics course",
+          "code": "14.32",
+          "name": "Econometric Data Science",
           "semester": null,
-          "topics": ["EM01", "EM02", "EM03", "EM04", "EM05", "EM06"]
+          "topics": ["ST205", "EM01", "EM02", "EM03", "EM04", "EM05", "EM06"]
         },
         {
           "code": null,
@@ -134,7 +162,7 @@
       "courses": [
         {
           "code": null,
-          "name": "Advanced",
+          "name": "Advanced (14-2 Mathematical Economics and electives)",
           "semester": null,
           "supporting": [
             "DY01",

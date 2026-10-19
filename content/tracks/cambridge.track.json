@@ -5,7 +5,16 @@
   "status": "draft-unverified",
   "verifiedAt": null,
   "disclaimer": "Unofficial. Modeled on publicly available course information. Not affiliated with or endorsed by the university.",
-  "sources": [],
+  "sources": [
+    {
+      "title": "University of Cambridge, Economics BA (course structure)",
+      "url": "https://www.undergraduate.study.cam.ac.uk/courses/economics-ba-hons"
+    },
+    {
+      "title": "Statutes and Ordinances, Economics Tripos (paper numbers; 2019 edition)",
+      "url": "https://www.admin.cam.ac.uk/univ/so/2019/chapter04-section10.html"
+    }
+  ],
   "years": [
     {
       "year": 1,
@@ -13,7 +22,7 @@
       "courses": [
         {
           "code": "Paper 3",
-          "name": "Quantitative methods in economics",
+          "name": "Quantitative Methods in Economics",
           "semester": null,
           "topics": [
             "F01",
@@ -67,8 +76,14 @@
       "label": "Year 2 (Part IIA)",
       "courses": [
         {
+          "code": "Paper 3",
+          "name": "Theory and Practice of Econometrics I",
+          "semester": null,
+          "topics": ["ST205", "EM01", "EM02", "EM03", "EM04"]
+        },
+        {
           "code": "Paper 6",
-          "name": "Mathematics for economists and statisticians",
+          "name": "Mathematics and Statistics for Economists (option)",
           "semester": null,
           "topics": [
             "MV01",
@@ -95,12 +110,6 @@
             "DY02",
             "DY03"
           ]
-        },
-        {
-          "code": null,
-          "name": "Econometrics paper",
-          "semester": null,
-          "topics": ["ST205", "EM01", "EM02", "EM03", "EM04"]
         }
       ]
     },
@@ -109,10 +118,10 @@
       "label": "Year 3 (Part IIB)",
       "courses": [
         {
-          "code": "Paper 5",
-          "name": "Mathematical economics",
+          "code": "Paper 4",
+          "name": "Economic Theory and Analysis (option)",
           "semester": null,
-          "topics": [
+          "supporting": [
             "AN01",
             "AN02",
             "AN03",
@@ -135,10 +144,10 @@
           ]
         },
         {
-          "code": null,
-          "name": "Supporting",
+          "code": "Paper 10",
+          "name": "Theory and Practice of Econometrics II (option)",
           "semester": null,
-          "supporting": ["SP01", "SP02", "SP03", "SP04", "EM05", "EM06", "NM01", "NM02", "NM03"]
+          "supporting": ["EM05", "EM06"]
         },
         {
           "code": null,
@@ -159,7 +168,14 @@
             "OP06",
             "OP07",
             "GT05",
-            "SP05"
+            "SP01",
+            "SP02",
+            "SP03",
+            "SP04",
+            "SP05",
+            "NM01",
+            "NM02",
+            "NM03"
           ]
         }
       ]
