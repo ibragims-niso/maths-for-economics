@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react';
 import { AnnuityExplorer } from './AnnuityExplorer';
 import { AntiderivativeFamily } from './AntiderivativeFamily';
+import { AuditBestResponses } from './AuditBestResponses';
 import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
 import { BinomialPoissonBars } from './BinomialPoissonBars';
 import { BreakEvenLines } from './BreakEvenLines';
@@ -65,6 +66,7 @@ import { WageOutlierDots } from './WageOutlierDots';
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
   'annuity-explorer': AnnuityExplorer,
+  'audit-best-responses': AuditBestResponses,
   'bayes-natural-frequencies': BayesNaturalFrequencies,
   'binomial-poisson-bars': BinomialPoissonBars,
   'break-even-lines': BreakEvenLines,

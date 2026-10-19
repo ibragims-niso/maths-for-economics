@@ -269,3 +269,7 @@ LP relaxation: The linear programme obtained by dropping the whole-number condit
 branch and bound: A method for integer programmes that splits the problem on a fractional variable (x ≤ k or x ≥ k + 1) and discards branches whose LP bound cannot beat the best whole plan found so far.
 price of integrality: The LP-relaxation optimum minus the best whole-number value; what indivisibility costs.
 fractional-linear programming: Maximising a ratio of two linear functions, such as profit per unit of cost, subject to linear constraints; the optimum is at a corner.
+mixed strategy: A plan in which a player chooses among their possible actions at random, with fixed probabilities.
+indifference principle: In a mixed-strategy equilibrium each player mixes so that the other player gets the same expected payoff from every action they use.
+best-response correspondence: For each strategy of the opponent, the set of a player's strategies that give the highest expected payoff; with mixed strategies it can be a whole interval.
+Nash's theorem: Every game with finitely many players and pure strategies has at least one Nash equilibrium, possibly in mixed strategies.

@@ -96,6 +96,9 @@ import { savingPlanPayment } from './FM04/saving-plan-payment';
 import { bimatrixNashPayoff } from './GT01/bimatrix-nash-payoff';
 import { cournotDuopolyEquilibrium } from './GT01/cournot-duopoly-equilibrium';
 import { pureNashCount } from './GT01/pure-nash-count';
+import { auditProbabilityIndifference } from './GT02/audit-probability-indifference';
+import { mixedEquilibriumExpectedPayoff } from './GT02/mixed-equilibrium-expected-payoff';
+import { mixedEquilibriumProbability } from './GT02/mixed-equilibrium-probability';
 import { bundleAngleCosine } from './LA101/bundle-angle-cosine';
 import { bundleCostDotProduct } from './LA101/bundle-cost-dot-product';
 import { bundleDistanceNorm } from './LA101/bundle-distance-norm';
@@ -360,6 +363,9 @@ export const GENERATORS = [
   bimatrixNashPayoff,
   pureNashCount,
   cournotDuopolyEquilibrium,
+  auditProbabilityIndifference,
+  mixedEquilibriumProbability,
+  mixedEquilibriumExpectedPayoff,
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,
