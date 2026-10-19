@@ -245,6 +245,9 @@ import { triangleRegionTotal } from './MV13/triangle-region-total';
 import { bisectionStepsForTolerance } from './NM01/bisection-steps-for-tolerance';
 import { newtonEquilibriumPriceIterates } from './NM01/newton-equilibrium-price-iterates';
 import { newtonIrrStep } from './NM01/newton-irr-step';
+import { gradientAscentStepTwoInputs } from './NM02/gradient-ascent-step-two-inputs';
+import { gradientDescentLargestStableStep } from './NM02/gradient-descent-largest-stable-step';
+import { newtonStepProfitCubicCost } from './NM02/newton-step-profit-cubic-cost';
 import { capacityMultiplierTwoProducts } from './OP01/capacity-multiplier-two-products';
 import { quasilinearDemandCorner } from './OP01/quasilinear-demand-corner';
 import { rationingQuotaOtherGood } from './OP01/rationing-quota-other-good';
@@ -641,6 +644,9 @@ export const GENERATORS = [
   bisectionStepsForTolerance,
   newtonEquilibriumPriceIterates,
   newtonIrrStep,
+  gradientAscentStepTwoInputs,
+  newtonStepProfitCubicCost,
+  gradientDescentLargestStableStep,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));

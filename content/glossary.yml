@@ -484,3 +484,6 @@ quadratic convergence: Convergence in which each error is roughly a constant tim
 stopping rule: A rule fixed in advance for when an iterative method stops, such as two successive estimates differing by less than a tolerance, together with a maximum number of steps.
 secant method: A root-finding method like Newton's that replaces the derivative by the slope of the line through the last two estimates.
 simple root: A root x* of f where f′(x*) ≠ 0, so the graph crosses the axis with a non-zero slope.
+gradient descent: An iterative method that minimises a function by repeatedly stepping from the current point in the direction opposite to the gradient, x − α∇f; gradient ascent steps along the gradient to maximise.
+step size: The number α that scales each gradient step; too small makes the search slow, and above 2/λmax (λmax the largest curvature) the iterates overshoot more each time and diverge.
+Newton's method (optimisation): An iterative method that jumps to the optimum of the local quadratic approximation, x − H⁻¹∇f (x − f′/f″ in one variable); it solves a quadratic in one step.

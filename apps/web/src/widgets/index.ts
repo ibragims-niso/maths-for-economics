@@ -42,6 +42,7 @@ import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { FixedPointStaircase } from './FixedPointStaircase';
 import { FleetIntegerPlan } from './FleetIntegerPlan';
 import { GeometricPartialSums } from './GeometricPartialSums';
+import { GradientDescentPath } from './GradientDescentPath';
 import { GradientLevelCurves } from './GradientLevelCurves';
 import { GrowingStreamPV } from './GrowingStreamPV';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
@@ -152,6 +153,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'fixed-point-staircase': FixedPointStaircase,
   'fleet-integer-plan': FleetIntegerPlan,
   'geometric-partial-sums': GeometricPartialSums,
+  'gradient-descent-path': GradientDescentPath,
   'gradient-level-curves': GradientLevelCurves,
   'growing-stream-present-value': GrowingStreamPV,
   'growth-rate-explorer': GrowthRateExplorer,
