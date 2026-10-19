@@ -461,3 +461,8 @@ Hamiltonian: In optimal control, the payoff now plus the change in the state val
 costate: The shadow price of the state variable at each date in an optimal control problem; the continuous-time counterpart of a Lagrange multiplier.
 Hotelling rule: For a non-renewable resource in a competitive market, the rent (price minus extraction cost) rises at the rate of interest.
 Keynes–Ramsey rule: Optimal consumption grows at (r − ρ)/σ, faster when the interest rate exceeds the rate of time preference and when people are more willing to shift consumption over time.
+expected utility: The probability-weighted average of the utilities of a gamble's possible outcomes, E[u(W)] = Σ pᵢ·u(Wᵢ), which a person maximises when choosing under risk.
+certainty equivalent: The sure amount of money a person values exactly as much as a gamble, found from u(CE) = E[u(W)].
+risk premium: The gap between a gamble's expected value and its certainty equivalent, E[W] − CE; what a person would give up on average to remove the risk.
+risk aversion: Preferring a sure amount to a gamble with the same expected value, which in expected utility means a concave utility of money.
+coefficient of absolute risk aversion: The Arrow–Pratt measure A(W) = −u″(W)/u′(W) of how strongly a person dislikes a risk of a given size in money.

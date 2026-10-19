@@ -36,6 +36,7 @@ import { EpsilonBand } from './EpsilonBand';
 import { EpsilonDeltaSquare } from './EpsilonDeltaSquare';
 import { EquilibriumTax } from './EquilibriumTax';
 import { EulerReturnsToScale } from './EulerReturnsToScale';
+import { ExpectedUtilityChord } from './ExpectedUtilityChord';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { FixedPointStaircase } from './FixedPointStaircase';
 import { FleetIntegerPlan } from './FleetIntegerPlan';
@@ -141,6 +142,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'epsilon-n-band': EpsilonBand,
   'equilibrium-tax': EquilibriumTax,
   'euler-returns-to-scale': EulerReturnsToScale,
+  'expected-utility-chord': ExpectedUtilityChord,
   'fixed-cost-break-even': FixedCostBreakEven,
   'fixed-point-staircase': FixedPointStaircase,
   'fleet-integer-plan': FleetIntegerPlan,

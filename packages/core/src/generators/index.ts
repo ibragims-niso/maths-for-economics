@@ -260,6 +260,9 @@ import { cpmTotalFloat } from './OP07/cpm-total-float';
 import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
 import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
 import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
+import { arrowPrattRiskPremium } from './SP02/arrow-pratt-risk-premium';
+import { insuranceMaximumPremium } from './SP02/insurance-maximum-premium';
+import { lotteryCertaintyEquivalent } from './SP02/lottery-certainty-equivalent';
 import { littlesLawQueue } from './SP05/littles-law-queue';
 import { mm1AtLeastNProbability } from './SP05/mm1-at-least-n-probability';
 import { mm1QueueMeasures } from './SP05/mm1-queue-measures';
@@ -607,6 +610,9 @@ export const GENERATORS = [
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,
+  lotteryCertaintyEquivalent,
+  insuranceMaximumPremium,
+  arrowPrattRiskPremium,
   littlesLawQueue,
   mm1QueueMeasures,
   mm1AtLeastNProbability,
