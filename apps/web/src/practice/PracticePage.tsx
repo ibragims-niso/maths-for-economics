@@ -21,9 +21,10 @@ type Phase =
 /** Practice: build a test, take it against the clock, then review every answer (docs/07). */
 export function PracticePage() {
   const [params] = useSearchParams();
-  const topic = params.get('topic');
+  // ?topic=C107 from a topic page, ?topics=C107,F04 from "Review now" (R7).
+  const topicIds = (params.get('topics') ?? params.get('topic') ?? '').split(',').filter(Boolean);
   const [settings, setSettings] = useState<TestSettings>({
-    topicIds: topic ? [topic] : [],
+    topicIds,
     difficulty: 'mixed',
     count: 5,
   });

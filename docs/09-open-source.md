@@ -15,7 +15,7 @@
 | Workflow | Trigger | Steps |
 |---|---|---|
 | `ci.yml` | push, pull request | install, lint, typecheck, unit + property tests, `validate:content`, build |
-| `links.yml` | weekly + manual | lychee on all resource URLs; opens/updates an issue listing broken links |
+| `links.yml` | weekly + manual | `npm run check:links` opens every resource and track source; a failed run flags broken links |
 Cloudflare Workers Builds deploys the app and its API, one Worker, from GitHub (root `wrangler.jsonc`).
 
 ## Contribution flow

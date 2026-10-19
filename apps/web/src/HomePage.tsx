@@ -1,4 +1,4 @@
-import { type MasteryState, masteryState } from '@mfe/core';
+import { dueForReview, type MasteryState, masteryState } from '@mfe/core';
 import { Fragment, useState } from 'react';
 import { Link } from 'react-router';
 import { useAppOfflineStatus } from './AppShell';
@@ -123,6 +123,8 @@ export function HomePage() {
   const topics = yearTopics(track, year);
   const groups = learnGroups(track, year);
   const progress = useProgress();
+  // Spaced repetition (R7): topics whose review date has passed.
+  const due = dueForReview([...(progress?.values() ?? [])], Date.now());
   const state = (id: string) => masteryState(progress?.get(id));
   const mastered = topics.filter((id) => state(id) === 'mastered').length;
   const yearOptions = track.years.map((y) => ({ value: y.year, label: `Year ${y.year}` }));
@@ -155,6 +157,21 @@ export function HomePage() {
       <section className="sheet" aria-labelledby="sheet-heading">
         <div className="sheet-handle" aria-hidden="true" />
         <PhoneStrip />
+        {due.length > 0 && (
+          <section className="review-strip" aria-label="Review">
+            <p>
+              <strong>{due.length}</strong> {due.length === 1 ? 'topic is' : 'topics are'} due for
+              review
+            </p>
+            <Link
+              to={`/practice?topics=${due.map((p) => p.topicId).join(',')}`}
+              className="button-small"
+              viewTransition
+            >
+              Review now
+            </Link>
+          </section>
+        )}
         <div className="sheet-head">
           <h2 id="sheet-heading">{trackYear?.label ?? `Year ${year}`}</h2>
           <span className="sheet-count">{topics.length} topics</span>

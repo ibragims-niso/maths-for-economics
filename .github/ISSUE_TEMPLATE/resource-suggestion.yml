@@ -1,0 +1,29 @@
+name: Suggest a resource
+description: A free, reliable page that helps with a topic (textbook chapter, course page, data).
+title: "Resource for "
+labels: [resource]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic ID
+      placeholder: FM01
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options: [textbook, course, article, data, video]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it helps

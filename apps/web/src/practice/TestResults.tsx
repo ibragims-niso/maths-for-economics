@@ -1,8 +1,8 @@
 import type { GradeResult } from '@mfe/core';
 import { useState } from 'react';
 import { AiButton } from '../ai/AiParts';
-import { topicById } from '../content';
-import { REPO_URL } from '../links';
+import { content, topicById } from '../content';
+import { contentErrorUrl } from '../links';
 import { MathBlock, MathText } from '../Maths';
 import { formatAnswer, formatDuration, type TestOutcome, type TestQuestion } from './test';
 
@@ -12,19 +12,14 @@ function mistakeFor(topicId: string, code: string | undefined) {
   return topicById(topicId)?.mistakeCodes[code];
 }
 
-function reportUrl(q: TestQuestion) {
-  const title = `Problem error in ${q.topicId}: ${q.title}`;
-  const body = [
-    `Topic: ${q.topicId}`,
-    `Template: ${q.problem.templateId}`,
-    `Seed: ${q.problem.seed}`,
-    `Parameters: ${JSON.stringify(q.problem.params)}`,
-    '',
-    'What is wrong:',
-    '',
-  ].join('\n');
-  return `${REPO_URL}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
-}
+const reportUrl = (q: TestQuestion) =>
+  contentErrorUrl({
+    title: `Error in ${q.topicId}: ${q.title}`,
+    topic: q.topicId,
+    version: content.version,
+    templateId: q.problem.templateId,
+    seed: q.problem.seed,
+  });
 
 function Review(props: { n: number; q: TestQuestion; answer: string; grade: GradeResult }) {
   const { n, q, answer, grade } = props;

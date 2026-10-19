@@ -1,0 +1,35 @@
+name: Error in a topic or question
+description: Something in a topic, worked example or practice question is wrong or unclear.
+title: "Error in "
+labels: [content]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you. The app fills in the details below when you use "Report" in it.
+  - type: input
+    id: topic
+    attributes:
+      label: Topic ID
+      placeholder: C107
+    validations:
+      required: true
+  - type: input
+    id: template_id
+    attributes:
+      label: Question template (practice questions only)
+      placeholder: elasticity-linear-point
+  - type: input
+    id: seed
+    attributes:
+      label: Seed (practice questions only)
+  - type: input
+    id: version
+    attributes:
+      label: Content version
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Quote the sentence or step, and say what you expected.
+    validations:
+      required: true

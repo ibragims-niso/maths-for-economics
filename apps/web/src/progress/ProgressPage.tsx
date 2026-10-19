@@ -107,7 +107,16 @@ export function ProgressPage() {
 
         {due.length > 0 && (
           <>
-            <h2>Due for review</h2>
+            <div className="sheet-head">
+              <h2>Due for review</h2>
+              <Link
+                to={`/practice?topics=${due.map((p) => p.topicId).join(',')}`}
+                className="button-small"
+                viewTransition
+              >
+                Review now
+              </Link>
+            </div>
             <ul className="rows">
               {due.map((p) => (
                 <li key={p.topicId}>

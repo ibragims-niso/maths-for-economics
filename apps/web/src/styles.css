@@ -589,6 +589,23 @@ li + li > .row {
   border-top: 1px solid var(--night-line);
 }
 
+/* Spaced repetition: a reminder at the top of Learn when reviews are due. */
+.review-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  background: rgb(245 192 74 / 0.12);
+  font-size: var(--text-ui);
+}
+
+.review-strip strong {
+  color: var(--gold);
+}
+
 /* Offline status and install: one compact strip at the top of the sheet. */
 .phone-strip {
   display: flex;

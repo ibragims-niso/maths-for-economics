@@ -6,7 +6,7 @@ import { AiButton, AskBox } from './ai/AiParts';
 import { content, topicById } from './content';
 import { HtmlBlock } from './HtmlBlock';
 import { BackIcon } from './icons';
-import { REPO_URL } from './links';
+import { contentErrorUrl } from './links';
 import { NotFoundPage } from './NotFoundPage';
 import { Segmented } from './Segmented';
 import { recordRead, storage, useProgress } from './storage';
@@ -87,7 +87,11 @@ export function TopicPage() {
   if (!topic) return <NotFoundPage />;
   const resourceUrls = topic.resources.map((r) => r.url);
 
-  const report = `${REPO_URL}/issues/new?title=${encodeURIComponent(`Error in ${topic.id}: ${topic.title}`)}&body=${encodeURIComponent(`Topic: ${topic.id}\nContent version: ${content.version}\n\nWhat is wrong:\n`)}`;
+  const report = contentErrorUrl({
+    title: `Error in ${topic.id}: ${topic.title}`,
+    topic: topic.id,
+    version: content.version,
+  });
 
   return (
     <>

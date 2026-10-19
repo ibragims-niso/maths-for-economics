@@ -1,0 +1,23 @@
+name: Propose a programme (track)
+description: Map a university's economics programme to the topic bank.
+title: "Track: "
+labels: [track]
+body:
+  - type: input
+    id: university
+    attributes:
+      label: University and programme
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Public sources
+      description: Links to the official programme, study plan or course pages.
+    validations:
+      required: true
+  - type: textarea
+    id: mapping
+    attributes:
+      label: Courses and topics
+      description: For each year and course, the topic IDs from docs/05-topic-bank.md. A .track.json file is welcome too.
