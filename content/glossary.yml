@@ -361,3 +361,8 @@ total differential: The estimated change dz = f_x·dx + f_y·dy in a function of
 multivariable chain rule: The rule dz/dt = f_x·dx/dt + f_y·dy/dt for how fast z = f(x, y) changes when x and y both move over time; the effects through each variable add up.
 budget share: The fraction of total spending that goes on one good, p_i·q_i divided by total spending; used as the weight of that good's price change in a price index.
 Solow residual: The part of output growth not explained by the growth of capital and labour weighted by their shares; a measure of total factor productivity growth.
+homogeneous function: A function with f(tx, ty) = t^k·f(x, y) for every t > 0, so scaling all inputs by t scales the value by t^k; k is its degree.
+Euler's theorem: For a function homogeneous of degree k, x·f_x + y·f_y = k·f; for production, K·MP_K + L·MP_L = k·Q.
+product exhaustion: Under constant returns to scale, paying every input its marginal product uses up exactly the whole output.
+homothetic function: A function whose isoquants or indifference curves are enlarged copies of each other, so their slope is the same along any ray from the origin.
+money illusion: Mistaking changes in nominal prices and income for real changes; demand homogeneous of degree 0 means there is none.

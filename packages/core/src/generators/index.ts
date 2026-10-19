@@ -161,6 +161,9 @@ import { jointCostPartialMarginalCost } from './MV02/joint-cost-partial-marginal
 import { chainRuleTwoOutputCost } from './MV03/chain-rule-two-output-cost';
 import { cobbDouglasOutputGrowthRate } from './MV03/cobb-douglas-output-growth-rate';
 import { totalDifferentialOutputChange } from './MV03/total-differential-output-change';
+import { constantReturnsWageBill } from './MV04/constant-returns-wage-bill';
+import { eulerMarginalProductLabour } from './MV04/euler-marginal-product-labour';
+import { scaledInputsOutput } from './MV04/scaled-inputs-output';
 import { cobbDouglasHessianDeterminant } from './MV06/cobb-douglas-hessian-determinant';
 import { mixedBundleUtility } from './MV06/mixed-bundle-utility';
 import { quadraticConcavityDeterminant } from './MV06/quadratic-concavity-determinant';
@@ -394,6 +397,9 @@ export const GENERATORS = [
   totalDifferentialOutputChange,
   cobbDouglasOutputGrowthRate,
   chainRuleTwoOutputCost,
+  scaledInputsOutput,
+  constantReturnsWageBill,
+  eulerMarginalProductLabour,
   quadraticConcavityDeterminant,
   mixedBundleUtility,
   cobbDouglasHessianDeterminant,

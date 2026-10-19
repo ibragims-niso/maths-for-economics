@@ -26,6 +26,7 @@ import { DoubleIntegralGrid } from './DoubleIntegralGrid';
 import { DoublingTime } from './DoublingTime';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
+import { EulerReturnsToScale } from './EulerReturnsToScale';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
 import { FleetIntegerPlan } from './FleetIntegerPlan';
 import { GeometricPartialSums } from './GeometricPartialSums';
@@ -111,6 +112,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'doubling-time': DoublingTime,
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
+  'euler-returns-to-scale': EulerReturnsToScale,
   'fixed-cost-break-even': FixedCostBreakEven,
   'fleet-integer-plan': FleetIntegerPlan,
   'geometric-partial-sums': GeometricPartialSums,
