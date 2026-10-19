@@ -492,3 +492,8 @@ inverse transform method: Turning a uniform random number u between 0 and 1 into
 pseudo-random numbers: Numbers produced by a fixed computer rule that behave like independent random draws; the same starting seed always gives the same sequence.
 seed: The starting number of a pseudo-random number generator; recording it lets anyone reproduce a simulation exactly.
 value at risk: The loss that is exceeded only with a small stated probability, such as 1 %, over a given period; from simulated losses it is read off a high percentile.
+Slutsky equation: The rule that splits the effect of a price change on demand into a substitution effect (the slope of compensated demand) and an income effect (minus the quantity bought times the effect of income on demand).
+income effect: The part of the change in demand after a price change that comes from the change in the buyer's purchasing power, with relative prices held fixed.
+increasing differences: A property of an objective where raising the choice gains more when a parameter is higher, which makes the best choice rise with that parameter.
+tax pass-through: The share of a per-unit tax that shows up as a higher price paid by buyers.
+Giffen good: An inferior good whose income effect is strong enough to outweigh the substitution effect, so that demand rises when its own price rises.

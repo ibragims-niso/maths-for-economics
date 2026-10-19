@@ -97,6 +97,7 @@ import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
 import { SpanAndBasis } from './SpanAndBasis';
 import { SpendingRounds } from './SpendingRounds';
+import { SupplyComparativeStatics } from './SupplyComparativeStatics';
 import { SurplusTaxWelfare } from './SurplusTaxWelfare';
 import { SurveyVenn } from './SurveyVenn';
 import { TankVolumeDiscs } from './TankVolumeDiscs';
@@ -210,6 +211,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'simple-vs-compound': SimpleVsCompound,
   'span-and-basis': SpanAndBasis,
   'spending-rounds': SpendingRounds,
+  'supply-comparative-statics': SupplyComparativeStatics,
   'surplus-tax-welfare': SurplusTaxWelfare,
   'survey-venn': SurveyVenn,
   'tank-volume-discs': TankVolumeDiscs,

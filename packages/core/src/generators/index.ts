@@ -260,6 +260,9 @@ import { lpUnusedHoursAtOptimum } from './OP02/lp-unused-hours-at-optimum';
 import { lpDualPriceThreeMachines } from './OP03/lp-dual-price-three-machines';
 import { lpDualProfitChange } from './OP03/lp-dual-profit-change';
 import { lpDualShadowPrice } from './OP03/lp-dual-shadow-price';
+import { comparativeStaticsOneChoice } from './OP04/comparative-statics-one-choice';
+import { monopolyTaxPriceChange } from './OP04/monopoly-tax-price-change';
+import { slutskyEquationCobbDouglas } from './OP04/slutsky-equation-cobb-douglas';
 import { transportNorthWestCost } from './OP05/transport-north-west-cost';
 import { transportReducedCostEmptyCell } from './OP05/transport-reduced-cost-empty-cell';
 import { transportTwoSourceMinimumCost } from './OP05/transport-two-source-minimum-cost';
@@ -547,6 +550,9 @@ export const GENERATORS = [
   lpDualShadowPrice,
   lpDualProfitChange,
   lpDualPriceThreeMachines,
+  comparativeStaticsOneChoice,
+  monopolyTaxPriceChange,
+  slutskyEquationCobbDouglas,
   transportNorthWestCost,
   transportTwoSourceMinimumCost,
   transportReducedCostEmptyCell,
