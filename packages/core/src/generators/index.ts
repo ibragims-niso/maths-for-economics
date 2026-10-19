@@ -63,6 +63,9 @@ import { secondOrderIteratedValue } from './DY02/second-order-iterated-value';
 import { linearOdeValueAtTime } from './DY03/linear-ode-value-at-time';
 import { odeGapClosingTime } from './DY03/ode-gap-closing-time';
 import { solowSteadyStateCapital } from './DY03/solow-steady-state-capital';
+import { dampedCyclePeriod } from './DY04/damped-cycle-period';
+import { secondOrderOdeValueAtTime } from './DY04/second-order-ode-value-at-time';
+import { secondOrderSteadyOrRoot } from './DY04/second-order-steady-or-root';
 import { adjustedRSquared } from './EM01/adjusted-r-squared';
 import { olsCoefficientTwoRegressors } from './EM01/ols-coefficient-two-regressors';
 import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
@@ -511,6 +514,9 @@ export const GENERATORS = [
   linearOdeValueAtTime,
   odeGapClosingTime,
   solowSteadyStateCapital,
+  secondOrderSteadyOrRoot,
+  secondOrderOdeValueAtTime,
+  dampedCyclePeriod,
   xtxEntryFromData,
   olsCoefficientTwoRegressors,
   adjustedRSquared,

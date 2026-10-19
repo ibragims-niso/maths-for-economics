@@ -73,6 +73,7 @@ import { RevenueProfit } from './RevenueProfit';
 import { RiemannSumMarginalCost } from './RiemannSumMarginalCost';
 import { SampleMeanClt } from './SampleMeanClt';
 import { SecantToTangent } from './SecantToTangent';
+import { SecondOrderDamping } from './SecondOrderDamping';
 import { ShadowPriceHours } from './ShadowPriceHours';
 import { ShadowPriceValueFunction } from './ShadowPriceValueFunction';
 import { ShopRevenueMatrix } from './ShopRevenueMatrix';
@@ -169,6 +170,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'riemann-sum-marginal-cost': RiemannSumMarginalCost,
   'sample-mean-clt': SampleMeanClt,
   'secant-to-tangent': SecantToTangent,
+  'second-order-damping': SecondOrderDamping,
   'shadow-price-value-function': ShadowPriceValueFunction,
   'shop-revenue-matrix': ShopRevenueMatrix,
   'simple-vs-compound': SimpleVsCompound,

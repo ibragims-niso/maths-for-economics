@@ -408,3 +408,7 @@ second-order difference equation: A rule that gives each period's value from the
 accelerator: The idea that firms' investment depends on how fast demand or output is growing, so investment rises when sales are growing and falls when growth slows.
 multiplier–accelerator model: Samuelson's model in which consumption depends on last period's income and investment on the rise in consumption; depending on the two parameters, income settles smoothly, cycles or explodes after a shock.
 modulus: The size of a complex number h + ki, equal to √(h² + k²); for the complex roots of r² + a₁r + a₂ = 0 it is √a₂ and decides whether cycles shrink or grow.
+damped oscillation: A path that swings above and below its steady state with swings that get smaller over time, as when a second-order equation has complex roots with a negative real part.
+overdamped: Describes a path with so much damping that it returns to its steady state without cycling, because the characteristic equation has two distinct negative real roots.
+critical damping: The boundary case a₁² = 4a₂ with one repeated root, where a path returns to its steady state as fast as it can without overshooting.
+period of a cycle: The time one full cycle takes, from one peak to the next; for complex roots h ± ki it is 2π/k.
