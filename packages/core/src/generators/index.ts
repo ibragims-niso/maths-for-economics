@@ -119,6 +119,9 @@ import { jointCostPartialMarginalCost } from './MV02/joint-cost-partial-marginal
 import { hessianDeterminantTwoGoods } from './MV07/hessian-determinant-two-goods';
 import { priceDiscriminationTwoMarkets } from './MV07/price-discrimination-two-markets';
 import { twoProductOptimalOutput } from './MV07/two-product-optimal-output';
+import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
+import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
+import { triangleRegionTotal } from './MV13/triangle-region-total';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -240,6 +243,9 @@ export const GENERATORS = [
   hessianDeterminantTwoGoods,
   twoProductOptimalOutput,
   priceDiscriminationTwoMarkets,
+  rectangleLinearDensityTotal,
+  jointDensityRectangleProbability,
+  triangleRegionTotal,
   replicatePayoffCoordinates,
   matrixRankElimination,
   dependenceParameterK,

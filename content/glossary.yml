@@ -172,3 +172,7 @@ divergent series: A series whose running total grows without limit or keeps jump
 harmonic series: The series 1 + 1/2 + 1/3 + …, which diverges even though its terms shrink to 0.
 power series: An endless polynomial a₀ + a₁(x − c) + a₂(x − c)² + … whose sum depends on x.
 radius of convergence: The distance R from the centre of a power series within which the series converges; outside it the series diverges.
+double integral: The limit of sums of (value × small area) over a region; for a density it gives the total amount on the region, and for a positive function the volume under its surface.
+iterated integral: A double integral computed as two single integrals, the inner one with the other variable held constant.
+Fubini's theorem: For a continuous function on a rectangle, the two orders of integration give the same double integral.
+joint density: A non-negative function of two variables whose double integral over all values is 1; the probability of a region is its double integral over that region.

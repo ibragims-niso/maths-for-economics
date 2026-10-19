@@ -8,6 +8,7 @@ import { CompoundingFrequency } from './CompoundingFrequency';
 import { ContinuousDiscountArea } from './ContinuousDiscountArea';
 import { DeterminantArea } from './DeterminantArea';
 import { DiscountingExplorer } from './DiscountingExplorer';
+import { DoubleIntegralGrid } from './DoubleIntegralGrid';
 import { DoublingTime } from './DoublingTime';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
@@ -53,6 +54,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'cost-antiderivative-family': AntiderivativeFamily,
   'determinant-area': DeterminantArea,
   'discounting-explorer': DiscountingExplorer,
+  'double-integral-grid': DoubleIntegralGrid,
   'doubling-time': DoublingTime,
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
