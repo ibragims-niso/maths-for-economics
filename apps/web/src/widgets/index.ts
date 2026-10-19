@@ -2,6 +2,7 @@ import type { ComponentType } from 'react';
 import { AnnuityExplorer } from './AnnuityExplorer';
 import { AntiderivativeFamily } from './AntiderivativeFamily';
 import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
+import { BinomialPoissonBars } from './BinomialPoissonBars';
 import { BreakEvenLines } from './BreakEvenLines';
 import { BudgetVectors } from './BudgetVectors';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
@@ -49,6 +50,7 @@ import { TwoProductProfitMap } from './TwoProductProfitMap';
 export const WIDGETS: Record<string, ComponentType> = {
   'annuity-explorer': AnnuityExplorer,
   'bayes-natural-frequencies': BayesNaturalFrequencies,
+  'binomial-poisson-bars': BinomialPoissonBars,
   'break-even-lines': BreakEvenLines,
   'budget-vectors': BudgetVectors,
   'chain-rule-cost-time': ChainRuleCostTime,

@@ -186,3 +186,7 @@ probability mass function: For a discrete random variable, the list of its possi
 cumulative distribution function: F(x) = P(X ≤ x), the probability that a random variable is at most x; it rises from 0 to 1.
 expected value: The probability-weighted average of a random variable's values, E[X] = Σ x·p(x); the long-run average if the situation repeats.
 standard deviation: The square root of the variance, the expected squared distance from the mean; it measures how far outcomes typically lie from the mean and is the usual measure of risk.
+Bernoulli trial: A single random experiment with two outcomes, success with probability p and failure with probability 1 − p.
+binomial distribution: The distribution B(n, p) of the number of successes in n independent trials that each succeed with probability p; its mean is np and its variance np(1 − p).
+Poisson distribution: The distribution of the number of events in an interval when events occur independently at a steady average rate λ; its mean and variance both equal λ.
+Poisson approximation: Using Poisson(np) in place of the binomial B(n, p) when n is large and p is small.

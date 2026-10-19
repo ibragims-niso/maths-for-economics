@@ -128,6 +128,9 @@ import { sampleDefectivesProbability } from './ST102/sample-defectives-probabili
 import { expectedValueDiscrete } from './ST103/expected-value-discrete';
 import { profitVarianceLinearTransform } from './ST103/profit-variance-linear-transform';
 import { varianceDiscreteRisk } from './ST103/variance-discrete-risk';
+import { binomialCountProbability } from './ST104/binomial-count-probability';
+import { poissonApproximationDefaults } from './ST104/poisson-approximation-defaults';
+import { poissonArrivalsProbability } from './ST104/poisson-arrivals-probability';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -247,6 +250,9 @@ export const GENERATORS = [
   expectedValueDiscrete,
   varianceDiscreteRisk,
   profitVarianceLinearTransform,
+  binomialCountProbability,
+  poissonArrivalsProbability,
+  poissonApproximationDefaults,
   levelCurveThroughPoint,
   sameIndifferenceCurveQuantity,
   cobbDouglasMarginalProduct,
