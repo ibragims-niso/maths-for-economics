@@ -158,6 +158,9 @@ import { twoProductOptimalOutput } from './MV07/two-product-optimal-output';
 import { lagrangeBudgetGoodQuantity } from './MV08/lagrange-budget-good-quantity';
 import { lagrangeCostMinInput } from './MV08/lagrange-cost-min-input';
 import { lagrangeMultiplierUtility } from './MV08/lagrange-multiplier-utility';
+import { shadowPriceIncomeEstimate } from './MV09/shadow-price-income-estimate';
+import { shadowPriceMarginalCost } from './MV09/shadow-price-marginal-cost';
+import { shadowPriceWater } from './MV09/shadow-price-water';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
@@ -376,6 +379,9 @@ export const GENERATORS = [
   lagrangeBudgetGoodQuantity,
   lagrangeCostMinInput,
   lagrangeMultiplierUtility,
+  shadowPriceIncomeEstimate,
+  shadowPriceMarginalCost,
+  shadowPriceWater,
   rectangleLinearDensityTotal,
   jointDensityRectangleProbability,
   triangleRegionTotal,

@@ -339,3 +339,6 @@ corner solution: An optimum where one or more choice variables are zero, for exa
 quasilinear utility: A utility function of the form v(x) + y, linear in one good, so demand for x does not depend on income unless income is very low.
 rationing: A limit on how much of a good each person may buy, which changes choices only when the limit binds.
 non-negativity constraint: The requirement that a choice variable such as a quantity cannot be negative, x ≥ 0.
+marginal utility of income: The extra maximum utility a consumer gets from one more unit of income; the Lagrange multiplier of the budget constraint.
+optimal value function: The best value of an objective, such as maximum utility or minimum cost, written as a function of a constraint's constant or another parameter.
+non-binding constraint: A constraint that is not used up at the optimum, so relaxing it does not change the best value and its shadow price is zero.
