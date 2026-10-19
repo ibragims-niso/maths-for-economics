@@ -54,6 +54,9 @@ import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
 import { adjustedRSquared } from './EM01/adjusted-r-squared';
 import { olsCoefficientTwoRegressors } from './EM01/ols-coefficient-two-regressors';
 import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
+import { olsErrorVarianceEstimate } from './EM02/ols-error-variance-estimate';
+import { olsSlopeStandardError } from './EM02/ols-slope-standard-error';
+import { omittedVariableBiasSlope } from './EM02/omitted-variable-bias-slope';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -385,6 +388,9 @@ export const GENERATORS = [
   xtxEntryFromData,
   olsCoefficientTwoRegressors,
   adjustedRSquared,
+  olsErrorVarianceEstimate,
+  olsSlopeStandardError,
+  omittedVariableBiasSlope,
   bimatrixNashPayoff,
   pureNashCount,
   cournotDuopolyEquilibrium,

@@ -298,3 +298,8 @@ exponential distribution: The distribution of the waiting time between events of
 utilisation: The share of time a server is busy, ρ = λ/(cμ); a queue settles down only if ρ < 1.
 Little's law: In any queue in a steady state, the average number inside equals the arrival rate times the average time each customer stays, L = λW.
 Erlang C formula: The probability that a customer arriving at an M/M/c queue has to wait because all c servers are busy.
+homoskedasticity: The errors of a regression have the same variance whatever the values of the regressors, Var(u | X) = σ²I.
+zero conditional mean: The assumption E[u | X] = 0 that the error does not move, on average, with the regressors; it makes OLS unbiased.
+Gauss–Markov theorem: Under the classical assumptions with homoskedastic, uncorrelated errors, OLS has the smallest variance among all linear unbiased estimators (it is BLUE).
+omitted-variable bias: The bias β₂δ₁ in a regression slope when a variable that affects y and moves with an included regressor is left out.
+consistent estimator: An estimator that gets arbitrarily close to the true value, with probability approaching 1, as the sample grows.
