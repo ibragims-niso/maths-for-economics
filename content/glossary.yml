@@ -357,3 +357,7 @@ coupon: The fixed yearly payment on a bond, equal to the coupon rate times the f
 face value: The amount a bond repays at maturity, also called par value; bond prices are usually quoted per 100 of it.
 yield to maturity: The single discount rate at which the present value of a bond's remaining payments equals its price.
 current yield: A bond's yearly coupon divided by its current price; it ignores the gain or loss when the face value is repaid.
+total differential: The estimated change dz = f_x·dx + f_y·dy in a function of several variables when all its inputs change by small amounts, each partial derivative times its own change, added up.
+multivariable chain rule: The rule dz/dt = f_x·dx/dt + f_y·dy/dt for how fast z = f(x, y) changes when x and y both move over time; the effects through each variable add up.
+budget share: The fraction of total spending that goes on one good, p_i·q_i divided by total spending; used as the weight of that good's price change in a price index.
+Solow residual: The part of output growth not explained by the growth of capital and labour weighted by their shares; a measure of total factor productivity growth.

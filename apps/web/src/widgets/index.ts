@@ -75,6 +75,7 @@ import { TankVolumeDiscs } from './TankVolumeDiscs';
 import { TariffContinuity } from './TariffContinuity';
 import { TaxBandExplorer } from './TaxBandExplorer';
 import { TaylorLogApproximation } from './TaylorLogApproximation';
+import { TotalDifferentialIsoquants } from './TotalDifferentialIsoquants';
 import { TwoAssetPortfolio } from './TwoAssetPortfolio';
 import { TwoLineSystem } from './TwoLineSystem';
 import { TwoProductProfitMap } from './TwoProductProfitMap';
@@ -159,6 +160,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'tariff-continuity': TariffContinuity,
   'tax-band-explorer': TaxBandExplorer,
   'taylor-log-approximation': TaylorLogApproximation,
+  'total-differential-isoquants': TotalDifferentialIsoquants,
   'two-asset-portfolio': TwoAssetPortfolio,
   'two-line-system': TwoLineSystem,
   'two-product-profit-map': TwoProductProfitMap,

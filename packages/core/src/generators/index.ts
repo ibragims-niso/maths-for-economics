@@ -158,6 +158,9 @@ import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-qu
 import { cobbDouglasMarginalProduct } from './MV02/cobb-douglas-marginal-product';
 import { directionalDerivativeUtility } from './MV02/directional-derivative-utility';
 import { jointCostPartialMarginalCost } from './MV02/joint-cost-partial-marginal-cost';
+import { chainRuleTwoOutputCost } from './MV03/chain-rule-two-output-cost';
+import { cobbDouglasOutputGrowthRate } from './MV03/cobb-douglas-output-growth-rate';
+import { totalDifferentialOutputChange } from './MV03/total-differential-output-change';
 import { cobbDouglasHessianDeterminant } from './MV06/cobb-douglas-hessian-determinant';
 import { mixedBundleUtility } from './MV06/mixed-bundle-utility';
 import { quadraticConcavityDeterminant } from './MV06/quadratic-concavity-determinant';
@@ -388,6 +391,9 @@ export const GENERATORS = [
   cobbDouglasMarginalProduct,
   jointCostPartialMarginalCost,
   directionalDerivativeUtility,
+  totalDifferentialOutputChange,
+  cobbDouglasOutputGrowthRate,
+  chainRuleTwoOutputCost,
   quadraticConcavityDeterminant,
   mixedBundleUtility,
   cobbDouglasHessianDeterminant,
