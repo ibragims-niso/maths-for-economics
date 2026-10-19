@@ -45,6 +45,7 @@ import { FleetIntegerPlan } from './FleetIntegerPlan';
 import { GeometricPartialSums } from './GeometricPartialSums';
 import { GradientDescentPath } from './GradientDescentPath';
 import { GradientLevelCurves } from './GradientLevelCurves';
+import { GrimTriggerStreams } from './GrimTriggerStreams';
 import { GrowingStreamPV } from './GrowingStreamPV';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
 import { HaulierRouteBellman } from './HaulierRouteBellman';
@@ -159,6 +160,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'geometric-partial-sums': GeometricPartialSums,
   'gradient-descent-path': GradientDescentPath,
   'gradient-level-curves': GradientLevelCurves,
+  'grim-trigger-streams': GrimTriggerStreams,
   'growing-stream-present-value': GrowingStreamPV,
   'growth-rate-explorer': GrowthRateExplorer,
   'haulier-route-bellman': HaulierRouteBellman,

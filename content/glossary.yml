@@ -502,3 +502,8 @@ credible threat: A threat that the player making it would actually want to carry
 commitment device: A step taken in advance, such as a binding contract or a sunk investment, that changes a player's own future payoffs or options so that others believe what it will do.
 Stackelberg leader: The firm that chooses its output first, knowing how its rival will respond; with linear demand it produces (a − c)/(2b) and earns more than in Cournot competition.
 alternating-offer bargaining: A negotiation in which the sides take turns making offers and every round of delay shrinks the value of a deal by a discount factor δ.
+repeated game: A game in which the same one-period game (the stage game) is played again and again, with each player seeing what happened before.
+stage game: The one-period game that is played in every period of a repeated game.
+grim trigger strategy: Cooperate as long as everyone has always cooperated, and after any deviation punish by playing the one-period Nash equilibrium for ever.
+critical discount factor: The smallest discount factor at which cooperation can be sustained in a repeated game; for grim trigger it is (T − R)/(T − P).
+folk theorem: The result that, with sufficiently patient players, many outcomes, including full cooperation, can be sustained as equilibria of an infinitely repeated game.

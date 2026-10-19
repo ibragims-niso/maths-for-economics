@@ -175,6 +175,9 @@ import { alternatingOfferFirstOffer } from './GT03/alternating-offer-first-offer
 import { entryCommitmentThreshold } from './GT03/entry-commitment-threshold';
 import { entryGameSpePayoff } from './GT03/entry-game-spe-payoff';
 import { stackelbergDuopolyOutcome } from './GT03/stackelberg-duopoly-outcome';
+import { bertrandCartelMaxFirms } from './GT04/bertrand-cartel-max-firms';
+import { grimTriggerCriticalDiscount } from './GT04/grim-trigger-critical-discount';
+import { grimTriggerPresentValues } from './GT04/grim-trigger-present-values';
 import { zeroSumLpOptimalValue } from './GT05/zero-sum-lp-optimal-value';
 import { zeroSumMixed2x2Value } from './GT05/zero-sum-mixed-2x2-value';
 import { zeroSumSaddlePointValue } from './GT05/zero-sum-saddle-point-value';
@@ -612,6 +615,9 @@ export const GENERATORS = [
   entryCommitmentThreshold,
   stackelbergDuopolyOutcome,
   alternatingOfferFirstOffer,
+  grimTriggerCriticalDiscount,
+  grimTriggerPresentValues,
+  bertrandCartelMaxFirms,
   zeroSumSaddlePointValue,
   zeroSumMixed2x2Value,
   zeroSumLpOptimalValue,
