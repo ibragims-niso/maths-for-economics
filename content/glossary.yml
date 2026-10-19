@@ -452,3 +452,8 @@ contraction mapping: A map that brings every two points closer together by at le
 Brouwer's fixed-point theorem: Every continuous map of a non-empty, compact, convex set into itself has at least one fixed point.
 Banach fixed-point theorem: A contraction on a closed set has exactly one fixed point, and repeating the map from any start converges to it.
 price simplex: The set of non-negative price lists that add up to 1, used when only relative prices matter.
+functional: A rule that assigns a number to a whole function, such as the total cost ∫F(t, x, ẋ) dt of a path x(t).
+Euler–Lagrange equation: The condition F_x − d/dt(F_ẋ) = 0 that a path must satisfy to maximise or minimise ∫F(t, x, ẋ) dt with fixed endpoints.
+calculus of variations: The mathematics of choosing a whole function, usually a path over time, to maximise or minimise an integral.
+transversality condition: An extra condition at the end of the horizon, such as F_ẋ = 0 at T, that replaces a missing endpoint condition when the end value or end date is free.
+adjustment cost: A cost of changing a variable such as output, capital or employment, which rises with the speed of the change and so makes firms adjust gradually.

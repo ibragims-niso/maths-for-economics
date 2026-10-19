@@ -1,4 +1,5 @@
 import type { ComponentType } from 'react';
+import { AdjustmentCostPaths } from './AdjustmentCostPaths';
 import { AnnuityExplorer } from './AnnuityExplorer';
 import { AntiderivativeFamily } from './AntiderivativeFamily';
 import { Ar1ErrorRuns } from './Ar1ErrorRuns';
@@ -103,6 +104,7 @@ import { ZeroSumLowerEnvelope } from './ZeroSumLowerEnvelope';
 
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
+  'adjustment-cost-paths': AdjustmentCostPaths,
   'annuity-explorer': AnnuityExplorer,
   'ar1-error-runs': Ar1ErrorRuns,
   'ar1-shock-path': Ar1ShockPath,

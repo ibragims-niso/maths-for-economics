@@ -66,6 +66,9 @@ import { powerSeriesRadius } from './C117/power-series-radius';
 import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
 import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
 import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
+import { variationsAdjustmentPathValue } from './DO01/variations-adjustment-path-value';
+import { variationsAdjustmentSaving } from './DO01/variations-adjustment-saving';
+import { variationsStraightLinePath } from './DO01/variations-straight-line-path';
 import { dpBudgetAllocationBestReturn } from './DO03/dp-budget-allocation-best-return';
 import { dpCakeEatingFirstConsumption } from './DO03/dp-cake-eating-first-consumption';
 import { dpStagedRouteLeastCost } from './DO03/dp-staged-route-least-cost';
@@ -589,6 +592,9 @@ export const GENERATORS = [
   linearContractionFixedPoint,
   banachIterationsNeeded,
   cournotBestResponseFixedPoint,
+  variationsStraightLinePath,
+  variationsAdjustmentPathValue,
+  variationsAdjustmentSaving,
   dpStagedRouteLeastCost,
   dpBudgetAllocationBestReturn,
   dpCakeEatingFirstConsumption,
