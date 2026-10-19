@@ -140,6 +140,9 @@ import { poissonArrivalsProbability } from './ST104/poisson-arrivals-probability
 import { normalPercentileValue } from './ST105/normal-percentile-value';
 import { normalRangeProbability } from './ST105/normal-range-probability';
 import { sumOfIndependentNormals } from './ST105/sum-of-independent-normals';
+import { laspeyresPriceIndex } from './ST106/laspeyres-price-index';
+import { realWageChange } from './ST106/real-wage-change';
+import { realWageDeflated } from './ST106/real-wage-deflated';
 import { jointTableConditionalProbability } from './ST201/joint-table-conditional-probability';
 import { jointTableCovariance } from './ST201/joint-table-covariance';
 import { twoAssetPortfolioRisk } from './ST201/two-asset-portfolio-risk';
@@ -283,6 +286,9 @@ export const GENERATORS = [
   normalRangeProbability,
   normalPercentileValue,
   sumOfIndependentNormals,
+  realWageDeflated,
+  laspeyresPriceIndex,
+  realWageChange,
   levelCurveThroughPoint,
   sameIndifferenceCurveQuantity,
   cobbDouglasMarginalProduct,

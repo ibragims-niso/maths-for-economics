@@ -22,6 +22,7 @@ import { GradientLevelCurves } from './GradientLevelCurves';
 import { GrowingStreamPV } from './GrowingStreamPV';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
 import { HypothesisTestExplorer } from './HypothesisTestExplorer';
+import { IndexNumberBasket } from './IndexNumberBasket';
 import { IndifferenceCurveMrs } from './IndifferenceCurveMrs';
 import { IndifferenceMap } from './IndifferenceMap';
 import { InverseDemandMirror } from './InverseDemandMirror';
@@ -79,6 +80,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'growing-stream-present-value': GrowingStreamPV,
   'growth-rate-explorer': GrowthRateExplorer,
   'hypothesis-test-explorer': HypothesisTestExplorer,
+  'index-number-basket': IndexNumberBasket,
   'indifference-curve-mrs': IndifferenceCurveMrs,
   'indifference-map': IndifferenceMap,
   'inverse-demand-mirror': InverseDemandMirror,

@@ -230,3 +230,8 @@ interquartile range: The upper quartile minus the lower quartile, Q3 − Q1, the
 coefficient of variation: The standard deviation divided by the mean, usually in per cent, used to compare spread across data sets with different units or levels.
 right-skewed: Describes data with a long tail of a few very large values, such as incomes or house prices, so that the mean lies above the median.
 outlier: An observation far from the rest of the data; in a box plot, a value more than 1.5 × IQR below Q1 or above Q3.
+price index: A number showing how the cost of a fixed basket of goods has changed relative to a base period, which is set to 100.
+consumer price index (CPI): A price index for the basket of goods and services bought by households, weighted by their shares of household spending; its percentage change is the inflation rate.
+Laspeyres price index: A price index that weights prices by base-period quantities, Σp₁q₀ ÷ Σp₀q₀ × 100; it tends to overstate the rise in the cost of living.
+Paasche price index: A price index that weights prices by current-period quantities, Σp₁q₁ ÷ Σp₀q₁ × 100; it tends to understate the rise in the cost of living.
+real wage: A money wage divided by a price index (× 100), showing what the wage can buy in base-year prices.
