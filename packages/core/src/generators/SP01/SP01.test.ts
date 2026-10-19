@@ -27,11 +27,17 @@ function step(v: number[], m: number[][]): number[] {
   return out;
 }
 
-/** Long-run distribution by running the chain for many periods from equal shares. */
-function runLong(m: number[][], periods = 5000): number[] {
-  let v = m.map(() => 1 / m.length);
-  for (let t = 0; t < periods; t++) v = step(v, m);
-  return v;
+/**
+ * Long-run distribution by running the chain for 2¹⁶ = 65,536 periods from equal shares. The
+ * matrix is squared 16 times instead of stepping period by period, which keeps the test fast.
+ */
+function runLong(m: number[][]): number[] {
+  let power = m;
+  for (let k = 0; k < 16; k++) power = power.map((row) => step(row, power));
+  return step(
+    m.map(() => 1 / m.length),
+    power,
+  );
 }
 
 const isStochastic = (m: number[][]) =>
@@ -183,8 +189,7 @@ describe('markov-long-run-share-three-state', () => {
       [0, p.d, 100 - p.d],
     ].map((r) => r.map((x) => x / 100));
 
-  const long3 = (p: { a: number; b: number; c: number; d: number }) =>
-    runLong(matrix(p), 5000)[2] ?? 0;
+  const long3 = (p: { a: number; b: number; c: number; d: number }) => runLong(matrix(p))[2] ?? 0;
 
   it('equals the long-run share from running the chain, and π = πP holds for the shares', () => {
     fc.assert(
@@ -192,7 +197,7 @@ describe('markov-long-run-share-three-state', () => {
         const { p, value } = solve(markovLongRunShareThreeState, seed);
         const m = matrix(p);
         expect(isStochastic(m)).toBe(true);
-        const long = runLong(m, 20000);
+        const long = runLong(m);
         expect(Math.abs(value - (long[p.k - 1] ?? Number.NaN))).toBeLessThanOrEqual(0.00005 + 1e-9);
         // The long-run vector is unchanged by one more period.
         const again = step(long, m);
