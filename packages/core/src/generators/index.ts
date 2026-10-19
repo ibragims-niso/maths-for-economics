@@ -8,6 +8,9 @@ import { sequenceSupremum } from './AN02/sequence-supremum';
 import { bisectionEquilibriumMidpoint } from './AN03/bisection-equilibrium-midpoint';
 import { capacityProfitMaximum } from './AN03/capacity-profit-maximum';
 import { epsilonDeltaLinear } from './AN03/epsilon-delta-linear';
+import { budgetLineDistance } from './AN04/budget-line-distance';
+import { budgetSetLargestBall } from './AN04/budget-set-largest-ball';
+import { compactBudgetMaxUtility } from './AN04/compact-budget-max-utility';
 import { continuousTariffParameter } from './C101/continuous-tariff-parameter';
 import { limitByCancelling } from './C101/limit-by-cancelling';
 import { longRunCostRatio } from './C101/long-run-cost-ratio';
@@ -577,6 +580,9 @@ export const GENERATORS = [
   epsilonDeltaLinear,
   capacityProfitMaximum,
   bisectionEquilibriumMidpoint,
+  budgetLineDistance,
+  compactBudgetMaxUtility,
+  budgetSetLargestBall,
   dpStagedRouteLeastCost,
   dpBudgetAllocationBestReturn,
   dpCakeEatingFirstConsumption,

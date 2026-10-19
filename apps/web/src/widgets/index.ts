@@ -9,6 +9,7 @@ import { BernoulliLogLikelihood } from './BernoulliLogLikelihood';
 import { BinomialPoissonBars } from './BinomialPoissonBars';
 import { BondPriceYield } from './BondPriceYield';
 import { BreakEvenLines } from './BreakEvenLines';
+import { BudgetSetBall } from './BudgetSetBall';
 import { BudgetVectors } from './BudgetVectors';
 import { CementShippingPlan } from './CementShippingPlan';
 import { ChainBaseGrowth } from './ChainBaseGrowth';
@@ -109,6 +110,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'binomial-poisson-bars': BinomialPoissonBars,
   'bond-price-yield': BondPriceYield,
   'break-even-lines': BreakEvenLines,
+  'budget-set-open-ball': BudgetSetBall,
   'budget-vectors': BudgetVectors,
   'cement-shipping-plan': CementShippingPlan,
   'chain-base-growth': ChainBaseGrowth,

@@ -442,3 +442,8 @@ intermediate value theorem: If f is continuous on [a, b] and f(a) and f(b) have 
 extreme value theorem: A function that is continuous on a closed, bounded interval reaches both a largest and a smallest value on it.
 bisection method: Finding a root by repeatedly halving an interval on which a continuous function changes sign and keeping the half where the sign change remains.
 excess demand: Quantity demanded minus quantity supplied at a given price; it is zero at a market-clearing price.
+open ball: The set of points closer than a given radius r to a centre a, written B(a, r); it holds every x with ‖x − a‖ < r.
+open set: A set in which every point has a small open ball around it that stays inside the set; strict inequalities such as p·x < M give open sets.
+closed set: A set that contains all its boundary points, so the limit of any convergent sequence of its points stays in the set; weak inequalities such as p·x ≤ M give closed sets.
+compact set: A set in ℝⁿ that is both closed and bounded, such as a budget set with all prices positive.
+Weierstrass theorem: The result that a continuous function on a non-empty compact set attains a maximum and a minimum, which guarantees that a best choice exists.
