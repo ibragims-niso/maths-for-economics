@@ -125,6 +125,9 @@ import { triangleRegionTotal } from './MV13/triangle-region-total';
 import { lpMaxProfitTwoProducts } from './OP02/lp-max-profit-two-products';
 import { lpMinCostFeedBlend } from './OP02/lp-min-cost-feed-blend';
 import { lpUnusedHoursAtOptimum } from './OP02/lp-unused-hours-at-optimum';
+import { transportNorthWestCost } from './OP05/transport-north-west-cost';
+import { transportReducedCostEmptyCell } from './OP05/transport-reduced-cost-empty-cell';
+import { transportTwoSourceMinimumCost } from './OP05/transport-two-source-minimum-cost';
 import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
 import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
 import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
@@ -336,6 +339,9 @@ export const GENERATORS = [
   lpMaxProfitTwoProducts,
   lpUnusedHoursAtOptimum,
   lpMinCostFeedBlend,
+  transportNorthWestCost,
+  transportTwoSourceMinimumCost,
+  transportReducedCostEmptyCell,
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,

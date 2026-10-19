@@ -5,6 +5,7 @@ import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
 import { BinomialPoissonBars } from './BinomialPoissonBars';
 import { BreakEvenLines } from './BreakEvenLines';
 import { BudgetVectors } from './BudgetVectors';
+import { CementShippingPlan } from './CementShippingPlan';
 import { ChainBaseGrowth } from './ChainBaseGrowth';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
 import { ChebyshevPooling } from './ChebyshevPooling';
@@ -65,6 +66,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'binomial-poisson-bars': BinomialPoissonBars,
   'break-even-lines': BreakEvenLines,
   'budget-vectors': BudgetVectors,
+  'cement-shipping-plan': CementShippingPlan,
   'chain-base-growth': ChainBaseGrowth,
   'chain-rule-cost-time': ChainRuleCostTime,
   'chebyshev-pooling': ChebyshevPooling,

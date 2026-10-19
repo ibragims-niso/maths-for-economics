@@ -249,3 +249,8 @@ feasible region: The set of all plans that satisfy every constraint of an optimi
 binding constraint: A constraint that holds with equality at a given plan, so the resource it describes is fully used.
 slack variable: A non-negative variable that measures the unused amount of a ≤ constraint and turns it into an equation.
 simplex method: A step-by-step method for linear programmes that moves from corner to neighbouring corner of the feasible region, raising the objective each time until no neighbour is better.
+transportation problem: A linear programme that chooses how much to ship from each source to each destination so that supplies and demands are met at the lowest total shipping cost.
+dummy source or destination: An extra row or column with zero costs added to balance supply and demand; its shipments show unused capacity or unmet demand.
+north-west corner rule: A way to build a starting shipping plan by filling the table from the top-left cell, moving right or down, without looking at costs.
+Vogel's approximation method: A starting rule that first serves the row or column with the largest penalty, the gap between its two cheapest costs.
+reduced cost: For an unused route, the true unit cost minus the cost implied by the current plan's potentials (cᵢⱼ − uᵢ − vⱼ); a negative value means using the route would lower the total cost.
