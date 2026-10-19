@@ -5,6 +5,9 @@ import { truthTableTrueRows } from './AN01/truth-table-true-rows';
 import { epsilonNThreshold } from './AN02/epsilon-n-threshold';
 import { recursiveRootSequenceLimit } from './AN02/recursive-root-sequence-limit';
 import { sequenceSupremum } from './AN02/sequence-supremum';
+import { bisectionEquilibriumMidpoint } from './AN03/bisection-equilibrium-midpoint';
+import { capacityProfitMaximum } from './AN03/capacity-profit-maximum';
+import { epsilonDeltaLinear } from './AN03/epsilon-delta-linear';
 import { continuousTariffParameter } from './C101/continuous-tariff-parameter';
 import { limitByCancelling } from './C101/limit-by-cancelling';
 import { longRunCostRatio } from './C101/long-run-cost-ratio';
@@ -571,6 +574,9 @@ export const GENERATORS = [
   epsilonNThreshold,
   sequenceSupremum,
   recursiveRootSequenceLimit,
+  epsilonDeltaLinear,
+  capacityProfitMaximum,
+  bisectionEquilibriumMidpoint,
   dpStagedRouteLeastCost,
   dpBudgetAllocationBestReturn,
   dpCakeEatingFirstConsumption,

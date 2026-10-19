@@ -437,3 +437,8 @@ supremum: The least upper bound of a set of numbers; no element is larger, and n
 completeness axiom: The property of the real numbers that every non-empty set with an upper bound has a least upper bound, so the number line has no gaps.
 monotone convergence theorem: The result that a sequence which keeps rising (or keeps falling) and stays bounded must converge, to its supremum (or infimum).
 Cauchy sequence: A sequence whose terms eventually all stay within any given distance of each other; in the real numbers these are exactly the convergent sequences.
+epsilon–delta continuity: The precise definition of continuity at a point a; for every tolerance ε > 0 on the output there is a δ > 0 such that |x − a| < δ guarantees |f(x) − f(a)| < ε.
+intermediate value theorem: If f is continuous on [a, b] and f(a) and f(b) have opposite signs, then f(c) = 0 for some c between a and b; it guarantees an equilibrium price when excess demand changes sign.
+extreme value theorem: A function that is continuous on a closed, bounded interval reaches both a largest and a smallest value on it.
+bisection method: Finding a root by repeatedly halving an interval on which a continuous function changes sign and keeping the half where the sign change remains.
+excess demand: Quantity demanded minus quantity supplied at a given price; it is zero at a market-clearing price.

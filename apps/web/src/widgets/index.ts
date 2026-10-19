@@ -31,6 +31,7 @@ import { DoublingTime } from './DoublingTime';
 import { EigenDirections } from './EigenDirections';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EpsilonBand } from './EpsilonBand';
+import { EpsilonDeltaSquare } from './EpsilonDeltaSquare';
 import { EquilibriumTax } from './EquilibriumTax';
 import { EulerReturnsToScale } from './EulerReturnsToScale';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
@@ -130,6 +131,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'doubling-time': DoublingTime,
   'eigen-directions': EigenDirections,
   'elasticity-slider': ElasticitySlider,
+  'epsilon-delta-square': EpsilonDeltaSquare,
   'epsilon-n-band': EpsilonBand,
   'equilibrium-tax': EquilibriumTax,
   'euler-returns-to-scale': EulerReturnsToScale,
