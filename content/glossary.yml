@@ -254,3 +254,8 @@ dummy source or destination: An extra row or column with zero costs added to bal
 north-west corner rule: A way to build a starting shipping plan by filling the table from the top-left cell, moving right or down, without looking at costs.
 Vogel's approximation method: A starting rule that first serves the row or column with the largest penalty, the gap between its two cheapest costs.
 reduced cost: For an unused route, the true unit cost minus the cost implied by the current plan's potentials (cᵢⱼ − uᵢ − vⱼ); a negative value means using the route would lower the total cost.
+dual problem: The linear programme paired with a given one, which prices each constraint's resource and minimises the total value of the resources while every product's resources are worth at least its profit.
+weak duality: Any feasible value of the dual (minimisation) problem is at least as large as any feasible value of the primal (maximisation) problem.
+strong duality: When a linear programme has an optimal solution, its dual has one too and the two optimal values are equal.
+complementary slackness: At the optimum a resource with spare units has shadow price zero, and a product that is made earns exactly the value of the resources it uses.
+opportunity loss: In a linear programme, the value of the resources a product uses at the shadow prices minus its profit; a product with a positive opportunity loss is not made.

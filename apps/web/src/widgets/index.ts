@@ -44,6 +44,7 @@ import { RevenueProfit } from './RevenueProfit';
 import { RiemannSumMarginalCost } from './RiemannSumMarginalCost';
 import { SampleMeanClt } from './SampleMeanClt';
 import { SecantToTangent } from './SecantToTangent';
+import { ShadowPriceHours } from './ShadowPriceHours';
 import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
 import { SpanAndBasis } from './SpanAndBasis';
@@ -95,6 +96,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'iso-profit-corners': IsoProfitCorners,
   'keynesian-cross': KeynesianCross,
   'least-squares-fit': LeastSquaresFit,
+  'lp-shadow-price-hours': ShadowPriceHours,
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,
   'markov-labour-market': MarkovLabourMarket,

@@ -125,6 +125,9 @@ import { triangleRegionTotal } from './MV13/triangle-region-total';
 import { lpMaxProfitTwoProducts } from './OP02/lp-max-profit-two-products';
 import { lpMinCostFeedBlend } from './OP02/lp-min-cost-feed-blend';
 import { lpUnusedHoursAtOptimum } from './OP02/lp-unused-hours-at-optimum';
+import { lpDualPriceThreeMachines } from './OP03/lp-dual-price-three-machines';
+import { lpDualProfitChange } from './OP03/lp-dual-profit-change';
+import { lpDualShadowPrice } from './OP03/lp-dual-shadow-price';
 import { transportNorthWestCost } from './OP05/transport-north-west-cost';
 import { transportReducedCostEmptyCell } from './OP05/transport-reduced-cost-empty-cell';
 import { transportTwoSourceMinimumCost } from './OP05/transport-two-source-minimum-cost';
@@ -339,6 +342,9 @@ export const GENERATORS = [
   lpMaxProfitTwoProducts,
   lpUnusedHoursAtOptimum,
   lpMinCostFeedBlend,
+  lpDualShadowPrice,
+  lpDualProfitChange,
+  lpDualPriceThreeMachines,
   transportNorthWestCost,
   transportTwoSourceMinimumCost,
   transportReducedCostEmptyCell,
