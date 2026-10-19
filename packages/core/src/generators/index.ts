@@ -36,6 +36,9 @@ import { totalCostFromMarginalCost } from './C112/total-cost-from-marginal-cost'
 import { accumulatedExponentialFlow } from './C113/accumulated-exponential-flow';
 import { averagePriceOverPeriod } from './C113/average-price-over-period';
 import { costIncreaseFromMarginalCost } from './C113/cost-increase-from-marginal-cost';
+import { presentValueGrowingStream } from './C115/present-value-growing-stream';
+import { substitutionTotalFromMarginal } from './C115/substitution-total-from-marginal';
+import { totalOutputLogRate } from './C115/total-output-log-rate';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -187,6 +190,9 @@ export const GENERATORS = [
   costIncreaseFromMarginalCost,
   accumulatedExponentialFlow,
   averagePriceOverPeriod,
+  substitutionTotalFromMarginal,
+  presentValueGrowingStream,
+  totalOutputLogRate,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,

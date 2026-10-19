@@ -149,3 +149,7 @@ Riemann sum: An approximation to the area under a curve made by adding the areas
 Fundamental Theorem of Calculus: The result that the definite integral of f from a to b equals F(b) − F(a) for any antiderivative F of f.
 average value of a function: The integral of a function over an interval divided by the length of the interval; the height of a rectangle with the same area.
 signed area: Area counted as positive above the horizontal axis and negative below it, which is what a definite integral measures.
+integration by substitution: A way to integrate f(g(x))·g′(x) by renaming the inside g(x) as u, so the integral becomes ∫f(u) du; it is the chain rule run backwards.
+integration by parts: The rule ∫u dv = uv − ∫v du, the product rule run backwards, used to integrate products such as t·e^(−rt) or ln x.
+LIATE: A rough guide for choosing u in integration by parts, in order of preference — logarithms, inverse trigonometric functions, algebraic terms, trigonometric functions, exponentials.
+present value of an income stream: The value today of income arriving continuously at rate f(t) for T years, ∫₀ᵀ f(t)·e^(−rt) dt.
