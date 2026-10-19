@@ -1,3 +1,4 @@
+import type { TopicContext } from '../ai/prompts';
 import type { TopicFrontmatter } from './schemas';
 
 /** One step of a worked example, as HTML (maths already rendered by KaTeX). */
@@ -31,7 +32,7 @@ export interface CompiledTopic extends Omit<TopicFrontmatter, 'resources'> {
     realWorld: string;
   };
   /** The AI tutor's reading material, as Markdown (used on the device with an own key). */
-  tutor: { summary: string; definitions: string };
+  tutor: Pick<TopicContext, 'summary' | 'definitions' | 'examples'>;
 }
 
 export interface CompiledContent {

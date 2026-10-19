@@ -7,6 +7,7 @@ import {
   analogMessages,
   type ChatMessage,
   conceptMessages,
+  explainExampleMessages,
   explainStepMessages,
   OFF_TOPIC_TEXT,
   openMessages,
@@ -78,6 +79,18 @@ export function planAnswer(
         run: async (chat) => ({
           mode: 'EXPLAIN_STEP',
           text: await chat('main', explainStepMessages(topic, problem, req.payload.step)),
+        }),
+      };
+    }
+    case 'EXPLAIN_EXAMPLE': {
+      const { example, step } = req.payload;
+      const steps = topic.examples[example]?.steps;
+      if (!steps || step >= steps.length) return undefined;
+      return {
+        cache: [...base, example, step],
+        run: async (chat) => ({
+          mode: 'EXPLAIN_EXAMPLE',
+          text: await chat('main', explainExampleMessages(topic, example, step)),
         }),
       };
     }

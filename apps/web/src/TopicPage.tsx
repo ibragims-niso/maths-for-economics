@@ -39,7 +39,8 @@ function ReadMarker({ topicId }: { topicId: string }) {
   return <div ref={ref} aria-hidden="true" />;
 }
 
-function Example({ example }: { example: CompiledExample }) {
+function Example(props: { example: CompiledExample; topicId: string; index: number }) {
+  const { example, topicId, index } = props;
   const [shown, setShown] = useState<ReadonlySet<number>>(new Set());
   const toggle = (i: number) =>
     setShown((s) => {
@@ -69,7 +70,19 @@ function Example({ example }: { example: CompiledExample }) {
                 >
                   Why?
                 </button>
-                {shown.has(i) && <p className="why">{step.why}</p>}
+                {shown.has(i) && (
+                  <>
+                    <p className="why">{step.why}</p>
+                    <AiButton
+                      label="Explain more"
+                      request={{
+                        mode: 'EXPLAIN_EXAMPLE',
+                        topicId,
+                        payload: { example: index, step: i },
+                      }}
+                    />
+                  </>
+                )}
               </>
             )}
           </li>
@@ -149,8 +162,8 @@ export function TopicPage() {
         )}
 
         {tab === 'examples' &&
-          topic.sections.examples.map((example) => (
-            <Example key={example.title} example={example} />
+          topic.sections.examples.map((example, i) => (
+            <Example key={example.title} example={example} topicId={topic.id} index={i} />
           ))}
 
         {tab === 'practise' && (

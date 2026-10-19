@@ -117,6 +117,20 @@ function markdownOf(body: string, nodes: RootContent[]): string {
     .trim();
 }
 
+/** A worked example as Markdown for the AI tutor: statement and steps, without verify blocks. */
+function exampleMarkdown(body: string, title: string, nodes: RootContent[]) {
+  const listIndex = nodes.findIndex((n) => n.type === 'list' && n.ordered);
+  const list = nodes[listIndex];
+  const before = (listIndex === -1 ? nodes : nodes.slice(0, listIndex)).filter(
+    (n) => n.type !== 'code',
+  );
+  return {
+    title,
+    statement: markdownOf(body, before),
+    steps: list?.type === 'list' ? list.children.map((item) => markdownOf(body, [item])) : [],
+  };
+}
+
 function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } {
   const source = readText(path);
   const { outline } = parseTopicFile(source, path);
@@ -138,18 +152,25 @@ function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } 
   const section = (name: string) => sections.get(name) ?? [];
 
   const examples: CompiledExample[] = [];
+  const tutorExamples: TopicContext['examples'] = [];
   let exampleTitle: string | undefined;
   let exampleNodes: RootContent[] = [];
   for (const node of section('Worked examples')) {
     if (node.type === 'heading' && node.depth === 3) {
-      if (exampleTitle) examples.push(parseExample(exampleTitle, exampleNodes));
+      if (exampleTitle) {
+        examples.push(parseExample(exampleTitle, exampleNodes));
+        tutorExamples.push(exampleMarkdown(body, exampleTitle, exampleNodes));
+      }
       exampleTitle = mdToString(node);
       exampleNodes = [];
     } else {
       exampleNodes.push(node);
     }
   }
-  if (exampleTitle) examples.push(parseExample(exampleTitle, exampleNodes));
+  if (exampleTitle) {
+    examples.push(parseExample(exampleTitle, exampleNodes));
+    tutorExamples.push(exampleMarkdown(body, exampleTitle, exampleNodes));
+  }
 
   // Read the Markdown before html() runs: hideMistakeCodes edits the tree in place.
   const ai: TopicContext = {
@@ -162,6 +183,7 @@ function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } 
     economicUses: fm.economicUses,
     resources: fm.resources.map((r) => ({ title: r.title, url: r.url, kind: r.kind })),
     mistakeCodes: fm.mistakeCodes,
+    examples: tutorExamples,
   };
 
   const topic: CompiledTopic = {
@@ -178,7 +200,7 @@ function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } 
       practice: html(section('Practice')),
       realWorld: html(section('Real world')),
     },
-    tutor: { summary: ai.summary, definitions: ai.definitions },
+    tutor: { summary: ai.summary, definitions: ai.definitions, examples: ai.examples },
   };
   return { topic, ai };
 }

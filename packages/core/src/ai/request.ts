@@ -43,6 +43,12 @@ export const aiRequestSchema = z.discriminatedUnion('mode', [
   }),
   z.strictObject({ mode: z.literal('REAL_WORLD'), ...common, payload: z.strictObject({}) }),
   z.strictObject({
+    mode: z.literal('EXPLAIN_EXAMPLE'),
+    ...common,
+    // A worked example from the topic file, by position; the proxy reads it from its own copy.
+    payload: z.strictObject({ example: z.int().min(0).max(10), step: z.int().min(0).max(30) }),
+  }),
+  z.strictObject({
     mode: z.literal('ASK'),
     ...common,
     payload: z.strictObject({ question: z.string().trim().min(2).max(MAX_QUESTION_CHARS) }),
@@ -54,6 +60,7 @@ export type AiRequest = z.infer<typeof aiRequestSchema>;
 /** The mode that actually answered: ASK becomes one of the free-text modes after the classifier. */
 export type AiMode =
   | 'EXPLAIN_STEP'
+  | 'EXPLAIN_EXAMPLE'
   | 'TEST_FEEDBACK'
   | 'REAL_WORLD'
   | 'CONCEPT_QA'

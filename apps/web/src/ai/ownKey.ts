@@ -20,6 +20,7 @@ function tutorContext(topic: CompiledTopic): TopicContext {
     title: topic.title,
     summary: topic.tutor.summary,
     definitions: topic.tutor.definitions,
+    examples: topic.tutor.examples,
     economicUses: topic.economicUses,
     resources: topic.resources.map((r) => ({ title: r.title, url: r.url, kind: r.kind })),
     mistakeCodes: topic.mistakeCodes,

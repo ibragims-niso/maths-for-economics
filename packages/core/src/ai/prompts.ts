@@ -11,6 +11,8 @@ export interface TopicContext {
   economicUses: string[];
   resources: { title: string; url: string; kind: string }[];
   mistakeCodes: Record<string, { label: string; explanation: string }>;
+  /** Worked examples from the topic file, as Markdown (correct: they are machine-checked). */
+  examples: { title: string; statement: string; steps: string[] }[];
 }
 
 export interface ChatMessage {
@@ -61,6 +63,34 @@ Explain WHY step ${step + 1} is done this way and how it follows from the previo
 Do not recompute or change any number. If you would get a different number, trust the step given.`,
     ),
     { role: 'user', content: `${problemBlock(problem)}\n\nExplain step ${step + 1}.` },
+  ];
+}
+
+/** "Explain more" on a step of a topic's own worked example (checked by its verify block). */
+export function explainExampleMessages(
+  t: TopicContext,
+  example: number,
+  step: number,
+): ChatMessage[] {
+  const ex = t.examples[example];
+  const steps = (ex?.steps ?? []).map((s, i) => `Step ${i + 1}: ${s}`).join('\n');
+  return [
+    system(
+      t,
+      `The student is reading a worked example from this topic. All its steps are correct and were checked by the app.
+Explain WHY step ${step + 1} is done this way and how it follows from the previous step, in more depth than the short "Why" note.
+Do not recompute or change any number.`,
+    ),
+    {
+      role: 'user',
+      content: `WORKED EXAMPLE: ${ex?.title ?? ''}
+${ex?.statement ?? ''}
+
+STEPS:
+${steps}
+
+Explain step ${step + 1}.`,
+    },
   ];
 }
 

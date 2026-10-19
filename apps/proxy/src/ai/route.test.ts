@@ -81,6 +81,25 @@ describe('POST /api/ai guardrails', () => {
     expect(asked[0]?.messages[1]?.content).toContain(makeProblem(generator, 42).stem);
   });
 
+  it('explains a step of a topic’s own worked example, and refuses steps that do not exist', async () => {
+    const asked = fakeProvider('Because P/Q turns the slope into percentages.');
+    const ok = await answerAi(
+      { ...base, mode: 'EXPLAIN_EXAMPLE', payload: { example: 0, step: 0 } },
+      dev,
+      'ip',
+      now,
+    );
+    expect(ok).toMatchObject({ status: 200, body: { mode: 'EXPLAIN_EXAMPLE' } });
+    expect(asked[0]?.messages[1]?.content).toContain('WORKED EXAMPLE: Example 1');
+    const missing = await answerAi(
+      { ...base, mode: 'EXPLAIN_EXAMPLE', payload: { example: 0, step: 30 } },
+      dev,
+      'ip',
+      now,
+    );
+    expect(missing.status).toBe(400);
+  });
+
   it('sends off-topic questions a fixed reply without asking the main model', async () => {
     const asked = fakeProvider('{"category": "off_topic"}');
     const result = await answerAi(
