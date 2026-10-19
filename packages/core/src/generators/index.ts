@@ -146,6 +146,9 @@ import { transportTwoSourceMinimumCost } from './OP05/transport-two-source-minim
 import { parametricLpOptimalValue } from './OP06/parametric-lp-optimal-value';
 import { profitCostRatioBestCorner } from './OP06/profit-cost-ratio-best-corner';
 import { projectSelectionBestNpv } from './OP06/project-selection-best-npv';
+import { cpmCrashNewDuration } from './OP07/cpm-crash-new-duration';
+import { cpmProjectDuration } from './OP07/cpm-project-duration';
+import { cpmTotalFloat } from './OP07/cpm-total-float';
 import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
 import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
 import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
@@ -369,6 +372,9 @@ export const GENERATORS = [
   profitCostRatioBestCorner,
   projectSelectionBestNpv,
   parametricLpOptimalValue,
+  cpmProjectDuration,
+  cpmTotalFloat,
+  cpmCrashNewDuration,
   bimatrixNashPayoff,
   pureNashCount,
   cournotDuopolyEquilibrium,

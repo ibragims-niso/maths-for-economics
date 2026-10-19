@@ -11,6 +11,7 @@ import { ChainBaseGrowth } from './ChainBaseGrowth';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
 import { ChebyshevPooling } from './ChebyshevPooling';
 import { CompoundingFrequency } from './CompoundingFrequency';
+import { ConferenceCriticalPath } from './ConferenceCriticalPath';
 import { ConfidenceIntervalCoverage } from './ConfidenceIntervalCoverage';
 import { ContinuousDiscountArea } from './ContinuousDiscountArea';
 import { CournotBestResponses } from './CournotBestResponses';
@@ -78,6 +79,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'chain-rule-cost-time': ChainRuleCostTime,
   'chebyshev-pooling': ChebyshevPooling,
   'compounding-frequency': CompoundingFrequency,
+  'conference-critical-path': ConferenceCriticalPath,
   'confidence-interval-coverage': ConfidenceIntervalCoverage,
   'continuous-discount-area': ContinuousDiscountArea,
   'cost-antiderivative-family': AntiderivativeFamily,
