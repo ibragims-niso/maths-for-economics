@@ -235,3 +235,8 @@ consumer price index (CPI): A price index for the basket of goods and services b
 Laspeyres price index: A price index that weights prices by base-period quantities, Σp₁q₀ ÷ Σp₀q₀ × 100; it tends to overstate the rise in the cost of living.
 Paasche price index: A price index that weights prices by current-period quantities, Σp₁q₁ ÷ Σp₀q₁ × 100; it tends to understate the rise in the cost of living.
 real wage: A money wage divided by a price index (× 100), showing what the wage can buy in base-year prices.
+chain index: A value compared with the value of the period just before it, usually written in per cent (previous period = 100).
+base index: A value compared with its value in one fixed base period (base period = 100); it equals the product of the chain indices since the base period.
+percentage point: The unit for the difference between two rates; a rate falling from 6 % to 4.5 % falls by 1.5 percentage points.
+annualised growth rate: The yearly rate a quarterly or monthly growth rate would give if it continued for a whole year, (1 + q)⁴ − 1 or (1 + m)¹² − 1.
+year-on-year growth rate: Growth compared with the same period one year earlier, for example this quarter against the same quarter last year.

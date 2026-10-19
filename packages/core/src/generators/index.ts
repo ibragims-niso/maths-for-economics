@@ -143,6 +143,9 @@ import { sumOfIndependentNormals } from './ST105/sum-of-independent-normals';
 import { laspeyresPriceIndex } from './ST106/laspeyres-price-index';
 import { realWageChange } from './ST106/real-wage-change';
 import { realWageDeflated } from './ST106/real-wage-deflated';
+import { annualisedGrowthFromLevels } from './ST107/annualised-growth-from-levels';
+import { averageGrowthFromChainIndices } from './ST107/average-growth-from-chain-indices';
+import { baseIndexFromChainRates } from './ST107/base-index-from-chain-rates';
 import { jointTableConditionalProbability } from './ST201/joint-table-conditional-probability';
 import { jointTableCovariance } from './ST201/joint-table-covariance';
 import { twoAssetPortfolioRisk } from './ST201/two-asset-portfolio-risk';
@@ -289,6 +292,9 @@ export const GENERATORS = [
   realWageDeflated,
   laspeyresPriceIndex,
   realWageChange,
+  baseIndexFromChainRates,
+  annualisedGrowthFromLevels,
+  averageGrowthFromChainIndices,
   levelCurveThroughPoint,
   sameIndifferenceCurveQuantity,
   cobbDouglasMarginalProduct,
