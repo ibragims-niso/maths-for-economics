@@ -137,6 +137,8 @@ assert abs((ratio - 1)*100 - (-5.713)) < 0.01
 - Multiplying by $Q/P$ instead of $P/Q$ (INVERTED_RATIO).
 - Reporting the slope as if it were the elasticity (SLOPE_ONLY).
 - Using $dP/dQ$ from an inverse demand curve without taking the reciprocal (INVERSE_SLOPE).
+- Answering with the choke price $a/b$, where demand is zero, when asked for the unit-elastic price; unit elasticity is halfway along the line, at $a/(2b)$ (CHOKE_PRICE).
+- Slipping in the algebra when solving $|\varepsilon| = 1$, for example ending with $a/(4b)$; substitute the price back into the formula to check (ALGEBRA).
 - Thinking a straight demand line has one elasticity: it does not; only its slope is constant.
 
 ## Practice
