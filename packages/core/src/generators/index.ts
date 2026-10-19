@@ -248,6 +248,9 @@ import { newtonIrrStep } from './NM01/newton-irr-step';
 import { gradientAscentStepTwoInputs } from './NM02/gradient-ascent-step-two-inputs';
 import { gradientDescentLargestStableStep } from './NM02/gradient-descent-largest-stable-step';
 import { newtonStepProfitCubicCost } from './NM02/newton-step-profit-cubic-cost';
+import { inverseTransformExponentialDraw } from './NM03/inverse-transform-exponential-draw';
+import { monteCarloDrawsForTargetSe } from './NM03/monte-carlo-draws-for-target-se';
+import { monteCarloProbabilityLimit } from './NM03/monte-carlo-probability-limit';
 import { capacityMultiplierTwoProducts } from './OP01/capacity-multiplier-two-products';
 import { quasilinearDemandCorner } from './OP01/quasilinear-demand-corner';
 import { rationingQuotaOtherGood } from './OP01/rationing-quota-other-good';
@@ -647,6 +650,9 @@ export const GENERATORS = [
   gradientAscentStepTwoInputs,
   newtonStepProfitCubicCost,
   gradientDescentLargestStableStep,
+  monteCarloDrawsForTargetSe,
+  inverseTransformExponentialDraw,
+  monteCarloProbabilityLimit,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));

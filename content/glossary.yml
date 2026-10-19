@@ -487,3 +487,8 @@ simple root: A root x* of f where f′(x*) ≠ 0, so the graph crosses the axis 
 gradient descent: An iterative method that minimises a function by repeatedly stepping from the current point in the direction opposite to the gradient, x − α∇f; gradient ascent steps along the gradient to maximise.
 step size: The number α that scales each gradient step; too small makes the search slow, and above 2/λmax (λmax the largest curvature) the iterates overshoot more each time and diverge.
 Newton's method (optimisation): An iterative method that jumps to the optimum of the local quadratic approximation, x − H⁻¹∇f (x − f′/f″ in one variable); it solves a quadratic in one step.
+Monte Carlo simulation: Estimating an expected value or a probability by computing the outcome for many randomly drawn scenarios and averaging the results.
+inverse transform method: Turning a uniform random number u between 0 and 1 into a draw from a distribution F by taking the value x with F(x) = u, that is x = F⁻¹(u).
+pseudo-random numbers: Numbers produced by a fixed computer rule that behave like independent random draws; the same starting seed always gives the same sequence.
+seed: The starting number of a pseudo-random number generator; recording it lets anyone reproduce a simulation exactly.
+value at risk: The loss that is exceeded only with a small stated probability, such as 1 %, over a given period; from simulated losses it is read off a high percentile.

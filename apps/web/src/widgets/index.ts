@@ -66,6 +66,7 @@ import { LoanScheduleBars } from './LoanScheduleBars';
 import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
+import { MonteCarloRunningMean } from './MonteCarloRunningMean';
 import { MultiplierAccelerator } from './MultiplierAccelerator';
 import { NewtonBreakEven } from './NewtonBreakEven';
 import { NormalAreaExplorer } from './NormalAreaExplorer';
@@ -180,6 +181,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'markov-labour-market': MarkovLabourMarket,
   'mle-bernoulli-log-likelihood': BernoulliLogLikelihood,
   'mm1-waiting-curve': QueueWaitingCurve,
+  'monte-carlo-running-mean': MonteCarloRunningMean,
   'multiplier-accelerator': MultiplierAccelerator,
   'newton-break-even': NewtonBreakEven,
   'normal-area-explorer': NormalAreaExplorer,
