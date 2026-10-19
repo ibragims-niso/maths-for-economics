@@ -13,6 +13,7 @@ import { CementShippingPlan } from './CementShippingPlan';
 import { ChainBaseGrowth } from './ChainBaseGrowth';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
 import { ChebyshevPooling } from './ChebyshevPooling';
+import { CityCountryMigration } from './CityCountryMigration';
 import { CobbDouglasCostMin } from './CobbDouglasCostMin';
 import { CobbDouglasCurvature } from './CobbDouglasCurvature';
 import { CobwebDiagram } from './CobwebDiagram';
@@ -103,6 +104,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'chain-base-growth': ChainBaseGrowth,
   'chain-rule-cost-time': ChainRuleCostTime,
   'chebyshev-pooling': ChebyshevPooling,
+  'city-countryside-migration': CityCountryMigration,
   'cobb-douglas-cost-min': CobbDouglasCostMin,
   'cobb-douglas-curvature': CobbDouglasCurvature,
   'cobweb-diagram': CobwebDiagram,

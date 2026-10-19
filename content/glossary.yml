@@ -390,3 +390,7 @@ eigenvector: A non-zero vector that a matrix only stretches, shrinks or flips wi
 characteristic equation: The equation det(A − λI) = 0 whose solutions are the eigenvalues of A; for a 2×2 matrix it is λ² − (trace)λ + det = 0.
 trace: The sum of the diagonal entries of a square matrix, which equals the sum of its eigenvalues.
 spectral radius: The largest absolute value of the eigenvalues of a matrix; the system xₜ₊₁ = Axₜ is stable when it is below 1.
+diagonalisation: Writing a square matrix as A = PDP⁻¹, with its eigenvectors as the columns of P and its eigenvalues on the diagonal of D, so that powers and dynamic models become easy to compute.
+diagonalisable matrix: An n×n matrix that has n linearly independent eigenvectors, so that it can be written as PDP⁻¹ with D diagonal; n distinct eigenvalues, or a symmetric matrix, are enough.
+dominant eigenvalue: The eigenvalue with the largest absolute value; in a system x(t+1) = A·x(t) it sets the long-run growth factor, and its eigenvector sets the long-run proportions.
+balanced growth path: A path along which every part of an economy grows at the same rate, so their proportions stay fixed; in a linear model it is the eigenvector of the dominant eigenvalue.

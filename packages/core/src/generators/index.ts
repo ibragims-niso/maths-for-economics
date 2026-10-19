@@ -156,6 +156,9 @@ import { replicatePayoffCoordinates } from './LA201/replicate-payoff-coordinates
 import { eigenvalueLarger2x2 } from './LA202/eigenvalue-larger-2x2';
 import { eigenvectorSecondComponent } from './LA202/eigenvector-second-component';
 import { spectralRadiusStability } from './LA202/spectral-radius-stability';
+import { diagonalisationPowerEntry } from './LA203/diagonalisation-power-entry';
+import { eigenDecoupledSystemState } from './LA203/eigen-decoupled-system-state';
+import { migrationShareAfterYears } from './LA203/migration-share-after-years';
 import { levelCurveThroughPoint } from './MV01/level-curve-through-point';
 import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-quantity';
 import { cobbDouglasMarginalProduct } from './MV02/cobb-douglas-marginal-product';
@@ -448,6 +451,9 @@ export const GENERATORS = [
   eigenvalueLarger2x2,
   eigenvectorSecondComponent,
   spectralRadiusStability,
+  diagonalisationPowerEntry,
+  eigenDecoupledSystemState,
+  migrationShareAfterYears,
   jointTableConditionalProbability,
   jointTableCovariance,
   twoAssetPortfolioRisk,
