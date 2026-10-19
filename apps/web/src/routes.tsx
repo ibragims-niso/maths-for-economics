@@ -1,9 +1,7 @@
 import type { RouteObject } from 'react-router';
-import { AboutPage } from './AboutPage';
 import { AppShell } from './AppShell';
 import { HomePage } from './HomePage';
 import { NotFoundPage } from './NotFoundPage';
-import { SettingsPage } from './settings/SettingsPage';
 
 export const routes: RouteObject[] = [
   {
@@ -18,8 +16,15 @@ export const routes: RouteObject[] = [
         path: 'progress',
         lazy: () => import('./progress/ProgressPage').then((m) => ({ Component: m.ProgressPage })),
       },
-      { path: 'settings', element: <SettingsPage /> },
-      { path: 'about', element: <AboutPage /> },
+      {
+        // Settings checks imported programme files, which needs the schema library: load on demand.
+        path: 'settings',
+        lazy: () => import('./settings/SettingsPage').then((m) => ({ Component: m.SettingsPage })),
+      },
+      {
+        path: 'about',
+        lazy: () => import('./AboutPage').then((m) => ({ Component: m.AboutPage })),
+      },
       {
         path: 'formulas',
         lazy: () => import('./FormulasPage').then((m) => ({ Component: m.FormulasPage })),
