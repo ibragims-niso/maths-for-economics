@@ -39,6 +39,17 @@ const rhs = (p: Params) => {
   return [h.cutting, h.assembly, h.finishing];
 };
 
+/** The likely wrong answers; a problem keeps at least two after duplicates are removed. */
+function wrongAnswers(p: Params) {
+  const h = hours(p);
+  const known = p.cutTable * p.tables + p.cutCabinet * p.cabinets;
+  return cleanDistractors(p.chairs, [
+    { value: h.cutting - known, mistakeCode: 'NOT_DIVIDED_BY_PIVOT' },
+    { value: round((h.cutting + known) / p.cutChair, 2), mistakeCode: 'BACK_SUB_SIGN' },
+    { value: p.tables, mistakeCode: 'WRONG_VARIABLE' },
+  ]);
+}
+
 /** LA103, difficulty 1: a production plan from a system already in echelon form (back substitution). */
 export const machineHoursBackSubstitution: Generator<Params> = {
   id: 'machine-hours-back-substitution',
@@ -61,7 +72,7 @@ export const machineHoursBackSubstitution: Generator<Params> = {
         cabinets: rng.int(5, 30),
       };
       // Different numbers of chairs and tables, so "gave the tables" is a visible mistake.
-      if (p.chairs !== p.tables) return p;
+      if (p.chairs !== p.tables && wrongAnswers(p).length >= 2) return p;
     }
   },
 
@@ -100,13 +111,5 @@ export const machineHoursBackSubstitution: Generator<Params> = {
     ];
   },
 
-  distractors(p) {
-    const h = hours(p);
-    const known = p.cutTable * p.tables + p.cutCabinet * p.cabinets;
-    return cleanDistractors(p.chairs, [
-      { value: h.cutting - known, mistakeCode: 'NOT_DIVIDED_BY_PIVOT' },
-      { value: round((h.cutting + known) / p.cutChair, 2), mistakeCode: 'BACK_SUB_SIGN' },
-      { value: p.tables, mistakeCode: 'WRONG_VARIABLE' },
-    ]);
-  },
+  distractors: wrongAnswers,
 };
