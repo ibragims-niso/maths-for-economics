@@ -78,6 +78,7 @@ import { QuadraticFormContours } from './QuadraticFormContours';
 import { QuasilinearCorner } from './QuasilinearCorner';
 import { QueueWaitingCurve } from './QueueWaitingCurve';
 import { RegressionFTest } from './RegressionFTest';
+import { ResourceExtractionPath } from './ResourceExtractionPath';
 import { RevenueProfit } from './RevenueProfit';
 import { RiemannSumMarginalCost } from './RiemannSumMarginalCost';
 import { SampleMeanClt } from './SampleMeanClt';
@@ -184,6 +185,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'quadratic-form-contours': QuadraticFormContours,
   'quasilinear-corner-budget': QuasilinearCorner,
   'regression-f-test': RegressionFTest,
+  'resource-extraction-path': ResourceExtractionPath,
   'revenue-profit': RevenueProfit,
   'riemann-sum-marginal-cost': RiemannSumMarginalCost,
   'sample-mean-clt': SampleMeanClt,

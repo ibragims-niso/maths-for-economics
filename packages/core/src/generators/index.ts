@@ -69,6 +69,9 @@ import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
 import { variationsAdjustmentPathValue } from './DO01/variations-adjustment-path-value';
 import { variationsAdjustmentSaving } from './DO01/variations-adjustment-saving';
 import { variationsStraightLinePath } from './DO01/variations-straight-line-path';
+import { cakeEatingConsumptionAtTime } from './DO02/cake-eating-consumption-at-time';
+import { hotellingRentAtTime } from './DO02/hotelling-rent-at-time';
+import { keynesRamseyConsumptionGrowth } from './DO02/keynes-ramsey-consumption-growth';
 import { dpBudgetAllocationBestReturn } from './DO03/dp-budget-allocation-best-return';
 import { dpCakeEatingFirstConsumption } from './DO03/dp-cake-eating-first-consumption';
 import { dpStagedRouteLeastCost } from './DO03/dp-staged-route-least-cost';
@@ -595,6 +598,9 @@ export const GENERATORS = [
   variationsStraightLinePath,
   variationsAdjustmentPathValue,
   variationsAdjustmentSaving,
+  hotellingRentAtTime,
+  keynesRamseyConsumptionGrowth,
+  cakeEatingConsumptionAtTime,
   dpStagedRouteLeastCost,
   dpBudgetAllocationBestReturn,
   dpCakeEatingFirstConsumption,

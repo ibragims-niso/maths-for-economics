@@ -457,3 +457,7 @@ Euler–Lagrange equation: The condition F_x − d/dt(F_ẋ) = 0 that a path mus
 calculus of variations: The mathematics of choosing a whole function, usually a path over time, to maximise or minimise an integral.
 transversality condition: An extra condition at the end of the horizon, such as F_ẋ = 0 at T, that replaces a missing endpoint condition when the end value or end date is free.
 adjustment cost: A cost of changing a variable such as output, capital or employment, which rises with the speed of the change and so makes firms adjust gradually.
+Hamiltonian: In optimal control, the payoff now plus the change in the state valued at its shadow price, H = f + λg; the best control maximises it at every moment.
+costate: The shadow price of the state variable at each date in an optimal control problem; the continuous-time counterpart of a Lagrange multiplier.
+Hotelling rule: For a non-renewable resource in a competitive market, the rent (price minus extraction cost) rises at the rate of interest.
+Keynes–Ramsey rule: Optimal consumption grows at (r − ρ)/σ, faster when the interest rate exceeds the rate of time preference and when people are more willing to shift consumption over time.
