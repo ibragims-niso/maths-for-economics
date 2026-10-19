@@ -312,3 +312,8 @@ F test: A test of several restrictions on regression coefficients at once, compa
 restricted regression: The regression re-estimated with the null hypothesis imposed, for example with some variables left out; its SSR is never below that of the unrestricted regression.
 joint hypothesis: A null hypothesis that makes claims about several coefficients at the same time, such as that three regional dummies are all zero.
 economic significance: Whether an estimated effect is large enough to matter in practice, judged by its size and units rather than by its t statistic.
+value function: The best total payoff that can still be achieved from a given stage and state onwards, if every later decision is made optimally.
+Bellman equation: The rule that links values at successive stages; the value of a state is the best, over today's choices, of today's payoff plus the discounted value of the state that choice leads to.
+principle of optimality: Whatever has happened so far, the remaining part of an optimal plan must itself be optimal from the current state.
+backward induction: Solving a multi-stage problem from the last stage back to the first, so each decision is made knowing the best continuation.
+reservation wage: The lowest wage offer an unemployed worker will accept; offers below it are rejected in the hope of a better one.

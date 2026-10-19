@@ -51,6 +51,9 @@ import { powerSeriesRadius } from './C117/power-series-radius';
 import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
 import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
 import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
+import { dpBudgetAllocationBestReturn } from './DO03/dp-budget-allocation-best-return';
+import { dpCakeEatingFirstConsumption } from './DO03/dp-cake-eating-first-consumption';
+import { dpStagedRouteLeastCost } from './DO03/dp-staged-route-least-cost';
 import { cobwebPriceAfterPeriods } from './DY01/cobweb-price-after-periods';
 import { debtRatioSteadyState } from './DY01/debt-ratio-steady-state';
 import { differenceEquationValueAfterT } from './DY01/difference-equation-value-after-t';
@@ -412,6 +415,9 @@ export const GENERATORS = [
   zeroSumSaddlePointValue,
   zeroSumMixed2x2Value,
   zeroSumLpOptimalValue,
+  dpStagedRouteLeastCost,
+  dpBudgetAllocationBestReturn,
+  dpCakeEatingFirstConsumption,
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,

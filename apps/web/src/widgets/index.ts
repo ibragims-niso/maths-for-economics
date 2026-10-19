@@ -28,6 +28,7 @@ import { GeometricPartialSums } from './GeometricPartialSums';
 import { GradientLevelCurves } from './GradientLevelCurves';
 import { GrowingStreamPV } from './GrowingStreamPV';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
+import { HaulierRouteBellman } from './HaulierRouteBellman';
 import { HypothesisTestExplorer } from './HypothesisTestExplorer';
 import { IndexNumberBasket } from './IndexNumberBasket';
 import { IndifferenceCurveMrs } from './IndifferenceCurveMrs';
@@ -102,6 +103,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'gradient-level-curves': GradientLevelCurves,
   'growing-stream-present-value': GrowingStreamPV,
   'growth-rate-explorer': GrowthRateExplorer,
+  'haulier-route-bellman': HaulierRouteBellman,
   'hypothesis-test-explorer': HypothesisTestExplorer,
   'index-number-basket': IndexNumberBasket,
   'indifference-curve-mrs': IndifferenceCurveMrs,
