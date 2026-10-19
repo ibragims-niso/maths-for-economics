@@ -288,3 +288,8 @@ total float: How long an activity can be delayed without delaying the whole proj
 free float: How long an activity can be delayed without delaying the earliest start of any activity that follows it.
 crashing: Shortening a critical activity at extra cost, such as overtime or more workers, so that a project finishes sooner.
 directed graph: A set of points (vertices) joined by arrows (directed edges), used for example to show which activities must come before which.
+design matrix: The n × k matrix X of a regression, one row per observation and one column per coefficient, whose first column of ones carries the intercept.
+normal equations: The equations XᵀX·b = Xᵀy that the least-squares coefficients solve, obtained by setting the derivatives of the sum of squared residuals to zero.
+perfect multicollinearity: A situation in which one regressor is an exact linear combination of the others, so XᵀX has no inverse and OLS cannot separate their effects.
+dummy variable trap: Including a dummy for every group together with an intercept; the dummies add up to the column of ones, causing perfect multicollinearity.
+adjusted R²: R² corrected for the number of coefficients, 1 − (1 − R²)(n − 1)/(n − k), which can fall when a useless regressor is added.

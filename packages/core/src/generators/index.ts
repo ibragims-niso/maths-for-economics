@@ -51,6 +51,9 @@ import { powerSeriesRadius } from './C117/power-series-radius';
 import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
 import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
 import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
+import { adjustedRSquared } from './EM01/adjusted-r-squared';
+import { olsCoefficientTwoRegressors } from './EM01/ols-coefficient-two-regressors';
+import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -375,6 +378,9 @@ export const GENERATORS = [
   cpmProjectDuration,
   cpmTotalFloat,
   cpmCrashNewDuration,
+  xtxEntryFromData,
+  olsCoefficientTwoRegressors,
+  adjustedRSquared,
   bimatrixNashPayoff,
   pureNashCount,
   cournotDuopolyEquilibrium,

@@ -42,6 +42,7 @@ import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
 import { NormalAreaExplorer } from './NormalAreaExplorer';
+import { PartialEffectWages } from './PartialEffectWages';
 import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitHillTangent } from './ProfitHillTangent';
@@ -112,6 +113,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'marginal-revenue-lines': MarginalRevenueLines,
   'markov-labour-market': MarkovLabourMarket,
   'normal-area-explorer': NormalAreaExplorer,
+  'partial-effect-wages': PartialEffectWages,
   'power-explorer': PowerExplorer,
   'production-concavity': ProductionConcavity,
   'profit-hill-tangent': ProfitHillTangent,
