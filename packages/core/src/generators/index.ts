@@ -122,6 +122,9 @@ import { twoProductOptimalOutput } from './MV07/two-product-optimal-output';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
+import { bayesDefaultGivenSignal } from './ST102/bayes-default-given-signal';
+import { meetingWindowProbability } from './ST102/meeting-window-probability';
+import { sampleDefectivesProbability } from './ST102/sample-defectives-probability';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -235,6 +238,9 @@ export const GENERATORS = [
   inverse2x2Entry,
   equilibriumPricesInverse,
   inverse3x3CofactorEntry,
+  sampleDefectivesProbability,
+  bayesDefaultGivenSignal,
+  meetingWindowProbability,
   levelCurveThroughPoint,
   sameIndifferenceCurveQuantity,
   cobbDouglasMarginalProduct,

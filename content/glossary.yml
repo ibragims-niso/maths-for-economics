@@ -176,3 +176,8 @@ double integral: The limit of sums of (value × small area) over a region; for a
 iterated integral: A double integral computed as two single integrals, the inner one with the other variable held constant.
 Fubini's theorem: For a continuous function on a rectangle, the two orders of integration give the same double integral.
 joint density: A non-negative function of two variables whose double integral over all values is 1; the probability of a region is its double integral over that region.
+sample space: The set of all possible outcomes of an experiment; events are subsets of it.
+combination: An unordered choice of k items from n, counted by C(n, k) = n!/(k!(n − k)!).
+conditional probability: The probability of A once B is known to have happened, P(A | B) = P(A ∩ B)/P(B).
+independent events: Events where knowing one happened does not change the chance of the other, so P(A ∩ B) = P(A)·P(B).
+Bayes' theorem: A rule for updating a probability after new evidence, turning P(evidence | A) and the base rate P(A) into P(A | evidence).

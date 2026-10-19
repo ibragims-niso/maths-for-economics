@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react';
 import { AnnuityExplorer } from './AnnuityExplorer';
 import { AntiderivativeFamily } from './AntiderivativeFamily';
+import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
 import { BreakEvenLines } from './BreakEvenLines';
 import { BudgetVectors } from './BudgetVectors';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
@@ -46,6 +47,7 @@ import { TwoProductProfitMap } from './TwoProductProfitMap';
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
   'annuity-explorer': AnnuityExplorer,
+  'bayes-natural-frequencies': BayesNaturalFrequencies,
   'break-even-lines': BreakEvenLines,
   'budget-vectors': BudgetVectors,
   'chain-rule-cost-time': ChainRuleCostTime,
