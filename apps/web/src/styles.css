@@ -634,6 +634,16 @@ li + li > .row {
   cursor: pointer;
 }
 
+/* As a link (Review now) it looks the same as the button. */
+a.button-small,
+.sheet a.button-small {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
 .phone-how summary {
   display: flex;
   align-items: center;

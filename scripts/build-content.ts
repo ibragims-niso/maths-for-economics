@@ -196,9 +196,14 @@ const outDir = join(repoRoot, 'apps/web/src/generated');
 mkdirSync(outDir, { recursive: true });
 // One file per topic: a topic loads only when opened, and an edit re-downloads only that topic.
 const topicsOut = join(outDir, 'topics');
-rmSync(topicsOut, { recursive: true, force: true });
 rmSync(join(outDir, 'content.json'), { force: true });
 mkdirSync(topicsOut, { recursive: true });
+// Remove files of topics that no longer exist, but keep the folder: on Windows another program
+// (a dev server, an open terminal) may hold it open.
+const keep = new Set(content.topics.map((t) => `${t.id}.json`));
+for (const file of readdirSync(topicsOut)) {
+  if (!keep.has(file)) rmSync(join(topicsOut, file), { force: true });
+}
 for (const topic of content.topics) {
   writeFileSync(join(topicsOut, `${topic.id}.json`), JSON.stringify(topic));
 }
