@@ -242,6 +242,9 @@ import { shephardLabourDemand } from './MV12/shephard-labour-demand';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
+import { bisectionStepsForTolerance } from './NM01/bisection-steps-for-tolerance';
+import { newtonEquilibriumPriceIterates } from './NM01/newton-equilibrium-price-iterates';
+import { newtonIrrStep } from './NM01/newton-irr-step';
 import { capacityMultiplierTwoProducts } from './OP01/capacity-multiplier-two-products';
 import { quasilinearDemandCorner } from './OP01/quasilinear-demand-corner';
 import { rationingQuotaOtherGood } from './OP01/rationing-quota-other-good';
@@ -635,6 +638,9 @@ export const GENERATORS = [
   mm1QueueMeasures,
   mm1AtLeastNProbability,
   mm2StaffingCost,
+  bisectionStepsForTolerance,
+  newtonEquilibriumPriceIterates,
+  newtonIrrStep,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));

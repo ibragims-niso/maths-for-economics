@@ -66,6 +66,7 @@ import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
 import { MultiplierAccelerator } from './MultiplierAccelerator';
+import { NewtonBreakEven } from './NewtonBreakEven';
 import { NormalAreaExplorer } from './NormalAreaExplorer';
 import { NpvProfileTwoProjects } from './NpvProfileTwoProjects';
 import { OlsSlopeSampling } from './OlsSlopeSampling';
@@ -178,6 +179,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'mle-bernoulli-log-likelihood': BernoulliLogLikelihood,
   'mm1-waiting-curve': QueueWaitingCurve,
   'multiplier-accelerator': MultiplierAccelerator,
+  'newton-break-even': NewtonBreakEven,
   'normal-area-explorer': NormalAreaExplorer,
   'npv-profile-two-projects': NpvProfileTwoProjects,
   'ols-slope-sampling': OlsSlopeSampling,

@@ -479,3 +479,8 @@ put option: The right, but not the obligation, to sell an asset at a fixed strik
 arbitrage: A trading strategy that makes a riskless profit with no money of your own; prices in a working market leave no such chances.
 risk-neutral probability: The weight q = (R − d)/(u − d) that prices options as discounted averages of their payoffs; it is a pricing device, not the real chance of a rise.
 replicating portfolio: A mix of the underlying asset and risk-free borrowing or lending that pays exactly the same as an option in every state, so it must cost the same.
+Newton's method: Finding a root by repeatedly following the tangent line at the current estimate to where it crosses zero, x − f(x)/f′(x).
+quadratic convergence: Convergence in which each error is roughly a constant times the square of the previous one, so the number of correct decimals about doubles every step.
+stopping rule: A rule fixed in advance for when an iterative method stops, such as two successive estimates differing by less than a tolerance, together with a maximum number of steps.
+secant method: A root-finding method like Newton's that replaces the derivative by the slope of the line through the last two estimates.
+simple root: A root x* of f where f′(x*) ≠ 0, so the graph crosses the axis with a non-zero slope.
