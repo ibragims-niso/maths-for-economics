@@ -24,6 +24,7 @@ import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitHillTangent } from './ProfitHillTangent';
 import { RevenueProfit } from './RevenueProfit';
+import { RiemannSumMarginalCost } from './RiemannSumMarginalCost';
 import { SecantToTangent } from './SecantToTangent';
 import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
@@ -63,6 +64,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'production-concavity': ProductionConcavity,
   'profit-hill-tangent': ProfitHillTangent,
   'revenue-profit': RevenueProfit,
+  'riemann-sum-marginal-cost': RiemannSumMarginalCost,
   'secant-to-tangent': SecantToTangent,
   'shop-revenue-matrix': ShopRevenueMatrix,
   'simple-vs-compound': SimpleVsCompound,

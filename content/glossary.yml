@@ -144,3 +144,8 @@ Hessian: The square matrix of a function's second partial derivatives; its deter
 saddle point: A critical point where the function rises in some directions and falls in others, so it is neither a maximum nor a minimum.
 price discrimination: Charging different prices for the same product in separate markets, with higher prices where demand is less elastic.
 leading principal minors: The determinants of the top-left 1×1, 2×2, …, n×n blocks of a square matrix.
+definite integral: The number obtained by adding up a function over an interval, equal to the limit of Riemann sums and computed as F(b) − F(a) for an antiderivative F.
+Riemann sum: An approximation to the area under a curve made by adding the areas of thin rectangles whose heights are values of the function.
+Fundamental Theorem of Calculus: The result that the definite integral of f from a to b equals F(b) − F(a) for any antiderivative F of f.
+average value of a function: The integral of a function over an interval divided by the length of the interval; the height of a rectangle with the same area.
+signed area: Area counted as positive above the horizontal axis and negative below it, which is what a definite integral measures.
