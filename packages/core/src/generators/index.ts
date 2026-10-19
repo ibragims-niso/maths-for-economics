@@ -114,6 +114,9 @@ import { determinant3x3Cofactor } from './LA104/determinant-3x3-cofactor';
 import { equilibriumPricesInverse } from './LA105/equilibrium-prices-inverse';
 import { inverse2x2Entry } from './LA105/inverse-2x2-entry';
 import { inverse3x3CofactorEntry } from './LA105/inverse-3x3-cofactor-entry';
+import { leontiefTotalOutputChange } from './LA106/leontief-total-output-change';
+import { leontiefTwoSectorOutput } from './LA106/leontief-two-sector-output';
+import { technicalCoefficientFromFlows } from './LA106/technical-coefficient-from-flows';
 import { dependenceParameterK } from './LA201/dependence-parameter-k';
 import { matrixRankElimination } from './LA201/matrix-rank-elimination';
 import { replicatePayoffCoordinates } from './LA201/replicate-payoff-coordinates';
@@ -295,6 +298,9 @@ export const GENERATORS = [
   inverse2x2Entry,
   equilibriumPricesInverse,
   inverse3x3CofactorEntry,
+  technicalCoefficientFromFlows,
+  leontiefTwoSectorOutput,
+  leontiefTotalOutputChange,
   meanOrMedianSmallData,
   groupedFrequencyMean,
   sampleStandardDeviation,

@@ -36,6 +36,7 @@ import { InvestmentRiskBars } from './InvestmentRiskBars';
 import { IsoProfitCorners } from './IsoProfitCorners';
 import { KeynesianCross } from './KeynesianCross';
 import { LeastSquaresFit } from './LeastSquaresFit';
+import { LeontiefTwoSector } from './LeontiefTwoSector';
 import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
@@ -102,6 +103,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'iso-profit-corners': IsoProfitCorners,
   'keynesian-cross': KeynesianCross,
   'least-squares-fit': LeastSquaresFit,
+  'leontief-two-sector': LeontiefTwoSector,
   'lp-shadow-price-hours': ShadowPriceHours,
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,

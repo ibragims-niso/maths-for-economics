@@ -273,3 +273,8 @@ mixed strategy: A plan in which a player chooses among their possible actions at
 indifference principle: In a mixed-strategy equilibrium each player mixes so that the other player gets the same expected payoff from every action they use.
 best-response correspondence: For each strategy of the opponent, the set of a player's strategies that give the highest expected payoff; with mixed strategies it can be a whole interval.
 Nash's theorem: Every game with finitely many players and pure strategies has at least one Nash equilibrium, possibly in mixed strategies.
+input–output table: A table of an economy showing how much each sector sells to every other sector as inputs and to final users.
+technical coefficient: The input from one sector needed per unit of another sector's output, a_ij = z_ij / x_j.
+Leontief inverse: The matrix (I − A)⁻¹ whose entries give the total direct and indirect output each sector must produce per unit of final demand for each good.
+output multiplier: The column sum of the Leontief inverse; the extra output of the whole economy per unit of extra final demand for one sector's good.
+final demand: Purchases of goods for final use (households, government, investment and exports) rather than as inputs to production.
