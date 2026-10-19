@@ -159,6 +159,9 @@ import { spectralRadiusStability } from './LA202/spectral-radius-stability';
 import { diagonalisationPowerEntry } from './LA203/diagonalisation-power-entry';
 import { eigenDecoupledSystemState } from './LA203/eigen-decoupled-system-state';
 import { migrationShareAfterYears } from './LA203/migration-share-after-years';
+import { hessianThirdLeadingMinor } from './LA204/hessian-third-leading-minor';
+import { portfolioVarianceThreeAssets } from './LA204/portfolio-variance-three-assets';
+import { quadraticFormSecondMinor } from './LA204/quadratic-form-second-minor';
 import { levelCurveThroughPoint } from './MV01/level-curve-through-point';
 import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-quantity';
 import { cobbDouglasMarginalProduct } from './MV02/cobb-douglas-marginal-product';
@@ -454,6 +457,9 @@ export const GENERATORS = [
   diagonalisationPowerEntry,
   eigenDecoupledSystemState,
   migrationShareAfterYears,
+  quadraticFormSecondMinor,
+  hessianThirdLeadingMinor,
+  portfolioVarianceThreeAssets,
   jointTableConditionalProbability,
   jointTableCovariance,
   twoAssetPortfolioRisk,

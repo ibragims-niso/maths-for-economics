@@ -394,3 +394,8 @@ diagonalisation: Writing a square matrix as A = PDP⁻¹, with its eigenvectors 
 diagonalisable matrix: An n×n matrix that has n linearly independent eigenvectors, so that it can be written as PDP⁻¹ with D diagonal; n distinct eigenvalues, or a symmetric matrix, are enough.
 dominant eigenvalue: The eigenvalue with the largest absolute value; in a system x(t+1) = A·x(t) it sets the long-run growth factor, and its eigenvector sets the long-run proportions.
 balanced growth path: A path along which every part of an economy grows at the same rate, so their proportions stay fixed; in a linear model it is the eigenvector of the dominant eigenvalue.
+quadratic form: An expression made only of squared and cross terms, such as ax² + bxy + cy², written xᵀAx with a symmetric matrix A.
+positive definite: Describes a symmetric matrix (or quadratic form) whose form xᵀAx is positive for every non-zero x; all its eigenvalues are positive.
+negative definite: Describes a symmetric matrix whose form xᵀAx is negative for every non-zero x; a Hessian like this at a critical point means a strict local maximum.
+indefinite matrix: A symmetric matrix whose quadratic form takes both positive and negative values, so it has eigenvalues of both signs; as a Hessian it signals a saddle point.
+principal minor: The determinant of the square block left after deleting the same rows and columns of a matrix; all of them are needed to test semidefiniteness.

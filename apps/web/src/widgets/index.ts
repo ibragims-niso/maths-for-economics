@@ -63,6 +63,7 @@ import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitEnvelope } from './ProfitEnvelope';
 import { ProfitHillTangent } from './ProfitHillTangent';
+import { QuadraticFormContours } from './QuadraticFormContours';
 import { QuasilinearCorner } from './QuasilinearCorner';
 import { QueueWaitingCurve } from './QueueWaitingCurve';
 import { RegressionFTest } from './RegressionFTest';
@@ -157,6 +158,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'production-concavity': ProductionConcavity,
   'profit-envelope-hotelling': ProfitEnvelope,
   'profit-hill-tangent': ProfitHillTangent,
+  'quadratic-form-contours': QuadraticFormContours,
   'quasilinear-corner-budget': QuasilinearCorner,
   'regression-f-test': RegressionFTest,
   'revenue-profit': RevenueProfit,
