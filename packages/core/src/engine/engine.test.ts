@@ -190,7 +190,7 @@ describe('composeTest', () => {
   it('returns an empty plan when no generator matches', () => {
     expect(
       composeTest({
-        topicIds: ['NM03'],
+        topicIds: ['XX99'], // an ID that will never exist
         difficulty: 'mixed',
         count: 5,
         generators: GENERATORS,
