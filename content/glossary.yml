@@ -322,3 +322,7 @@ autocorrelation: Correlation between the errors of a time-series regression in d
 Breusch–Pagan test: A test of constant error variance that regresses the squared residuals on the regressors and compares n·R² with a χ² critical value.
 Durbin–Watson statistic: d = Σ(eₜ − eₜ₋₁)²/Σeₜ², roughly 2(1 − ρ̂); values well below 2 point to positive autocorrelation of the errors.
 robust standard error: A standard error that stays valid when the error variance differs between observations, computed from each observation's own squared residual (White); the Newey–West version also allows for autocorrelation.
+white noise: A series of random shocks with mean 0, the same variance every period and no correlation between different periods.
+stationary time series: A time series whose mean, variance and autocovariances stay the same over time, so the link between two values depends only on how many periods apart they are.
+random walk: A series in which each value is the previous one plus a random shock, so shocks never fade and the variance keeps growing over time.
+unit root: The case φ = 1 in yₜ = c + φyₜ₋₁ + εₜ, which turns a series into a random walk; taking first differences removes it.
