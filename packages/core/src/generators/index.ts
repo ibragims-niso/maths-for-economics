@@ -69,6 +69,9 @@ import { secondOrderSteadyOrRoot } from './DY04/second-order-steady-or-root';
 import { saddlePathInitialJump } from './DY05/saddle-path-initial-jump';
 import { stabilityThresholdTraceDeterminant } from './DY05/stability-threshold-trace-determinant';
 import { twoMarketSteadyStatePrice } from './DY05/two-market-steady-state-price';
+import { harvestMapSlopeAtSteadyState } from './DY06/harvest-map-slope-at-steady-state';
+import { juryMargin2x2Discrete } from './DY06/jury-margin-2x2-discrete';
+import { solowConvergenceHalfLife } from './DY06/solow-convergence-half-life';
 import { adjustedRSquared } from './EM01/adjusted-r-squared';
 import { olsCoefficientTwoRegressors } from './EM01/ols-coefficient-two-regressors';
 import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
@@ -523,6 +526,9 @@ export const GENERATORS = [
   twoMarketSteadyStatePrice,
   stabilityThresholdTraceDeterminant,
   saddlePathInitialJump,
+  harvestMapSlopeAtSteadyState,
+  juryMargin2x2Discrete,
+  solowConvergenceHalfLife,
   xtxEntryFromData,
   olsCoefficientTwoRegressors,
   adjustedRSquared,

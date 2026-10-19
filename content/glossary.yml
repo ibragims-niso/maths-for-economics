@@ -417,3 +417,8 @@ nullcline: A curve on which one variable of a system is momentarily at rest (ẋ
 saddle path: The single path that leads to a saddle-point steady state; in economic models a forward-looking variable such as consumption or a share price jumps onto it so that the economy converges.
 focus: A steady state round which paths spiral because the eigenvalues are complex; it is stable when the real part is negative and unstable when it is positive.
 node: A steady state whose eigenvalues are real and of the same sign, so paths move straight into it (stable) or straight out of it (unstable) without circling.
+basin of attraction: The set of starting points from which a dynamic model converges to a particular stable steady state.
+locally asymptotically stable: Describes a steady state to which every path that starts close enough to it converges.
+linearisation: Replacing a nonlinear model near a steady state by its tangent-line (derivative or Jacobian) approximation, to judge stability from the slope or the eigenvalues.
+poverty trap: A low stable steady state with its own basin of attraction, so small help is undone and only a large enough push moves an economy to a better steady state.
+jump variable: A forward-looking variable, such as an asset price or an exchange rate, that can change at once when news arrives, unlike a predetermined variable such as capital.

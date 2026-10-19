@@ -61,6 +61,7 @@ import { NormalAreaExplorer } from './NormalAreaExplorer';
 import { NpvProfileTwoProjects } from './NpvProfileTwoProjects';
 import { OlsSlopeSampling } from './OlsSlopeSampling';
 import { PartialEffectWages } from './PartialEffectWages';
+import { PovertyTrapMap } from './PovertyTrapMap';
 import { PowerExplorer } from './PowerExplorer';
 import { PriceAdjustmentPath } from './PriceAdjustmentPath';
 import { ProductionConcavity } from './ProductionConcavity';
@@ -160,6 +161,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'npv-profile-two-projects': NpvProfileTwoProjects,
   'ols-slope-sampling': OlsSlopeSampling,
   'partial-effect-wages': PartialEffectWages,
+  'poverty-trap-map': PovertyTrapMap,
   'power-explorer': PowerExplorer,
   'price-adjustment-path': PriceAdjustmentPath,
   'production-concavity': ProductionConcavity,
