@@ -244,3 +244,8 @@ residual: The gap between an observed value and the value a fitted line predicts
 least squares: The method that picks the regression line making the sum of the squared residuals as small as possible.
 coefficient of determination: R², the share of the variation of y around its mean that a regression explains, 1 − SSR/SST, between 0 and 1.
 extrapolation: Using a fitted relationship to predict outside the range of the data it was estimated from, where it may no longer hold.
+linear programme: An optimisation problem with a linear objective, linear inequality constraints and non-negative decision variables.
+feasible region: The set of all plans that satisfy every constraint of an optimisation problem at once.
+binding constraint: A constraint that holds with equality at a given plan, so the resource it describes is fully used.
+slack variable: A non-negative variable that measures the unused amount of a ≤ constraint and turns it into an equation.
+simplex method: A step-by-step method for linear programmes that moves from corner to neighbouring corner of the feasible region, raising the objective each time until no neighbour is better.

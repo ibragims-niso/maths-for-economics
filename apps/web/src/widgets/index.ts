@@ -29,6 +29,7 @@ import { IndifferenceMap } from './IndifferenceMap';
 import { InverseDemandMirror } from './InverseDemandMirror';
 import { InverseTwoMarkets } from './InverseTwoMarkets';
 import { InvestmentRiskBars } from './InvestmentRiskBars';
+import { IsoProfitCorners } from './IsoProfitCorners';
 import { KeynesianCross } from './KeynesianCross';
 import { LeastSquaresFit } from './LeastSquaresFit';
 import { MarginalCostTangent } from './MarginalCostTangent';
@@ -89,6 +90,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'inverse-demand-mirror': InverseDemandMirror,
   'inverse-two-markets': InverseTwoMarkets,
   'investment-risk-bars': InvestmentRiskBars,
+  'iso-profit-corners': IsoProfitCorners,
   'keynesian-cross': KeynesianCross,
   'least-squares-fit': LeastSquaresFit,
   'marginal-cost-tangent': MarginalCostTangent,

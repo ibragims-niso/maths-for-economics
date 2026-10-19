@@ -122,6 +122,9 @@ import { twoProductOptimalOutput } from './MV07/two-product-optimal-output';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
+import { lpMaxProfitTwoProducts } from './OP02/lp-max-profit-two-products';
+import { lpMinCostFeedBlend } from './OP02/lp-min-cost-feed-blend';
+import { lpUnusedHoursAtOptimum } from './OP02/lp-unused-hours-at-optimum';
 import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
 import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
 import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
@@ -330,6 +333,9 @@ export const GENERATORS = [
   chebyshevIntervalBound,
   sampleMeanChebyshevBound,
   chebyshevSampleSize,
+  lpMaxProfitTwoProducts,
+  lpUnusedHoursAtOptimum,
+  lpMinCostFeedBlend,
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,
