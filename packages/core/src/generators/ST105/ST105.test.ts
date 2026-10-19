@@ -139,7 +139,8 @@ describe('normal-percentile-value', () => {
         const target = p.percent / 100;
         let lo = p.mean - 5 * p.sd;
         let hi = p.mean + 5 * p.sd;
-        for (let i = 0; i < 50; i++) {
+        // 36 halvings narrow 10 sd to about 1e−10 sd, far below the rounding of the answer.
+        for (let i = 0; i < 36; i++) {
           const mid = (lo + hi) / 2;
           if (area(p.mean, p.sd, null, mid) < target) lo = mid;
           else hi = mid;

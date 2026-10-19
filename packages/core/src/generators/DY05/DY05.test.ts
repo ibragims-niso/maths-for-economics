@@ -179,9 +179,10 @@ describe('saddle-path-initial-jump', () => {
         const mu = (dk * start[0] + dy * start[1]) / size(start) ** 2;
         const onPath = integrate(f, start, 2 / -mu, 0.05);
         expect(size(onPath)).toBeLessThan(0.15 * size(start));
+        // Runaway checks: |λ| ≤ 0.6 here, so a step of 0.25 is accurate and keeps the test fast.
         const T = 60;
         for (const shift of [-1, 1]) {
-          const off = integrate(f, [p.k0, value + shift], T, 0.05);
+          const off = integrate(f, [p.k0, value + shift], T, 0.25);
           expect(size(off)).toBeGreaterThan(size(start));
         }
         // A saddle: det < 0, eigenvalues of opposite signs.
@@ -199,7 +200,7 @@ describe('saddle-path-initial-jump', () => {
         const dv = byCode(distractors);
         // The nullcline start has k̇ = 0; the unstable-arm start runs away.
         expect(Math.abs(f([p.k0, dv.NULLCLINE_NOT_ARM ?? 0])[0])).toBeLessThan(1e-9);
-        const away = integrate(f, [p.k0, dv.UNSTABLE_ARM ?? 0], T, 0.05);
+        const away = integrate(f, [p.k0, dv.UNSTABLE_ARM ?? 0], T, 0.25);
         expect(size(away)).toBeGreaterThan(size(start));
       }),
       RUNS,

@@ -41,19 +41,16 @@ const longest = (net: Net) => Math.max(...lengths(net));
 
 /** The structure every drawn network must have. */
 function checkNetwork(net: Net) {
+  // Plain checks with one expect each: thousands of expect calls per run make the test slow.
   const n = net.duration.length;
-  expect(n).toBeGreaterThanOrEqual(5);
-  expect(n).toBeLessThanOrEqual(7);
-  for (const d of net.duration) {
-    expect(Number.isInteger(d)).toBe(true);
-    expect(d).toBeGreaterThanOrEqual(1);
-    expect(d).toBeLessThanOrEqual(9);
-  }
+  expect(n >= 5 && n <= 7, `${n} activities`).toBe(true);
+  const badDuration = net.duration.find((d) => !Number.isInteger(d) || d < 1 || d > 9);
+  expect(badDuration).toBeUndefined();
   // Predecessors always come earlier, and only the last activity ends the project.
-  net.preds.forEach((ps, i) => {
-    for (const j of ps) expect(j).toBeLessThan(i);
-  });
-  for (let i = 0; i < n - 1; i++) expect(net.preds.some((ps) => ps.includes(i))).toBe(true);
+  expect(net.preds.every((ps, i) => ps.every((j) => j < i))).toBe(true);
+  const succeeded = new Set(net.preds.flat());
+  const leadNowhere = net.duration.slice(0, -1).flatMap((_, i) => (succeeded.has(i) ? [] : [i]));
+  expect(leadNowhere).toEqual([]);
 }
 
 describe('cpm-project-duration', { timeout: SLOW }, () => {

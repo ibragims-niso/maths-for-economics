@@ -187,7 +187,8 @@ describe('z-test-power', () => {
   function cutOff(mu0: number, se: number, alpha: number, up: boolean): number {
     let lo = up ? mu0 : mu0 - 10 * se;
     let hi = up ? mu0 + 10 * se : mu0;
-    for (let k = 0; k < 60; k++) {
+    // 40 halvings narrow 10 se to about 1e−11 se, far below the rounding of the answer.
+    for (let k = 0; k < 40; k++) {
       const mid = (lo + hi) / 2;
       const size = up ? areaAbove(mu0, se, mid) : areaBelow(mu0, se, mid);
       if (size > alpha === up) lo = mid;
