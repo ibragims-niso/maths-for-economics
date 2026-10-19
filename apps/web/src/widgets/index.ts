@@ -35,6 +35,7 @@ import { GrowingStreamPV } from './GrowingStreamPV';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
 import { HaulierRouteBellman } from './HaulierRouteBellman';
 import { HypothesisTestExplorer } from './HypothesisTestExplorer';
+import { IncomeShiftEquilibrium } from './IncomeShiftEquilibrium';
 import { IndexNumberBasket } from './IndexNumberBasket';
 import { IndifferenceCurveMrs } from './IndifferenceCurveMrs';
 import { IndifferenceMap } from './IndifferenceMap';
@@ -121,6 +122,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'growth-rate-explorer': GrowthRateExplorer,
   'haulier-route-bellman': HaulierRouteBellman,
   'hypothesis-test-explorer': HypothesisTestExplorer,
+  'income-shift-equilibrium': IncomeShiftEquilibrium,
   'index-number-basket': IndexNumberBasket,
   'indifference-curve-mrs': IndifferenceCurveMrs,
   'indifference-map': IndifferenceMap,

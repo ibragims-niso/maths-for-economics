@@ -366,3 +366,8 @@ Euler's theorem: For a function homogeneous of degree k, x·f_x + y·f_y = k·f;
 product exhaustion: Under constant returns to scale, paying every input its marginal product uses up exactly the whole output.
 homothetic function: A function whose isoquants or indifference curves are enlarged copies of each other, so their slope is the same along any ray from the origin.
 money illusion: Mistaking changes in nominal prices and income for real changes; demand homogeneous of degree 0 means there is none.
+implicit function theorem: If F(x, y) = 0 at a point and F_y is not zero there, the equation defines y as a differentiable function of x near that point, with dy/dx = −F_x/F_y.
+Jacobian: The matrix of the first partial derivatives of a system of equations with respect to its unknowns; if its determinant is not zero, the solution changes smoothly with the parameters.
+endogenous variable: A variable whose value is determined inside an economic model, such as an equilibrium price.
+exogenous variable: A variable set outside an economic model and taken as given, such as income or a tax rate.
+crowding out: The fall in private investment when higher government spending raises the interest rate, which makes the spending multiplier smaller.

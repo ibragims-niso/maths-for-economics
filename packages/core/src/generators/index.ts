@@ -164,6 +164,9 @@ import { totalDifferentialOutputChange } from './MV03/total-differential-output-
 import { constantReturnsWageBill } from './MV04/constant-returns-wage-bill';
 import { eulerMarginalProductLabour } from './MV04/euler-marginal-product-labour';
 import { scaledInputsOutput } from './MV04/scaled-inputs-output';
+import { equilibriumPriceIncomeResponse } from './MV05/equilibrium-price-income-response';
+import { islmComparativeStaticsCramer } from './MV05/islm-comparative-statics-cramer';
+import { levelCurveSlopeIft } from './MV05/level-curve-slope-ift';
 import { cobbDouglasHessianDeterminant } from './MV06/cobb-douglas-hessian-determinant';
 import { mixedBundleUtility } from './MV06/mixed-bundle-utility';
 import { quadraticConcavityDeterminant } from './MV06/quadratic-concavity-determinant';
@@ -400,6 +403,9 @@ export const GENERATORS = [
   scaledInputsOutput,
   constantReturnsWageBill,
   eulerMarginalProductLabour,
+  levelCurveSlopeIft,
+  equilibriumPriceIncomeResponse,
+  islmComparativeStaticsCramer,
   quadraticConcavityDeterminant,
   mixedBundleUtility,
   cobbDouglasHessianDeterminant,
