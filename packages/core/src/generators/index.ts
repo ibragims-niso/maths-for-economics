@@ -149,6 +149,9 @@ import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-qu
 import { cobbDouglasMarginalProduct } from './MV02/cobb-douglas-marginal-product';
 import { directionalDerivativeUtility } from './MV02/directional-derivative-utility';
 import { jointCostPartialMarginalCost } from './MV02/joint-cost-partial-marginal-cost';
+import { cobbDouglasHessianDeterminant } from './MV06/cobb-douglas-hessian-determinant';
+import { mixedBundleUtility } from './MV06/mixed-bundle-utility';
+import { quadraticConcavityDeterminant } from './MV06/quadratic-concavity-determinant';
 import { hessianDeterminantTwoGoods } from './MV07/hessian-determinant-two-goods';
 import { priceDiscriminationTwoMarkets } from './MV07/price-discrimination-two-markets';
 import { twoProductOptimalOutput } from './MV07/two-product-optimal-output';
@@ -358,6 +361,9 @@ export const GENERATORS = [
   cobbDouglasMarginalProduct,
   jointCostPartialMarginalCost,
   directionalDerivativeUtility,
+  quadraticConcavityDeterminant,
+  mixedBundleUtility,
+  cobbDouglasHessianDeterminant,
   hessianDeterminantTwoGoods,
   twoProductOptimalOutput,
   priceDiscriminationTwoMarkets,

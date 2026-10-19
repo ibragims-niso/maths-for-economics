@@ -326,3 +326,8 @@ white noise: A series of random shocks with mean 0, the same variance every peri
 stationary time series: A time series whose mean, variance and autocovariances stay the same over time, so the link between two values depends only on how many periods apart they are.
 random walk: A series in which each value is the previous one plus a random shock, so shocks never fade and the variance keeps growing over time.
 unit root: The case φ = 1 in yₜ = c + φyₜ₋₁ + εₜ, which turns a series into a random walk; taking first differences removes it.
+convex set: A set that contains the whole straight segment between any two of its points, so it has no dents or holes.
+quasiconcave function: A function whose upper level sets (all points where it is at least c) are convex sets, so a mix of two points is at least as good as the worse of them.
+upper level set: All the points where a function is greater than or equal to a given value c, such as everything on or above an indifference curve.
+bordered Hessian: The Hessian matrix framed by a row and column of first partial derivatives; in two variables its determinant decides whether level curves bow towards the origin.
+diminishing marginal rate of substitution: The MRS falls as a consumer moves along an indifference curve towards more of one good, which happens when the curve bows towards the origin.
