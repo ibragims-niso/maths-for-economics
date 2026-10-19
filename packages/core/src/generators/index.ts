@@ -75,6 +75,9 @@ import { keynesRamseyConsumptionGrowth } from './DO02/keynes-ramsey-consumption-
 import { dpBudgetAllocationBestReturn } from './DO03/dp-budget-allocation-best-return';
 import { dpCakeEatingFirstConsumption } from './DO03/dp-cake-eating-first-consumption';
 import { dpStagedRouteLeastCost } from './DO03/dp-staged-route-least-cost';
+import { ramseyConsumptionGrowthAtCapital } from './DO04/ramsey-consumption-growth-at-capital';
+import { ramseyModifiedGoldenRuleCapital } from './DO04/ramsey-modified-golden-rule-capital';
+import { ramseySteadyStateConsumption } from './DO04/ramsey-steady-state-consumption';
 import { cobwebPriceAfterPeriods } from './DY01/cobweb-price-after-periods';
 import { debtRatioSteadyState } from './DY01/debt-ratio-steady-state';
 import { differenceEquationValueAfterT } from './DY01/difference-equation-value-after-t';
@@ -607,6 +610,9 @@ export const GENERATORS = [
   dpStagedRouteLeastCost,
   dpBudgetAllocationBestReturn,
   dpCakeEatingFirstConsumption,
+  ramseyModifiedGoldenRuleCapital,
+  ramseySteadyStateConsumption,
+  ramseyConsumptionGrowthAtCapital,
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,

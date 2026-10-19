@@ -466,3 +466,7 @@ certainty equivalent: The sure amount of money a person values exactly as much a
 risk premium: The gap between a gamble's expected value and its certainty equivalent, E[W] − CE; what a person would give up on average to remove the risk.
 risk aversion: Preferring a sure amount to a gamble with the same expected value, which in expected utility means a concave utility of money.
 coefficient of absolute risk aversion: The Arrow–Pratt measure A(W) = −u″(W)/u′(W) of how strongly a person dislikes a risk of a given size in money.
+modified golden rule: The steady state of an optimal growth model, where the marginal product of capital net of depreciation equals the rate of time preference, f′(k*) = ρ + δ.
+golden rule capital: The capital per worker that gives the most consumption per worker in the steady state, where f′(k) = n + δ.
+speed of convergence: The rate at which the gap between an economy and its steady state closes, given near the steady state by the size of the negative eigenvalue.
+Ramsey–Cass–Koopmans model: The growth model in which a planner or households choose saving to maximise discounted utility, so the saving rate comes out of the model instead of being fixed as in Solow.

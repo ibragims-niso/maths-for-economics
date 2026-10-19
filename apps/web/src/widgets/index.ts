@@ -78,6 +78,7 @@ import { ProfitHillTangent } from './ProfitHillTangent';
 import { QuadraticFormContours } from './QuadraticFormContours';
 import { QuasilinearCorner } from './QuasilinearCorner';
 import { QueueWaitingCurve } from './QueueWaitingCurve';
+import { RamseyPhaseDiagram } from './RamseyPhaseDiagram';
 import { RegressionFTest } from './RegressionFTest';
 import { ResourceExtractionPath } from './ResourceExtractionPath';
 import { RevenueProfit } from './RevenueProfit';
@@ -186,6 +187,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'profit-hill-tangent': ProfitHillTangent,
   'quadratic-form-contours': QuadraticFormContours,
   'quasilinear-corner-budget': QuasilinearCorner,
+  'ramsey-phase-diagram': RamseyPhaseDiagram,
   'regression-f-test': RegressionFTest,
   'resource-extraction-path': ResourceExtractionPath,
   'revenue-profit': RevenueProfit,
