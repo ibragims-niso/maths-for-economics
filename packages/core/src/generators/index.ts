@@ -51,6 +51,9 @@ import { powerSeriesRadius } from './C117/power-series-radius';
 import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
 import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
 import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
+import { cobwebPriceAfterPeriods } from './DY01/cobweb-price-after-periods';
+import { debtRatioSteadyState } from './DY01/debt-ratio-steady-state';
+import { differenceEquationValueAfterT } from './DY01/difference-equation-value-after-t';
 import { adjustedRSquared } from './EM01/adjusted-r-squared';
 import { olsCoefficientTwoRegressors } from './EM01/ols-coefficient-two-regressors';
 import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
@@ -385,6 +388,9 @@ export const GENERATORS = [
   cpmProjectDuration,
   cpmTotalFloat,
   cpmCrashNewDuration,
+  differenceEquationValueAfterT,
+  debtRatioSteadyState,
+  cobwebPriceAfterPeriods,
   xtxEntryFromData,
   olsCoefficientTwoRegressors,
   adjustedRSquared,

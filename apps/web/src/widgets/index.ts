@@ -10,6 +10,7 @@ import { CementShippingPlan } from './CementShippingPlan';
 import { ChainBaseGrowth } from './ChainBaseGrowth';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
 import { ChebyshevPooling } from './ChebyshevPooling';
+import { CobwebDiagram } from './CobwebDiagram';
 import { CompoundingFrequency } from './CompoundingFrequency';
 import { ConferenceCriticalPath } from './ConferenceCriticalPath';
 import { ConfidenceIntervalCoverage } from './ConfidenceIntervalCoverage';
@@ -81,6 +82,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'chain-base-growth': ChainBaseGrowth,
   'chain-rule-cost-time': ChainRuleCostTime,
   'chebyshev-pooling': ChebyshevPooling,
+  'cobweb-diagram': CobwebDiagram,
   'compounding-frequency': CompoundingFrequency,
   'conference-critical-path': ConferenceCriticalPath,
   'confidence-interval-coverage': ConfidenceIntervalCoverage,

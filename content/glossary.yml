@@ -303,3 +303,7 @@ zero conditional mean: The assumption E[u | X] = 0 that the error does not move,
 Gauss–Markov theorem: Under the classical assumptions with homoskedastic, uncorrelated errors, OLS has the smallest variance among all linear unbiased estimators (it is BLUE).
 omitted-variable bias: The bias β₂δ₁ in a regression slope when a variable that affects y and moves with an included regressor is left out.
 consistent estimator: An estimator that gets arbitrarily close to the true value, with probability approaching 1, as the sample grows.
+difference equation: A rule that gives each period's value of a variable from its value in earlier periods, such as y(t+1) = a·y(t) + b.
+steady state: A value that a dynamic rule turns into itself, so once the variable reaches it, it stays there; for y(t+1) = a·y(t) + b it is b/(1 − a).
+cobweb model: A market model in which producers decide supply from last period's price, so prices can swing above and below equilibrium from one period to the next.
+primary deficit: Government spending minus tax revenue, leaving out interest payments on existing debt.
