@@ -334,3 +334,8 @@ diminishing marginal rate of substitution: The MRS falls as a consumer moves alo
 Lagrangian: The function f − λ(g − c) that combines an objective with a constraint so that a constrained optimum can be found from first-order conditions.
 Lagrange multiplier: The extra unknown λ in a Lagrangian; at the optimum it is the ratio of the objective's gradient to the constraint's gradient.
 tangency condition: At the best choice on a budget the indifference curve just touches the budget line, so the MRS equals the price ratio (for a firm, the MRTS equals w/r).
+Kuhn–Tucker conditions: The first-order conditions for optimisation with inequality constraints and non-negative variables; stationarity of the Lagrangian, non-negative multipliers and complementary slackness.
+corner solution: An optimum where one or more choice variables are zero, for example a consumer who buys none of a good.
+quasilinear utility: A utility function of the form v(x) + y, linear in one good, so demand for x does not depend on income unless income is very low.
+rationing: A limit on how much of a good each person may buy, which changes choices only when the limit binds.
+non-negativity constraint: The requirement that a choice variable such as a quantity cannot be negative, x ≥ 0.

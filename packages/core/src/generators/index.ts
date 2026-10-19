@@ -161,6 +161,9 @@ import { lagrangeMultiplierUtility } from './MV08/lagrange-multiplier-utility';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
+import { capacityMultiplierTwoProducts } from './OP01/capacity-multiplier-two-products';
+import { quasilinearDemandCorner } from './OP01/quasilinear-demand-corner';
+import { rationingQuotaOtherGood } from './OP01/rationing-quota-other-good';
 import { lpMaxProfitTwoProducts } from './OP02/lp-max-profit-two-products';
 import { lpMinCostFeedBlend } from './OP02/lp-min-cost-feed-blend';
 import { lpUnusedHoursAtOptimum } from './OP02/lp-unused-hours-at-optimum';
@@ -397,6 +400,9 @@ export const GENERATORS = [
   chebyshevIntervalBound,
   sampleMeanChebyshevBound,
   chebyshevSampleSize,
+  quasilinearDemandCorner,
+  rationingQuotaOtherGood,
+  capacityMultiplierTwoProducts,
   lpMaxProfitTwoProducts,
   lpUnusedHoursAtOptimum,
   lpMinCostFeedBlend,

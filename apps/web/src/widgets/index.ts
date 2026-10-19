@@ -53,6 +53,7 @@ import { PartialEffectWages } from './PartialEffectWages';
 import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitHillTangent } from './ProfitHillTangent';
+import { QuasilinearCorner } from './QuasilinearCorner';
 import { QueueWaitingCurve } from './QueueWaitingCurve';
 import { RegressionFTest } from './RegressionFTest';
 import { RevenueProfit } from './RevenueProfit';
@@ -134,6 +135,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'power-explorer': PowerExplorer,
   'production-concavity': ProductionConcavity,
   'profit-hill-tangent': ProfitHillTangent,
+  'quasilinear-corner-budget': QuasilinearCorner,
   'regression-f-test': RegressionFTest,
   'revenue-profit': RevenueProfit,
   'riemann-sum-marginal-cost': RiemannSumMarginalCost,
