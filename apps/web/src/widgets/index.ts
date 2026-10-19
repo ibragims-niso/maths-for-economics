@@ -36,6 +36,7 @@ import { EpsilonDeltaSquare } from './EpsilonDeltaSquare';
 import { EquilibriumTax } from './EquilibriumTax';
 import { EulerReturnsToScale } from './EulerReturnsToScale';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
+import { FixedPointStaircase } from './FixedPointStaircase';
 import { FleetIntegerPlan } from './FleetIntegerPlan';
 import { GeometricPartialSums } from './GeometricPartialSums';
 import { GradientLevelCurves } from './GradientLevelCurves';
@@ -138,6 +139,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'equilibrium-tax': EquilibriumTax,
   'euler-returns-to-scale': EulerReturnsToScale,
   'fixed-cost-break-even': FixedCostBreakEven,
+  'fixed-point-staircase': FixedPointStaircase,
   'fleet-integer-plan': FleetIntegerPlan,
   'geometric-partial-sums': GeometricPartialSums,
   'gradient-level-curves': GradientLevelCurves,

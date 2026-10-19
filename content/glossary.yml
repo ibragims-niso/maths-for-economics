@@ -447,3 +447,8 @@ open set: A set in which every point has a small open ball around it that stays 
 closed set: A set that contains all its boundary points, so the limit of any convergent sequence of its points stays in the set; weak inequalities such as p·x ≤ M give closed sets.
 compact set: A set in ℝⁿ that is both closed and bounded, such as a budget set with all prices positive.
 Weierstrass theorem: The result that a continuous function on a non-empty compact set attains a maximum and a minimum, which guarantees that a best choice exists.
+fixed point: A value that a map leaves unchanged, x* = f(x*); on a graph, a point where y = f(x) meets the 45° line.
+contraction mapping: A map that brings every two points closer together by at least a fixed factor k < 1, so |f(x) − f(y)| ≤ k|x − y|.
+Brouwer's fixed-point theorem: Every continuous map of a non-empty, compact, convex set into itself has at least one fixed point.
+Banach fixed-point theorem: A contraction on a closed set has exactly one fixed point, and repeating the map from any start converges to it.
+price simplex: The set of non-negative price lists that add up to 1, used when only relative prices matter.

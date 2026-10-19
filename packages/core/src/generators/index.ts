@@ -11,6 +11,9 @@ import { epsilonDeltaLinear } from './AN03/epsilon-delta-linear';
 import { budgetLineDistance } from './AN04/budget-line-distance';
 import { budgetSetLargestBall } from './AN04/budget-set-largest-ball';
 import { compactBudgetMaxUtility } from './AN04/compact-budget-max-utility';
+import { banachIterationsNeeded } from './AN05/banach-iterations-needed';
+import { cournotBestResponseFixedPoint } from './AN05/cournot-best-response-fixed-point';
+import { linearContractionFixedPoint } from './AN05/linear-contraction-fixed-point';
 import { continuousTariffParameter } from './C101/continuous-tariff-parameter';
 import { limitByCancelling } from './C101/limit-by-cancelling';
 import { longRunCostRatio } from './C101/long-run-cost-ratio';
@@ -583,6 +586,9 @@ export const GENERATORS = [
   budgetLineDistance,
   compactBudgetMaxUtility,
   budgetSetLargestBall,
+  linearContractionFixedPoint,
+  banachIterationsNeeded,
+  cournotBestResponseFixedPoint,
   dpStagedRouteLeastCost,
   dpBudgetAllocationBestReturn,
   dpCakeEatingFirstConsumption,
