@@ -140,6 +140,9 @@ import { twoAssetPortfolioRisk } from './ST201/two-asset-portfolio-risk';
 import { sampleMeanTailProbability } from './ST202/sample-mean-tail-probability';
 import { sampleProportionProbability } from './ST202/sample-proportion-probability';
 import { sampleSizeForPrecision } from './ST202/sample-size-for-precision';
+import { ciMeanKnownSigmaLimit } from './ST203/ci-mean-known-sigma-limit';
+import { ciMeanTSmallSample } from './ST203/ci-mean-t-small-sample';
+import { ciProportionLimit } from './ST203/ci-proportion-limit';
 import { chebyshevIntervalBound } from './ST206/chebyshev-interval-bound';
 import { chebyshevSampleSize } from './ST206/chebyshev-sample-size';
 import { sampleMeanChebyshevBound } from './ST206/sample-mean-chebyshev-bound';
@@ -288,6 +291,9 @@ export const GENERATORS = [
   sampleMeanTailProbability,
   sampleProportionProbability,
   sampleSizeForPrecision,
+  ciMeanKnownSigmaLimit,
+  ciProportionLimit,
+  ciMeanTSmallSample,
   chebyshevIntervalBound,
   sampleMeanChebyshevBound,
   chebyshevSampleSize,

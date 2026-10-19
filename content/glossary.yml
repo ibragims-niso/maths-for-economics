@@ -210,3 +210,8 @@ Chebyshev's inequality: For any distribution, the chance of landing k or more st
 sample mean: The average X̄ of n independent draws from a distribution; it has the same mean μ as one draw and variance σ²/n.
 law of large numbers: The result that the average of many independent draws gets ever closer to the true mean as the number of draws grows.
 risk pooling: Combining many independent risks so that the average loss per unit becomes predictable even though each single loss is not.
+estimator: A rule that turns sample data into a guess for an unknown population number, such as the sample mean for the population mean; the number it gives is the estimate.
+unbiased estimator: An estimator whose average over all possible samples equals the true value, such as the sample variance with divisor n − 1.
+confidence interval: A range computed from a sample by a method that covers the true value in a stated share of samples, such as 95 %.
+margin of error: The half-width of a confidence interval, such as z·σ/√n for a mean; the interval is the estimate plus or minus this amount.
+t distribution: A bell-shaped distribution with fatter tails than the normal, used for intervals when σ is estimated by s; it has n − 1 degrees of freedom for a mean.

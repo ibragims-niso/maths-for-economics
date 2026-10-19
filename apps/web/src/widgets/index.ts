@@ -8,6 +8,7 @@ import { BudgetVectors } from './BudgetVectors';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
 import { ChebyshevPooling } from './ChebyshevPooling';
 import { CompoundingFrequency } from './CompoundingFrequency';
+import { ConfidenceIntervalCoverage } from './ConfidenceIntervalCoverage';
 import { ContinuousDiscountArea } from './ContinuousDiscountArea';
 import { DeterminantArea } from './DeterminantArea';
 import { DiscountingExplorer } from './DiscountingExplorer';
@@ -60,6 +61,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'chain-rule-cost-time': ChainRuleCostTime,
   'chebyshev-pooling': ChebyshevPooling,
   'compounding-frequency': CompoundingFrequency,
+  'confidence-interval-coverage': ConfidenceIntervalCoverage,
   'continuous-discount-area': ContinuousDiscountArea,
   'cost-antiderivative-family': AntiderivativeFamily,
   'determinant-area': DeterminantArea,
