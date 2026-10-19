@@ -66,6 +66,9 @@ import { omittedVariableBiasSlope } from './EM02/omitted-variable-bias-slope';
 import { coefficientTStatistic } from './EM03/coefficient-t-statistic';
 import { fStatisticRestrictedSsr } from './EM03/f-statistic-restricted-ssr';
 import { tStatisticFromXtxInverse } from './EM03/t-statistic-from-xtx-inverse';
+import { breuschPaganLmStatistic } from './EM04/breusch-pagan-lm-statistic';
+import { durbinWatsonStatistic } from './EM04/durbin-watson-statistic';
+import { robustSeSimpleRegression } from './EM04/robust-se-simple-regression';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -406,6 +409,9 @@ export const GENERATORS = [
   coefficientTStatistic,
   fStatisticRestrictedSsr,
   tStatisticFromXtxInverse,
+  breuschPaganLmStatistic,
+  durbinWatsonStatistic,
+  robustSeSimpleRegression,
   bimatrixNashPayoff,
   pureNashCount,
   cournotDuopolyEquilibrium,

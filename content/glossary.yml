@@ -317,3 +317,8 @@ Bellman equation: The rule that links values at successive stages; the value of 
 principle of optimality: Whatever has happened so far, the remaining part of an optimal plan must itself be optimal from the current state.
 backward induction: Solving a multi-stage problem from the last stage back to the first, so each decision is made knowing the best continuation.
 reservation wage: The lowest wage offer an unemployed worker will accept; offers below it are rejected in the hope of a better one.
+heteroskedasticity: The errors of a regression have different variances for different observations, for example a wider spread of food spending among rich households than among poor ones.
+autocorrelation: Correlation between the errors of a time-series regression in different periods, so that a shock in one period carries over into the next; also called serial correlation.
+Breusch–Pagan test: A test of constant error variance that regresses the squared residuals on the regressors and compares n·R² with a χ² critical value.
+Durbin–Watson statistic: d = Σ(eₜ − eₜ₋₁)²/Σeₜ², roughly 2(1 − ρ̂); values well below 2 point to positive autocorrelation of the errors.
+robust standard error: A standard error that stays valid when the error variance differs between observations, computed from each observation's own squared residual (White); the Newey–West version also allows for autocorrelation.

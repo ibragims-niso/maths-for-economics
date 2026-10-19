@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react';
 import { AnnuityExplorer } from './AnnuityExplorer';
 import { AntiderivativeFamily } from './AntiderivativeFamily';
+import { Ar1ErrorRuns } from './Ar1ErrorRuns';
 import { AuditBestResponses } from './AuditBestResponses';
 import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
 import { BinomialPoissonBars } from './BinomialPoissonBars';
@@ -75,6 +76,7 @@ import { ZeroSumLowerEnvelope } from './ZeroSumLowerEnvelope';
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
   'annuity-explorer': AnnuityExplorer,
+  'ar1-error-runs': Ar1ErrorRuns,
   'audit-best-responses': AuditBestResponses,
   'bayes-natural-frequencies': BayesNaturalFrequencies,
   'binomial-poisson-bars': BinomialPoissonBars,
