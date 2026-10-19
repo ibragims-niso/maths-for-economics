@@ -7,6 +7,7 @@ import { Ar1ShockPath } from './Ar1ShockPath';
 import { AuditBestResponses } from './AuditBestResponses';
 import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
 import { BernoulliLogLikelihood } from './BernoulliLogLikelihood';
+import { BinomialOptionTree } from './BinomialOptionTree';
 import { BinomialPoissonBars } from './BinomialPoissonBars';
 import { BondPriceYield } from './BondPriceYield';
 import { BreakEvenLines } from './BreakEvenLines';
@@ -114,6 +115,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'ar1-shock-path': Ar1ShockPath,
   'audit-best-responses': AuditBestResponses,
   'bayes-natural-frequencies': BayesNaturalFrequencies,
+  'binomial-option-tree': BinomialOptionTree,
   'binomial-poisson-bars': BinomialPoissonBars,
   'bond-price-yield': BondPriceYield,
   'break-even-lines': BreakEvenLines,

@@ -474,3 +474,8 @@ Brownian motion: The continuous-time limit of a random walk with tiny steps, who
 geometric Brownian motion: A model of a price whose logarithm follows Brownian motion with drift, so the price stays positive and its expected value grows at a constant rate.
 square-root-of-time rule: For independent changes, the standard deviation over T periods is √T times the one-period standard deviation.
 gambler's ruin: The chance that a player in a fair game starting with a loses everything before reaching a + b, equal to b/(a + b).
+call option: The right, but not the obligation, to buy an asset at a fixed strike price on or before a set date.
+put option: The right, but not the obligation, to sell an asset at a fixed strike price on or before a set date.
+arbitrage: A trading strategy that makes a riskless profit with no money of your own; prices in a working market leave no such chances.
+risk-neutral probability: The weight q = (R − d)/(u − d) that prices options as discounted averages of their payoffs; it is a pricing device, not the real chance of a rise.
+replicating portfolio: A mix of the underlying asset and risk-free borrowing or lending that pays exactly the same as an option in every state, so it must cost the same.

@@ -269,6 +269,9 @@ import { lotteryCertaintyEquivalent } from './SP02/lottery-certainty-equivalent'
 import { brownianDriftLevelProbability } from './SP03/brownian-drift-level-probability';
 import { randomWalkLevelProbability } from './SP03/random-walk-level-probability';
 import { squareRootTimeRisk } from './SP03/square-root-time-risk';
+import { binomialTreeCallOnePeriod } from './SP04/binomial-tree-call-one-period';
+import { binomialTreePutTwoPeriod } from './SP04/binomial-tree-put-two-period';
+import { binomialTreeReplicatingLoan } from './SP04/binomial-tree-replicating-loan';
 import { littlesLawQueue } from './SP05/littles-law-queue';
 import { mm1AtLeastNProbability } from './SP05/mm1-at-least-n-probability';
 import { mm1QueueMeasures } from './SP05/mm1-queue-measures';
@@ -625,6 +628,9 @@ export const GENERATORS = [
   squareRootTimeRisk,
   randomWalkLevelProbability,
   brownianDriftLevelProbability,
+  binomialTreeCallOnePeriod,
+  binomialTreeReplicatingLoan,
+  binomialTreePutTwoPeriod,
   littlesLawQueue,
   mm1QueueMeasures,
   mm1AtLeastNProbability,
