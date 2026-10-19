@@ -225,3 +225,8 @@ Markov property: The rule that the chance of the next state depends only on the 
 stationary distribution: The shares of the states that a Markov chain keeps unchanged from one period to the next, found by solving πP = π with the shares adding up to 1.
 regular Markov chain: A chain in which some power of the transition matrix has every entry positive, so the shares approach the same long-run distribution from any start.
 absorbing state: A state that can never be left once entered, such as default in a credit-rating model.
+median: The middle value of a data set sorted by size (the average of the two middle values when n is even); unlike the mean, it hardly moves when one value becomes extreme.
+interquartile range: The upper quartile minus the lower quartile, Q3 − Q1, the width of the middle half of the data.
+coefficient of variation: The standard deviation divided by the mean, usually in per cent, used to compare spread across data sets with different units or levels.
+right-skewed: Describes data with a long tail of a few very large values, such as incomes or house prices, so that the mean lies above the median.
+outlier: An observation far from the rest of the data; in a box plot, a value more than 1.5 × IQR below Q1 or above Q3.

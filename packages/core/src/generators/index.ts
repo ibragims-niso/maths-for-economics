@@ -125,6 +125,9 @@ import { triangleRegionTotal } from './MV13/triangle-region-total';
 import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
 import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
 import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
+import { groupedFrequencyMean } from './ST101/grouped-frequency-mean';
+import { meanOrMedianSmallData } from './ST101/mean-or-median-small-data';
+import { sampleStandardDeviation } from './ST101/sample-standard-deviation';
 import { bayesDefaultGivenSignal } from './ST102/bayes-default-given-signal';
 import { meetingWindowProbability } from './ST102/meeting-window-probability';
 import { sampleDefectivesProbability } from './ST102/sample-defectives-probability';
@@ -265,6 +268,9 @@ export const GENERATORS = [
   inverse2x2Entry,
   equilibriumPricesInverse,
   inverse3x3CofactorEntry,
+  meanOrMedianSmallData,
+  groupedFrequencyMean,
+  sampleStandardDeviation,
   sampleDefectivesProbability,
   bayesDefaultGivenSignal,
   meetingWindowProbability,
