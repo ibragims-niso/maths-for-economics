@@ -42,6 +42,9 @@ import { deadweightLossPerUnitTax } from './C114/deadweight-loss-per-unit-tax';
 import { presentValueGrowingStream } from './C115/present-value-growing-stream';
 import { substitutionTotalFromMarginal } from './C115/substitution-total-from-marginal';
 import { totalOutputLogRate } from './C115/total-output-log-rate';
+import { continuousStreamPresentValue } from './C116/continuous-stream-present-value';
+import { growingContinuousStreamValue } from './C116/growing-continuous-stream-value';
+import { improperPowerIntegral } from './C116/improper-power-integral';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -199,6 +202,9 @@ export const GENERATORS = [
   substitutionTotalFromMarginal,
   presentValueGrowingStream,
   totalOutputLogRate,
+  continuousStreamPresentValue,
+  growingContinuousStreamValue,
+  improperPowerIntegral,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,

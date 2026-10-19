@@ -158,3 +158,8 @@ consumer surplus: The total value buyers place on what they buy minus what they 
 producer surplus: What sellers receive minus the least they would have accepted, the area between the price and the supply curve.
 deadweight loss: The fall in total surplus when a tax or price control stops trades that would have benefited both sides.
 gains from trade: The total surplus created by a market, consumer surplus plus producer surplus.
+improper integral: An integral over an infinite interval, or of a function that becomes infinite at an end of the interval, defined as the limit of ordinary definite integrals.
+convergent integral: An improper integral whose limit exists as a finite number, which is then its value.
+divergent integral: An improper integral whose limit is infinite or does not exist, so it has no finite value.
+continuous income stream: Income received smoothly at a rate per year rather than in separate payments; its present value is the integral of the discounted rate.
+continuous discounting: Converting future amounts to today's value with the factor e^(−rt), the reverse of continuous compounding.
