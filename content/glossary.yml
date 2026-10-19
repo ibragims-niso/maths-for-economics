@@ -167,3 +167,8 @@ solid of revolution: The solid formed by spinning a region of the plane around a
 arc length: The length of a curve between two points, found by adding up the lengths of tiny, almost straight pieces of it.
 line integral: An integral that adds up a quantity along a curve, either a value per unit of length (first kind) or a force times movement (second kind).
 path independence: The property that a line integral depends only on where a route starts and ends, not on the route taken between them.
+partial sum: The total of the first n terms of a series; the series converges when these totals settle at a fixed number.
+divergent series: A series whose running total grows without limit or keeps jumping about, so it has no finite sum.
+harmonic series: The series 1 + 1/2 + 1/3 + …, which diverges even though its terms shrink to 0.
+power series: An endless polynomial a₀ + a₁(x − c) + a₂(x − c)² + … whose sum depends on x.
+radius of convergence: The distance R from the centre of a power series within which the series converges; outside it the series diverges.

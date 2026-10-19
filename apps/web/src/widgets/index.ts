@@ -12,6 +12,7 @@ import { DoublingTime } from './DoublingTime';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
 import { FixedCostBreakEven } from './FixedCostBreakEven';
+import { GeometricPartialSums } from './GeometricPartialSums';
 import { GradientLevelCurves } from './GradientLevelCurves';
 import { GrowingStreamPV } from './GrowingStreamPV';
 import { GrowthRateExplorer } from './GrowthRateExplorer';
@@ -56,6 +57,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
   'fixed-cost-break-even': FixedCostBreakEven,
+  'geometric-partial-sums': GeometricPartialSums,
   'gradient-level-curves': GradientLevelCurves,
   'growing-stream-present-value': GrowingStreamPV,
   'growth-rate-explorer': GrowthRateExplorer,

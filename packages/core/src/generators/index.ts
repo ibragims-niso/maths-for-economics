@@ -45,6 +45,9 @@ import { totalOutputLogRate } from './C115/total-output-log-rate';
 import { continuousStreamPresentValue } from './C116/continuous-stream-present-value';
 import { growingContinuousStreamValue } from './C116/growing-continuous-stream-value';
 import { improperPowerIntegral } from './C116/improper-power-integral';
+import { infiniteGeometricSeriesSum } from './C117/infinite-geometric-series-sum';
+import { maclaurinPartialSumEstimate } from './C117/maclaurin-partial-sum-estimate';
+import { powerSeriesRadius } from './C117/power-series-radius';
 import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
 import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
 import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
@@ -208,6 +211,9 @@ export const GENERATORS = [
   continuousStreamPresentValue,
   growingContinuousStreamValue,
   improperPowerIntegral,
+  infiniteGeometricSeriesSum,
+  maclaurinPartialSumEstimate,
+  powerSeriesRadius,
   volumeOfRevolutionDisc,
   lineIntegralWorkSegment,
   arcLengthThreeHalvesPower,
