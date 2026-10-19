@@ -81,3 +81,6 @@ Canonical English terms and short definitions (e.g. *marginal cost*, *price elas
 2. Claude Code writes `verify` blocks and generators with tests; CI must pass.
 3. Status `draft → reviewed` after a human reads it in the app (preview deployment).
 4. `reviewed → verified` after one round of practice by a student with no unresolved error reports.
+
+## Symbols
+Every maths symbol used in a topic is explained in Help → Symbols, from `content/symbols.yml` (kept by the app session). `validate:content` warns when a topic uses a LaTeX symbol that has no entry there; the warning never blocks a topic.

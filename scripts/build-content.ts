@@ -15,6 +15,7 @@ import {
   type CompiledExample,
   type CompiledTopic,
   parseTopicFile,
+  symbolsSchema,
   type TopicContext,
   topicFrontmatterSchema,
 } from '@mfe/core';
@@ -27,6 +28,7 @@ import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
+import { parse as parseYaml } from 'yaml';
 import { readText, repoRoot } from './lib/report';
 
 const parser = unified().use(remarkParse).use(remarkMath).use(remarkDirective);
@@ -230,6 +232,11 @@ for (const topic of content.topics) {
   writeFileSync(join(topicsOut, `${topic.id}.json`), JSON.stringify(topic));
 }
 writeFileSync(join(outDir, 'meta.json'), JSON.stringify({ version: content.version }));
+// Help → Symbols, from content/symbols.yml.
+writeFileSync(
+  join(outDir, 'symbols.json'),
+  JSON.stringify(symbolsSchema.parse(parseYaml(readText(join(repoRoot, 'content/symbols.yml'))))),
+);
 // Mistake labels and explanations for results, Progress and the mentor page, without topic text.
 writeFileSync(
   join(outDir, 'mistakes.json'),

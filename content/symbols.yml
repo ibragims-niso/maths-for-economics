@@ -1,0 +1,394 @@
+# Maths symbols used in the topics, explained for a first-year student (Help → Symbols).
+# `latex` is how the symbol is drawn; `covers` lists the LaTeX commands this entry explains.
+# validate:content checks that every symbol command used in content/topics is covered here.
+
+- group: Comparing values
+  items:
+    - latex: '='
+      name: equals
+      meaning: Both sides have the same value.
+      example: 'Q_d = Q_s'
+    - latex: '\neq'
+      name: not equal to
+      meaning: The two sides have different values.
+      example: 'x \neq 0'
+      covers: ['\neq', '\ne']
+    - latex: '\approx'
+      name: approximately equal to
+      meaning: The values are close, usually after rounding.
+      example: '\pi \approx 3.14'
+      covers: ['\approx']
+    - latex: '<, \; >'
+      name: less than, greater than
+      meaning: The left side is smaller (or larger) than the right side.
+      example: 'P < 20'
+    - latex: '\le, \; \ge'
+      name: less than or equal to, greater than or equal to
+      meaning: Like < and >, but the two sides may also be equal.
+      example: 'Q \ge 0'
+      covers: ['\le', '\ge']
+    - latex: '\equiv'
+      name: identical to, defined as
+      meaning: The two sides are equal by definition, for every value.
+      example: 'TR \equiv P \cdot Q'
+      covers: ['\equiv']
+    - latex: '\propto'
+      name: proportional to
+      meaning: One quantity is a fixed multiple of the other.
+      example: 'y \propto x'
+      covers: ['\propto']
+
+- group: Arithmetic
+  items:
+    - latex: '\cdot, \; \times'
+      name: multiplied by
+      meaning: Multiplication. Letters written side by side are also multiplied, so 2P means 2 times P.
+      example: '3 \cdot 4 = 3 \times 4 = 12'
+      covers: ['\cdot', '\times']
+    - latex: '\div, \; \tfrac{a}{b}'
+      name: divided by, a fraction
+      meaning: Division. A fraction a over b means a divided by b.
+      example: '\tfrac{6}{3} = 6 \div 3 = 2'
+      covers: ['\div']
+    - latex: '\pm'
+      name: plus or minus
+      meaning: Two values, one with + and one with −.
+      example: 'x = 2 \pm 1 \text{ means } x = 3 \text{ or } x = 1'
+      covers: ['\pm']
+    - latex: '\sqrt{x}'
+      name: square root
+      meaning: The non-negative number that, multiplied by itself, gives x.
+      example: '\sqrt{25} = 5'
+      covers: ['\sqrt']
+    - latex: 'x^{n}'
+      name: power, exponent
+      meaning: x multiplied by itself n times. A negative power means one over it, a fraction means a root.
+      example: '2^3 = 8, \quad x^{-1} = \tfrac{1}{x}, \quad x^{1/2} = \sqrt{x}'
+    - latex: '|x|'
+      name: absolute value
+      meaning: The size of a number without its sign.
+      example: '|-0.67| = 0.67'
+      covers: ['|', '\lvert', '\rvert']
+    - latex: 'n!'
+      name: factorial
+      meaning: 'n times every whole number below it down to 1. By definition 0! = 1.'
+      example: '4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24'
+      covers: ['!']
+    - latex: '\binom{n}{k}'
+      name: binomial coefficient, "n choose k"
+      meaning: The number of ways to choose k items out of n, when order does not matter.
+      example: '\binom{5}{2} = 10'
+      covers: ['\binom', '\dbinom']
+    - latex: '\lceil x \rceil, \; \lfloor x \rfloor'
+      name: rounding up, rounding down
+      meaning: The nearest whole number above (ceiling) or below (floor) x.
+      example: '\lceil 2.3 \rceil = 3, \quad \lfloor 2.7 \rfloor = 2'
+      covers: ['\lceil', '\rceil', '\lfloor', '\rfloor']
+
+- group: Changes, calculus and limits
+  items:
+    - latex: '\Delta x'
+      name: delta, a change
+      meaning: How much x changed between two points.
+      example: '\Delta P = P_2 - P_1'
+      covers: ['\Delta']
+    - latex: '\tfrac{dy}{dx}, \; f''(x)'
+      name: derivative
+      meaning: The rate at which y changes when x changes a tiny amount; the slope at a point.
+      example: '\tfrac{d}{dx} x^2 = 2x'
+      covers: ['\prime']
+    - latex: '\tfrac{\partial f}{\partial x}'
+      name: partial derivative
+      meaning: How f changes when only x changes and all other variables stay fixed.
+      example: '\tfrac{\partial}{\partial K}(K L) = L'
+      covers: ['\partial']
+    - latex: '\nabla f'
+      name: gradient
+      meaning: The list of all partial derivatives of f; it points in the direction f rises fastest.
+      example: '\nabla f = \left(\tfrac{\partial f}{\partial x}, \tfrac{\partial f}{\partial y}\right)'
+      covers: ['\nabla']
+    - latex: '\dot{x}, \; \ddot{x}'
+      name: dot, double dot
+      meaning: The rate of change of x over time, and the rate of change of that rate.
+      example: '\dot{K} = sY - \delta K'
+      covers: ['\dot', '\ddot']
+    - latex: '\int f(x)\,dx'
+      name: integral
+      meaning: Adding up f over a range; the area under the curve. With limits a and b, from a to b.
+      example: '\int_0^2 x\,dx = 2'
+      covers: ['\int', '\iint']
+    - latex: '\lim_{x \to a}'
+      name: limit
+      meaning: The value an expression approaches as x gets closer and closer to a.
+      example: '\lim_{x \to 0} \tfrac{\sin x}{x} = 1'
+      covers: ['\lim']
+    - latex: '\to'
+      name: tends to, maps to
+      meaning: Gets closer and closer to; between sets, a function going from one set to another.
+      example: 'x \to \infty'
+      covers: ['\to', '\longrightarrow', '\xrightarrow']
+    - latex: '\infty'
+      name: infinity
+      meaning: Larger than any number; not a number itself.
+      example: '\sum_{t=1}^{\infty} \tfrac{1}{2^t} = 1'
+      covers: ['\infty']
+    - latex: 'f \circ g'
+      name: composition
+      meaning: Apply g first, then f.
+      example: '(f \circ g)(x) = f(g(x))'
+      covers: ['\circ']
+
+- group: Sums and products
+  items:
+    - latex: '\sum_{i=1}^{n} x_i'
+      name: sum (capital sigma)
+      meaning: Add up x for every i from 1 to n.
+      example: '\sum_{i=1}^{3} i = 1 + 2 + 3 = 6'
+      covers: ['\sum', '\Sigma']
+    - latex: '\prod_{i=1}^{n} x_i'
+      name: product (capital pi)
+      meaning: Multiply x for every i from 1 to n.
+      example: '\prod_{i=1}^{3} i = 6'
+      covers: ['\prod']
+    - latex: 'x_1, \dots, x_n'
+      name: dots
+      meaning: And so on, following the same pattern.
+      example: '1, 2, \dots, 10'
+      covers: ['\dots', '\ldots', '\cdots', '\vdots', '\ddots']
+
+- group: Logic and sets
+  items:
+    - latex: '\Rightarrow'
+      name: implies
+      meaning: If the left side is true, the right side is true.
+      example: 'x > 2 \Rightarrow x > 1'
+      covers: ['\Rightarrow', '\Longrightarrow']
+    - latex: '\iff'
+      name: if and only if
+      meaning: Each side implies the other; they are true or false together.
+      example: 'x^2 = 4 \text{ and } x > 0 \iff x = 2'
+      covers: ['\iff', '\Leftrightarrow', '\Longleftrightarrow', '\leftrightarrow', '\longleftrightarrow']
+    - latex: '\in, \; \notin'
+      name: is in, is not in
+      meaning: Belongs (or does not belong) to a set.
+      example: '3 \in \{1, 2, 3\}'
+      covers: ['\in', '\notin']
+    - latex: '\{ \dots \}'
+      name: set
+      meaning: A collection of things listed between curly brackets.
+      example: 'A = \{1, 2, 3\}'
+      covers: ['\{', '\}']
+    - latex: '\{ x : x > 0 \}'
+      name: such that
+      meaning: The colon or vertical bar inside a set means "such that".
+      example: '\{ x \mid x > 0 \}'
+      covers: ['\mid']
+    - latex: '\subseteq, \; \subset'
+      name: subset
+      meaning: Every element of the left set is also in the right set.
+      example: '\{1, 2\} \subseteq \{1, 2, 3\}'
+      covers: ['\subseteq', '\subset']
+    - latex: '\cup, \; \cap'
+      name: union, intersection
+      meaning: In either set (union), or in both sets (intersection).
+      example: '\{1,2\} \cup \{2,3\} = \{1,2,3\}, \quad \{1,2\} \cap \{2,3\} = \{2\}'
+      covers: ['\cup', '\cap']
+    - latex: 'A \setminus B'
+      name: set difference
+      meaning: Elements of A that are not in B.
+      example: '\{1,2,3\} \setminus \{2\} = \{1,3\}'
+      covers: ['\setminus', '\backslash']
+    - latex: '\varnothing'
+      name: empty set
+      meaning: A set with nothing in it.
+      example: '\{1\} \cap \{2\} = \varnothing'
+      covers: ['\varnothing']
+    - latex: '\forall, \; \exists'
+      name: for all, there exists
+      meaning: Something holds for every element, or for at least one.
+      example: '\forall x \in \mathbb{R}: x^2 \ge 0'
+      covers: ['\forall', '\exists']
+    - latex: '\lnot, \; \land, \; \lor'
+      name: not, and, or
+      meaning: Logic connectives. "Or" allows both to be true.
+      example: '\lnot(A \land B) \iff \lnot A \lor \lnot B'
+      covers: ['\lnot', '\land', '\lor']
+    - latex: '\mathbb{R}, \; \mathbb{R}^n'
+      name: real numbers, n-dimensional space
+      meaning: All numbers on the number line; lists of n real numbers.
+      example: '(2, 5) \in \mathbb{R}^2'
+      covers: ['\mathbb']
+    - latex: 'x \mapsto f(x)'
+      name: maps to
+      meaning: The rule that sends each x to f(x).
+      example: 'x \mapsto x^2'
+      covers: ['\mapsto']
+
+- group: Functions
+  items:
+    - latex: 'f(x)'
+      name: function of x
+      meaning: A rule that gives one output for each input x.
+      example: 'C(Q) = 100 + 5Q'
+    - latex: 'e^{x}, \; \ln x'
+      name: exponential, natural logarithm
+      meaning: e ≈ 2.718 is the base of continuous growth; ln undoes it, so ln(eˣ) = x.
+      example: '\ln e^3 = 3'
+      covers: ['\ln']
+    - latex: '\log_b x'
+      name: logarithm to base b
+      meaning: The power you raise b to in order to get x.
+      example: '\log_{10} 1000 = 3'
+      covers: ['\log']
+    - latex: '\max, \; \min'
+      name: largest, smallest
+      meaning: The largest or smallest value. Under max, the variable being chosen is written below.
+      example: '\max_{Q} \pi(Q)'
+      covers: ['\max', '\min']
+    - latex: '\sup, \; \inf'
+      name: supremum, infimum
+      meaning: The least upper bound and the greatest lower bound; like max and min, even when not reached.
+      example: '\sup \{1 - \tfrac{1}{n}\} = 1'
+      covers: ['\sup', '\inf']
+    - latex: '\sin, \; \cos'
+      name: sine, cosine
+      meaning: Functions that repeat in waves; used for cycles.
+      example: '\sin 0 = 0, \quad \cos 0 = 1'
+      covers: ['\sin', '\cos']
+    - latex: '\sinh, \; \cosh'
+      name: hyperbolic sine and cosine
+      meaning: Built from eˣ and e⁻ˣ; they appear in some growth and difference-equation solutions.
+      example: '\cosh x = \tfrac{e^x + e^{-x}}{2}'
+      covers: ['\sinh', '\cosh']
+
+- group: Vectors and matrices
+  items:
+    - latex: '\mathbf{x}'
+      name: bold letter, a vector or matrix
+      meaning: A list (or table) of numbers treated as one object, such as a bundle of goods.
+      example: '\mathbf{x} = (2, 3)'
+      covers: ['\mathbf']
+    - latex: '\|\mathbf{x}\|'
+      name: length (norm) of a vector
+      meaning: How long the vector is, by Pythagoras.
+      example: '\|(3, 4)\| = 5'
+      covers: ['\|', '\lVert', '\rVert']
+    - latex: 'A^{\top}'
+      name: transpose
+      meaning: The matrix with rows and columns swapped.
+      example: '\begin{pmatrix} 1 & 2 \end{pmatrix}^{\top} = \begin{pmatrix} 1 \\ 2 \end{pmatrix}'
+      covers: ['\top']
+    - latex: 'A^{-1}'
+      name: inverse matrix
+      meaning: The matrix that undoes A, so that A times its inverse is the identity matrix.
+      example: 'A A^{-1} = I'
+    - latex: '\det A'
+      name: determinant
+      meaning: One number computed from a square matrix; zero means the matrix has no inverse.
+      example: '\det \begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc'
+      covers: ['\det']
+    - latex: '\dim V'
+      name: dimension
+      meaning: How many independent directions a space has.
+      example: '\dim \mathbb{R}^3 = 3'
+      covers: ['\dim']
+
+- group: Statistics and probability
+  items:
+    - latex: '\Pr(A), \; P(A)'
+      name: probability
+      meaning: How likely event A is, from 0 (never) to 1 (certain).
+      example: 'P(\text{heads}) = 0.5'
+      covers: ['\Pr']
+    - latex: 'P(A \mid B)'
+      name: conditional probability
+      meaning: The probability of A when we know B happened.
+      example: 'P(\text{rain} \mid \text{clouds})'
+    - latex: 'E[X], \; \mu'
+      name: expected value, mean
+      meaning: The long-run average value of X.
+      example: 'E[\text{die}] = 3.5'
+      covers: ['\mu']
+    - latex: '\bar{x}'
+      name: sample mean (x bar)
+      meaning: The average of the observed values.
+      example: '\bar{x} = \tfrac{1}{n}\sum x_i'
+      covers: ['\bar', '\overline']
+    - latex: '\sigma, \; \sigma^2'
+      name: standard deviation, variance
+      meaning: How spread out values are around the mean; variance is the square of σ.
+      example: '\sigma^2 = E[(X - \mu)^2]'
+      covers: ['\sigma']
+    - latex: '\rho'
+      name: correlation (rho)
+      meaning: How closely two variables move together, from −1 to 1.
+      example: '\rho = 0.8'
+      covers: ['\rho']
+    - latex: '\hat{\beta}'
+      name: hat, an estimate
+      meaning: A value estimated from data, as opposed to the true unknown value.
+      example: '\hat{\beta} = 1.9'
+      covers: ['\hat', '\widehat']
+    - latex: '\tilde{x}'
+      name: tilde
+      meaning: A modified or alternative version of x, for example a transformed variable.
+      example: '\tilde{x} = x - \bar{x}'
+      covers: ['\tilde']
+    - latex: 'X \sim N(\mu, \sigma^2)'
+      name: is distributed as
+      meaning: The random variable X follows the named distribution.
+      example: 'X \sim N(0, 1)'
+      covers: ['\sim']
+    - latex: '\Phi(z)'
+      name: standard normal distribution function
+      meaning: The probability that a standard normal variable is at most z.
+      example: '\Phi(1.96) \approx 0.975'
+      covers: ['\Phi']
+    - latex: '\chi^2'
+      name: chi-squared
+      meaning: A distribution used in tests about variances and fit.
+      example: '\chi^2_{1}'
+      covers: ['\chi']
+
+- group: Greek letters as names
+  items:
+    - latex: '\alpha, \beta, \gamma, \delta'
+      name: alpha, beta, gamma, delta
+      meaning: Common names for parameters (fixed numbers in a model), such as shares or depreciation δ.
+      example: 'Y = A K^{\alpha} L^{1-\alpha}'
+      covers: ['\alpha', '\beta', '\gamma', '\delta']
+    - latex: '\varepsilon, \; \eta'
+      name: epsilon, eta
+      meaning: In economics, elasticities; in statistics, ε is the error term.
+      example: '\varepsilon = \tfrac{dQ}{dP} \cdot \tfrac{P}{Q}'
+      covers: ['\varepsilon', '\eta']
+    - latex: '\lambda'
+      name: lambda
+      meaning: A Lagrange multiplier (shadow price), an eigenvalue, or a rate, depending on the topic.
+      example: '\mathcal{L} = f - \lambda g'
+      covers: ['\lambda', '\Lambda']
+    - latex: '\pi'
+      name: pi
+      meaning: Profit in economics; the number 3.14159… in geometry and statistics.
+      example: '\pi(Q) = R(Q) - C(Q)'
+      covers: ['\pi', '\Pi']
+    - latex: '\theta, \; \varphi, \; \xi'
+      name: theta, phi, xi
+      meaning: Names for parameters or angles; the topic says which.
+      example: '\theta \in [0, 1]'
+      covers: ['\theta', '\varphi', '\xi']
+    - latex: '\ell'
+      name: script l
+      meaning: Often a log-likelihood or a length.
+      example: '\ell(\theta) = \ln L(\theta)'
+      covers: ['\ell']
+    - latex: '\Omega'
+      name: omega (capital)
+      meaning: A set of all outcomes, or a matrix of variances.
+      example: '\Omega = \{\text{H}, \text{T}\}'
+      covers: ['\Omega']
+    - latex: '\mathcal{L}'
+      name: script letter
+      meaning: A special function such as the Lagrangian; the topic says which.
+      example: '\mathcal{L}(x, \lambda)'
+      covers: ['\mathcal']

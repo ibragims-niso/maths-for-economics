@@ -9,6 +9,7 @@ import { existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   checkGlossary,
+  checkSymbols,
   checkTopicBank,
   checkTopicFile,
   checkTrack,
@@ -51,6 +52,20 @@ if (bankParsed.success) {
       bankFile.issues.length > 0 ? bankFile.issues : zodIssues(rel(bankPath), bankParsed.error),
   });
 }
+
+// Symbols explained in Help → Symbols (warnings only, so a new symbol never blocks a topic)
+const symbolsPath = join(contentDir, 'symbols.yml');
+const topicDir = join(contentDir, 'topics');
+checks.push({
+  label: 'Symbols (Help)',
+  issues: checkSymbols(
+    readText(symbolsPath),
+    rel(symbolsPath),
+    readdirSync(topicDir)
+      .filter((f) => f.endsWith('.md'))
+      .map((f) => ({ file: f, markdown: readText(join(topicDir, f)) })),
+  ),
+});
 
 // Glossary
 const glossaryPath = join(contentDir, 'glossary.yml');

@@ -1627,6 +1627,54 @@ a.button-secondary {
   text-decoration: none;
 }
 
+/* ---------- Help: symbols ---------- */
+
+.symbol-group h2 {
+  margin: 26px 0 6px;
+}
+
+.symbols {
+  margin: 0;
+}
+
+.symbol {
+  padding: 12px 0;
+}
+
+.symbol + .symbol {
+  border-top: 1px solid var(--night-line);
+}
+
+.symbol dt {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.symbol-mark {
+  color: var(--gold);
+  font-size: 1.25rem;
+}
+
+.symbol-name {
+  font-weight: 600;
+}
+
+.symbol dd {
+  margin: 4px 0 0;
+  color: var(--night-muted);
+  font-size: var(--text-ui);
+  line-height: 1.5;
+}
+
+.symbol-example-line {
+  display: block;
+  margin-top: 4px;
+  color: var(--night-text);
+  overflow-x: auto;
+}
+
 /* ---------- Settings ---------- */
 
 .share-link {
