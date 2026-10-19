@@ -52,9 +52,9 @@ export const profitVarianceLinearTransform: Generator<Params> = {
       if (new Set(sales).size < 3) continue;
       const margin = rng.int(2, 6);
       const fixed = rng.int(5, 40) * 10;
-      // Keep the business profitable on average.
-      const meanSales = sales.reduce((s, x, k) => s + x * prob(chances[k] ?? 0), 0);
-      if (margin * meanSales <= fixed) continue;
+      // Keep the business profitable on average; whole numbers (sales × chances in %) avoid rounding ties.
+      const salesTimes100 = sales.reduce((s, x, k) => s + x * (chances[k] ?? 0), 0);
+      if (margin * salesTimes100 <= fixed * 100) continue;
       return {
         business: rng.pick(Object.keys(BUSINESSES) as Business[]),
         margin,
