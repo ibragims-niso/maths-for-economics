@@ -190,3 +190,8 @@ Bernoulli trial: A single random experiment with two outcomes, success with prob
 binomial distribution: The distribution B(n, p) of the number of successes in n independent trials that each succeed with probability p; its mean is np and its variance np(1 − p).
 Poisson distribution: The distribution of the number of events in an interval when events occur independently at a steady average rate λ; its mean and variance both equal λ.
 Poisson approximation: Using Poisson(np) in place of the binomial B(n, p) when n is large and p is small.
+probability density function: A non-negative curve for a continuous random variable whose area between two values is the probability of landing between them; the total area is 1.
+normal distribution: The symmetric bell-shaped distribution N(μ, σ²) with mean μ and variance σ², the standard model for returns, measurement errors and many economic quantities.
+standard normal distribution: The normal distribution with mean 0 and variance 1, whose cdf Φ(z) is tabulated and used for every normal probability after standardising.
+z-score: The distance of a value from the mean in standard deviations, z = (x − μ)/σ.
+value-at-risk: The return or loss that an investment falls below or exceeds with only a small stated probability, such as 1 % or 5 % of days.

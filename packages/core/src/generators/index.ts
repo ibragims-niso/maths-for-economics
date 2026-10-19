@@ -131,6 +131,9 @@ import { varianceDiscreteRisk } from './ST103/variance-discrete-risk';
 import { binomialCountProbability } from './ST104/binomial-count-probability';
 import { poissonApproximationDefaults } from './ST104/poisson-approximation-defaults';
 import { poissonArrivalsProbability } from './ST104/poisson-arrivals-probability';
+import { normalPercentileValue } from './ST105/normal-percentile-value';
+import { normalRangeProbability } from './ST105/normal-range-probability';
+import { sumOfIndependentNormals } from './ST105/sum-of-independent-normals';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -253,6 +256,9 @@ export const GENERATORS = [
   binomialCountProbability,
   poissonArrivalsProbability,
   poissonApproximationDefaults,
+  normalRangeProbability,
+  normalPercentileValue,
+  sumOfIndependentNormals,
   levelCurveThroughPoint,
   sameIndifferenceCurveQuantity,
   cobbDouglasMarginalProduct,
