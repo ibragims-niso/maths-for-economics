@@ -42,7 +42,7 @@ test('Practice: a timed test, results with explanations, saved to Progress', asy
 test('Settings: the Azerbaijan programme changes Learn', async ({ page }) => {
   await page.goto('/settings');
   // The choice is saved on the device first, then the radio follows; so click and wait.
-  const azerbaijan = page.getByLabel(/Azerbaijan: 050405 Economics/);
+  const azerbaijan = page.getByLabel(/^Azerbaijan/);
   await azerbaijan.click();
   await expect(azerbaijan).toBeChecked();
   await page.getByRole('link', { name: 'Learn' }).click();
