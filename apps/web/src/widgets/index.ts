@@ -59,6 +59,7 @@ import { OlsSlopeSampling } from './OlsSlopeSampling';
 import { PartialEffectWages } from './PartialEffectWages';
 import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
+import { ProfitEnvelope } from './ProfitEnvelope';
 import { ProfitHillTangent } from './ProfitHillTangent';
 import { QuasilinearCorner } from './QuasilinearCorner';
 import { QueueWaitingCurve } from './QueueWaitingCurve';
@@ -150,6 +151,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'partial-effect-wages': PartialEffectWages,
   'power-explorer': PowerExplorer,
   'production-concavity': ProductionConcavity,
+  'profit-envelope-hotelling': ProfitEnvelope,
   'profit-hill-tangent': ProfitHillTangent,
   'quasilinear-corner-budget': QuasilinearCorner,
   'regression-f-test': RegressionFTest,

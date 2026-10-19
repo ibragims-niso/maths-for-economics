@@ -185,6 +185,9 @@ import { slutskySubstitutionIncomeEffect } from './MV10/slutsky-substitution-inc
 import { cobbDouglasConditionalLabour } from './MV11/cobb-douglas-conditional-labour';
 import { cobbDouglasMinimumCost } from './MV11/cobb-douglas-minimum-cost';
 import { costFunctionOutputScaling } from './MV11/cost-function-output-scaling';
+import { hotellingProfitPriceSlope } from './MV12/hotelling-profit-price-slope';
+import { roysIdentityDemand } from './MV12/roys-identity-demand';
+import { shephardLabourDemand } from './MV12/shephard-labour-demand';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
@@ -430,6 +433,9 @@ export const GENERATORS = [
   costFunctionOutputScaling,
   cobbDouglasConditionalLabour,
   cobbDouglasMinimumCost,
+  hotellingProfitPriceSlope,
+  shephardLabourDemand,
+  roysIdentityDemand,
   rectangleLinearDensityTotal,
   jointDensityRectangleProbability,
   triangleRegionTotal,
