@@ -137,6 +137,9 @@ import { sumOfIndependentNormals } from './ST105/sum-of-independent-normals';
 import { jointTableConditionalProbability } from './ST201/joint-table-conditional-probability';
 import { jointTableCovariance } from './ST201/joint-table-covariance';
 import { twoAssetPortfolioRisk } from './ST201/two-asset-portfolio-risk';
+import { sampleMeanTailProbability } from './ST202/sample-mean-tail-probability';
+import { sampleProportionProbability } from './ST202/sample-proportion-probability';
+import { sampleSizeForPrecision } from './ST202/sample-size-for-precision';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -279,6 +282,9 @@ export const GENERATORS = [
   jointTableConditionalProbability,
   jointTableCovariance,
   twoAssetPortfolioRisk,
+  sampleMeanTailProbability,
+  sampleProportionProbability,
+  sampleSizeForPrecision,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));

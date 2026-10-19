@@ -33,6 +33,7 @@ import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitHillTangent } from './ProfitHillTangent';
 import { RevenueProfit } from './RevenueProfit';
 import { RiemannSumMarginalCost } from './RiemannSumMarginalCost';
+import { SampleMeanClt } from './SampleMeanClt';
 import { SecantToTangent } from './SecantToTangent';
 import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
@@ -84,6 +85,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'profit-hill-tangent': ProfitHillTangent,
   'revenue-profit': RevenueProfit,
   'riemann-sum-marginal-cost': RiemannSumMarginalCost,
+  'sample-mean-clt': SampleMeanClt,
   'secant-to-tangent': SecantToTangent,
   'shop-revenue-matrix': ShopRevenueMatrix,
   'simple-vs-compound': SimpleVsCompound,
