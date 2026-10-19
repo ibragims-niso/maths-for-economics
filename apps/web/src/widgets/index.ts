@@ -20,6 +20,7 @@ import { ConferenceCriticalPath } from './ConferenceCriticalPath';
 import { ConfidenceIntervalCoverage } from './ConfidenceIntervalCoverage';
 import { ContinuousDiscountArea } from './ContinuousDiscountArea';
 import { CournotBestResponses } from './CournotBestResponses';
+import { DemandPreferenceTypes } from './DemandPreferenceTypes';
 import { DeterminantArea } from './DeterminantArea';
 import { DiscountingExplorer } from './DiscountingExplorer';
 import { DoubleIntegralGrid } from './DoubleIntegralGrid';
@@ -107,6 +108,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'continuous-discount-area': ContinuousDiscountArea,
   'cost-antiderivative-family': AntiderivativeFamily,
   'cournot-best-responses': CournotBestResponses,
+  'demand-preference-types': DemandPreferenceTypes,
   'determinant-area': DeterminantArea,
   'discounting-explorer': DiscountingExplorer,
   'double-integral-grid': DoubleIntegralGrid,

@@ -179,6 +179,9 @@ import { lagrangeMultiplierUtility } from './MV08/lagrange-multiplier-utility';
 import { shadowPriceIncomeEstimate } from './MV09/shadow-price-income-estimate';
 import { shadowPriceMarginalCost } from './MV09/shadow-price-marginal-cost';
 import { shadowPriceWater } from './MV09/shadow-price-water';
+import { complementsPriceElasticity } from './MV10/complements-price-elasticity';
+import { perfectComplementsDemand } from './MV10/perfect-complements-demand';
+import { slutskySubstitutionIncomeEffect } from './MV10/slutsky-substitution-income-effect';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
@@ -418,6 +421,9 @@ export const GENERATORS = [
   shadowPriceIncomeEstimate,
   shadowPriceMarginalCost,
   shadowPriceWater,
+  perfectComplementsDemand,
+  slutskySubstitutionIncomeEffect,
+  complementsPriceElasticity,
   rectangleLinearDensityTotal,
   jointDensityRectangleProbability,
   triangleRegionTotal,

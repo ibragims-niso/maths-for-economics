@@ -371,3 +371,8 @@ Jacobian: The matrix of the first partial derivatives of a system of equations w
 endogenous variable: A variable whose value is determined inside an economic model, such as an equilibrium price.
 exogenous variable: A variable set outside an economic model and taken as given, such as income or a tax rate.
 crowding out: The fall in private investment when higher government spending raises the interest rate, which makes the spending multiplier smaller.
+Marshallian demand: The quantity of a good a consumer buys as a function of all prices and income, found by maximising utility subject to the budget.
+indirect utility function: The highest utility a consumer can reach at given prices and income, V(p_x, p_y, M).
+Engel curve: The quantity of a good bought as income changes with prices held fixed.
+inferior good: A good whose demand falls when income rises, so its income elasticity is negative.
+substitution effect: The part of the change in demand after a price change that comes from the change in relative prices alone, with utility held at its original level.
