@@ -60,6 +60,9 @@ import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
 import { olsErrorVarianceEstimate } from './EM02/ols-error-variance-estimate';
 import { olsSlopeStandardError } from './EM02/ols-slope-standard-error';
 import { omittedVariableBiasSlope } from './EM02/omitted-variable-bias-slope';
+import { coefficientTStatistic } from './EM03/coefficient-t-statistic';
+import { fStatisticRestrictedSsr } from './EM03/f-statistic-restricted-ssr';
+import { tStatisticFromXtxInverse } from './EM03/t-statistic-from-xtx-inverse';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -397,6 +400,9 @@ export const GENERATORS = [
   olsErrorVarianceEstimate,
   olsSlopeStandardError,
   omittedVariableBiasSlope,
+  coefficientTStatistic,
+  fStatisticRestrictedSsr,
+  tStatisticFromXtxInverse,
   bimatrixNashPayoff,
   pureNashCount,
   cournotDuopolyEquilibrium,

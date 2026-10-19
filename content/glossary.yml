@@ -307,3 +307,8 @@ difference equation: A rule that gives each period's value of a variable from it
 steady state: A value that a dynamic rule turns into itself, so once the variable reaches it, it stays there; for y(t+1) = a·y(t) + b it is b/(1 − a).
 cobweb model: A market model in which producers decide supply from last period's price, so prices can swing above and below equilibrium from one period to the next.
 primary deficit: Government spending minus tax revenue, leaving out interest payments on existing debt.
+F distribution: The right-skewed distribution of a ratio of two independent variance estimates, written F(q, v); it is the distribution of the F statistic when the restrictions being tested are true.
+F test: A test of several restrictions on regression coefficients at once, comparing the sums of squared residuals of the restricted and unrestricted regressions.
+restricted regression: The regression re-estimated with the null hypothesis imposed, for example with some variables left out; its SSR is never below that of the unrestricted regression.
+joint hypothesis: A null hypothesis that makes claims about several coefficients at the same time, such as that three regional dummies are all zero.
+economic significance: Whether an estimated effect is large enough to matter in practice, judged by its size and units rather than by its t statistic.

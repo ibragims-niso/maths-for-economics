@@ -49,6 +49,7 @@ import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitHillTangent } from './ProfitHillTangent';
 import { QueueWaitingCurve } from './QueueWaitingCurve';
+import { RegressionFTest } from './RegressionFTest';
 import { RevenueProfit } from './RevenueProfit';
 import { RiemannSumMarginalCost } from './RiemannSumMarginalCost';
 import { SampleMeanClt } from './SampleMeanClt';
@@ -123,6 +124,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'power-explorer': PowerExplorer,
   'production-concavity': ProductionConcavity,
   'profit-hill-tangent': ProfitHillTangent,
+  'regression-f-test': RegressionFTest,
   'revenue-profit': RevenueProfit,
   'riemann-sum-marginal-cost': RiemannSumMarginalCost,
   'sample-mean-clt': SampleMeanClt,
