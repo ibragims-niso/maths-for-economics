@@ -1,7 +1,8 @@
 import { type Difficulty, GENERATORS, randomSeed } from '@mfe/core';
 import { useMemo, useState } from 'react';
 import { Segmented } from '../Segmented';
-import { groupByBlock, READY, topicsForYear, YEARS } from '../topics';
+import { READY, topicsForYear, YEARS } from '../topics';
+import { TopicPicker } from './TopicPicker';
 import { formatDuration, planTest, type RunningTest, startTest, type TestSettings } from './test';
 
 const DIFFICULTIES: { value: Difficulty; label: string }[] = [
@@ -13,9 +14,9 @@ const DIFFICULTIES: { value: Difficulty; label: string }[] = [
 const COUNTS = [5, 10, 15].map((n) => ({ value: n, label: `${n}` }));
 
 /** Topics that can be practised now: written, with at least one generator. In Core order. */
-const PRACTICE_TOPICS = YEARS.flatMap((y) => topicsForYear(y)).filter(
-  (t) => READY.has(t.id) && GENERATORS.some((g) => g.topicId === t.id),
-);
+const PRACTICE_TOPICS = YEARS.flatMap((y) => topicsForYear(y))
+  .filter((t) => READY.has(t.id) && GENERATORS.some((g) => g.topicId === t.id))
+  .map((t) => t.id);
 
 export function TestBuilder(props: {
   initial: TestSettings;
@@ -50,27 +51,7 @@ export function TestBuilder(props: {
         <div className="sheet-handle" aria-hidden="true" />
         <h2 id="builder-heading">Build a test</h2>
 
-        <fieldset className="pick">
-          <legend>Topics</legend>
-          {groupByBlock(PRACTICE_TOPICS).map((g) => (
-            <div key={g.block} className="pick-group">
-              <p className="pick-block">{g.name}</p>
-              {g.topics.map((t) => (
-                <label key={t.id} className="pick-row">
-                  <input
-                    type="checkbox"
-                    checked={topicIds.includes(t.id)}
-                    onChange={() => toggle(t.id)}
-                  />
-                  <span className="row-text">
-                    <span className="row-title">{t.title}</span>
-                    <span className="row-use">{t.economicUse}</span>
-                  </span>
-                </label>
-              ))}
-            </div>
-          ))}
-        </fieldset>
+        <TopicPicker available={PRACTICE_TOPICS} chosen={topicIds} onToggle={toggle} />
 
         <h3 className="pick-label">Difficulty</h3>
         <Segmented

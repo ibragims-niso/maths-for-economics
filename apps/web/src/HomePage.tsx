@@ -6,7 +6,7 @@ import { InstallHint } from './InstallHint';
 import { ChevronIcon } from './icons';
 import { Segmented } from './Segmented';
 import { useProgress } from './storage';
-import { bankTopic, READY, STATUS_LABEL, WRITING } from './topics';
+import { bankTopic, READY, STATUS_LABEL, searchTopics, WRITING } from './topics';
 import { learnGroups, useTrack, yearTopics } from './tracks';
 import { useInstallOption } from './useInstallOption';
 
@@ -123,6 +123,8 @@ export function HomePage() {
   const topics = yearTopics(track, year);
   const groups = learnGroups(track, year);
   const progress = useProgress();
+  const [query, setQuery] = useState('');
+  const results = searchTopics(query);
   // Spaced repetition (R7): topics whose review date has passed.
   const due = dueForReview([...(progress?.values() ?? [])], Date.now());
   const state = (id: string) => masteryState(progress?.get(id));
@@ -172,38 +174,68 @@ export function HomePage() {
             </Link>
           </section>
         )}
-        <div className="sheet-head">
-          <h2 id="sheet-heading">{trackYear?.label ?? `Year ${year}`}</h2>
-          <span className="sheet-count">{topics.length} topics</span>
-        </div>
-        {track.id !== 'core' && <p className="sheet-track">{track.name}</p>}
-        <div id="year-topics" role="tabpanel" aria-labelledby={`year-tab-${year}`}>
-          {groups.map((g) => (
-            <Fragment key={g.key}>
-              {g.course && <p className="course-heading">{g.course}</p>}
-              {/* Closed by default; a tap opens the group's topics (owner's request). */}
-              <details className="group">
-                <summary className="group-head">
-                  <img className="group-icon" src={g.icon} alt="" width="46" height="46" />
-                  <h3>{g.name}</h3>
-                  <span className="group-count">
-                    {g.background ? 'not counted' : g.topicIds.length}
-                  </span>
-                  <span className="group-chevron" aria-hidden="true">
-                    <ChevronIcon />
-                  </span>
-                </summary>
-                <ul className="rows">
-                  {g.topicIds.map((id) => (
-                    <li key={id}>
-                      <TopicRow id={id} state={state(id)} />
-                    </li>
-                  ))}
-                </ul>
-              </details>
-            </Fragment>
-          ))}
-        </div>
+        <label htmlFor="topic-search" className="sr-only">
+          Search all topics
+        </label>
+        <input
+          id="topic-search"
+          className="search learn-search"
+          type="search"
+          placeholder="Search all topics, e.g. elasticity"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        {query.trim() ? (
+          <section aria-label="Search results" aria-live="polite">
+            <p className="sheet-count search-count">
+              {results.length === 0
+                ? `No topic matches "${query.trim()}".`
+                : `${results.length} ${results.length === 1 ? 'topic' : 'topics'}`}
+            </p>
+            <ul className="rows">
+              {results.map((t) => (
+                <li key={t.id}>
+                  <TopicRow id={t.id} state={state(t.id)} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : (
+          <>
+            <div className="sheet-head">
+              <h2 id="sheet-heading">{trackYear?.label ?? `Year ${year}`}</h2>
+              <span className="sheet-count">{topics.length} topics</span>
+            </div>
+            {track.id !== 'core' && <p className="sheet-track">{track.name}</p>}
+            <div id="year-topics" role="tabpanel" aria-labelledby={`year-tab-${year}`}>
+              {groups.map((g) => (
+                <Fragment key={g.key}>
+                  {g.course && <p className="course-heading">{g.course}</p>}
+                  {/* Closed by default; a tap opens the group's topics (owner's request). */}
+                  <details className="group">
+                    <summary className="group-head">
+                      <img className="group-icon" src={g.icon} alt="" width="46" height="46" />
+                      <h3>{g.name}</h3>
+                      <span className="group-count">
+                        {g.background ? 'not counted' : g.topicIds.length}
+                      </span>
+                      <span className="group-chevron" aria-hidden="true">
+                        <ChevronIcon />
+                      </span>
+                    </summary>
+                    <ul className="rows">
+                      {g.topicIds.map((id) => (
+                        <li key={id}>
+                          <TopicRow id={id} state={state(id)} />
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </Fragment>
+              ))}
+            </div>
+          </>
+        )}
       </section>
     </>
   );

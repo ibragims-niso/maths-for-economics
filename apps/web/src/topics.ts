@@ -91,3 +91,21 @@ export function groupByBlock<T extends { id: string }>(topics: readonly T[]) {
   }
   return groups;
 }
+
+const searchText = (t: (typeof topicBank)[number]) =>
+  `${t.id} ${t.title} ${t.economicUse}`.toLowerCase();
+
+/**
+ * Topics matching every word of a query (in ID, title or economic use), titles first, then in
+ * curriculum order. Works offline: it searches the bundled topic bank.
+ */
+export function searchTopics(query: string, pool: readonly string[] = topicBank.map((t) => t.id)) {
+  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return [];
+  const allowed = new Set(pool);
+  return topicBank
+    .filter((t) => allowed.has(t.id) && words.every((w) => searchText(t).includes(w)))
+    .map((t, i) => ({ t, i, inTitle: words.every((w) => t.title.toLowerCase().includes(w)) }))
+    .sort((a, b) => Number(b.inTitle) - Number(a.inTitle) || a.i - b.i)
+    .map(({ t }) => t);
+}

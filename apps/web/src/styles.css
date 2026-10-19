@@ -1492,6 +1492,107 @@ a.button-secondary {
   font-variant-numeric: tabular-nums;
 }
 
+/* ---------- Practice: choosing topics by search ---------- */
+
+.picker .pick-label {
+  display: block;
+  margin: 8px 0 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 4px 4px 12px;
+  border-radius: 999px;
+  background: rgb(184 140 255 / 0.16);
+  color: var(--night-text);
+  font-size: var(--text-meta);
+  font-weight: 600;
+}
+
+.chip button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--lilac);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.picker-results {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.picker-results li + li {
+  border-top: 1px solid var(--night-line);
+}
+
+.picker-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  color: var(--night-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.picker-check {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgb(184 140 255 / 0.5);
+  border-radius: 50%;
+  color: var(--lilac);
+  font-weight: 700;
+}
+
+.picker-option[aria-pressed="true"] .picker-check {
+  background: var(--gradient);
+  border-color: transparent;
+  color: #fff;
+}
+
+.picker-empty {
+  padding: 10px 0;
+  color: var(--night-muted);
+  font-size: var(--text-ui);
+}
+
+/* ---------- Topic search on Learn ---------- */
+
+.learn-search {
+  margin-top: 16px;
+}
+
+.search-count {
+  display: block;
+  margin: 14px 0 4px;
+}
+
 /* ---------- Formula sheet ---------- */
 
 .search {
