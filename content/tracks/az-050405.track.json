@@ -2,14 +2,14 @@
   "id": "az-050405",
   "name": "Azerbaijan: 050405 Economics (national programme)",
   "visibility": "public",
-  "status": "draft-unverified",
-  "verifiedAt": null,
-  "disclaimer": "Unofficial. Based on the public national education programme for 050405 Economics and published university syllabi. Years follow one university's published plan; your university may place a course a semester earlier or later.",
+  "status": "verified",
+  "verifiedAt": "2026-10-19",
+  "disclaimer": "Unofficial. Built from the national education programme for 050405 Economics and Baku Business University's programme; years follow BBU (one maths course a year). Other universities may teach a course a year earlier.",
   "sources": [
     {
       "title": "Baku Business University, 050405 Economics education programme (based on the Ministry programme approved 09.07.2020, F-393)",
       "url": "https://bbu.edu.az/uploads/files/TP/%C4%B0qtisadiyyat.pdf",
-      "note": "Learning outcomes per course (FTN) used for headings; owner-supplied copy confirmed 2026-10-18"
+      "note": "Course headings from its learning outcomes; years from BBU's study schedule as given by the owner on 2026-10-19 (linear algebra and analysis, probability, statistics, econometrics: one per year)"
     },
     {
       "title": "Azerbaijan University, Economics (English) study schedule",
@@ -31,7 +31,7 @@
           "code": null,
           "name": "Linear Algebra and Mathematical Analysis",
           "credits": 8,
-          "semester": "autumn",
+          "semester": null,
           "sections": [
             {
               "title": "Systems of linear equations, linear spaces, basis",
@@ -74,12 +74,18 @@
             }
           ],
           "supporting": ["F01", "F02", "F04", "F05", "F06", "F09"]
-        },
+        }
+      ]
+    },
+    {
+      "year": 2,
+      "label": "Year 2",
+      "courses": [
         {
           "code": null,
           "name": "Probability Theory and Mathematical Statistics",
           "credits": 8,
-          "semester": "spring",
+          "semester": null,
           "sections": [
             {
               "title": "Combinatorics, random events, definitions of probability",
@@ -114,8 +120,8 @@
       ]
     },
     {
-      "year": 2,
-      "label": "Year 2",
+      "year": 3,
+      "label": "Year 3",
       "courses": [
         {
           "code": null,
@@ -148,8 +154,8 @@
       ]
     },
     {
-      "year": 3,
-      "label": "Year 3",
+      "year": 4,
+      "label": "Year 4",
       "courses": [
         {
           "code": null,
@@ -210,16 +216,10 @@
               "topics": ["EM06"]
             }
           ]
-        }
-      ]
-    },
-    {
-      "year": 4,
-      "label": "Year 4",
-      "courses": [
+        },
         {
           "code": null,
-          "name": "Electives and further study (no compulsory maths course in year 4)",
+          "name": "Electives and further study",
           "semester": null,
           "topics": [
             "FM01",

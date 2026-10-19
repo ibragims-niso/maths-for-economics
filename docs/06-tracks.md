@@ -49,7 +49,7 @@ How the national system is organised:
 - Detailed learning outcomes and syllabi are set by each university's academic staff, and the programme requires syllabi to be public.
 - Semester placement differs between universities.
 
-Years in the app follow Azerbaijan University's published study plan, with its preparatory language year left out (decision D35): year 1 İF-04 (autumn) and İF-05 (spring); year 2 İF-07; year 3 İF-08 parts 1 (autumn) and 2 (spring). Year 4 has no compulsory maths course, so it holds electives and further study. The disclaimer says a university may shift a course by a semester.
+Years in the app follow Baku Business University, where each maths course takes one year (decision D39): year 1 İF-04, year 2 İF-05, year 3 İF-07, year 4 İF-08 parts 1 (autumn) and 2 (spring), with electives and further study. Other universities teach some courses a year earlier (table below); the disclaimer says so.
 
 Compulsory mathematical subjects and draft headings:
 | Code | Course (credits) | Headings and topics |
@@ -71,8 +71,9 @@ Verification so far (2026-10-19):
 | Azerbaijan University (English programme; its language year left out) | study schedule PDF (track sources) | year 1 autumn | year 1 spring | year 2 | year 3 |
 | Nakhchivan State University | 2020 study plan PDF (track sources) | year 1 autumn | year 2 autumn | year 2 spring | year 3 autumn |
 | Azerbaijan State Agrarian University | 2024/25 self-assessment report: confirms the four courses and names, no semesters for them | — | — | — | — |
+| Baku Business University | study schedule, as given by the owner (2026-10-19) | year 1 | year 2 | year 3 | year 4 |
 
-Two plans agree on İF-04 (year 1), İF-07 (year 2) and İF-08 (year 3); İF-05 is year 1 or 2. Still needed: one more university's semester plan (UNEC, BBU's own plan, or another), then the track can be marked `verified`.
+All plans start with İF-04 in year 1 and keep the order İF-04, İF-05, İF-07, İF-08; they differ in how fast. With three universities' placements and the national programme's headings confirmed, the track is `verified` (2026-10-19), with BBU's years.
 
 Note: the national track covers the owner's private BBU track almost entirely; the private track then only needs BBU's own semester plan (`local/tracks/bbu.track.json`: a copy of `az-050405` with each course's `semester` set; never committed).
 

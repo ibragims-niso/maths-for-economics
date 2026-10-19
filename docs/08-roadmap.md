@@ -25,7 +25,7 @@ Acceptance:
 Scope: all 49 Year-1 topics and the Azerbaijan national track (verified against 3+ universities' syllabi), review queue, progress screen, mentor link (D1 sync + mentor view), own-key mode, resources with link checking, custom-track import, formula sheet, Playwright tests for key flows.
 Acceptance:
 - [ ] 49 topics at status `reviewed` or better
-- [ ] `az-050405` track `verified`
+- [x] `az-050405` track `verified` (2026-10-19; years as at BBU, compared with Azerbaijan University and Nakhchivan State University)
 - [x] Mentor link shows the student's progress within 1 minute of a change (when online); disabling sharing deletes server data — the phone sends 8 s after a change; checked on the live API 2026-10-18
 - [x] Own key verified, used and removable
 - [x] BBU programme available on the student's phone: covered by the Azerbaijan track `az-050405`, built from BBU's 050405 programme, first in the programme list (D38)
