@@ -155,6 +155,9 @@ import { quadraticConcavityDeterminant } from './MV06/quadratic-concavity-determ
 import { hessianDeterminantTwoGoods } from './MV07/hessian-determinant-two-goods';
 import { priceDiscriminationTwoMarkets } from './MV07/price-discrimination-two-markets';
 import { twoProductOptimalOutput } from './MV07/two-product-optimal-output';
+import { lagrangeBudgetGoodQuantity } from './MV08/lagrange-budget-good-quantity';
+import { lagrangeCostMinInput } from './MV08/lagrange-cost-min-input';
+import { lagrangeMultiplierUtility } from './MV08/lagrange-multiplier-utility';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
@@ -367,6 +370,9 @@ export const GENERATORS = [
   hessianDeterminantTwoGoods,
   twoProductOptimalOutput,
   priceDiscriminationTwoMarkets,
+  lagrangeBudgetGoodQuantity,
+  lagrangeCostMinInput,
+  lagrangeMultiplierUtility,
   rectangleLinearDensityTotal,
   jointDensityRectangleProbability,
   triangleRegionTotal,
