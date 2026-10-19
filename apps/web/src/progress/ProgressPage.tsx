@@ -1,6 +1,6 @@
 import { dueForReview, masteryState, type TopicProgress, trackTopicOrder } from '@mfe/core';
 import { Link } from 'react-router';
-import { topicById } from '../content';
+import { mistakeFor } from '../content';
 import { type TestAttempt, useProgress, useRecentAttempts } from '../storage';
 import { icon3d, STATUS_LABEL, topicsForYear, topicTitle, YEARS } from '../topics';
 import { useTrack, yearTopics } from '../tracks';
@@ -28,7 +28,7 @@ function topicLine(p: TopicProgress): string {
 /** Labels of the recognised mistakes in a test, each once. */
 function mistakesIn(attempt: TestAttempt): string[] {
   const labels = attempt.items.flatMap((i) => {
-    const label = i.mistakeCode && topicById(i.topicId)?.mistakeCodes[i.mistakeCode]?.label;
+    const label = mistakeFor(i.topicId, i.mistakeCode)?.label;
     return label ? [label] : [];
   });
   return [...new Set(labels)];

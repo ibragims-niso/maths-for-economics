@@ -1,13 +1,14 @@
 /**
  * npm run build:content
  *
- * Compiles content/topics/*.md into apps/web/src/generated/content.json for the app: frontmatter
+ * Compiles content/topics/*.md into apps/web/src/generated/topics/<ID>.json for the app (one file
+ * per topic, so the app loads and caches topics one by one): frontmatter
  * as data, each section as HTML with maths rendered by KaTeX at build time (so the phone does no
  * maths parsing and everything works offline). Worked examples are split into steps and "Why" lines.
  * verify blocks are dropped; they are for CI only.
  */
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   type CompiledContent,
@@ -193,7 +194,20 @@ const version = createHash('sha256').update(JSON.stringify(topics)).digest('hex'
 const content: CompiledContent = { version, topics };
 const outDir = join(repoRoot, 'apps/web/src/generated');
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, 'content.json'), JSON.stringify(content));
+// One file per topic: a topic loads only when opened, and an edit re-downloads only that topic.
+const topicsOut = join(outDir, 'topics');
+rmSync(topicsOut, { recursive: true, force: true });
+rmSync(join(outDir, 'content.json'), { force: true });
+mkdirSync(topicsOut, { recursive: true });
+for (const topic of content.topics) {
+  writeFileSync(join(topicsOut, `${topic.id}.json`), JSON.stringify(topic));
+}
+writeFileSync(join(outDir, 'meta.json'), JSON.stringify({ version: content.version }));
+// Mistake labels and explanations for results, Progress and the mentor page, without topic text.
+writeFileSync(
+  join(outDir, 'mistakes.json'),
+  JSON.stringify(Object.fromEntries(content.topics.map((t) => [t.id, t.mistakeCodes]))),
+);
 // A small index so the home screen knows which topics can open, without loading all content.
 writeFileSync(
   join(outDir, 'content-index.json'),
@@ -213,4 +227,4 @@ writeFileSync(
   join(proxyDir, 'ai-topics.json'),
   JSON.stringify({ version, topics: compiled.map((c) => c.ai) }),
 );
-console.log(`Compiled ${topics.length} topics into apps/web/src/generated/content.json`);
+console.log(`Compiled ${topics.length} topics into apps/web/src/generated/topics/`);

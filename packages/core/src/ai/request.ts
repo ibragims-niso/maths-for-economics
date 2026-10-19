@@ -67,4 +67,6 @@ export interface AiResponse {
   text: string;
   /** True when the answer came from the shared cache. */
   cached?: boolean;
+  /** Free questions this device has left today (shared key only). */
+  remaining?: number;
 }

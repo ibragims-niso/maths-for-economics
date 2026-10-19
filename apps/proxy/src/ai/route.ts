@@ -54,10 +54,13 @@ export async function answerAi(body: unknown, env: AiEnv, ip: string, now: Date)
     if (hit) return { status: 200, body: { ...(JSON.parse(hit) as AiResponse), cached: true } };
   }
 
+  let remaining: number | undefined;
   if (!env.DB) {
     if (env.AI_DEV_UNLIMITED !== '1') return { status: 503, error: MESSAGES.notSetUp };
-  } else if (!(await withinDailyLimits(env.DB, req.deviceId, ip, now))) {
-    return { status: 429, error: MESSAGES.limit };
+  } else {
+    const usage = await withinDailyLimits(env.DB, req.deviceId, ip, now);
+    if (!usage.allowed) return { status: 429, error: MESSAGES.limit };
+    remaining = usage.remaining;
   }
 
   const keys = { GROQ_API_KEY: env.GROQ_API_KEY, GEMINI_API_KEY: env.GEMINI_API_KEY };
@@ -68,7 +71,7 @@ export async function answerAi(body: unknown, env: AiEnv, ip: string, now: Date)
     if (cacheKey && env.AI_CACHE && answer.mode !== 'ANALOG') {
       await answerCache.put(env.AI_CACHE, cacheKey, JSON.stringify(answer));
     }
-    return { status: 200, body: answer };
+    return { status: 200, body: remaining === undefined ? answer : { ...answer, remaining } };
   } catch (error) {
     if (error instanceof AiUnavailableError) {
       console.error('AI providers failed:', error.message);

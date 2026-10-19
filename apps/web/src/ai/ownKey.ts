@@ -8,7 +8,7 @@ import {
   type TopicContext,
 } from '@mfe/core';
 import aiConfig from '../../../../config/ai.json';
-import { content, topicById } from '../content';
+import { CONTENT_VERSION, loadTopic } from '../content';
 import type { AiAsk, AiResult } from './client';
 import { GROQ } from './groq';
 
@@ -34,15 +34,15 @@ export async function askWithOwnKey(request: AiAsk, key: string): Promise<AiResu
   const parsed = aiRequestSchema.safeParse({
     ...request,
     deviceId: '00000000-0000-4000-8000-000000000000',
-    contentVersion: content.version,
+    contentVersion: CONTENT_VERSION,
   });
-  const compiled = topicById(request.topicId);
+  const compiled = await loadTopic(request.topicId);
   // Own key: free-text questions are open (decision D37); buttons keep their usual answers.
   const plan =
     parsed.success && compiled
       ? parsed.data.mode === 'ASK'
         ? planOpenAnswer(parsed.data.payload.question, tutorContext(compiled))
-        : planAnswer(parsed.data, tutorContext(compiled), content.version)
+        : planAnswer(parsed.data, tutorContext(compiled), CONTENT_VERSION)
       : undefined;
   if (!plan) return { ok: false, message: 'This question could not be sent.' };
 

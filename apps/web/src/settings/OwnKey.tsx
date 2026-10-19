@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import limits from '../../../../config/limits.json';
 import { checkKey } from '../ai/groq';
+import { questionsLeftToday } from '../ai/usage';
 import { storage } from '../storage';
 
 const CHECK_MESSAGE = {
@@ -14,6 +15,7 @@ export function OwnKeySettings({ ownKey }: { ownKey: string | undefined }) {
   const [draft, setDraft] = useState('');
   const [status, setStatus] = useState<{ tone: 'ok' | 'error'; text: string } | undefined>();
   const [busy, setBusy] = useState(false);
+  const left = questionsLeftToday();
 
   const verify = async () => {
     setBusy(true);
@@ -48,8 +50,9 @@ export function OwnKeySettings({ ownKey }: { ownKey: string | undefined }) {
       ) : (
         <>
           <p className="prose">
-            Everyone gets {limits.aiCallsPerDevicePerDay} free AI questions a day on this device.
-            For more, use your own free key from Groq.
+            Everyone gets {limits.aiCallsPerDevicePerDay} free AI questions a day on this device
+            {left === undefined ? '' : ` (${left} left today)`}. For more, use your own free key
+            from Groq.
           </p>
           <details className="key-guide">
             <summary>Get a free Groq API key (about 2 minutes)</summary>

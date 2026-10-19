@@ -1,22 +1,16 @@
 import type { GradeResult } from '@mfe/core';
 import { useState } from 'react';
 import { AiButton } from '../ai/AiParts';
-import { content, topicById } from '../content';
+import { CONTENT_VERSION, mistakeFor } from '../content';
 import { contentErrorUrl } from '../links';
 import { MathBlock, MathText } from '../Maths';
 import { formatAnswer, formatDuration, type TestOutcome, type TestQuestion } from './test';
-
-/** The offline explanation for a recognised mistake, from the topic file's mistakeCodes. */
-function mistakeFor(topicId: string, code: string | undefined) {
-  if (!code) return undefined;
-  return topicById(topicId)?.mistakeCodes[code];
-}
 
 const reportUrl = (q: TestQuestion) =>
   contentErrorUrl({
     title: `Error in ${q.topicId}: ${q.title}`,
     topic: q.topicId,
-    version: content.version,
+    version: CONTENT_VERSION,
     templateId: q.problem.templateId,
     seed: q.problem.seed,
   });

@@ -7,7 +7,7 @@ export async function sha256(text: string): Promise<string> {
 
 /**
  * Counts one AI call for today and returns whether the device and its network are still within
- * the daily limits (docs/03 layer 5). The network is stored as a hash with the day, never as
+ * the daily limits (docs/03 layer 5), and how many questions the device has left. The network is stored as a hash with the day, never as
  * an IP address.
  */
 export async function withinDailyLimits(
@@ -15,7 +15,7 @@ export async function withinDailyLimits(
   deviceId: string,
   ip: string,
   now: Date,
-): Promise<boolean> {
+): Promise<{ allowed: boolean; remaining: number }> {
   const day = now.toISOString().slice(0, 10);
   const count = async (key: string) => {
     const row = await db
@@ -30,7 +30,10 @@ export async function withinDailyLimits(
   };
   const device = await count(deviceId);
   const network = await count(`ip:${await sha256(`${ip}|${day}`)}`);
-  return device <= limits.aiCallsPerDevicePerDay && network <= limits.aiCallsPerIpPerDay;
+  return {
+    allowed: device <= limits.aiCallsPerDevicePerDay && network <= limits.aiCallsPerIpPerDay,
+    remaining: Math.max(0, limits.aiCallsPerDevicePerDay - device),
+  };
 }
 
 /** Shared answer cache (docs/03): one entry per mode, topic, content version and question. */

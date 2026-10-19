@@ -3,7 +3,7 @@ import 'katex/dist/katex.min.css';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router';
 import { AiButton, AskBox } from './ai/AiParts';
-import { content, topicById } from './content';
+import { CONTENT_VERSION, useTopic } from './content';
 import { HtmlBlock } from './HtmlBlock';
 import { BackIcon } from './icons';
 import { contentErrorUrl } from './links';
@@ -81,16 +81,17 @@ function Example({ example }: { example: CompiledExample }) {
 
 export function TopicPage() {
   const { id } = useParams();
-  const topic = topicById(id);
+  const topic = useTopic(id);
   const [tab, setTab] = useState<Tab>('learn');
   const state = masteryState(useProgress()?.get(id ?? ''));
-  if (!topic) return <NotFoundPage />;
+  if (topic === undefined) return null;
+  if (topic === null) return <NotFoundPage />;
   const resourceUrls = topic.resources.map((r) => r.url);
 
   const report = contentErrorUrl({
     title: `Error in ${topic.id}: ${topic.title}`,
     topic: topic.id,
-    version: content.version,
+    version: CONTENT_VERSION,
   });
 
   return (

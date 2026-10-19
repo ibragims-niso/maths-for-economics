@@ -1,7 +1,7 @@
 import type { Snapshot } from '@mfe/core';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { topicById } from '../content';
+import { mistakeFor } from '../content';
 import { icon3d, STATUS_LABEL, topicTitle } from '../topics';
 
 const when = new Intl.DateTimeFormat('en-GB', {
@@ -53,8 +53,7 @@ export function MentorPage() {
   const s = load.data;
   const mastered = s.years.reduce((n, y) => n + y.mastered, 0);
   const total = s.years.reduce((n, y) => n + y.total, 0);
-  const mistakeLabel = (topicId: string, code: string) =>
-    topicById(topicId)?.mistakeCodes[code]?.label ?? code;
+  const mistakeLabel = (topicId: string, code: string) => mistakeFor(topicId, code)?.label ?? code;
 
   return (
     <>
