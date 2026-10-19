@@ -125,6 +125,9 @@ import { triangleRegionTotal } from './MV13/triangle-region-total';
 import { bayesDefaultGivenSignal } from './ST102/bayes-default-given-signal';
 import { meetingWindowProbability } from './ST102/meeting-window-probability';
 import { sampleDefectivesProbability } from './ST102/sample-defectives-probability';
+import { expectedValueDiscrete } from './ST103/expected-value-discrete';
+import { profitVarianceLinearTransform } from './ST103/profit-variance-linear-transform';
+import { varianceDiscreteRisk } from './ST103/variance-discrete-risk';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -241,6 +244,9 @@ export const GENERATORS = [
   sampleDefectivesProbability,
   bayesDefaultGivenSignal,
   meetingWindowProbability,
+  expectedValueDiscrete,
+  varianceDiscreteRisk,
+  profitVarianceLinearTransform,
   levelCurveThroughPoint,
   sameIndifferenceCurveQuantity,
   cobbDouglasMarginalProduct,

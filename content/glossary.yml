@@ -181,3 +181,8 @@ combination: An unordered choice of k items from n, counted by C(n, k) = n!/(k!(
 conditional probability: The probability of A once B is known to have happened, P(A | B) = P(A ∩ B)/P(B).
 independent events: Events where knowing one happened does not change the chance of the other, so P(A ∩ B) = P(A)·P(B).
 Bayes' theorem: A rule for updating a probability after new evidence, turning P(evidence | A) and the base rate P(A) into P(A | evidence).
+random variable: A number whose value depends on the outcome of a random experiment, such as next year's return on a share.
+probability mass function: For a discrete random variable, the list of its possible values with the probability of each; the probabilities add up to 1.
+cumulative distribution function: F(x) = P(X ≤ x), the probability that a random variable is at most x; it rises from 0 to 1.
+expected value: The probability-weighted average of a random variable's values, E[X] = Σ x·p(x); the long-run average if the situation repeats.
+standard deviation: The square root of the variance, the expected squared distance from the mean; it measures how far outcomes typically lie from the mean and is the usual measure of risk.
