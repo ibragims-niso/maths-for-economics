@@ -182,6 +182,9 @@ import { shadowPriceWater } from './MV09/shadow-price-water';
 import { complementsPriceElasticity } from './MV10/complements-price-elasticity';
 import { perfectComplementsDemand } from './MV10/perfect-complements-demand';
 import { slutskySubstitutionIncomeEffect } from './MV10/slutsky-substitution-income-effect';
+import { cobbDouglasConditionalLabour } from './MV11/cobb-douglas-conditional-labour';
+import { cobbDouglasMinimumCost } from './MV11/cobb-douglas-minimum-cost';
+import { costFunctionOutputScaling } from './MV11/cost-function-output-scaling';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
@@ -424,6 +427,9 @@ export const GENERATORS = [
   perfectComplementsDemand,
   slutskySubstitutionIncomeEffect,
   complementsPriceElasticity,
+  costFunctionOutputScaling,
+  cobbDouglasConditionalLabour,
+  cobbDouglasMinimumCost,
   rectangleLinearDensityTotal,
   jointDensityRectangleProbability,
   triangleRegionTotal,

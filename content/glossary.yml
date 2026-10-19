@@ -376,3 +376,8 @@ indirect utility function: The highest utility a consumer can reach at given pri
 Engel curve: The quantity of a good bought as income changes with prices held fixed.
 inferior good: A good whose demand falls when income rises, so its income elasticity is negative.
 substitution effect: The part of the change in demand after a price change that comes from the change in relative prices alone, with utility held at its original level.
+isocost line: All the combinations of inputs that cost the same total amount, wL + rK = C.
+cost function: The lowest cost of producing each output level at given input prices, C(w, r, Q).
+conditional factor demand: The cost-minimising amount of an input for a given output target and input prices.
+expansion path: The line traced by the cheapest input mix as the output target grows with input prices fixed; a ray from the origin for Cobb–Douglas technology.
+economies of scale: Average cost falling as output grows, as happens with increasing returns to scale.
