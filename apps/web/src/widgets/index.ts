@@ -79,6 +79,7 @@ import { QuadraticFormContours } from './QuadraticFormContours';
 import { QuasilinearCorner } from './QuasilinearCorner';
 import { QueueWaitingCurve } from './QueueWaitingCurve';
 import { RamseyPhaseDiagram } from './RamseyPhaseDiagram';
+import { RandomWalkFan } from './RandomWalkFan';
 import { RegressionFTest } from './RegressionFTest';
 import { ResourceExtractionPath } from './ResourceExtractionPath';
 import { RevenueProfit } from './RevenueProfit';
@@ -188,6 +189,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'quadratic-form-contours': QuadraticFormContours,
   'quasilinear-corner-budget': QuasilinearCorner,
   'ramsey-phase-diagram': RamseyPhaseDiagram,
+  'random-walk-fan': RandomWalkFan,
   'regression-f-test': RegressionFTest,
   'resource-extraction-path': ResourceExtractionPath,
   'revenue-profit': RevenueProfit,

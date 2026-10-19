@@ -266,6 +266,9 @@ import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
 import { arrowPrattRiskPremium } from './SP02/arrow-pratt-risk-premium';
 import { insuranceMaximumPremium } from './SP02/insurance-maximum-premium';
 import { lotteryCertaintyEquivalent } from './SP02/lottery-certainty-equivalent';
+import { brownianDriftLevelProbability } from './SP03/brownian-drift-level-probability';
+import { randomWalkLevelProbability } from './SP03/random-walk-level-probability';
+import { squareRootTimeRisk } from './SP03/square-root-time-risk';
 import { littlesLawQueue } from './SP05/littles-law-queue';
 import { mm1AtLeastNProbability } from './SP05/mm1-at-least-n-probability';
 import { mm1QueueMeasures } from './SP05/mm1-queue-measures';
@@ -619,6 +622,9 @@ export const GENERATORS = [
   lotteryCertaintyEquivalent,
   insuranceMaximumPremium,
   arrowPrattRiskPremium,
+  squareRootTimeRisk,
+  randomWalkLevelProbability,
+  brownianDriftLevelProbability,
   littlesLawQueue,
   mm1QueueMeasures,
   mm1AtLeastNProbability,

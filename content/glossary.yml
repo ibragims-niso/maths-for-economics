@@ -470,3 +470,7 @@ modified golden rule: The steady state of an optimal growth model, where the mar
 golden rule capital: The capital per worker that gives the most consumption per worker in the steady state, where f′(k) = n + δ.
 speed of convergence: The rate at which the gap between an economy and its steady state closes, given near the steady state by the size of the negative eigenvalue.
 Ramsey–Cass–Koopmans model: The growth model in which a planner or households choose saving to maximise discounted utility, so the saving rate comes out of the model instead of being fixed as in Solow.
+Brownian motion: The continuous-time limit of a random walk with tiny steps, whose change over any time interval t is normal with mean 0 and variance t, independent of the past.
+geometric Brownian motion: A model of a price whose logarithm follows Brownian motion with drift, so the price stays positive and its expected value grows at a constant rate.
+square-root-of-time rule: For independent changes, the standard deviation over T periods is √T times the one-period standard deviation.
+gambler's ruin: The chance that a player in a fair game starting with a loses everything before reaching a + b, equal to b/(a + b).
