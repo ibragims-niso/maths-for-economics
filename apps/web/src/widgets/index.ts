@@ -34,6 +34,7 @@ import { SpanAndBasis } from './SpanAndBasis';
 import { SpendingRounds } from './SpendingRounds';
 import { SurplusTaxWelfare } from './SurplusTaxWelfare';
 import { SurveyVenn } from './SurveyVenn';
+import { TankVolumeDiscs } from './TankVolumeDiscs';
 import { TariffContinuity } from './TariffContinuity';
 import { TaxBandExplorer } from './TaxBandExplorer';
 import { TaylorLogApproximation } from './TaylorLogApproximation';
@@ -77,6 +78,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'spending-rounds': SpendingRounds,
   'surplus-tax-welfare': SurplusTaxWelfare,
   'survey-venn': SurveyVenn,
+  'tank-volume-discs': TankVolumeDiscs,
   'tariff-continuity': TariffContinuity,
   'tax-band-explorer': TaxBandExplorer,
   'taylor-log-approximation': TaylorLogApproximation,

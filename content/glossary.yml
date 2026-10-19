@@ -163,3 +163,7 @@ convergent integral: An improper integral whose limit exists as a finite number,
 divergent integral: An improper integral whose limit is infinite or does not exist, so it has no finite value.
 continuous income stream: Income received smoothly at a rate per year rather than in separate payments; its present value is the integral of the discounted rate.
 continuous discounting: Converting future amounts to today's value with the factor e^(−rt), the reverse of continuous compounding.
+solid of revolution: The solid formed by spinning a region of the plane around an axis, such as a tank made by rotating a curve about the x-axis.
+arc length: The length of a curve between two points, found by adding up the lengths of tiny, almost straight pieces of it.
+line integral: An integral that adds up a quantity along a curve, either a value per unit of length (first kind) or a force times movement (second kind).
+path independence: The property that a line integral depends only on where a route starts and ends, not on the route taken between them.

@@ -45,6 +45,9 @@ import { totalOutputLogRate } from './C115/total-output-log-rate';
 import { continuousStreamPresentValue } from './C116/continuous-stream-present-value';
 import { growingContinuousStreamValue } from './C116/growing-continuous-stream-value';
 import { improperPowerIntegral } from './C116/improper-power-integral';
+import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
+import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
+import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
 import { cobbDouglasLabourNeeded } from './F01/cobb-douglas-labour-needed';
 import { cobbDouglasOutput } from './F01/cobb-douglas-output';
 import { exponentLawsSimplify } from './F01/exponent-laws-simplify';
@@ -205,6 +208,9 @@ export const GENERATORS = [
   continuousStreamPresentValue,
   growingContinuousStreamValue,
   improperPowerIntegral,
+  volumeOfRevolutionDisc,
+  lineIntegralWorkSegment,
+  arcLengthThreeHalvesPower,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,
