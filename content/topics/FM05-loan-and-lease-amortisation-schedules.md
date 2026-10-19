@@ -72,14 +72,17 @@ $$PMT = \frac{L \cdot r}{1 - (1 + r)^{-n}}$$
 $$I_t = r\,B_{t-1}, \qquad P_t = PMT - I_t, \qquad B_t = B_{t-1} - P_t = (1 + r)B_{t-1} - PMT$$
 $I_t$ is the interest part and $P_t$ the principal part (repayment of the loan). This is the schedule of Example 2, a loan of 50,000 at 8 % a year repaid in 5 yearly payments of 12,522.82:
 
-| Year | Opening balance | Interest | Principal | Closing balance |
-|---|---|---|---|---|
-| 1 | 50,000.00 | 4000.00 | 8522.82 | 41,477.18 |
-| 2 | 41,477.18 | 3318.17 | 9204.65 | 32,272.53 |
-| 3 | 32,272.53 | 2581.80 | 9941.02 | 22,331.51 |
-| 4 | 22,331.51 | 1786.52 | 10,736.30 | 11,595.21 |
-| 5 | 11,595.21 | 927.62 | 11,595.21 | 0.00 |
-| Total | | 12,614.11 | 50,000.00 | |
+$$
+\begin{array}{lllll}
+\text{Year} & \text{Opening balance} & \text{Interest} & \text{Principal} & \text{Closing balance} \\ \hline
+\text{1} & \text{50,000.00} & \text{4000.00} & \text{8522.82} & \text{41,477.18} \\
+\text{2} & \text{41,477.18} & \text{3318.17} & \text{9204.65} & \text{32,272.53} \\
+\text{3} & \text{32,272.53} & \text{2581.80} & \text{9941.02} & \text{22,331.51} \\
+\text{4} & \text{22,331.51} & \text{1786.52} & \text{10,736.30} & \text{11,595.21} \\
+\text{5} & \text{11,595.21} & \text{927.62} & \text{11,595.21} & \text{0.00} \\
+\text{Total} & \, & \text{12,614.11} & \text{50,000.00} & \,
+\end{array}
+$$
 
 - **Principal parts grow geometrically.** $P_t = P_1 (1 + r)^{t-1}$ with $P_1 = PMT - rL$: in the table each principal part is 1.08 times the one before. Principal overtakes interest once $P_t > PMT/2$; this happens in the last $\ln 2 / \ln(1 + r)$ payments (the doubling time of money at rate $r$), or from the start if the loan is shorter than that.
 - **Balance after $k$ payments**, two ways. Forwards, the present value of the $n - k$ payments still to come:

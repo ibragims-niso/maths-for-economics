@@ -72,14 +72,17 @@ The steady state plus the starting gap, multiplied by $a$ once per period.
 
 **Stability.** The steady state is stable (every path converges to it) exactly when $|a| < 1$:
 
-| Value of $a$ | Path of $y_t$ |
-|---|---|
-| $0 < a < 1$ | converges monotonically, from one side |
-| $-1 < a < 0$ | converges with oscillation, overshooting every period |
-| $a > 1$ | diverges monotonically, away from $y^*$ |
-| $a < -1$ | diverges with ever wider oscillations |
-| $a = -1$ | jumps between $y_0$ and $b - y_0$ for ever (a two-period cycle) |
-| $a = 1$ | $y_t = y_0 + bt$: no steady state unless $b = 0$ |
+$$
+\begin{array}{ll}
+\text{Value of }a & \text{Path of }y_t \\ \hline
+0 < a < 1 & \text{converges monotonically, from one side} \\
+-1 < a < 0 & \text{converges with oscillation, overshooting every period} \\
+a > 1 & \text{diverges monotonically, away from }y^* \\
+a < -1 & \text{diverges with ever wider oscillations} \\
+a = -1 & \text{jumps between }y_0\text{ and }b - y_0\text{ for ever (a two-period cycle)} \\
+a = 1 & y_t = y_0 + bt\text{: no steady state unless }b = 0
+\end{array}
+$$
 
 Only $a$ decides stability; $b$ and $y_0$ only decide where the steady state is and where the path starts. Because the gap after $t$ periods is $|y_0 - y^*|\,|a|^t$, the number of periods needed to shrink it to a fraction $q$ of its first size is the smallest whole $t$ with $t \ge \ln q / \ln |a|$.
 
