@@ -427,3 +427,8 @@ log-likelihood: The natural log of the likelihood, ℓ(θ) = Σ ln f(xᵢ; θ); 
 maximum likelihood estimator: The parameter value that makes the observed data most probable, found by maximising the log-likelihood.
 likelihood-ratio test: A test that compares the maximised log-likelihoods with and without a restriction, using LR = 2(ℓ_U − ℓ_R) against a χ² critical value.
 logit model: A model for a yes/no outcome in which the probability is e^z/(1 + e^z) with z = β₀ + β₁x, estimated by maximum likelihood.
+tautology: A statement that is true in every row of its truth table, whatever the truth values of its parts, such as "P or not P".
+contrapositive: The statement "if not Q then not P", which says exactly the same as "if P then Q", so proving one proves the other.
+logical equivalence: Two statements are logically equivalent when they have the same truth value in every row of the truth table.
+mathematical induction: A proof that a statement holds for every whole number n by showing it holds for the first value (base case) and that holding for n forces it to hold for n + 1 (inductive step).
+counterexample: A single case in which a "for all" claim fails, which is enough to show the claim is false.
