@@ -31,6 +31,7 @@ import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
 import { SpanAndBasis } from './SpanAndBasis';
 import { SpendingRounds } from './SpendingRounds';
+import { SurplusTaxWelfare } from './SurplusTaxWelfare';
 import { SurveyVenn } from './SurveyVenn';
 import { TariffContinuity } from './TariffContinuity';
 import { TaxBandExplorer } from './TaxBandExplorer';
@@ -72,6 +73,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'simple-vs-compound': SimpleVsCompound,
   'span-and-basis': SpanAndBasis,
   'spending-rounds': SpendingRounds,
+  'surplus-tax-welfare': SurplusTaxWelfare,
   'survey-venn': SurveyVenn,
   'tariff-continuity': TariffContinuity,
   'tax-band-explorer': TaxBandExplorer,

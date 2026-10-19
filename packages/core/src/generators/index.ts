@@ -36,6 +36,9 @@ import { totalCostFromMarginalCost } from './C112/total-cost-from-marginal-cost'
 import { accumulatedExponentialFlow } from './C113/accumulated-exponential-flow';
 import { averagePriceOverPeriod } from './C113/average-price-over-period';
 import { costIncreaseFromMarginalCost } from './C113/cost-increase-from-marginal-cost';
+import { consumerSurplusLinearEquilibrium } from './C114/consumer-surplus-linear-equilibrium';
+import { consumerSurplusQuadraticDemand } from './C114/consumer-surplus-quadratic-demand';
+import { deadweightLossPerUnitTax } from './C114/deadweight-loss-per-unit-tax';
 import { presentValueGrowingStream } from './C115/present-value-growing-stream';
 import { substitutionTotalFromMarginal } from './C115/substitution-total-from-marginal';
 import { totalOutputLogRate } from './C115/total-output-log-rate';
@@ -190,6 +193,9 @@ export const GENERATORS = [
   costIncreaseFromMarginalCost,
   accumulatedExponentialFlow,
   averagePriceOverPeriod,
+  consumerSurplusLinearEquilibrium,
+  deadweightLossPerUnitTax,
+  consumerSurplusQuadraticDemand,
   substitutionTotalFromMarginal,
   presentValueGrowingStream,
   totalOutputLogRate,
