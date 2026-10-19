@@ -6,6 +6,7 @@ import { BinomialPoissonBars } from './BinomialPoissonBars';
 import { BreakEvenLines } from './BreakEvenLines';
 import { BudgetVectors } from './BudgetVectors';
 import { ChainRuleCostTime } from './ChainRuleCostTime';
+import { ChebyshevPooling } from './ChebyshevPooling';
 import { CompoundingFrequency } from './CompoundingFrequency';
 import { ContinuousDiscountArea } from './ContinuousDiscountArea';
 import { DeterminantArea } from './DeterminantArea';
@@ -57,6 +58,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'break-even-lines': BreakEvenLines,
   'budget-vectors': BudgetVectors,
   'chain-rule-cost-time': ChainRuleCostTime,
+  'chebyshev-pooling': ChebyshevPooling,
   'compounding-frequency': CompoundingFrequency,
   'continuous-discount-area': ContinuousDiscountArea,
   'cost-antiderivative-family': AntiderivativeFamily,

@@ -205,3 +205,8 @@ standard error: The standard deviation of a statistic; for a sample mean it is �
 central limit theorem: The result that the mean (or total) of many independent observations is approximately normal, whatever the shape of the population they come from.
 sample proportion: The share p̂ of a sample with some feature, such as being unemployed; its mean is p and its standard error √(p(1 − p)/n).
 finite population correction: The factor √((N − n)/(N − 1)) that reduces the standard error when a sample takes a large share of a finite population.
+Markov's inequality: For a quantity that is never negative, the chance that it reaches a level a is at most its mean divided by a.
+Chebyshev's inequality: For any distribution, the chance of landing k or more standard deviations from the mean is at most 1/k², so at least 1 − 1/k² lies within k standard deviations.
+sample mean: The average X̄ of n independent draws from a distribution; it has the same mean μ as one draw and variance σ²/n.
+law of large numbers: The result that the average of many independent draws gets ever closer to the true mean as the number of draws grows.
+risk pooling: Combining many independent risks so that the average loss per unit becomes predictable even though each single loss is not.

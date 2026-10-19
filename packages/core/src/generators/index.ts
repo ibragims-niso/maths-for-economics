@@ -140,6 +140,9 @@ import { twoAssetPortfolioRisk } from './ST201/two-asset-portfolio-risk';
 import { sampleMeanTailProbability } from './ST202/sample-mean-tail-probability';
 import { sampleProportionProbability } from './ST202/sample-proportion-probability';
 import { sampleSizeForPrecision } from './ST202/sample-size-for-precision';
+import { chebyshevIntervalBound } from './ST206/chebyshev-interval-bound';
+import { chebyshevSampleSize } from './ST206/chebyshev-sample-size';
+import { sampleMeanChebyshevBound } from './ST206/sample-mean-chebyshev-bound';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -285,6 +288,9 @@ export const GENERATORS = [
   sampleMeanTailProbability,
   sampleProportionProbability,
   sampleSizeForPrecision,
+  chebyshevIntervalBound,
+  sampleMeanChebyshevBound,
+  chebyshevSampleSize,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));
