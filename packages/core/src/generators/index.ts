@@ -143,6 +143,9 @@ import { sampleSizeForPrecision } from './ST202/sample-size-for-precision';
 import { ciMeanKnownSigmaLimit } from './ST203/ci-mean-known-sigma-limit';
 import { ciMeanTSmallSample } from './ST203/ci-mean-t-small-sample';
 import { ciProportionLimit } from './ST203/ci-proportion-limit';
+import { hypothesisTestStatistic } from './ST204/hypothesis-test-statistic';
+import { zTestPValue } from './ST204/z-test-p-value';
+import { zTestPower } from './ST204/z-test-power';
 import { chebyshevIntervalBound } from './ST206/chebyshev-interval-bound';
 import { chebyshevSampleSize } from './ST206/chebyshev-sample-size';
 import { sampleMeanChebyshevBound } from './ST206/sample-mean-chebyshev-bound';
@@ -294,6 +297,9 @@ export const GENERATORS = [
   ciMeanKnownSigmaLimit,
   ciProportionLimit,
   ciMeanTSmallSample,
+  hypothesisTestStatistic,
+  zTestPValue,
+  zTestPower,
   chebyshevIntervalBound,
   sampleMeanChebyshevBound,
   chebyshevSampleSize,

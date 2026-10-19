@@ -215,3 +215,8 @@ unbiased estimator: An estimator whose average over all possible samples equals 
 confidence interval: A range computed from a sample by a method that covers the true value in a stated share of samples, such as 95 %.
 margin of error: The half-width of a confidence interval, such as z·σ/√n for a mean; the interval is the estimate plus or minus this amount.
 t distribution: A bell-shaped distribution with fatter tails than the normal, used for intervals when σ is estimated by s; it has n − 1 degrees of freedom for a mean.
+null hypothesis: The statement that nothing has changed (for example μ = μ₀), which a test assumes true and rejects only if the data would be very unlikely under it.
+p-value: The probability, computed assuming the null hypothesis is true, of a test statistic at least as extreme as the one observed.
+significance level: The probability α of rejecting a true null hypothesis that a test accepts, chosen in advance, usually 5 %.
+type I and type II errors: Rejecting a null hypothesis that is true (type I) and failing to reject one that is false (type II).
+power of a test: The probability that a test rejects the null hypothesis when it is false, equal to 1 minus the probability of a type II error.
