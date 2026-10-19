@@ -52,6 +52,18 @@ const work = (p: Params) => {
   return c0 + c1 / 2;
 };
 
+/** The likely wrong answers; a problem keeps at least two after duplicates are removed. */
+function wrongAnswers(p: Params) {
+  const W = work(p);
+  const mx = (p.ax + p.bx) / 2;
+  const my = (p.ay + p.by) / 2;
+  return cleanDistractors(W, [
+    { value: -W, mistakeCode: 'REVERSED_PATH' },
+    { value: round(P(p, mx, my) + Q(p, mx, my), 2), mistakeCode: 'MISSING_DX_DT' },
+    { value: coefficients(p).c0, mistakeCode: 'FORCE_AT_START' },
+  ]);
+}
+
 /** C118, difficulty 2: work ∫ P dx + Q dy of a linear force field along a straight segment. */
 export const lineIntegralWorkSegment: Generator<Params> = {
   id: 'line-integral-work-segment',
@@ -77,6 +89,7 @@ export const lineIntegralWorkSegment: Generator<Params> = {
       const { c1 } = coefficients(p);
       // The force must change along the path (c1 ≠ 0) and the work must not be zero.
       if (c1 === 0 || work(p) === 0 || Math.abs(work(p)) > 400) continue;
+      if (wrongAnswers(p).length < 2) continue;
       return p;
     }
   },
@@ -116,14 +129,5 @@ export const lineIntegralWorkSegment: Generator<Params> = {
     ];
   },
 
-  distractors(p) {
-    const W = work(p);
-    const mx = (p.ax + p.bx) / 2;
-    const my = (p.ay + p.by) / 2;
-    return cleanDistractors(W, [
-      { value: -W, mistakeCode: 'REVERSED_PATH' },
-      { value: round(P(p, mx, my) + Q(p, mx, my), 2), mistakeCode: 'MISSING_DX_DT' },
-      { value: coefficients(p).c0, mistakeCode: 'FORCE_AT_START' },
-    ]);
-  },
+  distractors: wrongAnswers,
 };
