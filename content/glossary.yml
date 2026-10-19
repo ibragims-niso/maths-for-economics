@@ -220,3 +220,8 @@ p-value: The probability, computed assuming the null hypothesis is true, of a te
 significance level: The probability α of rejecting a true null hypothesis that a test accepts, chosen in advance, usually 5 %.
 type I and type II errors: Rejecting a null hypothesis that is true (type I) and failing to reject one that is false (type II).
 power of a test: The probability that a test rejects the null hypothesis when it is false, equal to 1 minus the probability of a type II error.
+Markov chain: A model in which something moves between a few states from period to period, with chances of moving that depend only on the current state.
+Markov property: The rule that the chance of the next state depends only on the state now, not on how the process got there.
+stationary distribution: The shares of the states that a Markov chain keeps unchanged from one period to the next, found by solving πP = π with the shares adding up to 1.
+regular Markov chain: A chain in which some power of the transition matrix has every entry positive, so the shares approach the same long-run distribution from any start.
+absorbing state: A state that can never be left once entered, such as default in a credit-rating model.

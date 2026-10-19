@@ -30,6 +30,7 @@ import { InvestmentRiskBars } from './InvestmentRiskBars';
 import { KeynesianCross } from './KeynesianCross';
 import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
+import { MarkovLabourMarket } from './MarkovLabourMarket';
 import { NormalAreaExplorer } from './NormalAreaExplorer';
 import { PowerExplorer } from './PowerExplorer';
 import { ProductionConcavity } from './ProductionConcavity';
@@ -85,6 +86,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'keynesian-cross': KeynesianCross,
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,
+  'markov-labour-market': MarkovLabourMarket,
   'normal-area-explorer': NormalAreaExplorer,
   'power-explorer': PowerExplorer,
   'production-concavity': ProductionConcavity,

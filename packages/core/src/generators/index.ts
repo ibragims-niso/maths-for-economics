@@ -122,6 +122,9 @@ import { twoProductOptimalOutput } from './MV07/two-product-optimal-output';
 import { jointDensityRectangleProbability } from './MV13/joint-density-rectangle-probability';
 import { rectangleLinearDensityTotal } from './MV13/rectangle-linear-density-total';
 import { triangleRegionTotal } from './MV13/triangle-region-total';
+import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
+import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
+import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
 import { bayesDefaultGivenSignal } from './ST102/bayes-default-given-signal';
 import { meetingWindowProbability } from './ST102/meeting-window-probability';
 import { sampleDefectivesProbability } from './ST102/sample-defectives-probability';
@@ -303,6 +306,9 @@ export const GENERATORS = [
   chebyshevIntervalBound,
   sampleMeanChebyshevBound,
   chebyshevSampleSize,
+  markovShareAfterSteps,
+  markovLongRunShareTwoState,
+  markovLongRunShareThreeState,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));
