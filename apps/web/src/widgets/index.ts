@@ -49,6 +49,7 @@ import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
 import { NormalAreaExplorer } from './NormalAreaExplorer';
+import { NpvProfileTwoProjects } from './NpvProfileTwoProjects';
 import { OlsSlopeSampling } from './OlsSlopeSampling';
 import { PartialEffectWages } from './PartialEffectWages';
 import { PowerExplorer } from './PowerExplorer';
@@ -133,6 +134,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'markov-labour-market': MarkovLabourMarket,
   'mm1-waiting-curve': QueueWaitingCurve,
   'normal-area-explorer': NormalAreaExplorer,
+  'npv-profile-two-projects': NpvProfileTwoProjects,
   'ols-slope-sampling': OlsSlopeSampling,
   'partial-effect-wages': PartialEffectWages,
   'power-explorer': PowerExplorer,

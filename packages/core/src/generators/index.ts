@@ -117,6 +117,9 @@ import { savingPlanPayment } from './FM04/saving-plan-payment';
 import { leasePaymentResidual } from './FM05/lease-payment-residual';
 import { loanLevelPayment } from './FM05/loan-level-payment';
 import { loanScheduleRow } from './FM05/loan-schedule-row';
+import { mutuallyExclusiveBestNpv } from './FM06/mutually-exclusive-best-npv';
+import { projectNpvYearlyFlows } from './FM06/project-npv-yearly-flows';
+import { twoPeriodIrr } from './FM06/two-period-irr';
 import { bimatrixNashPayoff } from './GT01/bimatrix-nash-payoff';
 import { cournotDuopolyEquilibrium } from './GT01/cournot-duopoly-equilibrium';
 import { pureNashCount } from './GT01/pure-nash-count';
@@ -280,6 +283,9 @@ export const GENERATORS = [
   loanLevelPayment,
   loanScheduleRow,
   leasePaymentResidual,
+  projectNpvYearlyFlows,
+  twoPeriodIrr,
+  mutuallyExclusiveBestNpv,
   limitByCancelling,
   longRunCostRatio,
   continuousTariffParameter,

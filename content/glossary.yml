@@ -347,3 +347,8 @@ principal: The amount borrowed and still owed on a loan, as opposed to the inter
 residual value: The expected value of a leased asset when it is handed back at the end of the lease.
 APR (annual percentage rate): The yearly cost of a loan that lenders must quote, including compulsory fees, so that offers can be compared.
 equal-principal loan: A loan repaid with the same amount of principal each period plus interest on the balance, so the payments fall over time.
+net present value: The value today of all of a project's future cash flows minus its initial cost; a positive NPV means the project adds value.
+internal rate of return: The discount rate at which a project's net present value is exactly zero; the rate of return the project itself earns.
+payback period: The number of years until a project's undiscounted cash flows add up to its initial cost.
+crossover rate: The discount rate at which two projects have the same net present value; on one side of it the NPV and IRR rankings conflict.
+opportunity cost of capital: The return the money could earn elsewhere at similar risk, used as the discount rate when appraising an investment.
