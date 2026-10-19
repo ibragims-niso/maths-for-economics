@@ -264,3 +264,8 @@ best response: The strategy that gives a player the highest payoff against a giv
 dominant strategy: A strategy that gives a player a higher payoff than any other strategy, whatever the other players do.
 Pareto efficient: An outcome where no one can be made better off without making someone else worse off.
 Cournot duopoly: A market with two firms that choose their output quantities at the same time, each taking the rival's output as given.
+integer programming: A linear programme in which some or all variables must take whole-number values, such as numbers of machines or yes/no decisions.
+LP relaxation: The linear programme obtained by dropping the whole-number conditions of an integer programme; its optimal value bounds the integer optimum.
+branch and bound: A method for integer programmes that splits the problem on a fractional variable (x ≤ k or x ≥ k + 1) and discards branches whose LP bound cannot beat the best whole plan found so far.
+price of integrality: The LP-relaxation optimum minus the best whole-number value; what indivisibility costs.
+fractional-linear programming: Maximising a ratio of two linear functions, such as profit per unit of cost, subject to linear constraints; the optimum is at a corner.

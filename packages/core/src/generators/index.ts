@@ -134,6 +134,9 @@ import { lpDualShadowPrice } from './OP03/lp-dual-shadow-price';
 import { transportNorthWestCost } from './OP05/transport-north-west-cost';
 import { transportReducedCostEmptyCell } from './OP05/transport-reduced-cost-empty-cell';
 import { transportTwoSourceMinimumCost } from './OP05/transport-two-source-minimum-cost';
+import { parametricLpOptimalValue } from './OP06/parametric-lp-optimal-value';
+import { profitCostRatioBestCorner } from './OP06/profit-cost-ratio-best-corner';
+import { projectSelectionBestNpv } from './OP06/project-selection-best-npv';
 import { markovLongRunShareThreeState } from './SP01/markov-long-run-share-three-state';
 import { markovLongRunShareTwoState } from './SP01/markov-long-run-share-two-state';
 import { markovShareAfterSteps } from './SP01/markov-share-after-steps';
@@ -351,6 +354,9 @@ export const GENERATORS = [
   transportNorthWestCost,
   transportTwoSourceMinimumCost,
   transportReducedCostEmptyCell,
+  profitCostRatioBestCorner,
+  projectSelectionBestNpv,
+  parametricLpOptimalValue,
   bimatrixNashPayoff,
   pureNashCount,
   cournotDuopolyEquilibrium,
