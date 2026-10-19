@@ -99,6 +99,9 @@ import { pureNashCount } from './GT01/pure-nash-count';
 import { auditProbabilityIndifference } from './GT02/audit-probability-indifference';
 import { mixedEquilibriumExpectedPayoff } from './GT02/mixed-equilibrium-expected-payoff';
 import { mixedEquilibriumProbability } from './GT02/mixed-equilibrium-probability';
+import { zeroSumLpOptimalValue } from './GT05/zero-sum-lp-optimal-value';
+import { zeroSumMixed2x2Value } from './GT05/zero-sum-mixed-2x2-value';
+import { zeroSumSaddlePointValue } from './GT05/zero-sum-saddle-point-value';
 import { bundleAngleCosine } from './LA101/bundle-angle-cosine';
 import { bundleCostDotProduct } from './LA101/bundle-cost-dot-product';
 import { bundleDistanceNorm } from './LA101/bundle-distance-norm';
@@ -372,6 +375,9 @@ export const GENERATORS = [
   auditProbabilityIndifference,
   mixedEquilibriumProbability,
   mixedEquilibriumExpectedPayoff,
+  zeroSumSaddlePointValue,
+  zeroSumMixed2x2Value,
+  zeroSumLpOptimalValue,
   markovShareAfterSteps,
   markovLongRunShareTwoState,
   markovLongRunShareThreeState,

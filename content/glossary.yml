@@ -278,3 +278,8 @@ technical coefficient: The input from one sector needed per unit of another sect
 Leontief inverse: The matrix (I − A)⁻¹ whose entries give the total direct and indirect output each sector must produce per unit of final demand for each good.
 output multiplier: The column sum of the Leontief inverse; the extra output of the whole economy per unit of extra final demand for one sector's good.
 final demand: Purchases of goods for final use (households, government, investment and exports) rather than as inputs to production.
+zero-sum game: A game between two players in which whatever one player wins the other loses, so a single payoff table describes both.
+value of a game: The expected payoff that the row player can guarantee and the column player can hold them to when both play optimally in a zero-sum game.
+maximin: The largest of a player's worst-case payoffs; the most a cautious player can guarantee with a pure strategy.
+saddle point of a game: An entry of a zero-sum payoff matrix that is the smallest in its row and the largest in its column, so pure strategies already solve the game.
+minimax theorem: Von Neumann's result that in every finite zero-sum game the row player's best guarantee equals the column player's best limit once mixed strategies are allowed.

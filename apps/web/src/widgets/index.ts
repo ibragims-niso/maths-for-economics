@@ -63,6 +63,7 @@ import { TwoAssetPortfolio } from './TwoAssetPortfolio';
 import { TwoLineSystem } from './TwoLineSystem';
 import { TwoProductProfitMap } from './TwoProductProfitMap';
 import { WageOutlierDots } from './WageOutlierDots';
+import { ZeroSumLowerEnvelope } from './ZeroSumLowerEnvelope';
 
 /** Interactive widgets by the IDs topic files use in ::widget{id="..."}. */
 export const WIDGETS: Record<string, ComponentType> = {
@@ -130,4 +131,5 @@ export const WIDGETS: Record<string, ComponentType> = {
   'two-line-system': TwoLineSystem,
   'two-product-profit-map': TwoProductProfitMap,
   'wage-outlier-dots': WageOutlierDots,
+  'zero-sum-lower-envelope': ZeroSumLowerEnvelope,
 };
