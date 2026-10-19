@@ -240,3 +240,7 @@ base index: A value compared with its value in one fixed base period (base perio
 percentage point: The unit for the difference between two rates; a rate falling from 6 % to 4.5 % falls by 1.5 percentage points.
 annualised growth rate: The yearly rate a quarterly or monthly growth rate would give if it continued for a whole year, (1 + q)⁴ − 1 or (1 + m)¹² − 1.
 year-on-year growth rate: Growth compared with the same period one year earlier, for example this quarter against the same quarter last year.
+residual: The gap between an observed value and the value a fitted line predicts for it, y − ŷ; the part the line does not explain.
+least squares: The method that picks the regression line making the sum of the squared residuals as small as possible.
+coefficient of determination: R², the share of the variation of y around its mean that a regression explains, 1 − SSR/SST, between 0 and 1.
+extrapolation: Using a fitted relationship to predict outside the range of the data it was estimated from, where it may no longer hold.

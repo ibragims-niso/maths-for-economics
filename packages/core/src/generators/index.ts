@@ -158,6 +158,9 @@ import { ciProportionLimit } from './ST203/ci-proportion-limit';
 import { hypothesisTestStatistic } from './ST204/hypothesis-test-statistic';
 import { zTestPValue } from './ST204/z-test-p-value';
 import { zTestPower } from './ST204/z-test-power';
+import { olsSlopeFromData } from './ST205/ols-slope-from-data';
+import { regressionLineFromSums } from './ST205/regression-line-from-sums';
+import { regressionSlopeTStatistic } from './ST205/regression-slope-t-statistic';
 import { chebyshevIntervalBound } from './ST206/chebyshev-interval-bound';
 import { chebyshevSampleSize } from './ST206/chebyshev-sample-size';
 import { sampleMeanChebyshevBound } from './ST206/sample-mean-chebyshev-bound';
@@ -321,6 +324,9 @@ export const GENERATORS = [
   hypothesisTestStatistic,
   zTestPValue,
   zTestPower,
+  regressionLineFromSums,
+  olsSlopeFromData,
+  regressionSlopeTStatistic,
   chebyshevIntervalBound,
   sampleMeanChebyshevBound,
   chebyshevSampleSize,

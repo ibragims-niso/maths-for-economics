@@ -30,6 +30,7 @@ import { InverseDemandMirror } from './InverseDemandMirror';
 import { InverseTwoMarkets } from './InverseTwoMarkets';
 import { InvestmentRiskBars } from './InvestmentRiskBars';
 import { KeynesianCross } from './KeynesianCross';
+import { LeastSquaresFit } from './LeastSquaresFit';
 import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
@@ -89,6 +90,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'inverse-two-markets': InverseTwoMarkets,
   'investment-risk-bars': InvestmentRiskBars,
   'keynesian-cross': KeynesianCross,
+  'least-squares-fit': LeastSquaresFit,
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,
   'markov-labour-market': MarkovLabourMarket,
