@@ -114,6 +114,9 @@ import { presentValueUnevenFlows } from './FM03/present-value-uneven-flows';
 import { annuityPresentValue } from './FM04/annuity-present-value';
 import { growingPerpetuityValue } from './FM04/growing-perpetuity-value';
 import { savingPlanPayment } from './FM04/saving-plan-payment';
+import { leasePaymentResidual } from './FM05/lease-payment-residual';
+import { loanLevelPayment } from './FM05/loan-level-payment';
+import { loanScheduleRow } from './FM05/loan-schedule-row';
 import { bimatrixNashPayoff } from './GT01/bimatrix-nash-payoff';
 import { cournotDuopolyEquilibrium } from './GT01/cournot-duopoly-equilibrium';
 import { pureNashCount } from './GT01/pure-nash-count';
@@ -274,6 +277,9 @@ export const GENERATORS = [
   annuityPresentValue,
   growingPerpetuityValue,
   savingPlanPayment,
+  loanLevelPayment,
+  loanScheduleRow,
+  leasePaymentResidual,
   limitByCancelling,
   longRunCostRatio,
   continuousTariffParameter,

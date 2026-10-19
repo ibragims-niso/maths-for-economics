@@ -44,6 +44,7 @@ import { KeynesianCross } from './KeynesianCross';
 import { LagrangeBudgetTangency } from './LagrangeBudgetTangency';
 import { LeastSquaresFit } from './LeastSquaresFit';
 import { LeontiefTwoSector } from './LeontiefTwoSector';
+import { LoanScheduleBars } from './LoanScheduleBars';
 import { MarginalCostTangent } from './MarginalCostTangent';
 import { MarginalRevenueLines } from './MarginalRevenueLines';
 import { MarkovLabourMarket } from './MarkovLabourMarket';
@@ -125,6 +126,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'lagrange-budget-tangency': LagrangeBudgetTangency,
   'least-squares-fit': LeastSquaresFit,
   'leontief-two-sector': LeontiefTwoSector,
+  'loan-schedule-bars': LoanScheduleBars,
   'lp-shadow-price-hours': ShadowPriceHours,
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,

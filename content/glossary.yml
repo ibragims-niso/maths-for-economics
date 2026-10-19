@@ -342,3 +342,8 @@ non-negativity constraint: The requirement that a choice variable such as a quan
 marginal utility of income: The extra maximum utility a consumer gets from one more unit of income; the Lagrange multiplier of the budget constraint.
 optimal value function: The best value of an objective, such as maximum utility or minimum cost, written as a function of a constraint's constant or another parameter.
 non-binding constraint: A constraint that is not used up at the optimum, so relaxing it does not change the best value and its shadow price is zero.
+amortisation schedule: A table showing, payment by payment, how much of each loan instalment is interest and how much repays the loan, and the balance left afterwards.
+principal: The amount borrowed and still owed on a loan, as opposed to the interest charged on it.
+residual value: The expected value of a leased asset when it is handed back at the end of the lease.
+APR (annual percentage rate): The yearly cost of a loan that lenders must quote, including compulsory fees, so that offers can be compared.
+equal-principal loan: A loan repaid with the same amount of principal each period plus interest on the balance, so the payments fall over time.
