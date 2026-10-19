@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { loadAllTopics } from './content';
 import { HtmlBlock } from './HtmlBlock';
+import { TermArea } from './terms/TermArea';
 import { icon3d, topicsForYear, YEARS } from './topics';
 
 /** Written topics in Core order, with their formulas as plain text for searching. */
@@ -36,33 +37,35 @@ export function FormulasPage() {
         </div>
       </div>
 
-      <section className="sheet sheet--page" aria-label="Formulas">
-        <div className="sheet-handle" aria-hidden="true" />
-        <label htmlFor="formula-search" className="sr-only">
-          Search formulas
-        </label>
-        <input
-          id="formula-search"
-          className="search"
-          type="search"
-          placeholder="Search, e.g. elasticity or interest"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        {sheet.length > 0 && shown.length === 0 && (
-          <p className="ai-status">No formulas match "{query}".</p>
-        )}
-        {shown.map(({ topic }) => (
-          <article key={topic.id} className="formula">
-            <h2>
-              <Link to={`/topic/${topic.id}`} viewTransition>
-                {topic.title}
-              </Link>
-            </h2>
-            <HtmlBlock className="prose" html={topic.sections.definitions} />
-          </article>
-        ))}
-      </section>
+      <TermArea>
+        <section className="sheet sheet--page" aria-label="Formulas">
+          <div className="sheet-handle" aria-hidden="true" />
+          <label htmlFor="formula-search" className="sr-only">
+            Search formulas
+          </label>
+          <input
+            id="formula-search"
+            className="search"
+            type="search"
+            placeholder="Search, e.g. elasticity or interest"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          {sheet.length > 0 && shown.length === 0 && (
+            <p className="ai-status">No formulas match "{query}".</p>
+          )}
+          {shown.map(({ topic }) => (
+            <article key={topic.id} className="formula">
+              <h2>
+                <Link to={`/topic/${topic.id}`} viewTransition>
+                  {topic.title}
+                </Link>
+              </h2>
+              <HtmlBlock className="prose" html={topic.sections.definitions} />
+            </article>
+          ))}
+        </section>
+      </TermArea>
     </>
   );
 }

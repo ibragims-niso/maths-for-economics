@@ -10,6 +10,7 @@ import { contentErrorUrl } from './links';
 import { NotFoundPage } from './NotFoundPage';
 import { Segmented } from './Segmented';
 import { recordRead, storage, useProgress } from './storage';
+import { TermArea } from './terms/TermArea';
 import { BLOCK_NAMES, STATUS_LABEL, topicIcon } from './topics';
 
 type Tab = 'learn' | 'examples' | 'practise' | 'real';
@@ -136,94 +137,96 @@ export function TopicPage() {
         />
       </div>
 
-      <section
-        className="sheet sheet--page"
-        id="topic-panel"
-        role="tabpanel"
-        aria-labelledby={`topic-tab-${tab}`}
-      >
-        <div className="sheet-handle" aria-hidden="true" />
+      <TermArea>
+        <section
+          className="sheet sheet--page"
+          id="topic-panel"
+          role="tabpanel"
+          aria-labelledby={`topic-tab-${tab}`}
+        >
+          <div className="sheet-handle" aria-hidden="true" />
 
-        {tab === 'learn' && (
-          <>
-            <h2>Why economists need this</h2>
-            <HtmlBlock className="prose" html={topic.sections.why} />
-            <h2>Intuition</h2>
-            <HtmlBlock className="prose" html={topic.sections.intuition} />
-            <h2>Definition and formulas</h2>
-            <HtmlBlock className="prose" html={topic.sections.definitions} />
-            <h2>Try it</h2>
-            <HtmlBlock className="prose" html={topic.sections.interactive} />
-            <h2>Common mistakes</h2>
-            <HtmlBlock className="prose" html={topic.sections.mistakes} />
-            <ReadMarker topicId={topic.id} />
-            <AskBox topicId={topic.id} allowedUrls={resourceUrls} />
-          </>
-        )}
+          {tab === 'learn' && (
+            <>
+              <h2>Why economists need this</h2>
+              <HtmlBlock className="prose" html={topic.sections.why} />
+              <h2>Intuition</h2>
+              <HtmlBlock className="prose" html={topic.sections.intuition} />
+              <h2>Definition and formulas</h2>
+              <HtmlBlock className="prose" html={topic.sections.definitions} />
+              <h2>Try it</h2>
+              <HtmlBlock className="prose" html={topic.sections.interactive} />
+              <h2>Common mistakes</h2>
+              <HtmlBlock className="prose" html={topic.sections.mistakes} />
+              <ReadMarker topicId={topic.id} />
+              <AskBox topicId={topic.id} allowedUrls={resourceUrls} />
+            </>
+          )}
 
-        {tab === 'examples' &&
-          topic.sections.examples.map((example, i) => (
-            <Example key={example.title} example={example} topicId={topic.id} index={i} />
-          ))}
+          {tab === 'examples' &&
+            topic.sections.examples.map((example, i) => (
+              <Example key={example.title} example={example} topicId={topic.id} index={i} />
+            ))}
 
-        {tab === 'practise' && (
-          <>
-            <h2>Practise</h2>
-            <p className="prose">
-              Every problem has new numbers, and the answer is checked by code. Mistakes are
-              explained, even offline.
-            </p>
-            <ul className="practice-list">
-              {topic.generators.map((g) => {
-                const generator = generatorById(g);
-                return generator ? (
-                  <li key={g}>
-                    <span className="practice-level">{DIFFICULTY[generator.difficulty]}</span>
-                    <span>{generator.title}</span>
-                  </li>
-                ) : null;
-              })}
-            </ul>
-            <Link to={`/practice?topic=${topic.id}`} className="button-primary" viewTransition>
-              Start practice
-            </Link>
-          </>
-        )}
-
-        {tab === 'real' && (
-          <>
-            <h2>How economists use it</h2>
-            <ul className="prose">
-              {topic.economicUses.map((use) => (
-                <li key={use}>{use}</li>
-              ))}
-            </ul>
-            <HtmlBlock className="prose" html={topic.sections.realWorld} />
-            <AiButton
-              label="More real-world uses"
-              request={{ mode: 'REAL_WORLD', topicId: topic.id, payload: {} }}
-              allowedUrls={resourceUrls}
-            />
-            {topic.resources.length > 0 && (
-              <>
-                <h2>Read more</h2>
-                <ul className="resources">
-                  {topic.resources.map((r) => (
-                    <li key={r.url}>
-                      <a href={r.url}>{r.title}</a>
-                      <span className="resource-kind">{r.kind}, needs internet</span>
+          {tab === 'practise' && (
+            <>
+              <h2>Practise</h2>
+              <p className="prose">
+                Every problem has new numbers, and the answer is checked by code. Mistakes are
+                explained, even offline.
+              </p>
+              <ul className="practice-list">
+                {topic.generators.map((g) => {
+                  const generator = generatorById(g);
+                  return generator ? (
+                    <li key={g}>
+                      <span className="practice-level">{DIFFICULTY[generator.difficulty]}</span>
+                      <span>{generator.title}</span>
                     </li>
-                  ))}
-                </ul>
-              </>
-            )}
-          </>
-        )}
+                  ) : null;
+                })}
+              </ul>
+              <Link to={`/practice?topic=${topic.id}`} className="button-primary" viewTransition>
+                Start practice
+              </Link>
+            </>
+          )}
 
-        <p className="report">
-          <a href={report}>Report an error in this topic</a>
-        </p>
-      </section>
+          {tab === 'real' && (
+            <>
+              <h2>How economists use it</h2>
+              <ul className="prose">
+                {topic.economicUses.map((use) => (
+                  <li key={use}>{use}</li>
+                ))}
+              </ul>
+              <HtmlBlock className="prose" html={topic.sections.realWorld} />
+              <AiButton
+                label="More real-world uses"
+                request={{ mode: 'REAL_WORLD', topicId: topic.id, payload: {} }}
+                allowedUrls={resourceUrls}
+              />
+              {topic.resources.length > 0 && (
+                <>
+                  <h2>Read more</h2>
+                  <ul className="resources">
+                    {topic.resources.map((r) => (
+                      <li key={r.url}>
+                        <a href={r.url}>{r.title}</a>
+                        <span className="resource-kind">{r.kind}, needs internet</span>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </>
+          )}
+
+          <p className="report">
+            <a href={report}>Report an error in this topic</a>
+          </p>
+        </section>
+      </TermArea>
     </>
   );
 }

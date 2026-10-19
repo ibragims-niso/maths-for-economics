@@ -38,6 +38,78 @@ const toHtml = unified()
   .use(rehypeStringify);
 
 /** ::widget{id="x"} becomes <div data-widget="x"></div>; verify code blocks disappear. */
+// ---- Terms: tappable words with a plain definition (content/glossary.yml) ----
+
+const GLOSSARY = parseYaml(readText(join(repoRoot, 'content/glossary.yml'))) as Record<
+  string,
+  string
+>;
+/** Short single words such as "set" or "range" are often ordinary English; authors mark them. */
+const TOO_COMMON = new Set(['series', 'principal', 'domain', 'vertex', 'median', 'exponent']);
+const AUTO_TERMS = Object.keys(GLOSSARY).filter(
+  (t) => (t.includes(' ') || t.length > 5) && !TOO_COMMON.has(t.toLowerCase()),
+);
+const escapeRegex = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const TERM_PATTERN = new RegExp(
+  `\\b(${[...AUTO_TERMS]
+    .sort((a, b) => b.length - a.length)
+    .map(escapeRegex)
+    .join('|')})(?:s|es)?\\b`,
+  'gi',
+);
+const canonicalTerm = (text: string) =>
+  Object.keys(GLOSSARY).find((k) => k.toLowerCase() === text.toLowerCase());
+
+function termNode(key: string, text: string): PhrasingContent {
+  return {
+    type: 'emphasis',
+    data: { hName: 'button', hProperties: { type: 'button', className: ['term'], dataTerm: key } },
+    children: [{ type: 'text', value: text }],
+  };
+}
+
+/**
+ * Turns the first mention of each glossary term in a section into a tappable term (owner's
+ * request), and every `:term[text]{id="glossary term"}` an author wrote. Maths, links and
+ * headings are left alone.
+ */
+function markTerms(nodes: RootContent[]): RootContent[] {
+  const used = new Set<string>();
+  const walk = (node: Nodes) => {
+    if (node.type === 'link' || node.type === 'heading' || node.type === 'code') return;
+    if (!('children' in node)) return;
+    const children: Nodes[] = [];
+    for (const child of node.children as Nodes[]) {
+      if (child.type === 'textDirective' && child.name === 'term') {
+        const text = mdToString(child);
+        const key = canonicalTerm(child.attributes?.id ?? text);
+        if (key) used.add(key);
+        children.push(key ? termNode(key, text) : { type: 'text', value: text });
+        continue;
+      }
+      if (child.type !== 'text') {
+        walk(child);
+        children.push(child);
+        continue;
+      }
+      let rest = child.value;
+      for (const m of child.value.matchAll(TERM_PATTERN)) {
+        const key = canonicalTerm(m[1] ?? '');
+        if (!key || used.has(key)) continue;
+        used.add(key);
+        const at = rest.indexOf(m[0]);
+        if (at > 0) children.push({ type: 'text', value: rest.slice(0, at) });
+        children.push(termNode(key, m[0]));
+        rest = rest.slice(at + m[0].length);
+      }
+      if (rest) children.push({ type: 'text', value: rest });
+    }
+    (node as { children: Nodes[] }).children = children;
+  };
+  for (const node of nodes) walk(node);
+  return nodes;
+}
+
 function prepare(nodes: RootContent[]): RootContent[] {
   const out: RootContent[] = [];
   for (const node of nodes) {
@@ -62,7 +134,7 @@ const phrasingHtml = (children: PhrasingContent[]) =>
 /** Splits "maths *Why:* reason" paragraphs of a numbered list into steps. */
 function parseExample(title: string, nodes: RootContent[]): CompiledExample {
   const listIndex = nodes.findIndex((n) => n.type === 'list' && n.ordered);
-  const statement = html(listIndex === -1 ? nodes : nodes.slice(0, listIndex));
+  const statement = html(markTerms(listIndex === -1 ? nodes : nodes.slice(0, listIndex)));
   const list = nodes[listIndex];
   const steps =
     list?.type === 'list'
@@ -191,16 +263,16 @@ function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } 
   const topic: CompiledTopic = {
     ...fm,
     sections: {
-      why: html(section('Why economists need this')),
-      intuition: html(section('Intuition')),
-      definitions: html(section('Definition and formulas')),
+      why: html(markTerms(section('Why economists need this'))),
+      intuition: html(markTerms(section('Intuition'))),
+      definitions: html(markTerms(section('Definition and formulas'))),
       interactive: html(section('Interactive')),
       examples,
       mistakes: html(
         hideMistakeCodes(section('Common mistakes'), new Set(Object.keys(fm.mistakeCodes))),
       ),
       practice: html(section('Practice')),
-      realWorld: html(section('Real world')),
+      realWorld: html(markTerms(section('Real world'))),
     },
     tutor: { summary: ai.summary, definitions: ai.definitions, examples: ai.examples },
   };
@@ -232,6 +304,8 @@ for (const topic of content.topics) {
   writeFileSync(join(topicsOut, `${topic.id}.json`), JSON.stringify(topic));
 }
 writeFileSync(join(outDir, 'meta.json'), JSON.stringify({ version: content.version }));
+// Help → Terms and the tappable terms in topics, from content/glossary.yml.
+writeFileSync(join(outDir, 'glossary.json'), JSON.stringify(GLOSSARY));
 // Help → Symbols, from content/symbols.yml.
 writeFileSync(
   join(outDir, 'symbols.json'),

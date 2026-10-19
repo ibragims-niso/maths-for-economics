@@ -84,3 +84,6 @@ Canonical English terms and short definitions (e.g. *marginal cost*, *price elas
 
 ## Symbols
 Every maths symbol used in a topic is explained in Help → Symbols, from `content/symbols.yml` (kept by the app session). `validate:content` warns when a topic uses a LaTeX symbol that has no entry there; the warning never blocks a topic.
+
+## Terms
+In the app, the first mention of each glossary term (`content/glossary.yml`) in a section is coloured and can be tapped for its plain definition; Help → Terms lists them all. Single words of five letters or fewer, and a few everyday words, are not marked automatically: write `:term[set]{id="set"}` (or just `:term[isoquant]`) to mark one by hand.
