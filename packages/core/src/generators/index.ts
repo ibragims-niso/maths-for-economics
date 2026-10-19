@@ -57,6 +57,9 @@ import { dpStagedRouteLeastCost } from './DO03/dp-staged-route-least-cost';
 import { cobwebPriceAfterPeriods } from './DY01/cobweb-price-after-periods';
 import { debtRatioSteadyState } from './DY01/debt-ratio-steady-state';
 import { differenceEquationValueAfterT } from './DY01/difference-equation-value-after-t';
+import { linearOdeValueAtTime } from './DY03/linear-ode-value-at-time';
+import { odeGapClosingTime } from './DY03/ode-gap-closing-time';
+import { solowSteadyStateCapital } from './DY03/solow-steady-state-capital';
 import { adjustedRSquared } from './EM01/adjusted-r-squared';
 import { olsCoefficientTwoRegressors } from './EM01/ols-coefficient-two-regressors';
 import { xtxEntryFromData } from './EM01/xtx-entry-from-data';
@@ -499,6 +502,9 @@ export const GENERATORS = [
   differenceEquationValueAfterT,
   debtRatioSteadyState,
   cobwebPriceAfterPeriods,
+  linearOdeValueAtTime,
+  odeGapClosingTime,
+  solowSteadyStateCapital,
   xtxEntryFromData,
   olsCoefficientTwoRegressors,
   adjustedRSquared,

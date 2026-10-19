@@ -399,3 +399,8 @@ positive definite: Describes a symmetric matrix (or quadratic form) whose form x
 negative definite: Describes a symmetric matrix whose form xᵀAx is negative for every non-zero x; a Hessian like this at a critical point means a strict local maximum.
 indefinite matrix: A symmetric matrix whose quadratic form takes both positive and negative values, so it has eigenvalues of both signs; as a Hessian it signals a saddle point.
 principal minor: The determinant of the square block left after deleting the same rows and columns of a matrix; all of them are needed to test semidefiniteness.
+differential equation: An equation linking an unknown function of time to its rate of change, such as dy/dt = b − a·y; solving it gives the whole path of the variable.
+half-life: The time it takes for a gap that shrinks exponentially to fall to half its size; for dy/dt + a·y = b it is ln 2/a.
+separable equation: A differential equation dy/dt = g(y)·h(t) that is solved by moving all y terms to one side and all t terms to the other and integrating both sides.
+logistic growth: Growth that is close to exponential at first and slows as the variable nears a ceiling M, following dN/dt = rN(1 − N/M) and giving an S-shaped curve.
+phase line: A line of possible values of a variable with arrows showing whether it rises or falls there; arrows pointing towards a rest point show that it is stable.

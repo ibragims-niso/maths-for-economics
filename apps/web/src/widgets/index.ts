@@ -60,6 +60,7 @@ import { NpvProfileTwoProjects } from './NpvProfileTwoProjects';
 import { OlsSlopeSampling } from './OlsSlopeSampling';
 import { PartialEffectWages } from './PartialEffectWages';
 import { PowerExplorer } from './PowerExplorer';
+import { PriceAdjustmentPath } from './PriceAdjustmentPath';
 import { ProductionConcavity } from './ProductionConcavity';
 import { ProfitEnvelope } from './ProfitEnvelope';
 import { ProfitHillTangent } from './ProfitHillTangent';
@@ -155,6 +156,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'ols-slope-sampling': OlsSlopeSampling,
   'partial-effect-wages': PartialEffectWages,
   'power-explorer': PowerExplorer,
+  'price-adjustment-path': PriceAdjustmentPath,
   'production-concavity': ProductionConcavity,
   'profit-envelope-hotelling': ProfitEnvelope,
   'profit-hill-tangent': ProfitHillTangent,
