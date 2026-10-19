@@ -422,3 +422,8 @@ locally asymptotically stable: Describes a steady state to which every path that
 linearisation: Replacing a nonlinear model near a steady state by its tangent-line (derivative or Jacobian) approximation, to judge stability from the slope or the eigenvalues.
 poverty trap: A low stable steady state with its own basin of attraction, so small help is undone and only a large enough push moves an economy to a better steady state.
 jump variable: A forward-looking variable, such as an asset price or an exchange rate, that can change at once when news arrives, unlike a predetermined variable such as capital.
+likelihood function: The probability (or density) of the observed data seen as a function of the unknown parameter, L(θ) = ∏ f(xᵢ; θ).
+log-likelihood: The natural log of the likelihood, ℓ(θ) = Σ ln f(xᵢ; θ); it peaks at the same parameter value and is easier to differentiate.
+maximum likelihood estimator: The parameter value that makes the observed data most probable, found by maximising the log-likelihood.
+likelihood-ratio test: A test that compares the maximised log-likelihoods with and without a restriction, using LR = 2(ℓ_U − ℓ_R) against a χ² critical value.
+logit model: A model for a yes/no outcome in which the probability is e^z/(1 + e^z) with z = β₀ + β₁x, estimated by maximum likelihood.

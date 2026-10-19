@@ -84,6 +84,9 @@ import { tStatisticFromXtxInverse } from './EM03/t-statistic-from-xtx-inverse';
 import { breuschPaganLmStatistic } from './EM04/breusch-pagan-lm-statistic';
 import { durbinWatsonStatistic } from './EM04/durbin-watson-statistic';
 import { robustSeSimpleRegression } from './EM04/robust-se-simple-regression';
+import { mleExponentialOrNormalVariance } from './EM05/mle-exponential-or-normal-variance';
+import { mleLikelihoodRatioProportion } from './EM05/mle-likelihood-ratio-proportion';
+import { mlePoissonOrBernoulli } from './EM05/mle-poisson-or-bernoulli';
 import { ar1ForecastHSteps } from './EM06/ar1-forecast-h-steps';
 import { ar1MeanOrVariance } from './EM06/ar1-mean-or-variance';
 import { ma1Lag1Autocorrelation } from './EM06/ma1-lag1-autocorrelation';
@@ -541,6 +544,9 @@ export const GENERATORS = [
   breuschPaganLmStatistic,
   durbinWatsonStatistic,
   robustSeSimpleRegression,
+  mlePoissonOrBernoulli,
+  mleExponentialOrNormalVariance,
+  mleLikelihoodRatioProportion,
   ar1MeanOrVariance,
   ma1Lag1Autocorrelation,
   ar1ForecastHSteps,

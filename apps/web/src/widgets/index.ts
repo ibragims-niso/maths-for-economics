@@ -5,6 +5,7 @@ import { Ar1ErrorRuns } from './Ar1ErrorRuns';
 import { Ar1ShockPath } from './Ar1ShockPath';
 import { AuditBestResponses } from './AuditBestResponses';
 import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
+import { BernoulliLogLikelihood } from './BernoulliLogLikelihood';
 import { BinomialPoissonBars } from './BinomialPoissonBars';
 import { BondPriceYield } from './BondPriceYield';
 import { BreakEvenLines } from './BreakEvenLines';
@@ -155,6 +156,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'marginal-cost-tangent': MarginalCostTangent,
   'marginal-revenue-lines': MarginalRevenueLines,
   'markov-labour-market': MarkovLabourMarket,
+  'mle-bernoulli-log-likelihood': BernoulliLogLikelihood,
   'mm1-waiting-curve': QueueWaitingCurve,
   'multiplier-accelerator': MultiplierAccelerator,
   'normal-area-explorer': NormalAreaExplorer,
