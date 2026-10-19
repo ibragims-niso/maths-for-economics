@@ -432,3 +432,8 @@ contrapositive: The statement "if not Q then not P", which says exactly the same
 logical equivalence: Two statements are logically equivalent when they have the same truth value in every row of the truth table.
 mathematical induction: A proof that a statement holds for every whole number n by showing it holds for the first value (base case) and that holding for n forces it to hold for n + 1 (inductive step).
 counterexample: A single case in which a "for all" claim fails, which is enough to show the claim is false.
+convergent sequence: A sequence whose terms eventually stay as close as we like to one number, its limit; for every ε > 0 there is an N after which every term is within ε of it.
+supremum: The least upper bound of a set of numbers; no element is larger, and no smaller number has that property; it need not belong to the set.
+completeness axiom: The property of the real numbers that every non-empty set with an upper bound has a least upper bound, so the number line has no gaps.
+monotone convergence theorem: The result that a sequence which keeps rising (or keeps falling) and stays bounded must converge, to its supremum (or infimum).
+Cauchy sequence: A sequence whose terms eventually all stay within any given distance of each other; in the real numbers these are exactly the convergent sequences.

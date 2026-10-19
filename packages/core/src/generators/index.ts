@@ -2,6 +2,9 @@ import type { Generator } from '../engine/types';
 import { compoundOvertakesLinearYear } from './AN01/compound-overtakes-linear-year';
 import { inductionSumClosedForm } from './AN01/induction-sum-closed-form';
 import { truthTableTrueRows } from './AN01/truth-table-true-rows';
+import { epsilonNThreshold } from './AN02/epsilon-n-threshold';
+import { recursiveRootSequenceLimit } from './AN02/recursive-root-sequence-limit';
+import { sequenceSupremum } from './AN02/sequence-supremum';
 import { continuousTariffParameter } from './C101/continuous-tariff-parameter';
 import { limitByCancelling } from './C101/limit-by-cancelling';
 import { longRunCostRatio } from './C101/long-run-cost-ratio';
@@ -565,6 +568,9 @@ export const GENERATORS = [
   truthTableTrueRows,
   inductionSumClosedForm,
   compoundOvertakesLinearYear,
+  epsilonNThreshold,
+  sequenceSupremum,
+  recursiveRootSequenceLimit,
   dpStagedRouteLeastCost,
   dpBudgetAllocationBestReturn,
   dpCakeEatingFirstConsumption,
