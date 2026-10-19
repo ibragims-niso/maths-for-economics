@@ -153,6 +153,9 @@ import { technicalCoefficientFromFlows } from './LA106/technical-coefficient-fro
 import { dependenceParameterK } from './LA201/dependence-parameter-k';
 import { matrixRankElimination } from './LA201/matrix-rank-elimination';
 import { replicatePayoffCoordinates } from './LA201/replicate-payoff-coordinates';
+import { eigenvalueLarger2x2 } from './LA202/eigenvalue-larger-2x2';
+import { eigenvectorSecondComponent } from './LA202/eigenvector-second-component';
+import { spectralRadiusStability } from './LA202/spectral-radius-stability';
 import { levelCurveThroughPoint } from './MV01/level-curve-through-point';
 import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-quantity';
 import { cobbDouglasMarginalProduct } from './MV02/cobb-douglas-marginal-product';
@@ -442,6 +445,9 @@ export const GENERATORS = [
   replicatePayoffCoordinates,
   matrixRankElimination,
   dependenceParameterK,
+  eigenvalueLarger2x2,
+  eigenvectorSecondComponent,
+  spectralRadiusStability,
   jointTableConditionalProbability,
   jointTableCovariance,
   twoAssetPortfolioRisk,

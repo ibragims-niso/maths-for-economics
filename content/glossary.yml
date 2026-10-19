@@ -385,3 +385,8 @@ envelope theorem: The rule that the rate at which the best value of a problem ch
 Hotelling's lemma: The derivative of a competitive firm's maximum profit with respect to its output price equals the profit-maximising output.
 Shephard's lemma: The derivative of the minimum cost with respect to an input price equals the amount of that input in the cheapest plan.
 Roy's identity: A consumer's demand for a good equals minus the derivative of indirect utility with respect to the good's price, divided by its derivative with respect to income.
+eigenvalue: A number λ for which some non-zero vector v satisfies Av = λv; it is the factor by which the matrix stretches that vector.
+eigenvector: A non-zero vector that a matrix only stretches, shrinks or flips without turning it off its own line, so that Av = λv.
+characteristic equation: The equation det(A − λI) = 0 whose solutions are the eigenvalues of A; for a 2×2 matrix it is λ² − (trace)λ + det = 0.
+trace: The sum of the diagonal entries of a square matrix, which equals the sum of its eigenvalues.
+spectral radius: The largest absolute value of the eigenvalues of a matrix; the system xₜ₊₁ = Axₜ is stable when it is below 1.

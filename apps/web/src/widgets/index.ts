@@ -26,6 +26,7 @@ import { DeterminantArea } from './DeterminantArea';
 import { DiscountingExplorer } from './DiscountingExplorer';
 import { DoubleIntegralGrid } from './DoubleIntegralGrid';
 import { DoublingTime } from './DoublingTime';
+import { EigenDirections } from './EigenDirections';
 import { ElasticitySlider } from './ElasticitySlider';
 import { EquilibriumTax } from './EquilibriumTax';
 import { EulerReturnsToScale } from './EulerReturnsToScale';
@@ -116,6 +117,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'discounting-explorer': DiscountingExplorer,
   'double-integral-grid': DoubleIntegralGrid,
   'doubling-time': DoublingTime,
+  'eigen-directions': EigenDirections,
   'elasticity-slider': ElasticitySlider,
   'equilibrium-tax': EquilibriumTax,
   'euler-returns-to-scale': EulerReturnsToScale,
