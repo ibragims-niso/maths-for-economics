@@ -171,6 +171,10 @@ import { pureNashCount } from './GT01/pure-nash-count';
 import { auditProbabilityIndifference } from './GT02/audit-probability-indifference';
 import { mixedEquilibriumExpectedPayoff } from './GT02/mixed-equilibrium-expected-payoff';
 import { mixedEquilibriumProbability } from './GT02/mixed-equilibrium-probability';
+import { alternatingOfferFirstOffer } from './GT03/alternating-offer-first-offer';
+import { entryCommitmentThreshold } from './GT03/entry-commitment-threshold';
+import { entryGameSpePayoff } from './GT03/entry-game-spe-payoff';
+import { stackelbergDuopolyOutcome } from './GT03/stackelberg-duopoly-outcome';
 import { zeroSumLpOptimalValue } from './GT05/zero-sum-lp-optimal-value';
 import { zeroSumMixed2x2Value } from './GT05/zero-sum-mixed-2x2-value';
 import { zeroSumSaddlePointValue } from './GT05/zero-sum-saddle-point-value';
@@ -604,6 +608,10 @@ export const GENERATORS = [
   auditProbabilityIndifference,
   mixedEquilibriumProbability,
   mixedEquilibriumExpectedPayoff,
+  entryGameSpePayoff,
+  entryCommitmentThreshold,
+  stackelbergDuopolyOutcome,
+  alternatingOfferFirstOffer,
   zeroSumSaddlePointValue,
   zeroSumMixed2x2Value,
   zeroSumLpOptimalValue,

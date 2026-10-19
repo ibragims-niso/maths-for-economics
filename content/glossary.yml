@@ -497,3 +497,8 @@ income effect: The part of the change in demand after a price change that comes 
 increasing differences: A property of an objective where raising the choice gains more when a parameter is higher, which makes the best choice rise with that parameter.
 tax pass-through: The share of a per-unit tax that shows up as a higher price paid by buyers.
 Giffen good: An inferior good whose income effect is strong enough to outweigh the substitution effect, so that demand rises when its own price rises.
+subgame-perfect equilibrium: A strategy profile in a sequential game that is a Nash equilibrium in every subgame, so it relies on no threat or promise a player would not carry out when the time came.
+credible threat: A threat that the player making it would actually want to carry out if the situation arose; a threat that would hurt the threatener is not credible.
+commitment device: A step taken in advance, such as a binding contract or a sunk investment, that changes a player's own future payoffs or options so that others believe what it will do.
+Stackelberg leader: The firm that chooses its output first, knowing how its rival will respond; with linear demand it produces (a − c)/(2b) and earns more than in Cournot competition.
+alternating-offer bargaining: A negotiation in which the sides take turns making offers and every round of delay shrinks the value of a deal by a discount factor δ.

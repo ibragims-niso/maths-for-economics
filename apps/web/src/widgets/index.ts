@@ -33,6 +33,7 @@ import { DoubleIntegralGrid } from './DoubleIntegralGrid';
 import { DoublingTime } from './DoublingTime';
 import { EigenDirections } from './EigenDirections';
 import { ElasticitySlider } from './ElasticitySlider';
+import { EntryDeterrenceTree } from './EntryDeterrenceTree';
 import { EpsilonBand } from './EpsilonBand';
 import { EpsilonDeltaSquare } from './EpsilonDeltaSquare';
 import { EquilibriumTax } from './EquilibriumTax';
@@ -146,6 +147,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'doubling-time': DoublingTime,
   'eigen-directions': EigenDirections,
   'elasticity-slider': ElasticitySlider,
+  'entry-deterrence-tree': EntryDeterrenceTree,
   'epsilon-delta-square': EpsilonDeltaSquare,
   'epsilon-n-band': EpsilonBand,
   'equilibrium-tax': EquilibriumTax,
