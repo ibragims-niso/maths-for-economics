@@ -134,6 +134,9 @@ import { poissonArrivalsProbability } from './ST104/poisson-arrivals-probability
 import { normalPercentileValue } from './ST105/normal-percentile-value';
 import { normalRangeProbability } from './ST105/normal-range-probability';
 import { sumOfIndependentNormals } from './ST105/sum-of-independent-normals';
+import { jointTableConditionalProbability } from './ST201/joint-table-conditional-probability';
+import { jointTableCovariance } from './ST201/joint-table-covariance';
+import { twoAssetPortfolioRisk } from './ST201/two-asset-portfolio-risk';
 
 /** Every problem generator in the app. Topic files list their generators by these IDs. */
 // Each generator has its own parameter type; the list holds them under the common interface.
@@ -273,6 +276,9 @@ export const GENERATORS = [
   replicatePayoffCoordinates,
   matrixRankElimination,
   dependenceParameterK,
+  jointTableConditionalProbability,
+  jointTableCovariance,
+  twoAssetPortfolioRisk,
 ] as unknown as readonly Generator[];
 
 const byId = new Map(GENERATORS.map((g) => [g.id, g]));
