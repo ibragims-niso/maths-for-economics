@@ -1,5 +1,5 @@
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, linearDemand, num } from '../format';
+import { cleanDistractors, linearDemand, num, withTwoDistractors } from '../format';
 
 interface Params {
   alpha: number;
@@ -15,7 +15,7 @@ const MONEY = { tolerance: 0.05, relTolerance: 0.00005 } as const;
 const bestPrice = (p: Params) => p.alpha - p.beta * p.best;
 
 /** F06, difficulty 3: the profit-maximising price for P = α − βQ and C(Q) = F + vQ, via the vertex. */
-export const profitMaximisingPrice: Generator<Params> = {
+export const profitMaximisingPrice: Generator<Params> = withTwoDistractors({
   id: 'profit-maximising-price',
   title: 'Profit-maximising price',
   topicId: 'F06',
@@ -87,4 +87,4 @@ export const profitMaximisingPrice: Generator<Params> = {
       MONEY.tolerance,
       MONEY.relTolerance,
     ),
-};
+});

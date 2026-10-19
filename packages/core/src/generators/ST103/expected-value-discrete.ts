@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 
 type Context = 'return' | 'profit' | 'claims';
 
@@ -54,7 +54,7 @@ const QUESTION: Record<Context, string> = {
 };
 
 /** ST103, difficulty 1: expected value E[X] = Σ x·p(x) of a discrete distribution with 3–4 outcomes. */
-export const expectedValueDiscrete: Generator<Params> = {
+export const expectedValueDiscrete: Generator<Params> = withTwoDistractors({
   id: 'expected-value-discrete',
   title: 'Expected value of an uncertain outcome',
   topicId: 'ST103',
@@ -148,4 +148,4 @@ export const expectedValueDiscrete: Generator<Params> = {
       EXACT.relTolerance,
     );
   },
-};
+});

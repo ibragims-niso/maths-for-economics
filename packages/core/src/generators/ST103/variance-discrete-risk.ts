@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator, Step } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 
 type Context = 'return' | 'profit';
 
@@ -28,7 +28,7 @@ const value = (p: Params, x: number) => (p.context === 'return' ? `${num(x)}\\%`
 const paren = (x: number) => (x < 0 ? `(${num(x)})` : num(x));
 
 /** ST103, difficulty 2: variance Var(X) = E[X²] − (E[X])², or the standard deviation, of a discrete distribution. */
-export const varianceDiscreteRisk: Generator<Params> = {
+export const varianceDiscreteRisk: Generator<Params> = withTwoDistractors({
   id: 'variance-discrete-risk',
   title: 'Variance and standard deviation (risk)',
   topicId: 'ST103',
@@ -126,4 +126,4 @@ export const varianceDiscreteRisk: Generator<Params> = {
           ];
     return cleanDistractors(target(p), candidates, RISK.tolerance, RISK.relTolerance);
   },
-};
+});

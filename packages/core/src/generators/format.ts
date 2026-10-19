@@ -1,5 +1,5 @@
 import { withinTolerance } from '../engine/grading';
-import type { Distractor } from '../engine/types';
+import type { Distractor, Generator } from '../engine/types';
 
 /** A number for LaTeX: trims needless zeros and uses a thin-space thousands separator. */
 export function num(value: number, decimals = 2): string {
@@ -29,4 +29,20 @@ export function cleanDistractors(
     kept.push(d);
   }
   return kept;
+}
+
+/**
+ * Redraws the parameters until the problem offers at least two different wrong answers, so a
+ * multiple-choice question never shows the right answer with only one other option.
+ */
+export function withTwoDistractors<P>(generator: Generator<P>): Generator<P> {
+  return {
+    ...generator,
+    params(rng) {
+      for (;;) {
+        const p = generator.params(rng);
+        if (generator.distractors(p).length >= 2) return p;
+      }
+    },
+  };
 }

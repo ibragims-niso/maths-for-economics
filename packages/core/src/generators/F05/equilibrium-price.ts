@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, linearDemand, num } from '../format';
+import { cleanDistractors, linearDemand, num, withTwoDistractors } from '../format';
 
 interface Params {
   a: number;
@@ -16,7 +16,7 @@ export const linearSupply = (c: number, d: number) =>
   `${c < 0 ? `-${num(-c)}` : num(c)} + ${d === 1 ? '' : num(d)}P`;
 
 /** F05, difficulty 1: equilibrium price where linear demand meets linear supply. */
-export const equilibriumPrice: Generator<Params> = {
+export const equilibriumPrice: Generator<Params> = withTwoDistractors({
   id: 'equilibrium-price',
   title: 'Equilibrium price',
   topicId: 'F05',
@@ -70,4 +70,4 @@ export const equilibriumPrice: Generator<Params> = {
       { value: round((p.a + p.c) / (p.b + p.d), 2), mistakeCode: 'ADDED_INTERCEPTS' },
       { value: p.quantity, mistakeCode: 'QUANTITY_NOT_PRICE' },
     ]),
-};
+});

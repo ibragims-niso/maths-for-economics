@@ -23,6 +23,8 @@ describe.each(GENERATORS.map((g) => [g.id, g] as const))('%s', (_id, generator) 
     fc.assert(
       fc.property(seeds, (seed) => {
         expect(checkProblem(generator, seed)).toEqual([]);
+        // Multiple choice needs at least two wrong answers besides the right one.
+        expect(makeProblem(generator, seed).distractors.length).toBeGreaterThanOrEqual(2);
       }),
       RUNS,
     );

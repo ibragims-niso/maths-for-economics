@@ -1,7 +1,7 @@
 import { round } from '../../engine/grading';
 import type { Rng } from '../../engine/rng';
 import type { Generator, Step } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 
 type Context = 'wages' | 'houses';
 
@@ -50,7 +50,7 @@ function shuffle(rng: Rng, xs: number[]): number[] {
 const list = (xs: number[]) => xs.map(String).join(',\\ ');
 
 /** ST101, difficulty 1: the mean or the median of 7–11 wages or house prices, one of them an outlier. */
-export const meanOrMedianSmallData: Generator<Params> = {
+export const meanOrMedianSmallData: Generator<Params> = withTwoDistractors({
   id: 'mean-or-median-small-data',
   title: 'Mean or median of a small data set',
   topicId: 'ST101',
@@ -160,4 +160,4 @@ export const meanOrMedianSmallData: Generator<Params> = {
           ];
     return cleanDistractors(target(p), candidates, EXACT.tolerance, EXACT.relTolerance);
   },
-};
+});

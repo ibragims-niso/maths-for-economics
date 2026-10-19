@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 
 interface Params {
   /** Q = A·K^a·L^b with a = ia/10 and b = ib/10. */
@@ -29,7 +29,7 @@ const partials = ({ A, ia, ib }: Params) => ({
 const exactDeterminant = ({ A, ia, ib }: Params) => (A * A * ia * ib * (10 - ia - ib)) / 1000;
 
 /** MV06, difficulty 3: the Hessian determinant of a Cobb–Douglas Q = A·K^a·L^b at (1, 1). */
-export const cobbDouglasHessianDeterminant: Generator<Params> = {
+export const cobbDouglasHessianDeterminant: Generator<Params> = withTwoDistractors({
   id: 'cobb-douglas-hessian-determinant',
   title: 'Cobb–Douglas Hessian determinant',
   topicId: 'MV06',
@@ -107,4 +107,4 @@ export const cobbDouglasHessianDeterminant: Generator<Params> = {
       TOL.relTolerance,
     );
   },
-};
+});

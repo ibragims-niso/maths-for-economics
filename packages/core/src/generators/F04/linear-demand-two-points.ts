@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 
 interface Params {
   a: number;
@@ -13,7 +13,7 @@ interface Params {
 const q = (p: Params, price: number) => p.a - p.b * price;
 
 /** F04, difficulty 2: build a linear demand curve from two observations, then predict. */
-export const linearDemandTwoPoints: Generator<Params> = {
+export const linearDemandTwoPoints: Generator<Params> = withTwoDistractors({
   id: 'linear-demand-two-points',
   title: 'Demand line from two observations',
   topicId: 'F04',
@@ -69,4 +69,4 @@ export const linearDemandTwoPoints: Generator<Params> = {
       { value: p.a, mistakeCode: 'INTERCEPT_ONLY' },
     ]);
   },
-};
+});

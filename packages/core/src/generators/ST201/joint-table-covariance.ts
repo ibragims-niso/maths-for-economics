@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 import {
   cell,
   colTotal,
@@ -47,7 +47,7 @@ const weighted = (vs: number[], ps: number[]) =>
   vs.map((v, k) => `${paren(v)}(${num(ps[k] ?? 0)})`).join(' + ');
 
 /** ST201, difficulty 2: covariance Cov(X, Y) = E[XY] − E[X]E[Y] from a 2×2 or 2×3 joint probability table. */
-export const jointTableCovariance: Generator<Params> = {
+export const jointTableCovariance: Generator<Params> = withTwoDistractors({
   id: 'joint-table-covariance',
   title: 'Covariance from a joint table',
   topicId: 'ST201',
@@ -123,4 +123,4 @@ export const jointTableCovariance: Generator<Params> = {
       EXACT.relTolerance,
     );
   },
-};
+});

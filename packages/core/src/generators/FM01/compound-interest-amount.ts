@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 
 interface Params {
   principal: number;
@@ -17,7 +17,7 @@ const PERIOD_NAME = { 1: 'annually', 2: 'twice a year', 4: 'quarterly', 12: 'mon
 const amount = (p: Params) => p.principal * (1 + p.rate / 100 / p.m) ** (p.m * p.years);
 
 /** FM01, difficulty 2: amount with compound interest, A = P(1 + r/m)^(mt). */
-export const compoundInterestAmount: Generator<Params> = {
+export const compoundInterestAmount: Generator<Params> = withTwoDistractors({
   id: 'compound-interest-amount',
   title: 'Amount with compound interest',
   topicId: 'FM01',
@@ -80,4 +80,4 @@ export const compoundInterestAmount: Generator<Params> = {
       MONEY.tolerance,
       MONEY.relTolerance,
     ),
-};
+});
