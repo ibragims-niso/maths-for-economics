@@ -121,9 +121,9 @@ export const loadSearchIndex = () =>
  * syllabus headings they sit under and their text. Works offline.
  */
 export function searchTopics(query: string, pool: readonly string[] = topicBank.map((t) => t.id)) {
-  const allowed = new Set(pool);
-  const entries = (fullIndex ?? QUICK_INDEX).filter((e) => allowed.has(e.id));
-  return rankTopics(query, entries).flatMap((id) => bankTopic(id) ?? []);
+  return rankTopics(query, fullIndex ?? QUICK_INDEX, new Set(pool)).flatMap(
+    (id) => bankTopic(id) ?? [],
+  );
 }
 
 /** searchTopics for a component: starts loading the full index once something is typed. */

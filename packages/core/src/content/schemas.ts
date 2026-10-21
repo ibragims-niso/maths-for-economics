@@ -97,6 +97,8 @@ export const topicFrontmatterSchema = z.strictObject({
   estMinutes: z.int().positive(),
   status: z.enum(TOPIC_STATUSES),
   economicUses: z.array(z.string().min(1)).min(1),
+  /** Other names students search for (syllabus headings, synonyms); they count like the title. */
+  searchTerms: z.array(z.string().min(1)).optional(),
   generators: z.array(slug),
   widgets: z.array(slug),
   mistakeCodes: z.record(

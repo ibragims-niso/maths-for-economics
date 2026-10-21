@@ -14,6 +14,8 @@ estMinutes: 40
 status: draft                 # draft → reviewed → verified
 economicUses:                 # short phrases, used by REAL_WORLD mode
   - ...
+searchTerms:                  # optional: other names students search for (syllabus headings, synonyms)
+  - Concept of a univariate function
 generators: [elasticity-linear-point, ...]   # IDs implemented in packages/core
 widgets: [elasticity-slider]                 # IDs implemented in apps/web
 mistakeCodes:                                 # every code any generator of this topic can return
@@ -84,6 +86,9 @@ Canonical English terms and short definitions (e.g. *marginal cost*, *price elas
 
 ## Symbols
 Every maths symbol used in a topic is explained in Help → Symbols, from `content/symbols.yml` (kept by the app session). `validate:content` warns when a topic uses a LaTeX symbol that has no entry there; the warning never blocks a topic.
+
+## Search
+Learn and Practice search a topic by its ID, title and `searchTerms` (strongest), economic uses, then its text and the track headings it sits under. Filler words (concept, definition, types …), plurals and one typo are forgiven, the topic text counts only when names and uses find nothing, and weak matches are hidden. When a syllabus names a topic differently, add that heading to `searchTerms`.
 
 ## Terms
 In the app, the first mention of each glossary term (`content/glossary.yml`) in a section is coloured and can be tapped for its plain definition; Help → Terms lists them all. Single words of five letters or fewer, and a few everyday words, are not marked automatically: write `:term[set]{id="set"}` (or just `:term[isoquant]`) to mark one by hand.

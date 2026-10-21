@@ -31,6 +31,23 @@ describe('topic search', () => {
     expect(ids[0]).toBe('F03');
   });
 
+  it('forgives one typo and drops misspelt filler words', () => {
+    expect(rankTopics('elastisity', ENTRIES)).toEqual(['C107']);
+    expect(rankTopics('consept of elasticity', ENTRIES)).toEqual(['C107']);
+    expect(rankTopics('qwxyz', ENTRIES)).toEqual([]);
+  });
+
+  it('leaves out weak matches when strong ones exist', () => {
+    // F03 mentions one variable only in its text; a title match wins alone.
+    const withTerm = [...ENTRIES, entry('C109', 'Optimisation in one variable')];
+    expect(rankTopics('univariant', withTerm)).toEqual(['C109']);
+  });
+
+  it('limits results to a pool', () => {
+    expect(rankTopics('demand', ENTRIES, new Set(['C107']))).toEqual(['C107']);
+    expect(rankTopics('F03', ENTRIES, new Set(['C107']))).toEqual([]);
+  });
+
   it('finds half-typed words and exact IDs', () => {
     expect(rankTopics('elast', ENTRIES)).toEqual(['C107']);
     expect(rankTopics('c107', ENTRIES)).toEqual(['C107']);

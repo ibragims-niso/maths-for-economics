@@ -40,43 +40,101 @@ export function searchStems(text: string) {
 /** A topic as the search sees it: stems by where they come from (stronger first). */
 export interface SearchEntry {
   id: string;
-  /** Title stems. */
+  /** Stems of the title and the topic's search terms. */
   title: string;
-  /** Economic use, and the course and section headings the topic sits under in any track. */
+  /** Stems of the economic uses. */
   near: string;
-  /** Stems of the topic's text (Why, Intuition, Definitions). Empty until the topic is written. */
+  /** Stems of the topic's text and of the track headings it sits under. */
   body: string;
 }
 
 const WEIGHT = { title: 3, near: 2, body: 1 } as const;
 
+/** Filler stems a misspelt query word may stand for ("consept" → "concept"). */
+const STOP_STEMS = [...STOP].filter((w) => w.length >= 5).map(stem);
+
+/** Edit distance, for one-letter typos. */
+function distance(a: string, b: string) {
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const row = [i];
+    for (let j = 1; j <= b.length; j++) {
+      const swap = (prev[j - 1] ?? 0) + (a[i - 1] === b[j - 1] ? 0 : 1);
+      row[j] = Math.min((prev[j] ?? 0) + 1, (row[j - 1] ?? 0) + 1, swap);
+    }
+    prev = row;
+  }
+  return prev[b.length] ?? 0;
+}
+
+const vocabularies = new WeakMap<readonly SearchEntry[], string[]>();
+function vocabulary(entries: readonly SearchEntry[]) {
+  let words = vocabularies.get(entries);
+  if (!words) {
+    const all = entries.flatMap((e) => `${e.title} ${e.near} ${e.body}`.split(' '));
+    words = [...new Set(all)].filter(Boolean);
+    vocabularies.set(entries, words);
+  }
+  return words;
+}
+
 /**
- * Topic IDs matching a query, best first. A topic must match at least half of the query's
- * meaningful words (all of them when there are one or two); an exact ID ("C107") always comes first. A query word matches any stem it
- * starts, so "elast" finds "elasticity" while it is being typed.
+ * What a query word can match: itself if some topic has a word starting with it, otherwise the
+ * words one typo away. A misspelt filler word ("consept") or an unknown word matches nothing and
+ * is left out.
  */
-export function rankTopics(query: string, entries: readonly SearchEntry[]) {
+function spellings(w: string, entries: readonly SearchEntry[]) {
+  const words = vocabulary(entries);
+  if (words.some((s) => s.startsWith(w))) return [w];
+  if (w.length < 4) return [];
+  if (STOP_STEMS.some((s) => distance(w, s) <= 1)) return [];
+  return words.filter((s) => distance(w, s.slice(0, w.length)) <= 1 || distance(w, s) <= 1);
+}
+
+/**
+ * Topic IDs matching a query, best first. A query word matches any word it starts, so "elast"
+ * finds "elasticity" while it is being typed, and one typo is forgiven. A topic must match at
+ * least half of the query's words (all of them when there are one or two). Topics are found by
+ * their title, search terms and economic uses; the topic text counts only when that finds
+ * nothing, because common words ("quantity") appear in the text of most topics. Topics scoring
+ * under half of the best are left out. An exact ID ("C107") finds just that topic. `among`
+ * limits the results (the whole index still decides which words exist).
+ */
+export function rankTopics(
+  query: string,
+  entries: readonly SearchEntry[],
+  among?: ReadonlySet<string>,
+) {
   const q = query.trim().toLowerCase();
   if (!q) return [];
-  const words = searchStems(q);
+  const exact = entries.find((e) => e.id.toLowerCase() === q);
+  if (exact) return among && !among.has(exact.id) ? [] : [exact.id];
+  const words = searchStems(q)
+    .map((w) => ({ w, forms: spellings(w, entries) }))
+    .filter((x) => x.forms.length > 0);
+  if (words.length === 0) return [];
   const need = words.length <= 2 ? words.length : Math.ceil(words.length / 2);
-  const scored = entries.map((e, order) => {
-    if (e.id.toLowerCase() === q) return { id: e.id, score: Number.POSITIVE_INFINITY, order };
+  const pool = among ? entries.filter((e) => among.has(e.id)) : entries;
+  const scored = pool.map((e, order) => {
     let score = 0;
+    let strong = 0;
     let matched = 0;
-    for (const w of words) {
-      let best = 0;
+    for (const { w, forms } of words) {
+      let best = e.id.toLowerCase().startsWith(w) ? WEIGHT.title : 0;
       for (const field of ['title', 'near', 'body'] as const) {
-        if (WEIGHT[field] > best && hasStem(e[field], w)) best = WEIGHT[field];
+        if (WEIGHT[field] > best && forms.some((f) => hasStem(e[field], f))) best = WEIGHT[field];
       }
-      if (e.id.toLowerCase().startsWith(w)) best = Math.max(best, WEIGHT.title);
+      if (best > WEIGHT.body) strong++;
       if (best > 0) matched++;
       score += best;
     }
-    return { id: e.id, score: matched >= need ? score : 0, order };
+    return { id: e.id, score, order, strong: strong >= need, found: matched >= need };
   });
-  return scored
-    .filter((s) => s.score > 0)
+  const byName = scored.filter((s) => s.strong);
+  const found = byName.length > 0 ? byName : scored.filter((s) => s.found);
+  const top = Math.max(0, ...found.map((s) => s.score));
+  return found
+    .filter((s) => s.score >= top / 2)
     .sort((a, b) => b.score - a.score || a.order - b.order)
     .map((s) => s.id);
 }

@@ -330,8 +330,9 @@ writeFileSync(
   join(outDir, 'content-index.json'),
   JSON.stringify(topics.map((t) => ({ id: t.id, status: t.status, estMinutes: t.estMinutes }))),
 );
-// Word stems for topic search (Learn, Practice): titles, economic uses, the course and section
-// headings each topic sits under in any track (syllabus wording), and the topic's own text.
+// Word stems for topic search (Learn, Practice): titles and search terms, economic uses, and then
+// the topic's own text with the course and section headings it sits under in any track. Headings
+// are weak: a whole section shares them.
 const headings = new Map<string, string[]>();
 for (const file of readdirSync(join(repoRoot, 'content/tracks'))) {
   const track = JSON.parse(readText(join(repoRoot, 'content/tracks', file))) as {
@@ -357,12 +358,17 @@ const bank = JSON.parse(readText(join(repoRoot, 'content/topic-bank.json'))) as 
 }[];
 const searchIndex: SearchEntry[] = bank.map((b) => {
   const topic = written.get(b.id);
-  const near = [b.economicUse, ...(topic?.economicUses ?? []), ...(headings.get(b.id) ?? [])];
+  const title = [b.title, ...(topic?.searchTerms ?? [])];
+  const near = [b.economicUse, ...(topic?.economicUses ?? [])];
+  const body = [
+    ...(headings.get(b.id) ?? []),
+    ...(topic ? [topic.tutor.summary, topic.tutor.definitions] : []),
+  ];
   return {
     id: b.id,
-    title: searchStems(b.title).join(' '),
+    title: searchStems(title.join(' ')).join(' '),
     near: searchStems(near.join(' ')).join(' '),
-    body: topic ? searchStems(`${topic.tutor.summary} ${topic.tutor.definitions}`).join(' ') : '',
+    body: searchStems(body.join(' ')).join(' '),
   };
 });
 writeFileSync(join(outDir, 'search-index.json'), JSON.stringify(searchIndex));
