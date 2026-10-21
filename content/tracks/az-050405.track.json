@@ -34,12 +34,12 @@
           "semester": null,
           "sections": [
             {
-              "title": "Systems of linear equations, linear spaces, basis",
-              "topics": ["LA101", "LA102", "LA103", "LA104", "LA105", "LA201"]
+              "title": "Systems of linear equations, linear spaces, eigenvalues",
+              "topics": ["LA101", "LA102", "LA103", "LA104", "LA105", "LA201", "LA202", "LA205"]
             },
             {
               "title": "Sequences, limits of functions, the number e, continuity",
-              "topics": ["F03", "F07", "F08", "F10", "C101"]
+              "topics": ["F03", "F07", "F08", "F10", "C101", "C119"]
             },
             {
               "title": "Differentiation and analysis of functions of one variable",
@@ -53,12 +53,14 @@
                 "C108",
                 "C109",
                 "C110",
-                "C111"
+                "C111",
+                "C120",
+                "C121"
               ]
             },
             {
               "title": "Functions of several variables: partial and directional derivatives, extrema",
-              "topics": ["MV01", "MV02", "MV07"]
+              "topics": ["MV01", "MV02", "MV03", "MV07", "MV08"]
             },
             {
               "title": "Indefinite integrals and integration methods",

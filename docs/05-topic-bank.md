@@ -1,6 +1,6 @@
 # 05 — Topic bank (Core)
 
-113 topics in 16 blocks (102 original + 11 added for the Azerbaijan national track, marked †; they are general topics and belong to the public bank). IDs are permanent. `Core year` is the default placement; university tracks reorder and regroup topics (docs/06-tracks.md). Machine-readable copy: generate `content/topic-bank.json` from this table in Phase 0 and validate that the prerequisite graph has no cycles.
+117 topics in 16 blocks (102 original + 15 added for the Azerbaijan national track, marked †; they are general topics and belong to the public bank). IDs are permanent. `Core year` is the default placement; university tracks reorder and regroup topics (docs/06-tracks.md). Machine-readable copy: generate `content/topic-bank.json` from this table in Phase 0 and validate that the prerequisite graph has no cycles.
 
 ## Year 1
 
@@ -51,6 +51,9 @@
 | C116 | Improper integrals and continuous discounting | C113, FM02 | Value of perpetual streams |
 | C117 | Infinite series and power series † | F08, C111 | Approximations, present value of infinite streams |
 | C118 | Geometric applications of integrals; line integrals † | C113 | Arc length, volumes; required by national syllabi, limited economic use |
+| C119 | Standard limits and infinitesimals † | C101, F07 | Continuous compounding as a limit, small-rate approximations such as ln(1 + r) ≈ r |
+| C120 | Mean value theorems and L'Hôpital's rule † | C105, C119 | Average vs marginal rates, limits of growth and elasticity formulas |
+| C121 | Curve sketching: asymptotes and the full study of a function † | C109, C119 | Shapes of cost, revenue and saturation curves |
 
 ### LA1 — Linear algebra I
 | ID | Title | Prerequisites | Economic use |
@@ -99,6 +102,7 @@
 | LA202 | Eigenvalues and eigenvectors | LA201 | Dynamics, Markov chains |
 | LA203 | Diagonalisation | LA202 | Solving dynamic systems |
 | LA204 | Quadratic forms and definiteness | LA202, MV07 | Second-order conditions |
+| LA205 | Homogeneous systems and the international trade model † | LA201, LA202 | Balanced trade between countries, structure (exchange) matrices |
 
 ### ST2 — Probability and statistics II
 | ID | Title | Prerequisites | Economic use |
@@ -188,4 +192,4 @@
 | NM03 | Monte Carlo simulation | ST202 | Risk analysis, stress tests |
 
 ## Counts
-Year 1: 49, Year 2: 23, Year 3: 24, Year 4: 17. Total: 113.
+Year 1: 52, Year 2: 24, Year 3: 24, Year 4: 17. Total: 117.

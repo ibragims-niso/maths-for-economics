@@ -255,6 +255,11 @@
       meaning: Functions that repeat in waves; used for cycles.
       example: '\sin 0 = 0, \quad \cos 0 = 1'
       covers: ['\sin', '\cos']
+    - latex: '\arcsin, \; \arctan'
+      name: inverse sine, inverse tangent
+      meaning: They undo sin and tan, giving back the angle; they appear as answers to some integrals.
+      example: '\arctan 1 = \tfrac{\pi}{4}'
+      covers: ['\arcsin', '\arctan']
     - latex: '\sinh, \; \cosh'
       name: hyperbolic sine and cosine
       meaning: Built from eˣ and e⁻ˣ; they appear in some growth and difference-equation solutions.
@@ -273,6 +278,11 @@
       meaning: How long the vector is, by Pythagoras.
       example: '\|(3, 4)\| = 5'
       covers: ['\|', '\lVert', '\rVert']
+    - latex: '\langle \mathbf{x}, \mathbf{y} \rangle'
+      name: inner (dot) product
+      meaning: Multiply matching entries of two vectors and add; zero means they are at right angles.
+      example: '\langle (1, 2), (3, 4) \rangle = 1 \cdot 3 + 2 \cdot 4 = 11'
+      covers: ['\langle', '\rangle']
     - latex: 'A^{\top}'
       name: transpose
       meaning: The matrix with rows and columns swapped.

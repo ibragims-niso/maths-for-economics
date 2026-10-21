@@ -255,6 +255,30 @@
     "addedFor": "az-050405"
   },
   {
+    "id": "C119",
+    "title": "Standard limits and infinitesimals",
+    "coreYear": 1,
+    "prerequisites": ["C101", "F07"],
+    "economicUse": "Continuous compounding as a limit, small-rate approximations such as ln(1 + r) ≈ r",
+    "addedFor": "az-050405"
+  },
+  {
+    "id": "C120",
+    "title": "Mean value theorems and L'Hôpital's rule",
+    "coreYear": 1,
+    "prerequisites": ["C105", "C119"],
+    "economicUse": "Average vs marginal rates, limits of growth and elasticity formulas",
+    "addedFor": "az-050405"
+  },
+  {
+    "id": "C121",
+    "title": "Curve sketching: asymptotes and the full study of a function",
+    "coreYear": 1,
+    "prerequisites": ["C109", "C119"],
+    "economicUse": "Shapes of cost, revenue and saturation curves",
+    "addedFor": "az-050405"
+  },
+  {
     "id": "LA101",
     "title": "Vectors and vector operations",
     "coreYear": 1,
@@ -465,6 +489,14 @@
     "coreYear": 2,
     "prerequisites": ["LA202", "MV07"],
     "economicUse": "Second-order conditions"
+  },
+  {
+    "id": "LA205",
+    "title": "Homogeneous systems and the international trade model",
+    "coreYear": 2,
+    "prerequisites": ["LA201", "LA202"],
+    "economicUse": "Balanced trade between countries, structure (exchange) matrices",
+    "addedFor": "az-050405"
   },
   {
     "id": "ST201",
