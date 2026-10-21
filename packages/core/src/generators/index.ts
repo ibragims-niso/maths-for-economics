@@ -72,6 +72,9 @@ import { oneToInfinityLimit } from './C119/one-to-infinity-limit';
 import { cesLimitCobbDouglas } from './C120/ces-limit-cobb-douglas';
 import { lhopitalDifferenceOfPowers } from './C120/lhopital-difference-of-powers';
 import { meanValuePointRootOutput } from './C120/mean-value-point-root-output';
+import { globalExtremumClosedInterval } from './C121/global-extremum-closed-interval';
+import { logisticInflectionTime } from './C121/logistic-inflection-time';
+import { obliqueAsymptoteIntercept } from './C121/oblique-asymptote-intercept';
 import { variationsAdjustmentPathValue } from './DO01/variations-adjustment-path-value';
 import { variationsAdjustmentSaving } from './DO01/variations-adjustment-saving';
 import { variationsStraightLinePath } from './DO01/variations-straight-line-path';
@@ -453,6 +456,9 @@ export const GENERATORS = [
   meanValuePointRootOutput,
   lhopitalDifferenceOfPowers,
   cesLimitCobbDouglas,
+  obliqueAsymptoteIntercept,
+  logisticInflectionTime,
+  globalExtremumClosedInterval,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,

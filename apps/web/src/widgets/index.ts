@@ -5,6 +5,7 @@ import { AntiderivativeFamily } from './AntiderivativeFamily';
 import { Ar1ErrorRuns } from './Ar1ErrorRuns';
 import { Ar1ShockPath } from './Ar1ShockPath';
 import { AuditBestResponses } from './AuditBestResponses';
+import { AverageCostAsymptotes } from './AverageCostAsymptotes';
 import { BayesNaturalFrequencies } from './BayesNaturalFrequencies';
 import { BernoulliLogLikelihood } from './BernoulliLogLikelihood';
 import { BinomialOptionTree } from './BinomialOptionTree';
@@ -122,6 +123,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'ar1-error-runs': Ar1ErrorRuns,
   'ar1-shock-path': Ar1ShockPath,
   'audit-best-responses': AuditBestResponses,
+  'average-cost-asymptotes': AverageCostAsymptotes,
   'bayes-natural-frequencies': BayesNaturalFrequencies,
   'binomial-option-tree': BinomialOptionTree,
   'binomial-poisson-bars': BinomialPoissonBars,
