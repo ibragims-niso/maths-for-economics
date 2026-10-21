@@ -1,6 +1,6 @@
 import { round } from '../../engine/grading';
 import type { Generator } from '../../engine/types';
-import { cleanDistractors, num } from '../format';
+import { cleanDistractors, num, withTwoDistractors } from '../format';
 import {
   EXACT,
   factor,
@@ -24,7 +24,7 @@ const det = (p: Params) => 4 * p.c * p.d - p.e * p.e;
 const value = (p: Params) => (p.ask === 1 ? p.q1 : p.q2);
 
 /** MV07, difficulty 2: the profit-maximising quantity of one good for a two-product firm. */
-export const twoProductOptimalOutput: Generator<Params> = {
+export const twoProductOptimalOutput: Generator<Params> = withTwoDistractors({
   id: 'two-product-optimal-output',
   title: 'Two-product firm: best output',
   topicId: 'MV07',
@@ -113,4 +113,4 @@ export const twoProductOptimalOutput: Generator<Params> = {
       EXACT.relTolerance,
     );
   },
-};
+});
