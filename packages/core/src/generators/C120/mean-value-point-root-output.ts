@@ -43,7 +43,7 @@ export const meanValuePointRootOutput: Generator<Params> = {
   },
 
   stem: (p) =>
-    `A workshop's daily output is $Q(L) = ${num(p.k)}\\sqrt{L}$, where $L$ is hours of labour. Hours rise from $${num(p.m ** 2)}$ to $${num(p.n ** 2)}$. By the mean value theorem there is an hour level $c$ in between where the marginal product $Q'(c)$ equals the average extra output per extra hour over the whole rise. Find $c$ to 2 decimal places.`,
+    `A workshop's monthly output is $Q(L) = ${num(p.k)}\\sqrt{L}$, where $L$ is hours of labour in the month. Hours rise from $${num(p.m ** 2)}$ to $${num(p.n ** 2)}$. By the mean value theorem there is an hour level $c$ in between where the marginal product $Q'(c)$ equals the average extra output per extra hour over the whole rise. Find $c$ to 2 decimal places.`,
 
   answer: (p) => ({ kind: 'numeric', value: meanValuePoint(p), decimals: 2, ...EXACT }),
 

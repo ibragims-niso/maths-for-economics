@@ -22,6 +22,9 @@ const candidates = (p: Params) => [
   { value: p.a, mistakeCode: 'SLOPE_NOT_INTERCEPT' },
 ];
 
+/** "aq" without a leading 1. */
+const aq = (a: number) => `${a === 1 ? '' : num(a)}q`;
+
 const numerator = (p: Params) =>
   `${p.a === 1 ? '' : num(p.a)}q^2 ${p.b < 0 ? '-' : '+'} ${num(Math.abs(p.b))}q + ${num(p.c)}`;
 
@@ -62,12 +65,12 @@ export const obliqueAsymptoteIntercept: Generator<Params> = {
       },
       {
         text: 'Find m as the limit of u(q) − kq.',
-        latex: `u(q) - ${num(p.a)}q = \\dfrac{${numerator(p)} - ${num(p.a)}q(q + ${num(p.d)})}{q + ${num(p.d)}} = \\dfrac{${num(p.b - p.a * p.d)}q + ${num(p.c)}}{q + ${num(p.d)}} \\to ${num(m)}`,
+        latex: `u(q) - ${aq(p.a)} = \\dfrac{${numerator(p)} - ${aq(p.a)}(q + ${num(p.d)})}{q + ${num(p.d)}} = \\dfrac{${num(p.b - p.a * p.d)}q + ${num(p.c)}}{q + ${num(p.d)}} \\to ${num(m)}`,
         why: 'Subtract the line and put everything over one denominator: the q² terms cancel, leaving a ratio of two linear terms that tends to the ratio of their q-coefficients.',
       },
       {
         text: 'Check by long division.',
-        latex: `u(q) = ${num(p.a)}q ${m < 0 ? '-' : '+'} ${num(Math.abs(m))} ${r < 0 ? '-' : '+'} \\dfrac{${num(Math.abs(r))}}{q + ${num(p.d)}}, \\qquad m = ${num(m)}`,
+        latex: `u(q) = ${aq(p.a)} ${m < 0 ? '-' : '+'} ${num(Math.abs(m))} ${r < 0 ? '-' : '+'} \\dfrac{${num(Math.abs(r))}}{q + ${num(p.d)}}, \\qquad m = ${num(m)}`,
         why: 'The last fraction tends to 0 as q grows, so the curve gets ever closer to the line y = kq + m.',
         result: m,
       },

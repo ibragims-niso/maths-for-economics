@@ -220,6 +220,9 @@ import { migrationShareAfterYears } from './LA203/migration-share-after-years';
 import { hessianThirdLeadingMinor } from './LA204/hessian-third-leading-minor';
 import { portfolioVarianceThreeAssets } from './LA204/portfolio-variance-three-assets';
 import { quadraticFormSecondMinor } from './LA204/quadratic-form-second-minor';
+import { fundamentalSolutionsCount } from './LA205/fundamental-solutions-count';
+import { tradeBalanceTwoCountries } from './LA205/trade-balance-two-countries';
+import { tradeModelThreeCountries } from './LA205/trade-model-three-countries';
 import { levelCurveThroughPoint } from './MV01/level-curve-through-point';
 import { sameIndifferenceCurveQuantity } from './MV01/same-indifference-curve-quantity';
 import { cobbDouglasMarginalProduct } from './MV02/cobb-douglas-marginal-product';
@@ -548,6 +551,9 @@ export const GENERATORS = [
   quadraticFormSecondMinor,
   hessianThirdLeadingMinor,
   portfolioVarianceThreeAssets,
+  fundamentalSolutionsCount,
+  tradeBalanceTwoCountries,
+  tradeModelThreeCountries,
   jointTableConditionalProbability,
   jointTableCovariance,
   twoAssetPortfolioRisk,

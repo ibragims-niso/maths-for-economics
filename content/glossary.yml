@@ -517,3 +517,7 @@ L'Hôpital's rule: For a limit of the form 0/0 or ∞/∞, the limit of f/g equa
 CES production function: Q = (αK^ρ + (1 − α)L^ρ)^(1/ρ), a family with a constant elasticity of substitution that includes Cobb–Douglas (ρ → 0), perfect substitutes (ρ = 1) and Leontief (ρ → −∞).
 oblique asymptote: A slanted straight line y = kx + m that a graph approaches far out, with k the limit of f(x)/x and m the limit of f(x) − kx; average cost F/q + c + dq approaches y = c + dq.
 global maximum: The largest value a function takes on its whole domain or on a given interval; on a closed interval it is found by comparing the critical points with both ends.
+homogeneous system: A system of linear equations whose right-hand sides are all zero, Ax = 0; it always has the solution x = 0, and has others exactly when the rank is below the number of unknowns.
+fundamental system of solutions: A basis of the solutions of a homogeneous system Ax = 0, made of n − r independent solutions whose combinations give every solution.
+null space: The set of all solutions of Ax = 0, a linear space of dimension n − r, where n is the number of unknowns and r the rank of A.
+structure matrix: In the linear exchange (trade) model, the matrix whose entry a_ij is the share of country j's income spent on goods from country i; each column adds up to 1 and the matrix always has the eigenvalue 1.
