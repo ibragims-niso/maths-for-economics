@@ -11,18 +11,21 @@ economicUses:
   - "Small-rate shortcuts: ln(1 + r) ≈ r and eʳ − 1 ≈ r for growth and interest rates"
   - Long-run ratios of costs, outputs or debts that grow at different speeds
   - Deciding which part of a formula matters when a quantity becomes very large or very small
-generators: [rational-limit-at-infinity, one-to-infinity-limit, equivalent-infinitesimals-ratio]
+generators: [conjugate-limit-at-infinity, one-to-infinity-limit, equivalent-infinitesimals-ratio]
 widgets: [small-rate-approximations]
 mistakeCodes:
-  CONSTANT_RATIO:
+  INFINITY_MINUS_INFINITY:
+    label: Said infinity minus infinity is 0
+    explanation: Two quantities that both grow without limit can keep a gap of any size. Multiply and divide by the conjugate, the sum of the two roots, so the large parts cancel exactly and the gap shows.
+  FORGOT_HALF:
+    label: Forgot to divide by 2
+    explanation: After using the conjugate, the bottom is a sum of two square roots, each about x. Dividing by x leaves 1 + 1 = 2 below, so the limit is half the difference of the x-coefficients.
+  CONSTANT_TERMS:
     label: Compared the constant terms
-    explanation: As the variable grows, the constant terms (fixed costs, starting levels) become tiny next to the squared terms. The long-run ratio is set by the leading coefficients, the numbers in front of the highest power.
-  MIDDLE_TERMS:
-    label: Compared the middle terms
-    explanation: The linear terms also fade beside the squared terms. Divide top and bottom by the highest power; only the leading coefficients survive.
+    explanation: The constants under the roots shrink to nothing after dividing by x. Only the x-coefficients decide the long-run gap.
   FLIPPED_RATIO:
     label: Turned the ratio upside down
-    explanation: Keep the first quantity on top. The limit of f/g is the leading coefficient of f divided by the leading coefficient of g, not the other way round.
+    explanation: Keep the first quantity on top. The limit is the coefficient of the top equivalent divided by the coefficient of the bottom one, not the other way round.
   ONE_TO_INFINITY:
     label: Said 1 to the power infinity is 1
     explanation: A base that tends to 1 raised to a power that grows without limit is an indeterminate form. A base a little above 1 raised to a huge power can give any positive number; compound interest is the classic case. Write the base as 1 + a small part and use (1 + k/t)^t → eᵏ.
@@ -93,24 +96,25 @@ Move the **rate g** slider. The dashed gold line is $g$ itself; the purple curve
 
 ## Worked examples
 
-### Example 1 (easy): the long-run cost ratio of two plants
-An old plant has cost $C_1(q) = 2q^2 + 30q + 500$ and a new plant $C_2(q) = 5q^2 + 10q + 800$. What does the cost ratio $C_1/C_2$ tend to as output grows?
+### Example 1 (easy): the long-run gap between two costs
+Two cost paths grow almost alike: $sqrt{q^2 + 10q + 50}$ and $sqrt{q^2 + 4q + 20}$. What does the gap between them tend to as $q$ grows? And what does the ratio of $2q^2 + 30q + 500$ to $5q^2 + 10q + 800$ tend to?
 
-1. $\dfrac{2q^2 + 30q + 500}{5q^2 + 10q + 800} = \dfrac{2 + \frac{30}{q} + \frac{500}{q^2}}{5 + \frac{10}{q} + \frac{800}{q^2}}$
-   *Why:* both costs grow without limit, an $\infty/\infty$ form, so divide top and bottom by $q^2$, the highest power.
-2. $\dfrac{30}{q},\ \dfrac{500}{q^2},\ \dfrac{10}{q},\ \dfrac{800}{q^2} \to 0$
-   *Why:* a fixed number divided by a growing one is an infinitesimal.
-3. $\displaystyle\lim_{q \to \infty} \frac{C_1(q)}{C_2(q)} = \frac{2}{5} = 0.4$
-   *Why:* only the leading coefficients survive. The fixed costs 500 and 800 decide which plant is cheaper for small output but not in the long run.
-4. At $q = 100$ the ratio is $0.4537$; at $q = 1000$ it is $0.4052$.
-   *Why:* a check by numbers: the ratio creeps towards 0.4 as output grows.
+1. $sqrt{q^2 + 10q + 50} - sqrt{q^2 + 4q + 20} = dfrac{(q^2 + 10q + 50) - (q^2 + 4q + 20)}{sqrt{q^2 + 10q + 50} + sqrt{q^2 + 4q + 20}} = dfrac{6q + 30}{sqrt{q^2 + 10q + 50} + sqrt{q^2 + 4q + 20}}$
+   *Why:* both roots grow without limit, an $infty - infty$ form. Multiplying top and bottom by the sum of the roots uses $(u - v)(u + v) = u^2 - v^2$, and the $q^2$ terms cancel.
+2. $dfrac{6 + rac{30}{q}}{sqrt{1 + rac{10}{q} + rac{50}{q^2}} + sqrt{1 + rac{4}{q} + rac{20}{q^2}}} 	o dfrac{6}{1 + 1} = 3$
+   *Why:* divide top and bottom by $q$; every fraction with $q$ below vanishes and each root tends to 1. The gap settles at 3, not at 0.
+3. $dfrac{2q^2 + 30q + 500}{5q^2 + 10q + 800} = dfrac{2 + rac{30}{q} + rac{500}{q^2}}{5 + rac{10}{q} + rac{800}{q^2}} 	o dfrac{2}{5} = 0.4$
+   *Why:* an $infty/infty$ form: divide by the highest power, $q^2$; only the leading coefficients survive (C101).
+4. At $q = 1000$ the gap is $3.0045$ and the ratio $0.4052$.
+   *Why:* a check by numbers: both are already close to their limits.
 
 ```verify
-C1(q) = 2*q^2 + 30*q + 500
-C2(q) = 5*q^2 + 10*q + 800
-assert abs(C1(100)/C2(100) - 0.4537) < 0.0001
-assert abs(C1(1000)/C2(1000) - 0.4052) < 0.0001
-assert abs(C1(10^8)/C2(10^8) - 0.4) < 0.000001
+gap(q) = sqrt(q^2 + 10*q + 50) - sqrt(q^2 + 4*q + 20)
+ratio(q) = (2*q^2 + 30*q + 500)/(5*q^2 + 10*q + 800)
+assert abs(gap(1000) - 3.0045) < 0.0001
+assert abs(gap(10^6) - 3) < 0.0001
+assert abs(ratio(1000) - 0.4052) < 0.0001
+assert abs(ratio(10^8) - 0.4) < 0.000001
 ```
 
 ### Example 2 (medium): a limit of the form 1 to the power infinity
@@ -153,8 +157,9 @@ assert abs((exp(x) - 1 - x)/x^2 - 0.5) < 0.001
 ```
 
 ## Common mistakes
-- Comparing the constant terms (the fixed costs) instead of the leading coefficients (CONSTANT_RATIO).
-- Comparing the middle, linear terms (MIDDLE_TERMS).
+- Deciding that $infty - infty = 0$ (INFINITY_MINUS_INFINITY).
+- Forgetting that the conjugate leaves two roots below, so the gap is half the difference of the coefficients (FORGOT_HALF).
+- Comparing the constants under the roots instead of the $x$-coefficients (CONSTANT_TERMS).
 - Turning the ratio upside down (FLIPPED_RATIO).
 - Deciding that 1 to the power infinity is 1 (ONE_TO_INFINITY).
 - Losing the factor $c$ from the exponent $cx$ (DROPPED_FACTOR).
@@ -166,7 +171,7 @@ assert abs((exp(x) - 1 - x)/x^2 - 0.5) < 0.001
 - Using degrees instead of radians: $\sin x / x \to 1$ only when $x$ is measured in radians.
 
 ## Practice
-- `rational-limit-at-infinity` (difficulty 1): the long-run ratio of two quadratic costs or outputs; distractors CONSTANT_RATIO, MIDDLE_TERMS, FLIPPED_RATIO.
+- `conjugate-limit-at-infinity` (difficulty 1): the long-run gap $sqrt{x^2 + ax + b} - sqrt{x^2 + cx + d}$ by the conjugate; distractors INFINITY_MINUS_INFINITY, FORGOT_HALF, CONSTANT_TERMS.
 - `one-to-infinity-limit` (difficulty 2): $\lim \left(\frac{x + a}{x + b}\right)^{cx} = e^{c(a - b)}$; distractors ONE_TO_INFINITY, DROPPED_FACTOR, SIGN_SLIP.
 - `equivalent-infinitesimals-ratio` (difficulty 3): a $0/0$ limit of $\sin$, $\tan$, $\ln(1 + \cdot)$, $e^{\cdot} - 1$ or $\sqrt{1 + \cdot} - 1$ solved with equivalents; distractors FLIPPED_RATIO, DROPPED_COEFFICIENTS, ZERO_OVER_ZERO, FORGOT_POWER.
 

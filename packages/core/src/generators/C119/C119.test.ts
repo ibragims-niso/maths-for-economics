@@ -2,13 +2,13 @@ import fc from 'fast-check';
 import { describe, expect, it } from 'vitest';
 import { makeProblem } from '../../engine/problem';
 import type { Generator } from '../../engine/types';
+import { conjugateLimitAtInfinity } from './conjugate-limit-at-infinity';
 import {
   equivalentInfinitesimalsRatio,
   evaluateForm,
   exactLimit,
 } from './equivalent-infinitesimals-ratio';
 import { exponent, oneToInfinityLimit } from './one-to-infinity-limit';
-import { rationalLimitAtInfinity } from './rational-limit-at-infinity';
 
 const seeds = fc.integer({ min: 0, max: 2 ** 32 - 1 });
 const RUNS = { numRuns: 1000 };
@@ -21,35 +21,40 @@ const solve = <P>(gen: Generator<P>, seed: number) => {
 
 const codes = (ds: { mistakeCode: string }[]) => ds.map((d) => d.mistakeCode).sort();
 
-describe('rational-limit-at-infinity', () => {
-  it('matches the ratio evaluated at a huge input, and the ratio settles there', () => {
+describe('conjugate-limit-at-infinity', () => {
+  it('matches the gap evaluated at a huge x with the conjugate-free formula', () => {
     fc.assert(
       fc.property(seeds, (seed) => {
-        const { p, value } = solve(rationalLimitAtInfinity, seed);
-        const ratio = (x: number) =>
-          (p.a1 * x * x + p.b1 * x + p.c1) / (p.a2 * x * x + p.b2 * x + p.c2);
-        expect(Math.abs(ratio(1e9) - value)).toBeLessThan(1e-6);
-        // The ratio settles: at a million units it is already within 0.001 of the limit.
-        expect(Math.abs(ratio(1e6) - value)).toBeLessThan(1e-3);
-        expect(Math.abs(value * 100 - Math.round(value * 100))).toBeLessThan(1e-9);
+        const { p, value } = solve(conjugateLimitAtInfinity, seed);
+        const gap = (x: number) =>
+          Math.sqrt(x * x + p.a * x + p.b) - Math.sqrt(x * x + p.c * x + p.d);
+        // Direct subtraction is accurate enough at x = 10⁶ (roots near 10⁶, gap of a few units).
+        expect(Math.abs(gap(1e6) - value)).toBeLessThan(1e-4);
+        expect(Math.abs(gap(1e6) - value)).toBeLessThan(Math.abs(gap(100) - value) + 1e-4);
+        expect(Math.abs(value * 2 - Math.round(value * 2))).toBeLessThan(1e-12);
       }),
       RUNS,
     );
   });
 
-  it('offers the three slips as distractors', () => {
+  it('offers 0, the missing half and the constant terms', () => {
     fc.assert(
       fc.property(seeds, (seed) => {
-        const { distractors } = solve(rationalLimitAtInfinity, seed);
-        expect(codes(distractors)).toEqual(['CONSTANT_RATIO', 'FLIPPED_RATIO', 'MIDDLE_TERMS']);
+        const { distractors } = solve(conjugateLimitAtInfinity, seed);
+        expect(codes(distractors)).toEqual([
+          'CONSTANT_TERMS',
+          'FORGOT_HALF',
+          'INFINITY_MINUS_INFINITY',
+        ]);
       }),
       RUNS,
     );
   });
 
-  it('reproduces C119 Example 1 (cost ratio 2/5 = 0.4)', () => {
-    const p = { context: 'plants' as const, a1: 2, b1: 30, c1: 500, a2: 5, b2: 10, c2: 800 };
-    expect(rationalLimitAtInfinity.answer(p)).toMatchObject({ value: 0.4 });
+  it('reproduces C119 Example 1 (√(q² + 10q + 50) − √(q² + 4q + 20) → 3)', () => {
+    expect(conjugateLimitAtInfinity.answer({ a: 10, b: 50, c: 4, d: 20 })).toMatchObject({
+      value: 3,
+    });
   });
 });
 

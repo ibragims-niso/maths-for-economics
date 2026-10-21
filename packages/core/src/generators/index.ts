@@ -66,9 +66,9 @@ import { powerSeriesRadius } from './C117/power-series-radius';
 import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
 import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
 import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
+import { conjugateLimitAtInfinity } from './C119/conjugate-limit-at-infinity';
 import { equivalentInfinitesimalsRatio } from './C119/equivalent-infinitesimals-ratio';
 import { oneToInfinityLimit } from './C119/one-to-infinity-limit';
-import { rationalLimitAtInfinity } from './C119/rational-limit-at-infinity';
 import { cesLimitCobbDouglas } from './C120/ces-limit-cobb-douglas';
 import { lhopitalDifferenceOfPowers } from './C120/lhopital-difference-of-powers';
 import { meanValuePointRootOutput } from './C120/mean-value-point-root-output';
@@ -447,7 +447,7 @@ export const GENERATORS = [
   volumeOfRevolutionDisc,
   lineIntegralWorkSegment,
   arcLengthThreeHalvesPower,
-  rationalLimitAtInfinity,
+  conjugateLimitAtInfinity,
   oneToInfinityLimit,
   equivalentInfinitesimalsRatio,
   meanValuePointRootOutput,
