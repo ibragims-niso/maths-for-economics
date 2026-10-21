@@ -511,3 +511,7 @@ infinitesimal: A quantity that tends to zero, such as 1/q as output q grows with
 equivalent infinitesimals: Two quantities that tend to zero at the same speed, so their ratio tends to 1, like ln(1 + x) and x near 0; one may replace the other in a product or a quotient.
 indeterminate form: A limit that plugging in leaves undecided, such as 0/0, ∞/∞, ∞ − ∞ or 1 to the power ∞; the answer depends on how fast each part changes.
 standard limits: The two limits sin x / x → 1 as x → 0 and (1 + 1/x)^x → e as x → ∞, from which many others follow.
+mean value theorem: For a smooth function on an interval, the marginal rate at some point inside equals the average rate over the whole interval, f′(c) = (f(b) − f(a))/(b − a).
+Rolle's theorem: If a smooth function takes the same value at both ends of an interval, its derivative is zero somewhere in between.
+L'Hôpital's rule: For a limit of the form 0/0 or ∞/∞, the limit of f/g equals the limit of f′/g′, the top and bottom differentiated separately.
+CES production function: Q = (αK^ρ + (1 − α)L^ρ)^(1/ρ), a family with a constant elasticity of substitution that includes Cobb–Douglas (ρ → 0), perfect substitutes (ρ = 1) and Leontief (ρ → −∞).

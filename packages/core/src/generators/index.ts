@@ -69,6 +69,9 @@ import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
 import { equivalentInfinitesimalsRatio } from './C119/equivalent-infinitesimals-ratio';
 import { oneToInfinityLimit } from './C119/one-to-infinity-limit';
 import { rationalLimitAtInfinity } from './C119/rational-limit-at-infinity';
+import { cesLimitCobbDouglas } from './C120/ces-limit-cobb-douglas';
+import { lhopitalDifferenceOfPowers } from './C120/lhopital-difference-of-powers';
+import { meanValuePointRootOutput } from './C120/mean-value-point-root-output';
 import { variationsAdjustmentPathValue } from './DO01/variations-adjustment-path-value';
 import { variationsAdjustmentSaving } from './DO01/variations-adjustment-saving';
 import { variationsStraightLinePath } from './DO01/variations-straight-line-path';
@@ -447,6 +450,9 @@ export const GENERATORS = [
   rationalLimitAtInfinity,
   oneToInfinityLimit,
   equivalentInfinitesimalsRatio,
+  meanValuePointRootOutput,
+  lhopitalDifferenceOfPowers,
+  cesLimitCobbDouglas,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,
