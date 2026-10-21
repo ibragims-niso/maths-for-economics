@@ -507,3 +507,7 @@ stage game: The one-period game that is played in every period of a repeated gam
 grim trigger strategy: Cooperate as long as everyone has always cooperated, and after any deviation punish by playing the one-period Nash equilibrium for ever.
 critical discount factor: The smallest discount factor at which cooperation can be sustained in a repeated game; for grim trigger it is (T − R)/(T − P).
 folk theorem: The result that, with sufficiently patient players, many outcomes, including full cooperation, can be sustained as equilibria of an infinitely repeated game.
+infinitesimal: A quantity that tends to zero, such as 1/q as output q grows without limit; two infinitesimals are compared by the limit of their ratio.
+equivalent infinitesimals: Two quantities that tend to zero at the same speed, so their ratio tends to 1, like ln(1 + x) and x near 0; one may replace the other in a product or a quotient.
+indeterminate form: A limit that plugging in leaves undecided, such as 0/0, ∞/∞, ∞ − ∞ or 1 to the power ∞; the answer depends on how fast each part changes.
+standard limits: The two limits sin x / x → 1 as x → 0 and (1 + 1/x)^x → e as x → ∞, from which many others follow.

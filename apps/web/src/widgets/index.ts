@@ -97,6 +97,7 @@ import { ShadowPriceHours } from './ShadowPriceHours';
 import { ShadowPriceValueFunction } from './ShadowPriceValueFunction';
 import { ShopRevenueMatrix } from './ShopRevenueMatrix';
 import { SimpleVsCompound } from './SimpleVsCompound';
+import { SmallRateApproximations } from './SmallRateApproximations';
 import { SpanAndBasis } from './SpanAndBasis';
 import { SpendingRounds } from './SpendingRounds';
 import { SupplyComparativeStatics } from './SupplyComparativeStatics';
@@ -213,6 +214,7 @@ export const WIDGETS: Record<string, ComponentType> = {
   'shadow-price-value-function': ShadowPriceValueFunction,
   'shop-revenue-matrix': ShopRevenueMatrix,
   'simple-vs-compound': SimpleVsCompound,
+  'small-rate-approximations': SmallRateApproximations,
   'span-and-basis': SpanAndBasis,
   'spending-rounds': SpendingRounds,
   'supply-comparative-statics': SupplyComparativeStatics,

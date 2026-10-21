@@ -66,6 +66,9 @@ import { powerSeriesRadius } from './C117/power-series-radius';
 import { arcLengthThreeHalvesPower } from './C118/arc-length-three-halves-power';
 import { lineIntegralWorkSegment } from './C118/line-integral-work-segment';
 import { volumeOfRevolutionDisc } from './C118/volume-of-revolution-disc';
+import { equivalentInfinitesimalsRatio } from './C119/equivalent-infinitesimals-ratio';
+import { oneToInfinityLimit } from './C119/one-to-infinity-limit';
+import { rationalLimitAtInfinity } from './C119/rational-limit-at-infinity';
 import { variationsAdjustmentPathValue } from './DO01/variations-adjustment-path-value';
 import { variationsAdjustmentSaving } from './DO01/variations-adjustment-saving';
 import { variationsStraightLinePath } from './DO01/variations-straight-line-path';
@@ -441,6 +444,9 @@ export const GENERATORS = [
   volumeOfRevolutionDisc,
   lineIntegralWorkSegment,
   arcLengthThreeHalvesPower,
+  rationalLimitAtInfinity,
+  oneToInfinityLimit,
+  equivalentInfinitesimalsRatio,
   bundleCostDotProduct,
   bundleDistanceNorm,
   bundleAngleCosine,
