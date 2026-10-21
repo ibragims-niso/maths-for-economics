@@ -61,8 +61,8 @@ export function SmallRateApproximations() {
         ]}
       />
       <figcaption>
-        At g = {fmt(percent, 0)} %, the log rate is ln(1 + g) = {fmt(Math.log1p(g) * 100)} % and
-        the continuous rate g turns into eᵍ − 1 = {fmt(Math.expm1(g) * 100)} % a year.{' '}
+        At g = {fmt(percent, 0)} %, the log rate is ln(1 + g) = {fmt(Math.log1p(g) * 100)} % and the
+        continuous rate g turns into eᵍ − 1 = {fmt(Math.expm1(g) * 100)} % a year.{' '}
         {gap < 0.05
           ? 'All three are within 5 % of g: near zero they are equivalent infinitesimals, and you can swap one for another.'
           : 'At a rate this large the curves have pulled away from the dashed line g, so the shortcut ln(1 + g) ≈ g is no longer safe.'}
