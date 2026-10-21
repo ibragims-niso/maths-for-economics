@@ -65,6 +65,8 @@ adds the areas of $n$ rectangles. The **definite integral** is the limit of thes
 $$\int_a^b f(x)\,dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i)\,\Delta x.$$
 The numbers $a$ and $b$ are the lower and upper **limits of integration**. The result is a number, not a function.
 
+The strips need not be equal, and the point inside each strip can be anywhere; the limit must come out the same as the widest strip shrinks to zero. Using the smallest value of $f$ on each strip gives the **lower sum**, and the largest value the **upper sum**. Every Riemann sum lies between them, and $f$ is **integrable** exactly when the gap between the upper and lower sums can be made as small as you like by cutting finer strips. Every continuous function on $[a, b]$ is integrable, and so is a bounded function with finitely many jumps, such as a tax schedule or a tariff with blocks.
+
 **Fundamental Theorem of Calculus.** If $F'(x) = f(x)$, then
 $$\int_a^b f(x)\,dx = \Big[F(x)\Big]_a^b = F(b) - F(a).$$
 Any antiderivative works: a constant of integration $K$ appears in both $F(b)$ and $F(a)$ and cancels. The antiderivatives from C112 are the ones used most: $\int x^n\,dx = \dfrac{x^{n+1}}{n + 1}$ for $n \neq -1$, $\int \dfrac{1}{x}\,dx = \ln|x|$ and $\int e^{kx}\,dx = \dfrac{e^{kx}}{k}$.
@@ -75,6 +77,9 @@ The theorem also works the other way: the running total $A(x) = \int_a^x f(t)\,d
 - Linearity: $\int_a^b \big(\alpha f(x) + \beta g(x)\big)\,dx = \alpha\int_a^b f(x)\,dx + \beta\int_a^b g(x)\,dx$.
 - Additivity over intervals: $\int_a^c f(x)\,dx = \int_a^b f(x)\,dx + \int_b^c f(x)\,dx$.
 - Reversing the limits flips the sign: $\int_b^a f(x)\,dx = -\int_a^b f(x)\,dx$, and $\int_a^a f(x)\,dx = 0$.
+- Comparison: if $f(x) \le g(x)$ on $[a, b]$, then $\int_a^b f(x)\,dx \le \int_a^b g(x)\,dx$. In particular, if $m \le f(x) \le M$ there, then $m(b - a) \le \int_a^b f(x)\,dx \le M(b - a)$.
+- Mean value theorem for integrals: a continuous $f$ takes its average value somewhere, $\int_a^b f(x)\,dx = f(c)\,(b - a)$ for some $c$ in $[a, b]$. A year's total output equals the rate of output at some moment of the year times one year.
+- Substitution with limits: when you change the variable, change the limits too (C115), and there is no need to go back to the old variable.
 
 **Signed area.** Where $f(x) < 0$ the rectangles have negative height, so area below the axis counts as negative. The integral is the *net* area: area above the axis minus area below it. For the total shaded area, split the interval where $f$ changes sign and add the sizes of the pieces.
 

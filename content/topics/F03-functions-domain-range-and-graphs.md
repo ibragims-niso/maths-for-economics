@@ -64,12 +64,33 @@ A **function** $f$ assigns to each input $x$ in its domain exactly one output $f
 - **Range:** the set of outputs the function takes on its domain.
 - **Graph:** all the points $(x, f(x))$. A curve is the graph of a function only if every vertical line crosses it at most once (the vertical line test).
 - **Intercepts:** the vertical intercept is $f(0)$; a horizontal intercept is an $x$ with $f(x) = 0$.
-- **Increasing and decreasing:** $f$ is increasing on an interval if $x_1 < x_2$ always gives $f(x_1) < f(x_2)$, and decreasing if it always gives $f(x_1) > f(x_2)$.
+- **Increasing and decreasing:** $f$ is increasing on an interval if $x_1 < x_2$ always gives $f(x_1) < f(x_2)$, and decreasing if it always gives $f(x_1) > f(x_2)$. A function that only rises, or only falls, on an interval is called **monotonic** there.
+
+**Ways to give a function.** The same rule can arrive in several forms, and economists use them all:
+
+- a **formula**, such as $C(Q) = 500 + 12Q + 2Q^2$;
+- a **table**, such as monthly sales from the accounts, where only the listed inputs have known outputs;
+- a **graph**, such as a demand curve drawn from survey data;
+- **words**, such as "the first 10,000 of income is tax-free";
+- a **parametric** form, where both variables depend on a third one, for example output $x(t)$ and price $y(t)$ both recorded over time $t$.
+
+**Further properties worth checking.**
+
+- **Bounded:** there is a number $M$ with $|f(x)| \le M$ for every $x$ in the domain. A market share or a tax rate between 0 and 1 is bounded; a cost function of output usually is not.
+- **Even and odd:** $f$ is even if $f(-x) = f(x)$, so its graph is symmetric about the vertical axis (like $x^2$); it is odd if $f(-x) = -f(x)$, so its graph is symmetric about the origin (like $x^3$). Most functions are neither.
+- **Periodic:** $f(x + T) = f(x)$ for a fixed $T > 0$, the period. Seasonal patterns are periodic: a model of monthly ice-cream sales $S(t) = 100 + 20\sin\!\left(\dfrac{2\pi t}{12}\right)$ repeats every 12 months.
+
+**Explicit and implicit functions.** $y = 1800 - 2x^2$ gives $y$ **explicitly**. An equation such as $x^{0.5}y^{0.5} = 20$ (all input pairs that produce 20 units) defines $y$ **implicitly**; here it can be solved, $y = 400/x$, but often it cannot (see C110). Inverse and composite functions are covered in F10.
+
+**Basic elementary functions.** Almost every function in an economics course is built from a few families by adding, multiplying, dividing and composing them: constants, powers $x^a$ (including roots), exponentials $a^x$ and $e^x$, logarithms $\log_a x$ and $\ln x$ (F07), and the trigonometric functions $\sin x$ and $\cos x$. The trigonometric ones are periodic with period $2\pi$ (angles measured in radians) and are used for cycles and seasons.
 
 Economic functions you will meet everywhere:
 
 - Demand $Q_d = D(P)$, usually decreasing in price; supply $Q_s = S(P)$, usually increasing in price.
 - Total cost $C(Q)$, increasing in output, with $C(0)$ equal to the fixed cost. A common shape is $C(Q) = F + aQ + bQ^2$.
+- Production $Q = f(K, L)$: output from capital and labour (functions of several variables, MV01). With one input fixed it becomes a function of one variable, such as output per day as a function of hours worked.
+- Utility $U(x)$: how much satisfaction a consumer gets from a bundle of goods; only its ordering matters (MV10).
+- Tax as a function of income $T(Y)$, and the **tax-rate function** $T(Y)/Y$: the average rate at each income, as in Example 3.
 - Economists usually draw demand and supply with price on the vertical axis, even when quantity is written as a function of price. Always read the axis labels before reading a graph.
 
 A **piecewise function** uses different rules on different intervals of its domain. An income tax with a tax-free allowance $A$, a basic rate $t_1$ up to $B$ and a higher rate $t_2$ above $B$ is

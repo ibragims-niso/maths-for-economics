@@ -63,6 +63,14 @@ where $C$ is the **constant of integration**. Any two antiderivatives of the sam
 
 For example, $\int (6x^2 - 4x + 5)\,dx = 2x^3 - 2x^2 + 5x + C$.
 
+**A short table of basic integrals** (each one checks by differentiating; $a > 0$, $a \neq 1$):
+
+- $\displaystyle\int a^{x}\,dx = \frac{a^{x}}{\ln a} + C$, the rule for growth at a fixed rate in any base;
+- $\displaystyle\int \sin x\,dx = -\cos x + C$ and $\displaystyle\int \cos x\,dx = \sin x + C$, used for seasonal and cyclical flows;
+- $\displaystyle\int \frac{dx}{1 + x^2} = \arctan x + C$ and $\displaystyle\int \frac{dx}{\sqrt{1 - x^2}} = \arcsin x + C$, which turn up after a substitution (C115).
+
+Two more properties follow from the definition: the derivative of an indefinite integral gives back the function, $\left(\int f(x)\,dx\right)' = f(x)$, and $\int F'(x)\,dx = F(x) + C$. Methods for harder integrands (substitution and integration by parts) are in C115.
+
 **Always check by differentiating.** The derivative of $2x^3 - 2x^2 + 5x + C$ is $6x^2 - 4x + 5$, so the integral is right. This check takes seconds and catches almost every slip.
 
 **Fixing the constant with an initial condition.** One known value of the total pins down $C$:

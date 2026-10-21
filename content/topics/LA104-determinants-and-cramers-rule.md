@@ -61,6 +61,10 @@ $$\begin{bmatrix} + & - & + \\ - & + & - \\ + & - & + \end{bmatrix}$$
 $$\det A = a_{11}M_{11} - a_{12}M_{12} + a_{13}M_{13}$$
 Any row or column gives the same answer (with its own signs from the pattern), so expand along one with zeros to save work.
 
+**Determinants of any order (Laplace expansion).** The same rule defines the determinant of an $n \times n$ matrix: pick any row $i$ (or column) and add each entry times its cofactor,
+$$\det A = \sum_{j=1}^{n} a_{ij} C_{ij}, \qquad C_{ij} = (-1)^{i+j} M_{ij}$$
+where the minor $M_{ij}$ is now an $(n-1) \times (n-1)$ determinant, expanded the same way until you reach $2 \times 2$. If you multiply one row by the cofactors of a *different* row, the sum is always 0; this is what makes the adjugate formula for the inverse work (LA105). For a $4 \times 4$ or larger matrix, expanding directly means many small determinants, so in practice first use row operations to create zeros (or reach triangular form, where the determinant is the product of the diagonal), then expand.
+
 **Rule of Sarrus** (3×3 only, a useful check). Write the first two columns again to the right of the matrix. Add the three products running down to the right and subtract the three running down to the left:
 $$\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33}$$
 

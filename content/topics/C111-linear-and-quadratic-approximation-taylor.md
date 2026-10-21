@@ -64,6 +64,10 @@ $$f(a + h) \approx f(a) + f'(a)\,h \qquad\text{or}\qquad f(x) \approx f(a) + f'(
 - output: $\Delta Q \approx Q'(L)\,\Delta L$, the marginal product of labour times the extra workers;
 - revenue: $\Delta R \approx R'(P)\,\Delta P = Q\,(1 + \varepsilon)\,\Delta P$, using the elasticity $\varepsilon$ of C107.
 
+Why $dy$ is the right approximation: for a differentiable function $\Delta y = f'(x)\,\Delta x + \alpha\,\Delta x$, where $\alpha \to 0$ as $\Delta x \to 0$. The first part, $dy$, is proportional to $\Delta x$ and is called the **principal (linear) part** of the change; the second part shrinks faster than $\Delta x$. On the graph, $dy$ is the rise along the tangent line, while $\Delta y$ is the rise along the curve.
+
+Rules for differentials copy the derivative rules: $d(u \pm v) = du \pm dv$, $d(uv) = v\,du + u\,dv$, $d(u/v) = (v\,du - u\,dv)/v^2$. The form $dy = f'(u)\,du$ stays the same even when $u$ is itself a function of another variable (the **invariance** of the first differential, which is the chain rule of C104 in disguise). Differentiating again gives **higher-order differentials**: $d^2y = f''(x)\,dx^2$ and in general $d^ny = f^{(n)}(x)\,dx^n$ when $x$ is the independent variable; the second one drives the quadratic approximation below.
+
 **Quadratic (second-order) approximation:**
 $$f(a + h) \approx f(a) + f'(a)\,h + \tfrac{1}{2}f''(a)\,h^2.$$
 The $\tfrac12$ is needed because the second derivative of $\tfrac12 f''(a)h^2$ with respect to $h$ is exactly $f''(a)$, so the parabola bends as much as the curve at $a$. If $f''(a) > 0$ the correction is positive; if $f''(a) < 0$ it is negative.

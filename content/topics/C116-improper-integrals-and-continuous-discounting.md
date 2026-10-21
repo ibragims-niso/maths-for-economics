@@ -77,7 +77,13 @@ $$\int_0^{\infty} e^{-rt}\,dt = \lim_{b \to \infty} \frac{1 - e^{-rb}}{r} = \fra
 
 **Unbounded integrand.** The same limit idea works when the function blows up at an end of a finite interval. For example $x^{-1/2}$ is infinite at $x = 0$, but
 $$\int_0^{1} \frac{dx}{\sqrt{x}} = \lim_{c \to 0^{+}} \left[2\sqrt{x}\right]_c^{1} = \lim_{c \to 0^{+}} (2 - 2\sqrt{c}) = 2$$
-By contrast $\int_0^1 x^{-1}\,dx$ diverges.
+By contrast $\int_0^1 x^{-1}\,dx$ diverges. Integrals over an infinite interval are called improper integrals of the **first kind**, and integrals of an unbounded function over a finite interval are of the **second kind**. The power test for the second kind runs the other way round: $\int_0^1 x^{-p}\,dx$ converges (to $\frac{1}{1-p}$) when $p < 1$ and diverges when $p \ge 1$. If the trouble sits inside the interval, at a point $c$, split the integral at $c$; it converges only if both pieces do.
+
+**Comparison tests.** Often the antiderivative is hard to find, but you only need to know whether the integral is finite. Suppose $0 \le f(x) \le g(x)$ for large $x$:
+- if $\int_a^{\infty} g(x)\,dx$ converges, so does $\int_a^{\infty} f(x)\,dx$ (a smaller positive flow has a smaller total);
+- if $\int_a^{\infty} f(x)\,dx$ diverges, so does $\int_a^{\infty} g(x)\,dx$.
+
+For example, $\dfrac{1}{x^2 + 5} \le \dfrac{1}{x^2}$, so $\int_1^{\infty} \dfrac{dx}{x^2 + 5}$ converges by the power test. If $\int |f(x)|\,dx$ converges, then $\int f(x)\,dx$ converges too (**absolute convergence**); this lets you handle flows that change sign, such as net cash flows.
 
 **Continuous discounting.** Rate $r$ a year, compounded continuously:
 - A single payment $F$ at time $t$ is worth $F e^{-rt}$ today.

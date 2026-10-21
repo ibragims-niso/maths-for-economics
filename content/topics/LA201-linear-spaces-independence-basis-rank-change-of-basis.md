@@ -99,7 +99,13 @@ A square $n \times n$ matrix has rank $n$ exactly when $\det A \neq 0$, which is
 
 **Coordinates and change of basis.** If $b_1, \dots, b_n$ is a basis of $\mathbb{R}^n$, put the basis vectors as the columns of $P = [\,b_1 \;\cdots\; b_n\,]$. The coordinates $c = (c_1, \dots, c_n)$ of $x$ in this basis satisfy
 $$x = c_1 b_1 + \dots + c_n b_n = P\,c, \qquad\text{so}\qquad c = P^{-1} x.$$
-$P$ is invertible because its columns are independent. Going back, $x = Pc$. If $Q$ holds a second basis, coordinates change from the first basis to the second by $c' = Q^{-1} P\, c$.
+$P$ is invertible because its columns are independent. Going back, $x = Pc$. If $Q$ holds a second basis, coordinates change from the first basis to the second by $c' = Q^{-1} P\, c$; the matrix $Q^{-1}P$ is the **transition matrix** between the two bases.
+
+**Linear spaces in general.** $\mathbb{R}^n$ is the main example, but anything that can be added and multiplied by numbers under the usual rules (order of adding does not matter, there is a zero element, every element has a negative, $k(x + y) = kx + ky$, and so on) is a **linear space** with the same ideas of span, basis and dimension. Examples: all polynomials of degree at most 2, $a + bt + ct^2$, form a space of dimension 3 with basis $1, t, t^2$, which is handy for quadratic cost functions; all $2 \times 2$ matrices form a space of dimension 4. A **linear transformation** $T$ is a rule with $T(x + y) = T(x) + T(y)$ and $T(kx) = kT(x)$; on $\mathbb{R}^n$ every such rule is multiplication by a matrix.
+
+**Euclidean space.** Adding a dot product (an **inner product**) to $\mathbb{R}^n$ gives lengths and distances (LA101):
+$$\langle x, y \rangle = x_1y_1 + \dots + x_ny_n, \qquad \|x\| = \sqrt{\langle x, x\rangle}, \qquad d(x, y) = \|x - y\|.$$
+Any distance $d$ used as a **metric** must satisfy three rules: $d(x, y) \ge 0$ with equality only when $x = y$; $d(x, y) = d(y, x)$; and the triangle inequality $d(x, z) \le d(x, y) + d(y, z)$. The Cauchy–Schwarz inequality $|\langle x, y\rangle| \le \|x\|\,\|y\|$ guarantees that the angle formula of LA101 always gives a cosine between −1 and 1. Distances between bundles, price vectors or regions' economic profiles are measured this way.
 
 ## Interactive
 ::widget{id="span-and-basis"}

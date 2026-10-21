@@ -79,7 +79,11 @@ where $a$ is the first term, whatever index the sum starts at. For $|q| \ge 1$ i
 
 **Comparison test.** Suppose $0 \le a_n \le b_n$ for every $n$. If $\sum b_n$ converges, so does $\sum a_n$; if $\sum a_n$ diverges, so does $\sum b_n$.
 
-**Ratio test.** Let $L = \lim_{n\to\infty} \left|\dfrac{a_{n+1}}{a_n}\right|$. If $L < 1$ the series converges; if $L > 1$ it diverges; if $L = 1$ the test gives no answer (both $\sum 1/n$ and $\sum 1/n^2$ have $L = 1$).
+**Ratio test** (d'Alembert's test). Let $L = \lim_{n\to\infty} \left|\dfrac{a_{n+1}}{a_n}\right|$. If $L < 1$ the series converges; if $L > 1$ it diverges; if $L = 1$ the test gives no answer (both $\sum 1/n$ and $\sum 1/n^2$ have $L = 1$).
+
+**Root test** (Cauchy's test). Let $L = \lim_{n\to\infty} \sqrt[n]{|a_n|}$. The verdicts are the same as for the ratio test: converges if $L < 1$, diverges if $L > 1$, no answer if $L = 1$. It suits terms that are $n$-th powers, such as $\left(\dfrac{n}{2n + 1}\right)^n$, where $\sqrt[n]{a_n} = \dfrac{n}{2n + 1} \to \tfrac12$, so the series converges.
+
+**Working with convergent series.** If $\sum a_n = A$ and $\sum b_n = B$, then $\sum (a_n \pm b_n) = A \pm B$ and $\sum k a_n = kA$. Adding, removing or changing finitely many terms changes the sum but not whether the series converges, so only the tail matters for convergence.
 
 **Alternating series** $b_1 - b_2 + b_3 - \dots$ with $b_n > 0$: if the $b_n$ decrease and tend to 0, the series converges, and stopping after $n$ terms makes an error smaller than the first term left out, $b_{n+1}$.
 
@@ -89,7 +93,9 @@ where $a$ is the first term, whatever index the sum starts at. For $|q| \ge 1$ i
 $$\sum_{n=0}^{\infty} a_n (x - c)^n = a_0 + a_1(x - c) + a_2(x - c)^2 + \dots$$
 There is a **radius of convergence** $R$ (possibly 0 or $\infty$): the series converges absolutely for $|x - c| < R$ and diverges for $|x - c| > R$. The ratio test finds it: the ratio of neighbouring terms tends to $|x - c|\,\lim |a_{n+1}/a_n|$, so
 $$R = \lim_{n\to\infty} \left|\frac{a_n}{a_{n+1}}\right| \quad\text{when this limit exists.}$$
-At the two end points $x = c \pm R$ the ratio test gives $L = 1$, so check them separately; the **interval of convergence** is the set of all $x$ where the series converges. For $|x - c| < R$ a power series can be differentiated term by term, and the result has the same radius.
+At the two end points $x = c \pm R$ the ratio test gives $L = 1$, so check them separately; the **interval of convergence** is the set of all $x$ where the series converges. For $|x - c| < R$ a power series can be differentiated term by term, and the result has the same radius. Why the convergence region is always an interval: if a power series converges at some point $x_0$, it converges absolutely at every $x$ closer to the centre than $x_0$ (Abel's theorem).
+
+**Series of functions.** A power series is one case of a **functional series** $\sum u_n(x)$, whose terms depend on $x$. It **converges pointwise** on a set if it converges at each $x$ there, and **uniformly** if one number of terms gives the required accuracy at every $x$ of the set at once. Uniform convergence is what allows a series of continuous functions to be added up into a continuous function, and to be integrated or differentiated term by term. The simplest check is the **Weierstrass test**: if $|u_n(x)| \le M_n$ for every $x$ in the set and $\sum M_n$ converges, the series converges uniformly there. For example, $\sum \dfrac{\cos(nx)}{n^2}$ converges uniformly on the whole line because $\left|\dfrac{\cos(nx)}{n^2}\right| \le \dfrac{1}{n^2}$.
 
 **Taylor and Maclaurin series.** The Taylor series of $f$ about $c$ is $\displaystyle\sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!}(x - c)^n$; about $c = 0$ it is the Maclaurin series. Its partial sums are the Taylor polynomials of C111. Three to know:
 

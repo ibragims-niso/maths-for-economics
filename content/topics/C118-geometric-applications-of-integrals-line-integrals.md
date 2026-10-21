@@ -85,6 +85,9 @@ Check with a straight line $y = mx + c$: then $f'(x) = m$ and $L = (b - a)\sqrt{
 
 **Curves given by a parameter.** A route $C$ can be described by $x = x(t)$, $y = y(t)$ for $\alpha \le t \le \beta$. A tiny piece of it has length
 $$ds = \sqrt{x'(t)^2 + y'(t)^2}\,dt.$$
+**Polar coordinates.** A point can also be located by its distance $r$ from the origin and its angle $\varphi$, with $x = r\cos\varphi$ and $y = r\sin\varphi$. A curve $r = r(\varphi)$ and the two rays $\varphi = \alpha$ and $\varphi = \beta$ cut out a fan-shaped region, a **curvilinear sector**. Cutting it into thin slices that are nearly triangles of area $\tfrac12 r^2\,d\varphi$ gives
+$$S = \frac12 \int_{\alpha}^{\beta} r(\varphi)^2\,d\varphi, \qquad L = \int_{\alpha}^{\beta} \sqrt{r(\varphi)^2 + r'(\varphi)^2}\,d\varphi$$
+for its area and for the length of the curve. Check with a circle $r = a$: the area is $\tfrac12 a^2 \cdot 2\pi = \pi a^2$ and the length is $2\pi a$.
 The straight segment from $A = (x_A, y_A)$ to $B = (x_B, y_B)$ is $x = x_A + t(x_B - x_A)$, $y = y_A + t(y_B - y_A)$ for $0 \le t \le 1$, and then $ds = |AB|\,dt$, where $|AB|$ is the length of the segment.
 
 **Line integral of the first kind** (of a function $g$ along $C$):

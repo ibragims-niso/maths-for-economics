@@ -93,6 +93,15 @@ Polynomials are continuous everywhere; rational functions are continuous whereve
 - *Jump*: the one-sided limits exist but differ, as in a tariff whose price changes at a threshold without the pieces joining.
 - *Infinite*: the function grows without limit near $a$, as $AC(q)$ does near $q = 0$.
 
+Many textbooks group these in two kinds. A discontinuity **of the first kind** has both one-sided limits finite: the removable and jump cases. A discontinuity **of the second kind** has at least one one-sided limit infinite or missing: the infinite case, and functions that keep oscillating near $a$.
+
+**Equivalent definition with small changes.** Write $\Delta x = x - a$ and $\Delta y = f(a + \Delta x) - f(a)$. Then $f$ is continuous at $a$ exactly when $\Delta y \to 0$ as $\Delta x \to 0$: a small change in the input gives only a small change in the output. Sums, differences, products, quotients (with a non-zero denominator) and compositions of continuous functions are continuous, and so are the inverse functions of continuous monotonic ones.
+
+**Continuous on a closed interval.** If $f$ is continuous at every point of $[a, b]$, then:
+- it is **bounded** there and reaches a largest and a smallest value (Weierstrass's theorem; this is why a profit function on a feasible range of output always has a best output, see AN03);
+- if $f(a)$ and $f(b)$ have opposite signs, then $f(c) = 0$ for some $c$ between them (Bolzano–Cauchy); more generally $f$ takes every value between $f(a)$ and $f(b)$ (the intermediate value theorem). If excess demand is negative at a low price and positive at a high one, some price in between clears the market;
+- it is **uniformly continuous** (Cantor's theorem): one tolerance on the input works across the whole interval. If you need the output within $\varepsilon$, there is a $\delta$ such that any two inputs closer than $\delta$ give outputs closer than $\varepsilon$, wherever they are in $[a, b]$. On an open or unbounded interval this can fail: $1/x$ on $(0, 1)$ changes faster and faster near 0.
+
 **Making a piecewise function continuous.** If $f(x) = g(x)$ for $x \le m$ and $f(x) = h(x)$ for $x > m$, with $g$ and $h$ polynomials, then $f$ is continuous at $m$ exactly when $g(m) = h(m)$. If $h$ contains an unknown parameter, solve this equation for it.
 
 ## Interactive

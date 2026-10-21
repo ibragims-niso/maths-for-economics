@@ -75,7 +75,10 @@ Rules that hold: $(AB)C = A(BC)$, $A(B + C) = AB + AC$, $k(AB) = (kA)B$. Rule th
 **Special matrices.**
 - A **square** matrix has as many rows as columns.
 - The **identity** $I_n$ is square with 1s on the main diagonal and 0s elsewhere; $AI = IA = A$, like multiplying a number by 1.
-- A **diagonal** matrix has zeros everywhere off the main diagonal.
+- A **diagonal** matrix has zeros everywhere off the main diagonal; a **scalar** matrix is a diagonal one with the same number $k$ on the whole diagonal, $kI$, and multiplying by it just scales by $k$.
+- A **triangular** matrix is square with zeros on one side of the main diagonal: **upper** triangular has zeros below it, **lower** triangular zeros above it. Gaussian elimination (LA103) turns a matrix into this shape.
+- The **zero** matrix $O$ has every entry 0; $A + O = A$ and $AO = O$, like adding or multiplying by the number 0.
+- A **row vector** is a $1 \times n$ matrix (one row) and a **column vector** an $n \times 1$ matrix (one column). Two matrices are **equal** only if they have the same size and every pair of matching entries is equal.
 - The **transpose** $A^{\mathsf T}$ turns rows into columns: $(A^{\mathsf T})_{ij} = a_{ji}$. Then $(A + B)^{\mathsf T} = A^{\mathsf T} + B^{\mathsf T}$ and
 $$(AB)^{\mathsf T} = B^{\mathsf T} A^{\mathsf T}$$
 with the order reversed, so that the sizes still fit. The dot product is a matrix product too: $\mathbf{p}\cdot\mathbf{x} = \mathbf{p}^{\mathsf T}\mathbf{x}$.
