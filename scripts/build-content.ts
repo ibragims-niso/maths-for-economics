@@ -15,6 +15,8 @@ import {
   type CompiledExample,
   type CompiledTopic,
   parseTopicFile,
+  type SearchEntry,
+  searchStems,
   symbolsSchema,
   type TopicContext,
   topicFrontmatterSchema,
@@ -279,6 +281,13 @@ function compileTopic(path: string): { topic: CompiledTopic; ai: TopicContext } 
   return { topic, ai };
 }
 
+type CourseHeadings = {
+  title: string;
+  topics?: string[];
+  supporting?: string[];
+  sections?: { title: string; topics: string[] }[];
+};
+
 const topicsDir = join(repoRoot, 'content/topics');
 const compiled = readdirSync(topicsDir)
   .filter((f) => f.endsWith('.md'))
@@ -321,6 +330,42 @@ writeFileSync(
   join(outDir, 'content-index.json'),
   JSON.stringify(topics.map((t) => ({ id: t.id, status: t.status, estMinutes: t.estMinutes }))),
 );
+// Word stems for topic search (Learn, Practice): titles, economic uses, the course and section
+// headings each topic sits under in any track (syllabus wording), and the topic's own text.
+const headings = new Map<string, string[]>();
+for (const file of readdirSync(join(repoRoot, 'content/tracks'))) {
+  const track = JSON.parse(readText(join(repoRoot, 'content/tracks', file))) as {
+    years: { courses: CourseHeadings[] }[];
+  };
+  for (const course of track.years.flatMap((y) => y.courses)) {
+    const groups = [
+      { title: course.title, topics: [...(course.topics ?? []), ...(course.supporting ?? [])] },
+      ...(course.sections ?? []).map((s) => ({
+        title: `${course.title} ${s.title}`,
+        topics: s.topics,
+      })),
+    ];
+    for (const g of groups)
+      for (const id of g.topics) headings.set(id, [...(headings.get(id) ?? []), g.title]);
+  }
+}
+const written = new Map(compiled.map((c) => [c.topic.id, c.topic]));
+const bank = JSON.parse(readText(join(repoRoot, 'content/topic-bank.json'))) as {
+  id: string;
+  title: string;
+  economicUse: string;
+}[];
+const searchIndex: SearchEntry[] = bank.map((b) => {
+  const topic = written.get(b.id);
+  const near = [b.economicUse, ...(topic?.economicUses ?? []), ...(headings.get(b.id) ?? [])];
+  return {
+    id: b.id,
+    title: searchStems(b.title).join(' '),
+    near: searchStems(near.join(' ')).join(' '),
+    body: topic ? searchStems(`${topic.tutor.summary} ${topic.tutor.definitions}`).join(' ') : '',
+  };
+});
+writeFileSync(join(outDir, 'search-index.json'), JSON.stringify(searchIndex));
 // Topics the content session is writing now (content/working.json, owned by that session).
 // The app labels them "Writing" instead of "Soon"; a compiled topic is simply available.
 const workingPath = join(repoRoot, 'content/working.json');

@@ -1,4 +1,12 @@
-import { type Block, blockOf, type MasteryState } from '@mfe/core';
+import {
+  type Block,
+  blockOf,
+  type MasteryState,
+  rankTopics,
+  type SearchEntry,
+  searchStems,
+} from '@mfe/core';
+import { useEffect, useState } from 'react';
 import topicBank from '../../../content/topic-bank.json';
 import contentIndex from './generated/content-index.json';
 import working from './generated/working.json';
@@ -92,20 +100,37 @@ export function groupByBlock<T extends { id: string }>(topics: readonly T[]) {
   return groups;
 }
 
-const searchText = (t: (typeof topicBank)[number]) =>
-  `${t.id} ${t.title} ${t.economicUse}`.toLowerCase();
+/** Before the full index loads: titles and economic uses only, from the bundled topic bank. */
+const QUICK_INDEX: SearchEntry[] = topicBank.map((t) => ({
+  id: t.id,
+  title: searchStems(t.title).join(' '),
+  near: searchStems(t.economicUse).join(' '),
+  body: '',
+}));
+let fullIndex: SearchEntry[] | undefined;
+
+/** The full search index (topic text and syllabus headings), loaded on the first search. */
+export const loadSearchIndex = () =>
+  import('./generated/search-index.json').then((m) => {
+    fullIndex = m.default;
+    return fullIndex;
+  });
 
 /**
- * Topics matching every word of a query (in ID, title or economic use), titles first, then in
- * curriculum order. Works offline: it searches the bundled topic bank.
+ * Topics matching a query, best first (rankTopics in core): by ID, title, economic use, the
+ * syllabus headings they sit under and their text. Works offline.
  */
 export function searchTopics(query: string, pool: readonly string[] = topicBank.map((t) => t.id)) {
-  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
-  if (words.length === 0) return [];
   const allowed = new Set(pool);
-  return topicBank
-    .filter((t) => allowed.has(t.id) && words.every((w) => searchText(t).includes(w)))
-    .map((t, i) => ({ t, i, inTitle: words.every((w) => t.title.toLowerCase().includes(w)) }))
-    .sort((a, b) => Number(b.inTitle) - Number(a.inTitle) || a.i - b.i)
-    .map(({ t }) => t);
+  const entries = (fullIndex ?? QUICK_INDEX).filter((e) => allowed.has(e.id));
+  return rankTopics(query, entries).flatMap((id) => bankTopic(id) ?? []);
+}
+
+/** searchTopics for a component: starts loading the full index once something is typed. */
+export function useTopicSearch(query: string, pool?: readonly string[]) {
+  const [, setLoaded] = useState(fullIndex !== undefined);
+  useEffect(() => {
+    if (query.trim() && !fullIndex) loadSearchIndex().then(() => setLoaded(true));
+  }, [query]);
+  return searchTopics(query, pool);
 }

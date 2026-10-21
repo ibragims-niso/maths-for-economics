@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { bankTopic, searchTopics } from '../topics';
+import { bankTopic, useTopicSearch } from '../topics';
 
 /**
  * Choose several topics by searching (owner's request): chosen topics show as chips that can be
@@ -12,7 +12,7 @@ export function TopicPicker(props: {
   onToggle: (id: string) => void;
 }) {
   const [query, setQuery] = useState('');
-  const results = searchTopics(query, props.available).slice(0, 12);
+  const results = useTopicSearch(query, props.available).slice(0, 12);
 
   return (
     <div className="picker">

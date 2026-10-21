@@ -6,7 +6,7 @@ import { InstallHint } from './InstallHint';
 import { ChevronIcon } from './icons';
 import { Segmented } from './Segmented';
 import { useProgress } from './storage';
-import { bankTopic, READY, STATUS_LABEL, searchTopics, WRITING } from './topics';
+import { bankTopic, READY, STATUS_LABEL, useTopicSearch, WRITING } from './topics';
 import { learnGroups, useTrack, yearTopics } from './tracks';
 import { useInstallOption } from './useInstallOption';
 
@@ -124,7 +124,7 @@ export function HomePage() {
   const groups = learnGroups(track, year);
   const progress = useProgress();
   const [query, setQuery] = useState('');
-  const results = searchTopics(query);
+  const results = useTopicSearch(query);
   // Spaced repetition (R7): topics whose review date has passed.
   const due = dueForReview([...(progress?.values() ?? [])], Date.now());
   const state = (id: string) => masteryState(progress?.get(id));
