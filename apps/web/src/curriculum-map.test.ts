@@ -25,8 +25,8 @@ describe('layoutCurriculum on the real topic bank', () => {
 
   it('orders years left to right with their topic counts', () => {
     expect(layout.years.map((y) => [y.year, y.count])).toEqual([
-      [1, 49],
-      [2, 23],
+      [1, 52],
+      [2, 24],
       [3, 24],
       [4, 17],
     ]);
