@@ -250,11 +250,11 @@
       meaning: The least upper bound and the greatest lower bound; like max and min, even when not reached.
       example: '\sup \{1 - \tfrac{1}{n}\} = 1'
       covers: ['\sup', '\inf']
-    - latex: '\sin, \; \cos'
-      name: sine, cosine
-      meaning: Functions that repeat in waves; used for cycles.
-      example: '\sin 0 = 0, \quad \cos 0 = 1'
-      covers: ['\sin', '\cos']
+    - latex: '\sin, \; \cos, \; \tan'
+      name: sine, cosine, tangent
+      meaning: Functions that repeat in waves; used for cycles. The tangent is sine divided by cosine.
+      example: '\sin 0 = 0, \quad \cos 0 = 1, \quad \tan x = \tfrac{\sin x}{\cos x}'
+      covers: ['\sin', '\cos', '\tan']
     - latex: '\arcsin, \; \arctan'
       name: inverse sine, inverse tangent
       meaning: They undo sin and tan, giving back the angle; they appear as answers to some integrals.
