@@ -187,7 +187,10 @@ function hideMistakeCodes(nodes: RootContent[], codes: ReadonlySet<string>): Roo
   return nodes;
 }
 
-/** A section's Markdown as the author wrote it, without widgets: what the AI tutor reads. */
+/**
+ * A section's Markdown as the author wrote it, without widgets and with syllabus labels as plain
+ * italic lines: what the AI tutor reads.
+ */
 function markdownOf(body: string, nodes: RootContent[]): string {
   const first = nodes[0]?.position?.start.offset;
   const last = nodes.at(-1)?.position?.end.offset;
@@ -195,6 +198,7 @@ function markdownOf(body: string, nodes: RootContent[]): string {
   return body
     .slice(first, last)
     .replace(/^::widget\{[^}]*\}\s*$/gm, '')
+    .replace(/^::syllabus\[([^\]]*)\]\s*$/gm, '*$1*')
     .trim();
 }
 
