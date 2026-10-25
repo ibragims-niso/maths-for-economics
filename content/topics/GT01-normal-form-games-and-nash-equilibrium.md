@@ -12,6 +12,9 @@ economicUses:
   - Advertising and market-entry decisions
   - Choosing a technology standard that others also adopt
   - Predicting how a merger changes market prices
+searchTerms:
+  - "Nash equilibrium"
+  - "Prisoner's dilemma"
 generators: [bimatrix-nash-payoff, pure-nash-count, cournot-duopoly-equilibrium]
 widgets: [cournot-best-responses]
 mistakeCodes:

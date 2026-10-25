@@ -11,6 +11,10 @@ economicUses:
   - The true yearly cost of credit cards and consumer loans
   - Disclosure rules that make lenders and banks show an effective annual rate
   - Continuously compounded rates in finance and log growth rates in economics
+searchTerms:
+  - "EAR"
+  - "APR"
+  - "Effective interest rate"
 generators: [effective-annual-rate, continuous-compounding-amount, nominal-rate-from-effective]
 widgets: [compounding-frequency]
 mistakeCodes:

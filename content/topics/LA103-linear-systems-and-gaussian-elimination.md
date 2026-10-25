@@ -11,6 +11,14 @@ economicUses:
   - Production plans that use every available machine hour
   - Blending problems with weight, nutrient and cost targets
   - "Spotting a model that does not pin down a unique answer"
+searchTerms:
+  - "Systems of linear equations and their solution"
+  - "Consistent and inconsistent systems"
+  - "Systems of linear equations in matrix form"
+  - "General system of linear equations"
+  - "Gauss's method"
+  - "Gaussian elimination"
+  - "Row echelon form"
 generators: [machine-hours-back-substitution, three-market-equilibrium-price, singular-system-parameter]
 widgets: [two-line-system]
 mistakeCodes:

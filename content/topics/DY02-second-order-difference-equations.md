@@ -11,6 +11,10 @@ economicUses:
   - Inventory cycles, when firms rebuild or run down their stocks after a surprise in sales
   - "Hog cycles: livestock herds and prices that rise and fall over several years"
   - Deciding whether a model with two lags settles, cycles or explodes
+searchTerms:
+  - "Second-order recurrence relation"
+  - "Multiplier–accelerator model"
+  - "Characteristic equation of a difference equation"
 generators: [second-order-iterated-value, characteristic-equation-larger-root, multiplier-accelerator-income]
 widgets: [multiplier-accelerator]
 mistakeCodes:

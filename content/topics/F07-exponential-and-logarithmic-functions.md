@@ -12,6 +12,11 @@ economicUses:
   - Average annual growth rates of GDP, prices and sales
   - Log-scale charts and log-linear models of economic data
   - Depreciation of machines, vehicles and other equipment
+searchTerms:
+  - "Logarithm"
+  - "Exponent"
+  - "Exponential function"
+  - "Natural logarithm"
 generators: [growth-time-to-multiply, average-annual-growth-rate, depreciation-time-to-value]
 widgets: [doubling-time]
 mistakeCodes:

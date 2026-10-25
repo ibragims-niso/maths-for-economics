@@ -11,6 +11,10 @@ economicUses:
   - "Budget sets {x : p·x ≤ m} in consumer theory"
   - Portfolio returns as shares of wealth times asset returns
   - Nominal and real GDP as prices times quantities of many goods
+searchTerms:
+  - "Vector"
+  - "Dot product"
+  - "Scalar product"
 generators: [bundle-cost-dot-product, bundle-distance-norm, bundle-angle-cosine]
 widgets: [budget-vectors]
 mistakeCodes:

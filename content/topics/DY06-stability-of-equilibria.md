@@ -12,6 +12,10 @@ economicUses:
   - "Inflation dynamics: why the strength of a central bank's reaction decides whether shocks die out"
   - "Signing comparative statics with Samuelson's correspondence principle"
   - "Saddle-path stability in models with forward-looking prices and rational expectations"
+searchTerms:
+  - "Stability of a steady state"
+  - "Stable and unstable equilibrium"
+  - "Jacobian matrix"
 generators: [harvest-map-slope-at-steady-state, jury-margin-2x2-discrete, solow-convergence-half-life]
 widgets: [poverty-trap-map]
 mistakeCodes:

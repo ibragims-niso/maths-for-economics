@@ -11,6 +11,19 @@ economicUses:
   - Tariffs, tax bands and benefit rules with jumps at a threshold
   - Long-run behaviour of economic models
   - Designing piecewise prices that join up without a jump
+searchTerms:
+  - "Limit of a function"
+  - "Definitions of the limit of a function"
+  - "Properties of functions with limits"
+  - "One-sided limits"
+  - "Continuity of a function and its properties"
+  - "Continuity at a point, from the right and from the left"
+  - "Classification of discontinuity points"
+  - "Functions continuous on an interval"
+  - "Economic applications of continuity"
+  - "Uniform continuity"
+  - "Cantor theorem"
+  - "Weierstrass theorem on continuous functions"
 generators: [limit-by-cancelling, long-run-cost-ratio, continuous-tariff-parameter]
 widgets: [tariff-continuity]
 mistakeCodes:

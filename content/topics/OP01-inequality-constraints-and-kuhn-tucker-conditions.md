@@ -11,6 +11,9 @@ economicUses:
   - Rationing and quotas that may or may not bind
   - The value of extra capacity for a firm with a capacity limit
   - Peak-load pricing of electricity, transport and other capacity
+searchTerms:
+  - "KKT conditions"
+  - "Karush–Kuhn–Tucker"
 generators: [quasilinear-demand-corner, rationing-quota-other-good, capacity-multiplier-two-products]
 widgets: [quasilinear-corner-budget]
 mistakeCodes:

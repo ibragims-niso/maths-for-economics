@@ -11,6 +11,11 @@ economicUses:
   - Total cost or revenue from a marginal function built around an inner function
   - Valuing salaries, pensions and projects whose payments rise each year
   - Total output when productivity rises with experience
+searchTerms:
+  - "Substitution in indefinite integrals"
+  - "Change of variable in integrals"
+  - "Integration by parts"
+  - "Substitution in definite integrals"
 generators: [substitution-total-from-marginal, present-value-growing-stream, total-output-log-rate]
 widgets: [growing-stream-present-value]
 mistakeCodes:

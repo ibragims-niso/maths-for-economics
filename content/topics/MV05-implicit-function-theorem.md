@@ -11,6 +11,11 @@ economicUses:
   - Marginal rate of substitution and of technical substitution
   - Effects of government spending and the money supply in the IS–LM model
   - Slopes of level curves of utility, cost and production functions
+searchTerms:
+  - "Implicit function"
+  - "Marginal rate of substitution"
+  - "MRS"
+  - "MRTS"
 generators: [level-curve-slope-ift, equilibrium-price-income-response, islm-comparative-statics-cramer]
 widgets: [income-shift-equilibrium]
 mistakeCodes:

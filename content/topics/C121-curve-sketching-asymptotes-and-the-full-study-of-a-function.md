@@ -11,6 +11,16 @@ economicUses:
   - "S-shaped adoption and sales curves: saturation level and the moment of fastest growth"
   - Best and worst outcomes when output, prices or budgets must stay inside limits
   - Reading a model's whole behaviour from a sketch before using it for decisions
+searchTerms:
+  - "Extrema of functions and their determination"
+  - "Monotonicity of functions: intervals of increase and decrease"
+  - "Necessary and sufficient conditions for an extremum"
+  - "Convexity, concavity and inflection points"
+  - "Asymptotes"
+  - "Construction of function graphs"
+  - "Graph of a function: full investigation"
+  - "Curve sketching"
+  - "Largest and smallest values on an interval"
 generators: [oblique-asymptote-intercept, logistic-inflection-time, global-extremum-closed-interval]
 widgets: [average-cost-asymptotes]
 mistakeCodes:

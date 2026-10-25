@@ -11,6 +11,9 @@ economicUses:
   - "Tax incidence: how a tax splits between buyers and sellers"
   - Effects of subsidies, price floors and ceilings
   - Linked markets, such as tea and coffee, solved together
+searchTerms:
+  - "Supply and demand"
+  - "Equilibrium price"
 generators: [equilibrium-price, equilibrium-tax-price]
 widgets: [equilibrium-tax]
 mistakeCodes:

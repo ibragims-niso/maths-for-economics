@@ -11,6 +11,12 @@ economicUses:
   - Revenue or cost of many shops, plants or bundles in a single product
   - "Input–output tables of a whole economy (the Leontief model)"
   - Labour-market and credit-rating transition matrices
+searchTerms:
+  - "Matrix concept"
+  - "Types of matrices"
+  - "Linear operations on matrices"
+  - "Transpose of a matrix"
+  - "Matrix multiplication"
 generators: [matrix-product-revenue-entry, transition-matrix-two-step, matrix-chain-plant-cost]
 widgets: [shop-revenue-matrix]
 mistakeCodes:

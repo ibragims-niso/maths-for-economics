@@ -11,6 +11,11 @@ economicUses:
   - "Hedging: how many shares a dealer holds against an option it has sold"
   - Valuing employee share options and other contracts with an option inside
   - "Real options: the value of waiting before an irreversible investment"
+searchTerms:
+  - "Binomial option pricing"
+  - "Risk-neutral probability"
+  - "Call option"
+  - "Put option"
 generators: [binomial-tree-call-one-period, binomial-tree-replicating-loan, binomial-tree-put-two-period]
 widgets: [binomial-option-tree]
 mistakeCodes:

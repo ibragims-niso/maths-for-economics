@@ -11,6 +11,11 @@ economicUses:
   - "Why a free good (zero price) or a strict inequality can leave a choice problem with no solution"
   - Feasible sets in planning and production problems, and why production sets are assumed closed
   - "Telling interior solutions from boundary (corner) solutions"
+searchTerms:
+  - "Compact set"
+  - "Open and closed sets"
+  - "Bounded set"
+  - "Neighbourhood of a point"
 generators: [budget-line-distance, compact-budget-max-utility, budget-set-largest-ball]
 widgets: [budget-set-open-ball]
 mistakeCodes:

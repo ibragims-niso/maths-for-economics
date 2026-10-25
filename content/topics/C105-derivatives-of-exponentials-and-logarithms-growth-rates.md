@@ -12,6 +12,10 @@ economicUses:
   - "Growth accounting: how much growth comes from capital, labour and productivity"
   - Log differences as approximate percentage changes in economic data
   - Elasticities as ratios of log changes
+searchTerms:
+  - "Derivative of an exponential function"
+  - "Derivative of a logarithm"
+  - "Growth rate"
 generators: [growth-rate-ratio-product, exp-log-derivative-at-point, growth-accounting-tfp]
 widgets: [growth-rate-explorer]
 mistakeCodes:

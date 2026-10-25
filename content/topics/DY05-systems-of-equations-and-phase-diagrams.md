@@ -12,6 +12,10 @@ economicUses:
   - "Entry and exit of firms chasing customers: damped cycles in an industry"
   - "Saddle paths: why consumption, share prices and exchange rates jump when news arrives"
   - "Phase diagrams of growth models such as Ramsey's"
+searchTerms:
+  - "Phase diagram"
+  - "Saddle path"
+  - "System of differential equations"
 generators: [two-market-steady-state-price, stability-threshold-trace-determinant, saddle-path-initial-jump]
 widgets: [linear-phase-portrait]
 mistakeCodes:

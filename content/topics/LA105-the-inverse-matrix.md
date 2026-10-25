@@ -11,6 +11,11 @@ economicUses:
   - "Policy scenarios: one inverse answers every new demand or supply shock"
   - "Comparative statics: the entries of A⁻¹ are the multipliers of a linear model"
   - "Regression: the OLS estimator uses (XᵀX)⁻¹"
+searchTerms:
+  - "Inverse matrix and its calculation"
+  - "Singular and non-singular matrices"
+  - "Solving a system with the inverse matrix"
+  - "Adjugate matrix"
 generators: [inverse-2x2-entry, equilibrium-prices-inverse, inverse-3x3-cofactor-entry]
 widgets: [inverse-two-markets]
 mistakeCodes:

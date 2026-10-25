@@ -11,6 +11,14 @@ economicUses:
   - Output from capital and labour, and isoquants
   - "Budget lines and iso-cost lines: straight level curves of spending"
   - Reading contour maps of profit, cost or utility
+searchTerms:
+  - "Multivariable functions, their limit and continuity"
+  - "Function of several variables"
+  - "Points in n-dimensional space, distance and neighbourhood"
+  - "Graph and level curves"
+  - "Limit of a multivariable function"
+  - "Repeated limits"
+  - "Continuity of multivariable functions"
 generators: [level-curve-through-point, same-indifference-curve-quantity]
 widgets: [indifference-map]
 mistakeCodes:

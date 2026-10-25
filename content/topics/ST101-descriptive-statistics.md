@@ -11,6 +11,10 @@ economicUses:
   - Reporting typical household income with the median rather than the mean
   - Comparing how spread out or volatile two data sets are
   - Spotting outliers and data errors before any further analysis
+searchTerms:
+  - "Mean, median and mode"
+  - "Standard deviation"
+  - "Variance"
 generators: [mean-or-median-small-data, grouped-frequency-mean, sample-standard-deviation]
 widgets: [wage-outlier-dots]
 mistakeCodes:

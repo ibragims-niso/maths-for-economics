@@ -11,6 +11,9 @@ economicUses:
   - Government cost–benefit analysis of roads, bridges and flood defences
   - Choosing between rival projects when only one can be done
   - Comparing an investment's own rate of return with the cost of borrowing
+searchTerms:
+  - "NPV"
+  - "IRR"
 generators: [project-npv-yearly-flows, two-period-irr, mutually-exclusive-best-npv]
 widgets: [npv-profile-two-projects]
 mistakeCodes:

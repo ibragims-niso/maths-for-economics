@@ -11,6 +11,11 @@ economicUses:
   - Buying whole machines, vehicles or plants, and paying fixed costs only for what is opened
   - "Maximising a ratio: profit per unit of cost, output per worker, efficiency scores"
   - "Sensitivity of a plan to price changes: how long the best plan stays best"
+searchTerms:
+  - "Integer programming"
+  - "Branch and bound"
+  - "Fractional-linear programming"
+  - "Parametric programming"
 generators: [profit-cost-ratio-best-corner, project-selection-best-npv, parametric-lp-optimal-value]
 widgets: [fleet-integer-plan]
 mistakeCodes:

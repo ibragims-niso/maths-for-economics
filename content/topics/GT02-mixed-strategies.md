@@ -11,6 +11,8 @@ economicUses:
   - Random inspections of factories, food outlets and public transport tickets
   - Unpredictable price promotions by rival retailers
   - Penalty kicks as a real-world test of game theory
+searchTerms:
+  - "Mixed strategy equilibrium"
 generators: [audit-probability-indifference, mixed-equilibrium-probability, mixed-equilibrium-expected-payoff]
 widgets: [audit-best-responses]
 mistakeCodes:

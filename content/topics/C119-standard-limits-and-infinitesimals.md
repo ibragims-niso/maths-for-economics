@@ -11,6 +11,15 @@ economicUses:
   - "Small-rate shortcuts: ln(1 + r) ≈ r and eʳ − 1 ≈ r for growth and interest rates"
   - Long-run ratios of costs, outputs or debts that grow at different speeds
   - Deciding which part of a formula matters when a quantity becomes very large or very small
+searchTerms:
+  - "Calculation of sequence limits"
+  - "Calculating limits of functions"
+  - "Infinitely small and infinitely large functions and their comparison"
+  - "Notable limits"
+  - "Remarkable limits"
+  - "Standard limits sin x / x and (1 + 1/x)^x"
+  - "Equivalent infinitesimals"
+  - "Indeterminate forms"
 generators: [conjugate-limit-at-infinity, one-to-infinity-limit, equivalent-infinitesimals-ratio]
 widgets: [small-rate-approximations]
 mistakeCodes:

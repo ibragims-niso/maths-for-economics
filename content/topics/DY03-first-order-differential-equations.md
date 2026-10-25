@@ -11,6 +11,9 @@ economicUses:
   - "Price adjustment: how fast excess demand pushes a market price to its equilibrium"
   - "The Solow growth model: where capital per worker settles and how fast it gets there"
   - "Debt and stock dynamics in continuous time: will a ratio settle, and when is half the gap closed?"
+searchTerms:
+  - "ODE"
+  - "Differential equation"
 generators: [linear-ode-value-at-time, ode-gap-closing-time, solow-steady-state-capital]
 widgets: [price-adjustment-path]
 mistakeCodes:

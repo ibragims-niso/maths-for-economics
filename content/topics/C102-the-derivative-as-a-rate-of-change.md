@@ -11,6 +11,10 @@ economicUses:
   - How fast GDP is growing at a given moment
   - "The slope of a demand curve: change in quantity per unit of price"
   - Marginal tax rates and the kinks in a tax schedule
+searchTerms:
+  - "Derivative of a function of one variable"
+  - "Increment of a function"
+  - "Differentiation"
 generators: [cost-average-rate-of-change, instantaneous-rate-quadratic, tangent-line-intercept]
 widgets: [secant-to-tangent]
 mistakeCodes:

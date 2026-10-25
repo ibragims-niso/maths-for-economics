@@ -11,6 +11,8 @@ economicUses:
   - Advertising and bidding contests where one firm's gain is the other's loss
   - Cautious (maximin) decisions under uncertainty, treating nature as an opponent
   - Solving large games with linear programming software
+searchTerms:
+  - "Minimax"
 generators: [zero-sum-saddle-point-value, zero-sum-mixed-2x2-value, zero-sum-lp-optimal-value]
 widgets: [zero-sum-lower-envelope]
 mistakeCodes:

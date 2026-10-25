@@ -11,6 +11,10 @@ economicUses:
   - "Long-run market shares in a Markov model: the eigenvector for the eigenvalue 1"
   - "Stability of a dynamic model xₜ₊₁ = Axₜ: do deviations die out?"
   - Population projections and the long-run age structure behind pension planning
+searchTerms:
+  - "Eigenvalues and eigenvectors and their calculation"
+  - "Characteristic equation"
+  - "Characteristic polynomial"
 generators: [eigenvalue-larger-2x2, eigenvector-second-component, spectral-radius-stability]
 widgets: [eigen-directions]
 mistakeCodes:

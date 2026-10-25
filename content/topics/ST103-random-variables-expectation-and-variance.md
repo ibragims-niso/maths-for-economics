@@ -12,6 +12,10 @@ economicUses:
   - Setting insurance premiums from the expected loss
   - Valuing lottery tickets and other gambles
   - Comparing projects across bad, normal and good scenarios
+searchTerms:
+  - "Random variable"
+  - "Expected value"
+  - "Expectation and variance"
 generators: [expected-value-discrete, variance-discrete-risk, profit-variance-linear-transform]
 widgets: [investment-risk-bars]
 mistakeCodes:

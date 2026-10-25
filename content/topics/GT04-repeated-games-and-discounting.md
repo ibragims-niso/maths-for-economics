@@ -11,6 +11,10 @@ economicUses:
   - Tacit collusion in markets with a few firms that meet again and again
   - Trade agreements kept in place by the threat of retaliation
   - Reputation of firms, sellers on online platforms and central banks
+searchTerms:
+  - "Grim trigger strategy"
+  - "Folk theorem"
+  - "Infinitely repeated game"
 generators: [grim-trigger-critical-discount, grim-trigger-present-values, bertrand-cartel-max-firms]
 widgets: [grim-trigger-streams]
 mistakeCodes:

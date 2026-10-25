@@ -11,6 +11,10 @@ economicUses:
   - Chain and base indices in statistical yearbooks
   - Monthly and annual inflation figures
   - Average growth of output, exports or wages over several years
+searchTerms:
+  - "Time series growth rates"
+  - "Average growth rate"
+  - "Moving average"
 generators: [base-index-from-chain-rates, annualised-growth-from-levels, average-growth-from-chain-indices]
 widgets: [chain-base-growth]
 mistakeCodes:

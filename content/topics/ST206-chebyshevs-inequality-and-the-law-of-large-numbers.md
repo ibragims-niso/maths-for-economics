@@ -12,6 +12,9 @@ economicUses:
   - Choosing the sample size of an opinion poll or household survey
   - Setting a bank's cash reserves when only the mean and spread are known
   - Why averages of many independent outcomes are stable
+searchTerms:
+  - "LLN"
+  - "Law of large numbers"
 generators: [chebyshev-interval-bound, sample-mean-chebyshev-bound, chebyshev-sample-size]
 widgets: [chebyshev-pooling]
 mistakeCodes:

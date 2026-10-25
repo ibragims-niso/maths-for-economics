@@ -11,6 +11,8 @@ economicUses:
   - "Long-run behaviour: balanced growth paths and how fast an economy converges to them"
   - "Markov chains many periods ahead: labour-market flows and the stationary distribution"
   - Computing high matrix powers quickly in forecasting models
+searchTerms:
+  - "Diagonalization"
 generators: [diagonalisation-power-entry, eigen-decoupled-system-state, migration-share-after-years]
 widgets: [city-countryside-migration]
 mistakeCodes:

@@ -11,6 +11,9 @@ economicUses:
   - "Inventory and business cycles: does a disturbance die out smoothly, cycle, or explode?"
   - "Stability checks for continuous-time models from the signs of two coefficients"
   - "Inflation and unemployment dynamics when expectations adapt to experience"
+searchTerms:
+  - "Second-order ODE"
+  - "Characteristic equation"
 generators: [second-order-steady-or-root, second-order-ode-value-at-time, damped-cycle-period]
 widgets: [second-order-damping]
 mistakeCodes:

@@ -11,6 +11,10 @@ economicUses:
   - Existence of prices that clear all markets at once
   - Convergence of value function iteration and best-response dynamics
   - Long-run levels of capital and prices under adjustment rules
+searchTerms:
+  - "Brouwer fixed-point theorem"
+  - "Kakutani fixed-point theorem"
+  - "Existence of equilibrium"
 generators: [linear-contraction-fixed-point, banach-iterations-needed, cournot-best-response-fixed-point]
 widgets: [fixed-point-staircase]
 mistakeCodes:

@@ -11,6 +11,10 @@ economicUses:
   - "Comparing multipliers in closed and open economies: why imports weaken a stimulus"
   - "Automatic stabilisers: how an income tax dampens booms and slumps"
   - How central bank money turns into bank deposits and the money supply
+searchTerms:
+  - "Keynesian cross"
+  - "Fiscal multiplier"
+  - "Money multiplier"
 generators: [keynesian-equilibrium-income, fiscal-multiplier-tax-imports, money-multiplier-currency]
 widgets: [keynesian-cross]
 mistakeCodes:

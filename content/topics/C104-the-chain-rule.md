@@ -11,6 +11,9 @@ economicUses:
   - "The value of one more worker: marginal revenue product = MR × MPL"
   - How the tax bill changes with an extra hour of work
   - Effects that pass through a chain of variables, from a policy to an outcome
+searchTerms:
+  - "Chain rule"
+  - "Derivative of a composite function"
 generators: [chain-rule-power-at-point, cost-rate-over-time, marginal-revenue-product-labour]
 widgets: [chain-rule-cost-time]
 mistakeCodes:

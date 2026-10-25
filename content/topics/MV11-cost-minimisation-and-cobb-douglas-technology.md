@@ -12,6 +12,9 @@ economicUses:
   - Economies and diseconomies of scale and the shape of average cost
   - Estimating cost functions for regulated industries such as electricity and water
   - Labour's share of costs and of national income
+searchTerms:
+  - "Cost minimization"
+  - "Conditional factor demand"
 generators: [cost-function-output-scaling, cobb-douglas-conditional-labour, cobb-douglas-minimum-cost]
 widgets: [cobb-douglas-cost-min]
 mistakeCodes:

@@ -12,6 +12,9 @@ economicUses:
   - Leases and streams of rents
   - "Share prices with growing dividends (the Gordon growth model)"
   - Perpetual bonds such as consols
+searchTerms:
+  - "Annuity"
+  - "Perpetuity"
 generators: [annuity-present-value, growing-perpetuity-value, saving-plan-payment]
 widgets: [annuity-explorer]
 mistakeCodes:

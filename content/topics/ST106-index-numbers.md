@@ -12,6 +12,11 @@ economicUses:
   - Comparing the cost of living between years
   - Linking pensions, benefits and contracts to prices
   - Splitting a change in sales or GDP into a price part and a volume part
+searchTerms:
+  - "Index numbers"
+  - "CPI"
+  - "Laspeyres index"
+  - "Paasche index"
 generators: [real-wage-deflated, laspeyres-price-index, real-wage-change]
 widgets: [index-number-basket]
 mistakeCodes:

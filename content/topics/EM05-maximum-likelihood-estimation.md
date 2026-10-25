@@ -12,6 +12,8 @@ economicUses:
   - How long spells of unemployment last
   - Logit and probit models of whether a household buys a car
   - Likelihood-ratio tests of economic restrictions
+searchTerms:
+  - "MLE"
 generators: [mle-poisson-or-bernoulli, mle-exponential-or-normal-variance, mle-likelihood-ratio-proportion]
 widgets: [mle-bernoulli-log-likelihood]
 mistakeCodes:

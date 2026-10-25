@@ -11,6 +11,9 @@ economicUses:
   - Loans and credit cards
   - Comparing investments over different periods
   - Inflation and growth, which compound in the same way
+searchTerms:
+  - "Interest"
+  - "Compound interest"
 generators: [simple-interest-amount, compound-interest-amount]
 widgets: [simple-vs-compound]
 mistakeCodes:

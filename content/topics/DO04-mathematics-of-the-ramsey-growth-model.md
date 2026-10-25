@@ -11,6 +11,10 @@ economicUses:
   - "Why more patient economies build up more capital per worker"
   - "Convergence: how fast a capital-poor economy grows towards its steady state"
   - "The starting point of the models central banks and finance ministries use"
+searchTerms:
+  - "Ramsey–Cass–Koopmans model"
+  - "Optimal growth model"
+  - "Keynes–Ramsey rule"
 generators: [ramsey-modified-golden-rule-capital, ramsey-steady-state-consumption, ramsey-consumption-growth-at-capital]
 widgets: [ramsey-phase-diagram]
 mistakeCodes:

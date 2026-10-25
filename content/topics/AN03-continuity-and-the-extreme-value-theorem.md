@@ -11,6 +11,11 @@ economicUses:
   - Existence of a utility-maximising bundle on a budget set
   - Why a firm with a capacity limit always has a best output
   - Bisection searches for equilibrium prices and rates of return
+searchTerms:
+  - "Weierstrass theorem"
+  - "Bolzano–Cauchy theorem"
+  - "Intermediate value theorem"
+  - "Extreme value theorem"
 generators: [epsilon-delta-linear, capacity-profit-maximum, bisection-equilibrium-midpoint]
 widgets: [epsilon-delta-square]
 mistakeCodes:

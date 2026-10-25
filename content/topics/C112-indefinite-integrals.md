@@ -11,6 +11,11 @@ economicUses:
   - Total revenue and the demand curve from marginal revenue
   - A consumption function from the marginal propensity to consume
   - The capital stock from net investment over time
+searchTerms:
+  - "Primitive function"
+  - "Antiderivative"
+  - "Indefinite integral and its main properties"
+  - "Table of basic integrals"
 generators: [total-cost-from-marginal-cost, price-from-marginal-revenue, capital-stock-from-investment]
 widgets: [cost-antiderivative-family]
 mistakeCodes:

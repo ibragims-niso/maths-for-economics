@@ -11,6 +11,9 @@ economicUses:
   - How household spending moves with income
   - Whether two markets or two economies tend to boom and slump together
   - Correlated loan defaults and insurance claims in risk management
+searchTerms:
+  - "Covariance"
+  - "Correlation"
 generators: [joint-table-conditional-probability, joint-table-covariance, two-asset-portfolio-risk]
 widgets: [two-asset-portfolio]
 mistakeCodes:

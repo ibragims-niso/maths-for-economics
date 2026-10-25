@@ -11,6 +11,8 @@ economicUses:
   - "Marginal rate of technical substitution: how many machines one extra worker can replace"
   - Opportunity cost along a production possibility frontier
   - The slope of an inverse demand curve from the demand curve
+searchTerms:
+  - "Implicit function differentiation"
 generators: [indifference-curve-slope, isoquant-mrts, frontier-slope-implicit]
 widgets: [indifference-curve-mrs]
 mistakeCodes:

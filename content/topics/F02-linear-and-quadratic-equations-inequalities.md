@@ -11,6 +11,10 @@ economicUses:
   - "Budget constraints: which bundles a consumer can afford"
   - Price limits that keep sales at or above a target
   - Checking whether a project can ever cover its fixed costs
+searchTerms:
+  - "Linear equation"
+  - "Quadratic equation"
+  - "Inequalities"
 generators: [budget-max-whole-units, quadratic-break-even, break-even-max-fixed-cost]
 widgets: [fixed-cost-break-even]
 mistakeCodes:

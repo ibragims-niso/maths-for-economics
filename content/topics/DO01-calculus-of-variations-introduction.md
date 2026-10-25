@@ -11,6 +11,9 @@ economicUses:
   - "Consumption and saving over a lifetime: the continuous-time Euler equation"
   - Running down a stock of savings or a natural resource over a fixed horizon
   - "Choosing a whole time path, not just one number, as in growth and investment models"
+searchTerms:
+  - "Euler–Lagrange equation"
+  - "Calculus of variations"
 generators: [variations-straight-line-path, variations-adjustment-path-value, variations-adjustment-saving]
 widgets: [adjustment-cost-paths]
 mistakeCodes:

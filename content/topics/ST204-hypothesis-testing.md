@@ -12,6 +12,9 @@ economicUses:
   - Deciding whether a rise in the measured unemployment rate is real or sampling noise
   - Quality control of packet weights and faulty parts
   - Reading the t statistics and p-values in every regression table
+searchTerms:
+  - "P-value"
+  - "Significance test"
 generators: [hypothesis-test-statistic, z-test-p-value, z-test-power]
 widgets: [hypothesis-test-explorer]
 mistakeCodes:

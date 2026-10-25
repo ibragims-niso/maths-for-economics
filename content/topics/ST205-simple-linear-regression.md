@@ -12,6 +12,9 @@ economicUses:
   - The wage gain linked to an extra year of education
   - "Okun's law: how unemployment moves with GDP growth"
   - Reading the coefficients, t statistics and R² of a regression table
+searchTerms:
+  - "Regression line"
+  - "Least squares"
 generators: [regression-line-from-sums, ols-slope-from-data, regression-slope-t-statistic]
 widgets: [least-squares-fit]
 mistakeCodes:

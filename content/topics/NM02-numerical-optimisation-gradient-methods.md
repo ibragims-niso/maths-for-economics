@@ -11,6 +11,10 @@ economicUses:
   - Finding a firm's best mix of inputs step by step
   - Fitting discrete choice models such as logit to survey and market data
   - Solving and calibrating large economic models on a computer
+searchTerms:
+  - "Gradient descent"
+  - "Steepest descent"
+  - "Numerical optimization"
 generators: [gradient-ascent-step-two-inputs, newton-step-profit-cubic-cost, gradient-descent-largest-stable-step]
 widgets: [gradient-descent-path]
 mistakeCodes:

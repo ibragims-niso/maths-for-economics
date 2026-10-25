@@ -12,6 +12,10 @@ economicUses:
   - Cost–benefit analysis of public projects
   - Comparing offers paid at different dates
   - Pricing savings certificates and Treasury bills
+searchTerms:
+  - "PV"
+  - "Present value"
+  - "Discount factor"
 generators: [present-value-single, present-value-uneven-flows, implied-annual-rate]
 widgets: [discounting-explorer]
 mistakeCodes:

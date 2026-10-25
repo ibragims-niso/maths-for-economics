@@ -11,6 +11,16 @@ economicUses:
   - "Comparative statics: how equilibrium prices move when demand or supply shifts"
   - Solving small national income models for income and consumption
   - Spillovers between related markets for substitutes and complements
+searchTerms:
+  - "Determinant"
+  - "Properties of the determinant and calculation rules"
+  - "Determinants of order 2 and 3"
+  - "Laplace's theorem"
+  - "Determinants of higher order"
+  - "Minors and algebraic complements"
+  - "Cofactors"
+  - "Square system of linear equations"
+  - "Cramer's method"
 generators: [cramer-income-model, determinant-3x3-cofactor, cramer-two-market-price]
 widgets: [determinant-area]
 mistakeCodes:

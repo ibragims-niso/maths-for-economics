@@ -11,6 +11,11 @@ economicUses:
   - Cost of output through inputs, from workers to output to cost
   - Currency conversions and taxes applied one after another
   - Working back from a budget or a target to the input needed
+searchTerms:
+  - "Inverse function"
+  - "Composite function"
+  - "Function of a function"
+  - "Complex function"
 generators: [inverse-demand-price, composite-cost-of-labour, labour-for-cost-budget]
 widgets: [inverse-demand-mirror]
 mistakeCodes:

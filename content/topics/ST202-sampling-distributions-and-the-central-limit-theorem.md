@@ -12,6 +12,9 @@ economicUses:
   - Quality control of average packet weights and daily sales
   - Opinion polls and customer satisfaction surveys
   - Deciding how large a survey must be
+searchTerms:
+  - "CLT"
+  - "Central limit theorem"
 generators: [sample-mean-tail-probability, sample-proportion-probability, sample-size-for-precision]
 widgets: [sample-mean-clt]
 mistakeCodes:

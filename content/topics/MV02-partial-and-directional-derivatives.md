@@ -11,6 +11,11 @@ economicUses:
   - Marginal utilities of two goods and the marginal rate of substitution
   - "Cross-price effects: are two goods substitutes or complements?"
   - The marginal cost of each product in a firm that makes several products
+searchTerms:
+  - "Partial derivatives"
+  - "Special derivatives"
+  - "Partial and total increments"
+  - "Higher-order partial derivatives"
 generators: [cobb-douglas-marginal-product, joint-cost-partial-marginal-cost, directional-derivative-utility]
 widgets: [gradient-level-curves]
 mistakeCodes:

@@ -11,6 +11,9 @@ economicUses:
   - Splitting the effect of a price rise into substitution and income effects
   - Choosing a demand model (Cobb–Douglas, complements, substitutes) for policy analysis
   - Engel curves and sorting goods into normal and inferior
+searchTerms:
+  - "Utility maximization"
+  - "Marshallian demand"
 generators: [perfect-complements-demand, slutsky-substitution-income-effect, complements-price-elasticity]
 widgets: [demand-preference-types]
 mistakeCodes:

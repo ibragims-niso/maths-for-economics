@@ -11,6 +11,9 @@ economicUses:
   - Short-term forecasts of GDP growth, inflation and unemployment
   - "Exchange rates and oil prices: why the best forecast is often today's value"
   - Deciding whether to use a series in levels or in differences before running a regression
+searchTerms:
+  - "ARMA"
+  - "Stationarity"
 generators: [ar1-mean-or-variance, ma1-lag1-autocorrelation, ar1-forecast-h-steps]
 widgets: [ar1-shock-path]
 mistakeCodes:

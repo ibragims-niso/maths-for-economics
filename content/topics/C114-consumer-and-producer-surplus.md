@@ -11,6 +11,10 @@ economicUses:
   - "Welfare cost of taxes: tax revenue and deadweight loss"
   - Judging price ceilings and floors, such as rent controls or minimum prices
   - Cost-benefit analysis of policies that change prices
+searchTerms:
+  - "Economic applications of the definite integral"
+  - "Consumer surplus"
+  - "Producer surplus"
 generators: [consumer-surplus-linear-equilibrium, deadweight-loss-per-unit-tax, consumer-surplus-quadratic-demand]
 widgets: [surplus-tax-welfare]
 mistakeCodes:

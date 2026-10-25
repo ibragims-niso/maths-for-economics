@@ -11,6 +11,10 @@ economicUses:
   - Salaries that rise by a fixed amount or by a fixed percentage each year
   - Totals of repeated payments such as rent, pensions or benefits
   - Long-run totals of effects that fade by the same fraction each period
+searchTerms:
+  - "Numerical sequences, how they are given and their types"
+  - "Arithmetic progression"
+  - "Geometric progression"
 generators: [arithmetic-salary-total, spending-rounds-total, salary-offers-difference]
 widgets: [spending-rounds]
 mistakeCodes:

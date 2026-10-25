@@ -11,6 +11,9 @@ economicUses:
   - Splitting each payment into interest and repayment of the loan
   - Leasing equipment or a car instead of buying it on credit
   - How changes in interest rates hit borrowers' budgets
+searchTerms:
+  - "Amortization schedule"
+  - "Loan repayment"
 generators: [loan-level-payment, loan-schedule-row, lease-payment-residual]
 widgets: [loan-schedule-bars]
 mistakeCodes:

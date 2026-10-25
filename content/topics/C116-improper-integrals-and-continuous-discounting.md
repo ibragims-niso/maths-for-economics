@@ -11,6 +11,12 @@ economicUses:
   - Valuing a firm whose cash flows grow over time
   - The long-run cost of a permanent subsidy or pension promise
   - Present value of income received continuously, such as rents, royalties and wages
+searchTerms:
+  - "Improper integrals and their calculation"
+  - "Improper integral of the first kind"
+  - "Improper integral of the second kind"
+  - "Properties of improper integrals"
+  - "Convergence of improper integrals"
 generators: [continuous-stream-present-value, growing-continuous-stream-value, improper-power-integral]
 widgets: [continuous-discount-area]
 mistakeCodes:

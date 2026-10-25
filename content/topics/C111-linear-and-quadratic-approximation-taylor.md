@@ -11,6 +11,14 @@ economicUses:
   - "Quick compound-growth estimates: (1 + r)ⁿ ≈ 1 + nr"
   - Effect of a small change in price, output or labour on revenue, cost or output
   - Bond price changes with duration and convexity
+searchTerms:
+  - "Differential of a function of one variable"
+  - "Meaning of the differential"
+  - "Invariance of the differential"
+  - "Differential in approximate calculations"
+  - "Higher-order derivatives and differentials"
+  - "Taylor's formula"
+  - "Maclaurin formula"
 generators: [linear-approximation-estimate, compound-growth-quadratic-approximation, quadratic-approximation-estimate]
 widgets: [taylor-log-approximation]
 mistakeCodes:

@@ -11,6 +11,8 @@ economicUses:
   - Equilibrium prices when demand and supply curves are not straight lines
   - Break-even output when costs are not linear
   - Solving large economic models on a computer
+searchTerms:
+  - "Newton–Raphson method"
 generators: [bisection-steps-for-tolerance, newton-equilibrium-price-iterates, newton-irr-step]
 widgets: [newton-break-even]
 mistakeCodes:

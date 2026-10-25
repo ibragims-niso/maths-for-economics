@@ -12,6 +12,10 @@ economicUses:
   - Testing the efficient-markets idea that prices follow random walks
   - Cash management and the chance that a reserve runs low
   - Geometric Brownian motion, the standard model of prices behind option pricing
+searchTerms:
+  - "Random walk"
+  - "Brownian motion"
+  - "Wiener process"
 generators: [square-root-time-risk, random-walk-level-probability, brownian-drift-level-probability]
 widgets: [random-walk-fan]
 mistakeCodes:

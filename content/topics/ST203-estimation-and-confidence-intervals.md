@@ -12,6 +12,8 @@ economicUses:
   - Inflation expectations of households and forecasters
   - The margin of error of an opinion poll
   - Choosing the size of a survey for a target precision
+searchTerms:
+  - "Confidence interval"
 generators: [ci-mean-known-sigma-limit, ci-proportion-limit, ci-mean-t-small-sample]
 widgets: [confidence-interval-coverage]
 mistakeCodes:

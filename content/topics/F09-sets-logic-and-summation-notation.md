@@ -12,6 +12,11 @@ economicUses:
   - Telling necessary from sufficient conditions in economic arguments
   - Adding up spending over many goods with Σ
   - Reading statistical formulas written with Σ
+searchTerms:
+  - "Number sets and logic symbols"
+  - "Quantifiers"
+  - "Set theory"
+  - "Sigma notation"
 generators: [survey-inclusion-exclusion, sigma-linear-sum, three-set-inclusion-exclusion]
 widgets: [survey-venn]
 mistakeCodes:

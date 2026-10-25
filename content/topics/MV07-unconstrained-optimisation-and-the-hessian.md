@@ -11,6 +11,10 @@ economicUses:
   - Price discrimination between separate markets
   - A firm choosing capital and labour together
   - Checking that a model's optimum is a maximum, not a saddle point
+searchTerms:
+  - "Extrema of multivariable functions"
+  - "Hessian matrix"
+  - "Unconstrained optimization"
 generators: [hessian-determinant-two-goods, two-product-optimal-output, price-discrimination-two-markets]
 widgets: [two-product-profit-map]
 mistakeCodes:

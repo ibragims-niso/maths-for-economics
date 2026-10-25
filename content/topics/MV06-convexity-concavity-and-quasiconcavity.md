@@ -11,6 +11,10 @@ economicUses:
   - Convex production sets and decreasing returns to scale
   - Knowing that a first-order condition gives the one global optimum
   - Diminishing marginal rate of substitution along indifference curves and isoquants
+searchTerms:
+  - "Concave function"
+  - "Convex function"
+  - "Quasiconcave function"
 generators: [quadratic-concavity-determinant, mixed-bundle-utility, cobb-douglas-hessian-determinant]
 widgets: [cobb-douglas-curvature]
 mistakeCodes:

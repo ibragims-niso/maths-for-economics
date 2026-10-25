@@ -11,6 +11,9 @@ economicUses:
   - "Tax incidence: who bears a tax, buyers or sellers"
   - Forecasting demand after price or income changes
   - Central banks and governments estimating responses to energy or food price shocks
+searchTerms:
+  - "Price elasticity of demand"
+  - "PED"
 generators: [elasticity-linear-point, elasticity-unit-elastic-price]
 widgets: [elasticity-slider]
 mistakeCodes:

@@ -11,6 +11,9 @@ economicUses:
   - Total sales over two dimensions, such as time and a range of prices
   - Joint probabilities of two uncertain returns
   - Average density, price or yield over a region
+searchTerms:
+  - "Double integral"
+  - "Iterated integral"
 generators: [rectangle-linear-density-total, joint-density-rectangle-probability, triangle-region-total]
 widgets: [double-integral-grid]
 mistakeCodes:

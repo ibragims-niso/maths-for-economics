@@ -11,6 +11,9 @@ economicUses:
   - "Capacity planning: how many pumps, desks, beds or checkouts to provide"
   - Weighing the cost of extra servers against the cost of customers' waiting time
   - Waiting times in hospital emergency departments and other public services
+searchTerms:
+  - "Queueing theory"
+  - "M/M/1 queue"
 generators: [littles-law-queue, mm1-queue-measures, mm1-at-least-n-probability, mm2-staffing-cost]
 widgets: [mm1-waiting-curve]
 mistakeCodes:

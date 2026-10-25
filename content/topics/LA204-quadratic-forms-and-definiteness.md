@@ -11,6 +11,9 @@ economicUses:
   - "Portfolio risk: the variance wᵀΣw and which covariance matrices are possible"
   - The shape of cost and profit functions near an optimum
   - Constrained optimisation with the bordered Hessian
+searchTerms:
+  - "Positive definite matrix"
+  - "Negative definite matrix"
 generators: [quadratic-form-second-minor, hessian-third-leading-minor, portfolio-variance-three-assets]
 widgets: [quadratic-form-contours]
 mistakeCodes:

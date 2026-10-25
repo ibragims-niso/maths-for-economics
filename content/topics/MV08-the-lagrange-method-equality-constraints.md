@@ -11,6 +11,11 @@ economicUses:
   - A firm minimising the cost of an output target
   - Splitting a fixed amount of time or money between two uses
   - Deriving demand functions from preferences
+searchTerms:
+  - "Conditional extrema"
+  - "Constrained extrema"
+  - "Lagrange multipliers"
+  - "Constrained optimization"
 generators: [lagrange-budget-good-quantity, lagrange-cost-min-input, lagrange-multiplier-utility]
 widgets: [lagrange-budget-tangency]
 mistakeCodes:

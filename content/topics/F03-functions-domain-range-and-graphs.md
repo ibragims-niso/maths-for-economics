@@ -11,6 +11,15 @@ economicUses:
   - "Economically meaningful domains: prices and quantities that cannot be negative"
   - Reading intercepts and the direction of change off economic graphs
   - "Piecewise rules: income tax bands and block tariffs for electricity or water"
+searchTerms:
+  - "Concept of a univariate function, its definition and types"
+  - "Function of one variable"
+  - "Ways to give a function: formula, table, graph, words, parametric"
+  - "Properties of functions: odd, even, bounded, monotonic, periodic"
+  - "Basic elementary functions and their graphs"
+  - "Explicit and implicit functions"
+  - "Functional dependencies used in economics"
+  - "Domain and range"
 generators: [cost-function-change, demand-domain-max-price, income-tax-bands]
 widgets: [tax-band-explorer]
 mistakeCodes:

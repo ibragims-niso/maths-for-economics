@@ -12,6 +12,10 @@ economicUses:
   - Insurance pricing and fraud screening
   - Planning for customers or deliveries that arrive at random times
   - Reasoning about risk and uncertainty in any economic decision
+searchTerms:
+  - "Probability"
+  - "Bayes' theorem"
+  - "Combinatorics"
 generators: [sample-defectives-probability, bayes-default-given-signal, meeting-window-probability]
 widgets: [bayes-natural-frequencies]
 mistakeCodes:

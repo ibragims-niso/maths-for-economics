@@ -11,6 +11,11 @@ economicUses:
   - Checking whether a claim about all markets survives a counterexample
   - Proving by induction that a property holds in every period of a dynamic model
   - Seeing which assumptions an existence result really needs
+searchTerms:
+  - "Mathematical proof"
+  - "Proof by induction"
+  - "Proof by contradiction"
+  - "Logic and quantifiers"
 generators: [truth-table-true-rows, induction-sum-closed-form, compound-overtakes-linear-year]
 widgets: [implication-truth-table]
 mistakeCodes:

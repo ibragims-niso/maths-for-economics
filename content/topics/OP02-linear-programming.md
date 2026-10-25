@@ -11,6 +11,9 @@ economicUses:
   - "Diet and blending: the cheapest feed, food or fuel mix that meets every requirement"
   - Finding the bottleneck resources of a firm (the binding constraints)
   - Transport and logistics plans at the lowest cost
+searchTerms:
+  - "LP"
+  - "Simplex method"
 generators: [lp-max-profit-two-products, lp-unused-hours-at-optimum, lp-min-cost-feed-blend]
 widgets: [iso-profit-corners]
 mistakeCodes:

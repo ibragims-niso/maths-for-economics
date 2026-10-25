@@ -11,6 +11,9 @@ economicUses:
   - "Consumption and saving over time: the Keynes–Ramsey (consumption Euler) rule"
   - Optimal growth of a whole economy
   - A firm's investment plan when changing its capital stock is costly
+searchTerms:
+  - "Pontryagin maximum principle"
+  - "Hamiltonian"
 generators: [hotelling-rent-at-time, keynes-ramsey-consumption-growth, cake-eating-consumption-at-time]
 widgets: [resource-extraction-path]
 mistakeCodes:

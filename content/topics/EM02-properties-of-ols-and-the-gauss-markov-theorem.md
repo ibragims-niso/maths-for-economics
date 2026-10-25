@@ -12,6 +12,10 @@ economicUses:
   - Demand estimation when price moves with unobserved quality
   - Reading the standard errors under the coefficients of a regression table
   - Planning a survey or an experiment large and varied enough to measure an effect
+searchTerms:
+  - "Gauss–Markov theorem"
+  - "BLUE"
+  - "Unbiased estimator"
 generators: [ols-error-variance-estimate, ols-slope-standard-error, omitted-variable-bias-slope]
 widgets: [ols-slope-sampling]
 mistakeCodes:

@@ -11,6 +11,11 @@ economicUses:
   - Marginal revenue when the price falls as a firm sells more
   - Whether average cost is rising or falling (economies of scale)
   - Marginal product of labour from a production function
+searchTerms:
+  - "Derivative rules"
+  - "Power rule"
+  - "Product rule"
+  - "Quotient rule"
 generators: [marginal-cost-cubic, marginal-revenue-product-rule, average-cost-slope-quotient-rule]
 widgets: [marginal-cost-tangent]
 mistakeCodes:

@@ -11,6 +11,11 @@ economicUses:
   - Length of a road, pipeline or cable that follows a curved route
   - Total cost of a route when the cost per km changes from place to place
   - "Welfare change when several prices change at once: a line integral that can depend on the path"
+searchTerms:
+  - "Applications of the definite integral"
+  - "Length of a curve (arc length)"
+  - "Area of a curvilinear sector"
+  - "Volume of a solid of revolution"
 generators: [volume-of-revolution-disc, line-integral-work-segment, arc-length-three-halves-power]
 widgets: [tank-volume-discs]
 mistakeCodes:

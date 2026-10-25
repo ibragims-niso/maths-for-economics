@@ -11,6 +11,13 @@ economicUses:
   - Changes to a production plan that leave the use of every resource unchanged
   - Models that fix only proportions, such as relative prices or balanced-growth ratios
   - Eigenvectors as solutions of the homogeneous system (A − λI)x = 0
+searchTerms:
+  - "Homogeneous system of linear equations"
+  - "Fundamental system of solutions"
+  - "Eigenvalues and international trade"
+  - "International trade model"
+  - "Linear exchange model"
+  - "Structure matrix"
 generators: [fundamental-solutions-count, trade-balance-two-countries, trade-model-three-countries]
 widgets: [trade-balance-line]
 mistakeCodes:

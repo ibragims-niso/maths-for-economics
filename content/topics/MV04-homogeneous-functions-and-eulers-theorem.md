@@ -12,6 +12,10 @@ economicUses:
   - "Product exhaustion: when paying every input its marginal product uses up exactly the whole output"
   - "No money illusion: demand is unchanged when all prices and income double"
   - Growth models in which output per worker depends only on capital per worker
+searchTerms:
+  - "Euler's theorem"
+  - "Returns to scale"
+  - "Homogeneous function"
 generators: [scaled-inputs-output, constant-returns-wage-bill, euler-marginal-product-labour]
 widgets: [euler-returns-to-scale]
 mistakeCodes:

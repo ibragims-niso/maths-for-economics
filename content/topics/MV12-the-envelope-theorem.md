@@ -11,6 +11,9 @@ economicUses:
   - Reading a firm's demand for labour and capital off its cost function (Shephard's lemma)
   - Deriving a consumer's demand from the indirect utility function (Roy's identity)
   - Measuring what a tax or a price rise costs a firm or a household
+searchTerms:
+  - "Roy's identity"
+  - "Shephard's lemma"
 generators: [hotelling-profit-price-slope, shephard-labour-demand, roys-identity-demand]
 widgets: [profit-envelope-hotelling]
 mistakeCodes:

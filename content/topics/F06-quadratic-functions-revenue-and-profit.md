@@ -11,6 +11,10 @@ economicUses:
   - Largest profit and the output that gives it, without calculus
   - Break-even outputs where a quadratic profit crosses zero
   - Comparing a sales target with a profit target
+searchTerms:
+  - "Quadratic function"
+  - "Parabola"
+  - "Revenue and profit"
 generators: [max-revenue-linear-demand, max-profit-quadratic, profit-maximising-price]
 widgets: [revenue-profit]
 mistakeCodes:

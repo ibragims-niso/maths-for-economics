@@ -11,6 +11,11 @@ economicUses:
   - Long-run behaviour of economic models that are defined step by step
   - "The supremum of attainable utility or profit, and whether a best choice exists"
   - "Why existence results in economics need the real numbers: with fractions only, a market can have no equilibrium price"
+searchTerms:
+  - "Limit of a sequence"
+  - "Limit of a sequence: algebraic and geometric meaning"
+  - "Properties of convergent sequences"
+  - "Cauchy criterion"
 generators: [sequence-supremum, epsilon-n-threshold, recursive-root-sequence-limit]
 widgets: [epsilon-n-band]
 mistakeCodes:

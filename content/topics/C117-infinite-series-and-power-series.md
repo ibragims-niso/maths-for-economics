@@ -12,6 +12,22 @@ economicUses:
   - "Continuously compounded returns from the series of ln(1 + r)"
   - Why a stream that grows at least as fast as the discount rate has no finite value
   - Infinite-horizon models that discount the future with a factor β < 1
+searchTerms:
+  - "Number series and their convergence"
+  - "Necessary condition for convergence of a series"
+  - "Convergence tests for positive series"
+  - "Comparison test"
+  - "D'Alembert's ratio test"
+  - "Cauchy's root test"
+  - "Alternating series, Leibniz test"
+  - "Absolutely and conditionally convergent series"
+  - "Functional series and uniform convergence"
+  - "Weierstrass test"
+  - "Abel's theorem"
+  - "Radius and interval of convergence"
+  - "Expanding functions in power series"
+  - "Taylor series"
+  - "Maclaurin series"
 generators: [infinite-geometric-series-sum, maclaurin-partial-sum-estimate, power-series-radius]
 widgets: [geometric-partial-sums]
 mistakeCodes:

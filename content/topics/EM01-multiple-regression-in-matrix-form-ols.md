@@ -12,6 +12,9 @@ economicUses:
   - "Hedonic house prices: what one more square metre is worth, location held fixed"
   - Production functions estimated from labour and capital data
   - Reading the coefficient table of an applied economics paper
+searchTerms:
+  - "OLS"
+  - "Ordinary least squares"
 generators: [xtx-entry-from-data, adjusted-r-squared, ols-coefficient-two-regressors]
 widgets: [partial-effect-wages]
 mistakeCodes:

@@ -11,6 +11,9 @@ economicUses:
   - "Public debt dynamics: will the debt-to-GDP ratio settle or keep rising?"
   - How national income moves, quarter by quarter, towards its new equilibrium after a spending change
   - Stocks that are topped up and run down every period, such as capital, customers or a loan balance
+searchTerms:
+  - "Recurrence relation"
+  - "Difference equation"
 generators: [difference-equation-value-after-t, debt-ratio-steady-state, cobweb-price-after-periods]
 widgets: [cobweb-diagram]
 mistakeCodes:

@@ -11,6 +11,10 @@ economicUses:
   - Pricing company debt in fixed-income markets
   - Reading bond quotes and yields in the financial news
   - Why bond prices fall when central banks raise interest rates
+searchTerms:
+  - "YTM"
+  - "Yield to maturity"
+  - "Bond price"
 generators: [zero-coupon-bond-yield, bond-price-annual-coupon, bond-price-fall-rate-rise]
 widgets: [bond-price-yield]
 mistakeCodes:

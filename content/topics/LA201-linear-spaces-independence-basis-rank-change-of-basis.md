@@ -11,6 +11,19 @@ economicUses:
   - "Identification: perfectly collinear regressors make OLS estimates impossible"
   - Redundant assets and complete markets in finance
   - "Counting the independent equations of a model before solving it (rank and Ax = b)"
+searchTerms:
+  - "Matrix rank and its calculation"
+  - "Elementary transformations of a matrix"
+  - "Rank of a matrix in echelon form"
+  - "Kronecker–Capelli theorem"
+  - "Rouché–Capelli theorem"
+  - "Linear spaces and linear transformations"
+  - "Axioms of a linear space"
+  - "Basis and dimension of a linear space"
+  - "Transition from one basis to another"
+  - "Euclidean space and metric"
+  - "Vector space"
+  - "Linear independence"
 generators: [replicate-payoff-coordinates, matrix-rank-elimination, dependence-parameter-k]
 widgets: [span-and-basis]
 mistakeCodes:

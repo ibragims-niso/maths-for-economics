@@ -12,6 +12,9 @@ economicUses:
   - Measurement and forecast errors in economic data
   - "Stock planning: how much to hold so that demand is met on 95 % of days"
   - Exam scores and grade boundaries
+searchTerms:
+  - "Normal distribution"
+  - "Z-score"
 generators: [normal-range-probability, normal-percentile-value, sum-of-independent-normals]
 widgets: [normal-area-explorer]
 mistakeCodes:

@@ -11,6 +11,10 @@ economicUses:
   - Deciding whether renting extra capacity is worth its price
   - Spotting resources in surplus, whose shadow price is zero
   - Pricing inputs in planning models and in electricity and transport networks
+searchTerms:
+  - "Dual problem"
+  - "Shadow prices of resources"
+  - "Duality theorem"
 generators: [lp-dual-shadow-price, lp-dual-profit-change, lp-dual-price-three-machines]
 widgets: [lp-shadow-price-hours]
 mistakeCodes:

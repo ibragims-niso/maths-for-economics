@@ -12,6 +12,8 @@ economicUses:
   - Sharing an investment budget across regions or projects
   - "Timing decisions: when to harvest timber or replace a machine"
   - Least-cost routes and multi-stage investment plans
+searchTerms:
+  - "Bellman equation"
 generators: [dp-staged-route-least-cost, dp-budget-allocation-best-return, dp-cake-eating-first-consumption]
 widgets: [haulier-route-bellman]
 mistakeCodes:

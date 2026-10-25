@@ -11,6 +11,9 @@ economicUses:
   - Reading marginal cost off a firm's cost-minimisation problem
   - The most worth paying for extra water, land or machine time
   - The cost of a tighter emissions cap or other limit
+searchTerms:
+  - "Shadow price"
+  - "Meaning of the Lagrange multiplier"
 generators: [shadow-price-income-estimate, shadow-price-marginal-cost, shadow-price-water]
 widgets: [shadow-price-value-function]
 mistakeCodes:

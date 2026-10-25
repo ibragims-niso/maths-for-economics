@@ -11,6 +11,10 @@ economicUses:
   - "Cost curves: where marginal cost stops falling and starts rising"
   - Whether economic growth is speeding up or slowing down
   - "Risk attitudes: concave utility of money and the demand for insurance"
+searchTerms:
+  - "Convexity and concavity of a graph"
+  - "Inflection points"
+  - "Second derivative test"
 generators: [second-derivative-at-point, cubic-cost-inflection-output, peak-marginal-product]
 widgets: [production-concavity]
 mistakeCodes:

@@ -11,6 +11,9 @@ economicUses:
   - "Growth accounting: output growth from the growth of productivity, capital and labour"
   - How fast cost, revenue or utility changes along a time path of several variables
   - "Comparative statics: how an equilibrium or a level curve responds to a small shock"
+searchTerms:
+  - "Total differential of a multivariable function"
+  - "Total increment"
 generators: [total-differential-output-change, cobb-douglas-output-growth-rate, chain-rule-two-output-cost]
 widgets: [total-differential-isoquants]
 mistakeCodes:

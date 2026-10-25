@@ -11,6 +11,10 @@ economicUses:
   - "Cost functions: fixed cost plus a constant cost per unit"
   - Break-even analysis for a new product or business
   - Budget lines and simple forecasts
+searchTerms:
+  - "Linear function"
+  - "Slope and intercept"
+  - "Straight line"
 generators: [linear-break-even, linear-demand-two-points]
 widgets: [break-even-lines]
 mistakeCodes:

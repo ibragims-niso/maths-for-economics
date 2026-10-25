@@ -11,6 +11,9 @@ economicUses:
   - "Total effect of a new construction project or a rise in household demand on every sector"
   - "Output multipliers: which sectors pull the rest of the economy along most strongly"
   - "Inter-industry linkages of an oil-exporting economy and plans to diversify it"
+searchTerms:
+  - "Leontief model"
+  - "Input-output analysis"
 generators: [technical-coefficient-from-flows, leontief-two-sector-output, leontief-total-output-change]
 widgets: [leontief-two-sector]
 mistakeCodes:

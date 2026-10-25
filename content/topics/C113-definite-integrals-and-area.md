@@ -11,6 +11,16 @@ economicUses:
   - Total revenue received over a period from a revenue flow
   - Capital accumulation from a flow of net investment
   - Average price or average output over a year
+searchTerms:
+  - "Definite integral and its main properties"
+  - "Integral sum"
+  - "Lower and upper integral sums"
+  - "Riemann sum"
+  - "Condition for integrability"
+  - "Integral with a variable upper limit"
+  - "Newton–Leibniz formula"
+  - "Fundamental theorem of calculus"
+  - "Area of a curvilinear trapezoid"
 generators: [cost-increase-from-marginal-cost, accumulated-exponential-flow, average-price-over-period]
 widgets: [riemann-sum-marginal-cost]
 mistakeCodes:

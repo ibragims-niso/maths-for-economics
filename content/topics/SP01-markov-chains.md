@@ -12,6 +12,10 @@ economicUses:
   - Brand switching and long-run market shares
   - Booms and recessions in regime-switching models of the business cycle
   - Income mobility from one generation to the next
+searchTerms:
+  - "Markov chain"
+  - "Transition matrix"
+  - "Stationary distribution"
 generators: [markov-long-run-share-two-state, markov-share-after-steps, markov-long-run-share-three-state]
 widgets: [markov-labour-market]
 mistakeCodes:

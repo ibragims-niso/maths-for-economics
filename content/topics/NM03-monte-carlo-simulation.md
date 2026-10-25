@@ -12,6 +12,9 @@ economicUses:
   - Insurance and pension fund capital
   - Pricing complex financial contracts
   - Fan charts for public debt and other forecasts
+searchTerms:
+  - "Monte Carlo method"
+  - "Simulation"
 generators: [monte-carlo-draws-for-target-se, inverse-transform-exponential-draw, monte-carlo-probability-limit]
 widgets: [monte-carlo-running-mean]
 mistakeCodes:

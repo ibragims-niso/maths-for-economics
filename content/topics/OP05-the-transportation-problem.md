@@ -11,6 +11,9 @@ economicUses:
   - Delivering cement, fuel or food at the lowest total shipping cost
   - "Spare capacity and unmet demand: what a dummy row or column tells a manager"
   - "Valuing routes: the reduced cost says how much a route must get cheaper before it is used"
+searchTerms:
+  - "Transportation problem"
+  - "North-west corner method"
 generators: [transport-north-west-cost, transport-two-source-minimum-cost, transport-reduced-cost-empty-cell]
 widgets: [cement-shipping-plan]
 mistakeCodes:

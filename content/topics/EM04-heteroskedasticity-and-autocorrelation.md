@@ -11,6 +11,8 @@ economicUses:
   - Testing whether the spread of errors grows with income, education or firm size
   - Quarterly GDP and consumption regressions with persistent shocks
   - Reading robust and Newey–West standard errors in regression tables
+searchTerms:
+  - "Heteroscedasticity"
 generators: [breusch-pagan-lm-statistic, durbin-watson-statistic, robust-se-simple-regression]
 widgets: [ar1-error-runs]
 mistakeCodes:

@@ -12,6 +12,9 @@ economicUses:
   - Deciding whether a group of regional or seasonal dummies belongs in a model
   - Reading the standard errors, t statistics, p-values and F statistic of a regression table
   - Confidence intervals for elasticities used in tax and pricing forecasts
+searchTerms:
+  - "T-test"
+  - "F-test"
 generators: [coefficient-t-statistic, f-statistic-restricted-ssr, t-statistic-from-xtx-inverse]
 widgets: [regression-f-test]
 mistakeCodes:

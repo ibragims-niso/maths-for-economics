@@ -11,6 +11,11 @@ economicUses:
   - Cobb–Douglas production functions with fractional exponents
   - Compound growth of GDP, prices and savings over several years
   - Simplifying an economic model before solving it
+searchTerms:
+  - "Algebra"
+  - "Exponent rules"
+  - "Powers and roots"
+  - "Fractions"
 generators: [exponent-laws-simplify, cobb-douglas-output, cobb-douglas-labour-needed]
 widgets: [power-explorer]
 mistakeCodes:

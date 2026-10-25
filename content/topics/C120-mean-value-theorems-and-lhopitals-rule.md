@@ -11,6 +11,17 @@ economicUses:
   - "Bounding a change from a bound on the marginal: if marginal cost never exceeds M, cost rises by at most M per unit"
   - "Limits of economic formulas: the CES production function tends to Cobb–Douglas"
   - Comparing growth in the long run, such as exponential growth against a polynomial trend
+searchTerms:
+  - "Main theorems of differential calculus"
+  - "Fermat's theorem"
+  - "Rolle's theorem"
+  - "Lagrange's theorem"
+  - "Mean value theorem"
+  - "Cauchy's theorem"
+  - "L'Hopital's rule"
+  - "L'Hospital's rule"
+  - "Bernoulli–L'Hopital rule"
+  - "Resolving indeterminate forms"
 generators: [mean-value-point-root-output, lhopital-difference-of-powers, ces-limit-cobb-douglas]
 widgets: [mean-value-tangent]
 mistakeCodes:

@@ -11,6 +11,9 @@ economicUses:
   - Planning a product launch or organising a conference
   - "Pricing delays: overheads, penalties and when paying for overtime is worth it"
   - Deciding which tasks managers must watch closely and which can wait
+searchTerms:
+  - "CPM"
+  - "Critical path"
 generators: [cpm-project-duration, cpm-total-float, cpm-crash-new-duration]
 widgets: [conference-critical-path]
 mistakeCodes:

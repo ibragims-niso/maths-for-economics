@@ -11,6 +11,11 @@ economicUses:
   - Portfolio choice and the gain from diversifying or sharing risk
   - Compensating wage differentials for jobs with risky pay
   - Pricing risk in financial markets, including the equity premium
+searchTerms:
+  - "Expected utility"
+  - "Risk aversion"
+  - "Certainty equivalent"
+  - "Arrow–Pratt measure"
 generators: [lottery-certainty-equivalent, insurance-maximum-premium, arrow-pratt-risk-premium]
 widgets: [expected-utility-chord]
 mistakeCodes:

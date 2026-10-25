@@ -12,6 +12,10 @@ economicUses:
   - First-mover advantage in an oligopoly (Stackelberg leadership)
   - Wage bargaining and other negotiations where delay is costly
   - Whether a government's or central bank's promises are believed
+searchTerms:
+  - "Subgame perfect equilibrium"
+  - "Game tree"
+  - "Stackelberg model"
 generators: [entry-game-spe-payoff, entry-commitment-threshold, stackelberg-duopoly-outcome, alternating-offer-first-offer]
 widgets: [entry-deterrence-tree]
 mistakeCodes:

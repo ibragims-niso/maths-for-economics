@@ -11,6 +11,10 @@ economicUses:
   - Cost minimisation and efficient scale
   - Revenue maximisation and pricing
   - Choosing a tax rate that raises the most revenue
+searchTerms:
+  - "Extrema of functions"
+  - "Maximum and minimum"
+  - "Optimization in one variable"
 generators: [profit-max-linear-demand, min-average-cost]
 widgets: [profit-hill-tangent]
 mistakeCodes:

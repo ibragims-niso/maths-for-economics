@@ -11,6 +11,9 @@ economicUses:
   - How much of a per-unit tax a monopolist passes on to buyers
   - Splitting a consumer's response to a price change into substitution and income effects
   - How hours of work respond to the wage
+searchTerms:
+  - "Comparative statics"
+  - "Slutsky equation"
 generators: [comparative-statics-one-choice, monopoly-tax-price-change, slutsky-equation-cobb-douglas]
 widgets: [supply-comparative-statics]
 mistakeCodes:

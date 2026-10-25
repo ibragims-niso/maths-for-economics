@@ -11,6 +11,10 @@ economicUses:
   - Pricing by firms whose sales fall when they raise the price
   - Hiring decisions from the marginal product of labour
   - How much of an extra unit of income households spend
+searchTerms:
+  - "Marginal cost"
+  - "Marginal revenue"
+  - "Marginal analysis"
 generators: [marginal-revenue-linear-demand, cost-of-one-more-unit, marginal-profit-at-output]
 widgets: [marginal-revenue-lines]
 mistakeCodes:

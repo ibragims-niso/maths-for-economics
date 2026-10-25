@@ -12,6 +12,9 @@ economicUses:
   - Customers arriving at a bank branch or shop per hour
   - Insurance claims per month and the reserves held for them
   - Staffing a call centre for a random number of calls
+searchTerms:
+  - "Binomial distribution"
+  - "Poisson distribution"
 generators: [binomial-count-probability, poisson-arrivals-probability, poisson-approximation-defaults]
 widgets: [binomial-poisson-bars]
 mistakeCodes:
