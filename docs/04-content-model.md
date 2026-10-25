@@ -16,6 +16,8 @@ economicUses:                 # short phrases, used by REAL_WORLD mode
   - ...
 searchTerms:                  # optional: other names students search for (syllabus headings, synonyms)
   - Concept of a univariate function
+syllabusHeadings:             # optional: names university syllabi give this topic, shown small under the title (no university named)
+  - Concept of a univariate function, its definition and types
 generators: [elasticity-linear-point, ...]   # IDs implemented in packages/core
 widgets: [elasticity-slider]                 # IDs implemented in apps/web
 mistakeCodes:                                 # every code any generator of this topic can return
@@ -89,6 +91,9 @@ Every maths symbol used in a topic is explained in Help → Symbols, from `conte
 
 ## Search
 Learn and Practice search a topic by its ID, title and `searchTerms` (strongest), economic uses, then its text and the track headings it sits under. Filler words (concept, definition, types …), plurals and one typo are forgiven, the topic text counts only when names and uses find nothing, and weak matches are hidden. When a syllabus names a topic differently, add that heading to `searchTerms`.
+
+## Syllabus headings
+Universities name the same topic differently. `syllabusHeadings` in the frontmatter lists their topic names; the app shows them small and violet under the title. Inside a section, `::syllabus[Basic properties of a function]` on its own line, just before the part that teaches it, shows a syllabus sub-heading as a small label. Never name the university. Both also count for search.
 
 ## Terms
 In the app, the first mention of each glossary term (`content/glossary.yml`) in a section is coloured and can be tapped for its plain definition; Help → Terms lists them all. Single words of five letters or fewer, and a few everyday words, are not marked automatically: write `:term[set]{id="set"}` (or just `:term[isoquant]`) to mark one by hand.

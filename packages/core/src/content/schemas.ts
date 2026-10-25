@@ -99,6 +99,11 @@ export const topicFrontmatterSchema = z.strictObject({
   economicUses: z.array(z.string().min(1)).min(1),
   /** Other names students search for (syllabus headings, synonyms); they count like the title. */
   searchTerms: z.array(z.string().min(1)).optional(),
+  /**
+   * Names universities give this topic in their syllabi, shown small under the title so students
+   * see that the same topic goes by other names. No university is named.
+   */
+  syllabusHeadings: z.array(z.string().min(1)).optional(),
   generators: z.array(slug),
   widgets: z.array(slug),
   mistakeCodes: z.record(

@@ -125,6 +125,13 @@ export function TopicPage() {
                 <span className={`topic-state row-status--${state}`}> · {STATUS_LABEL[state]}</span>
               )}
             </p>
+            {topic.syllabusHeadings && topic.syllabusHeadings.length > 0 && (
+              <ul className="syllabus-titles" aria-label="Also taught as">
+                {topic.syllabusHeadings.map((h) => (
+                  <li key={h}>{h}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
         <Segmented

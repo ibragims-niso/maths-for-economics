@@ -79,6 +79,7 @@ function markTerms(nodes: RootContent[]): RootContent[] {
   const used = new Set<string>();
   const walk = (node: Nodes) => {
     if (node.type === 'link' || node.type === 'heading' || node.type === 'code') return;
+    if (node.type === 'leafDirective') return;
     if (!('children' in node)) return;
     const children: Nodes[] = [];
     for (const child of node.children as Nodes[]) {
@@ -119,6 +120,10 @@ function prepare(nodes: RootContent[]): RootContent[] {
     if (node.type === 'leafDirective' && node.name === 'widget') {
       const id = node.attributes?.id ?? '';
       node.data = { hName: 'div', hProperties: { 'data-widget': id } };
+    }
+    // `::syllabus[heading]`: how a syllabus names the part that follows, as a small label.
+    if (node.type === 'leafDirective' && node.name === 'syllabus') {
+      node.data = { hName: 'p', hProperties: { className: ['syllabus-heading'] } };
     }
     out.push(node);
   }
@@ -358,7 +363,7 @@ const bank = JSON.parse(readText(join(repoRoot, 'content/topic-bank.json'))) as 
 }[];
 const searchIndex: SearchEntry[] = bank.map((b) => {
   const topic = written.get(b.id);
-  const title = [b.title, ...(topic?.searchTerms ?? [])];
+  const title = [b.title, ...(topic?.searchTerms ?? []), ...(topic?.syllabusHeadings ?? [])];
   const near = [b.economicUse, ...(topic?.economicUses ?? [])];
   const body = [
     ...(headings.get(b.id) ?? []),

@@ -791,6 +791,30 @@ a.button-small,
   font-size: var(--text-meta);
 }
 
+/* Names universities give the topic (syllabusHeadings): small, violet, unlabelled per university. */
+.syllabus-titles {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--violet);
+  font-size: var(--text-meta);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.syllabus-titles li + li {
+  margin-top: 2px;
+}
+
+/* `::syllabus[…]` in topic text: how a syllabus names the part that follows. */
+.prose .syllabus-heading {
+  margin: 16px 0 2px;
+  color: var(--lilac);
+  font-size: var(--text-meta);
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .sheet--page > h2 {
   margin: 26px 0 8px;
 }
