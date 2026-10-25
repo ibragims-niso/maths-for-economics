@@ -13,12 +13,13 @@ import { recordRead, storage, useProgress } from './storage';
 import { TermArea } from './terms/TermArea';
 import { BLOCK_NAMES, STATUS_LABEL, topicIcon } from './topics';
 
-type Tab = 'learn' | 'examples' | 'practise' | 'real';
+type Tab = 'learn' | 'examples' | 'practise' | 'real' | 'more';
 const TABS: { value: Tab; label: string }[] = [
   { value: 'learn', label: 'Learn' },
   { value: 'examples', label: 'Examples' },
   { value: 'practise', label: 'Practise' },
   { value: 'real', label: 'Real world' },
+  { value: 'more', label: 'Reading' },
 ];
 
 const DIFFICULTY = { 1: 'Easy', 2: 'Medium', 3: 'Hard' } as const;
@@ -213,18 +214,23 @@ export function TopicPage() {
                 request={{ mode: 'REAL_WORLD', topicId: topic.id, payload: {} }}
                 allowedUrls={resourceUrls}
               />
-              {topic.resources.length > 0 && (
-                <>
-                  <h2>Read more</h2>
-                  <ul className="resources">
-                    {topic.resources.map((r) => (
-                      <li key={r.url}>
-                        <a href={r.url}>{r.title}</a>
-                        <span className="resource-kind">{r.kind}, needs internet</span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
+            </>
+          )}
+
+          {tab === 'more' && (
+            <>
+              <h2>Further reading</h2>
+              {topic.resources.length > 0 ? (
+                <ul className="resources">
+                  {topic.resources.map((r) => (
+                    <li key={r.url}>
+                      <a href={r.url}>{r.title}</a>
+                      <span className="resource-kind">{r.kind}, needs internet</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="prose">No further reading for this topic yet.</p>
               )}
             </>
           )}

@@ -20,6 +20,8 @@ const PRACTICE_TOPICS = YEARS.flatMap((y) => topicsForYear(y))
 
 export function TestBuilder(props: {
   initial: TestSettings;
+  /** Opened from "Review now": the topics due for review are already chosen. */
+  review?: boolean;
   onStart: (test: RunningTest) => void;
 }) {
   const [topicIds, setTopicIds] = useState(props.initial.topicIds);
@@ -43,7 +45,11 @@ export function TestBuilder(props: {
         <img src="/icons3d/calculator.webp" alt="" width="64" height="64" className="topic-icon" />
         <div>
           <h1>Practice</h1>
-          <p className="topic-meta">New numbers every time. Every answer is checked by code.</p>
+          <p className="topic-meta">
+            {props.review
+              ? 'Review: the topics due are chosen below. Start when you are ready.'
+              : 'New numbers every time. Every answer is checked by code.'}
+          </p>
         </div>
       </div>
 

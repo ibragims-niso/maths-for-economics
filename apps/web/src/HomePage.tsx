@@ -6,9 +6,16 @@ import { InstallHint } from './InstallHint';
 import { ChevronIcon } from './icons';
 import { Segmented } from './Segmented';
 import { useProgress } from './storage';
-import { bankTopic, READY, STATUS_LABEL, useTopicSearch, WRITING } from './topics';
+import { bankTopic, READY, STATUS_LABEL, topicTitle, useTopicSearch, WRITING } from './topics';
 import { learnGroups, useTrack, yearTopics } from './tracks';
 import { useInstallOption } from './useInstallOption';
+
+/** "Elasticity", "Elasticity and Limits", "Elasticity, Limits and 2 more". */
+function dueNames(ids: string[]) {
+  const names = ids.map(topicTitle);
+  if (names.length <= 2) return names.join(' and ');
+  return `${names.slice(0, 2).join(', ')} and ${names.length - 2} more`;
+}
 
 const YEAR_KEY = 'mfe.learn.year';
 
@@ -162,8 +169,11 @@ export function HomePage() {
         {due.length > 0 && (
           <section className="review-strip" aria-label="Review">
             <p>
-              <strong>{due.length}</strong> {due.length === 1 ? 'topic is' : 'topics are'} due for
-              review
+              Time to review <strong>{dueNames(due.map((p) => p.topicId))}</strong>
+              <span className="review-why">
+                You practised {due.length === 1 ? 'it' : 'them'} a while ago. A short test now helps
+                you remember.
+              </span>
             </p>
             <Link
               to={`/practice?topics=${due.map((p) => p.topicId).join(',')}`}

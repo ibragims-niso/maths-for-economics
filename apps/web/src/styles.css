@@ -604,6 +604,14 @@ li + li > .row {
 
 .review-strip strong {
   color: var(--gold);
+  font-weight: 600;
+}
+
+.review-why {
+  display: block;
+  margin-top: 2px;
+  color: var(--night-muted);
+  font-size: var(--text-meta);
 }
 
 /* Offline status and install: one compact strip at the top of the sheet. */
@@ -747,6 +755,17 @@ a.button-small,
 
 .topic-hero {
   padding: 4px 20px 0;
+}
+
+/* Five topic tabs: full width, one line each. */
+.topic-hero .segmented {
+  max-width: none;
+}
+
+.topic-hero .segmented button {
+  padding: 0 2px;
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
 
 .back-link {

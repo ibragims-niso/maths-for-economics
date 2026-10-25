@@ -57,5 +57,5 @@ export function PracticePage() {
       />
     );
   }
-  return <TestBuilder initial={settings} onStart={start} />;
+  return <TestBuilder initial={settings} review={params.has('topics')} onStart={start} />;
 }
