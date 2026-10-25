@@ -16,6 +16,8 @@ searchTerms:
   - "Singular and non-singular matrices"
   - "Solving a system with the inverse matrix"
   - "Adjugate matrix"
+syllabusHeadings:
+  - "Inverse matrix and its calculation"
 generators: [inverse-2x2-entry, equilibrium-prices-inverse, inverse-3x3-cofactor-entry]
 widgets: [inverse-two-markets]
 mistakeCodes:
@@ -65,6 +67,8 @@ The inverse is also a table of effects. Column $j$ of $A^{-1}$ says how every pr
 ## Definition and formulas
 **Identity matrix.** $I$ has 1s on the diagonal and 0s elsewhere, and $AI = IA = A$ for every square $A$ of the same size. For $n = 2$: $I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$.
 
+::syllabus[Singular and non-singular matrices; the inverse matrix]
+
 **Inverse.** A square $n \times n$ matrix $A$ is **invertible** (non-singular) when there is a matrix $A^{-1}$ with
 $$AA^{-1} = A^{-1}A = I.$$
 The inverse is unique when it exists. Only square matrices can have one.
@@ -73,6 +77,8 @@ The inverse is unique when it exists. Only square matrices can have one.
 
 **The 2×2 formula.** Swap the diagonal entries, change the signs of the other two, and divide by the determinant:
 $$A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}, \qquad A^{-1} = \frac{1}{ad - bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}, \quad ad - bc \ne 0.$$
+
+::syllabus[Algorithm for calculating the inverse matrix]
 
 **Any size: the adjugate (cofactor) formula.** With the cofactors $C_{ij} = (-1)^{i+j}M_{ij}$, where the minor $M_{ij}$ is the determinant left after deleting row $i$ and column $j$:
 $$A^{-1} = \frac{1}{\det A}\,\operatorname{adj} A, \qquad \operatorname{adj} A = C^T, \qquad (A^{-1})_{ij} = \frac{C_{ji}}{\det A}.$$
@@ -88,6 +94,8 @@ If a row of zeros appears on the left, $A$ is singular. For 3×3 and larger matr
 - $(A^T)^{-1} = (A^{-1})^T$
 - $(kA)^{-1} = \dfrac{1}{k}A^{-1}$
 - $\det(A^{-1}) = \dfrac{1}{\det A}$
+
+::syllabus[Solving linear systems with the inverse matrix]
 
 **Solving a system.** If $A$ is invertible, multiplying $Ax = b$ on the left by $A^{-1}$ gives the unique solution
 $$x = A^{-1}b.$$

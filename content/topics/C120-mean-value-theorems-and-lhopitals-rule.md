@@ -22,6 +22,8 @@ searchTerms:
   - "L'Hospital's rule"
   - "Bernoulli–L'Hopital rule"
   - "Resolving indeterminate forms"
+syllabusHeadings:
+  - "Main theorems of differential calculus; indeterminate forms"
 generators: [mean-value-point-root-output, lhopital-difference-of-powers, ces-limit-cobb-douglas]
 widgets: [mean-value-tangent]
 mistakeCodes:
@@ -70,9 +72,13 @@ For L'Hôpital's rule, zoom in on the point where top and bottom are both 0. Clo
 ## Definition and formulas
 Throughout, $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$.
 
+::syllabus[Fermat's and Rolle's theorems]
+
 **Fermat's theorem.** If $f$ has a local maximum or minimum at an interior point $c$ and $f'(c)$ exists, then $f'(c) = 0$. This is why we look for optima where the derivative is zero (C109).
 
 **Rolle's theorem.** If $f(a) = f(b)$, there is a $c$ in $(a, b)$ with $f'(c) = 0$. If profit is the same at two outputs, somewhere in between marginal profit is zero: the profit curve turned round.
+
+::syllabus[Lagrange's and Cauchy's theorems]
 
 **Lagrange's mean value theorem.** There is a $c$ in $(a, b)$ with
 $$f'(c) = \frac{f(b) - f(a)}{b - a}, \qquad\text{that is}\qquad f(b) - f(a) = f'(c)\,(b - a).$$
@@ -85,6 +91,8 @@ The marginal at some point equals the average rate over the interval. Three cons
 **Cauchy's mean value theorem.** For two such functions with $g'(x) \ne 0$ there is a $c$ with
 $$\frac{f(b) - f(a)}{g(b) - g(a)} = \frac{f'(c)}{g'(c)}.$$
 Lagrange's theorem is the case $g(x) = x$. Cauchy's version is what proves L'Hôpital's rule.
+
+::syllabus[Bernoulli–L'Hôpital rule for indeterminate forms]
 
 **L'Hôpital's rule.** Suppose $f(x) \to 0$ and $g(x) \to 0$ (or both tend to $\pm\infty$) as $x \to a$, where $a$ may also be $\pm\infty$, and $g'(x) \ne 0$ near $a$. If $\lim f'(x)/g'(x)$ exists, then
 $$\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}.$$
@@ -99,6 +107,8 @@ Differentiate the top and the bottom **separately**; this is not the quotient ru
 **Who grows faster.** For any powers $k > 0$ and $n$, L'Hôpital's rule gives
 $$\lim_{x \to \infty} \frac{\ln x}{x^{k}} = 0, \qquad \lim_{x \to \infty} \frac{x^{n}}{e^{kx}} = 0.$$
 Logarithms grow more slowly than any power, and any power more slowly than any exponential.
+
+::syllabus[Taylor's formula]
 
 **Taylor's formula with remainder.** The mean value theorem is the first step of Taylor's formula (C111): $f(x) = f(a) + f'(a)(x - a) + \dots + \dfrac{f^{(n)}(a)}{n!}(x - a)^n + \dfrac{f^{(n+1)}(c)}{(n + 1)!}(x - a)^{n + 1}$ for some $c$ between $a$ and $x$. With $n = 0$ it is exactly Lagrange's theorem.
 

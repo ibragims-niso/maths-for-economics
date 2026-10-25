@@ -21,6 +21,8 @@ searchTerms:
   - "Newton–Leibniz formula"
   - "Fundamental theorem of calculus"
   - "Area of a curvilinear trapezoid"
+syllabusHeadings:
+  - "Definite integral, its properties and the Newton–Leibniz formula"
 generators: [cost-increase-from-marginal-cost, accumulated-exponential-flow, average-price-over-period]
 widgets: [riemann-sum-marginal-cost]
 mistakeCodes:
@@ -69,6 +71,8 @@ If marginal cost were constant at 15, ten more machines would cost $10 \times 15
 Computing a limit of sums every time would be slow. The Fundamental Theorem of Calculus gives a shortcut: the area is the change in any antiderivative between the two ends. This is natural in economics. Total cost is an antiderivative of marginal cost (C112), so adding up marginal cost from $q = a$ to $q = b$ must give the change in total cost, $C(b) - C(a)$.
 
 ## Definition and formulas
+::syllabus[Integral sums; lower and upper sums; integrability]
+
 **Riemann sums.** Split $[a, b]$ into $n$ strips of width $\Delta x = \dfrac{b - a}{n}$ and pick a point $x_i$ in each strip, for example its left end. The Riemann sum
 $$S_n = \sum_{i=1}^{n} f(x_i)\,\Delta x$$
 adds the areas of $n$ rectangles. The **definite integral** is the limit of these sums as the strips get thinner:
@@ -77,11 +81,15 @@ The numbers $a$ and $b$ are the lower and upper **limits of integration**. The r
 
 The strips need not be equal, and the point inside each strip can be anywhere; the limit must come out the same as the widest strip shrinks to zero. Using the smallest value of $f$ on each strip gives the **lower sum**, and the largest value the **upper sum**. Every Riemann sum lies between them, and $f$ is **integrable** exactly when the gap between the upper and lower sums can be made as small as you like by cutting finer strips. Every continuous function on $[a, b]$ is integrable, and so is a bounded function with finitely many jumps, such as a tax schedule or a tariff with blocks.
 
+::syllabus[Integral with a variable upper limit; Newton–Leibniz formula]
+
 **Fundamental Theorem of Calculus.** If $F'(x) = f(x)$, then
 $$\int_a^b f(x)\,dx = \Big[F(x)\Big]_a^b = F(b) - F(a).$$
 Any antiderivative works: a constant of integration $K$ appears in both $F(b)$ and $F(a)$ and cancels. The antiderivatives from C112 are the ones used most: $\int x^n\,dx = \dfrac{x^{n+1}}{n + 1}$ for $n \neq -1$, $\int \dfrac{1}{x}\,dx = \ln|x|$ and $\int e^{kx}\,dx = \dfrac{e^{kx}}{k}$.
 
 The theorem also works the other way: the running total $A(x) = \int_a^x f(t)\,dt$ has $A'(x) = f(x)$. A stock grows at the rate of the flow that feeds it.
+
+::syllabus[Main properties of the definite integral]
 
 **Properties.**
 - Linearity: $\int_a^b \big(\alpha f(x) + \beta g(x)\big)\,dx = \alpha\int_a^b f(x)\,dx + \beta\int_a^b g(x)\,dx$.
@@ -90,6 +98,8 @@ The theorem also works the other way: the running total $A(x) = \int_a^x f(t)\,d
 - Comparison: if $f(x) \le g(x)$ on $[a, b]$, then $\int_a^b f(x)\,dx \le \int_a^b g(x)\,dx$. In particular, if $m \le f(x) \le M$ there, then $m(b - a) \le \int_a^b f(x)\,dx \le M(b - a)$.
 - Mean value theorem for integrals: a continuous $f$ takes its average value somewhere, $\int_a^b f(x)\,dx = f(c)\,(b - a)$ for some $c$ in $[a, b]$. A year's total output equals the rate of output at some moment of the year times one year.
 - Substitution with limits: when you change the variable, change the limits too (C115), and there is no need to go back to the old variable.
+
+::syllabus[Area of a curvilinear trapezoid]
 
 **Signed area.** Where $f(x) < 0$ the rectangles have negative height, so area below the axis counts as negative. The integral is the *net* area: area above the axis minus area below it. For the total shaded area, split the interval where $f$ changes sign and add the sizes of the pieces.
 

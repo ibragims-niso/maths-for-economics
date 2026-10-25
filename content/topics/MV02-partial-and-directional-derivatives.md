@@ -16,6 +16,8 @@ searchTerms:
   - "Special derivatives"
   - "Partial and total increments"
   - "Higher-order partial derivatives"
+syllabusHeadings:
+  - "Partial derivatives of functions of several variables"
 generators: [cobb-douglas-marginal-product, joint-cost-partial-marginal-cost, directional-derivative-utility]
 widgets: [gradient-level-curves]
 mistakeCodes:
@@ -69,6 +71,12 @@ To compute a partial derivative you therefore freeze every variable except one. 
 You can also walk in any other direction, for example north-east, adding some capital and some labour. The slope in that direction is a **directional derivative**. Of all directions, one is steepest. The arrow pointing that way is the **gradient**. Its length is the steepest slope, and it always crosses the level curves at a right angle: along a level curve the height does not change at all, so the steepest way up must point straight across it.
 
 ## Definition and formulas
+::syllabus[Partial and total increments]
+
+**Partial and total increments.** Changing only $x$ by $\Delta x$ gives the **partial increment** $\Delta_x f = f(x + \Delta x, y) - f(x, y)$; changing only $y$ gives $\Delta_y f$. Changing both at once gives the **total increment** $\Delta f = f(x + \Delta x, y + \Delta y) - f(x, y)$, which is in general not the sum of the two partial increments. For $Q = KL$ at $K = 10$, $L = 20$: raising $K$ by 1 adds 20, raising $L$ by 1 adds 10, but raising both adds $11 \cdot 21 - 200 = 31$, because the extra machine also works with the extra worker. Dividing a partial increment by the change and letting it shrink gives the partial derivative.
+
+::syllabus[Partial derivatives]
+
 **Partial derivatives.** For a function $f(x, y)$:
 $$f_x = \frac{\partial f}{\partial x} = \lim_{h \to 0} \frac{f(x + h, y) - f(x, y)}{h}, \qquad f_y = \frac{\partial f}{\partial y} = \lim_{h \to 0} \frac{f(x, y + h) - f(x, y)}{h}.$$
 In practice: to find $f_x$, treat $y$ as a constant and differentiate with respect to $x$ as usual. For example, if $f(x, y) = x^2y + 3y$, then $f_x = 2xy$ and $f_y = x^2 + 3$. The symbol $\partial$ ("partial") replaces $d$ to remind you that the other variables are held fixed.
@@ -87,6 +95,8 @@ For Cobb–Douglas, $\varepsilon_{Q,L} = \beta\,\dfrac{Q}{L}\cdot\dfrac{L}{Q} = 
 
 - $\partial Q_1/\partial P_2 > 0$: the goods are **substitutes** (tea and coffee: dearer coffee sends buyers to tea);
 - $\partial Q_1/\partial P_2 < 0$: the goods are **complements** (cars and petrol: dearer petrol means fewer cars bought).
+
+::syllabus[Higher-order partial derivatives]
 
 **Second-order partial derivatives.** Differentiate a partial derivative again:
 $$f_{xx} = \frac{\partial^2 f}{\partial x^2}, \quad f_{yy} = \frac{\partial^2 f}{\partial y^2}, \quad f_{xy} = \frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right), \quad f_{yx} = \frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right).$$

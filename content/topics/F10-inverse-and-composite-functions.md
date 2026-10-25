@@ -16,6 +16,8 @@ searchTerms:
   - "Composite function"
   - "Function of a function"
   - "Complex function"
+syllabusHeadings:
+  - "Concept of a univariate function, its definition and types"
 generators: [inverse-demand-price, composite-cost-of-labour, labour-for-cost-budget]
 widgets: [inverse-demand-mirror]
 mistakeCodes:
@@ -70,6 +72,8 @@ Think of a function as a machine: put an input in, get one output out. A composi
 An inverse function runs a machine backwards: given the output, it tells you the input. That only works if no two inputs ever give the same output. If two different prices brought in the same revenue, then knowing the revenue would not tell you which price was charged.
 
 ## Definition and formulas
+::syllabus[Types of functions: composite and inverse]
+
 **Composite function.** Apply $g$ first, then $f$:
 $$(f \circ g)(x) = f(g(x))$$
 $g$ is the inner function and $f$ the outer one. The composite is defined where $x$ is in the domain of $g$ and $g(x)$ is in the domain of $f$. In general $f \circ g \neq g \circ f$: with $f(x) = x^2$ and $g(x) = x + 1$, $f(g(2)) = 9$ but $g(f(2)) = 5$.

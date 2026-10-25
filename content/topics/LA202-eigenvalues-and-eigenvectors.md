@@ -15,6 +15,8 @@ searchTerms:
   - "Eigenvalues and eigenvectors and their calculation"
   - "Characteristic equation"
   - "Characteristic polynomial"
+syllabusHeadings:
+  - "Eigenvalues and eigenvectors"
 generators: [eigenvalue-larger-2x2, eigenvector-second-component, spectral-radius-stability]
 widgets: [eigen-directions]
 mistakeCodes:
@@ -74,6 +76,8 @@ In economic terms, an eigenvector is a mix that reproduces itself. If a two-sect
 If every eigenvalue is smaller than 1 in size, every part shrinks and the system returns to zero: it is stable. A negative eigenvalue flips the sign every period, and complex eigenvalues (which have no real eigenvector at all) make the path circle round the origin: both show up as oscillation, as in a business cycle.
 
 ## Definition and formulas
+::syllabus[Eigenvalues and eigenvectors and their calculation]
+
 **Eigenvalues and eigenvectors.** For a square $n \times n$ matrix $A$, a number $\lambda$ is an eigenvalue if there is a vector $v \neq 0$ with
 $$Av = \lambda v.$$
 Each such $v$ is an eigenvector for $\lambda$. The zero vector is never counted as an eigenvector, since $A0 = \lambda 0$ for every $\lambda$. Any non-zero multiple of an eigenvector is again an eigenvector for the same $\lambda$, so an eigenvector really stands for a direction, and we may scale it as we like, for example so that its first entry is 1.

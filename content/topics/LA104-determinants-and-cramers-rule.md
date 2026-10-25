@@ -21,6 +21,9 @@ searchTerms:
   - "Cofactors"
   - "Square system of linear equations"
   - "Cramer's method"
+syllabusHeadings:
+  - "Determinants: properties and calculation rules"
+  - "Minors and algebraic complements"
 generators: [cramer-income-model, determinant-3x3-cofactor, cramer-two-market-price]
 widgets: [determinant-area]
 mistakeCodes:
@@ -60,9 +63,13 @@ A 2×2 matrix $A$ moves every point of the plane to a new point. The unit square
 Now think of a system $A\mathbf{x} = \mathbf{d}$. Solving it means finding how much of each column to combine to reach the point $\mathbf{d}$. If the two columns point in different directions, every point can be reached, and in exactly one way. If they lie on the same line, the parallelogram is squashed flat and $\det A = 0$: most points cannot be reached at all, and the points on that line can be reached in infinitely many ways. In terms of the equations, the two lines are parallel (no solution) or the same line (infinitely many). So $\det A \neq 0$ is exactly the condition for a unique solution, the same condition as finding a pivot in every column in Gaussian elimination (LA103).
 
 ## Definition and formulas
+::syllabus[Determinants of order 2 and 3]
+
 **2×2 determinant.**
 $$\det \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} = a_{11}a_{22} - a_{12}a_{21}$$
 the product down the main diagonal minus the product down the other diagonal.
+
+::syllabus[Minors and algebraic complements]
 
 **Minors and cofactors.** The minor $M_{ij}$ is the determinant of the matrix left after deleting row $i$ and column $j$. The cofactor is $C_{ij} = (-1)^{i+j} M_{ij}$, so the signs follow a chessboard pattern:
 $$\begin{bmatrix} + & - & + \\ - & + & - \\ + & - & + \end{bmatrix}$$
@@ -71,12 +78,18 @@ $$\begin{bmatrix} + & - & + \\ - & + & - \\ + & - & + \end{bmatrix}$$
 $$\det A = a_{11}M_{11} - a_{12}M_{12} + a_{13}M_{13}$$
 Any row or column gives the same answer (with its own signs from the pattern), so expand along one with zeros to save work.
 
+::syllabus[Laplace's theorem and determinants of higher order]
+
 **Determinants of any order (Laplace expansion).** The same rule defines the determinant of an $n \times n$ matrix: pick any row $i$ (or column) and add each entry times its cofactor,
 $$\det A = \sum_{j=1}^{n} a_{ij} C_{ij}, \qquad C_{ij} = (-1)^{i+j} M_{ij}$$
 where the minor $M_{ij}$ is now an $(n-1) \times (n-1)$ determinant, expanded the same way until you reach $2 \times 2$. If you multiply one row by the cofactors of a *different* row, the sum is always 0; this is what makes the adjugate formula for the inverse work (LA105). For a $4 \times 4$ or larger matrix, expanding directly means many small determinants, so in practice first use row operations to create zeros (or reach triangular form, where the determinant is the product of the diagonal), then expand.
 
+::syllabus[Rules for calculating the determinant]
+
 **Rule of Sarrus** (3×3 only, a useful check). Write the first two columns again to the right of the matrix. Add the three products running down to the right and subtract the three running down to the left:
 $$\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33}$$
+
+::syllabus[Properties of the determinant]
 
 **Properties** ($A$ and $B$ are $n \times n$):
 - swapping two rows changes the sign of the determinant;
@@ -85,6 +98,8 @@ $$\det A = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}
 - a row of zeros, or two equal rows, gives $\det A = 0$;
 - $\det(AB) = \det A \cdot \det B$;
 - $\det(A^T) = \det A$, so every rule for rows also holds for columns.
+
+::syllabus[Square systems of linear equations and Cramer's rule]
 
 **Determinant and solutions.** For a square system $A\mathbf{x} = \mathbf{d}$ ($n$ equations, $n$ unknowns):
 $$\det A \neq 0 \iff \text{the system has exactly one solution for every } \mathbf{d}$$

@@ -15,6 +15,8 @@ searchTerms:
   - "Numerical sequences, how they are given and their types"
   - "Arithmetic progression"
   - "Geometric progression"
+syllabusHeadings:
+  - "Numerical sequences and their limits"
 generators: [arithmetic-salary-total, spending-rounds-total, salary-offers-difference]
 widgets: [spending-rounds]
 mistakeCodes:
@@ -71,6 +73,27 @@ $$S_n = u_1 + u_2 + \dots + u_n = \sum_{k=1}^{n} u_k$$
 **Infinite geometric series.** If $|r| < 1$, then $r^n$ gets closer and closer to 0 as $n$ grows, so the sum settles at
 $$S_\infty = a + ar + ar^2 + \dots = \frac{a}{1 - r}$$
 If $|r| \ge 1$ the terms do not shrink and the infinite sum has no finite value.
+
+::syllabus[Numerical sequences: ways to give them and their types]
+
+**Ways to give a sequence.** By a **formula** for the $n$-th term ($u_n = 100 \cdot 1.05^{n}$), by a **recurrence** that builds each term from the previous one ($u_{n+1} = 1.05\,u_n$, $u_1 = 105$; this is how DY01 models debt and prices), by a **table** of observed values, or by a **graph** of the points $(n, u_n)$.
+
+**Types of sequences.** A sequence is **increasing** if $u_{n+1} > u_n$ for every $n$ and **decreasing** if $u_{n+1} < u_n$; both are **monotonic**. It is **bounded** if there is a number $M$ with $|u_n| \le M$ for all $n$. Yearly sales that grow at a fixed rate form an increasing, unbounded sequence; the share of a market captured by a product, which never exceeds 100 %, is bounded.
+
+::syllabus[Limit of a sequence: algebraic and geometric meaning]
+
+**Limit of a sequence.** The number $L$ is the **limit** of $(u_n)$, written $\displaystyle\lim_{n\to\infty} u_n = L$, if the terms eventually stay as close to $L$ as you like: for every $\varepsilon > 0$ there is a number $N$ such that $|u_n - L| < \varepsilon$ for all $n > N$. On the number line, every $\varepsilon$-band around $L$ contains all the terms except the first few; on the graph of $(n, u_n)$ the points end up inside the horizontal strip between $L - \varepsilon$ and $L + \varepsilon$. A sequence with a limit **converges**; otherwise it **diverges**. For example $u_n = 5 - \dfrac{2}{n}$ converges to 5: to be within $\varepsilon = 0.01$ of 5 we need $\dfrac{2}{n} < 0.01$, that is $n > 200$.
+
+::syllabus[Properties of convergent sequences]
+
+**Properties of convergent sequences.**
+
+- The limit is unique, and a convergent sequence is bounded.
+- Limits respect arithmetic: if $u_n \to A$ and $v_n \to B$, then $u_n \pm v_n \to A \pm B$, $u_n v_n \to AB$, and $u_n / v_n \to A/B$ when $B \ne 0$.
+- **Squeeze rule:** if $a_n \le u_n \le b_n$ and both $a_n$ and $b_n$ tend to $L$, so does $u_n$.
+- **Monotone and bounded means convergent:** an increasing sequence that never passes some ceiling has a limit. This is why the partial sums of a geometric series with $0 < r < 1$ settle down.
+
+C119 shows how to calculate harder limits of sequences, such as ratios of polynomials in $n$.
 
 ## Interactive
 ::widget{id="spending-rounds"}

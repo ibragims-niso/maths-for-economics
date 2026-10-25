@@ -15,6 +15,8 @@ searchTerms:
   - "Economic applications of the definite integral"
   - "Consumer surplus"
   - "Producer surplus"
+syllabusHeadings:
+  - "Applications of the definite integral"
 generators: [consumer-surplus-linear-equilibrium, deadweight-loss-per-unit-tax, consumer-surplus-quadratic-demand]
 widgets: [surplus-tax-welfare]
 mistakeCodes:
@@ -56,6 +58,8 @@ Sellers work the same way in reverse. The inverse supply curve $P = S(Q)$ shows 
 A tax drives a wedge between what buyers pay and what sellers keep. Fewer units are traded, and the units that are no longer traded had been creating value that now nobody gets: the **deadweight loss**.
 
 ## Definition and formulas
+::syllabus[Economic applications of the definite integral]
+
 At price $P^*$ with quantity $Q^*$ traded:
 
 $$CS = \int_0^{Q^*} D(Q)\,dQ - P^*Q^*, \qquad PS = P^*Q^* - \int_0^{Q^*} S(Q)\,dQ$$

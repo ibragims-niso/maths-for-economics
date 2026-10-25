@@ -19,6 +19,9 @@ searchTerms:
   - "Gauss's method"
   - "Gaussian elimination"
   - "Row echelon form"
+syllabusHeadings:
+  - "Systems of linear equations and their solution with matrices"
+  - "Solving linear systems by Gauss's method"
 generators: [machine-hours-back-substitution, three-market-equilibrium-price, singular-system-parameter]
 widgets: [two-line-system]
 mistakeCodes:
@@ -57,10 +60,14 @@ That is the whole idea. **Eliminate**: use one equation to remove an unknown fro
 Each equation in two unknowns is a straight line, and a solution is a point on both lines. Two lines either cross once, are parallel and never meet, or are the same line. So a system has exactly one solution, no solution, or infinitely many, and elimination shows which.
 
 ## Definition and formulas
+::syllabus[Systems of linear equations in matrix form]
+
 **A system in matrix form.** $m$ linear equations in $n$ unknowns are written $A\mathbf{x} = \mathbf{b}$ (the matrix–vector product of LA102). For example
 $$\begin{aligned} 2x + y + 2z &= 100 \\ 3y + 2z &= 90 \\ 4z &= 60 \end{aligned} \quad\Longleftrightarrow\quad \begin{bmatrix} 2 & 1 & 2 \\ 0 & 3 & 2 \\ 0 & 0 & 4 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 100 \\ 90 \\ 60 \end{bmatrix}$$
 
 **Augmented matrix.** The coefficients and the right-hand side side by side, $[A \mid \mathbf{b}]$. Each row is one equation.
+
+::syllabus[Elementary transformations and Gauss's method]
 
 **Elementary row operations.** These three never change the set of solutions, because each can be undone:
 1. swap two rows, $R_i \leftrightarrow R_j$;
@@ -80,12 +87,16 @@ Then **back substitution**: solve the last row for its unknown, substitute it in
 $$\left[\begin{array}{rr|r} 1 & 2 & 8 \\ 3 & 4 & 18 \end{array}\right] \xrightarrow{R_2 - 3R_1} \left[\begin{array}{rr|r} 1 & 2 & 8 \\ 0 & -2 & -6 \end{array}\right] \xrightarrow{-\frac12 R_2} \left[\begin{array}{rr|r} 1 & 2 & 8 \\ 0 & 1 & 3 \end{array}\right] \xrightarrow{R_1 - 2R_2} \left[\begin{array}{rr|r} 1 & 0 & 2 \\ 0 & 1 & 3 \end{array}\right]$$
 By hand, plain elimination with back substitution is usually less work.
 
+::syllabus[General and special cases of linear systems]
+
 **The three cases, read from the echelon form.**
 - A row $[\,0 \;\; 0 \;\; \cdots \;\; 0 \mid d\,]$ with $d \neq 0$ says $0 = d$: **no solution** (the system is inconsistent).
 - Otherwise, if every unknown has a pivot: **exactly one solution**.
 - Otherwise, the unknowns without a pivot are **free variables**: give them any value $t$ and back-substitute for the others. There are **infinitely many solutions**.
 
 A row $0 = 0$ is harmless: it only says one equation was a combination of the others.
+
+Names used in many syllabi: a system with at least one solution is **consistent** (with exactly one it is **determined**, with infinitely many **undetermined**); one with no solution is **inconsistent**. A system whose right-hand sides are all 0 is **homogeneous** and is always consistent (LA205).
 
 **Rank (a first look).** The number of pivots in the echelon form of $A$ is the **rank** of $A$. With $n$ unknowns: one solution when the rank is $n$ and no row reads $0 = d$; infinitely many when the system is consistent and the rank is below $n$. So a system with fewer equations than unknowns can never have exactly one solution. LA201 studies rank properly; LA104 gives a one-number test for square systems, the determinant.
 

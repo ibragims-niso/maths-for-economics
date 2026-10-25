@@ -21,6 +21,8 @@ searchTerms:
   - "Graph of a function: full investigation"
   - "Curve sketching"
   - "Largest and smallest values on an interval"
+syllabusHeadings:
+  - "Extrema of functions and construction of their graphs"
 generators: [oblique-asymptote-intercept, logistic-inflection-time, global-extremum-closed-interval]
 widgets: [average-cost-asymptotes]
 mistakeCodes:
@@ -67,16 +69,26 @@ A picture of a function often settles an argument faster than any formula. Where
 Read a graph like a road. The first derivative tells you whether the road climbs or descends; where it is zero you are at a summit or the bottom of a dip. The second derivative tells you how the road bends: curving up like a valley (convex) or down like a hill (concave); an inflection point is where the bend switches. Asymptotes are the straight roads the curve merges into far away or blows up along. Mark these features first and the sketch almost draws itself.
 
 ## Definition and formulas
+::syllabus[Monotonicity of functions and its intervals]
+
 **Increasing and decreasing.** On an interval where $f'(x) > 0$, $f$ is increasing; where $f'(x) < 0$, it is decreasing (both follow from the mean value theorem, C120). So the intervals of monotonicity are found by solving $f'(x) = 0$ (and noting where $f'$ does not exist) and checking the sign of $f'$ between these points.
+
+::syllabus[Extrema: necessary and sufficient conditions]
 
 **Local extrema.** A **critical point** is an $x$ where $f'(x) = 0$ or $f'$ does not exist; local extrema can only be there (Fermat).
 
 - **First-derivative test:** if $f'$ changes from $+$ to $-$ at $c$, $f(c)$ is a local maximum; from $-$ to $+$, a local minimum; no change of sign, no extremum.
 - **Second-derivative test:** if $f'(c) = 0$ and $f''(c) < 0$, local maximum; if $f''(c) > 0$, local minimum; if $f''(c) = 0$, the test says nothing.
 
+::syllabus[Largest and smallest values on an interval]
+
 **Largest and smallest values on a closed interval $[a, b]$.** A continuous function reaches both (C101). Find the critical points inside $(a, b)$, evaluate $f$ there **and at $a$ and $b$**, and compare. The ends matter: a firm with a capacity limit may earn most at full capacity even though its profit curve has a local peak elsewhere.
 
+::syllabus[Convexity, concavity and inflection points]
+
 **Convexity and inflection points.** Where $f''(x) > 0$ the graph is convex (bends upwards); where $f''(x) < 0$ it is concave (C108). A point where $f''$ changes sign is an **inflection point**; $f''(c) = 0$ is necessary there but not enough ($x^4$ has $f''(0) = 0$ and no inflection).
+
+::syllabus[Asymptotes and construction of graphs]
 
 **Asymptotes.**
 

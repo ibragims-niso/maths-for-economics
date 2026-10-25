@@ -16,6 +16,8 @@ searchTerms:
   - "Antiderivative"
   - "Indefinite integral and its main properties"
   - "Table of basic integrals"
+syllabusHeadings:
+  - "Antiderivative and indefinite integral: properties and methods"
 generators: [total-cost-from-marginal-cost, price-from-marginal-revenue, capital-stock-from-investment]
 widgets: [cost-antiderivative-family]
 mistakeCodes:
@@ -54,9 +56,13 @@ Differentiation turns a total into its rate of change. Integration runs the film
 To pick the right curve you need one point on it. For cost, that point is $C(0)$: producing nothing still costs the fixed cost. For revenue it is $R(0) = 0$: selling nothing earns nothing. For the capital stock it is the stock today. This is why every indefinite integral carries a "$+\,C$": it is the information the rate alone cannot give.
 
 ## Definition and formulas
+::syllabus[Antiderivative and the indefinite integral]
+
 A function $F$ is an **antiderivative** of $f$ if $F'(x) = f(x)$. The **indefinite integral** collects all of them:
 $$\int f(x)\,dx = F(x) + C,$$
 where $C$ is the **constant of integration**. Any two antiderivatives of the same function on an interval differ by a constant: their difference has derivative 0, so it cannot change. (When $C$ already stands for cost or consumption, we write the constant as $c_0$.)
+
+::syllabus[Main properties of the indefinite integral]
 
 **Basic rules** (each one is a derivative rule from C103 read backwards):
 
@@ -67,6 +73,8 @@ where $C$ is the **constant of integration**. Any two antiderivatives of the sam
 - Linearity: $\displaystyle\int \big(a f(x) + b g(x)\big)\,dx = a\int f(x)\,dx + b\int g(x)\,dx$. Integrate a sum term by term and keep the numbers in front.
 
 For example, $\int (6x^2 - 4x + 5)\,dx = 2x^3 - 2x^2 + 5x + C$.
+
+::syllabus[Table of basic integrals]
 
 **A short table of basic integrals** (each one checks by differentiating; $a > 0$, $a \neq 1$):
 

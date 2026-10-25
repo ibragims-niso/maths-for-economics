@@ -20,6 +20,8 @@ searchTerms:
   - "Standard limits sin x / x and (1 + 1/x)^x"
   - "Equivalent infinitesimals"
   - "Indeterminate forms"
+syllabusHeadings:
+  - "Limit of a function and its calculation; notable limits"
 generators: [conjugate-limit-at-infinity, one-to-infinity-limit, equivalent-infinitesimals-ratio]
 widgets: [small-rate-approximations]
 mistakeCodes:
@@ -68,10 +70,14 @@ Most limits worth computing look like nonsense when you plug the number in: $\fr
 A quantity that tends to zero is an **infinitesimal**. Two infinitesimals can shrink at very different speeds: $x^2$ is tiny next to $x$ when $x$ is small, so $x^2/x \to 0$. Others shrink at the same speed: near zero, $\ln(1 + x)$, $e^x - 1$ and $\sin x$ are all almost exactly $x$, so you can swap one for the other inside a product or a quotient. A few standard limits, learned once, then solve a whole family of problems.
 
 ## Definition and formulas
+::syllabus[Infinitely small and infinitely large functions]
+
 **Infinitesimals and infinitely large quantities.** $\alpha(x)$ is an **infinitesimal** as $x \to a$ if $\alpha(x) \to 0$; it is **infinitely large** if $|\alpha(x)|$ grows without limit. If $\alpha$ is an infinitesimal (and not 0), then $1/\alpha$ is infinitely large, and the other way round. A function has the limit $A$ exactly when $f(x) = A + \alpha(x)$ with $\alpha$ an infinitesimal.
 
 - A sum of finitely many infinitesimals is an infinitesimal.
 - A bounded quantity times an infinitesimal is an infinitesimal: $\dfrac{\sin x}{x} \to 0$ as $x \to \infty$, because $|\sin x| \le 1$.
+
+::syllabus[Comparing infinitesimals]
 
 **Comparing infinitesimals.** Let $\alpha, \beta \to 0$ and look at $\alpha/\beta$:
 
@@ -84,9 +90,13 @@ $$\sin u \sim u, \quad \tan u \sim u, \quad \ln(1 + u) \sim u, \quad e^{u} - 1 \
 $$a^{u} - 1 \sim u\ln a, \quad (1 + u)^{k} - 1 \sim k\,u, \quad 1 - \cos u \sim \tfrac{u^2}{2}$$
 In a **product or a quotient** you may replace an infinitesimal by an equivalent one without changing the limit. Do not do it inside a sum or a difference: there the parts that cancel are exactly the ones that matter.
 
+::syllabus[Notable limits and their applications]
+
 **The two standard limits.**
 $$\lim_{x \to 0} \frac{\sin x}{x} = 1 \qquad (x \text{ in radians}), \qquad\qquad \lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^{x} = e \approx 2.71828$$
 The second one has a version for every rate $k$: $\displaystyle\lim_{x \to \infty}\left(1 + \frac{k}{x}\right)^{x} = e^{k}$, or equivalently $(1 + u)^{1/u} \to e$ as $u \to 0$. This is continuous compounding: $n$ compoundings a year at the nominal rate $r$ for $t$ years give the factor $\left(1 + \frac{r}{n}\right)^{nt} \to e^{rt}$. At 6 % for 5 years, monthly compounding gives $1.005^{60} = 1.3489$, and the limit is $e^{0.3} = 1.3499$.
+
+::syllabus[Calculating limits of sequences and functions]
 
 **Recipes for the common forms.**
 

@@ -17,6 +17,8 @@ searchTerms:
   - "Improper integral of the second kind"
   - "Properties of improper integrals"
   - "Convergence of improper integrals"
+syllabusHeadings:
+  - "Improper integrals and their calculation"
 generators: [continuous-stream-present-value, growing-continuous-stream-value, improper-power-integral]
 widgets: [continuous-discount-area]
 mistakeCodes:
@@ -70,6 +72,8 @@ Now let the stream last for ever. The area is no longer over a fixed interval, s
 Speed of decline is what matters, not just that the curve approaches zero. The curve $1/x$ tends to zero, but too slowly: its area from 1 to infinity is infinite. The curve $1/x^2$ falls faster and has area exactly 1. The curve $e^{-rt}$ falls faster than any power, so a discounted stream of constant income always has a finite value.
 
 ## Definition and formulas
+::syllabus[Improper integrals of the first kind]
+
 **Improper integral over an infinite interval.** If $f$ is continuous on $[a, \infty)$,
 $$\int_a^{\infty} f(x)\,dx = \lim_{b \to \infty} \int_a^{b} f(x)\,dx$$
 The integral **converges** if this limit exists as a finite number and **diverges** otherwise.
@@ -81,9 +85,15 @@ For example $\int_1^{\infty} x^{-2}\,dx = 1$, while $\int_1^{b} x^{-1}\,dx = \ln
 **The exponential integral.** For $r > 0$,
 $$\int_0^{\infty} e^{-rt}\,dt = \lim_{b \to \infty} \frac{1 - e^{-rb}}{r} = \frac{1}{r}$$
 
+::syllabus[Improper integrals of the second kind]
+
 **Unbounded integrand.** The same limit idea works when the function blows up at an end of a finite interval. For example $x^{-1/2}$ is infinite at $x = 0$, but
 $$\int_0^{1} \frac{dx}{\sqrt{x}} = \lim_{c \to 0^{+}} \left[2\sqrt{x}\right]_c^{1} = \lim_{c \to 0^{+}} (2 - 2\sqrt{c}) = 2$$
 By contrast $\int_0^1 x^{-1}\,dx$ diverges. Integrals over an infinite interval are called improper integrals of the **first kind**, and integrals of an unbounded function over a finite interval are of the **second kind**. The power test for the second kind runs the other way round: $\int_0^1 x^{-p}\,dx$ converges (to $\frac{1}{1-p}$) when $p < 1$ and diverges when $p \ge 1$. If the trouble sits inside the interval, at a point $c$, split the integral at $c$; it converges only if both pieces do.
+
+Every improper integral of the second kind can be turned into one of the first kind by a substitution, and the other way round: for example $x = 1/t$ turns $\int_0^1 x^{-p}\,dx$ into $\int_1^{\infty} t^{p-2}\,dt$. That is why the two power tests mirror each other, and why the same properties (linearity, splitting the interval, comparison) hold for both kinds.
+
+::syllabus[Convergence tests for improper integrals]
 
 **Comparison tests.** Often the antiderivative is hard to find, but you only need to know whether the integral is finite. Suppose $0 \le f(x) \le g(x)$ for large $x$:
 - if $\int_a^{\infty} g(x)\,dx$ converges, so does $\int_a^{\infty} f(x)\,dx$ (a smaller positive flow has a smaller total);

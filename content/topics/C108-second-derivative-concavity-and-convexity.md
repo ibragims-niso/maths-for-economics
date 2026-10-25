@@ -62,6 +62,12 @@ It is measured in units of $y$ per unit of $x$, per unit of $x$: for cost, the c
 $$\frac{d^2}{dx^2}\,x^n = n(n - 1)\,x^{n-2}.$$
 For example, $f(x) = x^3$ gives $f'(x) = 3x^2$ and $f''(x) = 6x$; $f(x) = x^{1/2}$ gives $f'(x) = \tfrac12 x^{-1/2}$ and $f''(x) = -\tfrac14 x^{-3/2}$.
 
+::syllabus[Higher-order derivatives]
+
+**Higher-order derivatives.** Keep differentiating: $f'''(x)$ is the derivative of $f''$, and the $n$-th derivative $f^{(n)}(x)$ is the derivative of $f^{(n-1)}$. Some patterns to know: the $n$-th derivative of $x^n$ is the constant $n!$, and every later one is 0; the $n$-th derivative of $e^{kx}$ is $k^n e^{kx}$; for $\ln x$ the derivatives are $\tfrac{1}{x}, -\tfrac{1}{x^2}, \tfrac{2}{x^3}, \dots$ In economics the third derivative tells you whether marginal cost bends up or down, and the third derivative of a utility function measures "prudence", the urge to save more when income is uncertain. Higher derivatives also give the terms of Taylor's formula (C111).
+
+::syllabus[Convexity and concavity of a graph; inflection points]
+
 **Concave and convex.** On an interval:
 
 - $f''(x) > 0$ everywhere: $f'$ is rising and $f$ is **convex** (bends upwards; chords lie above the graph, tangents below it).

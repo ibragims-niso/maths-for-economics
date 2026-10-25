@@ -24,6 +24,9 @@ searchTerms:
   - "Uniform continuity"
   - "Cantor theorem"
   - "Weierstrass theorem on continuous functions"
+syllabusHeadings:
+  - "Limit of a function and its calculation"
+  - "Continuity of a function and its properties"
 generators: [limit-by-cancelling, long-run-cost-ratio, continuous-tariff-parameter]
 widgets: [tariff-continuity]
 mistakeCodes:
@@ -71,9 +74,19 @@ You can approach $a$ from two sides. From the left the inputs are a little below
 The same idea works when the input grows without limit. Average cost $5000/q + 12$ gets closer and closer to 12 as output $q$ grows: the fixed cost is shared over so many units that each one carries almost none of it.
 
 ## Definition and formulas
+::syllabus[Definitions of the limit of a function]
+
 **Limit.** $\displaystyle\lim_{x \to a} f(x) = L$ means $f(x)$ can be made as close to $L$ as we like by taking $x$ close enough to $a$ (but not equal to $a$).
 
+**Two precise forms of the same definition.** In the **$\varepsilon$–$\delta$ form**: for every $\varepsilon > 0$ there is a $\delta > 0$ such that $|f(x) - L| < \varepsilon$ whenever $0 < |x - a| < \delta$. On the graph, every horizontal band of half-width $\varepsilon$ around $L$ contains the curve above some interval around $a$. In the **sequence form**: for every sequence $x_n \to a$ with $x_n \ne a$, the values $f(x_n) \to L$ (F08). The two forms are equivalent; the second is handy for showing that a limit does *not* exist, by finding two sequences that give different values. A **limit at infinity** works the same way with "$x > M$" in place of "$x$ close to $a$": $f(x) \to L$ as $x \to \infty$ if $|f(x) - L| < \varepsilon$ for all large enough $x$.
+
+::syllabus[Properties of functions with limits]
+
+**Properties of limits.** A function has at most one limit at a point. If $f(x) \to L$, then $f$ is bounded near $a$, and if $L > 0$ then $f(x) > 0$ near $a$ (the sign is kept). If $g(x) \le f(x) \le h(x)$ near $a$ and $g$ and $h$ both tend to $L$, so does $f$ (the **squeeze rule**). Quantities that tend to zero, and how to compare them, are the subject of C119.
+
 **One-sided limits.** $\displaystyle\lim_{x \to a^-} f(x)$ uses only $x < a$; $\displaystyle\lim_{x \to a^+} f(x)$ uses only $x > a$. The limit exists exactly when both one-sided limits exist and are equal.
+
+::syllabus[Arithmetic operations with limits]
 
 **Limit laws.** If $\lim f(x) = L$ and $\lim g(x) = M$ as $x \to a$, then the limit of $f + g$ is $L + M$, of $c\,f$ is $cL$, of $f \cdot g$ is $LM$, and of $f/g$ is $L/M$ provided $M \ne 0$. So for a polynomial, or a rational function whose denominator is not 0 at $a$, the limit is simply the value at $a$: substitute.
 
@@ -94,12 +107,16 @@ $$AC(q) = \frac{F + vq}{q} = \frac{F}{q} + v \;\to\; v \quad \text{as } q \to \i
 
 **The number e.** Compounding 100 % interest $n$ times a year turns 1 into $\left(1 + \frac{1}{n}\right)^n$ after a year (FM01). This is 2 for $n = 1$, 2.613 for monthly compounding and 2.7146 for daily compounding, and as $n \to \infty$ it approaches $e = 2.71828\ldots$ (F07). This limit is the basis of continuous compounding (FM02).
 
+::syllabus[Continuity at a point, from the right and from the left]
+
 **Continuity.** $f$ is continuous at $a$ when all three hold:
 1. $f(a)$ is defined;
 2. $\displaystyle\lim_{x \to a} f(x)$ exists (both one-sided limits are equal);
 3. $\displaystyle\lim_{x \to a} f(x) = f(a)$.
 
 Polynomials are continuous everywhere; rational functions are continuous wherever the denominator is not 0.
+
+::syllabus[Classification of discontinuity points]
 
 **Types of discontinuity.**
 - *Removable* (a hole): the limit exists but $f(a)$ is undefined or different from it, as in $\dfrac{x^2 + 3x - 40}{x - 5}$ at $x = 5$.
@@ -108,7 +125,11 @@ Polynomials are continuous everywhere; rational functions are continuous whereve
 
 Many textbooks group these in two kinds. A discontinuity **of the first kind** has both one-sided limits finite: the removable and jump cases. A discontinuity **of the second kind** has at least one one-sided limit infinite or missing: the infinite case, and functions that keep oscillating near $a$.
 
+::syllabus[Properties of functions continuous at a point]
+
 **Equivalent definition with small changes.** Write $\Delta x = x - a$ and $\Delta y = f(a + \Delta x) - f(a)$. Then $f$ is continuous at $a$ exactly when $\Delta y \to 0$ as $\Delta x \to 0$: a small change in the input gives only a small change in the output. Sums, differences, products, quotients (with a non-zero denominator) and compositions of continuous functions are continuous, and so are the inverse functions of continuous monotonic ones.
+
+::syllabus[Functions continuous on an interval; uniform continuity]
 
 **Continuous on a closed interval.** If $f$ is continuous at every point of $[a, b]$, then:
 - it is **bounded** there and reaches a largest and a smallest value (Weierstrass's theorem; this is why a profit function on a feasible range of output always has a best output, see AN03);

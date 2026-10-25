@@ -14,6 +14,8 @@ economicUses:
 searchTerms:
   - "Total differential of a multivariable function"
   - "Total increment"
+syllabusHeadings:
+  - "Total differential of a function of several variables"
 generators: [total-differential-output-change, cobb-douglas-output-growth-rate, chain-rule-two-output-cost]
 widgets: [total-differential-isoquants]
 mistakeCodes:
@@ -71,6 +73,8 @@ Revenue shows why this is only an approximation. With $R = PQ$, at price 20 and 
 Time paths work the same way. If consumption of two goods grows over time, utility changes for two reasons at once, because of more of the first good and because of more of the second. The rate of change of utility is the sum of the two effects, each one a marginal utility times the speed at which that good grows. This is the chain rule of C104 with two links instead of one.
 
 ## Definition and formulas
+::syllabus[Total differential]
+
 **The total differential.** For $z = f(x, y)$ with small changes $dx$ and $dy$,
 $$dz = f_x\,dx + f_y\,dy = \frac{\partial f}{\partial x}\,dx + \frac{\partial f}{\partial y}\,dy.$$
 With more variables, add one term per variable: $dz = f_{x_1}dx_1 + \dots + f_{x_n}dx_n$. This extends the differential $dy = f'(x)\,dx$ of C111.
@@ -80,6 +84,12 @@ $$\Delta z \approx f_x\,\Delta x + f_y\,\Delta y,$$
 with the partial derivatives taken at the starting point. The error comes from the second derivatives (compare the quadratic approximation of C111):
 $$\Delta z - dz \approx \tfrac{1}{2}\left(f_{xx}\,\Delta x^2 + 2f_{xy}\,\Delta x\,\Delta y + f_{yy}\,\Delta y^2\right).$$
 So the error grows like the square of the step: double both changes and the error roughly quadruples. For a production function, $\Delta Q \approx MP_K\,\Delta K + MP_L\,\Delta L$.
+
+::syllabus[Higher-order differentials]
+
+**Second-order differential.** The bracket above is the **second differential** of $z$,
+$$d^2z = f_{xx}\,dx^2 + 2f_{xy}\,dx\,dy + f_{yy}\,dy^2,$$
+the differential of the differential when $dx$ and $dy$ are held fixed. Higher differentials $d^3z, \dots$ are built the same way from third and higher partial derivatives. The sign of $d^2z$ for all small steps decides whether a point where $dz = 0$ is a maximum ($d^2z < 0$) or a minimum ($d^2z > 0$); MV07 turns this into a test on the Hessian matrix.
 
 **The chain rule along a time path.** If $x = x(t)$ and $y = y(t)$, then $z(t) = f(x(t), y(t))$ changes at the rate
 $$\frac{dz}{dt} = f_x\,\frac{dx}{dt} + f_y\,\frac{dy}{dt}.$$

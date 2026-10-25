@@ -15,6 +15,8 @@ searchTerms:
   - "Extrema of multivariable functions"
   - "Hessian matrix"
   - "Unconstrained optimization"
+syllabusHeadings:
+  - "Extrema of functions of several variables"
 generators: [hessian-determinant-two-goods, two-product-optimal-output, price-discrimination-two-markets]
 widgets: [two-product-profit-map]
 mistakeCodes:
@@ -66,6 +68,8 @@ Think of profit as the height of a landscape over a map whose two directions are
 A flat spot is not always a summit. It can be the bottom of a bowl (a minimum) or a mountain pass, a **saddle point**, where the ground rises in one direction and falls in another. The function $f(x, y) = xy$ is the standard example: at $(0, 0)$ both partial derivatives are zero, yet $f$ is positive along the line $y = x$ and negative along $y = -x$. Looking along one direction at a time cannot rule this out, because the cross partial $f_{xy}$ measures how the slope in one direction changes as you move in the other. The Hessian collects all the second partials, and its determinant weighs the curvature along the axes against this twist.
 
 ## Definition and formulas
+::syllabus[Ordinary extrema of functions of several variables]
+
 **First-order conditions.** A point $(x^*, y^*)$ where
 $$f_x(x^*, y^*) = 0 \quad\text{and}\quad f_y(x^*, y^*) = 0$$
 is a **critical point** (also called a stationary point). Every maximum or minimum inside the domain is a critical point. For a quadratic function the two conditions are a linear system, which you can solve by substitution or by Cramer's rule (LA104).

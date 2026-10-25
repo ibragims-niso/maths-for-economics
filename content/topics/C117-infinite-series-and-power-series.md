@@ -28,6 +28,9 @@ searchTerms:
   - "Expanding functions in power series"
   - "Taylor series"
   - "Maclaurin series"
+syllabusHeadings:
+  - "Number series and tests for convergence"
+  - "Functional series and power series"
 generators: [infinite-geometric-series-sum, maclaurin-partial-sum-estimate, power-series-radius]
 widgets: [geometric-partial-sums]
 mistakeCodes:
@@ -83,6 +86,8 @@ What makes a series converge is how fast its terms shrink. Geometric terms $q^n$
 A **power series** $a_0 + a_1x + a_2x^2 + \dots$ is a series whose terms depend on $x$: a polynomial that never stops. Taylor polynomials (C111) are its partial sums, so letting the order grow without end turns them into a power series. For each $x$ it is an ordinary series that converges or not, and the values of $x$ where it converges always form an interval around the centre.
 
 ## Definition and formulas
+::syllabus[Number series and their convergence]
+
 **Series and partial sums.** For the series $\sum_{n=1}^{\infty} a_n = a_1 + a_2 + a_3 + \dots$ the partial sums are $S_n = a_1 + \dots + a_n$. If $S_n \to S$ as $n \to \infty$ (a limit as in C101), the series converges and $S$ is its sum; otherwise it diverges.
 
 **$n$-th term test.** If $a_n$ does not tend to 0, the series diverges. If $a_n \to 0$, the test tells you nothing.
@@ -93,6 +98,10 @@ where $a$ is the first term, whatever index the sum starts at. For $|q| \ge 1$ i
 
 **$p$-series:** $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^p}$ converges when $p > 1$ and diverges when $p \le 1$. The case $p = 1$ is the harmonic series.
 
+::syllabus[Convergence tests for positive series]
+
+**Series with positive terms.** If every $a_n \ge 0$, the partial sums can only rise, so the series converges exactly when its partial sums stay below some fixed number (an increasing bounded sequence has a limit, F08). Every test below for positive series rests on this fact.
+
 **Comparison test.** Suppose $0 \le a_n \le b_n$ for every $n$. If $\sum b_n$ converges, so does $\sum a_n$; if $\sum a_n$ diverges, so does $\sum b_n$.
 
 **Ratio test** (d'Alembert's test). Let $L = \lim_{n\to\infty} \left|\dfrac{a_{n+1}}{a_n}\right|$. If $L < 1$ the series converges; if $L > 1$ it diverges; if $L = 1$ the test gives no answer (both $\sum 1/n$ and $\sum 1/n^2$ have $L = 1$).
@@ -101,9 +110,15 @@ where $a$ is the first term, whatever index the sum starts at. For $|q| \ge 1$ i
 
 **Working with convergent series.** If $\sum a_n = A$ and $\sum b_n = B$, then $\sum (a_n \pm b_n) = A \pm B$ and $\sum k a_n = kA$. Adding, removing or changing finitely many terms changes the sum but not whether the series converges, so only the tail matters for convergence.
 
+::syllabus[Alternating series and the Leibniz test]
+
 **Alternating series** $b_1 - b_2 + b_3 - \dots$ with $b_n > 0$: if the $b_n$ decrease and tend to 0, the series converges, and stopping after $n$ terms makes an error smaller than the first term left out, $b_{n+1}$.
 
+::syllabus[Absolute and conditional convergence]
+
 **Absolute and conditional convergence.** If $\sum |a_n|$ converges, then $\sum a_n$ converges too; it **converges absolutely**. A series that converges while $\sum |a_n|$ diverges **converges conditionally**, like $1 - \tfrac12 + \tfrac13 - \tfrac14 + \dots$.
+
+::syllabus[Power series: radius and interval of convergence]
 
 **Power series** about the centre $c$:
 $$\sum_{n=0}^{\infty} a_n (x - c)^n = a_0 + a_1(x - c) + a_2(x - c)^2 + \dots$$
@@ -111,7 +126,11 @@ There is a **radius of convergence** $R$ (possibly 0 or $\infty$): the series co
 $$R = \lim_{n\to\infty} \left|\frac{a_n}{a_{n+1}}\right| \quad\text{when this limit exists.}$$
 At the two end points $x = c \pm R$ the ratio test gives $L = 1$, so check them separately; the **interval of convergence** is the set of all $x$ where the series converges. For $|x - c| < R$ a power series can be differentiated term by term, and the result has the same radius. Why the convergence region is always an interval: if a power series converges at some point $x_0$, it converges absolutely at every $x$ closer to the centre than $x_0$ (Abel's theorem).
 
+::syllabus[Functional series and uniform convergence]
+
 **Series of functions.** A power series is one case of a **functional series** $\sum u_n(x)$, whose terms depend on $x$. It **converges pointwise** on a set if it converges at each $x$ there, and **uniformly** if one number of terms gives the required accuracy at every $x$ of the set at once. Uniform convergence is what allows a series of continuous functions to be added up into a continuous function, and to be integrated or differentiated term by term. The simplest check is the **Weierstrass test**: if $|u_n(x)| \le M_n$ for every $x$ in the set and $\sum M_n$ converges, the series converges uniformly there. For example, $\sum \dfrac{\cos(nx)}{n^2}$ converges uniformly on the whole line because $\left|\dfrac{\cos(nx)}{n^2}\right| \le \dfrac{1}{n^2}$.
+
+::syllabus[Expanding functions in power series]
 
 **Taylor and Maclaurin series.** The Taylor series of $f$ about $c$ is $\displaystyle\sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!}(x - c)^n$; about $c = 0$ it is the Maclaurin series. Its partial sums are the Taylor polynomials of C111. Three to know:
 

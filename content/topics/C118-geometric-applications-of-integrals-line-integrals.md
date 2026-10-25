@@ -16,6 +16,8 @@ searchTerms:
   - "Length of a curve (arc length)"
   - "Area of a curvilinear sector"
   - "Volume of a solid of revolution"
+syllabusHeadings:
+  - "Applications of the definite integral"
 generators: [volume-of-revolution-disc, line-integral-work-segment, arc-length-three-halves-power]
 widgets: [tank-volume-discs]
 mistakeCodes:
@@ -78,11 +80,15 @@ All the formulas here come from one idea you already know from areas: cut the ob
 **Area between curves** (from C113). If $f(x) \ge g(x)$ on $[a, b]$, the area between them is
 $$A = \int_a^b \big(f(x) - g(x)\big)\,dx.$$
 
+::syllabus[Volumes of solids of revolution]
+
 **Volume of a solid of revolution: discs.** Rotating $y = f(x) \ge 0$, $a \le x \le b$, about the $x$-axis gives a solid of volume
 $$V = \pi \int_a^b f(x)^2\,dx.$$
 
 **Washers.** Rotating the region between an outer curve $R(x)$ and an inner curve $r(x)$, with $R(x) \ge r(x) \ge 0$, gives a solid with a hole in it. Each slice is a disc of radius $R$ minus a disc of radius $r$:
 $$V = \pi \int_a^b \big(R(x)^2 - r(x)^2\big)\,dx.$$
+
+::syllabus[Length of a curve arc]
 
 **Arc length.** If $f$ has a continuous derivative on $[a, b]$, the length of the curve $y = f(x)$ from $x = a$ to $x = b$ is
 $$L = \int_a^b \sqrt{1 + f'(x)^2}\,dx.$$
@@ -90,6 +96,9 @@ Check with a straight line $y = mx + c$: then $f'(x) = m$ and $L = (b - a)\sqrt{
 
 **Curves given by a parameter.** A route $C$ can be described by $x = x(t)$, $y = y(t)$ for $\alpha \le t \le \beta$. A tiny piece of it has length
 $$ds = \sqrt{x'(t)^2 + y'(t)^2}\,dt.$$
+
+::syllabus[Area of a curvilinear sector]
+
 **Polar coordinates.** A point can also be located by its distance $r$ from the origin and its angle $\varphi$, with $x = r\cos\varphi$ and $y = r\sin\varphi$. A curve $r = r(\varphi)$ and the two rays $\varphi = \alpha$ and $\varphi = \beta$ cut out a fan-shaped region, a **curvilinear sector**. Cutting it into thin slices that are nearly triangles of area $\tfrac12 r^2\,d\varphi$ gives
 $$S = \frac12 \int_{\alpha}^{\beta} r(\varphi)^2\,d\varphi, \qquad L = \int_{\alpha}^{\beta} \sqrt{r(\varphi)^2 + r'(\varphi)^2}\,d\varphi$$
 for its area and for the length of the curve. Check with a circle $r = a$: the area is $\tfrac12 a^2 \cdot 2\pi = \pi a^2$ and the length is $2\pi a$.

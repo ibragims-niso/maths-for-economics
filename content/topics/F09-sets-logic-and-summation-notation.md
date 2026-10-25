@@ -64,11 +64,14 @@ A **set** is a collection with a clear rule for membership: everything is either
 **Σ** is shorthand for "add these up". Instead of writing $p_1q_1 + p_2q_2 + \dots + p_{50}q_{50}$ for spending on 50 goods, write $\sum_{i=1}^{50} p_i q_i$. The index $i$ runs through the goods one at a time, and Σ collects the results.
 
 ## Definition and formulas
+::syllabus[Number sets]
+
 **Sets.**
 - $x \in A$: $x$ is an element of $A$. $x \notin A$: it is not.
 - $A \subseteq B$: every element of $A$ is also in $B$.
 - $A \cup B$ (union): elements in $A$ or $B$ or both. $A \cap B$ (intersection): elements in both.
 - $A^c$ (complement): elements of the whole population that are not in $A$. $\varnothing$: the empty set.
+- Number sets: $\mathbb{N} = \{1, 2, 3, \dots\}$ the natural numbers (counts of units sold), $\mathbb{Z}$ the integers (they add $0$ and negatives, such as a change in stock), $\mathbb{Q}$ the rational numbers (fractions $p/q$, such as a price of $7/4$), and $\mathbb{R}$ the real numbers, which also contain irrational numbers like $\sqrt{2}$ and $e$. Each set lies inside the next: $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}$. On the number line every real number is a point, and a bounded set of reals has a smallest upper bound (AN02).
 - $\mathbb{R}$: all real numbers. $\mathbb{R}_+ = [0, \infty)$: the non-negative reals (some books use $\mathbb{R}_+$ for strictly positive numbers, so check the convention).
 - Intervals: $[a, b] = \{x : a \le x \le b\}$ includes both ends, $(a, b)$ excludes both, $[a, b)$ includes only $a$, and $[a, \infty)$ has no upper end.
 - Set-builder notation $\{x \in S : \text{condition}\}$ reads "all $x$ in $S$ for which the condition holds". With prices $p, q$ and income $m$ the budget set is
@@ -79,6 +82,8 @@ With $p = 2$, $q = 5$, $m = 100$: $(20, 10) \in B$ because it costs $2 \cdot 20 
 $$|A \cup B| = |A| + |B| - |A \cap B|, \qquad |A^c| = N - |A|$$
 $$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |A \cap C| - |B \cap C| + |A \cap B \cap C|$$
 This is inclusion–exclusion: add the groups, subtract what was counted twice, then add back what was removed too often.
+
+::syllabus[Mathematical logic symbols]
 
 **Logic.** A statement is a sentence that is either true or false, such as "the price is above 10". For statements $S$ and $T$:
 - $\lnot S$ (not $S$) is true exactly when $S$ is false.

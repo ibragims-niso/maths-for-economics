@@ -17,6 +17,8 @@ searchTerms:
   - "Linear operations on matrices"
   - "Transpose of a matrix"
   - "Matrix multiplication"
+syllabusHeadings:
+  - "Matrices: types of matrices and operations on them"
 generators: [matrix-product-revenue-entry, transition-matrix-two-step, matrix-chain-plant-cost]
 widgets: [shop-revenue-matrix]
 mistakeCodes:
@@ -62,11 +64,17 @@ Multiplying two matrices goes one step further. If the second matrix holds sever
 A square matrix can also be applied again and again. If a matrix describes how workers move between employment and unemployment in one year, applying it twice describes two years.
 
 ## Definition and formulas
+::syllabus[Definition of a matrix]
+
 An $m \times n$ matrix $A$ has $m$ rows and $n$ columns; $m \times n$ is its **size**. The entry in row $i$ and column $j$ is $a_{ij}$. A vector with $n$ entries is an $n \times 1$ matrix (a column vector).
+
+::syllabus[Linear operations on matrices]
 
 **Sum and scalar multiple** (only for matrices of the same size), entry by entry:
 $$(A + B)_{ij} = a_{ij} + b_{ij}, \qquad (kA)_{ij} = k\,a_{ij}$$
 So $2A - 3B$ has entries $2a_{ij} - 3b_{ij}$.
+
+::syllabus[Multiplication of matrices]
 
 **Matrix times vector.** For $A$ of size $m \times n$ and $\mathbf{x}$ with $n$ entries, $A\mathbf{x}$ has $m$ entries, each a dot product of a row with $\mathbf{x}$:
 $$(A\mathbf{x})_i = a_{i1}x_1 + a_{i2}x_2 + \dots + a_{in}x_n$$
@@ -77,6 +85,8 @@ $$(AB)_{ij} = \sum_{k=1}^{n} a_{ik}\,b_{kj} = (\text{row } i \text{ of } A)\cdot
 It is defined only when the number of columns of $A$ equals the number of rows of $B$: $(m \times n)(n \times p) = m \times p$.
 
 Rules that hold: $(AB)C = A(BC)$, $A(B + C) = AB + AC$, $k(AB) = (kA)B$. Rule that fails: in general $AB \ne BA$.
+
+::syllabus[Types of matrices and transposition]
 
 **Special matrices.**
 - A **square** matrix has as many rows as columns.

@@ -20,6 +20,8 @@ searchTerms:
   - "Explicit and implicit functions"
   - "Functional dependencies used in economics"
   - "Domain and range"
+syllabusHeadings:
+  - "Concept of a univariate function, its definition and types"
 generators: [cost-function-change, demand-domain-max-price, income-tax-bands]
 widgets: [tax-band-explorer]
 mistakeCodes:
@@ -65,6 +67,8 @@ Think of a function as a machine: put in an input and exactly one output comes o
 In economics the domain is often smaller than the algebra allows. The formula $Q = 100 - 2P$ happily accepts $P = 80$ and returns $Q = -60$, but nobody buys minus sixty cups of coffee. A graph shows every input–output pair at once, so you can see where the function starts, where it meets the axes, and whether it rises or falls. Some rules change part-way: an electricity bill may charge one price for the first block of units and a higher price after that. These are piecewise functions.
 
 ## Definition and formulas
+::syllabus[Definition of a function of one variable]
+
 A **function** $f$ assigns to each input $x$ in its domain exactly one output $f(x)$. We write $y = f(x)$: $x$ is the independent variable and $y$ the dependent variable.
 
 - **Evaluating:** replace every $x$ by the given number. If $f(x) = 3x^2 - x$, then $f(4) = 3 \cdot 16 - 4 = 44$.
@@ -75,6 +79,8 @@ A **function** $f$ assigns to each input $x$ in its domain exactly one output $f
 - **Intercepts:** the vertical intercept is $f(0)$; a horizontal intercept is an $x$ with $f(x) = 0$.
 - **Increasing and decreasing:** $f$ is increasing on an interval if $x_1 < x_2$ always gives $f(x_1) < f(x_2)$, and decreasing if it always gives $f(x_1) > f(x_2)$. A function that only rises, or only falls, on an interval is called **monotonic** there.
 
+::syllabus[Ways to give a function]
+
 **Ways to give a function.** The same rule can arrive in several forms, and economists use them all:
 
 - a **formula**, such as $C(Q) = 500 + 12Q + 2Q^2$;
@@ -83,15 +89,23 @@ A **function** $f$ assigns to each input $x$ in its domain exactly one output $f
 - **words**, such as "the first 10,000 of income is tax-free";
 - a **parametric** form, where both variables depend on a third one, for example output $x(t)$ and price $y(t)$ both recorded over time $t$.
 
+::syllabus[Basic properties: even, odd, bounded, monotonic, periodic]
+
 **Further properties worth checking.**
 
 - **Bounded:** there is a number $M$ with $|f(x)| \le M$ for every $x$ in the domain. A market share or a tax rate between 0 and 1 is bounded; a cost function of output usually is not.
 - **Even and odd:** $f$ is even if $f(-x) = f(x)$, so its graph is symmetric about the vertical axis (like $x^2$); it is odd if $f(-x) = -f(x)$, so its graph is symmetric about the origin (like $x^3$). Most functions are neither.
 - **Periodic:** $f(x + T) = f(x)$ for a fixed $T > 0$, the period. Seasonal patterns are periodic: a model of monthly ice-cream sales $S(t) = 100 + 20\sin\!\left(\dfrac{2\pi t}{12}\right)$ repeats every 12 months.
 
+::syllabus[Types of functions: explicit and implicit]
+
 **Explicit and implicit functions.** $y = 1800 - 2x^2$ gives $y$ **explicitly**. An equation such as $x^{0.5}y^{0.5} = 20$ (all input pairs that produce 20 units) defines $y$ **implicitly**; here it can be solved, $y = 400/x$, but often it cannot (see C110). Inverse and composite functions are covered in F10.
 
+::syllabus[Basic elementary functions and their graphs]
+
 **Basic elementary functions.** Almost every function in an economics course is built from a few families by adding, multiplying, dividing and composing them: constants, powers $x^a$ (including roots), exponentials $a^x$ and $e^x$, logarithms $\log_a x$ and $\ln x$ (F07), and the trigonometric functions $\sin x$ and $\cos x$. The trigonometric ones are periodic with period $2\pi$ (angles measured in radians) and are used for cycles and seasons.
+
+::syllabus[Functional dependencies used in economics]
 
 Economic functions you will meet everywhere:
 

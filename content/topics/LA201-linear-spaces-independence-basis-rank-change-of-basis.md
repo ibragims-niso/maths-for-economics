@@ -24,6 +24,9 @@ searchTerms:
   - "Euclidean space and metric"
   - "Vector space"
   - "Linear independence"
+syllabusHeadings:
+  - "Rank of a matrix and its calculation"
+  - "Linear spaces and linear transformations"
 generators: [replicate-payoff-coordinates, matrix-rank-elimination, dependence-parameter-k]
 widgets: [span-and-basis]
 mistakeCodes:
@@ -99,22 +102,36 @@ Otherwise they are dependent, and at least one of them is a combination of the o
 $$v_1, \dots, v_n \text{ independent} \iff \det M \neq 0.$$
 For any number of vectors, row-reduce the matrix with the vectors as columns (or rows) to echelon form (LA103): they are independent exactly when every column (or row) gets a pivot.
 
+::syllabus[Basis and dimension of a linear space]
+
 **Basis and dimension.** A basis of a subspace $S$ is an independent set that spans $S$. Every basis of $S$ has the same number of vectors, the dimension of $S$. The standard basis of $\mathbb{R}^n$ is $e_1 = (1, 0, \dots, 0), \dots, e_n = (0, \dots, 0, 1)$, so $\dim \mathbb{R}^n = n$. Any $n$ independent vectors in $\mathbb{R}^n$ form a basis.
+
+::syllabus[Rank of a matrix; diagonal and stepped matrices]
 
 **Rank.** The rank of an $m \times n$ matrix $A$ is the number of pivots in its echelon form. It equals the largest number of independent rows and also the largest number of independent columns, so
 $$\operatorname{rank} A \le \min(m, n).$$
 A square $n \times n$ matrix has rank $n$ exactly when $\det A \neq 0$, which is exactly when $A^{-1}$ exists (LA105).
+
+The rank can also be read from minors (LA104): it is the size of the largest square sub-matrix with a non-zero determinant. **Elementary transformations** (swapping rows or columns, multiplying a row by a non-zero number, adding a multiple of one row to another) never change the rank, so they are used to bring a matrix to a shape where the rank is obvious: for a **diagonal** matrix the rank is the number of non-zero diagonal entries, and for a matrix in **echelon (stepped) form** it is the number of non-zero rows.
+
+::syllabus[Kronecker–Capelli theorem on consistency]
 
 **Rank and the system $Ax = b$** (the Rouché–Capelli or Kronecker–Capelli theorem). For $m$ equations in $n$ unknowns with augmented matrix $[A \mid b]$:
 - the system has a solution if and only if $\operatorname{rank} A = \operatorname{rank}\,[A \mid b]$;
 - if it has one and $\operatorname{rank} A = n$, the solution is unique;
 - if it has one and $\operatorname{rank} A = r < n$, there are infinitely many solutions, with $n - r$ unknowns free to choose.
 
+::syllabus[Transition from one basis to another]
+
 **Coordinates and change of basis.** If $b_1, \dots, b_n$ is a basis of $\mathbb{R}^n$, put the basis vectors as the columns of $P = [\,b_1 \;\cdots\; b_n\,]$. The coordinates $c = (c_1, \dots, c_n)$ of $x$ in this basis satisfy
 $$x = c_1 b_1 + \dots + c_n b_n = P\,c, \qquad\text{so}\qquad c = P^{-1} x.$$
 $P$ is invertible because its columns are independent. Going back, $x = Pc$. If $Q$ holds a second basis, coordinates change from the first basis to the second by $c' = Q^{-1} P\, c$; the matrix $Q^{-1}P$ is the **transition matrix** between the two bases.
 
+::syllabus[Linear spaces and linear transformations: axioms and examples]
+
 **Linear spaces in general.** $\mathbb{R}^n$ is the main example, but anything that can be added and multiplied by numbers under the usual rules (order of adding does not matter, there is a zero element, every element has a negative, $k(x + y) = kx + ky$, and so on) is a **linear space** with the same ideas of span, basis and dimension. Examples: all polynomials of degree at most 2, $a + bt + ct^2$, form a space of dimension 3 with basis $1, t, t^2$, which is handy for quadratic cost functions; all $2 \times 2$ matrices form a space of dimension 4. A **linear transformation** $T$ is a rule with $T(x + y) = T(x) + T(y)$ and $T(kx) = kT(x)$; on $\mathbb{R}^n$ every such rule is multiplication by a matrix.
+
+::syllabus[Euclidean spaces and metrics]
 
 **Euclidean space.** Adding a dot product (an **inner product**) to $\mathbb{R}^n$ gives lengths and distances (LA101):
 $$\langle x, y \rangle = x_1y_1 + \dots + x_ny_n, \qquad \|x\| = \sqrt{\langle x, x\rangle}, \qquad d(x, y) = \|x - y\|.$$

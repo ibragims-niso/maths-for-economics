@@ -15,6 +15,8 @@ searchTerms:
   - "Derivative of a function of one variable"
   - "Increment of a function"
   - "Differentiation"
+syllabusHeadings:
+  - "Differential of a function of one variable"
 generators: [cost-average-rate-of-change, instantaneous-rate-quadratic, tangent-line-intercept]
 widgets: [secant-to-tangent]
 mistakeCodes:
@@ -60,6 +62,8 @@ Suppose GDP rose from 500 to 530 billion over one year. The average rate of chan
 On a graph, an average rate of change is the slope of a secant: the straight line through two points of the curve. As the second point slides towards the first, the secant turns and settles on the tangent line, the line that just touches the curve there. Zoom in far enough on a smooth curve and it looks straight; the slope of that straight piece is the derivative.
 
 ## Definition and formulas
+::syllabus[Increment of a function and differentiation]
+
 **Average rate of change** of $y = f(x)$ from $x$ to $x + h$ (the slope of the secant):
 $$\frac{\Delta y}{\Delta x} = \frac{f(x + h) - f(x)}{h}$$
 This fraction is called the **difference quotient**.

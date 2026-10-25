@@ -18,6 +18,9 @@ searchTerms:
   - "International trade model"
   - "Linear exchange model"
   - "Structure matrix"
+syllabusHeadings:
+  - "Homogeneous systems of linear equations"
+  - "Eigenvalues and eigenvectors in modelling international trade"
 generators: [fundamental-solutions-count, trade-balance-two-countries, trade-model-three-countries]
 widgets: [trade-balance-line]
 mistakeCodes:
@@ -55,9 +58,13 @@ Three countries trade only with one another, and each spends fixed shares of its
 A homogeneous system $Ax = 0$ always has the boring solution $x = 0$. The interesting question is whether there are others. If $x$ is a solution, so is $2x$, and so is the sum of two solutions, so the solutions form a whole line, plane or bigger flat set through the origin. Its size depends on how many unknowns are left free once the independent equations have fixed the rest. In the trade model the equations are dependent by construction (all the money spent must be received by someone), so there is always one free unknown: the overall scale of incomes.
 
 ## Definition and formulas
+::syllabus[General form of a homogeneous system]
+
 **Homogeneous system.** $m$ linear equations in $n$ unknowns with all right-hand sides zero:
 $$a_{11}x_1 + a_{12}x_2 + \dots + a_{1n}x_n = 0, \quad \dots, \quad a_{m1}x_1 + \dots + a_{mn}x_n = 0, \qquad\text{or}\qquad Ax = 0.$$
 It is always consistent: $x = 0$ (the **trivial** solution) satisfies every equation, as the Kronecker–Capelli theorem confirms (LA201), because adding a zero column cannot raise the rank.
+
+::syllabus[Solving a homogeneous system]
 
 **When are there non-trivial solutions?** Let $r = \operatorname{rank} A$.
 
@@ -67,11 +74,15 @@ It is always consistent: $x = 0$ (the **trivial** solution) satisfies every equa
 
 **The solution set is a linear space.** Sums and multiples of solutions are again solutions, so the solutions form a subspace of $\mathbb{R}^n$ (the **null space** of $A$) of dimension $n - r$.
 
+::syllabus[Fundamental system of solutions]
+
 **Fundamental system of solutions.** Any $n - r$ linearly independent solutions $v_1, \dots, v_{n-r}$ form a basis of the solution set; every solution is
 $$x = c_1 v_1 + c_2 v_2 + \dots + c_{n-r} v_{n-r}$$
 for some numbers $c_i$. To build one: row-reduce $A$ (LA103), choose the $n - r$ unknowns without a pivot as **free**, express the pivot unknowns in terms of them, then set one free unknown to 1 and the others to 0, in turn.
 
 **Link with other systems.** If $Ax = b$ has one solution $x_p$, all its solutions are $x_p + x_h$, where $x_h$ runs over the solutions of $Ax = 0$. And an eigenvector of $A$ for $\lambda$ is a non-zero solution of the homogeneous system $(A - \lambda I)x = 0$, which exists exactly when $\det(A - \lambda I) = 0$ (LA202).
+
+::syllabus[Eigenvectors and the international trade model]
 
 **The international trade model (linear exchange model).** Countries $1, \dots, n$ trade only with one another. Let $a_{ij}$ be the share of country $j$'s national income $x_j$ spent on goods from country $i$. The **structure matrix** $A = (a_{ij})$ has non-negative entries and each **column adds up to 1**: every country spends all its income somewhere.
 

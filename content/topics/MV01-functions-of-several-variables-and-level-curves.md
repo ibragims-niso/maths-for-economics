@@ -19,6 +19,8 @@ searchTerms:
   - "Limit of a multivariable function"
   - "Repeated limits"
   - "Continuity of multivariable functions"
+syllabusHeadings:
+  - "Functions of several variables, their limit and continuity"
 generators: [level-curve-through-point, same-indifference-curve-quantity]
 widgets: [indifference-map]
 mistakeCodes:
@@ -55,6 +57,8 @@ A function of two variables, $f(x, y)$, gives one number for every pair of input
 A hiking map shows a hill without 3D drawing: it marks contour lines, each joining the places at the same height. Do the same with any function: join all the input pairs that give the same value. That curve is a level curve. For utility it joins equally good bundles (an indifference curve); for output it joins input mixes that produce the same amount (an isoquant). Where contour lines are packed close together the ground climbs quickly; where they are far apart it is nearly flat.
 
 ## Definition and formulas
+::syllabus[Definition of a function of several variables; graph and level curves]
+
 A function of two variables assigns one number $z = f(x, y)$ to each point $(x, y)$ of its domain, a set of points in the plane $\mathbb{R}^2$. With $n$ inputs we write $f(x_1, x_2, \ldots, x_n)$, for example the cost of a bundle of $n$ goods, $C = p_1x_1 + p_2x_2 + \cdots + p_nx_n$.
 
 **Domain.** Use only the points where the formula makes sense and the economics allows: quantities cannot be negative, so utility $U = x^{1/2}y^{1/2}$ and output $Q = AK^{\alpha}L^{\beta}$ are used for $x, y \ge 0$ and $K, L \ge 0$. A formula with $\ln x$ needs $x > 0$.
@@ -71,6 +75,8 @@ A function of two variables assigns one number $z = f(x, y)$ to each point $(x, 
 - Indifference curves of the Cobb–Douglas utility $U = x^a y^b$ ($a, b > 0$): solving $x^a y^b = \bar U$ for $y$ gives $y = \left(\bar U / x^a\right)^{1/b}$, a curve that falls as $x$ rises. For $U = xy$ it is simply $y = \bar U / x$.
 - Isoquants of the production function $Q = AK^{\alpha}L^{\beta}$: the input mixes with $AK^{\alpha}L^{\beta} = \bar Q$.
 - Budget lines and iso-cost lines: spending $E = p_x x + p_y y$ is a function of two variables, and its level curve $p_x x + p_y y = m$ is a straight line. In the same way an iso-cost line $wL + rK = C_0$ joins all input mixes that cost the same.
+
+::syllabus[Points of n-dimensional space; limit and continuity]
 
 **Distance, limits and continuity.** The distance between two points of $\mathbb{R}^n$ is the usual one, $\sqrt{(x_1 - y_1)^2 + \dots + (x_n - y_n)^2}$, and the **$\varepsilon$-neighbourhood** of a point is the set of points closer to it than $\varepsilon$ (a disc in the plane). A function $f(x, y)$ has the **limit** $A$ at $(a, b)$ if $f(x, y)$ gets as close to $A$ as you like for all points close enough to $(a, b)$, approaching **from any direction**. That last part is new compared with one variable: if two paths towards the point give different values, there is no limit. For example, $f(x, y) = \dfrac{xy}{x^2 + y^2}$ is 0 along both axes but $\tfrac12$ along the line $y = x$, so it has no limit at $(0, 0)$. Computing the two **repeated limits** (first $x \to a$, then $y \to b$, or the other way round) is a quick check: if they differ, the limit does not exist, but if they agree it still might not. $f$ is **continuous** at a point if its limit there equals its value. Polynomials, Cobb–Douglas functions on positive inputs and other combinations of continuous functions are continuous, and, as in one variable, a continuous function on a closed and bounded set reaches a largest and a smallest value (AN04).
 

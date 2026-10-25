@@ -16,6 +16,8 @@ searchTerms:
   - "Constrained extrema"
   - "Lagrange multipliers"
   - "Constrained optimization"
+syllabusHeadings:
+  - "Conditional extrema of functions of several variables"
 generators: [lagrange-budget-good-quantity, lagrange-cost-min-input, lagrange-multiplier-utility]
 widgets: [lagrange-budget-tangency]
 mistakeCodes:
@@ -71,6 +73,8 @@ the rate at which the consumer is willing to swap the goods equals the rate at w
 The same picture in gradients: the gradient of a function is perpendicular to its level curve (MV02). Two curves that touch have the same direction there, so their perpendiculars are parallel too. At the optimum the gradient of the objective is a multiple of the gradient of the constraint, $\nabla f = \lambda \nabla g$. The number $\lambda$, the **Lagrange multiplier**, is the scale factor between the two arrows.
 
 ## Definition and formulas
+::syllabus[Conditional extrema]
+
 **The problem.** Maximise (or minimise) $f(x, y)$ subject to $g(x, y) = c$.
 
 **The Lagrangian** combines the objective and the constraint with a new unknown $\lambda$:

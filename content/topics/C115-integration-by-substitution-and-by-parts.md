@@ -16,6 +16,8 @@ searchTerms:
   - "Change of variable in integrals"
   - "Integration by parts"
   - "Substitution in definite integrals"
+syllabusHeadings:
+  - "Methods of integration: substitution and integration by parts"
 generators: [substitution-total-from-marginal, present-value-growing-stream, total-output-log-rate]
 widgets: [growing-stream-present-value]
 mistakeCodes:
@@ -64,6 +66,8 @@ Every differentiation rule, read backwards, is an integration rule. The chain ru
 The product rule (C103) says $(uv)' = u'v + uv'$. Integrating both sides and rearranging lets us swap one integral for another. That only helps if the new integral is easier, so the skill is to choose $u$ as the factor that becomes simpler when differentiated: $t$ turns into $1$, and $\ln w$ turns into $1/w$. This is **integration by parts**. Think of it as trading: we give up the hard integral $\int u\,dv$ and take on the easier $\int v\,du$, plus a boundary term.
 
 ## Definition and formulas
+::syllabus[Substitution method]
+
 **Substitution.** With $u = g(x)$ and $du = g'(x)\,dx$:
 $$\int f(g(x))\,g'(x)\,dx = \int f(u)\,du = F(u) + C = F(g(x)) + C.$$
 
@@ -73,10 +77,14 @@ $$\int f(g(x))\,g'(x)\,dx = \int f(u)\,du = F(u) + C = F(g(x)) + C.$$
 
 For example $\int 2x\,e^{x^2}dx = e^{x^2} + C$ (with $u = x^2$, $du = 2x\,dx$). If the factor 2 is missing, fix the constant: $x\,dx = \tfrac12\,du$, so $\int x\,e^{x^2}dx = \tfrac12 e^{x^2} + C$. A linear inside only brings a constant: $\int e^{kt}\,dt = \dfrac{e^{kt}}{k} + C$, so $\int e^{-rt}\,dt = -\dfrac{e^{-rt}}{r} + C$.
 
+::syllabus[Substitution in definite integrals]
+
 **Substitution with limits.** In a definite integral, change the limits along with the variable:
 $$\int_a^b f(g(x))\,g'(x)\,dx = \int_{g(a)}^{g(b)} f(u)\,du.$$
 Then there is no need to go back to $x$. Example: a firm's marginal revenue is $MR = \dfrac{Q}{1 + Q^2}$. With $u = 1 + Q^2$, $du = 2Q\,dQ$, the limits $Q = 0$ and $Q = 3$ become $u = 1$ and $u = 10$, so
 $$R(3) = \int_0^3 \frac{Q}{1 + Q^2}\,dQ = \frac12\int_1^{10}\frac{du}{u} = \frac12\ln 10 = 1.1513.$$
+
+::syllabus[Integration by parts]
 
 **Integration by parts.** From the product rule:
 $$\int u\,dv = uv - \int v\,du, \qquad \int_a^b u\,v'\,dx = \Big[uv\Big]_a^b - \int_a^b v\,u'\,dx.$$
